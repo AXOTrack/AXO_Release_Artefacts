@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_cfg_datalog" kind="struct" language="C++" prot="public">
+    <compoundname>_stCfgDatalog</compoundname>
+    <includes refid="config_8h" local="no">config.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string dispmodeoff</definition>
+        <argsstring></argsstring>
+        <name>dispmodeoff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag to disable displacement calculation, 15 sec raw data instead of 5 in FRAM </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="189" column="16" bodyfile="conf/config.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">AdxlDataStore::configure</referencedby>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rawtransferon</definition>
+        <argsstring></argsstring>
+        <name>rawtransferon</name>
+        <briefdescription>
+<para>transmission is enabled or not </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if raw data <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="192" column="16" bodyfile="conf/config.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string disptransferon</definition>
+        <argsstring></argsstring>
+        <name>disptransferon</name>
+        <briefdescription>
+<para>transmission is enabled or not </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if displacement data <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="194" column="16" bodyfile="conf/config.h" bodystart="194" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rms_thres</definition>
+        <argsstring></argsstring>
+        <name>rms_thres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RMS-Z Threshold for raw data transfer and displacement calculation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="196" column="16" bodyfile="conf/config.h" bodystart="196" bodyend="-1"/>
+        <referencedby refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Config::Autocorrection</referencedby>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string max_raw_per_day</definition>
+        <argsstring></argsstring>
+        <name>max_raw_per_day</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of raw data sendings per day </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="198" column="16" bodyfile="conf/config.h" bodystart="198" bodyend="-1"/>
+        <referencedby refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Config::Autocorrection</referencedby>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for datalog related dynamic configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>_stCfgDatalog</label>
+        <link refid="struct__st_cfg_datalog"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+dispmodeoff</edgelabel>
+          <edgelabel>+disptransferon</edgelabel>
+          <edgelabel>+max_raw_per_day</edgelabel>
+          <edgelabel>+rawtransferon</edgelabel>
+          <edgelabel>+rms_thres</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="conf/config.h" line="188" column="1" bodyfile="conf/config.h" bodystart="188" bodyend="200"/>
+    <listofallmembers>
+      <member refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" prot="public" virt="non-virtual"><scope>_stCfgDatalog</scope><name>dispmodeoff</name></member>
+      <member refid="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" prot="public" virt="non-virtual"><scope>_stCfgDatalog</scope><name>disptransferon</name></member>
+      <member refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" prot="public" virt="non-virtual"><scope>_stCfgDatalog</scope><name>max_raw_per_day</name></member>
+      <member refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" prot="public" virt="non-virtual"><scope>_stCfgDatalog</scope><name>rawtransferon</name></member>
+      <member refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" prot="public" virt="non-virtual"><scope>_stCfgDatalog</scope><name>rms_thres</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

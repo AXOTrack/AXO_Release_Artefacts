@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_fw_state_list" kind="struct" language="C++" prot="public">
+    <compoundname>FwStateList</compoundname>
+    <includes refid="fsm_8h" local="no">fsm.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_fw_state_list_1a999273bd18436d813a46330551ff66c0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fw_state" kindref="compound">FwState</ref> *</type>
+        <definition>FwState * createIdle</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>createIdle</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+        </param>
+        <briefdescription>
+<para>Pointer to the Idle state instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creator function for constucting the idle state.</para>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the state instance of type <ref refid="class_fw_state" kindref="compound">FwState</ref>, the state base class</para>
+</simplesect>
+The function allocates an instance of the class <ref refid="class_fw_idle" kindref="compound">FwIdle</ref> with operator new and return the pointer to this instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="36" column="20" bodyfile="update/fsm.cpp" bodystart="59" bodyend="59"/>
+        <referencedby refid="class_fw_fsm_1ae660472e17f45fcb273dfaed40234db4" compoundref="fsm_8cpp" startline="110" endline="118">FwFsm::FwFsm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_fw_state_list_1a008f49670c28a0215db3eeea7589381a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fw_state" kindref="compound">FwState</ref> *</type>
+        <definition>FwState * createTriggered</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>createTriggered</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+        </param>
+        <briefdescription>
+<para>Pointer to the Triggered state instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creator function for constucting the triggered state.</para>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the state instance of type <ref refid="class_fw_state" kindref="compound">FwState</ref>, the state base class</para>
+</simplesect>
+The function allocates an instance of the class <ref refid="class_fw_triggered" kindref="compound">FwTriggered</ref> with operator new and return the pointer to this instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="38" column="20" bodyfile="update/fsm.cpp" bodystart="71" bodyend="71"/>
+        <referencedby refid="class_fw_fsm_1ae660472e17f45fcb273dfaed40234db4" compoundref="fsm_8cpp" startline="110" endline="118">FwFsm::FwFsm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_fw_state_list_1a59d268764437be337f9a3920d80920e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fw_state" kindref="compound">FwState</ref> *</type>
+        <definition>FwState * createDownload</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>createDownload</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+        </param>
+        <briefdescription>
+<para>Pointer to the Download state instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creator function for constucting the firmware download state.</para>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the state instance of type <ref refid="class_fw_state" kindref="compound">FwState</ref>, the state base class</para>
+</simplesect>
+The function allocates an instance of the class <ref refid="class_fw_download" kindref="compound">FwDownload</ref> with operator new and return the pointer to this instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="40" column="20" bodyfile="update/fsm.cpp" bodystart="83" bodyend="83"/>
+        <referencedby refid="class_fw_fsm_1ae660472e17f45fcb273dfaed40234db4" compoundref="fsm_8cpp" startline="110" endline="118">FwFsm::FwFsm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_fw_state_list_1a79a141c9cd620c18c0114a3df72b227a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fw_state" kindref="compound">FwState</ref> *</type>
+        <definition>FwState * createReady</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>createReady</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+        </param>
+        <briefdescription>
+<para>Pointer to the Ready state instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creator function for constucting the ready state.</para>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the state instance of type <ref refid="class_fw_state" kindref="compound">FwState</ref>, the state base class</para>
+</simplesect>
+The function allocates an instance of the class <ref refid="class_fw_ready" kindref="compound">FwReady</ref> with operator new and return the pointer to this instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="42" column="20" bodyfile="update/fsm.cpp" bodystart="95" bodyend="95"/>
+        <referencedby refid="class_fw_fsm_1ae660472e17f45fcb273dfaed40234db4" compoundref="fsm_8cpp" startline="110" endline="118">FwFsm::FwFsm</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure containing pointer to all state instances of the state machine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>FwStateList</label>
+        <link refid="struct_fw_state_list"/>
+      </node>
+    </collaborationgraph>
+    <location file="update/fsm.h" line="35" column="1" bodyfile="update/fsm.h" bodystart="35" bodyend="44"/>
+    <listofallmembers>
+      <member refid="struct_fw_state_list_1a59d268764437be337f9a3920d80920e5" prot="public" virt="non-virtual"><scope>FwStateList</scope><name>createDownload</name></member>
+      <member refid="struct_fw_state_list_1a999273bd18436d813a46330551ff66c0" prot="public" virt="non-virtual"><scope>FwStateList</scope><name>createIdle</name></member>
+      <member refid="struct_fw_state_list_1a79a141c9cd620c18c0114a3df72b227a" prot="public" virt="non-virtual"><scope>FwStateList</scope><name>createReady</name></member>
+      <member refid="struct_fw_state_list_1a008f49670c28a0215db3eeea7589381a" prot="public" virt="non-virtual"><scope>FwStateList</scope><name>createTriggered</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

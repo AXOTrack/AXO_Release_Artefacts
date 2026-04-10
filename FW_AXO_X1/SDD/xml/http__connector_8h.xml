@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="http__connector_8h" kind="file" language="C++">
+    <compoundname>http_connector.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <includes local="no">zephyr/net/socket.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>net/http_connector.h</label>
+        <link refid="http__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="13">
+        <label>zephyr/net/socket.h</label>
+      </node>
+      <node id="4">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="11">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>net/http_connector.h</label>
+        <link refid="http__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_http_connector" prot="public">HttpConnector</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="http__connector_8h_1abe01c1e58c3a3c6c5973ebedd53ad6a6" prot="public" static="no">
+        <name>HTTP_HOST</name>
+        <initializer>&quot;axo-x1.axotrack.de&quot;</initializer>
+        <briefdescription>
+<para>Definition of the HTTP server URL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition of the HTTP server URL </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="59" column="14" bodyfile="net/http_connector.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="http__connector_8h_1a2cbce124853086ca94cf3d491d76c78b" prot="public" static="no">
+        <name>HTTP_PATH</name>
+        <initializer>&quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="62" column="9" bodyfile="net/http_connector.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="http__connector_8h_1a0906dae4a42c1fef9ec0cd0a5212ed4a" prot="public" static="no">
+        <name>HTTP_PORT</name>
+        <initializer>80</initializer>
+        <briefdescription>
+<para>Definition of the HTTP port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="64" column="9" bodyfile="net/http_connector.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="http__connector_8h_1aaea96e3a56e216a9a0b55411d3cbbbd7" prot="public" static="no">
+        <name>RAW_DATA_POST_REQ</name>
+        <initializer>    &quot;POST /measurements/ HTTP/1.1\r\n&quot; \
+    &quot;Host: %s%s\r\n&quot;                 \
+    &quot;Content-Length: %d\r\n&quot; \
+    &quot;Content-Type: application/octet-stream\r\n&quot; \
+    &quot;\r\n&quot;</initializer>
+        <briefdescription>
+<para>Definition of the HTTP POST header. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="67" column="9" bodyfile="net/http_connector.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04" prot="public" static="no" strong="no">
+        <type></type>
+        <name>_eDataType</name>
+        <enumvalue id="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04a7da74fa0d3a52e3ac1363e713b39008a" prot="public">
+          <name>eDATA_TYPE_RAW</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Data type: Raw acceleration data (x, y, and z) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04aa6c2368a70ce01d9d011f766ce3bd8c6" prot="public">
+          <name>eDATA_TYPE_DISP</name>
+          <briefdescription>
+<para>Data type: Displacement data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04ae6c00914ed1f33c8160078e24ed3dcfe" prot="public">
+          <name>eDATA_TYPE_NONE</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Data type definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="74" column="1" bodyfile="net/http_connector.h" bodystart="74" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="http__connector_8h_1aa1547bac005bf80c88b1488ebf2f97f4" prot="public" static="no">
+        <type>enum <ref refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04" kindref="member">_eDataType</ref></type>
+        <definition>typedef enum _eDataType eDataType</definition>
+        <argsstring></argsstring>
+        <name>eDataType</name>
+        <briefdescription>
+<para>Data type definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="78" column="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of HTTP connector class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="http__connector_8h_1http_connector"/> <simplesect kind="par"><title>Detailed Description </title><para>AXO devices uses the HTTPS application layer protocol for the transmission of raw and displacement data to the remote webserver. See details of <ulink url="https://en.wikipedia.org/wiki/HTTP">HTTP</ulink> and <ulink url="https://en.wikipedia.org/wiki/HTTP">HTTPS</ulink> in wikipedia. For the data transmission HTTP POST is used. <linebreak/>
+ The data to be transferred consists of the following parts:<itemizedlist>
+<listitem><para>The HTTP POST header</para>
+</listitem><listitem><para>The raw data header (first frame)<itemizedlist>
+<listitem><para>IMEI</para>
+</listitem><listitem><para>timestamp</para>
+</listitem><listitem><para>total number of data samples</para>
+</listitem><listitem><para>Type of data (Raw or Displacement)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>The x, y and z raw data samples (in the following frames)</para>
+</listitem><listitem><para>OR the displacement data (in the following frames)</para>
+</listitem><listitem><para>The SHA1 checksum (last frame) <linebreak/>
+ See also message sequence chart in section <ref refid="_m_s_c_1SectionRawData" kindref="member">Raw Data Transmission</ref>. For SHA1 hash calculation the HTTP connector class uses the <ulink url="https://www.trustedfirmware.org/projects/mbed-tls/">mbedtls crypto library</ulink>.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_SRC_NET_HTTP_CONNECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_SRC_NET_HTTP_CONNECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/net/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">//#define<sp/>HTTP_HOST<sp/>&quot;axo-x1.axotrack.de&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>for<sp/>USE_DEVPOOL_URL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_DEVPOOL_URL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>HTTP_HOST<sp/>&quot;axo-x1.devpool.net&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="http__connector_8h_1abe01c1e58c3a3c6c5973ebedd53ad6a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>HTTP_HOST<sp/>&quot;axo-x1.axotrack.de&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="http__connector_8h_1a2cbce124853086ca94cf3d491d76c78b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTTP_PATH<sp/>&quot;&quot;</highlight></codeline>
+<codeline lineno="64" refid="http__connector_8h_1a0906dae4a42c1fef9ec0cd0a5212ed4a" refkind="member"><highlight class="preprocessor">#define<sp/>HTTP_PORT<sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="http__connector_8h_1aaea96e3a56e216a9a0b55411d3cbbbd7" refkind="member"><highlight class="preprocessor">#define<sp/>RAW_DATA_POST_REQ<sp/>&quot;POST<sp/>/measurements/<sp/>HTTP/1.1\r\n&quot;</highlight><highlight class="normal"><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Host:<sp/>%s%s\r\n&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Content-Length:<sp/>%d\r\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Content-Type:<sp/>application/octet-stream\r\n&quot;<sp/>\</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;\r\n&quot;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04" kindref="member">_eDataType</ref><sp/>{</highlight></codeline>
+<codeline lineno="75" refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04a7da74fa0d3a52e3ac1363e713b39008a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04a7da74fa0d3a52e3ac1363e713b39008a" kindref="member">eDATA_TYPE_RAW</ref><sp/>=<sp/>1,<sp/></highlight></codeline>
+<codeline lineno="76" refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04aa6c2368a70ce01d9d011f766ce3bd8c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04aa6c2368a70ce01d9d011f766ce3bd8c6" kindref="member">eDATA_TYPE_DISP</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04ae6c00914ed1f33c8160078e24ed3dcfe" kindref="member">eDATA_TYPE_NONE</ref><sp/>=<sp/>255</highlight></codeline>
+<codeline lineno="78" refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04ae6c00914ed1f33c8160078e24ed3dcfe" refkind="member"><highlight class="normal">}<sp/><ref refid="http__connector_8h_1aa1547bac005bf80c88b1488ebf2f97f4" kindref="member">eDataType</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_http_connector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_http_connector" kindref="compound">HttpConnector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ab4d0ff72c1c078c50d3c157d88393924" kindref="member">HttpConnector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114" refid="class_http_connector_1ab4d0ff72c1c078c50d3c157d88393924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_http_connector_1ab4d0ff72c1c078c50d3c157d88393924" kindref="member">HttpConnector</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ae4da1ab65bfe016474312f441526484e" kindref="member">~HttpConnector</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="class_http_connector_1a8393b55b609aa24f63d8e3b78e413a9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_http_connector_1a8393b55b609aa24f63d8e3b78e413a9c" kindref="member">delayTimer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="class_http_connector_1a50af6c432e07946bf62493607847dd55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_http_connector_1a50af6c432e07946bf62493607847dd55" kindref="member">oneDayTimer</ref>;<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a417dd99cf103bf8a86bdf502eb285a96" kindref="member">delayTimer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1af8d925a524b176e256196165d672fdec" kindref="member">delayTimer_expired</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ac69569fdb1bf3ed35022a1feb8805a6e" kindref="member">oneDayTimer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" kindref="member">oneDayTimer_expired</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" kindref="member">http_connect</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a0a6678e33ca76cacb933d0c359701b4b" kindref="member">http_disconnect</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ad9c03afbb6b3d34e26a01b1eea870638" kindref="member">HttpRawDataSend</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a45989dc8b33cb068db005100a2f11679" kindref="member">HttpDispDataSend</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="139" refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" kindref="member">http_connected</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="class_http_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" kindref="member">lte_connected</ref>;<sp/></highlight></codeline>
+<codeline lineno="144" refid="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" kindref="member">bDispModeOff</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" kindref="member">bRawTransferEnabled</ref>;</highlight></codeline>
+<codeline lineno="148" refid="class_http_connector_1a690bb9e91f2ef54c83770444b88aec60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a690bb9e91f2ef54c83770444b88aec60" kindref="member">bDispTransferEnabled</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" kindref="member">client_fd</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="class_http_connector_1a528b47c24242eff2fb245f9ed8eb0517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_http_connector_1a528b47c24242eff2fb245f9ed8eb0517" kindref="member">responsebuf</ref>[1024];<sp/><sp/></highlight></codeline>
+<codeline lineno="155" refid="class_http_connector_1aec704176000fef9623fdbd1afcd38313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_http_connector_1aec704176000fef9623fdbd1afcd38313" kindref="member">sendbuf</ref>[1025];</highlight></codeline>
+<codeline lineno="156" refid="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" kindref="member">zMaxRms</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157" refid="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" kindref="member">rms_z_Thres</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" kindref="member">startReadPos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159" refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" kindref="member">totalNumEntries</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" kindref="member">rcvdEntries</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161" refid="class_http_connector_1a891bea661c0351fdb1c1aeba58cc02d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_http_connector_1a891bea661c0351fdb1c1aeba58cc02d3" kindref="member">requestedEntries</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" kindref="member">dailyRawSendCnt</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164" refid="class_http_connector_1af354227ab77caedf5e1562704d2a1481" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1af354227ab77caedf5e1562704d2a1481" kindref="member">bDailyRawSendCntExceeded</ref>;<sp/></highlight></codeline>
+<codeline lineno="165" refid="class_http_connector_1a20a72443420b704488a56e1d2400bef1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_http_connector_1a20a72443420b704488a56e1d2400bef1" kindref="member">maxRawPerDay</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166" refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" kindref="member">rawDataHeader</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="167" refid="class_http_connector_1a7d4b84303980dcc2de636b75056f98b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_http_connector_1a7d4b84303980dcc2de636b75056f98b9" kindref="member">imei</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170" refid="class_http_connector_1a4695019b9f8d66ac44aaf8901a219259" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_http_connector_1a4695019b9f8d66ac44aaf8901a219259" kindref="member">timestamp</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a1a1944c6c473b06aff8e74006553efb4" kindref="member">blocking_connect</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*<sp/>local_addr,<sp/>socklen_t<sp/>len);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ab076f11428483c2ca9d2379be27f805a" kindref="member">blocking_send</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/>uint8_t*<sp/>buf,<sp/>uint32_t<sp/>size,<sp/>uint32_t<sp/>flags);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1aa79380b9d97bf61888a3b14ff5780ef2" kindref="member">blocking_recv</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/>uint8_t*<sp/>buf,<sp/>uint32_t<sp/>size,<sp/>uint32_t<sp/>flags);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1aba9d39b4688a9fe5b0ab1fd21b86d658" kindref="member">tls_setup</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sock);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" kindref="member">BuildDataHeader</ref>(<ref refid="http__connector_8h_1aa1547bac005bf80c88b1488ebf2f97f4" kindref="member">eDataType</ref><sp/>dataType);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" kindref="member">SendHttpPostHeader</ref>(<ref refid="http__connector_8h_1aa1547bac005bf80c88b1488ebf2f97f4" kindref="member">eDataType</ref><sp/>dataType);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" kindref="member">SendSingleDataFrame</ref>(uint8_t*<sp/>data,<sp/>uint32_t<sp/>datalen);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" kindref="member">SendSignatureFrame</ref>(std::string&amp;<sp/>signature,<sp/>uint8_t<sp/>signatureLen);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1aa195aaead99156d934d498c01655d333" kindref="member">reqData</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>msgDataType);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" kindref="member">HandleRcvdData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem,<sp/>uint16_t<sp/>dataSize);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" kindref="member">StartHttpRawDataTransmission</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a8fb8ecc93c7595585ebf437ea82b631e" kindref="member">reqRawDataStatus</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a19cf3eae3207a4ee78a870f504edf3a4" kindref="member">reqRawData</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" kindref="member">HandleRcvdRawData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" kindref="member">HandleRawDataStatus</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" kindref="member">HandleAdxlIdleInd</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" kindref="member">StartHttpDispDataTransmission</ref>();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1ae411b87edda7448c8bf4d4e2d4cdd474" kindref="member">reqDispData</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" kindref="member">HandleRcvdDispData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_SRC_NET_HTTP_CONNECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="net/http_connector.h"/>
+  </compounddef>
+</doxygen>

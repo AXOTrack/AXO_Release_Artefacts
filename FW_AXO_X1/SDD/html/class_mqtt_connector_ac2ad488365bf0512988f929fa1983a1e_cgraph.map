@@ -1,0 +1,10 @@
+<map id="MqttConnector" name="MqttConnector">
+<area shape="rect" id="node1" title="MqttConnector task constructor." alt="" coords="5,56,112,83"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#a961bb32487217f663830f3f42d4ff539" title="Getter function to retrieve the device ID (the modem&#39;s IMEI)" alt="" coords="185,5,273,32"/>
+<area shape="rect" id="node3" href="$class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="160,56,297,83"/>
+<area shape="rect" id="node4" href="$class_mqtt_connector.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the reconnect timer." alt="" coords="193,107,265,133"/>
+<area shape="rect" id="node5" href="$class_mqtt_connector.html#adc25c829b13636794219a3f61f31f34d" title="Timer expired function for the reconnect timer." alt="" coords="345,107,452,133"/>
+<area shape="rect" id="node6" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="500,107,589,133"/>
+<area shape="rect" id="node7" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="637,81,757,108"/>
+<area shape="rect" id="node8" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="649,132,746,159"/>
+</map>

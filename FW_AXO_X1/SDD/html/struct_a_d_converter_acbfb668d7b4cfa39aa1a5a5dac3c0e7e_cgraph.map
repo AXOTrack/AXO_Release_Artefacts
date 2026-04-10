@@ -1,0 +1,19 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="ADConverter task function." alt="" coords="5,107,52,133"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="110,5,217,32"/>
+<area shape="rect" id="node5" href="$class_mux_controller.html#a05848de25ac2dbec233935058a1d24b4" title="The MUX Controller init function." alt="" coords="100,56,227,83"/>
+<area shape="rect" id="node6" href="$struct_a_d_converter.html#ac1d2043bb6ede9c12212992591d63d91" title="The init function." alt="" coords="125,107,202,133"/>
+<area shape="rect" id="node7" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="120,157,207,184"/>
+<area shape="rect" id="node9" href="$struct_a_d_converter.html#a9dc1243f3e218fb3511b33b0fae8bac8" title="Function to sample ADC data for specified channels." alt="" coords="131,208,195,235"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="305,5,437,32"/>
+<area shape="rect" id="node4" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="530,5,654,32"/>
+<area shape="rect" id="node8" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="322,157,419,184"/>
+<area shape="rect" id="node10" href="$struct_a_d_converter.html#a162280fb65e21ae0bfa0e3781cd6f188" title="Send ADC data to optional registered listener for specified channel." alt="" coords="321,208,420,235"/>
+<area shape="rect" id="node17" href="$class_mux_controller.html#a81f974f12568b91f15c2957c186ccd45" title="Function to select a single ADC channel." alt="" coords="275,259,467,285"/>
+<area shape="rect" id="node11" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="515,157,669,184"/>
+<area shape="rect" id="node13" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="541,208,643,235"/>
+<area shape="rect" id="node14" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="547,259,637,285"/>
+<area shape="rect" id="node12" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="717,157,848,184"/>
+<area shape="rect" id="node15" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="723,233,843,260"/>
+<area shape="rect" id="node16" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="734,284,831,311"/>
+</map>

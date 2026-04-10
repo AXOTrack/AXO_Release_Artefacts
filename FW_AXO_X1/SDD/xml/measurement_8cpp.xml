@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="measurement_8cpp" kind="file" language="C++">
+    <compoundname>measurement.cpp</compoundname>
+    <includes refid="measurement_8h" local="yes">data/measurement.h</includes>
+    <includes local="no">zephyr/drivers/sensor.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="rms__store_8h" local="yes">data/rms_store.h</includes>
+    <includes refid="adxl__store_8h" local="yes">data/adxl_store.h</includes>
+    <includes refid="disptask_8h" local="yes">disp/disptask.h</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="config_8h" local="yes">conf/config.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>data/rms_store.h</label>
+        <link refid="rms__store_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>data/measurement.h</label>
+        <link refid="measurement_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>./prj_config.h</label>
+        <link refid="prj__config_8h"/>
+      </node>
+      <node id="11">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="20">
+        <label>drv/spi/adxl37x.h</label>
+        <link refid="adxl37x_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>date_time.h</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>zephyr/drivers/spi.h</label>
+      </node>
+      <node id="1">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>bus/spi/spibus.h</label>
+        <link refid="spibus_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="32">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="28">
+        <label>disp/disptask.h</label>
+        <link refid="disptask_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="31">
+        <label>conf/config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/drivers/sensor.h</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="25">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>disp/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>zephyr/sys/ring_buffer.h</label>
+      </node>
+      <node id="22">
+        <label>data/hw_metrics.h</label>
+        <link refid="hw__metrics_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="16">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="measurement_8cpp_1ad10bb1b4fc7d79480d0cd539e2fd21fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(mbuild, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>mbuild</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.cpp" line="67" column="1" declfile="data/measurement.cpp" declline="67" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of measurement builder helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="measurement_8h_1measurement_builder" kindref="member">measurement_builder</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="measurement_8h" kindref="compound">data/measurement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rms__store_8h" kindref="compound">data/rms_store.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="adxl__store_8h" kindref="compound">data/adxl_store.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="disptask_8h" kindref="compound">disp/disptask.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">conf/config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;time_interval&quot;:<sp/>1000,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;time&quot;:<sp/>1688393487369,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;rms_value&quot;:<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>5.079103,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4.440958,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>5.079103</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>],</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4.291514,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.793221,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4.291514</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>],</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;medium_hits&quot;:<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>0,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>],</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;critical_hits&quot;:<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>0,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>],</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;x_max&quot;:<sp/>0.9,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;y_max&quot;:<sp/>1.9,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;z_max&quot;:<sp/>2.9,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;disp_min&quot;:<sp/>0.1,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;disp_max&quot;:<sp/>0.1,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;disp_p2p&quot;:<sp/>0.2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="measurement_8cpp_1ad10bb1b4fc7d79480d0cd539e2fd21fb" refkind="member"><highlight class="normal"><ref refid="measurement_8cpp_1ad10bb1b4fc7d79480d0cd539e2fd21fb" kindref="member">LOG_MODULE_REGISTER</ref>(mbuild,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" refkind="member"><highlight class="normal"><ref refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" kindref="member">MeasurementBuilder::MeasurementBuilder</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>have_http_connector)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>have_http_connector(have_http_connector)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;MeasurementBuilder::MeasurementBuilder<sp/>have_http_connector:<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a068ba51d0a406a1d8d211bd264bdaa15" kindref="member">have_http_connector</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reserve<sp/>memory<sp/>in<sp/>advance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" kindref="member">med_hit_cnt</ref>.reserve(20);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" kindref="member">crit_hit_cnt</ref>.reserve(20);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_measurement_builder_1a44940e3bb2340bc1c0c6120e664cd80f" refkind="member"><highlight class="normal"><ref refid="class_measurement_builder_1a44940e3bb2340bc1c0c6120e664cd80f" kindref="member">MeasurementBuilder::~MeasurementBuilder</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;~MeasurementBuilder<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" kindref="member">MeasurementBuilder::isComplete</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>disp_mode_off,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rmsZThres)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;isComplete<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bRet<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(disp_mode_off<sp/>||<sp/>(<ref refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" kindref="member">max_rms_z</ref><sp/>&lt;=<sp/>rmsZThres))<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>displacement<sp/>calculation<sp/>is<sp/>disabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structpayload" kindref="compound">payload</ref>.size()<sp/>&gt;<sp/>30)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bRet<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;isComplete<sp/>disp<sp/>off&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>displacement<sp/>calculation<sp/>enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bDispCalcFinished<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[16];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%.1f&quot;</highlight><highlight class="normal">,<sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>sVal<sp/>=<sp/>buf;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>.find(sVal)<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bDispCalcFinished<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>string<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;isComplete<sp/>%s<sp/>in<sp/>%s<sp/>found&quot;</highlight><highlight class="normal">,<sp/>sVal.c_str(),<sp/><ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>.c_str());</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>string<sp/>not<sp/>found,<sp/>disp<sp/>p2p<sp/>value<sp/>still<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bDispCalcFinished<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;isComplete<sp/>%s<sp/>in<sp/>%s<sp/>not<sp/>found&quot;</highlight><highlight class="normal">,<sp/>sVal.c_str(),<sp/><ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>.c_str());</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="structpayload" kindref="compound">payload</ref>.size()<sp/>&gt;<sp/>30)<sp/>&amp;&amp;<sp/>bDispCalcFinished)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bRet<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;isComplete<sp/>disp<sp/>on&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bRet;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" kindref="member">MeasurementBuilder::addRmsData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;addRmsData:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>pElem);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>decode<sp/>stream<sp/>to<sp/>struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>*<sp/>p<sp/>=</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pElem-&gt;<ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>());</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>store<sp/>highest<sp/>RMS<sp/>value<sp/>in<sp/>z<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>)<sp/>&gt;<sp/><ref refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" kindref="member">max_rms_z</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" kindref="member">max_rms_z</ref>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>hits<sp/>to<sp/>class<sp/>attributes,<sp/>add<sp/>rms<sp/>on<sp/>the<sp/>fly<sp/>to<sp/>JSON</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%f<sp/>%f<sp/>%f<sp/>med:<sp/>%d<sp/>crit:<sp/>%d<sp/>ts:<sp/>%lld&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" kindref="member">x</ref>),</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" kindref="member">y</ref>),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>),</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" kindref="member">medium_hits</ref>,<sp/>p-&gt;<ref refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" kindref="member">critical_hits</ref>,<sp/>p-&gt;<ref refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" kindref="member">ts</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" kindref="member">med_hit_cnt</ref>.push_back(p-&gt;<ref refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" kindref="member">medium_hits</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" kindref="member">crit_hit_cnt</ref>.push_back(p-&gt;<ref refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" kindref="member">critical_hits</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>on<sp/>first<sp/>data,<sp/>add<sp/>message<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structpayload" kindref="compound">payload</ref>.size()<sp/>&lt;<sp/>30)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;timestamp\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(p-&gt;<ref refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" kindref="member">ts</ref>));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;rms_value\&quot;:[&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[32];</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;[%.1f,%.1f,%.1f]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" kindref="member">x</ref>),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" kindref="member">y</ref>),</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(buf);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" kindref="member">timestamp</ref><sp/>=<sp/>std::to_string(p-&gt;<ref refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" kindref="member">ts</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;DataManager<sp/>send<sp/>timestamp<sp/>=<sp/>%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" kindref="member">timestamp</ref>.c_str());</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_measurement_builder_1a068ba51d0a406a1d8d211bd264bdaa15" kindref="member">have_http_connector</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa8417479d61dab4584c62a86300d1b36" kindref="member">msgType::eTimestamp</ref>,<sp/>Mbox::MboxId::eDataManager,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eHttpConnector,<sp/><ref refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" kindref="member">timestamp</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[32];</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;,[%.1f,%.1f,%.1f]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" kindref="member">x</ref>),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" kindref="member">y</ref>),</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p-&gt;<ref refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>));</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(buf);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" kindref="member">MeasurementBuilder::SetFloatStrings</ref>(</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string&amp;<sp/>s1,<sp/>std::string&amp;<sp/>s2,<sp/>std::string&amp;<sp/>s3,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val3)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[16];</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%.1f&quot;</highlight><highlight class="normal">,<sp/>val1);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>s1<sp/>=<sp/>buf;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%.1f&quot;</highlight><highlight class="normal">,<sp/>val2);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>s2<sp/>=<sp/>buf;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/></highlight><highlight class="stringliteral">&quot;%.1f&quot;</highlight><highlight class="normal">,<sp/>val3);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>s3<sp/>=<sp/>buf;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" kindref="member">MeasurementBuilder::addDispStatistics</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;addDispStatistics:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>pElem);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>decode<sp/>stream<sp/>to<sp/>struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_disp_statistics" kindref="compound">stDispStatistics</ref>*<sp/>p<sp/>=</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="struct__st_disp_statistics" kindref="compound">stDispStatistics</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pElem-&gt;<ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>());</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" kindref="member">SetFloatStrings</ref>(<ref refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" kindref="member">sDispMin</ref>,<sp/><ref refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" kindref="member">sDispMax</ref>,<sp/><ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>,<sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" kindref="member">min</ref>,<sp/>p-&gt;<ref refid="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" kindref="member">max</ref>,<sp/>p-&gt;<ref refid="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" kindref="member">p2p</ref>);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;addDispStatistics:<sp/>min:%s,<sp/>max:%s,<sp/>p2p:%s&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" kindref="member">sDispMin</ref>.c_str(),<sp/><ref refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" kindref="member">sDispMax</ref>.c_str(),<sp/><ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>.c_str());</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" kindref="member">MeasurementBuilder::addMaxXYZ</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;addMaxXYZ:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>pElem);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>decode<sp/>stream<sp/>to<sp/>struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_adxl__xyz__max__data" kindref="compound">Adxl_xyz_max_data</ref>*<sp/>p<sp/>=</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="struct_adxl__xyz__max__data" kindref="compound">Adxl_xyz_max_data</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pElem-&gt;<ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>());</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" kindref="member">SetFloatStrings</ref>(<ref refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" kindref="member">sMaxX</ref>,<sp/><ref refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" kindref="member">sMaxY</ref>,<sp/><ref refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" kindref="member">sMaxZ</ref>,<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)p-&gt;<ref refid="struct_adxl__xyz__max__data_1ad0da36b2558901e21e7a30f6c227a45e" kindref="member">x</ref>,</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)p-&gt;<ref refid="struct_adxl__xyz__max__data_1aa4f0d3eebc3c443f9be81bf48561a217" kindref="member">y</ref>,<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)p-&gt;<ref refid="struct_adxl__xyz__max__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;addMaxXYZ:<sp/>x_max:<sp/>%s,<sp/>y_max:<sp/>%s,<sp/>z_max:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" kindref="member">sMaxX</ref>.c_str(),<sp/><ref refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" kindref="member">sMaxY</ref>.c_str(),<sp/><ref refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" kindref="member">sMaxZ</ref>.c_str());</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" kindref="member">MeasurementBuilder::add</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;add:<sp/>%p<sp/>type:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>pElem,<sp/>pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>decode<sp/>message<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" kindref="member">eAdxl37xRmsData</ref>:</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" kindref="member">addRmsData</ref>(pElem);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" kindref="member">eDispStatistics</ref>:</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" kindref="member">addDispStatistics</ref>(pElem);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" kindref="member">eMaxXYZ</ref>:</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" kindref="member">addMaxXYZ</ref>(pElem);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;unexpected<sp/>message<sp/>(%d)&quot;</highlight><highlight class="normal">,<sp/>pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341" refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" kindref="member">MeasurementBuilder::finalize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MeasurementBuilder::finalize&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>hit<sp/>counts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;],\&quot;medium_hits\&quot;:[&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" kindref="member">med_hit_cnt</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(std::to_string(<ref refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" kindref="member">med_hit_cnt</ref>[i]));</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/><ref refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" kindref="member">med_hit_cnt</ref>.size()<sp/>-<sp/>1)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;],\&quot;critical_hits\&quot;:[&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" kindref="member">crit_hit_cnt</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(std::to_string(<ref refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" kindref="member">crit_hit_cnt</ref>[i]));</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/><ref refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" kindref="member">crit_hit_cnt</ref>.size()<sp/>-<sp/>1)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>x,<sp/>y<sp/>and<sp/>z<sp/>maximum<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;],\&quot;x_max\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" kindref="member">sMaxX</ref>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;y_max\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" kindref="member">sMaxY</ref>);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;z_max\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" kindref="member">sMaxZ</ref>);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>displacement<sp/>statistics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;disp_min\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" kindref="member">sDispMin</ref>);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;disp_max\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" kindref="member">sDispMax</ref>);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;,\&quot;disp_p2p\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;json<sp/>payload<sp/>size:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpayload" kindref="compound">payload</ref>.size());</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" kindref="member">print</ref>();</highlight></codeline>
+<codeline lineno="371"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381" refid="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" kindref="member">MeasurementBuilder::getPayload</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;getPayload&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1aa74c818d418e097e25db7ec7b9320470" kindref="member">payload</ref>;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395" refid="class_measurement_builder_1a743e623dd2220526009eb3783461c1ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_measurement_builder_1a743e623dd2220526009eb3783461c1ad" kindref="member">MeasurementBuilder::getTimestamp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;getTimestamp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" kindref="member">timestamp</ref>;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" kindref="member">MeasurementBuilder::print</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="structpayload" kindref="compound">payload</ref>.c_str());<sp/></highlight></codeline>
+<codeline lineno="407"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">MeasurementBuilder::reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;reset&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" kindref="member">max_rms_z</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>timestamp.clear();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" kindref="member">med_hit_cnt</ref>.clear();</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" kindref="member">crit_hit_cnt</ref>.clear();</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpayload" kindref="compound">payload</ref>.append(</highlight><highlight class="stringliteral">&quot;\&quot;time_interval\&quot;:1000&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>currently<sp/>fixed<sp/>at<sp/>1<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" kindref="member">timestamp</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" kindref="member">SetFloatStrings</ref>(<ref refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" kindref="member">sDispMin</ref>,<sp/><ref refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" kindref="member">sDispMax</ref>,<sp/><ref refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" kindref="member">sDispP2P</ref>,<sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>,<sp/></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>,<sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" kindref="member">SetFloatStrings</ref>(<ref refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" kindref="member">sMaxX</ref>,<sp/><ref refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" kindref="member">sMaxY</ref>,<sp/><ref refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" kindref="member">sMaxZ</ref>,<sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>,</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>,<sp/><ref refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" kindref="member">VAL_NOT_INITIALIZED_FLOAT</ref>);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::string<sp/>ts(std::to_string(time(0)));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref><sp/>json;</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sensor_value<sp/>temp<sp/>=<sp/>{23,<sp/>15};</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/>json.<ref refid="class_measurement_builder_1a84e8a4a79512fab4189812987975ce35" kindref="member">addTemperature</ref>(&amp;temp);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(json.<ref refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" kindref="member">isComplete</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>json.<ref refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" kindref="member">finalize</ref>();</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>json.<ref refid="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" kindref="member">print</ref>();</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>result<sp/>=<sp/>json.<ref refid="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" kindref="member">getPayload</ref>();</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>result.c_str());</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(2));</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="457"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="data/measurement.cpp"/>
+  </compounddef>
+</doxygen>

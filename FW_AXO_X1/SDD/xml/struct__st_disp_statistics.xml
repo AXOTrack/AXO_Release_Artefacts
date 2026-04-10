@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_disp_statistics" kind="struct" language="C++" prot="public">
+    <compoundname>_stDispStatistics</compoundname>
+    <includes refid="disptask_8h" local="no">disptask.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <briefdescription>
+<para>Minimum displacement value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="68" column="12" bodyfile="disp/disptask.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">MeasurementBuilder::addDispStatistics</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">DispTask::sendDispStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+<para>Maximum displacement value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="69" column="12" bodyfile="disp/disptask.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">MeasurementBuilder::addDispStatistics</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">DispTask::sendDispStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double p2p</definition>
+        <argsstring></argsstring>
+        <name>p2p</name>
+        <briefdescription>
+<para>Peak to peak displacement value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="70" column="12" bodyfile="disp/disptask.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">MeasurementBuilder::addDispStatistics</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">DispTask::sendDispStatistics</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure defining the displacement statistics, to be send to backend with RMS values </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_stDispStatistics</label>
+        <link refid="struct__st_disp_statistics"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+max</edgelabel>
+          <edgelabel>+min</edgelabel>
+          <edgelabel>+p2p</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+    </collaborationgraph>
+    <location file="disp/disptask.h" line="66" column="1" bodyfile="disp/disptask.h" bodystart="67" bodyend="71"/>
+    <listofallmembers>
+      <member refid="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" prot="public" virt="non-virtual"><scope>_stDispStatistics</scope><name>max</name></member>
+      <member refid="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" prot="public" virt="non-virtual"><scope>_stDispStatistics</scope><name>min</name></member>
+      <member refid="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" prot="public" virt="non-virtual"><scope>_stDispStatistics</scope><name>p2p</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

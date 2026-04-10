@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classadc__channels" kind="class" language="C++" prot="public">
+    <compoundname>adc_channels</compoundname>
+    <derivedcompoundref refid="struct_a_d_converter" prot="public" virt="non-virtual">ADConverter</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ADConverter</label>
+        <link refid="struct_a_d_converter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>adc_channels</label>
+        <link refid="classadc__channels"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>adc_channels</label>
+        <link refid="classadc__channels"/>
+      </node>
+    </collaborationgraph>
+    <location file="drv/adc/adconverter.cpp" line="55" column="5"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

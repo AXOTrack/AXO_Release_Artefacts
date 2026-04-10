@@ -1,0 +1,7 @@
+<map id="setFifoOn" name="setFifoOn">
+<area shape="rect" id="node1" title="Function to activate FIFO of the sensor device driver." alt="" coords="403,56,481,83"/>
+<area shape="rect" id="node2" href="$struct_adxl37x.html#a303839680fa319517f4fed6d5455b52e" title="Getter function to retrieve status information and number of FIFO entries." alt="" coords="259,5,355,32"/>
+<area shape="rect" id="node4" href="$struct_adxl37x.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl37x task function." alt="" coords="5,56,52,83"/>
+<area shape="rect" id="node5" href="$struct_adxl37x.html#a41de8150eff044a237990c271d57ea27" title="Function to resume the sensor measurement." alt="" coords="123,107,188,133"/>
+<area shape="rect" id="node3" href="$struct_adxl37x.html#a1f115a7336973884012f7fe5f5c095e2" title="Function to send a HW status message to HW metrics task." alt="" coords="100,5,211,32"/>
+</map>

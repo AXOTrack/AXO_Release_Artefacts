@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="app-axo-x1_2src_2config_8h" kind="file" language="C++">
+    <compoundname>config.h</compoundname>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="version_8cpp" local="yes">version.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>config.h</label>
+        <link refid="app-axo-x1_2src_2config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>version.cpp</label>
+        <link refid="version_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="app-axo-x1_2src_2config_8h_1ab78b7fde387956dde5ca1a7e52bafa26" prot="public" static="no">
+        <name>AXO_DEBUG_LEVEL_OFF</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config.h" line="27" column="9" bodyfile="config.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="app-axo-x1_2src_2config_8h_1a323e4ba24447cf5b127a5e721dcc593c" prot="public" static="no">
+        <name>AXO_DEBUG_LEVEL_ERR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config.h" line="28" column="9" bodyfile="config.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="app-axo-x1_2src_2config_8h_1ab16f1451843f4d8e157a3fa66b20d3eb" prot="public" static="no">
+        <name>AXO_DEBUG_LEVEL_WRN</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config.h" line="29" column="9" bodyfile="config.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="app-axo-x1_2src_2config_8h_1a13d3fa8e948c1de1d7ea8b424d2611c6" prot="public" static="no">
+        <name>AXO_DEBUG_LEVEL_INF</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config.h" line="30" column="9" bodyfile="config.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="app-axo-x1_2src_2config_8h_1a4226b7c9a1a65dc20f313e8e6bb75180" prot="public" static="no">
+        <name>AXO_DEBUG_LEVEL_DBG</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config.h" line="31" column="9" bodyfile="config.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="app-axo-x1_2src_2config_8h_1a0ebf9a619ab4bbe8b552f05e0b437c5d" prot="public" static="no">
+        <name>AXO_DEFAULT_DEBUG_LEVEL</name>
+        <initializer><ref refid="app-axo-x1_2src_2config_8h_1ab16f1451843f4d8e157a3fa66b20d3eb" kindref="member">AXO_DEBUG_LEVEL_WRN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="config.h" line="34" column="9" bodyfile="config.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for debug/release configuration adjustment. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>Adjustment of debug/release configuration</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>APP_AXO_SRC_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APP_AXO_SRC_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Defines<sp/>to<sp/>enable<sp/>/<sp/>disable<sp/>UART.<sp/>Comment<sp/>this<sp/>define<sp/>out<sp/>to<sp/>enable<sp/>UART</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>UART_DISABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>use<sp/>this<sp/>define<sp/>to<sp/>disable<sp/>UART</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>UART_DISABLED<sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>this<sp/>define<sp/>to<sp/>enable<sp/>UART</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Defines<sp/>for<sp/>log<sp/>level<sp/>support<sp/>(do<sp/>not<sp/>modify)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="app-axo-x1_2src_2config_8h_1ab78b7fde387956dde5ca1a7e52bafa26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AXO_DEBUG_LEVEL_OFF<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="app-axo-x1_2src_2config_8h_1a323e4ba24447cf5b127a5e721dcc593c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AXO_DEBUG_LEVEL_ERR<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="app-axo-x1_2src_2config_8h_1ab16f1451843f4d8e157a3fa66b20d3eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AXO_DEBUG_LEVEL_WRN<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="app-axo-x1_2src_2config_8h_1a13d3fa8e948c1de1d7ea8b424d2611c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AXO_DEBUG_LEVEL_INF<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="app-axo-x1_2src_2config_8h_1a4226b7c9a1a65dc20f313e8e6bb75180" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AXO_DEBUG_LEVEL_DBG<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>adjust<sp/>default<sp/>debug<sp/>level<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="app-axo-x1_2src_2config_8h_1a0ebf9a619ab4bbe8b552f05e0b437c5d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AXO_DEFAULT_DEBUG_LEVEL<sp/>AXO_DEBUG_LEVEL_WRN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>test<sp/>purposes,<sp/>to<sp/>have<sp/>defined<sp/>input<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>USE_TEST_DATA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>APP_AXO_SRC_CONFIG_H_&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="config.h"/>
+  </compounddef>
+</doxygen>

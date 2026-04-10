@@ -1,0 +1,6 @@
+<map id="erase" name="erase">
+<area shape="rect" id="node1" title="Function to erase the content of the FRAM." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node2" href="$classspifram.html#a1bd30127afd8f18cff8a7eebbbac532c" title="Function to write multiple bytes into FRAM." alt="" coords="108,5,191,32"/>
+<area shape="rect" id="node3" href="$classspifram.html#a3b8249f30cb998de07e43307c96667f8" title="Function to write multiple bytes to FRAM." alt="" coords="239,5,327,32"/>
+<area shape="rect" id="node4" href="$classspifram.html#a2b5d6c97c3b1b81c410898f8b4d88dba" title="Function to access FRAM for reading and writing." alt="" coords="375,5,471,32"/>
+</map>

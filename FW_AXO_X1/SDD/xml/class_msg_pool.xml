@@ -1,0 +1,836 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_msg_pool" kind="class" language="C++" prot="public">
+    <compoundname>MsgPool</compoundname>
+    <includes refid="mpool_8h" local="no">mpool.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mutex" kindref="compound">Mutex</ref></type>
+        <definition>Mutex lock</definition>
+        <argsstring></argsstring>
+        <name>lock</name>
+        <briefdescription>
+<para><ref refid="class_mutex" kindref="compound">Mutex</ref> to avoid concurrent access. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="66" column="11" bodyfile="rtos/mpool.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_elements</definition>
+        <argsstring></argsstring>
+        <name>max_elements</name>
+        <initializer>=
+        16</initializer>
+        <briefdescription>
+<para>Number of preallocated message (<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>) objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="83" column="26" bodyfile="rtos/mpool.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" compoundref="mpool_8cpp" startline="212" endline="214">size</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>&lt; <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>, <ref refid="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" kindref="member">max_elements</ref> &gt;</type>
+        <definition>MemoryPool&lt; PoolElem, MsgPool::max_elements &gt; elemPool</definition>
+        <argsstring></argsstring>
+        <name>elemPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Statically allocated memory pool for messages of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="86" column="9" bodyfile="rtos/mpool.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" compoundref="mpool_8cpp" startline="247" endline="249">available</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+        <referencedby refid="class_msg_pool_1a371b26884552759e7161090fea883e00" compoundref="mpool_8cpp" startline="235" endline="237">maxused</referencedby>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">stats</referencedby>
+        <referencedby refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" compoundref="mpool_8cpp" startline="223" endline="225">used</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a630d4798edf521ce66515040ba64f686" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_buf32</definition>
+        <argsstring></argsstring>
+        <name>max_buf32</name>
+        <initializer>=
+        8</initializer>
+        <briefdescription>
+<para>Number of preallocated buffers of fixed size 32. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="89" column="26" bodyfile="rtos/mpool.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>&lt; uint8_t[32], <ref refid="class_msg_pool_1a630d4798edf521ce66515040ba64f686" kindref="member">max_buf32</ref> &gt;</type>
+        <definition>MemoryPool&lt; uint8_t[32], MsgPool::max_buf32 &gt; buf32Pool</definition>
+        <argsstring></argsstring>
+        <name>buf32Pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Statically allocated memory pool for 32 byte fixed size buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="92" column="9" bodyfile="rtos/mpool.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">bufpool_size</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">stats</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1abd38385a7b8bdab9e7b6335bd931d7f2" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_buf128</definition>
+        <argsstring></argsstring>
+        <name>max_buf128</name>
+        <initializer>=
+        4</initializer>
+        <briefdescription>
+<para>Number of preallocated buffers of fixed size 128. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="95" column="26" bodyfile="rtos/mpool.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>&lt; uint8_t[128], <ref refid="class_msg_pool_1abd38385a7b8bdab9e7b6335bd931d7f2" kindref="member">max_buf128</ref> &gt;</type>
+        <definition>MemoryPool&lt; uint8_t[128], MsgPool::max_buf128 &gt; buf128Pool</definition>
+        <argsstring></argsstring>
+        <name>buf128Pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Statically allocated memory pool for 128 byte fixed size buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="98" column="9" bodyfile="rtos/mpool.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">bufpool_size</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">stats</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a212436e9034cf521ffebf5e81310b49a" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_buf256</definition>
+        <argsstring></argsstring>
+        <name>max_buf256</name>
+        <initializer>=
+        4</initializer>
+        <briefdescription>
+<para>Number of preallocated buffers of fixed size 256. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="101" column="26" bodyfile="rtos/mpool.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>&lt; uint8_t[256], <ref refid="class_msg_pool_1a212436e9034cf521ffebf5e81310b49a" kindref="member">max_buf256</ref> &gt;</type>
+        <definition>MemoryPool&lt; uint8_t[256], MsgPool::max_buf256 &gt; buf256Pool</definition>
+        <argsstring></argsstring>
+        <name>buf256Pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Statically allocated memory pool for 256 byte fixed size buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="104" column="9" bodyfile="rtos/mpool.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">bufpool_size</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">stats</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1add4dc6a9a3b585c3bdbe804b804e779e" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_buf512</definition>
+        <argsstring></argsstring>
+        <name>max_buf512</name>
+        <initializer>=
+        2</initializer>
+        <briefdescription>
+<para>Number of preallocated buffers of fixed size 512. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="107" column="26" bodyfile="rtos/mpool.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>&lt; uint8_t[512], <ref refid="class_msg_pool_1add4dc6a9a3b585c3bdbe804b804e779e" kindref="member">max_buf512</ref> &gt;</type>
+        <definition>MemoryPool&lt; uint8_t[512], MsgPool::max_buf512 &gt; buf512Pool</definition>
+        <argsstring></argsstring>
+        <name>buf512Pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Statically allocated memory pool for 512 byte fixed size buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="110" column="9" bodyfile="rtos/mpool.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">bufpool_size</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">stats</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1a63189f46fe80eecd18345403851b8532" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_buf1024</definition>
+        <argsstring></argsstring>
+        <name>max_buf1024</name>
+        <initializer>=
+        4</initializer>
+        <briefdescription>
+<para>Number of preallocated buffers of fixed size 1024. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="113" column="26" bodyfile="rtos/mpool.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>&lt; uint8_t[1024], <ref refid="class_msg_pool_1a63189f46fe80eecd18345403851b8532" kindref="member">max_buf1024</ref> &gt;</type>
+        <definition>MemoryPool&lt; uint8_t[1024], MsgPool::max_buf1024 &gt; buf1024Pool</definition>
+        <argsstring></argsstring>
+        <name>buf1024Pool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Statically allocated memory pool for 1024 byte fixed size buffer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="116" column="9" bodyfile="rtos/mpool.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">bufpool_size</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">getNewElem</referencedby>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">stats</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_msg_pool_1a0f3b9b311f9b443feb3be08fd773e2e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MsgPool</definition>
+        <argsstring>()</argsstring>
+        <name>~MsgPool</name>
+        <briefdescription>
+<para><ref refid="class_msg_pool" kindref="compound">MsgPool</ref> class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="58" column="5" bodyfile="rtos/mpool.cpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+        <definition>PoolElem * getNewElem</definition>
+        <argsstring>(int minSize)</argsstring>
+        <name>getNewElem</name>
+        <param>
+          <type>int</type>
+          <declname>minSize</declname>
+        </param>
+        <briefdescription>
+<para>Function to allocate a message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> from message pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimal size of the message buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the allocated message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</simplesect>
+The function lock mutex lock to avoid concurrent access and allocate a message by calling function alloc of the message pool elemPool of class <ref refid="class_memory_pool" kindref="compound">MemoryPool</ref>. According to the minimal size of the message buffer minSize the buffer will be allocated from one of the fixed sized buffer pools and the member variables buf and bufLen of the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class are set accordingly. Finally the member variables of the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class are assigned. Variable dataLen to 0, variable pool with this pointer of <ref refid="class_msg_pool" kindref="compound">MsgPool</ref> instance and variable inPool to false before the pointer to the message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="60" column="14" bodyfile="rtos/mpool.cpp" bodystart="78" bodyend="123"/>
+        <references refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" compoundref="mempool_8h" startline="93" endline="105">MemoryPool&lt; T, num_blocks &gt;::alloc</references>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">PoolElem::buf</references>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">PoolElem::bufLen</references>
+        <references refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" compoundref="mpelem_8h" startline="233">PoolElem::dataLen</references>
+        <references refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" compoundref="mpool_8h" startline="86">elemPool</references>
+        <references refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" compoundref="mpelem_8h" startline="228">PoolElem::inPool</references>
+        <references refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" compoundref="mpool_8h" startline="66">lock</references>
+        <references refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" compoundref="mpelem_8h" startline="183">PoolElem::maxAlloc</references>
+        <references refid="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" compoundref="mpelem_8h" startline="229">PoolElem::pool</references>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">LteConnector::notify</referencedby>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">ADConverter::notifyListener</referencedby>
+        <referencedby refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+        <definition>PoolElem * getNewElem</definition>
+        <argsstring>()</argsstring>
+        <name>getNewElem</name>
+        <briefdescription>
+<para>Getter function to allocate a message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> from message pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>A pointer to the allocated message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</simplesect>
+The function allocate a message by calling member function getNewElem with paramter minSize = 0 and return the pointer to the allocated message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="61" column="14" bodyfile="rtos/mpool.cpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freeElem</definition>
+        <argsstring>(PoolElem *elem)</argsstring>
+        <name>freeElem</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+<para>Function to free (release) a message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> to the message pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>elem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the allocated message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function lock mutex lock to avoid concurrent access. According to the size of the buffer the message buffer will be released to the fixed size buffer it belongs to by calling the fixed size pools free method. Afterwards the message will be released by cvalling the message pool method free and variable inPool will be set to true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="62" column="10" bodyfile="rtos/mpool.cpp" bodystart="137" bodyend="173"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">PoolElem::buf</references>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">PoolElem::bufLen</references>
+        <references refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" compoundref="mpool_8h" startline="86">elemPool</references>
+        <references refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" compoundref="mempool_8h" startline="116" endline="119">MemoryPool&lt; T, num_blocks &gt;::free</references>
+        <references refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" compoundref="mpelem_8h" startline="228">PoolElem::inPool</references>
+        <references refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" compoundref="mpool_8h" startline="66">lock</references>
+        <referencedby refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Getter function to retrieve the total number of messages in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Total number of messages in the pool</para>
+</simplesect>
+The function returns the total number of messages in the pool </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="68" column="14" bodyfile="rtos/mpool.cpp" bodystart="212" bodyend="214"/>
+        <references refid="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" compoundref="mpool_8h" startline="83">max_elements</references>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">bufpool_size</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t used</definition>
+        <argsstring>()</argsstring>
+        <name>used</name>
+        <briefdescription>
+<para>Getter function to retrieve the number of used messages of the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>The number of used messages of the pool</para>
+</simplesect>
+The function returns the number of used messages of the pool </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="69" column="14" bodyfile="rtos/mpool.cpp" bodystart="223" bodyend="225"/>
+        <references refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" compoundref="mpool_8h" startline="86">elemPool</references>
+        <references refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" compoundref="mempool_8h" startline="138" endline="138">MemoryPool&lt; T, num_blocks &gt;::used</references>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">bufpool_used</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a371b26884552759e7161090fea883e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t maxused</definition>
+        <argsstring>()</argsstring>
+        <name>maxused</name>
+        <briefdescription>
+<para>Getter function to retrieve the maximum number of used messages of the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>The number of maximal used messages of the pool</para>
+</simplesect>
+The function returns the number of maximal used messages of the pool </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="70" column="14" bodyfile="rtos/mpool.cpp" bodystart="235" bodyend="237"/>
+        <references refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" compoundref="mpool_8h" startline="86">elemPool</references>
+        <references refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" compoundref="mempool_8h" startline="139" endline="139">MemoryPool&lt; T, num_blocks &gt;::maxused</references>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">bufpool_maxused</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <briefdescription>
+<para>Getter function to retrieve the number of available messages of the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>The number of available messages of the pool</para>
+</simplesect>
+The function returns the number of available messages of the pool </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="71" column="14" bodyfile="rtos/mpool.cpp" bodystart="247" bodyend="249"/>
+        <references refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" compoundref="mpool_8h" startline="86">elemPool</references>
+        <references refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" compoundref="mempool_8h" startline="136" endline="136">MemoryPool&lt; T, num_blocks &gt;::size</references>
+        <references refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" compoundref="mempool_8h" startline="138" endline="138">MemoryPool&lt; T, num_blocks &gt;::used</references>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">bufpool_available</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t bufpool_size</definition>
+        <argsstring>(uint16_t size)</argsstring>
+        <name>bufpool_size</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the total number of buffer memory in one of the buffer pools. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Total number of buffers in one of the buffer pools</para>
+</simplesect>
+The function returns the total number of buffers in one of the buffer pools </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="73" column="14" bodyfile="rtos/mpool.cpp" bodystart="261" bodyend="276"/>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" compoundref="mempool_8h" startline="136" endline="136">MemoryPool&lt; T, num_blocks &gt;::size</references>
+        <references refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" compoundref="mpool_8cpp" startline="212" endline="214">size</references>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t bufpool_used</definition>
+        <argsstring>(uint16_t size)</argsstring>
+        <name>bufpool_used</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the number of used buffer memory in one of the buffer pools. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of used buffers in one of the buffer pools</para>
+</simplesect>
+The function returns the number of used buffers in one of the buffer pools </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="74" column="14" bodyfile="rtos/mpool.cpp" bodystart="288" bodyend="303"/>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" compoundref="mpool_8cpp" startline="212" endline="214">size</references>
+        <references refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" compoundref="mempool_8h" startline="138" endline="138">MemoryPool&lt; T, num_blocks &gt;::used</references>
+        <references refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" compoundref="mpool_8cpp" startline="223" endline="225">used</references>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t bufpool_maxused</definition>
+        <argsstring>(uint16_t size)</argsstring>
+        <name>bufpool_maxused</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the maximum number of used buffer memory in one of the buffer pools. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of maximal used buffers in one of the buffer pools</para>
+</simplesect>
+The function returns the maximalnumber of used buffers in one of the buffer pools </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="75" column="14" bodyfile="rtos/mpool.cpp" bodystart="316" bodyend="331"/>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" compoundref="mempool_8h" startline="139" endline="139">MemoryPool&lt; T, num_blocks &gt;::maxused</references>
+        <references refid="class_msg_pool_1a371b26884552759e7161090fea883e00" compoundref="mpool_8cpp" startline="235" endline="237">maxused</references>
+        <references refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" compoundref="mpool_8cpp" startline="212" endline="214">size</references>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t bufpool_available</definition>
+        <argsstring>(uint16_t size)</argsstring>
+        <name>bufpool_available</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the number of available buffer memory in one of the buffer pools. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of available buffers in one of the buffer pools</para>
+</simplesect>
+The function returns the number of available buffers in one of the buffer pools </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="76" column="14" bodyfile="rtos/mpool.cpp" bodystart="344" bodyend="359"/>
+        <references refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" compoundref="mempool_8h" startline="140" endline="140">MemoryPool&lt; T, num_blocks &gt;::available</references>
+        <references refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" compoundref="mpool_8cpp" startline="247" endline="249">available</references>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" compoundref="mpool_8cpp" startline="212" endline="214">size</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stats</definition>
+        <argsstring>()</argsstring>
+        <name>stats</name>
+        <briefdescription>
+<para><ref refid="class_msg_pool" kindref="compound">MsgPool</ref> status function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function print out statistics of the all allocated memory pools. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="63" column="17" bodyfile="rtos/mpool.cpp" bodystart="181" bodyend="189"/>
+        <references refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" compoundref="mpool_8h" startline="116">buf1024Pool</references>
+        <references refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" compoundref="mpool_8h" startline="98">buf128Pool</references>
+        <references refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" compoundref="mpool_8h" startline="104">buf256Pool</references>
+        <references refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" compoundref="mpool_8h" startline="92">buf32Pool</references>
+        <references refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" compoundref="mpool_8h" startline="110">buf512Pool</references>
+        <references refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" compoundref="mpool_8h" startline="86">elemPool</references>
+        <references refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mempool_8h" startline="127" endline="134">MemoryPool&lt; T, num_blocks &gt;::stats</references>
+      </memberdef>
+      <memberdef kind="function" id="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_msg_pool" kindref="compound">MsgPool</ref> *</type>
+        <definition>MsgPool * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="64" column="20" bodyfile="rtos/mpool.cpp" bodystart="199" bodyend="203"/>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">LteConnector::notify</referencedby>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">ADConverter::notifyListener</referencedby>
+        <referencedby refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_msg_pool_1a540945db23d0ff1aa2d8e881e94b25a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MsgPool</definition>
+        <argsstring>()</argsstring>
+        <name>MsgPool</name>
+        <briefdescription>
+<para><ref refid="class_msg_pool" kindref="compound">MsgPool</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.h" line="79" column="5" bodyfile="rtos/mpool.cpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for message pool support implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The <ref refid="class_msg_pool" kindref="compound">MsgPool</ref> class implements a C++ wrapper for message pool support using the kernel memory slab API provided by the Zephyr operating system. See details in Zephyr <ulink url="https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html">Memory Slab documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__mem__slab__apis.html">API documentation</ulink>. The <ref refid="class_msg_pool" kindref="compound">MsgPool</ref> class provides methods to allocate messages from the pool and to release (free) them back into the pool. Furthermore it provides a method to count the number of objects in the queue and to print statistics. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>MemoryPool&lt; uint8_t[1024], max_buf1024 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; uint8_t[1024], max_buf1024 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MemoryPool&lt; uint8_t[32], max_buf32 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; uint8_t[32], max_buf32 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MemoryPool&lt; T, num_blocks &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-my_slab</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>struct k_mutex</label>
+      </node>
+      <node id="12">
+        <label>MemoryPool&lt; uint8_t[128], max_buf128 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; uint8_t[128], max_buf128 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Mutex</label>
+        <link refid="class_mutex"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-mutex_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MemoryPool&lt; uint8_t[512], max_buf512 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; uint8_t[512], max_buf512 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>uint8_t</label>
+      </node>
+      <node id="5">
+        <label>MemoryPool&lt; uint8_t[256], max_buf256 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; uint8_t[256], max_buf256 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MemoryPool&lt; PoolElem, max_elements &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_elements &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MsgPool</label>
+        <link refid="class_msg_pool"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-buf512Pool</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-buf256Pool</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-elemPool</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-buf32Pool</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-max_buf1024</edgelabel>
+          <edgelabel>-max_buf128</edgelabel>
+          <edgelabel>-max_buf256</edgelabel>
+          <edgelabel>-max_buf32</edgelabel>
+          <edgelabel>-max_buf512</edgelabel>
+          <edgelabel>-max_elements</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+lock</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-buf1024Pool</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-buf128Pool</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>struct k_mem_slab</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mpool.h" line="56" column="1" bodyfile="rtos/mpool.h" bodystart="56" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>available</name></member>
+      <member refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>buf1024Pool</name></member>
+      <member refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>buf128Pool</name></member>
+      <member refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>buf256Pool</name></member>
+      <member refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>buf32Pool</name></member>
+      <member refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>buf512Pool</name></member>
+      <member refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>bufpool_available</name></member>
+      <member refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>bufpool_maxused</name></member>
+      <member refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>bufpool_size</name></member>
+      <member refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>bufpool_used</name></member>
+      <member refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>elemPool</name></member>
+      <member refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>freeElem</name></member>
+      <member refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>getNewElem</name></member>
+      <member refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>getNewElem</name></member>
+      <member refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>inst</name></member>
+      <member refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>lock</name></member>
+      <member refid="class_msg_pool_1a63189f46fe80eecd18345403851b8532" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>max_buf1024</name></member>
+      <member refid="class_msg_pool_1abd38385a7b8bdab9e7b6335bd931d7f2" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>max_buf128</name></member>
+      <member refid="class_msg_pool_1a212436e9034cf521ffebf5e81310b49a" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>max_buf256</name></member>
+      <member refid="class_msg_pool_1a630d4798edf521ce66515040ba64f686" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>max_buf32</name></member>
+      <member refid="class_msg_pool_1add4dc6a9a3b585c3bdbe804b804e779e" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>max_buf512</name></member>
+      <member refid="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>max_elements</name></member>
+      <member refid="class_msg_pool_1a371b26884552759e7161090fea883e00" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>maxused</name></member>
+      <member refid="class_msg_pool_1a540945db23d0ff1aa2d8e881e94b25a4" prot="private" virt="non-virtual"><scope>MsgPool</scope><name>MsgPool</name></member>
+      <member refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>size</name></member>
+      <member refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>stats</name></member>
+      <member refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>used</name></member>
+      <member refid="class_msg_pool_1a0f3b9b311f9b443feb3be08fd773e2e3" prot="public" virt="non-virtual"><scope>MsgPool</scope><name>~MsgPool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

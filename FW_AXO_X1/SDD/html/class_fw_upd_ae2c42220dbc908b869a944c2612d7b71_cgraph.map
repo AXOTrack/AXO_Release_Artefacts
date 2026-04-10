@@ -1,0 +1,12 @@
+<map id="download_success" name="download_success">
+<area shape="rect" id="node1" title="Send OTA Success event message to firmware update control task." alt="" coords="5,56,137,83"/>
+<area shape="rect" id="node2" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="185,56,300,83"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="348,5,503,32"/>
+<area shape="rect" id="node5" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="374,56,477,83"/>
+<area shape="rect" id="node6" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="380,107,471,133"/>
+<area shape="rect" id="node4" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="555,5,685,32"/>
+<area shape="rect" id="node7" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="551,81,689,108"/>
+<area shape="rect" id="node8" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="575,132,665,159"/>
+<area shape="rect" id="node9" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="737,107,857,133"/>
+<area shape="rect" id="node10" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="749,157,846,184"/>
+</map>

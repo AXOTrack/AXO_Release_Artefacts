@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_mux_controller" kind="class" language="C++" prot="public">
+    <compoundname>MuxController</compoundname>
+    <includes refid="mux__controller_8h" local="no">mux_controller.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mux_controller_1aa4face4b2d0cf50b95c52b1e82fa1de3" prot="private" static="no" mutable="no">
+        <type>const struct gpio_dt_spec *</type>
+        <definition>const struct gpio_dt_spec* mux_gpios_</definition>
+        <argsstring></argsstring>
+        <name>mux_gpios_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The GPIO pin specification of type struct gpio_dt_spec of the muxer select lines </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="62" column="30" bodyfile="drv/adc/mux_controller.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" compoundref="mux__controller_8cpp" startline="63" endline="84">init</referencedby>
+        <referencedby refid="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" compoundref="mux__controller_8cpp" startline="98" endline="111">selectChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t num_mux_</definition>
+        <argsstring></argsstring>
+        <name>num_mux_</name>
+        <briefdescription>
+<para>The number of mux select lines. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="64" column="12" bodyfile="drv/adc/mux_controller.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" compoundref="mux__controller_8cpp" startline="63" endline="84">init</referencedby>
+        <referencedby refid="class_mux_controller_1a54e8abb2fdb11bc1facb1c5507bc6b85" compoundref="mux__controller_8h" startline="57" endline="57">numMuxPins</referencedby>
+        <referencedby refid="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" compoundref="mux__controller_8cpp" startline="98" endline="111">selectChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mux_controller_1ac420559f57917a177b0a8a02ae46cb7e" prot="private" static="no" mutable="no">
+        <type>const struct gpio_dt_spec *</type>
+        <definition>const struct gpio_dt_spec* enable_gpio_</definition>
+        <argsstring></argsstring>
+        <name>enable_gpio_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The GPIO pin specification of type struct gpio_dt_spec of the mux enable pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="67" column="30" bodyfile="drv/adc/mux_controller.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_mux_controller_1ad53b270a93ec5d3f185dbf338b3541e1" compoundref="mux__controller_8cpp" startline="124" endline="130">enableLoad</referencedby>
+        <referencedby refid="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" compoundref="mux__controller_8cpp" startline="63" endline="84">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mux_controller_1aa77c8447e2fe60be18057c4dc64610ec" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t current_channel_</definition>
+        <argsstring></argsstring>
+        <name>current_channel_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The current active channel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="69" column="13" bodyfile="drv/adc/mux_controller.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_mux_controller_1a6195a01cfe536305eafbe3ad63bc49de" compoundref="mux__controller_8cpp" startline="139" endline="143">printStatus</referencedby>
+        <referencedby refid="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" compoundref="mux__controller_8cpp" startline="98" endline="111">selectChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mux_controller_1a0d44640eabe849264448f2032a8f9fab" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool load_enabled_</definition>
+        <argsstring></argsstring>
+        <name>load_enabled_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>load enabled flag </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="71" column="10" bodyfile="drv/adc/mux_controller.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_mux_controller_1ad53b270a93ec5d3f185dbf338b3541e1" compoundref="mux__controller_8cpp" startline="124" endline="130">enableLoad</referencedby>
+        <referencedby refid="class_mux_controller_1a6195a01cfe536305eafbe3ad63bc49de" compoundref="mux__controller_8cpp" startline="139" endline="143">printStatus</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mux_controller_1a127375f5c4f3e07c290c0e4175295b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MuxController</definition>
+        <argsstring>(const struct gpio_dt_spec *mux_gpios, size_t num_mux, const struct gpio_dt_spec *enable_gpio=nullptr)</argsstring>
+        <name>MuxController</name>
+        <param>
+          <type>const struct gpio_dt_spec *</type>
+          <declname>mux_gpios</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_mux</declname>
+        </param>
+        <param>
+          <type>const struct gpio_dt_spec *</type>
+          <declname>enable_gpio</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>The MUX Controller constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mux_gpios</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array with gpio information for muxer select lines </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_mux</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of muxer select lines </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable_gpio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure with gpio information for muxer enable pin</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initializes the GPIO pins of the muxer select lines with array mux_gpios of type struct gpio_dt_spec, the number of muxer select lines with parameter num_mux and mux enable pin with structure enable_gpio of type struct gpio_dt_spec. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="50" column="5" bodyfile="drv/adc/mux_controller.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The MUX Controller init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns 0 in case of success, error code ENODEV otherwise</para>
+</simplesect>
+The function enters a loop over the array of muxer select lines and checks if the GPIO at index i is ready for usage with call of function device_is_ready. If a GPIO is not ready, the function returns immediately with error code ENODEV. Afterwards it checks if the muxer is enabled and the enable GPIO is not ready for usage. In this case the function returns with error code ENODEV, otherwise enable GPIO is set to inactive and functions returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="53" column="9" bodyfile="drv/adc/mux_controller.cpp" bodystart="63" bodyend="84"/>
+        <references refid="class_mux_controller_1ac420559f57917a177b0a8a02ae46cb7e" compoundref="mux__controller_8h" startline="67">enable_gpio_</references>
+        <references refid="class_mux_controller_1aa4face4b2d0cf50b95c52b1e82fa1de3" compoundref="mux__controller_8h" startline="62">mux_gpios_</references>
+        <references refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" compoundref="mux__controller_8h" startline="64">num_mux_</references>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int selectChannel</definition>
+        <argsstring>(uint8_t ch)</argsstring>
+        <name>selectChannel</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Function to select a single ADC channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ADC channel to select</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 in case of success, error code EINVAL otherwise</para>
+</simplesect>
+The function checks validity of the parameter ch. In case it is not in valid, the function returns immediately with error code EINVAL. Otherwise ADC channel is selected by call of function gpio_pin_set_dt and member variable current_channel_ is set to parameter ch. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="54" column="9" bodyfile="drv/adc/mux_controller.cpp" bodystart="98" bodyend="111"/>
+        <references refid="class_mux_controller_1aa77c8447e2fe60be18057c4dc64610ec" compoundref="mux__controller_8h" startline="69">current_channel_</references>
+        <references refid="class_mux_controller_1aa4face4b2d0cf50b95c52b1e82fa1de3" compoundref="mux__controller_8h" startline="62">mux_gpios_</references>
+        <references refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" compoundref="mux__controller_8h" startline="64">num_mux_</references>
+        <referencedby refid="mux__controller_8cpp_1aed77ef58b255548d38e163c6b4879901" compoundref="mux__controller_8cpp" startline="204" endline="209">cmd_mux_select</referencedby>
+        <referencedby refid="mux__controller_8cpp_1af79cc78f7f30e56c66841ff37cf20031" compoundref="mux__controller_8cpp" startline="249" endline="280">cmd_mux_sweep</referencedby>
+        <referencedby refid="struct_a_d_converter_1a9dc1243f3e218fb3511b33b0fae8bac8" compoundref="adconverter_8cpp" startline="192" endline="244">ADConverter::sample</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mux_controller_1ad53b270a93ec5d3f185dbf338b3541e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void enableLoad</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>enableLoad</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Function to enable or disable the muxer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enable flag</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function checks if the GPIO pin specification of type struct gpio_dt_spec of the is initialized and in this case it set the desired GPIO according to parameter enable by calling function gpio_pin_set_dt provided by the zephyr library and set the provate member flag load_enabled_ to the value of parameter enable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="55" column="10" bodyfile="drv/adc/mux_controller.cpp" bodystart="124" bodyend="130"/>
+        <references refid="class_mux_controller_1ac420559f57917a177b0a8a02ae46cb7e" compoundref="mux__controller_8h" startline="67">enable_gpio_</references>
+        <references refid="class_mux_controller_1a0d44640eabe849264448f2032a8f9fab" compoundref="mux__controller_8h" startline="71">load_enabled_</references>
+        <referencedby refid="mux__controller_8cpp_1acff87cd9bc6f9e2eb88d8e875bf8c4aa" compoundref="mux__controller_8cpp" startline="217" endline="223">cmd_mux_enable</referencedby>
+        <referencedby refid="mux__controller_8cpp_1af79cc78f7f30e56c66841ff37cf20031" compoundref="mux__controller_8cpp" startline="249" endline="280">cmd_mux_sweep</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mux_controller_1a6195a01cfe536305eafbe3ad63bc49de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printStatus</definition>
+        <argsstring>(const struct shell *shell) const</argsstring>
+        <name>printStatus</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+<para>Function to print the muxer status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the used shell</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function prints the muxer status by calling function shell_print. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="56" column="10" bodyfile="drv/adc/mux_controller.cpp" bodystart="139" bodyend="143"/>
+        <references refid="class_mux_controller_1aa77c8447e2fe60be18057c4dc64610ec" compoundref="mux__controller_8h" startline="69">current_channel_</references>
+        <references refid="class_mux_controller_1a0d44640eabe849264448f2032a8f9fab" compoundref="mux__controller_8h" startline="71">load_enabled_</references>
+        <referencedby refid="mux__controller_8cpp_1a5afe50842092a871e0f1b424a075210b" compoundref="mux__controller_8cpp" startline="231" endline="234">cmd_mux_status</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mux_controller_1a54e8abb2fdb11bc1facb1c5507bc6b85" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t numMuxPins</definition>
+        <argsstring>() const</argsstring>
+        <name>numMuxPins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="57" column="12" bodyfile="drv/adc/mux_controller.h" bodystart="57" bodyend="57"/>
+        <references refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" compoundref="mux__controller_8h" startline="64">num_mux_</references>
+        <referencedby refid="mux__controller_8cpp_1af79cc78f7f30e56c66841ff37cf20031" compoundref="mux__controller_8cpp" startline="249" endline="280">cmd_mux_sweep</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MUX Controller driver class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The MUX Controller driver class handle the selection of the connected analog inputs and connect the selcted channel to the drain pin, which acts as output and is connected to the analog input pin 14 / AIN1 of the NRF9160. The class provides methods to select the analog input channel, to enable or disable the analog input, to print the status and to retrieve the nuimber of attached analog input signals. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>size_t</label>
+      </node>
+      <node id="5">
+        <label>uint8_t</label>
+      </node>
+      <node id="4">
+        <label>bool</label>
+      </node>
+      <node id="1">
+        <label>MuxController</label>
+        <link refid="class_mux_controller"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-enable_gpio_</edgelabel>
+          <edgelabel>-mux_gpios_</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-num_mux_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-load_enabled_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-current_channel_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>const struct gpio_dt_spec *</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/adc/mux_controller.h" line="48" column="1" bodyfile="drv/adc/mux_controller.h" bodystart="48" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_mux_controller_1aa77c8447e2fe60be18057c4dc64610ec" prot="private" virt="non-virtual"><scope>MuxController</scope><name>current_channel_</name></member>
+      <member refid="class_mux_controller_1ac420559f57917a177b0a8a02ae46cb7e" prot="private" virt="non-virtual"><scope>MuxController</scope><name>enable_gpio_</name></member>
+      <member refid="class_mux_controller_1ad53b270a93ec5d3f185dbf338b3541e1" prot="public" virt="non-virtual"><scope>MuxController</scope><name>enableLoad</name></member>
+      <member refid="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" prot="public" virt="non-virtual"><scope>MuxController</scope><name>init</name></member>
+      <member refid="class_mux_controller_1a0d44640eabe849264448f2032a8f9fab" prot="private" virt="non-virtual"><scope>MuxController</scope><name>load_enabled_</name></member>
+      <member refid="class_mux_controller_1aa4face4b2d0cf50b95c52b1e82fa1de3" prot="private" virt="non-virtual"><scope>MuxController</scope><name>mux_gpios_</name></member>
+      <member refid="class_mux_controller_1a127375f5c4f3e07c290c0e4175295b83" prot="public" virt="non-virtual"><scope>MuxController</scope><name>MuxController</name></member>
+      <member refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" prot="private" virt="non-virtual"><scope>MuxController</scope><name>num_mux_</name></member>
+      <member refid="class_mux_controller_1a54e8abb2fdb11bc1facb1c5507bc6b85" prot="public" virt="non-virtual"><scope>MuxController</scope><name>numMuxPins</name></member>
+      <member refid="class_mux_controller_1a6195a01cfe536305eafbe3ad63bc49de" prot="public" virt="non-virtual"><scope>MuxController</scope><name>printStatus</name></member>
+      <member refid="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" prot="public" virt="non-virtual"><scope>MuxController</scope><name>selectChannel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+<map id="ota_subscribe" name="ota_subscribe">
+<area shape="rect" id="node1" title="Function to send a subscribe request for the OTA topic to the MQTT broker." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#a0fc7bb8f849d8634227e7e2d4a1ac9f0" title="Function to send a subscribe request to the MQTT broker." alt="" coords="156,5,235,32"/>
+</map>

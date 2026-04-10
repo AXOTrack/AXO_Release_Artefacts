@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classscoped__lock" kind="class" language="C++" prot="public">
+    <compoundname>scoped_lock</compoundname>
+    <includes refid="mutex_8h" local="no">mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mutex" kindref="compound">Mutex</ref> *</type>
+        <definition>Mutex* mtx</definition>
+        <argsstring></argsstring>
+        <name>mtx</name>
+        <briefdescription>
+<para>Pointer to the mutex object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="85" column="11" bodyfile="rtos/mutex.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classscoped__lock_1af4d49476246e608333026bcc04150e80" compoundref="mutex_8h" startline="80" endline="80">scoped_lock</referencedby>
+        <referencedby refid="classscoped__lock_1a7dfc5e11e9f6342bd9ef5ea59e890af1" compoundref="mutex_8h" startline="82" endline="82">~scoped_lock</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classscoped__lock_1af4d49476246e608333026bcc04150e80" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>scoped_lock</definition>
+        <argsstring>(Mutex *m)</argsstring>
+        <name>scoped_lock</name>
+        <param>
+          <type><ref refid="class_mutex" kindref="compound">Mutex</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="80" column="14" bodyfile="rtos/mutex.h" bodystart="80" bodyend="80"/>
+        <references refid="class_mutex_1af7d6e125437961b268e97fba0f72248f" compoundref="mutex_8cpp" startline="51" endline="56">Mutex::lock</references>
+        <references refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" compoundref="mutex_8h" startline="85">mtx</references>
+      </memberdef>
+      <memberdef kind="function" id="classscoped__lock_1a1de056a5a94a54519eeb59dddd9fdc3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>scoped_lock</definition>
+        <argsstring>()=delete</argsstring>
+        <name>scoped_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="81" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classscoped__lock_1a7dfc5e11e9f6342bd9ef5ea59e890af1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>~scoped_lock</definition>
+        <argsstring>()</argsstring>
+        <name>~scoped_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="82" column="5" bodyfile="rtos/mutex.h" bodystart="82" bodyend="82"/>
+        <references refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" compoundref="mutex_8h" startline="85">mtx</references>
+        <references refid="class_mutex_1a987ce601d6d4c8eedd68b58db3b7811a" compoundref="mutex_8cpp" startline="87" endline="90">Mutex::unlock</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper class for mutex lock / unlock. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+ </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>struct k_mutex</label>
+      </node>
+      <node id="2">
+        <label>Mutex</label>
+        <link refid="class_mutex"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mutex_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>scoped_lock</label>
+        <link refid="classscoped__lock"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mtx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mutex.h" line="78" column="1" bodyfile="rtos/mutex.h" bodystart="78" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" prot="private" virt="non-virtual"><scope>scoped_lock</scope><name>mtx</name></member>
+      <member refid="classscoped__lock_1af4d49476246e608333026bcc04150e80" prot="public" virt="non-virtual"><scope>scoped_lock</scope><name>scoped_lock</name></member>
+      <member refid="classscoped__lock_1a1de056a5a94a54519eeb59dddd9fdc3e" prot="public" virt="non-virtual"><scope>scoped_lock</scope><name>scoped_lock</name></member>
+      <member refid="classscoped__lock_1a7dfc5e11e9f6342bd9ef5ea59e890af1" prot="public" virt="non-virtual"><scope>scoped_lock</scope><name>~scoped_lock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

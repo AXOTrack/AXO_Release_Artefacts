@@ -1,0 +1,1007 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classspifram" kind="class" language="C++" prot="public">
+    <compoundname>spifram</compoundname>
+    <includes refid="fram_8h" local="no">fram.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classspifram_1af055b4b148c703eaeda1bedfeda907ae" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t id[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="89" column="13" bodyfile="drv/spi/fram.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classspifram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="fram_8cpp" startline="156" endline="159">getDeviceId</referencedby>
+        <referencedby refid="classspifram_1a2ea7e3192751179e5d1730f154dcdbc9" compoundref="fram_8cpp" startline="314" endline="330">read_device_id</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspifram_1a0861409233820f636c44759f690cae93" prot="public" static="no" mutable="no">
+        <type>const struct device *</type>
+        <definition>const struct device* spi_dev</definition>
+        <argsstring></argsstring>
+        <name>spi_dev</name>
+        <briefdescription>
+<para>SPI controller device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="90" column="24" bodyfile="drv/spi/fram.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">init</referencedby>
+        <referencedby refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" compoundref="fram_8cpp" startline="234" endline="238">readBytes</referencedby>
+        <referencedby refid="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" compoundref="fram_8cpp" startline="104" endline="112">readDeviceId</referencedby>
+        <referencedby refid="classspifram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="fram_8cpp" startline="169" endline="169">sleep</referencedby>
+        <referencedby refid="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="fram_8cpp" startline="180" endline="180">wakeup</referencedby>
+        <referencedby refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" compoundref="fram_8cpp" startline="214" endline="218">writeBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" prot="public" static="no" mutable="no">
+        <type>struct spi_config *</type>
+        <definition>struct spi_config* spi_cfg</definition>
+        <argsstring></argsstring>
+        <name>spi_cfg</name>
+        <briefdescription>
+<para>SPI controller configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="91" column="22" bodyfile="drv/spi/fram.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="classspifram_1abdd1c2aa5bf67c7b12d0983839037f60" compoundref="fram_8cpp" startline="459" endline="478">dpd_enter</referencedby>
+        <referencedby refid="classspifram_1a7b6017c27f8b34a91104422c88c4954f" compoundref="fram_8cpp" startline="496" endline="517">dpd_exit</referencedby>
+        <referencedby refid="classspifram_1a2b5d6c97c3b1b81c410898f8b4d88dba" compoundref="fram_8cpp" startline="353" endline="375">fram_access</referencedby>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">init</referencedby>
+        <referencedby refid="classspifram_1a3f8be5a2578127c3fc0e74e3532f284b" compoundref="fram_8cpp" startline="433" endline="442">read_bytes</referencedby>
+        <referencedby refid="classspifram_1a2ea7e3192751179e5d1730f154dcdbc9" compoundref="fram_8cpp" startline="314" endline="330">read_device_id</referencedby>
+        <referencedby refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" compoundref="fram_8cpp" startline="234" endline="238">readBytes</referencedby>
+        <referencedby refid="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" compoundref="fram_8cpp" startline="104" endline="112">readDeviceId</referencedby>
+        <referencedby refid="classspifram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="fram_8cpp" startline="169" endline="169">sleep</referencedby>
+        <referencedby refid="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="fram_8cpp" startline="180" endline="180">wakeup</referencedby>
+        <referencedby refid="classspifram_1a3b8249f30cb998de07e43307c96667f8" compoundref="fram_8cpp" startline="396" endline="414">write_bytes</referencedby>
+        <referencedby refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" compoundref="fram_8cpp" startline="214" endline="218">writeBytes</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classspifram_1a90919b38d8d7ea79bcdae2ecbed0ff88" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dpd_active</definition>
+        <argsstring></argsstring>
+        <name>dpd_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="113" column="10" bodyfile="drv/spi/fram.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="classspifram_1abdd1c2aa5bf67c7b12d0983839037f60" compoundref="fram_8cpp" startline="459" endline="478">dpd_enter</referencedby>
+        <referencedby refid="classspifram_1a7b6017c27f8b34a91104422c88c4954f" compoundref="fram_8cpp" startline="496" endline="517">dpd_exit</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classspifram_1a7152407e89ac43de9a26b3842d708077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~spifram</definition>
+        <argsstring>()</argsstring>
+        <name>~spifram</name>
+        <briefdescription>
+<para>SPI FRAM class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="73" column="5" bodyfile="drv/spi/fram.cpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The initialization function of the SPI FRAM class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initialize the private member variables spi_dev (SPI controller device) and spi_cfg (SPI controller configuration) by calling the functions getController and getConfig of the spibus instance <ref refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" kindref="member">spibus::inst()</ref>, Afterwards self test of the class will be performed by calling function selftest. In case of a failure an error message will be printed. <linebreak/>
+ <linebreak/>
+ In Zephyr devicetree FRAM SPI is SPI bus 3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="76" column="10" bodyfile="drv/spi/fram.cpp" bodystart="82" bodyend="94"/>
+        <references refid="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" compoundref="spibus_8h" startline="90" endline="90">spibus::getConfig</references>
+        <references refid="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" compoundref="spibus_8h" startline="89" endline="89">spibus::getController</references>
+        <references refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">spibus::init</references>
+        <references refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" compoundref="spibus_8cpp" startline="85" endline="89">spibus::inst</references>
+        <references refid="classspifram_1a551f8dab86180b322717e3cd04b93126" compoundref="fram_8cpp" startline="66" endline="70">inst</references>
+        <references refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" compoundref="fram_8cpp" startline="519" endline="570">selftest</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <references refid="classspifram_1a0861409233820f636c44759f690cae93" compoundref="fram_8h" startline="90">spi_dev</references>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1af139f30d28b7dc61f5051c0d595af368" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erase</definition>
+        <argsstring>()</argsstring>
+        <name>erase</name>
+        <briefdescription>
+<para>Function to erase the content of the FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Function initialize an array of size 1 KByte with 0 and write every this array into FRAM by calling function writeBytes 512 times. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="77" column="10" bodyfile="drv/spi/fram.cpp" bodystart="120" bodyend="126"/>
+        <references refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" compoundref="fram_8cpp" startline="214" endline="218">writeBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1ac42264f22f7df3ae9ff3f9fa70c88766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erase</definition>
+        <argsstring>(void *from, int32_t len)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>void *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1aaf1e695ade80d0f8ede8c830ef743999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump</definition>
+        <argsstring>(uint32_t from, int32_t len)</argsstring>
+        <name>dump</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to print the content of the FRAM in a terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start point of data to be printed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length (number of bytes) of data to be printed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function read every single byte from start point until end point (from + len) by calling function readBytes. After every call a short delay of 5 ms will be performed and the data will be printed out by call of macro LOG_PRINTK. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="79" column="10" bodyfile="drv/spi/fram.cpp" bodystart="138" bodyend="147"/>
+        <references refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" compoundref="fram_8cpp" startline="234" endline="238">readBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int readDeviceId</definition>
+        <argsstring>()</argsstring>
+        <name>readDeviceId</name>
+        <briefdescription>
+<para>Function to read the device ID if the FRAM chip. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>rc: 0 if no error, otherwise error code</para>
+</simplesect>
+The public method read device ID by calling the private member function read_device_id In case of a failure an error message will be printed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="80" column="9" bodyfile="drv/spi/fram.cpp" bodystart="104" bodyend="112"/>
+        <references refid="classspifram_1a2ea7e3192751179e5d1730f154dcdbc9" compoundref="fram_8cpp" startline="314" endline="330">read_device_id</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <references refid="classspifram_1a0861409233820f636c44759f690cae93" compoundref="fram_8h" startline="90">spi_dev</references>
+        <referencedby refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" compoundref="fram_8cpp" startline="519" endline="570">selftest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a8966ac02bccc26d8c63b6257c28c6b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sleep</definition>
+        <argsstring>()</argsstring>
+        <name>sleep</name>
+        <briefdescription>
+<para>Function to enter deep power down mode of FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return value of method dpd_enter (0 no error, otherwise error code)</para>
+</simplesect>
+Function enters deep power down mode by calling private method dpd_enter. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="81" column="9" bodyfile="drv/spi/fram.cpp" bodystart="169" bodyend="169"/>
+        <references refid="classspifram_1abdd1c2aa5bf67c7b12d0983839037f60" compoundref="fram_8cpp" startline="459" endline="478">dpd_enter</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <references refid="classspifram_1a0861409233820f636c44759f690cae93" compoundref="fram_8h" startline="90">spi_dev</references>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wakeup</definition>
+        <argsstring>()</argsstring>
+        <name>wakeup</name>
+        <briefdescription>
+<para>Function to wake up FRAM from deep power down mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return value of method dpd_enter (0 no error, otherwise error code)</para>
+</simplesect>
+Function returns from deep power down mode by calling private method dpd_exit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="82" column="9" bodyfile="drv/spi/fram.cpp" bodystart="180" bodyend="180"/>
+        <references refid="classspifram_1a7b6017c27f8b34a91104422c88c4954f" compoundref="fram_8cpp" startline="496" endline="517">dpd_exit</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <references refid="classspifram_1a0861409233820f636c44759f690cae93" compoundref="fram_8h" startline="90">spi_dev</references>
+        <referencedby refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" compoundref="fram_8cpp" startline="519" endline="570">selftest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1ab0a12fdcb7fce8974b2ca43e12a62caa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int power_on</definition>
+        <argsstring>()</argsstring>
+        <name>power_on</name>
+        <briefdescription>
+<para>Function to switch on FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return allways 0</para>
+</simplesect>
+Dummy implementation for compatibility with mram module </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="83" column="9" bodyfile="drv/spi/fram.cpp" bodystart="189" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1af1f8781e94de62b193539c9513be36a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int power_off</definition>
+        <argsstring>()</argsstring>
+        <name>power_off</name>
+        <briefdescription>
+<para>Function to switch off FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return allways 0</para>
+</simplesect>
+Dummy implementation for compatibility with mram module </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="84" column="9" bodyfile="drv/spi/fram.cpp" bodystart="198" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a63a57b6838d0be4a55b8b633dd2aa1ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t * getDeviceId</definition>
+        <argsstring>()</argsstring>
+        <name>getDeviceId</name>
+        <briefdescription>
+<para>Getter function to retrieve the device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns the device ID as 8-bit unsigned interger pointer</para>
+</simplesect>
+Function returns a pointer to public array id[4]. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="85" column="13" bodyfile="drv/spi/fram.cpp" bodystart="156" bodyend="159"/>
+        <references refid="classspifram_1af055b4b148c703eaeda1bedfeda907ae" compoundref="fram_8h" startline="89">id</references>
+        <referencedby refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" compoundref="fram_8cpp" startline="519" endline="570">selftest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int writeBytes</definition>
+        <argsstring>(uint32_t addr, uint8_t *data, uint32_t num_bytes)</argsstring>
+        <name>writeBytes</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function to write multiple bytes into FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for writing the data in FRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array with the data to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method write_bytes (0 no error, otherwise error code)</para>
+</simplesect>
+Function writes num_bytes from array data into FRAM starting at address addr by calling private method write_bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="86" column="9" bodyfile="drv/spi/fram.cpp" bodystart="214" bodyend="218"/>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <references refid="classspifram_1a0861409233820f636c44759f690cae93" compoundref="fram_8h" startline="90">spi_dev</references>
+        <references refid="classspifram_1a3b8249f30cb998de07e43307c96667f8" compoundref="fram_8cpp" startline="396" endline="414">write_bytes</references>
+        <referencedby refid="classspifram_1af139f30d28b7dc61f5051c0d595af368" compoundref="fram_8cpp" startline="120" endline="126">erase</referencedby>
+        <referencedby refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" compoundref="fram_8cpp" startline="519" endline="570">selftest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int readBytes</definition>
+        <argsstring>(uint32_t addr, uint8_t *data, uint32_t num_bytes)</argsstring>
+        <name>readBytes</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function to read multiple bytes from FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for reading the data from FRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method read_bytes (0 no error, otherwise error code)</para>
+</simplesect>
+Function read num_bytes into array data from FRAM starting at address addr by calling private method read_bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="87" column="9" bodyfile="drv/spi/fram.cpp" bodystart="234" bodyend="238"/>
+        <references refid="classspifram_1a3f8be5a2578127c3fc0e74e3532f284b" compoundref="fram_8cpp" startline="433" endline="442">read_bytes</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <references refid="classspifram_1a0861409233820f636c44759f690cae93" compoundref="fram_8h" startline="90">spi_dev</references>
+        <referencedby refid="classspifram_1a7b6017c27f8b34a91104422c88c4954f" compoundref="fram_8cpp" startline="496" endline="517">dpd_exit</referencedby>
+        <referencedby refid="classspifram_1aaf1e695ade80d0f8ede8c830ef743999" compoundref="fram_8cpp" startline="138" endline="147">dump</referencedby>
+        <referencedby refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" compoundref="fram_8cpp" startline="519" endline="570">selftest</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classspifram_1a551f8dab86180b322717e3cd04b93126" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classspifram" kindref="compound">spifram</ref> *</type>
+        <definition>spifram * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="75" column="20" bodyfile="drv/spi/fram.cpp" bodystart="66" bodyend="70"/>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classspifram_1a6d267482059c32c5a47e8f3f16177f1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spifram</definition>
+        <argsstring>()</argsstring>
+        <name>spifram</name>
+        <briefdescription>
+<para>SPI FRAM class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor is declared as private according to singleton pattern. It is called in the static inst function to create the exclusiv only instance of the class. It initializes the private member variable dpd_active with false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="94" column="5" bodyfile="drv/spi/fram.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1abdd1c2aa5bf67c7b12d0983839037f60" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dpd_enter</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg)</argsstring>
+        <name>dpd_enter</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <briefdescription>
+<para>Function to enter deep power down mode of FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on success, otherwise error code</para>
+</simplesect>
+Function initializes transmit buffer, set the enter deep power down OP code command MB85SR4MTY_DPD_CMD and pass transmit buffer to FRAM by calling function spi_write. In case of success the private member variable dpd_active is set to true and the function returns 0 for success indication. In case of an error function returns error code EIO. See MB85RS4MTY data sheet, page 7. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="96" column="9" bodyfile="drv/spi/fram.cpp" bodystart="459" bodyend="478"/>
+        <references refid="classspifram_1a90919b38d8d7ea79bcdae2ecbed0ff88" compoundref="fram_8h" startline="113">dpd_active</references>
+        <references refid="fram_8h_1aba8aaf475badd457450b770d2075ca52" compoundref="fram_8h" startline="54">MB85SR4MTY_DPD_CMD</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <referencedby refid="classspifram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="fram_8cpp" startline="169" endline="169">sleep</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a7b6017c27f8b34a91104422c88c4954f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dpd_exit</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg)</argsstring>
+        <name>dpd_exit</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <briefdescription>
+<para>Function to wake up FRAM from deep power down mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on success, otherwise error code</para>
+</simplesect>
+Function wakes up FRAM by pulling Chip Select CS to low and after a delay of 10 usec to high. In case of an error function returns error code EIO.Afterwards a dummy read of one byte is performed at address 0 og FRAM by calling function readBytes. Finally the private member variable dpd_active is set to false and function returns 0 for success indication. See MB85RS4MTY data sheet, page 22. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="98" column="9" bodyfile="drv/spi/fram.cpp" bodystart="496" bodyend="517"/>
+        <references refid="classspifram_1a90919b38d8d7ea79bcdae2ecbed0ff88" compoundref="fram_8h" startline="113">dpd_active</references>
+        <references refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" compoundref="fram_8cpp" startline="234" endline="238">readBytes</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <referencedby refid="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="fram_8cpp" startline="180" endline="180">wakeup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a2ea7e3192751179e5d1730f154dcdbc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_device_id</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg)</argsstring>
+        <name>read_device_id</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <briefdescription>
+<para>Function to read the device ID from FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method spi_transceive (0 no error, otherwise error code)</para>
+</simplesect>
+Function initializes transmit and receive buffer, set the read Device ID OP code command MB85RS4MTY_MANUFACTURER_ID_CMD and read the device ID by calling function spi_transceive. See MB85RS4MTY data sheet, page 7 for OP code commands and page 11 for device ID. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="100" column="9" bodyfile="drv/spi/fram.cpp" bodystart="314" bodyend="330"/>
+        <references refid="classspifram_1af055b4b148c703eaeda1bedfeda907ae" compoundref="fram_8h" startline="89">id</references>
+        <references refid="fram_8h_1acb7bf420f05981cca45773b72e1e7c92" compoundref="fram_8h" startline="48">MB85RS4MTY_MANUFACTURER_ID_CMD</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <referencedby refid="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" compoundref="fram_8cpp" startline="104" endline="112">readDeviceId</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a2b5d6c97c3b1b81c410898f8b4d88dba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fram_access</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint8_t cmd, uint32_t addr, void *data, size_t len)</argsstring>
+        <name>fram_access</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to access FRAM for reading and writing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OP code command </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for reading or writing the data from / in FRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be read or to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be read or to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method spi_transceive in case of reading or of method spi_write in case of writing (0 no error, otherwise error code)</para>
+</simplesect>
+Function initializes transmit buffer an set the OP code command cmd and start address in array access. In case of reading the receive buffer is initialized and read the data by calling function spi_transceive. In case of writing the data will be written by calling function spi_write. Finally the return value of function spi_transceive or spi_write will be returned to calling function. See MB85RS4MTY data sheet, page 7. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="102" column="9" bodyfile="drv/spi/fram.cpp" bodystart="353" bodyend="375"/>
+        <references refid="fram_8h_1ad2f62460b8b5731d70e0b5f00965cf26" compoundref="fram_8h" startline="52">MB85RS4MTY_READ_CMD</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <referencedby refid="classspifram_1a3f8be5a2578127c3fc0e74e3532f284b" compoundref="fram_8cpp" startline="433" endline="442">read_bytes</referencedby>
+        <referencedby refid="classspifram_1a3b8249f30cb998de07e43307c96667f8" compoundref="fram_8cpp" startline="396" endline="414">write_bytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a3b8249f30cb998de07e43307c96667f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_bytes</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint32_t addr, uint8_t *data, uint32_t num_bytes)</argsstring>
+        <name>write_bytes</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function to write multiple bytes to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for writing the data in FRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function enable writing by calling function fram_access with OP code command MB85RS4MTY_WRITE_ENABLE_CMD. In case of an error function returns immediately with error code EIO, otherwise the data will be written by calling function fram_access with OP code command MB85RS4MTY_WRITE_CMD. In case of an error function returns error code EIO, otherwise returns 0 for indication success. See MB85RS4MTY data sheet, page 7. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="105" column="9" bodyfile="drv/spi/fram.cpp" bodystart="396" bodyend="414"/>
+        <references refid="classspifram_1a2b5d6c97c3b1b81c410898f8b4d88dba" compoundref="fram_8cpp" startline="353" endline="375">fram_access</references>
+        <references refid="fram_8h_1ae6f51d1fae13efe475754e8d7cc3ad0c" compoundref="fram_8h" startline="53">MB85RS4MTY_WRITE_CMD</references>
+        <references refid="fram_8h_1a791d050cc497fca5223fb179034d11c4" compoundref="fram_8h" startline="50">MB85RS4MTY_WRITE_ENABLE_CMD</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <referencedby refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" compoundref="fram_8cpp" startline="214" endline="218">writeBytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a3f8be5a2578127c3fc0e74e3532f284b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_bytes</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint32_t addr, uint8_t *data, uint32_t num_bytes)</argsstring>
+        <name>read_bytes</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>num_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function to read multiple bytes to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for reading the data from FRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function read the data calling function fram_access with OP code command MB85RS4MTY_READ_CMD. In case of an error function returns error code EIO, otherwise returns 0 for success indication. See MB85RS4MTY data sheet, page 7. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="108" column="9" bodyfile="drv/spi/fram.cpp" bodystart="433" bodyend="442"/>
+        <references refid="classspifram_1a2b5d6c97c3b1b81c410898f8b4d88dba" compoundref="fram_8cpp" startline="353" endline="375">fram_access</references>
+        <references refid="fram_8h_1ad2f62460b8b5731d70e0b5f00965cf26" compoundref="fram_8h" startline="52">MB85RS4MTY_READ_CMD</references>
+        <references refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="fram_8h" startline="91">spi_cfg</references>
+        <referencedby refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" compoundref="fram_8cpp" startline="234" endline="238">readBytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool selftest</definition>
+        <argsstring>()</argsstring>
+        <name>selftest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="111" column="10" bodyfile="drv/spi/fram.cpp" bodystart="519" bodyend="570"/>
+        <references refid="fram_8h_1a19436abc188b401ac42616d49fd0223d" compoundref="fram_8h" startline="56">FRAM_DEVICE_ID_1</references>
+        <references refid="fram_8h_1a9cccbbabf42644b2557d6c808cd3d721" compoundref="fram_8h" startline="57">FRAM_DEVICE_ID_2</references>
+        <references refid="fram_8h_1ab13481fb966a52da30f6261bceaad221" compoundref="fram_8h" startline="58">FRAM_DEVICE_ID_3</references>
+        <references refid="fram_8h_1a8bc9c027ca2792b54adde27be6e9e219" compoundref="fram_8h" startline="59">FRAM_DEVICE_ID_4</references>
+        <references refid="classspifram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="fram_8cpp" startline="156" endline="159">getDeviceId</references>
+        <references refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" compoundref="fram_8cpp" startline="234" endline="238">readBytes</references>
+        <references refid="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" compoundref="fram_8cpp" startline="104" endline="112">readDeviceId</references>
+        <references refid="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="fram_8cpp" startline="180" endline="180">wakeup</references>
+        <references refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" compoundref="fram_8cpp" startline="214" endline="218">writeBytes</references>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SPI FRAM class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The SPI FRAM class handle the storage of the acceleration raw data in FRAM. It provides methods to initialize and erase FRAM, to read and write the data, to push FRAM into power saving mode or release from it, to dump the data and to read and ship the devcie ID. Furthermore it provides a private method to test the integrity of the FRAM at startup of the system. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>spifram</label>
+        <link refid="classspifram"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+spi_cfg</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-dpd_active</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+spi_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>struct spi_config *</label>
+      </node>
+      <node id="4">
+        <label>uint8_t</label>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+      <node id="5">
+        <label>const struct device *</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/spi/fram.h" line="71" column="1" bodyfile="drv/spi/fram.h" bodystart="71" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classspifram_1a90919b38d8d7ea79bcdae2ecbed0ff88" prot="private" virt="non-virtual"><scope>spifram</scope><name>dpd_active</name></member>
+      <member refid="classspifram_1abdd1c2aa5bf67c7b12d0983839037f60" prot="private" virt="non-virtual"><scope>spifram</scope><name>dpd_enter</name></member>
+      <member refid="classspifram_1a7b6017c27f8b34a91104422c88c4954f" prot="private" virt="non-virtual"><scope>spifram</scope><name>dpd_exit</name></member>
+      <member refid="classspifram_1aaf1e695ade80d0f8ede8c830ef743999" prot="public" virt="non-virtual"><scope>spifram</scope><name>dump</name></member>
+      <member refid="classspifram_1af139f30d28b7dc61f5051c0d595af368" prot="public" virt="non-virtual"><scope>spifram</scope><name>erase</name></member>
+      <member refid="classspifram_1ac42264f22f7df3ae9ff3f9fa70c88766" prot="public" virt="non-virtual"><scope>spifram</scope><name>erase</name></member>
+      <member refid="classspifram_1a2b5d6c97c3b1b81c410898f8b4d88dba" prot="private" virt="non-virtual"><scope>spifram</scope><name>fram_access</name></member>
+      <member refid="classspifram_1a63a57b6838d0be4a55b8b633dd2aa1ec" prot="public" virt="non-virtual"><scope>spifram</scope><name>getDeviceId</name></member>
+      <member refid="classspifram_1af055b4b148c703eaeda1bedfeda907ae" prot="public" virt="non-virtual"><scope>spifram</scope><name>id</name></member>
+      <member refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>spifram</scope><name>init</name></member>
+      <member refid="classspifram_1a551f8dab86180b322717e3cd04b93126" prot="public" virt="non-virtual"><scope>spifram</scope><name>inst</name></member>
+      <member refid="classspifram_1af1f8781e94de62b193539c9513be36a2" prot="public" virt="non-virtual"><scope>spifram</scope><name>power_off</name></member>
+      <member refid="classspifram_1ab0a12fdcb7fce8974b2ca43e12a62caa" prot="public" virt="non-virtual"><scope>spifram</scope><name>power_on</name></member>
+      <member refid="classspifram_1a3f8be5a2578127c3fc0e74e3532f284b" prot="private" virt="non-virtual"><scope>spifram</scope><name>read_bytes</name></member>
+      <member refid="classspifram_1a2ea7e3192751179e5d1730f154dcdbc9" prot="private" virt="non-virtual"><scope>spifram</scope><name>read_device_id</name></member>
+      <member refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" prot="public" virt="non-virtual"><scope>spifram</scope><name>readBytes</name></member>
+      <member refid="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" prot="public" virt="non-virtual"><scope>spifram</scope><name>readDeviceId</name></member>
+      <member refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" prot="private" virt="non-virtual"><scope>spifram</scope><name>selftest</name></member>
+      <member refid="classspifram_1a8966ac02bccc26d8c63b6257c28c6b3a" prot="public" virt="non-virtual"><scope>spifram</scope><name>sleep</name></member>
+      <member refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" prot="public" virt="non-virtual"><scope>spifram</scope><name>spi_cfg</name></member>
+      <member refid="classspifram_1a0861409233820f636c44759f690cae93" prot="public" virt="non-virtual"><scope>spifram</scope><name>spi_dev</name></member>
+      <member refid="classspifram_1a6d267482059c32c5a47e8f3f16177f1f" prot="private" virt="non-virtual"><scope>spifram</scope><name>spifram</name></member>
+      <member refid="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" prot="public" virt="non-virtual"><scope>spifram</scope><name>wakeup</name></member>
+      <member refid="classspifram_1a3b8249f30cb998de07e43307c96667f8" prot="private" virt="non-virtual"><scope>spifram</scope><name>write_bytes</name></member>
+      <member refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" prot="public" virt="non-virtual"><scope>spifram</scope><name>writeBytes</name></member>
+      <member refid="classspifram_1a7152407e89ac43de9a26b3842d708077" prot="public" virt="non-virtual"><scope>spifram</scope><name>~spifram</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

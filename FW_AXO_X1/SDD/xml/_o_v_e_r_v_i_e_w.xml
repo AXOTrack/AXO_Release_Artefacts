@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_o_v_e_r_v_i_e_w" kind="page">
+    <compoundname>OVERVIEW</compoundname>
+    <title>Overview</title>
+    <tableofcontents>
+      <tocsect>
+        <name>System Overview</name>
+        <reference>_o_v_e_r_v_i_e_w_1AxoSystemOverview</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Data Measurement</name>
+        <reference>_o_v_e_r_v_i_e_w_1AxoDataMeasurement</reference>
+    </tocsect>
+      <tocsect>
+        <name>Normal Operation</name>
+        <reference>_o_v_e_r_v_i_e_w_1AxoNormalOperation</reference>
+    </tocsect>
+      <tocsect>
+        <name>FirmwareUpdate</name>
+        <reference>_o_v_e_r_v_i_e_w_1AxoFirmwareUpdate</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+    </tableofcontents>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="_o_v_e_r_v_i_e_w_1AxoSystemOverview">
+<title>System Overview</title>
+<para>AXO X1 devices will be placed at railway track switches to record vibration over defined thresholds to predict upcoming disturbances of the track switch. <linebreak/>
+ Because the battery lifetime shall be more the 5 years the system must be in a low power idle mode. There are only two scenarios to wakeup the system:<itemizedlist>
+<listitem><para>Cyclic connection to the backend by sending metrics updates (device health data)</para>
+</listitem><listitem><para>Acceleration goes above activity threshold</para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="_o_v_e_r_v_i_e_w_1AxoDataMeasurement">
+<title>Data Measurement</title>
+<para><itemizedlist>
+<listitem><para>Measurement of accelerations on switches (x/y/z)</para>
+</listitem><listitem><para>Automatic calculation of RMS data from the raw accelerator data</para>
+</listitem><listitem><para>Shock detection: Automatic calculation of medium and critical hits from the raw accelerator data</para>
+</listitem><listitem><para>Immediately transfer of the RMS and hit data to the backend</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="_o_v_e_r_v_i_e_w_1AxoNormalOperation">
+<title>Normal Operation</title>
+<para>In normal operation the expected behaviour should be:<itemizedlist>
+<listitem><para>Device is idle, waiting for motion. In idle state the device should be in its lowest power consumption state.</para>
+</listitem><listitem><para>If motion is detected (level of vibration detected by the accelerometer is above the activity threshold), start sampling data.</para>
+</listitem><listitem><para>Sample data at predefined, fixed data rate, save raw data locally. Do it for as long as there is motion (level of vibration detected by the accelerometer is below the inactivity threshold) or as long as there’s storage capacity (defined by the FRAM present in hardware).</para>
+</listitem><listitem><para>Perform appropriate conversions to calculate the RMS value of the sampled raw dataset and impact detection (according to system requirements). The values should be calculated for periods of 1000 ms.</para>
+</listitem><listitem><para>The impact detection will be an information of how many medium and critical impacts (definition above) happened for each period of RMS calculation.</para>
+</listitem><listitem><para>Send the calculated RMS and detected impacts to the backend through LTE-M.</para>
+</listitem><listitem><para>If transmission succeeded, go back to idle state and repeat the steps.</para>
+</listitem><listitem><para>Periodically (this period should be a fixed configuration) the device should connect to the network regardless if there’s acceleration data to be sent, to update device metrics which include information such as the device&apos;s battery level, signal strength, temperature, humidity, and other relevant parameters. This periodic connection should allow the device to update certain configuration parameters such as activity and inactivity thresholds and to check if there’s any queued OTA jobs.</para>
+</listitem><listitem><para>In case there’s an OTA job to be performed, this should start immediately. <linebreak/>
+<image type="html" name="NormalOperation.png" inline="yes"></image>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="_o_v_e_r_v_i_e_w_1AxoFirmwareUpdate">
+<title>FirmwareUpdate</title>
+<para>Firmware update over the air (OTA) shall be possible at any time of the systems life cycle:<itemizedlist>
+<listitem><para>Firmware can be updated over the air; can be triggered via the backend</para>
+</listitem><listitem><para>In case the new firmware does not work realiably there shall be a rollback mechanism to old version</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+ </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="main.h"/>
+  </compounddef>
+</doxygen>

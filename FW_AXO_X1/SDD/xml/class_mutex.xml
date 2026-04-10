@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_mutex" kind="class" language="C++" prot="public">
+    <compoundname>Mutex</compoundname>
+    <includes refid="mutex_8h" local="no">mutex.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mutex_1a60be41048a60657b202591050eff18fa" prot="private" static="no" mutable="no">
+        <type>struct k_mutex</type>
+        <definition>struct k_mutex mutex_handle</definition>
+        <argsstring></argsstring>
+        <name>mutex_handle</name>
+        <briefdescription>
+<para><ref refid="class_mutex" kindref="compound">Mutex</ref> administration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="68" column="10" bodyfile="rtos/mutex.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_mutex_1af7d6e125437961b268e97fba0f72248f" compoundref="mutex_8cpp" startline="51" endline="56">lock</referencedby>
+        <referencedby refid="class_mutex_1aefff5998db65a5d91d5ad83737ce9d5c" compoundref="mutex_8cpp" startline="73" endline="75">lock_timed</referencedby>
+        <referencedby refid="class_mutex_1a4b5dfbd24f5bc4c03b24b2da362f66d5" compoundref="mutex_8cpp" startline="37" endline="41">Mutex</referencedby>
+        <referencedby refid="class_mutex_1a987ce601d6d4c8eedd68b58db3b7811a" compoundref="mutex_8cpp" startline="87" endline="90">unlock</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mutex_1a4b5dfbd24f5bc4c03b24b2da362f66d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mutex</definition>
+        <argsstring>()</argsstring>
+        <name>Mutex</name>
+        <briefdescription>
+<para><ref refid="class_mutex" kindref="compound">Mutex</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor initializes the mutex by calling RTOS function k_mutex_init. This routine initializes the mutex object, prior to its first use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="64" column="5" bodyfile="rtos/mutex.cpp" bodystart="37" bodyend="41"/>
+        <references refid="class_mutex_1a60be41048a60657b202591050eff18fa" compoundref="mutex_8h" startline="71">mutex_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1a87e8b974837ceba57ed06cc60f7ac9cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ~Mutex</definition>
+        <argsstring>()</argsstring>
+        <name>~Mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="65" column="13" bodyfile="rtos/mutex.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1af7d6e125437961b268e97fba0f72248f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lock</definition>
+        <argsstring>(void)</argsstring>
+        <name>lock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_mutex" kindref="compound">Mutex</ref> lock function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function locks the mutex by calling RTOS function k_mutex_lock. If the mutex is locked by another thread, the calling thread waits until the mutex becomes available. <ref refid="class_mutex" kindref="compound">Mutex</ref> value is set to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="66" column="9" bodyfile="rtos/mutex.cpp" bodystart="51" bodyend="56"/>
+        <references refid="class_mutex_1a60be41048a60657b202591050eff18fa" compoundref="mutex_8h" startline="71">mutex_handle</references>
+        <referencedby refid="classscoped__lock_1af4d49476246e608333026bcc04150e80" compoundref="mutex_8h" startline="80" endline="80">scoped_lock::scoped_lock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1aefff5998db65a5d91d5ad83737ce9d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lock_timed</definition>
+        <argsstring>(int timeout)</argsstring>
+        <name>lock_timed</name>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_mutex" kindref="compound">Mutex</ref> lock function with timeout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time period to wait for semaphore signal</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 <ref refid="class_mutex" kindref="compound">Mutex</ref> locked </para>
+</simplesect>
+<simplesect kind="return"><para>EBUSY Returned without waiting, </para>
+</simplesect>
+<simplesect kind="return"><para>EAGAIN Waiting period timed out, or the semaphore was reset during the waiting period.</para>
+</simplesect>
+This function locks the mutex by calling RTOS function k_mutex_lock with timeout. If the mutex is locked by another thread, the calling thread waits until the mutex becomes available or until a timeout occurs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="67" column="9" bodyfile="rtos/mutex.cpp" bodystart="73" bodyend="75"/>
+        <references refid="class_mutex_1a60be41048a60657b202591050eff18fa" compoundref="mutex_8h" startline="71">mutex_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mutex_1a987ce601d6d4c8eedd68b58db3b7811a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void unlock</definition>
+        <argsstring>(void)</argsstring>
+        <name>unlock</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_mutex" kindref="compound">Mutex</ref> unlock function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function unlock the mutex by calling RTOS function k_mutex_unlock. The mutex must already be locked by the calling thread. <ref refid="class_mutex" kindref="compound">Mutex</ref> value is set to 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mutex.h" line="68" column="10" bodyfile="rtos/mutex.cpp" bodystart="87" bodyend="90"/>
+        <references refid="class_mutex_1a60be41048a60657b202591050eff18fa" compoundref="mutex_8h" startline="71">mutex_handle</references>
+        <referencedby refid="classscoped__lock_1a7dfc5e11e9f6342bd9ef5ea59e890af1" compoundref="mutex_8h" startline="82" endline="82">scoped_lock::~scoped_lock</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for mutex / binary semaphore support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The sema class implements a C++ wrapper of the mutex API provided by the Zephyr operating system. See details in Zephyr <linebreak/>
+ <ulink url="https://docs.zephyrproject.org/latest/kernel/services/synchronization/mutexes.html">mutex documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__mutex__apis.html">API documentation</ulink>. The <ref refid="class_mutex" kindref="compound">Mutex</ref> class provides methods to wait for the availibility of the mutex and a method to signal the availibility. <dot>
+ digraph Semaphore {
+   rankdir=LR;
+   subgraph {
+     node [shape=point,label=&quot;&quot;,height=.04, fixedsize=true] ENTRY1;
+     node [shape=circle, fontname=Helvetica, fontsize=10, height=1, fixedsize=true, label=&quot;Available&quot;] A;
+     node [shape=circle, fontname=Helvetica, fontsize=10, height=1, fixedsize=true, label=&quot;Unavailable&quot;] U;
+     node [shape=point,label=&quot;&quot;,height=.04, fixedsize=true] ENTRY2;
+     
+     ENTRY1 -&gt; A [ label=&quot;Initial value = 1&quot; ];
+     A     -&gt; U [ label=&quot;Lock (value = 0)&quot; ];
+     A     -&gt; U [ style=invis ];
+     U     -&gt; A [ label=&quot;Unlock (value = 1)&quot; ];
+     ENTRY2 -&gt; U [ label=&quot;Initial value = 0&quot; ];
+     {rank = same; ENTRY2; U;}
+   } 
+ }
+</dot>
+ </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>struct k_mutex</label>
+      </node>
+      <node id="1">
+        <label>Mutex</label>
+        <link refid="class_mutex"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mutex_handle</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mutex.h" line="62" column="1" bodyfile="rtos/mutex.h" bodystart="62" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_mutex_1af7d6e125437961b268e97fba0f72248f" prot="public" virt="non-virtual"><scope>Mutex</scope><name>lock</name></member>
+      <member refid="class_mutex_1aefff5998db65a5d91d5ad83737ce9d5c" prot="public" virt="non-virtual"><scope>Mutex</scope><name>lock_timed</name></member>
+      <member refid="class_mutex_1a4b5dfbd24f5bc4c03b24b2da362f66d5" prot="public" virt="non-virtual"><scope>Mutex</scope><name>Mutex</name></member>
+      <member refid="class_mutex_1a60be41048a60657b202591050eff18fa" prot="private" virt="non-virtual"><scope>Mutex</scope><name>mutex_handle</name></member>
+      <member refid="class_mutex_1a987ce601d6d4c8eedd68b58db3b7811a" prot="public" virt="non-virtual"><scope>Mutex</scope><name>unlock</name></member>
+      <member refid="class_mutex_1a87e8b974837ceba57ed06cc60f7ac9cd" prot="public" virt="virtual"><scope>Mutex</scope><name>~Mutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

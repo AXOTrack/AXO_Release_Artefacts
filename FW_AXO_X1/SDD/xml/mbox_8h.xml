@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mbox_8h" kind="file" language="C++">
+    <compoundname>mbox.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="mqueue_8h" local="yes">rtos/mqueue.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="adxl__store_8cpp" local="yes">data/adxl_store.cpp</includedby>
+    <includedby refid="adxl__store_8h" local="yes">data/adxl_store.h</includedby>
+    <includedby refid="hw__metrics_8cpp" local="yes">data/hw_metrics.cpp</includedby>
+    <includedby refid="measurement_8cpp" local="yes">data/measurement.cpp</includedby>
+    <includedby refid="pdata_8cpp" local="yes">data/pdata.cpp</includedby>
+    <includedby refid="rms_8cpp" local="yes">data/rms.cpp</includedby>
+    <includedby refid="rms__store_8cpp" local="yes">data/rms_store.cpp</includedby>
+    <includedby refid="disptask_8cpp" local="yes">disp/disptask.cpp</includedby>
+    <includedby refid="adconverter_8cpp" local="yes">drv/adc/adconverter.cpp</includedby>
+    <includedby refid="batt__mgr_8cpp" local="yes">drv/adc/batt_mgr.cpp</includedby>
+    <includedby refid="shtcx_8cpp" local="yes">drv/i2c/shtcx.cpp</includedby>
+    <includedby refid="boost_8cpp" local="yes">drv/pm/boost.cpp</includedby>
+    <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
+    <includedby refid="lte__monitor_8cpp" local="yes">modem/lte_monitor.cpp</includedby>
+    <includedby refid="lte__monitor_8h" local="yes">modem/lte_monitor.h</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="http__connector_8h" local="yes">net/http_connector.h</includedby>
+    <includedby refid="lte__connector_8cpp" local="yes">net/lte_connector.cpp</includedby>
+    <includedby refid="lte__connector_8h" local="yes">net/lte_connector.h</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8h" local="yes">net/mqtt_connector.h</includedby>
+    <includedby refid="power__mgr_8cpp" local="yes">pm/power_mgr.cpp</includedby>
+    <includedby refid="power__mgr_8h" local="yes">pm/power_mgr.h</includedby>
+    <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
+    <includedby refid="power__mgr__x1_8h" local="yes">pm/power_mgr_x1.h</includedby>
+    <includedby refid="reset__ctrl_8cpp" local="yes">pm/reset_ctrl.cpp</includedby>
+    <includedby refid="mbox_8cpp" local="yes">rtos/mbox.cpp</includedby>
+    <includedby refid="fsm_8cpp" local="yes">update/fsm.cpp</includedby>
+    <includedby refid="update_8cpp" local="yes">update/update.cpp</includedby>
+    <includedby refid="update_8h" local="yes">update/update.h</includedby>
+    <includedby refid="update__ctrl_8cpp" local="yes">update/update_ctrl.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="5">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="35">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="18">
+        <label>modem/lte_monitor.h</label>
+        <link refid="lte__monitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="26">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="27">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="21">
+        <label>net/http_connector.h</label>
+        <link refid="http__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="9">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="22">
+        <label>net/lte_connector.h</label>
+        <link refid="lte__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="32">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="24">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="11">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="31">
+        <label>rtos/mbox.cpp</label>
+        <link refid="mbox_8cpp"/>
+      </node>
+      <node id="29">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="25">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="19">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="23">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="17">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="16">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="28">
+        <label>pm/power_mgr_x1.h</label>
+        <link refid="power__mgr__x1_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="4">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>update/update.h</label>
+        <link refid="update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="10">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="13">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mbox" prot="public">Mbox</innerclass>
+    <briefdescription>
+<para>Header file of RTOS wrapper class MBox for mailbox support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mbox_8h_1mbox"/> <simplesect kind="par"><title>Detailed Description </title><para>Mailboxes work like FIFO buffers for messages. Every task allocates one object of class <ref refid="class_mbox" kindref="compound">Mbox</ref> for receiving messages. Internally Zephyr&apos;s kernel message queue service is used for implementation (see <ref refid="mqueue_8h_1mqueue" kindref="member">mqueue</ref>). Every task task receives only messages on their own mailbox. Tasks can send/write messages to any mailbox in the system. <linebreak/>
+ Tasks waiting for messages, they are blocking on the read() function if the mailbox is empty. If a message is in the mailbox the task wakes up, read and process the message. Sending a message means writing to the mailbox of the receiver&apos;s task. A sending task blocks on the write() function in case the mailbox is full. This behaviour may be modified by adding a timeout on read/write calls. <linebreak/>
+ For sending a message, the target mailbox must be known. The <ref refid="class_mbox" kindref="compound">Mbox</ref> class implements a registry and lookup service for all <ref refid="class_mbox" kindref="compound">Mbox</ref> objects created. All tasks register their mailboxes together with a their unique task ID. Via the task ID, a pointer to the associated mailbox can be retrieved and used for sending/writing a message.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MBOX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MBOX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mqueue_8h" kindref="compound">rtos/mqueue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_mbox" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a51060f19a5d0006e2cb20df8786a330b" kindref="member">eMain</ref><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5774f90fab30d23d3631e62cc2a616d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5774f90fab30d23d3631e62cc2a616d2" kindref="member">eLteConnector</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" kindref="member">eMqttConnector</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" kindref="member">eHttpConnector</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ad649ff5017ffe9536f577aa226689085" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ad649ff5017ffe9536f577aa226689085" kindref="member">eLteMonitor</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab8e2ef5afb6c75b04d76c42e7cd11924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab8e2ef5afb6c75b04d76c42e7cd11924" kindref="member">eSi705xTask</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab7bd866dc75a69cf1e11ef076c71ad94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab7bd866dc75a69cf1e11ef076c71ad94" kindref="member">eShtcxTask</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a2c300b16b26ff1a3c362a26d76ce2931" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a2c300b16b26ff1a3c362a26d76ce2931" kindref="member">eBme68xTask</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501adf216f84add395cce5f0564ed8beda08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501adf216f84add395cce5f0564ed8beda08" kindref="member">eAdxl37xTask</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab4dc4e589837500613a7909deee1c737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab4dc4e589837500613a7909deee1c737" kindref="member">eAdxlStore</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a404cc0223d699ca876c05973ede3b2ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a404cc0223d699ca876c05973ede3b2ad" kindref="member">eRmsStore</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af37a207eee727d2ff5a2660920cfefb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af37a207eee727d2ff5a2660920cfefb4" kindref="member">eAdxlRms</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7c62e8460701d99d6495f8d125d1bc93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7c62e8460701d99d6495f8d125d1bc93" kindref="member">eADConverter</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6bf6ebd882f5adee283d170e8bf0d683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6bf6ebd882f5adee283d170e8bf0d683" kindref="member">eNTC</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6a7a752cd7371d7581256cdf1056cc09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6a7a752cd7371d7581256cdf1056cc09" kindref="member">eBattMgr</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">eDataManager</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a18ff7321499e436e48b793d1d6ac2757" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a18ff7321499e436e48b793d1d6ac2757" kindref="member">ePowerManager</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501abe8cd9bda40f9a78f53bc3296970f7cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501abe8cd9bda40f9a78f53bc3296970f7cc" kindref="member">eBoostConverter</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a32261b0fb4efd2d532c0bb01118bc55c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a32261b0fb4efd2d532c0bb01118bc55c" kindref="member">eMetrics</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" kindref="member">eFwUpd</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a8a413f9159c6aea754a4a6825ba8d523" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a8a413f9159c6aea754a4a6825ba8d523" kindref="member">eFwUpdCtrl</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a220c27ca6093f6608278ff8dc1f21bdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a220c27ca6093f6608278ff8dc1f21bdb" kindref="member">eResetCtrl</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a08983b829204a5f02d19db678b7d28c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a08983b829204a5f02d19db678b7d28c4" kindref="member">eDemoTask</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501aa843b3f2ac3a19d86c6458d34f9dde8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501aa843b3f2ac3a19d86c6458d34f9dde8b" kindref="member">eHwMetrics</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5694dbf9d110513fa0f836215e315809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5694dbf9d110513fa0f836215e315809" kindref="member">eDispTask</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af41394e040d5a50e20f6d54e4e3ee7bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af41394e040d5a50e20f6d54e4e3ee7bf" kindref="member">eMbReceive</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" kindref="member">eMboxMax</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1aec6b5f492b41bd08c78e0a6a77e2aa63" kindref="member">Mbox</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97" refid="class_mbox_1aec6b5f492b41bd08c78e0a6a77e2aa63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1aec6b5f492b41bd08c78e0a6a77e2aa63" kindref="member">Mbox</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a2d2f86b45a6d431eea5f73a1849c22ff" kindref="member">~Mbox</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" kindref="member">write</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>elem);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" kindref="member">send</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>elem,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>toWhom);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/><ref refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="102" refid="class_mbox_1a81dbffbc68e17ae5bfc34d4d1f451f17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_mbox_1a81dbffbc68e17ae5bfc34d4d1f451f17" kindref="member">count</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" kindref="member">pQueue</ref>.<ref refid="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" kindref="member">count</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="103" refid="class_mbox_1a058d67da96727cd260cfdfcd9554a06a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>()<sp/>{<sp/><ref refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" kindref="member">pQueue</ref>.<ref refid="class_m_queue_1ac83a0ed4be890f2a31e4dd6aab2216a1" kindref="member">stats</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="104" refid="class_mbox_1a784f962493b7498b2f0b560390d82816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_mbox_1a784f962493b7498b2f0b560390d82816" kindref="member">getMaxSlots</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1ae2450d36dd70d46044e14809901f7af2" kindref="member">max_slots</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" kindref="member">registerMbox</ref>(<ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/>me,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>myId);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_mbox_1aa4f60789a8ab9bb2e04b37a2e04a4d71" kindref="member">getMboxById</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">sendMsg</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>mType,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>senderId,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>receiverId);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">sendMsg</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>mType,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>senderId,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>receiverId,<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>u8DataByte);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">sendMsg</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>mType,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>senderId,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>receiverId,<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int8_t<sp/>s8DataByte);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">sendMsg</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>mType,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>senderId,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>receiverId,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/>pData,<sp/>uint16_t<sp/>dataLen);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">sendMsg</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>mType,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>senderId,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref><sp/>receiverId,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120" refid="class_mbox_1a4cb3fadb6462e3c51946ca46eb196132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mbox_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>[16];<sp/><sp/></highlight></codeline>
+<codeline lineno="121" refid="class_mbox_1ae2450d36dd70d46044e14809901f7af2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="class_mbox_1ae2450d36dd70d46044e14809901f7af2" kindref="member">max_slots</ref><sp/>=</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8;<sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_m_queue" kindref="compound">MQueue&lt;PoolElem, max_slots&gt;</ref></highlight></codeline>
+<codeline lineno="124" refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" kindref="member">pQueue</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*</highlight></codeline>
+<codeline lineno="127" refid="class_mbox_1a6477707ed67117dad4daef43e8a5f560" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a6477707ed67117dad4daef43e8a5f560" kindref="member">mBoxAll</ref>[<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" kindref="member">eMboxMax</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MBOX_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/mbox.h"/>
+  </compounddef>
+</doxygen>

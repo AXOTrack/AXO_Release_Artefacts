@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mux__controller_8h" kind="file" language="C++">
+    <compoundname>mux_controller.h</compoundname>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="mux__controller_8cpp" local="yes">drv/adc/mux_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="1">
+        <label>drv/adc/mux_controller.h</label>
+        <link refid="mux__controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstddef</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>drv/adc/mux_controller.h</label>
+        <link refid="mux__controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drv/adc/mux_controller.cpp</label>
+        <link refid="mux__controller_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mux_controller" prot="public">MuxController</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="mux__controller_8h_1a9873af23f3a718b389d1fbc169f0cfc0" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mux_controller" kindref="compound">MuxController</ref></type>
+        <definition>MuxController mux</definition>
+        <argsstring></argsstring>
+        <name>mux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/mux_controller.h" line="74" column="22" declfile="drv/adc/mux_controller.h" declline="74" declcolumn="22"/>
+        <referencedby refid="struct_a_d_converter_1a9dc1243f3e218fb3511b33b0fae8bac8" compoundref="adconverter_8cpp" startline="192" endline="244">ADConverter::sample</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of MUX controller driver class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mux__controller_8h_1muxcontroller"/> <simplesect kind="par"><title>Detailed Description </title><para>A multiplexer (mux) is a device that selects between several analog or digital input signals and forwards the selected input to a single output line. The selection is directed by a separate set of digital inputs known as select lines. A multiplexer of 2^n inputs has n select lines, which are used to select which input line to send to the output. <linebreak/>
+ The TMUX1208 offers 8:1 single-ended channels. See details in <ulink url="https://www.ti.com/lit/ds/symlink/tmux1208.pdf?ts=1761562184947&amp;ref_url=https%253A%252F%252Fwww.google.com%252F">TMUX1208 datasheet</ulink></para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;zephyr/drivers/gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;zephyr/shell/shell.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_mux_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mux_controller" kindref="compound">MuxController</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mux_controller_1a127375f5c4f3e07c290c0e4175295b83" kindref="member">MuxController</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>gpio_dt_spec*<sp/><ref refid="mux__controller_8cpp_1a68d4e0553bf4180378625162cf028bd9" kindref="member">mux_gpios</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>num_mux,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>gpio_dt_spec*<sp/><ref refid="mux__controller_8cpp_1ab095844f2dbecc90e61c3170a41b9561" kindref="member">enable_gpio</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" kindref="member">selectChannel</ref>(uint8_t<sp/>ch);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1ad53b270a93ec5d3f185dbf338b3541e1" kindref="member">enableLoad</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1a6195a01cfe536305eafbe3ad63bc49de" kindref="member">printStatus</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57" refid="class_mux_controller_1a54e8abb2fdb11bc1facb1c5507bc6b85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1a54e8abb2fdb11bc1facb1c5507bc6b85" kindref="member">numMuxPins</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" kindref="member">num_mux_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="class_mux_controller_1aa4face4b2d0cf50b95c52b1e82fa1de3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gpio_dt_spec*<sp/><ref refid="class_mux_controller_1aa4face4b2d0cf50b95c52b1e82fa1de3" kindref="member">mux_gpios_</ref>;</highlight></codeline>
+<codeline lineno="64" refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1ae709f56dcf4305addb165f8fd8684de5" kindref="member">num_mux_</ref>;</highlight></codeline>
+<codeline lineno="67" refid="class_mux_controller_1ac420559f57917a177b0a8a02ae46cb7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gpio_dt_spec*<sp/><ref refid="class_mux_controller_1ac420559f57917a177b0a8a02ae46cb7e" kindref="member">enable_gpio_</ref>;</highlight></codeline>
+<codeline lineno="69" refid="class_mux_controller_1aa77c8447e2fe60be18057c4dc64610ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_mux_controller_1aa77c8447e2fe60be18057c4dc64610ec" kindref="member">current_channel_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71" refid="class_mux_controller_1a0d44640eabe849264448f2032a8f9fab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller_1a0d44640eabe849264448f2032a8f9fab" kindref="member">load_enabled_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_mux_controller" kindref="compound">MuxController</ref><sp/><ref refid="mux__controller_8h_1a9873af23f3a718b389d1fbc169f0cfc0" kindref="member">mux</ref>;</highlight></codeline>
+    </programlisting>
+    <location file="drv/adc/mux_controller.h"/>
+  </compounddef>
+</doxygen>

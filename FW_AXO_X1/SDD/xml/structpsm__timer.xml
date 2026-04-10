@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structpsm__timer" kind="struct" language="C++" prot="public">
+    <compoundname>psm_timer</compoundname>
+    <includes refid="lte__monitor_8h" local="no">lte_monitor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tau</definition>
+        <argsstring></argsstring>
+        <name>tau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Periodic TAU timer: Time that the modem will stay in power saving mode before waking up to send a Tracking Area Update (TAU) to the network. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="90" column="13" bodyfile="modem/lte_monitor.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">MetricsBuilder::addModemPsmAct</referencedby>
+        <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">LteMonitor::psm_read</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t active_time</definition>
+        <argsstring></argsstring>
+        <name>active_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Active timer: Time that the modem is monitoring paging in RRC Idle mode, before going into PSM. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="93" column="13" bodyfile="modem/lte_monitor.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">MetricsBuilder::addModemPsmAct</referencedby>
+        <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">LteMonitor::psm_read</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PSM (Power Saving Mode) timer values (see <ref refid="lte__connector_8h_1powersavingmode" kindref="member">powersavingmode</ref>) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+      <node id="1">
+        <label>psm_timer</label>
+        <link refid="structpsm__timer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+active_time</edgelabel>
+          <edgelabel>+tau</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="modem/lte_monitor.h" line="89" column="1" bodyfile="modem/lte_monitor.h" bodystart="89" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" prot="public" virt="non-virtual"><scope>psm_timer</scope><name>active_time</name></member>
+      <member refid="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" prot="public" virt="non-virtual"><scope>psm_timer</scope><name>tau</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

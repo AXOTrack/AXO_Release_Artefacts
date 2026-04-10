@@ -1,0 +1,11 @@
+<map id="PowerMgr" name="PowerMgr">
+<area shape="rect" id="node1" title="Power manager task constructor." alt="" coords="5,81,85,108"/>
+<area shape="rect" id="node2" href="$class_boot_cnt.html#a778335fa79020bb947b8730d3cd6fa4b" title="Getter function to retrieve the boot count." alt="" coords="155,5,249,32"/>
+<area shape="rect" id="node3" href="$class_boot_cnt.html#a2ae66bfeb6b4169777413ad10771501a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="153,56,251,83"/>
+<area shape="rect" id="node4" href="$class_power_mgr.html#ab068681b97599ab0bf7d11b9f69a2d72" title="Timer callback function for metrics TX interval timer." alt="" coords="136,107,268,133"/>
+<area shape="rect" id="node9" href="$class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="133,157,271,184"/>
+<area shape="rect" id="node5" href="$class_power_mgr.html#a37a00b048c70c95ead012eb228161763" title="Timer expired function for metrics TX interval timer." alt="" coords="319,107,479,133"/>
+<area shape="rect" id="node6" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="527,107,616,133"/>
+<area shape="rect" id="node7" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="664,81,784,108"/>
+<area shape="rect" id="node8" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="675,132,773,159"/>
+</map>

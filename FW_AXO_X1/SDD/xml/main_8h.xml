@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="main_8h" kind="file" language="C++">
+    <compoundname>main.h</compoundname>
+    <briefdescription>
+<para>Header file of AXO Track main function. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="note"><para>This header file contains only software related documentation. It provides the entry point for the doxygen software documentation and defines the mainpage tag.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************************</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Main<sp/>page<sp/>of<sp/>the<sp/>Software<sp/>documentation</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1078"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_SRC_MAIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1079"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_SRC_MAIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1080"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1081"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_SRC_MAIN_H_&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="main.h"/>
+  </compounddef>
+</doxygen>

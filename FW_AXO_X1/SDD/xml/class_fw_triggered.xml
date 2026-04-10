@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_fw_triggered" kind="class" language="C++" prot="public">
+    <compoundname>FwTriggered</compoundname>
+    <basecompoundref refid="class_fw_state" prot="public" virt="non-virtual">FwState</basecompoundref>
+    <includes refid="fsm_8h" local="no">fsm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fw_triggered_1a5d27b716fd89ced470251264e01a1741" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwTriggered</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>FwTriggered</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+          <defname>pData</defname>
+        </param>
+        <briefdescription>
+<para>Constructor of triggered state class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ponter to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor simply triggers a debug message on info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="164" column="14" bodyfile="update/fsm.cpp" bodystart="408" bodyend="410"/>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_triggered_1a98db08fb6378dacd12ea221b71118439" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~FwTriggered</definition>
+        <argsstring>()</argsstring>
+        <name>~FwTriggered</name>
+        <briefdescription>
+<para>Destructor of triggered state class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor simply triggers a debug message on info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="165" column="13" bodyfile="update/fsm.cpp" bodystart="417" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_triggered_1a7e95001afaeb737eb109dafdc1425b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref></type>
+        <definition>FwFsm::StateId handle_FwInfo</definition>
+        <argsstring>(PoolElem **pElem)</argsstring>
+        <name>handle_FwInfo</name>
+        <reimplements refid="class_fw_state_1a7e95001afaeb737eb109dafdc1425b1d">handle_FwInfo</reimplements>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> **</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Triggered state handler function for <ref refid="class_fw_info" kindref="compound">FwInfo</ref> events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to pointer to message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the state ID of the firmware download state</para>
+</simplesect>
+The function notify platform that command is accepted by calling function otaFwConfirm of the <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Pointer variable pd is assigned to <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Afterwards the message will be forwarded to firmware update task. Function start the download timeout timer by calling function startTimeout of the <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Finally function returns the state ID eDownload. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="166" column="20" bodyfile="update/fsm.cpp" bodystart="449" bodyend="473"/>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea624205e390bcdf467cd390ff60ed4051" compoundref="fsm_8h" startline="63">FwFsm::eDownload</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" compoundref="mbox_8h" startline="86">Mbox::eFwUpd</references>
+        <references refid="class_fw_fsm_1a63c41743db638c0e614bf6cdd26c3fb6" compoundref="fsm_8h" startline="90" endline="90">FwFsm::getDownloadTimeout</references>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" compoundref="fsm_8h" startline="134">FwState::startDownloadTimestamp</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_triggered_1a22de52c28e140efcdb90423ce29714eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref></type>
+        <definition>FwFsm::StateId handle_timer_exp</definition>
+        <argsstring>()</argsstring>
+        <name>handle_timer_exp</name>
+        <reimplements refid="class_fw_state_1a22de52c28e140efcdb90423ce29714eb">handle_timer_exp</reimplements>
+        <briefdescription>
+<para>Triggered state handler function for timer expired events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the state ID of the idle state</para>
+</simplesect>
+The function returns the state ID of the idle state. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="167" column="20" bodyfile="update/fsm.cpp" bodystart="428" bodyend="433"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" compoundref="mpelem_8h" startline="74">eAdxlResumeMeas</references>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" compoundref="fsm_8h" startline="61">FwFsm::eIdle</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Triggered state class derived from base class <ref refid="class_fw_state" kindref="compound">FwState</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The triggered state class overrides the handler function of OtaStart and timer expired events. In this state firmware update has been triggered by OTA start event and waits for the JSON firmware info. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FwTriggered</label>
+        <link refid="class_fw_triggered"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FwState</label>
+        <link refid="class_fw_state"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>void *</label>
+      </node>
+      <node id="1">
+        <label>FwTriggered</label>
+        <link refid="class_fw_triggered"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FwState</label>
+        <link refid="class_fw_state"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+maxDownloadDelay</edgelabel>
+          <edgelabel>+startDownloadTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+pd</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uint32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="update/fsm.h" line="162" column="1" bodyfile="update/fsm.h" bodystart="162" bodyend="168"/>
+    <listofallmembers>
+      <member refid="class_fw_state_1ad39a248d77bc9ced7021430a0710247b" prot="public" virt="non-virtual"><scope>FwTriggered</scope><name>FwState</name></member>
+      <member refid="class_fw_triggered_1a5d27b716fd89ced470251264e01a1741" prot="public" virt="non-virtual"><scope>FwTriggered</scope><name>FwTriggered</name></member>
+      <member refid="class_fw_state_1a949503c431c3db37ae1a46e138b2ce24" prot="public" virt="virtual"><scope>FwTriggered</scope><name>handle_DlComplete</name></member>
+      <member refid="class_fw_state_1a9bb661eb7e96c9043e0960d3a01af6a8" prot="public" virt="virtual"><scope>FwTriggered</scope><name>handle_DlFailed</name></member>
+      <member refid="class_fw_triggered_1a7e95001afaeb737eb109dafdc1425b1d" prot="public" virt="virtual"><scope>FwTriggered</scope><name>handle_FwInfo</name></member>
+      <member refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220" prot="public" virt="virtual"><scope>FwTriggered</scope><name>handle_OtaStart</name></member>
+      <member refid="class_fw_triggered_1a22de52c28e140efcdb90423ce29714eb" prot="public" virt="virtual"><scope>FwTriggered</scope><name>handle_timer_exp</name></member>
+      <member refid="class_fw_state_1a27c1291a625f9f943fb24a647ac60448" prot="public" virt="non-virtual"><scope>FwTriggered</scope><name>maxDownloadDelay</name></member>
+      <member refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" prot="public" virt="non-virtual"><scope>FwTriggered</scope><name>pd</name></member>
+      <member refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" prot="public" virt="non-virtual"><scope>FwTriggered</scope><name>startDownloadTimestamp</name></member>
+      <member refid="class_fw_state_1a2c016110456db682987bb5dcaf30da31" prot="public" virt="virtual"><scope>FwTriggered</scope><name>~FwState</name></member>
+      <member refid="class_fw_triggered_1a98db08fb6378dacd12ea221b71118439" prot="public" virt="virtual"><scope>FwTriggered</scope><name>~FwTriggered</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

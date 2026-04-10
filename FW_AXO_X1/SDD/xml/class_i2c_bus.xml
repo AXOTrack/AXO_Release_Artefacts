@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_i2c_bus" kind="class" language="C++" prot="public">
+    <compoundname>I2cBus</compoundname>
+    <includes refid="i2cbus_8h" local="no">i2cbus.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_i2c_bus_1ac28675e9f599e4310cf860d8cd396cea" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool init_done</definition>
+        <argsstring></argsstring>
+        <name>init_done</name>
+        <briefdescription>
+<para>Flag indicating that the initalization has been done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="122" column="10" bodyfile="bus/i2c/i2cbus.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="i2cbus_8cpp" startline="59" endline="76">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_i2c_bus_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool device_good</definition>
+        <argsstring></argsstring>
+        <name>device_good</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating that hardware initalization was successful </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="123" column="10" bodyfile="bus/i2c/i2cbus.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="i2cbus_8cpp" startline="59" endline="76">init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_i2c_bus_1a24071b2369ffb26926354dd64fe69fb1" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t i2c_cfg</definition>
+        <argsstring></argsstring>
+        <name>i2c_cfg</name>
+        <initializer>=
+    I2C_SPEED_SET(I2C_SPEED_STANDARD) | I2C_MODE_CONTROLLER</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>32-bit bit mask for the device runtime configuration of the I2C controller. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="125" column="21" bodyfile="bus/i2c/i2cbus.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="i2cbus_8cpp" startline="59" endline="76">init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i2c_bus_1a765be8a42d077ae6e9fcf302df2b8018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~I2cBus</definition>
+        <argsstring>()</argsstring>
+        <name>~I2cBus</name>
+        <briefdescription>
+<para>I<superscript>2</superscript>C bus class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="115" column="5" bodyfile="bus/i2c/i2cbus.cpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>In case initialization still has been performed, indicated by flag init_done the function returns immediately, otherwise the I<superscript>2</superscript>C controller device structure will be retrieved by calling macro DEVICE_DT_GET and function checks if the device is ready for usage with call of function device_is_ready. The configuration bit mask is assigned to the device by calling function i2c_configure provided by the Zephyr device driver API. The return value rc of this function, combined with the return value of function device_is_ready by logical AND will be assigned to flag device_good. In case of an error a debug message at error level will be printed. Finally init_done flag is set to true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="117" column="10" bodyfile="bus/i2c/i2cbus.cpp" bodystart="59" bodyend="76"/>
+        <references refid="class_i2c_bus_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="i2cbus_8h" startline="123">device_good</references>
+        <references refid="class_i2c_bus_1a24071b2369ffb26926354dd64fe69fb1" compoundref="i2cbus_8h" startline="125">i2c_cfg</references>
+        <references refid="class_i2c_bus_1ac28675e9f599e4310cf860d8cd396cea" compoundref="i2cbus_8h" startline="122">init_done</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_i2c_bus_1afea1cf24ffb2af3df6cd42029053e852" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_i2c_bus" kindref="compound">I2cBus</ref> *</type>
+        <definition>I2cBus * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="118" column="19" bodyfile="bus/i2c/i2cbus.cpp" bodystart="86" bodyend="90"/>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_i2c_bus_1a5d33f3f4598e2c79e6d8d59f8f5083f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>I2cBus</definition>
+        <argsstring>()</argsstring>
+        <name>I2cBus</name>
+        <briefdescription>
+<para>I<superscript>2</superscript>C bus class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/i2c/i2cbus.h" line="121" column="5" bodyfile="bus/i2c/i2cbus.cpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>I<superscript>2</superscript>C bus driver class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The I<superscript>2</superscript>C bus class handles the initialization of the attached I<superscript>2</superscript>C slaves and the communication over the I<superscript>2</superscript>C bus. Major part of configuration and initialization is located in the device tree, other parts are located in the init function of this class. storage of the acceleration raw See details in <ulink url="https://docs.zephyrproject.org/latest/kernel/drivers/index.html">Device Driver Model documentation</ulink> and in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__i2c__interface.html">API documentation</ulink> <linebreak/>
+ The <ref refid="class_i2c_bus" kindref="compound">I2cBus</ref> class provides the init method. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>I2cBus</label>
+        <link refid="class_i2c_bus"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-i2c_cfg</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-device_good</edgelabel>
+          <edgelabel>-init_done</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uint32_t</label>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="bus/i2c/i2cbus.h" line="113" column="1" bodyfile="bus/i2c/i2cbus.h" bodystart="113" bodyend="127"/>
+    <listofallmembers>
+      <member refid="class_i2c_bus_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" virt="non-virtual"><scope>I2cBus</scope><name>device_good</name></member>
+      <member refid="class_i2c_bus_1a24071b2369ffb26926354dd64fe69fb1" prot="private" virt="non-virtual"><scope>I2cBus</scope><name>i2c_cfg</name></member>
+      <member refid="class_i2c_bus_1a5d33f3f4598e2c79e6d8d59f8f5083f5" prot="private" virt="non-virtual"><scope>I2cBus</scope><name>I2cBus</name></member>
+      <member refid="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>I2cBus</scope><name>init</name></member>
+      <member refid="class_i2c_bus_1ac28675e9f599e4310cf860d8cd396cea" prot="private" virt="non-virtual"><scope>I2cBus</scope><name>init_done</name></member>
+      <member refid="class_i2c_bus_1afea1cf24ffb2af3df6cd42029053e852" prot="public" virt="non-virtual"><scope>I2cBus</scope><name>inst</name></member>
+      <member refid="class_i2c_bus_1a765be8a42d077ae6e9fcf302df2b8018" prot="public" virt="non-virtual"><scope>I2cBus</scope><name>~I2cBus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

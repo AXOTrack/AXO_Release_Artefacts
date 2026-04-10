@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="rms__store_8h" kind="file" language="C++">
+    <compoundname>rms_store.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">vector</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="measurement_8cpp" local="yes">data/measurement.cpp</includedby>
+    <includedby refid="measurement_8h" local="yes">data/measurement.h</includedby>
+    <includedby refid="rms_8cpp" local="yes">data/rms.cpp</includedby>
+    <includedby refid="rms__store_8cpp" local="yes">data/rms_store.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>data/rms_store.h</label>
+        <link refid="rms__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="3">
+        <label>ctime</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>data/rms_store.h</label>
+        <link refid="rms__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>data/measurement.h</label>
+        <link refid="measurement_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/pdata.h</label>
+        <link refid="pdata_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="9">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="7">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structadxl__rms__data" prot="public">adxl_rms_data</innerclass>
+    <innerclass refid="class_rms_store" prot="public">RmsStore</innerclass>
+    <briefdescription>
+<para>Header file of RMS storage class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="rms__store_8h_1rms_store"/> <simplesect kind="par"><title>Detailed Description </title><para>Acceleration measurement data provided by AXO X1 includes root mean square (RMS) values, hit values and a timestamp. The RMS storage provides a structure to held these values and reserves RAM to store for a configurable amount of time. <linebreak/>
+The RMS and hit values will be calculated by RMS task and send via message to the RMS storage task (see header file <ref refid="rms_8h_1rms" kindref="member">rms</ref> (<ref refid="rms_8h" kindref="compound">rms.h</ref>)). <linebreak/>
+For more details see also message sequence charts in section <ref refid="_m_s_c_1SectionMeasurement" kindref="member">Measurement</ref>.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_RMS_STORE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_RMS_STORE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&quot;drv/spi/fram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&quot;pm/power_mgr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structadxl__rms__data" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" kindref="member">ts</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" kindref="member">x</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" kindref="member">y</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" kindref="member">z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" kindref="member">medium_hits</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" kindref="member">critical_hits</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="class_rms_store" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rms_store" kindref="compound">RmsStore</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reserve<sp/>capacity<sp/>for<sp/>rms<sp/>and<sp/>hit<sp/>values<sp/>for<sp/>n<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1a95d0a61deece2b257cb009beb7a0296f" kindref="member">RmsStore</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">,<sp/>uint8_t<sp/>num_seconds<sp/>=<sp/>10);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1a40afaaa2eee41d88770af83f136004a6" kindref="member">~RmsStore</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80" refid="class_rms_store_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_rms_store_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" kindref="member">store</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" kindref="member">dump</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>debug:<sp/>print<sp/>last<sp/>sec<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" kindref="member">dumpAll</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>debug:<sp/>print<sp/>all<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>to<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>testing<sp/>only:<sp/>trigger<sp/>dump<sp/>via<sp/>shell<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" kindref="member">shell_dump</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91" refid="class_rms_store_1a95d0a61deece2b257cb009beb7a0296f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rms_store_1a95d0a61deece2b257cb009beb7a0296f" kindref="member">RmsStore</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92" refid="class_rms_store_1af02a66a66e4cc731ea35a9b296849728" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_rms_store_1af02a66a66e4cc731ea35a9b296849728" kindref="member">capacity</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" kindref="member">full</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="class_rms_store_1a97808a9870039f4168da10ecfb5dc472" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rms_store_1a97808a9870039f4168da10ecfb5dc472" kindref="member">idle</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;adxl_rms_data&gt;</highlight></codeline>
+<codeline lineno="97" refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" kindref="member">v</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_RMS_STORE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/rms_store.h"/>
+  </compounddef>
+</doxygen>

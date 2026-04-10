@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_c_matrix" kind="class" language="C++" prot="public">
+    <compoundname>CMatrix</compoundname>
+    <includes refid="matrix_8h" local="no">matrix.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; double &gt; &gt; getInverse</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt;&gt; vect)</argsstring>
+        <name>getInverse</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt;&gt;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the inverse of a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The inverse matrix</para>
+</simplesect>
+The function calculate and returns the inverse of a matrix </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="50" column="20" bodyfile="disp/matrix.cpp" bodystart="156" bodyend="178"/>
+        <references refid="class_c_matrix_1a1ed6f0e7c5347b0857ffa858e8510f1b" compoundref="matrix_8cpp" startline="115" endline="146">getCofactor</references>
+        <references refid="class_c_matrix_1a22817604cff59c9f83caece3cf3cdfa9" compoundref="matrix_8cpp" startline="42" endline="83">getDeterminant</references>
+        <references refid="class_c_matrix_1ab2d089ed0a14f22057d3a22b47fb0bd9" compoundref="matrix_8cpp" startline="93" endline="105">getTranspose</references>
+        <referencedby refid="class_c_filter_1a03ed13edf595420b670dcf96a11f7ce8" compoundref="filter_8cpp" startline="79" endline="145">CFilter::filtfilt_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1abfe2ea26d6d1ea16e5dd6a3ea517f797" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printMatrix</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt;&gt; vect)</argsstring>
+        <name>printMatrix</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt;&gt;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+<para>Print a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function print a matrix. <simplesect kind="note"><para>Only for developing purposes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="51" column="13" bodyfile="disp/matrix.cpp" bodystart="271" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1a8f8a1ffc38f2590cb4b26aa3665d9837" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printVector</definition>
+        <argsstring>(const std::vector&lt; double &gt; vect)</argsstring>
+        <name>printVector</name>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+<para>Print a vector of type double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function print a vector. <simplesect kind="note"><para>Only for developing purposes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="52" column="13" bodyfile="disp/matrix.cpp" bodystart="287" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1ae3a1fa9e7423ccfaa91d3939fea5513a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printVector</definition>
+        <argsstring>(const std::vector&lt; int &gt; vect)</argsstring>
+        <name>printVector</name>
+        <param>
+          <type>const std::vector&lt; int &gt;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+<para>Print a vector of type int. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function print a vector. <simplesect kind="note"><para>Only for developing purposes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="53" column="13" bodyfile="disp/matrix.cpp" bodystart="301" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1a9b76530283d163a21940fede6653a1c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initMatrix</definition>
+        <argsstring>(MatrixT &amp;mat, double val)</argsstring>
+        <name>initMatrix</name>
+        <param>
+          <type><ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Function to initialize a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initialize all elements of a matrix with initial value val </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="55" column="13" bodyfile="disp/matrix.cpp" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1ab4fafb9eacd543d60604d0457c870a43" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initVector</definition>
+        <argsstring>(std::vector&lt; double &gt; &amp;vec, double val)</argsstring>
+        <name>initVector</name>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Function to initialize a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initialize all elements of a vector with initial value val </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="56" column="13" bodyfile="disp/matrix.cpp" bodystart="204" bodyend="208"/>
+        <referencedby refid="class_c_matrix_1a0d9e4a39ecd9f82b64bb5d564de617b6" compoundref="matrix_8cpp" startline="234" endline="243">mult</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1a14cbbe97805ff33325cdc3a372daa66f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setVal</definition>
+        <argsstring>(MatrixT &amp;mat, unsigned int row, unsigned int col, double val)</argsstring>
+        <name>setVal</name>
+        <param>
+          <type><ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Function to set a value in a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set an element of matrix at position [row, col] to value val </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="57" column="13" bodyfile="disp/matrix.cpp" bodystart="220" bodyend="222"/>
+        <referencedby refid="class_c_filter_1a03ed13edf595420b670dcf96a11f7ce8" compoundref="filter_8cpp" startline="79" endline="145">CFilter::filtfilt_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1a0d9e4a39ecd9f82b64bb5d564de617b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; mult</definition>
+        <argsstring>(MatrixT &amp;mat, std::vector&lt; double &gt; vec)</argsstring>
+        <name>mult</name>
+        <param>
+          <type><ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication of matrix with vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input vector</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the resulting vector</para>
+</simplesect>
+The function multiply a matrix with a vector and return the resulting vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="58" column="20" bodyfile="disp/matrix.cpp" bodystart="234" bodyend="243"/>
+        <references refid="class_c_matrix_1ab4fafb9eacd543d60604d0457c870a43" compoundref="matrix_8cpp" startline="204" endline="208">initVector</references>
+        <referencedby refid="class_c_filter_1a03ed13edf595420b670dcf96a11f7ce8" compoundref="filter_8cpp" startline="79" endline="145">CFilter::filtfilt_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1ae673f4e0a8049108954b8a56c51a03ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; substract</definition>
+        <argsstring>(std::vector&lt; double &gt; vec1, std::vector&lt; double &gt; vec2)</argsstring>
+        <name>substract</name>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>vec1</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>vec2</declname>
+        </param>
+        <briefdescription>
+<para>Substraction of vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first input vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vec2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second input vector</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the resulting vector</para>
+</simplesect>
+The function substract vector vec2 from vestor vec1 andreturn the resulting vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="59" column="20" bodyfile="disp/matrix.cpp" bodystart="256" bodyend="262"/>
+        <referencedby refid="class_c_filter_1a03ed13edf595420b670dcf96a11f7ce8" compoundref="filter_8cpp" startline="79" endline="145">CFilter::filtfilt_init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_c_matrix_1a1ed6f0e7c5347b0857ffa858e8510f1b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; double &gt; &gt; getCofactor</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt;&gt; vect)</argsstring>
+        <name>getCofactor</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt;&gt;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the matrix cofactors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector with the matrix cofactors</para>
+</simplesect>
+The function calculate and returns the matrix cofactors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="62" column="20" bodyfile="disp/matrix.cpp" bodystart="115" bodyend="146"/>
+        <references refid="class_c_matrix_1a22817604cff59c9f83caece3cf3cdfa9" compoundref="matrix_8cpp" startline="42" endline="83">getDeterminant</references>
+        <referencedby refid="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" compoundref="matrix_8cpp" startline="156" endline="178">getInverse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1ab2d089ed0a14f22057d3a22b47fb0bd9" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt; std::vector&lt; double &gt; &gt; getTranspose</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt;&gt; matrix1)</argsstring>
+        <name>getTranspose</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt;&gt;</type>
+          <declname>matrix1</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the transposed matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matrix1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The transposed matrix</para>
+</simplesect>
+The function calculate and returns the transposed matrix </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="63" column="20" bodyfile="disp/matrix.cpp" bodystart="93" bodyend="105"/>
+        <referencedby refid="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" compoundref="matrix_8cpp" startline="156" endline="178">getInverse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_c_matrix_1a22817604cff59c9f83caece3cf3cdfa9" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getDeterminant</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt;&gt; vect)</argsstring>
+        <name>getDeterminant</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt;&gt;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the matrix determinant. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The matrix determinant</para>
+</simplesect>
+The function calculate and returns the matrix determinant </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="64" column="15" bodyfile="disp/matrix.cpp" bodystart="42" bodyend="83"/>
+        <referencedby refid="class_c_matrix_1a1ed6f0e7c5347b0857ffa858e8510f1b" compoundref="matrix_8cpp" startline="115" endline="146">getCofactor</referencedby>
+        <referencedby refid="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" compoundref="matrix_8cpp" startline="156" endline="178">getInverse</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Matrix helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para>The matrix helper class provide the following fuctionality:<itemizedlist>
+<listitem><para>Getter function to retrieve the matrix inverse</para>
+</listitem><listitem><para>Functions to print a matrix or a vector</para>
+</listitem><listitem><para>Functions to initialize a matrix or a vector</para>
+</listitem><listitem><para>Function to set a value at defined indices</para>
+</listitem><listitem><para>Multiplication of matrix with vector</para>
+</listitem><listitem><para>Substraction of vectors</para>
+</listitem><listitem><para>Function to retrieve the matrix cofactors</para>
+</listitem><listitem><para>Function to retrieve the transposed matrix</para>
+</listitem><listitem><para>Function to retrieve the matrix determinant </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CMatrix</label>
+        <link refid="class_c_matrix"/>
+      </node>
+    </collaborationgraph>
+    <location file="disp/matrix.h" line="48" column="1" bodyfile="disp/matrix.h" bodystart="48" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_c_matrix_1a1ed6f0e7c5347b0857ffa858e8510f1b" prot="private" virt="non-virtual"><scope>CMatrix</scope><name>getCofactor</name></member>
+      <member refid="class_c_matrix_1a22817604cff59c9f83caece3cf3cdfa9" prot="private" virt="non-virtual"><scope>CMatrix</scope><name>getDeterminant</name></member>
+      <member refid="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>getInverse</name></member>
+      <member refid="class_c_matrix_1ab2d089ed0a14f22057d3a22b47fb0bd9" prot="private" virt="non-virtual"><scope>CMatrix</scope><name>getTranspose</name></member>
+      <member refid="class_c_matrix_1a9b76530283d163a21940fede6653a1c9" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>initMatrix</name></member>
+      <member refid="class_c_matrix_1ab4fafb9eacd543d60604d0457c870a43" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>initVector</name></member>
+      <member refid="class_c_matrix_1a0d9e4a39ecd9f82b64bb5d564de617b6" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>mult</name></member>
+      <member refid="class_c_matrix_1abfe2ea26d6d1ea16e5dd6a3ea517f797" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>printMatrix</name></member>
+      <member refid="class_c_matrix_1a8f8a1ffc38f2590cb4b26aa3665d9837" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>printVector</name></member>
+      <member refid="class_c_matrix_1ae3a1fa9e7423ccfaa91d3939fea5513a" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>printVector</name></member>
+      <member refid="class_c_matrix_1a14cbbe97805ff33325cdc3a372daa66f" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>setVal</name></member>
+      <member refid="class_c_matrix_1ae673f4e0a8049108954b8a56c51a03ca" prot="public" virt="non-virtual"><scope>CMatrix</scope><name>substract</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

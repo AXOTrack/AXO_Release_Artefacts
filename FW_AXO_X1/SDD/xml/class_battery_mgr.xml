@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_battery_mgr" kind="class" language="C++" prot="public">
+    <compoundname>BatteryMgr</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="batt__mgr_8h" local="no">batt_mgr.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_battery_mgr_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the battery manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="70" column="10" bodyfile="drv/adc/batt_mgr.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" compoundref="batt__mgr_8cpp" startline="46" endline="70">BatteryMgr</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t adcChannels</definition>
+        <argsstring></argsstring>
+        <name>adcChannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The channel bitmask specifying the ADC channels used for battery management </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="76" column="13" bodyfile="drv/adc/batt_mgr.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" compoundref="batt__mgr_8cpp" startline="46" endline="70">BatteryMgr</referencedby>
+        <referencedby refid="class_battery_mgr_1ad34fc4a65245aeb6c33bee8dfb3282a4" compoundref="batt__mgr_8h" startline="71" endline="71">getAdcChannels</referencedby>
+        <referencedby refid="class_battery_mgr_1a116f43968e6eaf11a0da1792b44a589c" compoundref="batt__mgr_8h" startline="72" endline="72">setAdcChannels</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BatteryMgr</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>BatteryMgr</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Battery manager task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register the mailbox of the battery manager task. Finally the ADC channels responsible for battery management are specified and stored in channel bitmask adcChannels. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="66" column="14" bodyfile="drv/adc/batt_mgr.cpp" bodystart="46" bodyend="70"/>
+        <references refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" compoundref="batt__mgr_8h" startline="76">adcChannels</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6a7a752cd7371d7581256cdf1056cc09" compoundref="mbox_8h" startline="81">Mbox::eBattMgr</references>
+        <references refid="class_battery_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="batt__mgr_8h" startline="70">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_battery_mgr_1a75d5c8a7ed239f930bc9ac83bccf2d50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BatteryMgr</definition>
+        <argsstring>()=delete</argsstring>
+        <name>BatteryMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="67" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battery_mgr_1a1786144e12bc86f94964ef79fec3d783" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~BatteryMgr</definition>
+        <argsstring>()</argsstring>
+        <name>~BatteryMgr</name>
+        <briefdescription>
+<para>Battery manager task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="68" column="13" bodyfile="drv/adc/batt_mgr.cpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void) override</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Battery manager task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function enters directly the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: Unused, only debug message at debug level will be printed.</para>
+</listitem><listitem><para>eAdcData: Received sensor data from AD converter task. Will forward as it is to data manager task mailbox.</para>
+</listitem><listitem><para>eBattReport: Received report request frm power manager task. Battery manager request than an ADC report for the related ADC channels from AD converter task by calling member function reqAdcReport. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000006"><xreftitle>Todo</xreftitle><xrefdescription><para>should be deleted: Battery manager not uses timers </para>
+</xrefdescription></xrefsect></para>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="69" column="10" bodyfile="drv/adc/batt_mgr.cpp" bodystart="114" bodyend="154"/>
+        <references refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" compoundref="batt__mgr_8h" startline="76">adcChannels</references>
+        <references refid="struct_a_d_input_1a715f5cb061d11eb75981741eda4dafcd" compoundref="adconverter_8h" startline="51">ADInput::channel</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" compoundref="mpelem_8h" startline="86">eAdcData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf4a52d9583b230adc681e4c4ff67afc" compoundref="mpelem_8h" startline="107">eBattReport</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" compoundref="mbox_8h" startline="82">Mbox::eDataManager</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="struct_a_d_input_1afbc95c0607b0a49ba22ad34793ec35f9" compoundref="adconverter_8h" startline="53">ADInput::mv</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_battery_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="batt__mgr_8h" startline="70">pInMbox</references>
+        <references refid="struct_a_d_input_1a0fa73e362a2e5c784d67168ff308225d" compoundref="adconverter_8h" startline="52">ADInput::raw</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_battery_mgr_1ac201955d3467a5b67075856435290afc" compoundref="batt__mgr_8cpp" startline="90" endline="94">reqAdcReport</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_battery_mgr_1ad34fc4a65245aeb6c33bee8dfb3282a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t getAdcChannels</definition>
+        <argsstring>()</argsstring>
+        <name>getAdcChannels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="71" column="13" bodyfile="drv/adc/batt_mgr.h" bodystart="71" bodyend="71"/>
+        <references refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" compoundref="batt__mgr_8h" startline="76">adcChannels</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_battery_mgr_1a116f43968e6eaf11a0da1792b44a589c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setAdcChannels</definition>
+        <argsstring>(uint8_t chmask)</argsstring>
+        <name>setAdcChannels</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chmask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="72" column="10" bodyfile="drv/adc/batt_mgr.h" bodystart="72" bodyend="72"/>
+        <references refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" compoundref="batt__mgr_8h" startline="76">adcChannels</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_battery_mgr_1ac201955d3467a5b67075856435290afc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqAdcReport</definition>
+        <argsstring>(uint8_t chmask)</argsstring>
+        <name>reqAdcReport</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chmask</declname>
+        </param>
+        <briefdescription>
+<para>Request ADC report of battery channels from AD converter task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chmask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel bitmask, specifying the channels which shall be sampled</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eAdcReport with attached channel bitmask to AD converter mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/batt_mgr.h" line="75" column="10" bodyfile="drv/adc/batt_mgr.cpp" bodystart="90" bodyend="94"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab83cc43ee844556d517f438a56f05c75" compoundref="mpelem_8h" startline="87">eAdcReport</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Battery manager class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The Battery manager task received report requests from power manager, which trigger an ADC request from battery manager to AD converter task. The measured values will than received from AD converter task, which send them to data manager task. There they will be added to metrics JSON string. See also <ref refid="_m_s_c_1SubSectionMetricsTx" kindref="member">Message Sequence Chart Cyclic Metrics</ref>. <linebreak/>
+ The AD converter class provides methods specify the ADC channels used for battery management, to retrieve the specified ADC channels and to request an report with measured values from AD converter task. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Power manager task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>AD converter task</para>
+</listitem><listitem><para>Data manager task </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>BatteryMgr</label>
+        <link refid="class_battery_mgr"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="10">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="7">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="8">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="9">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="1">
+        <label>BatteryMgr</label>
+        <link refid="class_battery_mgr"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-adcChannels</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="drv/adc/batt_mgr.h" line="64" column="1" bodyfile="drv/adc/batt_mgr.h" bodystart="64" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" prot="private" virt="non-virtual"><scope>BatteryMgr</scope><name>adcChannels</name></member>
+      <member refid="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>BatteryMgr</name></member>
+      <member refid="class_battery_mgr_1a75d5c8a7ed239f930bc9ac83bccf2d50" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>BatteryMgr</name></member>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>BatteryMgr</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>create</name></member>
+      <member refid="class_battery_mgr_1ad34fc4a65245aeb6c33bee8dfb3282a4" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>getAdcChannels</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>BatteryMgr</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>BatteryMgr</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>BatteryMgr</scope><name>operator=</name></member>
+      <member refid="class_battery_mgr_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>pInMbox</name></member>
+      <member refid="class_battery_mgr_1ac201955d3467a5b67075856435290afc" prot="private" virt="non-virtual"><scope>BatteryMgr</scope><name>reqAdcReport</name></member>
+      <member refid="class_battery_mgr_1a116f43968e6eaf11a0da1792b44a589c" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>setAdcChannels</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>start</name></member>
+      <member refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" prot="public" virt="virtual"><scope>BatteryMgr</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>BatteryMgr</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>BatteryMgr</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>BatteryMgr</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>BatteryMgr</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>BatteryMgr</scope><name>tid</name></member>
+      <member refid="class_battery_mgr_1a1786144e12bc86f94964ef79fec3d783" prot="public" virt="virtual"><scope>BatteryMgr</scope><name>~BatteryMgr</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>BatteryMgr</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

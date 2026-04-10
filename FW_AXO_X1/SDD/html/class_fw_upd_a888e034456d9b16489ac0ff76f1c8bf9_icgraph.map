@@ -1,0 +1,6 @@
+<map id="download_failed" name="download_failed">
+<area shape="rect" id="node1" title="Send OTA Failure event message to firmware update control task." alt="" coords="257,31,371,57"/>
+<area shape="rect" id="node2" href="$class_fw_upd.html#add2f91f57f8f0c466b6e280dbf814856" title="Function to start the OTA download process." alt="" coords="100,5,209,32"/>
+<area shape="rect" id="node4" href="$class_fw_upd.html#a17f00d41a2f949c4f02b489d9f0f39d2" title="Callback function to receive the FOTA download events." alt="" coords="100,56,209,83"/>
+<area shape="rect" id="node3" href="$class_fw_upd.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Firmware update task function." alt="" coords="5,31,52,57"/>
+</map>

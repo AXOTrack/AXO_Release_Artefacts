@@ -1,0 +1,25 @@
+var class_pool_elem =
+[
+    [ "PoolElem", "class_pool_elem.html#af2500125f6cec4adb1857ae2786d7455", null ],
+    [ "PoolElem", "class_pool_elem.html#a062d2e378491f5dc361fdf0641bfa8f7", null ],
+    [ "~PoolElem", "class_pool_elem.html#a6ba5573b9da5522a391ce1eba38b4d2b", null ],
+    [ "free", "class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d", null ],
+    [ "getBuffer", "class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec", null ],
+    [ "getBufferSize", "class_pool_elem.html#aec1895e5aee815d55df87f27184794e3", null ],
+    [ "clearBuffer", "class_pool_elem.html#a20bbd4d45e3f01305dd709f5a9cc9952", null ],
+    [ "putString", "class_pool_elem.html#aa039fb81c6a1c30752d71c77fd08e99c", null ],
+    [ "putData", "class_pool_elem.html#a91ff086f98095e558772871c6f948f4d", null ],
+    [ "Dump", "class_pool_elem.html#a793169e06e9183e678805ce0663b6000", null ],
+    [ "DumpAsString", "class_pool_elem.html#a25b10cc578d67b8a897b3248e74ad04b", null ],
+    [ "DumpAsStringHex", "class_pool_elem.html#ae133e27cdb6a4873d2223e0d78768b87", null ],
+    [ "mtype", "class_pool_elem.html#a2ebd5074e18be4336af45918f2aa76dd", null ],
+    [ "from", "class_pool_elem.html#a6f6a10932f5d7518f4ba0d3d2ed2a296", null ],
+    [ "p1", "class_pool_elem.html#a31550e6b3b1c0c189d567ced47d50f09", null ],
+    [ "p2", "class_pool_elem.html#a9c18e3776ccbed458747dc5324c2cbf4", null ],
+    [ "inPool", "class_pool_elem.html#a4f959fa124892bc0e22eae1445429855", null ],
+    [ "pool", "class_pool_elem.html#a1400a5e1ccff05a12c067d29e7ac958b", null ],
+    [ "buf", "class_pool_elem.html#a0e2229ffe6debf2f27126b0d02dfd3a0", null ],
+    [ "bufLen", "class_pool_elem.html#ab325e42b7c2a85c47405651cbae510ce", null ],
+    [ "dataLen", "class_pool_elem.html#ae058dd8f2f1a0c16b3947d6bfdbd51c2", null ],
+    [ "MsgPool", "class_pool_elem.html#ad5f1dc91df43f757f242fe445c96b973", null ]
+];

@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fsm_8cpp" kind="file" language="C++">
+    <compoundname>fsm.cpp</compoundname>
+    <includes refid="fsm_8h" local="yes">update/fsm.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes local="no">zephyr/sys/reboot.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="mempool_8h" local="yes">rtos/mempool.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="mpool_8h" local="yes">rtos/mpool.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <includes refid="update__ctrl_8h" local="yes">update/update_ctrl.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>zephyr/sys/reboot.h</label>
+      </node>
+      <node id="20">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="5">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="13">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="1">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="14">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>update/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="3">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="17">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fsm_8cpp_1ac73c9b75c9a7e78381dca79f8077cace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(fwfsm, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>fwfsm</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.cpp" line="47" column="1" declfile="update/fsm.cpp" declline="47" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of Finite State Machine (FSM) for firmware updates. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>This source file implements the Finite State Machine (FSM) for handling firmware updates in the AXO X1 device. The FSM provides mechanisms for managing different stages of firmware updates, including OTA commands, firmware info handling, download, and restart. The FSM is realized through a set of state classes, each representing a specific state and its associated behavior.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fsm_8h" kindref="compound">update/fsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_UPDATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/sys/reboot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&quot;../../tests/update/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mempool_8h" kindref="compound">rtos/mempool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpool_8h" kindref="compound">rtos/mpool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_UPDATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="update__ctrl_8h" kindref="compound">update/update_ctrl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="fsm_8cpp_1ac73c9b75c9a7e78381dca79f8077cace" refkind="member"><highlight class="normal"><ref refid="fsm_8cpp_1ac73c9b75c9a7e78381dca79f8077cace" kindref="member">LOG_MODULE_REGISTER</ref>(fwfsm,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct_fw_state_list_1a999273bd18436d813a46330551ff66c0" refkind="member"><highlight class="normal"><ref refid="class_fw_state" kindref="compound">FwState</ref>*<sp/><ref refid="struct_fw_state_list_1a999273bd18436d813a46330551ff66c0" kindref="member">FwStateList::createIdle</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pd)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_idle" kindref="compound">FwIdle</ref>(pd);<sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="struct_fw_state_list_1a008f49670c28a0215db3eeea7589381a" refkind="member"><highlight class="normal"><ref refid="class_fw_state" kindref="compound">FwState</ref>*<sp/><ref refid="struct_fw_state_list_1a008f49670c28a0215db3eeea7589381a" kindref="member">FwStateList::createTriggered</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pd)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_triggered" kindref="compound">FwTriggered</ref>(pd);<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="struct_fw_state_list_1a59d268764437be337f9a3920d80920e5" refkind="member"><highlight class="normal"><ref refid="class_fw_state" kindref="compound">FwState</ref>*<sp/><ref refid="struct_fw_state_list_1a59d268764437be337f9a3920d80920e5" kindref="member">FwStateList::createDownload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pd)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_download" kindref="compound">FwDownload</ref>(pd);<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="struct_fw_state_list_1a79a141c9cd620c18c0114a3df72b227a" refkind="member"><highlight class="normal"><ref refid="class_fw_state" kindref="compound">FwState</ref>*<sp/><ref refid="struct_fw_state_list_1a79a141c9cd620c18c0114a3df72b227a" kindref="member">FwStateList::createReady</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pd)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_ready" kindref="compound">FwReady</ref>(pd);<sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_fw_fsm_1ae660472e17f45fcb273dfaed40234db4" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1ab3a3cf3a1315790e6b9590699c0534f1" kindref="member">FwFsm::FwFsm</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>context,<sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/>initialState)<sp/>:<sp/>pd(context)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwFsm::FwFsm<sp/>pd:<sp/>%p<sp/>initialState:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_fsm_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>,<sp/>initialState);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1a89eaecba11826b50423813c329317d6d" kindref="member">myStateId</ref><sp/>=<sp/>initialState;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1aee8333420e1b9128d1404d6ddef85397" kindref="member">stateTbl</ref>[<ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">eIdle</ref>]<sp/>=<sp/><ref refid="struct_fw_state_list_1a999273bd18436d813a46330551ff66c0" kindref="member">FwStateList::createIdle</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1aee8333420e1b9128d1404d6ddef85397" kindref="member">stateTbl</ref>[<ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea24ca71dbc15a678644ec75d56fefd91d" kindref="member">eTriggered</ref>]<sp/>=<sp/><ref refid="struct_fw_state_list_1a008f49670c28a0215db3eeea7589381a" kindref="member">FwStateList::createTriggered</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1aee8333420e1b9128d1404d6ddef85397" kindref="member">stateTbl</ref>[<ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea624205e390bcdf467cd390ff60ed4051" kindref="member">eDownload</ref>]<sp/>=<sp/><ref refid="struct_fw_state_list_1a59d268764437be337f9a3920d80920e5" kindref="member">FwStateList::createDownload</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1aee8333420e1b9128d1404d6ddef85397" kindref="member">stateTbl</ref>[<ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea8570b65f331057b2cf92c504f0a2bc83" kindref="member">eReady</ref>]<sp/>=<sp/><ref refid="struct_fw_state_list_1a79a141c9cd620c18c0114a3df72b227a" kindref="member">FwStateList::createReady</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref><sp/>=<sp/><ref refid="class_fw_fsm_1aee8333420e1b9128d1404d6ddef85397" kindref="member">stateTbl</ref>[initialState](<ref refid="class_fw_fsm_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_fw_fsm_1a8d3c1799d6d2665963cd36d477255491" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a8d3c1799d6d2665963cd36d477255491" kindref="member">FwFsm::~FwFsm</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwFsm::~FwFsm<sp/>myState:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">FwFsm::setState</ref>(<ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/>newStateId)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;Fsm::setState<sp/>myStateId:<sp/>%d<sp/>newStateId:<sp/>%d&quot;,<sp/>myStateId,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_WRN(</highlight><highlight class="stringliteral">&quot;Fsm::setState<sp/>myStateId:<sp/>%d<sp/>newStateId:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_fsm_1a89eaecba11826b50423813c329317d6d" kindref="member">myStateId</ref>,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newStateId);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newStateId<sp/>!=<sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">eNoChange</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref><sp/>=<sp/><ref refid="class_fw_fsm_1aee8333420e1b9128d1404d6ddef85397" kindref="member">stateTbl</ref>[<ref refid="class_fw_fsm_1a89eaecba11826b50423813c329317d6d" kindref="member">myStateId</ref><sp/>=<sp/>newStateId](<ref refid="class_fw_fsm_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newStateId<sp/>!=<sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">eIdle</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1a70b9199eead78c93ba62a89cd54dfe96" kindref="member">ReportOtaUpdateActive</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="class_fw_fsm_1a89dc86798aedd075c70e5b8f4c0aafb0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a89dc86798aedd075c70e5b8f4c0aafb0" kindref="member">FwFsm::getStateId</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a89eaecba11826b50423813c329317d6d" kindref="member">myStateId</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="class_fw_fsm_1a70b9199eead78c93ba62a89cd54dfe96" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a70b9199eead78c93ba62a89cd54dfe96" kindref="member">FwFsm::ReportOtaUpdateActive</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8de8fcdbbc04723219977f9db4e7b148" kindref="member">msgType::eFwUpdateActive</ref>,<sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eAdxl37xTask);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="class_fw_fsm_1a34c9e23e10f64e42e79d102f0a0ad488" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a34c9e23e10f64e42e79d102f0a0ad488" kindref="member">FwFsm::handle_OtaStart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;Fsm::handle_OtaStart<sp/>myStateId:<sp/>%d<sp/>myState:<sp/>%p&quot;,<sp/>myStateId,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>myState);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">setState</ref>(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>-&gt;<ref refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220" kindref="member">handle_OtaStart</ref>());</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="class_fw_fsm_1a7e62870608db139036df40627999a148" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a7e62870608db139036df40627999a148" kindref="member">FwFsm::handle_FwInfo</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;Fsm::handle_FwInfo<sp/>myStateId:<sp/>%d<sp/>myState:<sp/>%p&quot;,<sp/>myStateId,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>myState);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">setState</ref>(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>-&gt;<ref refid="class_fw_state_1a7e95001afaeb737eb109dafdc1425b1d" kindref="member">handle_FwInfo</ref>(pElem));</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="class_fw_fsm_1a2aee9c2434f9953a3ea17fe8f423823e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a2aee9c2434f9953a3ea17fe8f423823e" kindref="member">FwFsm::handle_DlComplete</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;Fsm::handle_DlComplete<sp/>myStateId:<sp/>%d<sp/>myState:<sp/>%p&quot;,<sp/>myStateId,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myState);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">setState</ref>(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>-&gt;<ref refid="class_fw_state_1a949503c431c3db37ae1a46e138b2ce24" kindref="member">handle_DlComplete</ref>(pElem));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="class_fw_fsm_1af578a13e136400aea29aa8af718e9654" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1af578a13e136400aea29aa8af718e9654" kindref="member">FwFsm::handle_Restart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;Fsm::handle_ReStart<sp/>myStateId:<sp/>%d<sp/>myState:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_fsm_1a89eaecba11826b50423813c329317d6d" kindref="member">myStateId</ref>,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">setState</ref>(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>-&gt;<ref refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220" kindref="member">handle_OtaStart</ref>());</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="class_fw_fsm_1a7a5ea8e9dff39965f86793c07503627b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a7a5ea8e9dff39965f86793c07503627b" kindref="member">FwFsm::handle_DlFailed</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;Fsm::handle_DlFailed<sp/>myStateId:<sp/>%d<sp/>myState:<sp/>%p&quot;,<sp/>myStateId,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myState);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">setState</ref>(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>-&gt;<ref refid="class_fw_state_1a9bb661eb7e96c9043e0960d3a01af6a8" kindref="member">handle_DlFailed</ref>(pElem));</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="class_fw_fsm_1ac89b704e7ecc12da7a0a3e1b45cbb3ac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1ac89b704e7ecc12da7a0a3e1b45cbb3ac" kindref="member">FwFsm::handle_timer_exp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;Fsm::handle_timer_exp<sp/>myStateId:<sp/>%d<sp/>myState:<sp/>%p&quot;,<sp/>myStateId,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>myState);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm_1ac878eead06d903e46f99b8bb2a0926f6" kindref="member">setState</ref>(<ref refid="class_fw_fsm_1a89899a13a729235300e41c071e4e1a02" kindref="member">myState</ref>-&gt;<ref refid="class_fw_state_1a22de52c28e140efcdb90423ce29714eb" kindref="member">handle_timer_exp</ref>());</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#################<sp/>state<sp/>base<sp/>class<sp/>#####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="class_fw_state_1ad39a248d77bc9ced7021430a0710247b" refkind="member"><highlight class="normal"><ref refid="class_fw_state_1ad39a248d77bc9ced7021430a0710247b" kindref="member">FwState::FwState</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pData)<sp/>:<sp/>pd(pData)<sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;FwState::FwState<sp/>this:<sp/>%p<sp/>pd:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="class_fw_state_1a2c016110456db682987bb5dcaf30da31" refkind="member"><highlight class="normal"><ref refid="class_fw_state_1a2c016110456db682987bb5dcaf30da31" kindref="member">FwState::~FwState</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwState::~FwState&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">//<sp/>default<sp/>implementation:<sp/>reject<sp/>command,<sp/>state<sp/>idle<sp/>overwrites</highlight></codeline>
+<codeline lineno="292" refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220" kindref="member">FwState::handle_OtaStart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;unexpected<sp/>FwState::handle_OtaStart&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>cmd<sp/>rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;otaStartReject();</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="comment">//<sp/>default<sp/>implementation:<sp/>reject<sp/>firmware,<sp/>state<sp/>triggered<sp/>overwrites</highlight></codeline>
+<codeline lineno="311" refid="class_fw_state_1a7e95001afaeb737eb109dafdc1425b1d" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_state_1a7e95001afaeb737eb109dafdc1425b1d" kindref="member">FwState::handle_FwInfo</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;unexpected<sp/>FwState::handle_FwInfo&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>firmware<sp/>rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;otaFwReject();</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="class_fw_state_1a949503c431c3db37ae1a46e138b2ce24" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_state_1a949503c431c3db37ae1a46e138b2ce24" kindref="member">FwState::handle_DlComplete</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;unexpected<sp/>FwState::handle_DlComplete&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="class_fw_state_1a9bb661eb7e96c9043e0960d3a01af6a8" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_state_1a9bb661eb7e96c9043e0960d3a01af6a8" kindref="member">FwState::handle_DlFailed</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;unexpected<sp/>FwState::handle_DlFailed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="class_fw_state_1a22de52c28e140efcdb90423ce29714eb" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_state_1a22de52c28e140efcdb90423ce29714eb" kindref="member">FwState::handle_timer_exp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;unexpected<sp/>FwState::handle_timer_exp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#################<sp/>idle<sp/>state<sp/>class<sp/>#####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366" refid="class_fw_idle_1af7870c6deb6c7a30b18123edee51977c" refkind="member"><highlight class="normal"><ref refid="class_fw_idle_1af7870c6deb6c7a30b18123edee51977c" kindref="member">FwIdle::FwIdle</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pData)<sp/>:<sp/><ref refid="class_fw_state" kindref="compound">FwState</ref>(pData)<sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwIdle::FwIdle<sp/>this:<sp/>%p<sp/>pd:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="class_fw_idle_1aea6c0a2a6794f9e0d2f257038eac1e0c" refkind="member"><highlight class="normal"><ref refid="class_fw_idle_1aea6c0a2a6794f9e0d2f257038eac1e0c" kindref="member">FwIdle::~FwIdle</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwIdle::~FwIdle<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="class_fw_idle_1a4ab8ab28eb13e8e31b6084f058ca9220" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_idle_1a4ab8ab28eb13e8e31b6084f058ca9220" kindref="member">FwIdle::handle_OtaStart</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwIdle::handle_OtaStart&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>cmd<sp/>accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;otaStartConfirm();</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initiating<sp/>the<sp/>OTA<sp/>start<sp/>timer<sp/>and<sp/>logging<sp/>the<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Initiating<sp/>OTA<sp/>start<sp/>timer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>the<sp/>trigger<sp/>timeout<sp/>upon<sp/>receiving<sp/>OTA<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;startTimeout(<ref refid="class_fw_fsm_1aabded454c81c64bebd96473139b26c16" kindref="member">FwFsm::getTriggerTimeout</ref>());</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea24ca71dbc15a678644ec75d56fefd91d" kindref="member">FwFsm::eTriggered</ref>;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#################<sp/>triggered<sp/>state<sp/>class<sp/>#####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408" refid="class_fw_triggered_1a5d27b716fd89ced470251264e01a1741" refkind="member"><highlight class="normal"><ref refid="class_fw_triggered_1a5d27b716fd89ced470251264e01a1741" kindref="member">FwTriggered::FwTriggered</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pData)<sp/>:<sp/><ref refid="class_fw_state" kindref="compound">FwState</ref>(pData)<sp/>{</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwTriggered::FwTriggered<sp/>this:<sp/>%p<sp/>pd:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="410"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417" refid="class_fw_triggered_1a98db08fb6378dacd12ea221b71118439" refkind="member"><highlight class="normal"><ref refid="class_fw_triggered_1a98db08fb6378dacd12ea221b71118439" kindref="member">FwTriggered::~FwTriggered</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwTriggered::~FwTriggered<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="419"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428" refid="class_fw_triggered_1a22de52c28e140efcdb90423ce29714eb" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_triggered_1a22de52c28e140efcdb90423ce29714eb" kindref="member">FwTriggered::handle_timer_exp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwTriggered::handle_timer_exp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" kindref="member">msgType::eAdxlResumeMeas</ref>,</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpdCtrl,<sp/>Mbox::MboxId::eAdxl37xTask);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449" refid="class_fw_triggered_1a7e95001afaeb737eb109dafdc1425b1d" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_triggered_1a7e95001afaeb737eb109dafdc1425b1d" kindref="member">FwTriggered::handle_FwInfo</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwIdle::handle_FwInfo<sp/>pElem:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>pElem);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>todo:<sp/>check<sp/>firmware<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>now:<sp/>always<sp/>accept<sp/>and<sp/>notify<sp/>platform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;otaFwConfirm();</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>change<sp/>message<sp/>sender</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/>(*pElem)-&gt;from<sp/>=<sp/>Mbox::MboxId::eFwUpdCtrl;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>message<sp/>to<sp/>update<sp/>task</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" kindref="member">Mbox::send</ref>(*pElem,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" kindref="member">Mbox::eFwUpd</ref>);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>prevent<sp/>pElem-&gt;free()<sp/>on<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/>*pElem<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transition<sp/>to<sp/>the<sp/>Download<sp/>state<sp/>and<sp/>start<sp/>the<sp/>download<sp/>timeout<sp/>timer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>firmware<sp/>information<sp/>has<sp/>been<sp/>accepted,<sp/>and<sp/>the<sp/>system<sp/>is<sp/>now<sp/>ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>download<sp/>the<sp/>firmware.<sp/>The<sp/>download<sp/>timeout<sp/>timer<sp/>is<sp/>started<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>monitor<sp/>the<sp/>duration<sp/>of<sp/>the<sp/>firmware<sp/>download<sp/>process.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Starting<sp/>download<sp/>timeout<sp/>after<sp/>OTA&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;startTimeout(<ref refid="class_fw_fsm_1a63c41743db638c0e614bf6cdd26c3fb6" kindref="member">FwFsm::getDownloadTimeout</ref>());</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" kindref="member">startDownloadTimestamp</ref><sp/>=<sp/>(uint32_t)(k_uptime_get()<sp/>/<sp/>1000);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea624205e390bcdf467cd390ff60ed4051" kindref="member">FwFsm::eDownload</ref>;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#################<sp/>firmware<sp/>download<sp/>state<sp/>class<sp/>#####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484" refid="class_fw_download_1a0d74b7c03b656d8ccdec101401fb48fb" refkind="member"><highlight class="normal"><ref refid="class_fw_download_1a0d74b7c03b656d8ccdec101401fb48fb" kindref="member">FwDownload::FwDownload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pData)<sp/>:<sp/><ref refid="class_fw_state" kindref="compound">FwState</ref>(pData)<sp/>{</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwDownload::FwDownload<sp/>this:<sp/>%p<sp/>pd:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="493" refid="class_fw_download_1aa5f1653475d4f81b9a8a8f7da3e39536" refkind="member"><highlight class="normal"><ref refid="class_fw_download_1aa5f1653475d4f81b9a8a8f7da3e39536" kindref="member">FwDownload::~FwDownload</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwDownload::~FwDownload<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505" refid="class_fw_download_1a949503c431c3db37ae1a46e138b2ce24" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_download_1a949503c431c3db37ae1a46e138b2ce24" kindref="member">FwDownload::handle_DlComplete</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwDownload::handle_DlComplete&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>via<sp/>device<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>change<sp/>message<sp/>sender</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>(*pElem)-&gt;from<sp/>=<sp/>Mbox::MboxId::eFwUpdCtrl;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>message<sp/>to<sp/>mqtt<sp/>task</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" kindref="member">Mbox::send</ref>(*pElem,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" kindref="member">Mbox::eMqttConnector</ref>);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>prevent<sp/>pElem-&gt;free()<sp/>on<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/>*pElem<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea8570b65f331057b2cf92c504f0a2bc83" kindref="member">FwFsm::eReady</ref>;</highlight></codeline>
+<codeline lineno="518"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536" refid="class_fw_download_1a9bb661eb7e96c9043e0960d3a01af6a8" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_download_1a9bb661eb7e96c9043e0960d3a01af6a8" kindref="member">FwDownload::handle_DlFailed</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>**<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;FwDownload::handle_DlFailed<sp/>retryCnt:<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;retryCnt);</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>maximum<sp/>retries(2)<sp/>and<sp/>transition<sp/>back<sp/>to<sp/>idle<sp/>if<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;retryCnt<sp/>&gt;=</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;maxRetries)<sp/>{</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Exceeded<sp/>maximum<sp/>download<sp/>retries&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;retryCnt<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>retry<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__ASSERT(false,<sp/>&quot;Exceeded<sp/>maximum<sp/>download<sp/>retries&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>via<sp/>device<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>change<sp/>message<sp/>sender</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*pElem)-&gt;from<sp/>=<sp/>Mbox::MboxId::eFwUpdCtrl;</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>message<sp/>to<sp/>mqtt<sp/>task</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" kindref="member">Mbox::send</ref>(*pElem,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" kindref="member">Mbox::eMqttConnector</ref>);</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>prevent<sp/>pElem-&gt;free()<sp/>on<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pElem<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(2));</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sys_reboot(SYS_REBOOT_COLD);</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>;<sp/></highlight><highlight class="comment">//<sp/>never<sp/>reached</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>the<sp/>retry<sp/>count(Not<sp/>needed<sp/>here<sp/>because<sp/>its<sp/>incrmented<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>startRetryTimer<sp/>(But<sp/>Don&apos;t<sp/>remove<sp/>later<sp/>will<sp/>be<sp/>used<sp/>for<sp/>testing))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>++reinterpret_cast&lt;FwUpdCtrl*&gt;(pd)-&gt;retryCnt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>a<sp/>one-shot<sp/>timer<sp/>to<sp/>schedule<sp/>a<sp/>dl<sp/>retry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;startRetryTimer();</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stay<sp/>in<sp/>dl</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589" refid="class_fw_download_1a22de52c28e140efcdb90423ce29714eb" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_download_1a22de52c28e140efcdb90423ce29714eb" kindref="member">FwDownload::handle_timer_exp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwDownload::handle_timer_exp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>time<sp/>since<sp/>download<sp/>has<sp/>started</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>now<sp/>=<sp/>(uint32_t)(k_uptime_get()<sp/>/<sp/>1000);</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>diff<sp/>=<sp/>now<sp/>-<sp/><ref refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" kindref="member">startDownloadTimestamp</ref>;</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((diff<sp/>&gt;<sp/><ref refid="class_fw_state_1a27c1291a625f9f943fb24a647ac60448" kindref="member">maxDownloadDelay</ref>)<sp/>||<sp/></highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;retryCnt<sp/>&gt;=</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;<ref refid="class_fw_upd_ctrl_1a9c5123d67416084c3cc1c2e5b612e2e9" kindref="member">maxRetries</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;handle_timer_exp:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Download<sp/>failed,<sp/>perform<sp/>Reset!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>msg(</highlight><highlight class="stringliteral">&quot;{\&quot;event\&quot;:\&quot;CODE3\&quot;}&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" kindref="member">msgType::eFwDlFailed</ref>,<sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eMqttConnector,<sp/>msg);</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(2));</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sys_reboot(SYS_REBOOT_COLD);</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>dl<sp/>again</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;requestDownload();</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>a<sp/>one-shot<sp/>timer<sp/>to<sp/>schedule<sp/>a<sp/>dl<sp/>retry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;startRetryTimer();</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" kindref="member">FwFsm::eNoChange</ref>;<sp/></highlight><highlight class="comment">//<sp/>to<sp/>avoid<sp/>warning<sp/>-Wreturn-type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#################<sp/>ready<sp/>state<sp/>class<sp/>#####################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight><highlight class="comment">//<sp/>awaiting<sp/>restart<sp/>to<sp/>apply<sp/>update</highlight></codeline>
+<codeline lineno="627" refid="class_fw_ready_1acdd2af5063c51e60b4544212d78043f7" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><ref refid="class_fw_ready_1acdd2af5063c51e60b4544212d78043f7" kindref="member">FwReady::FwReady</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pData)<sp/>:<sp/><ref refid="class_fw_state" kindref="compound">FwState</ref>(pData)<sp/>{</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwReady::FwReady<sp/>this:<sp/>%p<sp/>pd:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>);</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>a<sp/>one-shot<sp/>timer,<sp/>we<sp/>reboot<sp/>when<sp/>the<sp/>timer<sp/>expires</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" kindref="member">pd</ref>)-&gt;startRebootTimer();</highlight></codeline>
+<codeline lineno="631"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638" refid="class_fw_ready_1afd9b7173139f408d44af607abd3af51e" refkind="member"><highlight class="normal"><ref refid="class_fw_ready_1afd9b7173139f408d44af607abd3af51e" kindref="member">FwReady::~FwReady</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwReady::~FwReady<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650" refid="class_fw_ready_1a22de52c28e140efcdb90423ce29714eb" refkind="member"><highlight class="normal"><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref><sp/><ref refid="class_fw_ready_1a22de52c28e140efcdb90423ce29714eb" kindref="member">FwReady::handle_timer_exp</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwReady::handle_timer_exp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_WRN(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Device<sp/>will<sp/>now<sp/>reboot&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(3));<sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise<sp/>we<sp/>won&apos;t<sp/>see<sp/>the<sp/>final<sp/>trace<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/>sys_reboot(SYS_REBOOT_WARM);</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>;</highlight></codeline>
+<codeline lineno="656"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Developer<sp/>Test<sp/>1(Previous)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>*<sp/>p1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>(0,<sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>);</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1a34c9e23e10f64e42e79d102f0a0ad488" kindref="member">handle_OtaStart</ref>();</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1a7e62870608db139036df40627999a148" kindref="member">handle_FwInfo</ref>();</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1a2aee9c2434f9953a3ea17fe8f423823e" kindref="member">handle_DlComplete</ref>();</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1af578a13e136400aea29aa8af718e9654" kindref="member">handle_Restart</ref>();</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;main<sp/>exiting&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="677"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Developer<sp/>Test<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>*<sp/>p1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>(0,<sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>);</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>PoolElem<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>poolElem<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba610ec2ca9795e5eea96a9ffff8a2d380" kindref="member">eCmdAccept</ref>,<sp/>1,<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;Y&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" kindref="member">Mbox::registerMbox</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>(),<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a51060f19a5d0006e2cb20df8786a330b" kindref="member">Mbox::eMain</ref>);</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" kindref="member">Mbox::registerMbox</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>(),<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5774f90fab30d23d3631e62cc2a616d2" kindref="member">Mbox::eLteConnector</ref>);</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1a34c9e23e10f64e42e79d102f0a0ad488" kindref="member">handle_OtaStart</ref>();</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>the<sp/>PoolElem<sp/>pointer<sp/>to<sp/>handle_FwInfo()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1a7e62870608db139036df40627999a148" kindref="member">handle_FwInfo</ref>(&amp;poolElem);</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>the<sp/>PoolElem<sp/>pointer<sp/>to<sp/>handle_DlComplete()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1a2aee9c2434f9953a3ea17fe8f423823e" kindref="member">handle_DlComplete</ref>(&amp;poolElem);</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>now<sp/>just<sp/>the<sp/>handle_OtaStart<sp/>fucntion<sp/>is<sp/>palced<sp/>later<sp/>will<sp/>see</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>how<sp/>can<sp/>implement<sp/>this<sp/>is<sp/>for<sp/>AX0_FAH<sp/>testing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1-&gt;<ref refid="class_fw_fsm_1af578a13e136400aea29aa8af718e9654" kindref="member">handle_Restart</ref>();</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clean<sp/>up:<sp/>Delete<sp/>the<sp/>PoolElem<sp/>and<sp/>FSM<sp/>instances</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>poolElem;</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p1;</highlight></codeline>
+<codeline lineno="715"><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;main<sp/>exiting&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="717"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Developer<sp/>Test<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="722"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="723"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>instance<sp/>of<sp/>the<sp/>FSM<sp/>with<sp/>initial<sp/>state<sp/>eIdle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref><sp/>fsm(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>);</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"></highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>PoolElem<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>poolElem<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba610ec2ca9795e5eea96a9ffff8a2d380" kindref="member">eCmdAccept</ref>,<sp/>1,<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;Y&apos;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>Added<sp/>for<sp/>Testing<sp/>Assert<sp/>Check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsm.handle_OtaStart();</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="737"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Simulate<sp/>handling<sp/>of<sp/>various<sp/>events<sp/>using<sp/>PoolElem</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsm.handle_FwInfo(&amp;poolElem);</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsm.handle_DlComplete(&amp;poolElem);</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display<sp/>the<sp/>current<sp/>FSM<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentState<sp/>=<sp/>fsm.getStateId();</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(currentState)<sp/>{</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" kindref="member">FwFsm::eIdle</ref>:</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Current<sp/>FSM<sp/>state:<sp/>Idle&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea24ca71dbc15a678644ec75d56fefd91d" kindref="member">FwFsm::eTriggered</ref>:</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Current<sp/>FSM<sp/>state:<sp/>Triggered&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea624205e390bcdf467cd390ff60ed4051" kindref="member">FwFsm::eDownload</ref>:</highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Current<sp/>FSM<sp/>state:<sp/>Download&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea8570b65f331057b2cf92c504f0a2bc83" kindref="member">FwFsm::eReady</ref>:</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Current<sp/>FSM<sp/>state:<sp/>Ready&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>FSM<sp/>state&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"></highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Simulate<sp/>handling<sp/>of<sp/>download<sp/>failure<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="766"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsm.handle_DlFailed(&amp;poolElem);</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="768"><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Simulate<sp/>timer<sp/>expiration<sp/>event</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsm.handle_timer_exp();</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Free<sp/>the<sp/>PoolElem<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>poolElem;</highlight></codeline>
+<codeline lineno="776"><highlight class="normal"></highlight></codeline>
+<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;main<sp/>exiting&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="778"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="update/fsm.cpp"/>
+  </compounddef>
+</doxygen>

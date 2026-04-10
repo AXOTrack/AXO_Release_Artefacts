@@ -1,0 +1,5 @@
+<map id="read_status_reg" name="read_status_reg">
+<area shape="rect" id="node1" title="Function to read MRAM status register." alt="" coords="260,5,375,32"/>
+<area shape="rect" id="node2" href="$classspimram.html#a4ffb6fd03608ef93f4be2c768e591efb" title="Function to retrieve MRAM status register content." alt="" coords="92,5,212,32"/>
+<area shape="rect" id="node3" href="$classspimram.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The initialization function of the SPI MRAM class." alt="" coords="5,5,44,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="FwFsm" name="FwFsm">
+<area shape="rect" id="node1" title="Firmware update state machine constructor." alt="" coords="5,81,71,108"/>
+<area shape="rect" id="node2" href="$struct_fw_state_list.html#a59d268764437be337f9a3920d80920e5" title="Pointer to the Download state instance." alt="" coords="119,5,309,32"/>
+<area shape="rect" id="node3" href="$struct_fw_state_list.html#a999273bd18436d813a46330551ff66c0" title="Pointer to the Idle state instance." alt="" coords="137,56,291,83"/>
+<area shape="rect" id="node4" href="$struct_fw_state_list.html#a79a141c9cd620c18c0114a3df72b227a" title="Pointer to the Ready state instance." alt="" coords="128,107,300,133"/>
+<area shape="rect" id="node5" href="$struct_fw_state_list.html#a008f49670c28a0215db3eeea7589381a" title="Pointer to the Triggered state instance." alt="" coords="120,157,308,184"/>
+</map>

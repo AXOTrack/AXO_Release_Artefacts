@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="update__ctrl_8cpp" kind="file" language="C++">
+    <compoundname>update_ctrl.cpp</compoundname>
+    <includes refid="update__ctrl_8h" local="yes">update/update_ctrl.h</includes>
+    <includes local="no">cJSON.h</includes>
+    <includes local="no">cJSON_os.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/kernel/thread_stack.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">string</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="mpool_8h" local="yes">rtos/mpool.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <includes refid="fsm_8h" local="yes">update/fsm.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>cJSON_os.h</label>
+      </node>
+      <node id="12">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="10">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="24">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="13">
+        <label>cJSON.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+      <node id="19">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>update/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="9">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="15">
+        <label>zephyr/kernel/thread_stack.h</label>
+      </node>
+      <node id="21">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="update__ctrl_8cpp_1aef243c5f3bd2600074b0b713a9560ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(updctr, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>updctr</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update_ctrl.cpp" line="51" column="1" declfile="update/update_ctrl.cpp" declline="51" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of update controller module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>This source file implements the update controller module for managing firmware updates in the AXO X1 device. The update controller handles the logic for handling OTA commands, firmware update confirmation/rejection, and managing the retry mechanism for firmware downloads. It utilizes the Finite State Machine (FSM) for coordinating different stages of the update process.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="update__ctrl_8h" kindref="compound">update/update_ctrl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cJSON.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cJSON_os.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>not<sp/>defined<sp/>CONFIG_UNIT_TEST_UPDATE<sp/>&amp;&amp;<sp/>not<sp/>defined<sp/>CONFIG_UNIT_TEST_UPDATE2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/arch/cpu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel/thread_stack.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_UNIT_TEST_UPDATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/update/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_UNIT_TEST_UPDATE2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/update2/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpool_8h" kindref="compound">rtos/mpool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fsm_8h" kindref="compound">update/fsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="update__ctrl_8cpp_1aef243c5f3bd2600074b0b713a9560ab1" refkind="member"><highlight class="normal"><ref refid="update__ctrl_8cpp_1aef243c5f3bd2600074b0b713a9560ab1" kindref="member">LOG_MODULE_REGISTER</ref>(updctr,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_fw_upd_ctrl_1aaa25421e04a507bcced8f9bb02af5213" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">FwUpdCtrl::timer_cb</ref>(k_timer*<sp/>timer)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;FwUpdCtrl::timer_cb<sp/>timer:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>timer);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p1<sp/>=<sp/>k_timer_user_data_get(timer);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p1<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p1)-&gt;<ref refid="class_fw_upd_ctrl_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_fw_upd_ctrl_1adc25c829b13636794219a3f61f31f34d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1adc25c829b13636794219a3f61f31f34d" kindref="member">FwUpdCtrl::timer1_expired</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;FwUpdCtrl::timer1_expired<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref><sp/>e1<sp/>=<sp/>{<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" kindref="member">eTimerExpired</ref>,<sp/>Mbox::MboxId::eFwUpdCtrl,<sp/></highlight><highlight class="charliteral">&apos;u&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;p&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>-&gt;<ref refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" kindref="member">write</ref>(&amp;e1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>start<sp/>a<sp/>one-shot<sp/>timer,<sp/>we<sp/>reboot<sp/>when<sp/>the<sp/>timer<sp/>expires</highlight></codeline>
+<codeline lineno="93" refid="class_fw_upd_ctrl_1acf548f75f0d8ee18592f9d641c69c2f7" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1acf548f75f0d8ee18592f9d641c69c2f7" kindref="member">FwUpdCtrl::startRebootTimer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;startRebootTimer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>-&gt;<ref refid="class_timer_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>(3,<sp/>0);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_fw_upd_ctrl_1a37177c6f6e9271bc6ed124518209357e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a37177c6f6e9271bc6ed124518209357e" kindref="member">FwUpdCtrl::startRetryTimer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;startRetryTimer<sp/>retryCnt:<sp/>%d<sp/>retryTmoCur:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_upd_ctrl_1a4dbcd1e9d690db6ef1289651d756ef9b" kindref="member">retryCnt</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_fw_upd_ctrl_1a4dbcd1e9d690db6ef1289651d756ef9b" kindref="member">retryCnt</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref><sp/>=<sp/><ref refid="class_fw_upd_ctrl_1aba698dc7ca746759b5d9811308e6fb55" kindref="member">retryTmoInit</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref><sp/>=<sp/><ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref><sp/>&gt;<sp/><ref refid="class_fw_upd_ctrl_1aeca2be633f69d370db8a2cfbc239c9e9" kindref="member">retryTmoMax</ref>)<sp/><ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref><sp/>=<sp/><ref refid="class_fw_upd_ctrl_1aeca2be633f69d370db8a2cfbc239c9e9" kindref="member">retryTmoMax</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>-&gt;<ref refid="class_timer_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>(<ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>++<ref refid="class_fw_upd_ctrl_1a4dbcd1e9d690db6ef1289651d756ef9b" kindref="member">retryCnt</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_fw_upd_ctrl_1a6a1385149594b164e59fcfe124454c78" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a6a1385149594b164e59fcfe124454c78" kindref="member">FwUpdCtrl::startTimeout</ref>(uint16_t<sp/>timeout)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;startTimeout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>the<sp/>timer<sp/>with<sp/>the<sp/>specified<sp/>timeout<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>-&gt;<ref refid="class_timer_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>(timeout,<sp/>0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_fw_upd_ctrl_1a37a90858b1254def27b1a720965ca1d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a37a90858b1254def27b1a720965ca1d8" kindref="member">FwUpdCtrl::requestDownload</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;requestDownload&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2403b4f87e6b8309416a7fee507c3980" kindref="member">msgType::eFwDownload</ref>,<sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpd);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="class_fw_upd_ctrl_1a1f13c32a42f24d5e28b53fa9b3cd9b81" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a1f13c32a42f24d5e28b53fa9b3cd9b81" kindref="member">FwUpdCtrl::otaStartConfirm</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;otaStartConfirm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>back<sp/>{&quot;cmd&quot;:&quot;OTA_START&quot;}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>msg[32]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;{\&quot;cmd\&quot;:\&quot;OTA_START\&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad9783fee6aee682fa2420ffc814e5a85" kindref="member">msgType::eOtaStart</ref>,<sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eMqttConnector,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t*)<sp/>msg,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(msg));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="class_fw_upd_ctrl_1a950faa8460d442cc9048523876994131" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a950faa8460d442cc9048523876994131" kindref="member">FwUpdCtrl::otaStartReject</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;otaStartReject&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;cmd&quot;:&quot;OTA_START&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;code&quot;:<sp/>&quot;error101&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;message&quot;:<sp/>&quot;Error<sp/>description&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;timestamp&quot;:<sp/>1686952261</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>msg(</highlight><highlight class="stringliteral">&quot;{\&quot;cmd\&quot;:\&quot;OTA_START\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.append(</highlight><highlight class="stringliteral">&quot;,\&quot;code\&quot;:\&quot;error101\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>ts(std::to_string(std::chrono::system_clock::to_time_t(</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::system_clock::now())));</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.append(</highlight><highlight class="stringliteral">&quot;,\&quot;message\&quot;:\&quot;wrong<sp/>state\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.append(</highlight><highlight class="stringliteral">&quot;,\&quot;timestamp\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>ts<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0697f52c0c0caddf771b3593f549d5ff" kindref="member">msgType::eCmdReject</ref>,<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eMqttConnector,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="class_fw_upd_ctrl_1ad91120d26573451fb5eda5a3c735a698" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1ad91120d26573451fb5eda5a3c735a698" kindref="member">FwUpdCtrl::otaFwConfirm</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;otaFwConfirm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>back<sp/>empty<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>msg[8]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;{}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9aa86bbca6ce7edca5e556bb270a4956" kindref="member">msgType::eFwAccept</ref>,<sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eMqttConnector,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t*)<sp/>msg,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(msg));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="class_fw_upd_ctrl_1a8aa799fd7cf777ded1db827ba946b07a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a8aa799fd7cf777ded1db827ba946b07a" kindref="member">FwUpdCtrl::otaFwReject</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;otaFwReject&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>back<sp/>reason<sp/>for<sp/>rejection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;code&quot;:<sp/>&quot;error101&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;message&quot;:<sp/>&quot;Error<sp/>description&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;timestamp&quot;:<sp/>1686952261</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>msg(</highlight><highlight class="stringliteral">&quot;{&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.append(</highlight><highlight class="stringliteral">&quot;\&quot;code\&quot;:\&quot;error101\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>ts(std::to_string(std::chrono::system_clock::to_time_t(</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::system_clock::now())));</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.append(</highlight><highlight class="stringliteral">&quot;,\&quot;message\&quot;:\&quot;wrong<sp/>state\&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.append(</highlight><highlight class="stringliteral">&quot;,\&quot;timestamp\&quot;:&quot;</highlight><highlight class="normal"><sp/>+<sp/>ts<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba949bec31dc8aea08998db4d55faaebcf" kindref="member">msgType::eFwReject</ref>,<sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eFwUpdCtrl,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eMqttConnector,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="class_fw_upd_ctrl_1aa124fe852a7fef997df6ab7b091cb009" refkind="member"><highlight class="normal"><ref refid="class_fw_upd_ctrl_1ac66a6643d3fb18dca57036e55153f313" kindref="member">FwUpdCtrl::FwUpdCtrl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_task" kindref="compound">Task</ref>(name),</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>retryCnt(0),</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>maxRetries(5),</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>retryTmoCur(0),</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>retryTmoInit(10),</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>retryTmoMax(60)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwUpdCtrl:FwUpdCtrl<sp/>this:<sp/>%p<sp/>name:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allocate<sp/>mailbox,<sp/>timer,<sp/>state<sp/>machine<sp/>on<sp/>heap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>(name);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>register<sp/>mailbox<sp/>for<sp/>lookup<sp/>by<sp/>other<sp/>tasks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" kindref="member">Mbox::registerMbox</ref>(<ref refid="class_fw_upd_ctrl_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a8a413f9159c6aea754a4a6825ba8d523" kindref="member">Mbox::eFwUpdCtrl</ref>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>timer<sp/>used<sp/>to<sp/>delay<sp/>reboot<sp/>and<sp/>in<sp/>download<sp/>retry<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_timer" kindref="compound">Timer</ref>(<ref refid="class_fw_upd_ctrl_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">FwUpdCtrl::timer_cb</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>3,<sp/>0);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">),<sp/>FwFsm::StateId::eIdle);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="class_fw_upd_ctrl_1a2fd2ce865c7ff9511af069bf9bef5231" refkind="member"><highlight class="normal"><ref refid="class_fw_upd_ctrl_1a2fd2ce865c7ff9511af069bf9bef5231" kindref="member">FwUpdCtrl::~FwUpdCtrl</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwUpdCtrl::~FwUpdCtrl<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">FwUpdCtrl::task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwUpdCtrl::task<sp/>this:<sp/>%p<sp/>myName:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>periodic<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>myTimer-&gt;start();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s<sp/>waiting<sp/>for<sp/>messages&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem<sp/>=<sp/><ref refid="class_fw_upd_ctrl_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>-&gt;<ref refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pElem)<sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" kindref="member">eTimerExpired</ref>:</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eTimerExpired&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pElem<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>prevent<sp/>free()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref>-&gt;<ref refid="class_fw_fsm_1ac89b704e7ecc12da7a0a3e1b45cbb3ac" kindref="member">handle_timer_exp</ref>();</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad9783fee6aee682fa2420ffc814e5a85" kindref="member">eOtaStart</ref>:</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_WRN(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eOtaStart&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref>-&gt;<ref refid="class_fw_fsm_1a34c9e23e10f64e42e79d102f0a0ad488" kindref="member">handle_OtaStart</ref>();</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba82c20ffc9867aa5fced24331aa471d69" kindref="member">eFwInfo</ref>:</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_WRN(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eFwInfo&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref>-&gt;<ref refid="class_fw_fsm_1a7e62870608db139036df40627999a148" kindref="member">handle_FwInfo</ref>(&amp;pElem);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf0f41fc324f07c49083014e0df2ad9c1" kindref="member">eFwDlSuccess</ref>:</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_WRN(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eFwDlSuccess&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref>-&gt;<ref refid="class_fw_fsm_1a2aee9c2434f9953a3ea17fe8f423823e" kindref="member">handle_DlComplete</ref>(&amp;pElem);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" kindref="member">eFwDlFailed</ref>:</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eFwDlFailed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref>-&gt;<ref refid="class_fw_fsm_1a7a5ea8e9dff39965f86793c07503627b" kindref="member">handle_DlFailed</ref>(&amp;pElem);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;unexpected<sp/>message<sp/>(%d)&quot;</highlight><highlight class="normal">,<sp/>pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pElem)<sp/>{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pElem-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" kindref="member">UNIT_TEST_STOP_LOOP</ref>;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0<sp/><sp/></highlight><highlight class="comment">//<sp/>awe<sp/>tttest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1add3d4ca77ac2528e931f2c5debe2b9ba" kindref="member">K_THREAD_STACK_DEFINE</ref>(my_stack_area,<sp/>2048);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref><sp/>t1(</highlight><highlight class="stringliteral">&quot;updctr&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>t1.create(my_stack_area,<sp/>K_THREAD_STACK_SIZEOF(my_stack_area),<sp/>7);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>t1.start();</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;main:<sp/>sleeping&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(10));</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="update/update_ctrl.cpp"/>
+  </compounddef>
+</doxygen>

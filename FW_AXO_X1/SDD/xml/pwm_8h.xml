@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pwm_8h" kind="file" language="C++">
+    <compoundname>pwm.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="pwm_8cpp" local="yes">drv/pwm/pwm.cpp</includedby>
+    <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>drv/pwm/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>drv/pwm/pwm.cpp</label>
+        <link refid="pwm_8cpp"/>
+      </node>
+      <node id="1">
+        <label>drv/pwm/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_pwm" prot="public">Pwm</innerclass>
+    <briefdescription>
+<para>Header file of PWM class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="pwm_8h_1pwm"/> <simplesect kind="par"><title>Detailed Description </title><para>The pulse with modulation (PWM) module enables the generation of pulse width modulated signals on GPIO. The module implements an up or up-and-down counter with four PWM channels that drive assigned GPIOs. The following are the main features of a PWM module:<itemizedlist>
+<listitem><para>Programmable PWM frequency</para>
+</listitem><listitem><para>Up to four PWM channels with individual polarity and duty cycle values</para>
+</listitem><listitem><para>Edge or center-aligned pulses across PWM channels</para>
+</listitem><listitem><para>Multiple duty cycle arrays (sequences) defined in RAM</para>
+</listitem><listitem><para>Autonomous and glitch-free update of duty cycle values directly from memory through EasyDMA (no CPU involvement)</para>
+</listitem><listitem><para>Change of polarity, duty cycle, and base frequency possibly on every PWM period</para>
+</listitem><listitem><para>RAM sequences can be repeated or connected into loops The following figure shows the counter operating in up mode (MODE=PWM_MODE_Up), with three PWM channels with the same frequency but different duty cycle. The counter is automatically reset to zero when COUNTERTOP is reached and OUT[n] will invert. OUT[n] is held low if the compare value is 0 and held high if set to COUNTERTOP, given that the polarity is set to FallingEdge. <image type="html" name="Pwm.png" inline="yes"></image>
+ See details in nRF9160 Product Specification v2.0, page 161ff.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_PWM_PWM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_PWM_PWM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_pwm" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_pwm" kindref="compound">Pwm</ref><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1a5a2f9d4500be3b3e46524921eb6b0360" kindref="member">~Pwm</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_pwm" kindref="compound">Pwm</ref>*<sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" kindref="member">setPeriod</ref>(uint32_t<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref><sp/>=<sp/>50000);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" kindref="member">setPulseWidth</ref>(uint32_t<sp/>width<sp/>=<sp/>25000);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" kindref="member">sync</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>pwm<sp/>hw<sp/>from<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="77" refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1ae80a1a9182a0a372f4db59152c2f78a2" kindref="member">Pwm</ref>();</highlight></codeline>
+<codeline lineno="81" refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" kindref="member">init_done</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" kindref="member">polarity_inverted</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" kindref="member">pulse</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_PWM_PWM_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="drv/pwm/pwm.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_pwm" kind="class" language="C++" prot="public">
+    <compoundname>Pwm</compoundname>
+    <includes refid="pwm_8h" local="no">pwm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" prot="public" static="no" mutable="no">
+        <type>struct device *</type>
+        <definition>struct device* pwm_dev</definition>
+        <argsstring></argsstring>
+        <name>pwm_dev</name>
+        <briefdescription>
+<para>PWM controller device structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="77" column="18" bodyfile="drv/pwm/pwm.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="pwm_8cpp" startline="55" endline="69">init</referencedby>
+        <referencedby refid="class_pwm_1a60de64d75454385b23995437f1d72669" compoundref="pwm_8cpp" startline="120" endline="124">start</referencedby>
+        <referencedby refid="class_pwm_1a8c528baf37154d347366083f0f816846" compoundref="pwm_8cpp" startline="133" endline="137">stop</referencedby>
+        <referencedby refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" compoundref="pwm_8cpp" startline="106" endline="110">sync</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool init_done</definition>
+        <argsstring></argsstring>
+        <name>init_done</name>
+        <briefdescription>
+<para>Flag indicating that the initalization has been done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="81" column="10" bodyfile="drv/pwm/pwm.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="pwm_8cpp" startline="55" endline="69">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool device_good</definition>
+        <argsstring></argsstring>
+        <name>device_good</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating that hardware initalization was successful </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="82" column="10" bodyfile="drv/pwm/pwm.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="pwm_8cpp" startline="55" endline="69">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool polarity_inverted</definition>
+        <argsstring></argsstring>
+        <name>polarity_inverted</name>
+        <briefdescription>
+<para>Flag indicating that the polarity is inverted. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="84" column="10" bodyfile="drv/pwm/pwm.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="class_pwm_1a60de64d75454385b23995437f1d72669" compoundref="pwm_8cpp" startline="120" endline="124">start</referencedby>
+        <referencedby refid="class_pwm_1a8c528baf37154d347366083f0f816846" compoundref="pwm_8cpp" startline="133" endline="137">stop</referencedby>
+        <referencedby refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" compoundref="pwm_8cpp" startline="106" endline="110">sync</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pwm_1a81b43df06332b4fef558297592bb7ff1" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t period</definition>
+        <argsstring></argsstring>
+        <name>period</name>
+        <briefdescription>
+<para>The PWM period in nsec. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="85" column="14" bodyfile="drv/pwm/pwm.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" compoundref="pwm_8cpp" startline="79" endline="82">setPeriod</referencedby>
+        <referencedby refid="class_pwm_1a60de64d75454385b23995437f1d72669" compoundref="pwm_8cpp" startline="120" endline="124">start</referencedby>
+        <referencedby refid="class_pwm_1a8c528baf37154d347366083f0f816846" compoundref="pwm_8cpp" startline="133" endline="137">stop</referencedby>
+        <referencedby refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" compoundref="pwm_8cpp" startline="106" endline="110">sync</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pulse</definition>
+        <argsstring></argsstring>
+        <name>pulse</name>
+        <briefdescription>
+<para>The PWM pulse width nsec. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="86" column="14" bodyfile="drv/pwm/pwm.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" compoundref="pwm_8cpp" startline="93" endline="96">setPulseWidth</referencedby>
+        <referencedby refid="class_pwm_1a60de64d75454385b23995437f1d72669" compoundref="pwm_8cpp" startline="120" endline="124">start</referencedby>
+        <referencedby refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" compoundref="pwm_8cpp" startline="106" endline="110">sync</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pwm_1a5a2f9d4500be3b3e46524921eb6b0360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Pwm</definition>
+        <argsstring>()</argsstring>
+        <name>~Pwm</name>
+        <briefdescription>
+<para>PWM class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="69" column="5" bodyfile="drv/pwm/pwm.cpp" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>In case initialization still has been performed, indicated by flag init_done the function returns immediately, otherwise the PWM controller device structure will be retrieved by calling function device_get_binding. Than the function checks if the device is ready for usage with call of function device_is_ready. The return value of this function will be assigned to flag device_good. In case of an error a debug message at error level will be printed. Finally init_done flag is set to true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="70" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="55" bodyend="69"/>
+        <references refid="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="pwm_8h" startline="82">device_good</references>
+        <references refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" compoundref="pwm_8h" startline="81">init_done</references>
+        <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
+        <references refid="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" compoundref="pwm_8cpp" startline="36">PWM_DEVICE_NAME</references>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPeriod</definition>
+        <argsstring>(uint32_t period=50000)</argsstring>
+        <name>setPeriod</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+          <defval>50000</defval>
+        </param>
+        <briefdescription>
+<para>Setter function to set PWN period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired period, default is 50000</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function assigns the value of parameter period to member variable period. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="72" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="79" bodyend="82"/>
+        <references refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" compoundref="pwm_8h" startline="85">period</references>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPulseWidth</definition>
+        <argsstring>(uint32_t width=25000)</argsstring>
+        <name>setPulseWidth</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>width</declname>
+          <defval>25000</defval>
+        </param>
+        <briefdescription>
+<para>Setter function to set PWN pulse width. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired pulse width, default is 25000</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function assigns the value of parameter width to member variable pulse. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="73" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="93" bodyend="96"/>
+        <references refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" compoundref="pwm_8h" startline="86">pulse</references>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <briefdescription>
+<para>Function to update PWM HW from settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function starts PWM generation by setting period, pulse width and polarity_invertedin call of function pwm_set to its configured values. Function pwm_set is provided by Zephyr PWM API. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="74" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="106" bodyend="110"/>
+        <references refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" compoundref="pwm_8h" startline="85">period</references>
+        <references refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" compoundref="pwm_8h" startline="84">polarity_inverted</references>
+        <references refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" compoundref="pwm_8h" startline="86">pulse</references>
+        <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pwm_1a60de64d75454385b23995437f1d72669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para>Function to start PWM generation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function starts PWM generation by setting period, pulse width and polarity_invertedin call of function pwm_set to its configured values. Function pwm_set is provided by Zephyr PWM API. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="75" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="120" bodyend="124"/>
+        <references refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" compoundref="pwm_8h" startline="85">period</references>
+        <references refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" compoundref="pwm_8h" startline="84">polarity_inverted</references>
+        <references refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" compoundref="pwm_8h" startline="86">pulse</references>
+        <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
+        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="280" endline="287">Adxl37x::setExtSyncClk</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pwm_1a8c528baf37154d347366083f0f816846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Function to stop PWM generation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function stops PWM generation by setting pulse width to 0 in call of function pwm_set provided by Zephyr PWM API. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="76" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="133" bodyend="137"/>
+        <references refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" compoundref="pwm_8h" startline="85">period</references>
+        <references refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" compoundref="pwm_8h" startline="84">polarity_inverted</references>
+        <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
+        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="280" endline="287">Adxl37x::setExtSyncClk</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_pwm_1aee502d2d4a23aa6bf075705012950c91" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_pwm" kindref="compound">Pwm</ref> *</type>
+        <definition>Pwm * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="71" column="16" bodyfile="drv/pwm/pwm.cpp" bodystart="148" bodyend="152"/>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="280" endline="287">Adxl37x::setExtSyncClk</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pwm_1ae80a1a9182a0a372f4db59152c2f78a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pwm</definition>
+        <argsstring>()</argsstring>
+        <name>Pwm</name>
+        <briefdescription>
+<para>PWM class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor initializes following member variables to default values:<itemizedlist>
+<listitem><para>polarity_inverted to false</para>
+</listitem><listitem><para>period to 50000</para>
+</listitem><listitem><para>pulse to 25000 </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.h" line="80" column="5" bodyfile="drv/pwm/pwm.cpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PWM driver class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The PWM driver class handles the the generation of pulse width modulated signals. It uses the public zephyr API for the PWM driver. See details in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__pwm__interface.html">API documentation</ulink> and for details of the <ulink url="https://docs.zephyrproject.org/latest/hardware/peripherals/adc.html">PWM configuration in the devicetree</ulink><linebreak/>
+The PWM driver class provides an init method, methods to set PWM period and pulse width and methods to update PWM HW from settings, to start and to stop PWM generation. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Pwm</label>
+        <link refid="class_pwm"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-period</edgelabel>
+          <edgelabel>-pulse</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-device_good</edgelabel>
+          <edgelabel>-init_done</edgelabel>
+          <edgelabel>-polarity_inverted</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+pwm_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>struct device *</label>
+      </node>
+      <node id="2">
+        <label>uint32_t</label>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/pwm/pwm.h" line="67" column="1" bodyfile="drv/pwm/pwm.h" bodystart="67" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" virt="non-virtual"><scope>Pwm</scope><name>device_good</name></member>
+      <member refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>Pwm</scope><name>init</name></member>
+      <member refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" prot="private" virt="non-virtual"><scope>Pwm</scope><name>init_done</name></member>
+      <member refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" prot="public" virt="non-virtual"><scope>Pwm</scope><name>inst</name></member>
+      <member refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" prot="private" virt="non-virtual"><scope>Pwm</scope><name>period</name></member>
+      <member refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" prot="private" virt="non-virtual"><scope>Pwm</scope><name>polarity_inverted</name></member>
+      <member refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" prot="private" virt="non-virtual"><scope>Pwm</scope><name>pulse</name></member>
+      <member refid="class_pwm_1ae80a1a9182a0a372f4db59152c2f78a2" prot="private" virt="non-virtual"><scope>Pwm</scope><name>Pwm</name></member>
+      <member refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" prot="public" virt="non-virtual"><scope>Pwm</scope><name>pwm_dev</name></member>
+      <member refid="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" prot="public" virt="non-virtual"><scope>Pwm</scope><name>setPeriod</name></member>
+      <member refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" prot="public" virt="non-virtual"><scope>Pwm</scope><name>setPulseWidth</name></member>
+      <member refid="class_pwm_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>Pwm</scope><name>start</name></member>
+      <member refid="class_pwm_1a8c528baf37154d347366083f0f816846" prot="public" virt="non-virtual"><scope>Pwm</scope><name>stop</name></member>
+      <member refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" prot="public" virt="non-virtual"><scope>Pwm</scope><name>sync</name></member>
+      <member refid="class_pwm_1a5a2f9d4500be3b3e46524921eb6b0360" prot="public" virt="non-virtual"><scope>Pwm</scope><name>~Pwm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

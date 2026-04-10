@@ -1,0 +1,6 @@
+<map id="PublishDlResult" name="PublishDlResult">
+<area shape="rect" id="node1" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="5,31,120,57"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="168,5,305,32"/>
+<area shape="rect" id="node3" href="$class_mqtt_connector.html#a902f83037dc5ee6772caad03b74e7326" title="Function to publish data to the MQTT broker." alt="" coords="191,56,283,83"/>
+<area shape="rect" id="node4" href="$class_mqtt_connector.html#afd64f589c503525f02261a850b822527" title="The publish method of MQTT connector class." alt="" coords="353,56,416,83"/>
+</map>

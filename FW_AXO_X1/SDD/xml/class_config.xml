@@ -1,0 +1,1594 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_config" kind="class" language="C++" prot="public">
+    <compoundname>Config</compoundname>
+    <includes refid="config_8h" local="no">config.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_config_1a84703f07f323f416cd4b531c1bbd59af" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+<para>The content of the JSON config file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="305" column="17" bodyfile="conf/config.h" bodystart="305" bodyend="-1"/>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+        <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">loadFromFile</referencedby>
+        <referencedby refid="class_config_1a774b533b0a7a6ba5dbe9214642f04245" compoundref="config_8cpp" startline="275" endline="284">save</referencedby>
+        <referencedby refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" compoundref="config_8cpp" startline="236" endline="246">saveToFile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" prot="private" static="no" mutable="no">
+        <type>struct cJSON *</type>
+        <definition>struct cJSON* root_obj</definition>
+        <argsstring></argsstring>
+        <name>root_obj</name>
+        <briefdescription>
+<para>The JSON root object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="306" column="17" bodyfile="conf/config.h" bodystart="306" bodyend="-1"/>
+        <referencedby refid="class_config_1a4e1044ab996356d6bd82d2b8b2807a40" compoundref="config_8cpp" startline="811" endline="832">areValuesStrings</referencedby>
+        <referencedby refid="class_config_1accd2600060dbaee3a3b41aed4034c63c" compoundref="config_8cpp" startline="319" endline="324">dump</referencedby>
+        <referencedby refid="class_config_1af1e95a316d50179890c000585e59971f" compoundref="config_8cpp" startline="784" endline="794">getConfigJson</referencedby>
+        <referencedby refid="class_config_1a74e15929b45b42d60c16ad056fa1c08f" compoundref="config_8cpp" startline="393" endline="399">getGroupEntries</referencedby>
+        <referencedby refid="class_config_1abbed406bd7169794eed499057c17142e" compoundref="config_8cpp" startline="589" endline="591">getValue</referencedby>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+        <referencedby refid="class_config_1a774b533b0a7a6ba5dbe9214642f04245" compoundref="config_8cpp" startline="275" endline="284">save</referencedby>
+        <referencedby refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" compoundref="config_8cpp" startline="236" endline="246">saveToFile</referencedby>
+        <referencedby refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" compoundref="config_8cpp" startline="652" endline="655">setValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_config_1a6859fe47ce99cac240f725558def3522" prot="private" static="no" mutable="no">
+        <type><ref refid="config_8h_1a4b760cee435ce5b5cad9bdb7f2e976e4" kindref="member">stCfgGeneral</ref></type>
+        <definition>stCfgGeneral cfgGeneral</definition>
+        <argsstring></argsstring>
+        <name>cfgGeneral</name>
+        <briefdescription>
+<para>Instance of general related configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="308" column="18" bodyfile="conf/config.h" bodystart="308" bodyend="-1"/>
+        <referencedby refid="class_config_1a71f686389bd27e3ca44ab2587ccea9fa" compoundref="config_8cpp" startline="714" endline="716">getCfgGeneral</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_config_1a5ea632fc10c6c6b5122db4633361876e" prot="private" static="no" mutable="no">
+        <type><ref refid="config_8h_1acdb49406321a50693308cf8efc0e46d8" kindref="member">stCfgMetrics</ref></type>
+        <definition>stCfgMetrics cfgMetrics</definition>
+        <argsstring></argsstring>
+        <name>cfgMetrics</name>
+        <briefdescription>
+<para>Instance of metrics related configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="309" column="18" bodyfile="conf/config.h" bodystart="309" bodyend="-1"/>
+        <referencedby refid="class_config_1af106da5a3b67f694963b29186df4b3c1" compoundref="config_8cpp" startline="728" endline="730">getCfgMetrics</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_config_1a240992a38c57e28c8d701fd42775da79" prot="private" static="no" mutable="no">
+        <type><ref refid="config_8h_1a398de94e30a56bd329e10eaadf90aa2f" kindref="member">stCfgDatalog</ref></type>
+        <definition>stCfgDatalog cfgDatalog</definition>
+        <argsstring></argsstring>
+        <name>cfgDatalog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instance of datalog related configuration </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="310" column="18" bodyfile="conf/config.h" bodystart="310" bodyend="-1"/>
+        <referencedby refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Autocorrection</referencedby>
+        <referencedby refid="class_config_1ae6395cad5f0583a45336e008ea4d05fe" compoundref="config_8cpp" startline="756" endline="758">getCfgDatalog</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_config_1a3fba147b9320f4379816dc9e3cde78e2" prot="private" static="no" mutable="no">
+        <type><ref refid="config_8h_1a4f488f2053de5813c65b297bf5d5882d" kindref="member">stCfgDisplacement</ref></type>
+        <definition>stCfgDisplacement cfgDisplacement</definition>
+        <argsstring></argsstring>
+        <name>cfgDisplacement</name>
+        <briefdescription>
+<para>Instance of displacement related configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="312" column="23" bodyfile="conf/config.h" bodystart="312" bodyend="-1"/>
+        <referencedby refid="class_config_1a02b9c58f87dbf3269338120d45fbe187" compoundref="config_8cpp" startline="742" endline="744">getCfgDisplacement</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_config_1a76bed1aa3e568f829c50a7b4a964b178" prot="private" static="no" mutable="no">
+        <type><ref refid="config_8h_1ae4748f9659f6e54fd5212402d461a14b" kindref="member">stCfgSensor</ref></type>
+        <definition>stCfgSensor cfgSensor[eSensor_MAX]</definition>
+        <argsstring>[eSensor_MAX]</argsstring>
+        <name>cfgSensor</name>
+        <briefdescription>
+<para>Instance of sensor related configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="314" column="17" bodyfile="conf/config.h" bodystart="314" bodyend="-1"/>
+        <referencedby refid="class_config_1a62de71d61d609823188d5f85550de01d" compoundref="config_8cpp" startline="769" endline="772">getCfgSensor</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_config" kindref="compound">Config</ref> *</type>
+        <definition>Config * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="231" column="19" bodyfile="conf/config.cpp" bodystart="74" bodyend="78"/>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">AdxlDataStore::configure</referencedby>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" compoundref="disptask_8cpp" startline="97" endline="108">DispTask::configure</referencedby>
+        <referencedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl37x_8cpp" startline="524" endline="560">Adxl37x::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="603" endline="609">MqttConnector::configure</referencedby>
+        <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">PowerMgr::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="975" endline="979">MqttConnector::HandleGetConfig</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initialization function of the <ref refid="class_config" kindref="compound">Config</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The method define the default configuration as string, replaces the dummy entries in the default configuration, load the JSON configuration file from the file system and extract the the JSON string and store it in member variable input by calling member function loadFromFile. Afterwards the member function parse is called to retrieve a JSON root object from input string and store it in variable load_obj. Than the function checks if the loaded configuration is compatible to the version and structure of the default configuration by call of function isVersionValid. If compatible member function parse is called again to retrieve a JSON root object from input string and store it in member variable root_obj for further processing. Otherwise the default configuration string will be parssed in member variable root_obj and all existing configuration values from loaded configuration will be taken over from loaded configuration in variable load_obj in default configuration in member variable root_obj by call of member function mergeConfig and the default configuration than will be stored in file system by call of function saveToFile. Finally, by call of the member function parseAllValues the configuration values will be <linebreak/>
+ extracted and stored into the provided configuration structures. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="232" column="10" bodyfile="conf/config.cpp" bodystart="1362" bodyend="1431"/>
+        <references refid="config_8h_1a8ed5706c6752b7807d96234f785e1f82" compoundref="config_8h" startline="116">CONFIG_ACCEL_SENS_NAME</references>
+        <references refid="config_8h_1abc5d899c6513b249163dc0de644ed4d2" compoundref="config_8h" startline="118">CONFIG_ACCEL_SENS_TYPE</references>
+        <references refid="config_8h_1af7c3cf5230670f1fd6319f5561217f31" compoundref="config_8h" startline="112">CONFIG_DEVICE_NAME</references>
+        <references refid="config_8h_1a3549495c2b388784973f2f44369f67a1" compoundref="config_8h" startline="114">CONFIG_DEVICE_TYPE</references>
+        <references refid="config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02" compoundref="config_8h" startline="110">CONFIG_VERSION</references>
+        <references refid="class_config_1a903c205c1da997fe1d8e98c035e2849e" compoundref="config_8cpp" startline="355" endline="359">groupExists</references>
+        <references refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" compoundref="config_8h" startline="305">input</references>
+        <references refid="class_config_1a1d86b351ff36c4701678061905b6b81d" compoundref="config_8cpp" startline="1232" endline="1278">isVersionValid</references>
+        <references refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">loadFromFile</references>
+        <references refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" compoundref="config_8cpp" startline="855" endline="913">mergeConfig</references>
+        <references refid="class_config_1af2f473fab5c40aea9a21e89011c959d6" compoundref="config_8cpp" startline="300" endline="308">parse</references>
+        <references refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</references>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <references refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" compoundref="config_8cpp" startline="236" endline="246">saveToFile</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int loadFromFile</definition>
+        <argsstring>(std::string &amp;CfgDefault)</argsstring>
+        <name>loadFromFile</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>CfgDefault</declname>
+        </param>
+        <briefdescription>
+<para>Function to read JSON file into input string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pCfgDefault</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the default configuration in JSON format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns allways 0</para>
+</simplesect>
+By calling Zephyr file system API file_exists the method check if the JSON configuration file is not existing and in this case it create the file and open it for reading and writing by call of function file_open provided by flash file system controller. Afterwards file position is set to 0 and the default configuration in parameter pCfgDefault will be written to file before file will be synchronized and closed by call of the functions file_seek, file_write, file_sync and file_close. Afterwards it is ensured, that the JSON configuration file exists. File will be opend for reading by call of API function file_open and content will be read into array inbuf by calling function file_read. Finally file will be closed by call of API function file_close and content of inbuf will be assigned to member variable input of type std:string, before function returns with value 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="234" column="9" bodyfile="conf/config.cpp" bodystart="121" bodyend="169"/>
+        <references refid="config_8h_1af3a37ddad69a98c185798e80a58dcbdb" compoundref="config_8h" startline="122">CONFIG_FILENAME</references>
+        <references refid="config_8h_1ac5a47791d04046a9354f867b91c1f216" compoundref="config_8h" startline="128">CONFIG_JSON_SIZE</references>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" compoundref="flashfs_8cpp" startline="330" endline="335">FlashFS::file_read</references>
+        <references refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" compoundref="flashfs_8cpp" startline="352" endline="357">FlashFS::file_seek</references>
+        <references refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" compoundref="flashfs_8cpp" startline="345" endline="350">FlashFS::file_sync</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
+        <references refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" compoundref="config_8h" startline="305">input</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1af2f473fab5c40aea9a21e89011c959d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int parse</definition>
+        <argsstring>(struct cJSON **jsonObj, std::string &amp;jsonStr)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>struct cJSON **</type>
+          <declname>jsonObj</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>jsonStr</declname>
+        </param>
+        <briefdescription>
+<para>Function to parse a JSON configuration string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jsonObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer pointer to a JSON root object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jsonStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String containing a configuration in JSON format</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns allways 0</para>
+</simplesect>
+The method checks, if a root object of type struct cJSON still exist. In this case it will be deleted with call of function cJSON_Delete, provided by the cJSON library. Afterwards the configuration string will be parsed by calling function cJSON_Parse, also provided by the cJSON library. Return value of this function is a JSON root object. Finally the method returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="236" column="9" bodyfile="conf/config.cpp" bodystart="300" bodyend="308"/>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1accd2600060dbaee3a3b41aed4034c63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <briefdescription>
+<para>Function to print the JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The method extracts a JSON C-string from the root object with call of function cJSON_PrintUnformatted, provided by the cJSON library. Afterwards the string will be printed as debug message on info level. Finally the method release the string by calling function cJSON_free, also provided by the cJSON library. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="237" column="10" bodyfile="conf/config.cpp" bodystart="319" bodyend="324"/>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a774b533b0a7a6ba5dbe9214642f04245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int save</definition>
+        <argsstring>()</argsstring>
+        <name>save</name>
+        <briefdescription>
+<para>Function to write object representation from memory to input string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns allways 0</para>
+</simplesect>
+By calling Zephyr function cJSON_PrintUnformatted the JSON configuration string will be extracted from cJSON structure root_obj and stored in variable input. Afterwards the allocated buffer str will be released by call of function cJSON_free. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="238" column="9" bodyfile="conf/config.cpp" bodystart="275" bodyend="284"/>
+        <references refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" compoundref="config_8h" startline="305">input</references>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <referencedby refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Autocorrection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a7b0b73b517a5c380220f46d722f4481b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int saveToFile</definition>
+        <argsstring>()</argsstring>
+        <name>saveToFile</name>
+        <briefdescription>
+<para>Function to store JSON configuration string in file system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns allways 0</para>
+</simplesect>
+By calling Zephyr function cJSON_PrintUnformatted the JSON configuration string will be extracted from cJSON structure root_obj and stored in variable input, which will be passed to member function saveToFile. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="239" column="9" bodyfile="conf/config.cpp" bodystart="236" bodyend="246"/>
+        <references refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" compoundref="config_8h" startline="305">input</references>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int saveToFile</definition>
+        <argsstring>(std::string config)</argsstring>
+        <name>saveToFile</name>
+        <param>
+          <type>std::string</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Function to store JSON configuration string in file system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The JSON configuration string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns allways 0</para>
+</simplesect>
+To reduce memory consumption, the function remove all blanks and line feeds from configuration JSON string. By calling Zephyr file system API file_exists the method check if the JSON configuration file is existing and in this case it delete the file from file system by calling function remove provided by flash file system controller. By calling function file_exists again, the method check if the JSON configuration file is not existing and in this case it create the file and open it for reading and writing by call of function file_open provided by flash file system controller. Afterwards file position is set to 0 and the default configuration in static member variable cfgDefault will be written to file before file will be synchronized and closed by call of the functions file_seek, file_write, file_sync and file_close. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="240" column="9" bodyfile="conf/config.cpp" bodystart="191" bodyend="225"/>
+        <references refid="config_8h_1af3a37ddad69a98c185798e80a58dcbdb" compoundref="config_8h" startline="122">CONFIG_FILENAME</references>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" compoundref="flashfs_8cpp" startline="352" endline="357">FlashFS::file_seek</references>
+        <references refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" compoundref="flashfs_8cpp" startline="345" endline="350">FlashFS::file_sync</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" compoundref="flashfs_8cpp" startline="243" endline="248">FlashFS::remove</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parseAllValues</definition>
+        <argsstring>()</argsstring>
+        <name>parseAllValues</name>
+        <briefdescription>
+<para>Function copy all configuration values in the provided configuration structures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The method extract all configuration values from all groups of the JSON object by calling member getValue function for every single value. It copies the extracted values in the provided configuration structures of class <ref refid="class_config" kindref="compound">Config</ref>. Name and version of the general group will be checked against the expected values. In case of inconsistencies a debug message at error level will be printed. If displacement calculation and displacement data transfer are disabled, the configuration is corrected to displacement data transfer disabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="242" column="10" bodyfile="conf/config.cpp" bodystart="414" bodyend="528"/>
+        <references refid="struct__st_cfg_sensor_1a1c3f263cd40107d822599e0480a1687f" compoundref="config_8h" startline="173">_stCfgSensor::actthres</references>
+        <references refid="struct__st_cfg_displacement_1a5667be314bbfb5cd43a7932e3327a556" compoundref="config_8h" startline="184">_stCfgDisplacement::b1</references>
+        <references refid="class_config_1a240992a38c57e28c8d701fd42775da79" compoundref="config_8h" startline="310">cfgDatalog</references>
+        <references refid="class_config_1a3fba147b9320f4379816dc9e3cde78e2" compoundref="config_8h" startline="312">cfgDisplacement</references>
+        <references refid="class_config_1a6859fe47ce99cac240f725558def3522" compoundref="config_8h" startline="308">cfgGeneral</references>
+        <references refid="class_config_1a5ea632fc10c6c6b5122db4633361876e" compoundref="config_8h" startline="309">cfgMetrics</references>
+        <references refid="class_config_1a76bed1aa3e568f829c50a7b4a964b178" compoundref="config_8h" startline="314">cfgSensor</references>
+        <references refid="config_8h_1af7c3cf5230670f1fd6319f5561217f31" compoundref="config_8h" startline="112">CONFIG_DEVICE_NAME</references>
+        <references refid="config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02" compoundref="config_8h" startline="110">CONFIG_VERSION</references>
+        <references refid="struct__st_cfg_sensor_1af360798e10a59792b4b0c7649a42bcdc" compoundref="config_8h" startline="174">_stCfgSensor::deactthres</references>
+        <references refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" compoundref="config_8h" startline="189">_stCfgDatalog::dispmodeoff</references>
+        <references refid="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" compoundref="config_8h" startline="194">_stCfgDatalog::disptransferon</references>
+        <references refid="config_8h_1ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3" compoundref="config_8h" startline="158">eSensor_adxl372</references>
+        <references refid="class_config_1abbed406bd7169794eed499057c17142e" compoundref="config_8cpp" startline="589" endline="591">getValue</references>
+        <references refid="struct__st_cfg_metrics_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="config_8h" startline="179">_stCfgMetrics::interval</references>
+        <references refid="config_8h_1a49f1cb9ea995633108848d99a04c8b22" compoundref="config_8h" startline="147">MAX_ACT_THRESHOLD</references>
+        <references refid="config_8h_1a1f2eb35f54f623585f342a14ca2de33f" compoundref="config_8h" startline="141">MAX_ACT_THRESHOLD_STR</references>
+        <references refid="config_8h_1a006bf46c2e9e0e5d55f7c41aacef79e5" compoundref="config_8h" startline="149">MAX_DEACT_THRESHOLD</references>
+        <references refid="config_8h_1a476feef5798188ae0332302cf96da100" compoundref="config_8h" startline="143">MAX_DEACT_THRESHOLD_STR</references>
+        <references refid="config_8cpp_1aff0d9b37b3f5fdfdf38b358863cf8e39" compoundref="config_8cpp" startline="53">MAX_METRICS_INTERVAL</references>
+        <references refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" compoundref="config_8h" startline="198">_stCfgDatalog::max_raw_per_day</references>
+        <references refid="config_8cpp_1a772821ddc286e83aacf74b5ec390b69b" compoundref="config_8cpp" startline="63">MAX_RAW_TRANSFERS_PER_DAY</references>
+        <references refid="config_8cpp_1ab08bc10d2fa238b91ff8f0ff568f57d2" compoundref="config_8cpp" startline="58">MAX_RMS_THRESHOLD</references>
+        <references refid="config_8h_1a70b42f710ea45d269a511bc990063975" compoundref="config_8h" startline="145">MIN_ACT_THRESHOLD</references>
+        <references refid="config_8h_1ac87c41a1e712fb2612375468da55b7ba" compoundref="config_8h" startline="139">MIN_ACT_THRESHOLD_STR</references>
+        <references refid="config_8cpp_1ab0d7d702ea8b87065790628b7a389dd5" compoundref="config_8cpp" startline="50">MIN_METRICS_INTERVAL</references>
+        <references refid="config_8cpp_1ac7117aa235bc89ad9e738a2e3b131b38" compoundref="config_8cpp" startline="61">MIN_RAW_TRANSFERS_PER_DAY</references>
+        <references refid="config_8cpp_1aee57fd2e9658cccb300b1386a9fad900" compoundref="config_8cpp" startline="56">MIN_RMS_THRESHOLD</references>
+        <references refid="struct__st_cfg_general_1a9b45b3e13bd9167aab02e17e08916231" compoundref="config_8h" startline="164">_stCfgGeneral::name</references>
+        <references refid="struct__st_cfg_sensor_1a9b45b3e13bd9167aab02e17e08916231" compoundref="config_8h" startline="171">_stCfgSensor::name</references>
+        <references refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" compoundref="config_8h" startline="192">_stCfgDatalog::rawtransferon</references>
+        <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
+        <references refid="struct__st_cfg_general_1a75b160f574a0be26114bae2c7686a5e1" compoundref="config_8h" startline="165">_stCfgGeneral::type</references>
+        <references refid="struct__st_cfg_sensor_1a75b160f574a0be26114bae2c7686a5e1" compoundref="config_8h" startline="172">_stCfgSensor::type</references>
+        <references refid="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" compoundref="config_8h" startline="166">_stCfgGeneral::version</references>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a903c205c1da997fe1d8e98c035e2849e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool groupExists</definition>
+        <argsstring>(struct cJSON *jsonObj, std::string group)</argsstring>
+        <name>groupExists</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>jsonObj</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if a group with given name exist in JSON object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jsonObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a JSON root object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group to search for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if group exist, false otherwise</para>
+</simplesect>
+The method check, if the group with name &apos;group&apos; exist in the JSON root object by calling function cJSON_GetObjectItem, provided by the cJSON library. It than returns the return value of function cJSON_GetObjectItem. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="245" column="10" bodyfile="conf/config.cpp" bodystart="355" bodyend="359"/>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+        <referencedby refid="class_config_1a1d86b351ff36c4701678061905b6b81d" compoundref="config_8cpp" startline="1232" endline="1278">isVersionValid</referencedby>
+        <referencedby refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" compoundref="config_8cpp" startline="855" endline="913">mergeConfig</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a74e15929b45b42d60c16ad056fa1c08f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getGroupEntries</definition>
+        <argsstring>(std::string group)</argsstring>
+        <name>getGroupEntries</name>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Function to retrieve the number of items in a JSON group object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of items in the JSON group</para>
+</simplesect>
+The method retrieve the JSON object of the group by calling function cJSON_GetObjectItem, provided by the cJSON library. It returns 0, if the object is a NULL pointer, the return value of function getArraySize, which is the number of items in the group object otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="251" column="9" bodyfile="conf/config.cpp" bodystart="393" bodyend="399"/>
+        <references refid="class_config_1ac290477e6f4657db9fea69e972aaaac5" compoundref="config_8cpp" startline="337" endline="341">getArraySize</references>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aa460c63f759b01e49ebb29e32dfd2771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool keyExists</definition>
+        <argsstring>(struct cJSON *jsonObj, std::string group, int index, std::string key)</argsstring>
+        <name>keyExists</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>jsonObj</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if a key with given name exist in given group in the JSON object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jsonObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a JSON root object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item with the key/value pair within the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to check</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the extracted value</para>
+</simplesect>
+The method retrieve the JSON object of the group by calling function cJSON_GetObjectItem, provided by the cJSON library. Afterwards it retrieve the JSON item within the group by calling function cJSON_GetArrayItem, also provided by the cJSON library. If the item is a NULL pointer, the method returns 0, otherwise it iterate over all child nodes with key/value pairs in a loop. If key has been found in child-&gt;string, the loop will be aborted and the value in child-&gt;valuestring will be stored in return value res. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="258" column="10" bodyfile="conf/config.cpp" bodystart="550" bodyend="576"/>
+        <referencedby refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" compoundref="config_8cpp" startline="855" endline="913">mergeConfig</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1abbed406bd7169794eed499057c17142e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getValue</definition>
+        <argsstring>(std::string group, int index, std::string key)</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function to retrieve a single value from a JSON group object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item with the key/value pair within the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to extract the value from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the extracted value</para>
+</simplesect>
+The method calls member function method getValue with JSON root object root_obj. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="268" column="17" bodyfile="conf/config.cpp" bodystart="589" bodyend="591"/>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <referencedby refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Autocorrection</referencedby>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+        <referencedby refid="class_config_1a1d86b351ff36c4701678061905b6b81d" compoundref="config_8cpp" startline="1232" endline="1278">isVersionValid</referencedby>
+        <referencedby refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" compoundref="config_8cpp" startline="855" endline="913">mergeConfig</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a553ff2f3b8a72792ea11c62eb3728796" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getValue</definition>
+        <argsstring>(struct cJSON *jsonObj, std::string group, int index, std::string key)</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>jsonObj</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function to retrieve a single value from a JSON group object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jsonObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a JSON root object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item with the key/value pair within the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to extract the value from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the extracted value</para>
+</simplesect>
+The method retrieve the JSON object of the group by calling function cJSON_GetObjectItem, provided by the cJSON library. Afterwards it retrieve the JSON item within the group by calling function cJSON_GetArrayItem, also provided by the cJSON library. If the item is a NULL pointer, the method returns 0, otherwise it iterate over all child nodes with key/value pairs in a loop. If key has been found in child-&gt;string, the loop will be aborted and the value in child-&gt;valuestring will be stored in return value res. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="269" column="17" bodyfile="conf/config.cpp" bodystart="611" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setValue</definition>
+        <argsstring>(std::string group, int index, std::string key, std::string val)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Function to store a single value in a JSON group object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item with the key/value pair within the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to extract the value from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be stored</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return 0 on success, -1 otherwise</para>
+</simplesect>
+The method calls member function method setValue with JSON root object root_obj. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="275" column="9" bodyfile="conf/config.cpp" bodystart="652" bodyend="655"/>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <referencedby refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Autocorrection</referencedby>
+        <referencedby refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" compoundref="config_8cpp" startline="855" endline="913">mergeConfig</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aeb1ec58a1fe79c892f552cea6a699958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int setValue</definition>
+        <argsstring>(struct cJSON *jsonObj, std::string group, int index, std::string key, std::string val)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>jsonObj</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Function to store a single value in a JSON group object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jsonObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a JSON root object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item with the key/value pair within the group </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to extract the value from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be stored </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return 0 on success, -1 otherwise</para>
+</simplesect>
+The method retrieve the JSON object of the group by calling function cJSON_GetObjectItem, provided by the cJSON library. Afterwards it retrieve the JSON item within the group by calling function cJSON_GetArrayItem, also provided by the cJSON library. If the item is a NULL pointer, the method returns 0, otherwise it iterate over all child nodes with key/value pairs in a loop. If key has been found in child-&gt;string, value val will be stored in the child node by calling function cJSON_SetValuestring, before the loop will be aborted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="277" column="9" bodyfile="conf/config.cpp" bodystart="676" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aeb17b0c3b98160784d6f58a58025ba39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isValid</definition>
+        <argsstring>(const char *buf)</argsstring>
+        <name>isValid</name>
+        <param>
+          <type>const char *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if a received configuration is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer containing the received configuration in JSON format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if configuration is valid, false otherwise</para>
+</simplesect>
+The function assign parameter buf to member variable input of type std:string, call the member function parse to retrieve the JSON root object from input string and check if all groups are present in JSON configuration, if all values of the key/value pairs are strings and if device name and configuration version matches with the expected ones. If all checks are passed the function returns true, otherwise false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="280" column="10" bodyfile="conf/config.cpp" bodystart="929" bodyend="1089"/>
+        <references refid="class_config_1a4e1044ab996356d6bd82d2b8b2807a40" compoundref="config_8cpp" startline="811" endline="832">areValuesStrings</references>
+        <references refid="config_8h_1a8ed5706c6752b7807d96234f785e1f82" compoundref="config_8h" startline="116">CONFIG_ACCEL_SENS_NAME</references>
+        <references refid="config_8h_1abc5d899c6513b249163dc0de644ed4d2" compoundref="config_8h" startline="118">CONFIG_ACCEL_SENS_TYPE</references>
+        <references refid="config_8h_1af7c3cf5230670f1fd6319f5561217f31" compoundref="config_8h" startline="112">CONFIG_DEVICE_NAME</references>
+        <references refid="config_8h_1a3549495c2b388784973f2f44369f67a1" compoundref="config_8h" startline="114">CONFIG_DEVICE_TYPE</references>
+        <references refid="config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02" compoundref="config_8h" startline="110">CONFIG_VERSION</references>
+        <references refid="class_config_1abbed406bd7169794eed499057c17142e" compoundref="config_8cpp" startline="589" endline="591">getValue</references>
+        <references refid="class_config_1a903c205c1da997fe1d8e98c035e2849e" compoundref="config_8cpp" startline="355" endline="359">groupExists</references>
+        <references refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" compoundref="config_8h" startline="305">input</references>
+        <references refid="class_config_1af2f473fab5c40aea9a21e89011c959d6" compoundref="config_8cpp" startline="300" endline="308">parse</references>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <references refid="class_config_1a35ee662621cdcc9aadce8a5ad8963c51" compoundref="config_8cpp" startline="1329" endline="1336">strIsBool</references>
+        <references refid="class_config_1aee4afa7ec317587fc74e0fb88fb4bd3b" compoundref="config_8cpp" startline="1311" endline="1315">strIsFloat</references>
+        <references refid="class_config_1aadb926eb277206bb5233c44ca10803fa" compoundref="config_8cpp" startline="1291" endline="1295">strIsInt</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a4530f1c50511acfe103d8788a85d3500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Autocorrection</definition>
+        <argsstring>()</argsstring>
+        <name>Autocorrection</name>
+        <briefdescription>
+<para>Function to automatically correct invalid configuration values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling the member function getValue the function retrieves the activation and deactivation threshold strings and convert them to integer. Afterwards the function checks if:<itemizedlist>
+<listitem><para>Activation threshold is lower than the minimum allowed value. In this case activation threshold is set to the minimum allowed value</para>
+</listitem><listitem><para>Activation threshold is higher than the maximum allowed value. In this case activation threshold is set to the maximum allowed value</para>
+</listitem><listitem><para>Deactivation threshold is higher than the maximum allowed value. In this case deactivation threshold is set to the maximum allowed value</para>
+</listitem><listitem><para>Deactivation threshold is lower than activation threshold and minimum allowed difference. In this case the deactivation threshold is set to the activation threshold plus the minimum allowed difference Afterwards the function retrieves the flags dispmodeoff and disptransferon by calling the member function getValue and checks if displacement calculation is disabled (dispmodeoff = true") and displacement value transfer is enabled (disptransferon = true). In this case disptransferon will be set to false. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="283" column="10" bodyfile="conf/config.cpp" bodystart="1111" bodyend="1195"/>
+        <references refid="class_config_1a240992a38c57e28c8d701fd42775da79" compoundref="config_8h" startline="310">cfgDatalog</references>
+        <references refid="config_8h_1ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3" compoundref="config_8h" startline="158">eSensor_adxl372</references>
+        <references refid="class_config_1abbed406bd7169794eed499057c17142e" compoundref="config_8cpp" startline="589" endline="591">getValue</references>
+        <references refid="config_8h_1a49f1cb9ea995633108848d99a04c8b22" compoundref="config_8h" startline="147">MAX_ACT_THRESHOLD</references>
+        <references refid="config_8h_1a1f2eb35f54f623585f342a14ca2de33f" compoundref="config_8h" startline="141">MAX_ACT_THRESHOLD_STR</references>
+        <references refid="config_8h_1a006bf46c2e9e0e5d55f7c41aacef79e5" compoundref="config_8h" startline="149">MAX_DEACT_THRESHOLD</references>
+        <references refid="config_8h_1a476feef5798188ae0332302cf96da100" compoundref="config_8h" startline="143">MAX_DEACT_THRESHOLD_STR</references>
+        <references refid="config_8cpp_1aff0d9b37b3f5fdfdf38b358863cf8e39" compoundref="config_8cpp" startline="53">MAX_METRICS_INTERVAL</references>
+        <references refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" compoundref="config_8h" startline="198">_stCfgDatalog::max_raw_per_day</references>
+        <references refid="config_8cpp_1a772821ddc286e83aacf74b5ec390b69b" compoundref="config_8cpp" startline="63">MAX_RAW_TRANSFERS_PER_DAY</references>
+        <references refid="config_8cpp_1ab08bc10d2fa238b91ff8f0ff568f57d2" compoundref="config_8cpp" startline="58">MAX_RMS_THRESHOLD</references>
+        <references refid="config_8h_1a70b42f710ea45d269a511bc990063975" compoundref="config_8h" startline="145">MIN_ACT_THRESHOLD</references>
+        <references refid="config_8h_1ac87c41a1e712fb2612375468da55b7ba" compoundref="config_8h" startline="139">MIN_ACT_THRESHOLD_STR</references>
+        <references refid="config_8cpp_1ab0d7d702ea8b87065790628b7a389dd5" compoundref="config_8cpp" startline="50">MIN_METRICS_INTERVAL</references>
+        <references refid="config_8cpp_1ac7117aa235bc89ad9e738a2e3b131b38" compoundref="config_8cpp" startline="61">MIN_RAW_TRANSFERS_PER_DAY</references>
+        <references refid="config_8cpp_1aee57fd2e9658cccb300b1386a9fad900" compoundref="config_8cpp" startline="56">MIN_RMS_THRESHOLD</references>
+        <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
+        <references refid="class_config_1a774b533b0a7a6ba5dbe9214642f04245" compoundref="config_8cpp" startline="275" endline="284">save</references>
+        <references refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" compoundref="config_8cpp" startline="652" endline="655">setValue</references>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a54dfba499c9d9e1003d4c9bcbe6ad1c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~Config</definition>
+        <argsstring>()</argsstring>
+        <name>~Config</name>
+        <briefdescription>
+<para><ref refid="class_config" kindref="compound">Config</ref> class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="285" column="13" bodyfile="conf/config.cpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a52b64caee9a1f9f56acb8ba05ab06d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config</definition>
+        <argsstring>(const Config &amp;)=delete</argsstring>
+        <name>Config</name>
+        <param>
+          <type>const <ref refid="class_config" kindref="compound">Config</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="287" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1adea0710cb91e80fb3835a70cc391ec5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_config" kindref="compound">Config</ref> &amp;</type>
+        <definition>Config&amp; operator=</definition>
+        <argsstring>(const Config &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_config" kindref="compound">Config</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="288" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a71f686389bd27e3ca44ab2587ccea9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="config_8h_1a4b760cee435ce5b5cad9bdb7f2e976e4" kindref="member">stCfgGeneral</ref> *</type>
+        <definition>stCfgGeneral * getCfgGeneral</definition>
+        <argsstring>()</argsstring>
+        <name>getCfgGeneral</name>
+        <briefdescription>
+<para>Getter function to retrieve the configuration structure of the general group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the configuration structure of the general group</para>
+</simplesect>
+The function returns a pointer to the configuration structure of the general group of type stCfgGeneral. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="290" column="18" bodyfile="conf/config.cpp" bodystart="714" bodyend="716"/>
+        <references refid="class_config_1a6859fe47ce99cac240f725558def3522" compoundref="config_8h" startline="308">cfgGeneral</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1af106da5a3b67f694963b29186df4b3c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="config_8h_1acdb49406321a50693308cf8efc0e46d8" kindref="member">stCfgMetrics</ref> *</type>
+        <definition>stCfgMetrics * getCfgMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>getCfgMetrics</name>
+        <briefdescription>
+<para>Getter function to retrieve the configuration structure of the metrics group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the configuration structure of the metrics group</para>
+</simplesect>
+The function returns a pointer to the configuration structure of the metrics group of type stCfgMetrics. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="291" column="18" bodyfile="conf/config.cpp" bodystart="728" bodyend="730"/>
+        <references refid="class_config_1a5ea632fc10c6c6b5122db4633361876e" compoundref="config_8h" startline="309">cfgMetrics</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="603" endline="609">MqttConnector::configure</referencedby>
+        <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">PowerMgr::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ae6395cad5f0583a45336e008ea4d05fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="config_8h_1a398de94e30a56bd329e10eaadf90aa2f" kindref="member">stCfgDatalog</ref> *</type>
+        <definition>stCfgDatalog * getCfgDatalog</definition>
+        <argsstring>()</argsstring>
+        <name>getCfgDatalog</name>
+        <briefdescription>
+<para>Getter function to retrieve the configuration structure of the datalog group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the configuration structure of the datalog group</para>
+</simplesect>
+The function returns a pointer to the configuration structure of the datalog group of type stCfgDatalog. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="292" column="18" bodyfile="conf/config.cpp" bodystart="756" bodyend="758"/>
+        <references refid="class_config_1a240992a38c57e28c8d701fd42775da79" compoundref="config_8h" startline="310">cfgDatalog</references>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">AdxlDataStore::configure</referencedby>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a02b9c58f87dbf3269338120d45fbe187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="config_8h_1a4f488f2053de5813c65b297bf5d5882d" kindref="member">stCfgDisplacement</ref> *</type>
+        <definition>stCfgDisplacement * getCfgDisplacement</definition>
+        <argsstring>()</argsstring>
+        <name>getCfgDisplacement</name>
+        <briefdescription>
+<para>Getter function to retrieve the configuration structure of the displacement group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the configuration structure of the displacement group</para>
+</simplesect>
+The function returns a pointer to the configuration structure of the displacement group of type stCfgDisplacement. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="293" column="23" bodyfile="conf/config.cpp" bodystart="742" bodyend="744"/>
+        <references refid="class_config_1a3fba147b9320f4379816dc9e3cde78e2" compoundref="config_8h" startline="312">cfgDisplacement</references>
+        <referencedby refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" compoundref="disptask_8cpp" startline="97" endline="108">DispTask::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a62de71d61d609823188d5f85550de01d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="config_8h_1ae4748f9659f6e54fd5212402d461a14b" kindref="member">stCfgSensor</ref> *</type>
+        <definition>stCfgSensor * getCfgSensor</definition>
+        <argsstring>(enCfgSensorId id)</argsstring>
+        <name>getCfgSensor</name>
+        <param>
+          <type><ref refid="config_8h_1a2aa0ac06adcc561c573aebc9d2c84735" kindref="member">enCfgSensorId</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the configuration structure of a sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the sensor of enumerator type enCfgSensorId </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to the configuration structure of sensor</para>
+</simplesect>
+The function returns a pointer to the configuration structure of a single sensor from the sensor group of type stCfgSensor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="294" column="18" bodyfile="conf/config.cpp" bodystart="769" bodyend="772"/>
+        <references refid="class_config_1a76bed1aa3e568f829c50a7b4a964b178" compoundref="config_8h" startline="314">cfgSensor</references>
+        <references refid="config_8h_1ae0844591b2474dfebc9992bba67c617cafada96a1159c3171c1d10fafb70530c1" compoundref="config_8h" startline="159">eSensor_MAX</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl37x_8cpp" startline="524" endline="560">Adxl37x::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1af1e95a316d50179890c000585e59971f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char *</type>
+        <definition>unsigned char * getConfigJson</definition>
+        <argsstring>()</argsstring>
+        <name>getConfigJson</name>
+        <briefdescription>
+<para>Function to retrieve the configuration in JSON format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to a static char array containing the configuration in JSON Format</para>
+</simplesect>
+By calling Zephyr function cJSON_PrintUnformatted the JSON configuration string will be extracted from cJSON structure root_obj and stored in variable str, which will be copied to static output string out. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="296" column="19" bodyfile="conf/config.cpp" bodystart="784" bodyend="794"/>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a6e68de84123711b6e53a49c3279606ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deleteConfigFile</definition>
+        <argsstring>()</argsstring>
+        <name>deleteConfigFile</name>
+        <briefdescription>
+<para>Function to delete configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling Zephyr file system API file_exists the method check if the JSON configuration file is existing and in this case file will be deleted by call of function remove. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="298" column="10" bodyfile="conf/config.cpp" bodystart="255" bodyend="263"/>
+        <references refid="config_8h_1af3a37ddad69a98c185798e80a58dcbdb" compoundref="config_8h" startline="122">CONFIG_FILENAME</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" compoundref="flashfs_8cpp" startline="243" endline="248">FlashFS::remove</references>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_config_1a539a941e29cde8d13e413c515d9801cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+<para><ref refid="class_config" kindref="compound">Config</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor simply triggers a debug message on debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="301" column="5" bodyfile="conf/config.cpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1ac290477e6f4657db9fea69e972aaaac5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getArraySize</definition>
+        <argsstring>(struct cJSON *array_obj)</argsstring>
+        <name>getArraySize</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>array_obj</declname>
+        </param>
+        <briefdescription>
+<para>Function to retrieve the array size of a JSON object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The JSON object to retrieve the array size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The array size of the JSON object</para>
+</simplesect>
+The method returns the array size (number of items in the array) of a JSON object by calling function cJSON_GetArraySize, provided by the cJSON library. It than returns the return value of function cJSON_GetArraySize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="304" column="9" bodyfile="conf/config.cpp" bodystart="337" bodyend="341"/>
+        <referencedby refid="class_config_1a74e15929b45b42d60c16ad056fa1c08f" compoundref="config_8cpp" startline="393" endline="399">getGroupEntries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a1d86b351ff36c4701678061905b6b81d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isVersionValid</definition>
+        <argsstring>(struct cJSON *jsonObj)</argsstring>
+        <name>isVersionValid</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>jsonObj</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if the version is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jsonObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a JSON root object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if version is valid, false otherwise</para>
+</simplesect>
+The function call the member function parse to retrieve the JSON root object from input string and check if all groups are present in JSON configuration and if the configuration version matches with the expected one. If all checks are passed the function returns true, otherwise false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="316" column="10" bodyfile="conf/config.cpp" bodystart="1232" bodyend="1278"/>
+        <references refid="config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02" compoundref="config_8h" startline="110">CONFIG_VERSION</references>
+        <references refid="class_config_1abbed406bd7169794eed499057c17142e" compoundref="config_8cpp" startline="589" endline="591">getValue</references>
+        <references refid="class_config_1a903c205c1da997fe1d8e98c035e2849e" compoundref="config_8cpp" startline="355" endline="359">groupExists</references>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mergeConfig</definition>
+        <argsstring>(struct cJSON *rootObj, struct cJSON *loadObj)</argsstring>
+        <name>mergeConfig</name>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>rootObj</declname>
+        </param>
+        <param>
+          <type>struct cJSON *</type>
+          <declname>loadObj</declname>
+        </param>
+        <briefdescription>
+<para>Function to merge existing configuration values in file system into the current JSON structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rootObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the JSON root object with default configuration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loadObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the JSON root object with configuration loaded from file system</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The method checks if a group and a key in group exist in the loaded configuration of file system. In this case the value will be extracted by call of member function getValue and will be stored in the corresponding key in the default configuration. The default configurations ensured, that the version and structure is allways valid. Following keys will be checked:<itemizedlist>
+<listitem><para>&apos;actthres&apos; in group &apos;sensors&apos;</para>
+</listitem><listitem><para>&apos;deactthres&apos; in group &apos;sensors&apos;</para>
+</listitem><listitem><para>&apos;interval&apos; in group &apos;metrics&apos;</para>
+</listitem><listitem><para>&apos;b1&apos; in group &apos;displacement&apos;</para>
+</listitem><listitem><para>&apos;dispmodeoff&apos; in group &apos;datalog&apos;</para>
+</listitem><listitem><para>&apos;rawtransferon&apos; in group &apos;datalog&apos;</para>
+</listitem><listitem><para>&apos;disptransferon&apos; in group &apos;datalog&apos; </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="317" column="10" bodyfile="conf/config.cpp" bodystart="855" bodyend="913"/>
+        <references refid="class_config_1abbed406bd7169794eed499057c17142e" compoundref="config_8cpp" startline="589" endline="591">getValue</references>
+        <references refid="class_config_1a903c205c1da997fe1d8e98c035e2849e" compoundref="config_8cpp" startline="355" endline="359">groupExists</references>
+        <references refid="class_config_1aa460c63f759b01e49ebb29e32dfd2771" compoundref="config_8cpp" startline="550" endline="576">keyExists</references>
+        <references refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" compoundref="config_8cpp" startline="652" endline="655">setValue</references>
+        <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a4e1044ab996356d6bd82d2b8b2807a40" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool areValuesStrings</definition>
+        <argsstring>(std::string group)</argsstring>
+        <name>areValuesStrings</name>
+        <param>
+          <type>std::string</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if the values in a group are strings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the group </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if all values are strings, false otherwise</para>
+</simplesect>
+The method retrieve the JSON object of the group by calling function cJSON_GetObjectItem, provided by the cJSON library. Afterwards it retrieve the JSON item within the group by calling function cJSON_GetArrayItem, also provided by the cJSON library. If the item is a NULL pointer, the method returns false, otherwise it iterate over all child nodes with key/value pairs in a loop. If a value is not a string, the loop will be aborted and the function returns false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="318" column="10" bodyfile="conf/config.cpp" bodystart="811" bodyend="832"/>
+        <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aadb926eb277206bb5233c44ca10803fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool strIsInt</definition>
+        <argsstring>(std::string &amp;strInput)</argsstring>
+        <name>strIsInt</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>strInput</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if a string contains a valid integer string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to check</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if string contains valid integer, false otherwise</para>
+</simplesect>
+The function call the c library function strtol to check if string strInput contains a valid integer string. If pointer p points to the string end and if string is not empty the function returns true, otherwise false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="320" column="10" bodyfile="conf/config.cpp" bodystart="1291" bodyend="1295"/>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1aee4afa7ec317587fc74e0fb88fb4bd3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool strIsFloat</definition>
+        <argsstring>(std::string &amp;strInput)</argsstring>
+        <name>strIsFloat</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>strInput</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if a string contains a valid floating point number string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to check</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if string contains valid floating point number, false otherwise</para>
+</simplesect>
+The function call the c library function strtof to check if string strInput contains a valid floating point number string. If pointer p points to the string end and if string is not empty the function returns true, otherwise false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="321" column="10" bodyfile="conf/config.cpp" bodystart="1311" bodyend="1315"/>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_config_1a35ee662621cdcc9aadce8a5ad8963c51" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool strIsBool</definition>
+        <argsstring>(std::string &amp;strInput)</argsstring>
+        <name>strIsBool</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>strInput</declname>
+        </param>
+        <briefdescription>
+<para>Function to check if a string contains a valid boolean string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strInput</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to check</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if string contains valid boolean string, false otherwise</para>
+</simplesect>
+The function call the c library function strcmp to check if string strInput contains a valid boolean string (&quot;true&quot; or &quot;false&quot;). In this case the <linebreak/>
+ function returns true, otherwise false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="322" column="10" bodyfile="conf/config.cpp" bodystart="1329" bodyend="1336"/>
+        <referencedby refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" compoundref="config_8cpp" startline="929" endline="1089">isValid</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Configuration class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The <ref refid="class_config" kindref="compound">Config</ref> class handle the dynamic configuration of the AXO device basecd on a JSON configuration file located at the Jovia server. For each AXO device one configuration file is present on the server. On changing the content of the configuration file the server send the configuration via MQTT topic /device/{device_id}/config/update to the device if it is connected via LTE. On receiving the configuration, the device check if the configuration is valid and in this case store the new configuration in file system under /lfs/config.json and perform a reset. <linebreak/>
+ On startup the device read the configuration file and provide the configuration values to the related modules in defined configuration structures. In case no configuration file is available in file system, the device store a default configuration before reading. <linebreak/>
+ The config class uses the <ulink url="https://github.com/DaveGamble/cJSON">cJSON library</ulink>, which is part of the Zephyr delivery. <linebreak/>
+ The class provides methods for initialization of the class instance, to read the configuration file from file system, to parse the configuration JSON string into configuration structures, to print the JSON string, to retrieve group and key existence and the number of group entries and to get a specific configuration value. Furthermore it provides getter functions to retrieve every singe configuration structure. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>_stCfgSensor</label>
+        <link refid="struct__st_cfg_sensor"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+actthres</edgelabel>
+          <edgelabel>+deactthres</edgelabel>
+          <edgelabel>+name</edgelabel>
+          <edgelabel>+type</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>_stCfgGeneral</label>
+        <link refid="struct__st_cfg_general"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+name</edgelabel>
+          <edgelabel>+type</edgelabel>
+          <edgelabel>+version</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct cJSON *</label>
+      </node>
+      <node id="8">
+        <label>_stCfgDisplacement</label>
+        <link refid="struct__st_cfg_displacement"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+b1</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Config</label>
+        <link refid="class_config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-cfgMetrics</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-cfgGeneral</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-root_obj</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-input</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-cfgSensor</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-cfgDatalog</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-cfgDisplacement</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>_stCfgMetrics</label>
+        <link refid="struct__st_cfg_metrics"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+interval</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>_stCfgDatalog</label>
+        <link refid="struct__st_cfg_datalog"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+dispmodeoff</edgelabel>
+          <edgelabel>+disptransferon</edgelabel>
+          <edgelabel>+max_raw_per_day</edgelabel>
+          <edgelabel>+rawtransferon</edgelabel>
+          <edgelabel>+rms_thres</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="conf/config.h" line="229" column="1" bodyfile="conf/config.h" bodystart="229" bodyend="323"/>
+    <listofallmembers>
+      <member refid="class_config_1a4e1044ab996356d6bd82d2b8b2807a40" prot="private" virt="non-virtual"><scope>Config</scope><name>areValuesStrings</name></member>
+      <member refid="class_config_1a4530f1c50511acfe103d8788a85d3500" prot="public" virt="non-virtual"><scope>Config</scope><name>Autocorrection</name></member>
+      <member refid="class_config_1a240992a38c57e28c8d701fd42775da79" prot="private" virt="non-virtual"><scope>Config</scope><name>cfgDatalog</name></member>
+      <member refid="class_config_1a3fba147b9320f4379816dc9e3cde78e2" prot="private" virt="non-virtual"><scope>Config</scope><name>cfgDisplacement</name></member>
+      <member refid="class_config_1a6859fe47ce99cac240f725558def3522" prot="private" virt="non-virtual"><scope>Config</scope><name>cfgGeneral</name></member>
+      <member refid="class_config_1a5ea632fc10c6c6b5122db4633361876e" prot="private" virt="non-virtual"><scope>Config</scope><name>cfgMetrics</name></member>
+      <member refid="class_config_1a76bed1aa3e568f829c50a7b4a964b178" prot="private" virt="non-virtual"><scope>Config</scope><name>cfgSensor</name></member>
+      <member refid="class_config_1a52b64caee9a1f9f56acb8ba05ab06d72" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="class_config_1a539a941e29cde8d13e413c515d9801cd" prot="private" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="class_config_1a6e68de84123711b6e53a49c3279606ea" prot="public" virt="non-virtual"><scope>Config</scope><name>deleteConfigFile</name></member>
+      <member refid="class_config_1accd2600060dbaee3a3b41aed4034c63c" prot="public" virt="non-virtual"><scope>Config</scope><name>dump</name></member>
+      <member refid="class_config_1ac290477e6f4657db9fea69e972aaaac5" prot="private" virt="non-virtual"><scope>Config</scope><name>getArraySize</name></member>
+      <member refid="class_config_1ae6395cad5f0583a45336e008ea4d05fe" prot="public" virt="non-virtual"><scope>Config</scope><name>getCfgDatalog</name></member>
+      <member refid="class_config_1a02b9c58f87dbf3269338120d45fbe187" prot="public" virt="non-virtual"><scope>Config</scope><name>getCfgDisplacement</name></member>
+      <member refid="class_config_1a71f686389bd27e3ca44ab2587ccea9fa" prot="public" virt="non-virtual"><scope>Config</scope><name>getCfgGeneral</name></member>
+      <member refid="class_config_1af106da5a3b67f694963b29186df4b3c1" prot="public" virt="non-virtual"><scope>Config</scope><name>getCfgMetrics</name></member>
+      <member refid="class_config_1a62de71d61d609823188d5f85550de01d" prot="public" virt="non-virtual"><scope>Config</scope><name>getCfgSensor</name></member>
+      <member refid="class_config_1af1e95a316d50179890c000585e59971f" prot="public" virt="non-virtual"><scope>Config</scope><name>getConfigJson</name></member>
+      <member refid="class_config_1a74e15929b45b42d60c16ad056fa1c08f" prot="public" virt="non-virtual"><scope>Config</scope><name>getGroupEntries</name></member>
+      <member refid="class_config_1abbed406bd7169794eed499057c17142e" prot="public" virt="non-virtual"><scope>Config</scope><name>getValue</name></member>
+      <member refid="class_config_1a553ff2f3b8a72792ea11c62eb3728796" prot="public" virt="non-virtual"><scope>Config</scope><name>getValue</name></member>
+      <member refid="class_config_1a903c205c1da997fe1d8e98c035e2849e" prot="public" virt="non-virtual"><scope>Config</scope><name>groupExists</name></member>
+      <member refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>Config</scope><name>init</name></member>
+      <member refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" prot="private" virt="non-virtual"><scope>Config</scope><name>input</name></member>
+      <member refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" prot="public" virt="non-virtual"><scope>Config</scope><name>inst</name></member>
+      <member refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" prot="public" virt="non-virtual"><scope>Config</scope><name>isValid</name></member>
+      <member refid="class_config_1a1d86b351ff36c4701678061905b6b81d" prot="private" virt="non-virtual"><scope>Config</scope><name>isVersionValid</name></member>
+      <member refid="class_config_1aa460c63f759b01e49ebb29e32dfd2771" prot="public" virt="non-virtual"><scope>Config</scope><name>keyExists</name></member>
+      <member refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" prot="public" virt="non-virtual"><scope>Config</scope><name>loadFromFile</name></member>
+      <member refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" prot="private" virt="non-virtual"><scope>Config</scope><name>mergeConfig</name></member>
+      <member refid="class_config_1adea0710cb91e80fb3835a70cc391ec5b" prot="public" virt="non-virtual"><scope>Config</scope><name>operator=</name></member>
+      <member refid="class_config_1af2f473fab5c40aea9a21e89011c959d6" prot="public" virt="non-virtual"><scope>Config</scope><name>parse</name></member>
+      <member refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" prot="public" virt="non-virtual"><scope>Config</scope><name>parseAllValues</name></member>
+      <member refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" prot="private" virt="non-virtual"><scope>Config</scope><name>root_obj</name></member>
+      <member refid="class_config_1a774b533b0a7a6ba5dbe9214642f04245" prot="public" virt="non-virtual"><scope>Config</scope><name>save</name></member>
+      <member refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" prot="public" virt="non-virtual"><scope>Config</scope><name>saveToFile</name></member>
+      <member refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" prot="public" virt="non-virtual"><scope>Config</scope><name>saveToFile</name></member>
+      <member refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" prot="public" virt="non-virtual"><scope>Config</scope><name>setValue</name></member>
+      <member refid="class_config_1aeb1ec58a1fe79c892f552cea6a699958" prot="public" virt="non-virtual"><scope>Config</scope><name>setValue</name></member>
+      <member refid="class_config_1a35ee662621cdcc9aadce8a5ad8963c51" prot="private" virt="non-virtual"><scope>Config</scope><name>strIsBool</name></member>
+      <member refid="class_config_1aee4afa7ec317587fc74e0fb88fb4bd3b" prot="private" virt="non-virtual"><scope>Config</scope><name>strIsFloat</name></member>
+      <member refid="class_config_1aadb926eb277206bb5233c44ca10803fa" prot="private" virt="non-virtual"><scope>Config</scope><name>strIsInt</name></member>
+      <member refid="class_config_1a54dfba499c9d9e1003d4c9bcbe6ad1c5" prot="public" virt="virtual"><scope>Config</scope><name>~Config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

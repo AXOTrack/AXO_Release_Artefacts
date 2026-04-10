@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="rms_8h" kind="file" language="C++">
+    <compoundname>rms.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="rms_8cpp" local="yes">data/rms.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>data/rms.h</label>
+        <link refid="rms_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="6">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>data/rms.h</label>
+        <link refid="rms_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rms_task" prot="public">RmsTask</innerclass>
+    <briefdescription>
+<para>Header file of RMS task. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="rms_8h_1rms"/> <simplesect kind="par"><title>Detailed Description </title><para>Based on the requirements root mean square (RMS, quadratic mean) values in vertical (z), transversal (y) and longitudinal (x) direction and medium and critical hits for vertical direction shall be calculated automatically from the measured raw accelerator data. <linebreak/>
+ Root mean square shall be calculated with following formula: <image type="html" name="rms.png" inline="yes"></image>
+<itemizedlist>
+<listitem><para>Impacts (only vertical)<itemizedlist>
+<listitem><para>300 m/s² for 8ms shall be counted as medium hit</para>
+</listitem><listitem><para>800 m/s² for 2ms shall be counted as critical hit The medium hit counter shall be incremented if the acceleration exceeds the threshold on z-axis of 300 m/s² and return to normal within 8 ms, which corresponds to 32 or less samples by a sample frequency of 4400 Hz. If the acceleration persists and continue for more than 8 ms (more than 32 samples), it shall be not longer treated as a medium hit because it’s sustained and not just a momentary spike. <linebreak/>
+ The critical hit counter shall be incremented if the acceleration exceeds the threshold on z-axis of 800 m/s² and return to normal within 2 ms, which corresponds to 8 or less samples by a sample frequency of 4400 Hz. if the acceleration persists and continue for more than 2 ms (more than 8 samples), it is no longer treated as a critical hit because it’s sustained and not just a momentary spike.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_RMS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_RMS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hit_detector" kindref="compound">HitDetector</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_rms_task" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rms_task" kindref="compound">RmsTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RmsTask();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a0b38580605654394e49099df0afdfb1b" kindref="member">RmsTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">,<sp/>uint8_t<sp/>num_seconds<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" kindref="member">samples_per_sec</ref><sp/>=<sp/>4400);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1ab00c99e6599d7963850a2a04c3663480" kindref="member">~RmsTask</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" kindref="member">task</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" kindref="member">update_rms</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="84" refid="class_rms_task_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_rms_task_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="class_rms_task_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_rms_task_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hit_detector" kindref="compound">HitDetector</ref>*<sp/><ref refid="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" kindref="member">myDetectorMed</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hit_detector" kindref="compound">HitDetector</ref>*<sp/><ref refid="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" kindref="member">myDetectorCrit</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t</highlight></codeline>
+<codeline lineno="93" refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" kindref="member">samples_per_sec</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="class_rms_task_1ad07bbc8841c16a2548141fbb12a7d0a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_rms_task_1ad07bbc8841c16a2548141fbb12a7d0a2" kindref="member">n_seconds</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" kindref="member">n_sample</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" kindref="member">x_square_sum</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" kindref="member">y_square_sum</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" kindref="member">z_square_sum</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_rms_task_1a406facadccb6ea06509e8d1ab28a7fdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a406facadccb6ea06509e8d1ab28a7fdf" kindref="member">x_rms</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="102" refid="class_rms_task_1ad86d11bdd69cdf9d37d224cf76af962e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1ad86d11bdd69cdf9d37d224cf76af962e" kindref="member">y_rms</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="class_rms_task_1a38b6b5532e9611be2456a98febe10864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a38b6b5532e9611be2456a98febe10864" kindref="member">z_rms</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="class_rms_task_1a0b38580605654394e49099df0afdfb1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_rms_task_1a0b38580605654394e49099df0afdfb1b" kindref="member">RmsTask</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107" refid="class_rms_task_1a97808a9870039f4168da10ecfb5dc472" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rms_task_1a97808a9870039f4168da10ecfb5dc472" kindref="member">idle</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="class_rms_task_1a3b1e23a496d25dd87f7b1f223fe0d60c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_rms_task_1a3b1e23a496d25dd87f7b1f223fe0d60c" kindref="member">rx_cnt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="class_rms_task_1a2a855ec4ae79d9dc71f4f3418769ef51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_rms_task_1a2a855ec4ae79d9dc71f4f3418769ef51" kindref="member">rx_cnt_prev</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_RMS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/rms.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_587c94d866dbb2f408f78cf41f9b2f8d" kind="dir">
+    <compoundname>drv</compoundname>
+    <innerdir refid="dir_f06177a97ef447254b84c34e6e0a4437">drv/adc</innerdir>
+    <innerdir refid="dir_509896329f0712b5e086d3fc9d96ff81">drv/i2c</innerdir>
+    <innerdir refid="dir_efaf3e7119a8aa4b02a55751b234793c">drv/pm</innerdir>
+    <innerdir refid="dir_73c8488d758244828d0713877235c351">drv/pwm</innerdir>
+    <innerdir refid="dir_2ae16ec5be1c5cb0797b9a5ee9944a4a">drv/spi</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="drv/"/>
+  </compounddef>
+</doxygen>

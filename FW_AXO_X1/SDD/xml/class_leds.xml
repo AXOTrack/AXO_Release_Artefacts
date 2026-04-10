@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_leds" kind="class" language="C++" prot="public">
+    <compoundname>Leds</compoundname>
+    <includes refid="leds_8h" local="no">leds.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_leds_1a1d64907656992d7d2e2ae7354c656f30" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_leds" kindref="compound">Leds</ref> *</type>
+        <definition>Leds * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.h" line="49" column="17" bodyfile="ui/leds.cpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_leds_1ace613a1b3cd2799b2749c8a42d67a445" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~Leds</definition>
+        <argsstring>()</argsstring>
+        <name>~Leds</name>
+        <briefdescription>
+<para>LED class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.h" line="50" column="13" bodyfile="ui/leds.cpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setLed</definition>
+        <argsstring>(ledId led, ledState s)</argsstring>
+        <name>setLed</name>
+        <param>
+          <type><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" kindref="member">ledId</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657" kindref="member">ledState</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Function to switch specified LED on or off. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>led</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The LED to be switched on or offspecified by enum ledId </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State to be set according to enum ledState (on or off)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function switch on or off the LED by calling function gpio_pin_set. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.h" line="51" column="10" bodyfile="ui/leds.cpp" bodystart="126" bodyend="131"/>
+        <references refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a96859d57cbe39e0235d304b8b256ddce" compoundref="leds_8h" startline="28">ledGreen</references>
+        <references refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a6f279b5bf1323619c0037eaf95cd8b44" compoundref="leds_8h" startline="27">ledRed</references>
+        <references refid="leds_8cpp_1af2702f649b37b8e4c16e1ceb92700113" compoundref="leds_8cpp" startline="88">myLeds</references>
+        <references refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" compoundref="leds_8cpp" startline="49">led::spec</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_leds_1acf331be1c73e40a9c050f88e6305b606" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Leds</definition>
+        <argsstring>()</argsstring>
+        <name>Leds</name>
+        <briefdescription>
+<para>LED class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor is declared as private according to singleton pattern. It is called in the static inst function to create the exclusiv only instance of the class. It configures all LED&apos;s for GPIO output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.h" line="54" column="5" bodyfile="ui/leds.cpp" bodystart="98" bodyend="106"/>
+        <references refid="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" compoundref="leds_8cpp" startline="54">led0</references>
+        <references refid="leds_8cpp_1a431149c740efd031491fb75f4be608dd" compoundref="leds_8cpp" startline="61">led1</references>
+        <references refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" compoundref="leds_8cpp" startline="49">led::spec</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LED class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The LED class handle the LED states of all LEDs in the system. It provides a method to switch on or off a selected LED. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Leds</label>
+        <link refid="class_leds"/>
+      </node>
+    </collaborationgraph>
+    <location file="ui/leds.h" line="47" column="1" bodyfile="ui/leds.h" bodystart="47" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_leds_1a1d64907656992d7d2e2ae7354c656f30" prot="public" virt="non-virtual"><scope>Leds</scope><name>inst</name></member>
+      <member refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" prot="private" virt="non-virtual"><scope>Leds</scope><name>Leds</name></member>
+      <member refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" prot="public" virt="non-virtual"><scope>Leds</scope><name>setLed</name></member>
+      <member refid="class_leds_1ace613a1b3cd2799b2749c8a42d67a445" prot="public" virt="virtual"><scope>Leds</scope><name>~Leds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

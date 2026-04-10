@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_da9b1fa3a11988e83c393c7410ee9ef9" kind="dir">
+    <compoundname>rtos</compoundname>
+    <innerfile refid="mbox_8cpp">mbox.cpp</innerfile>
+    <innerfile refid="mbox_8h">mbox.h</innerfile>
+    <innerfile refid="mempool_8h">mempool.h</innerfile>
+    <innerfile refid="mpelem_8cpp">mpelem.cpp</innerfile>
+    <innerfile refid="mpelem_8h">mpelem.h</innerfile>
+    <innerfile refid="mpool_8cpp">mpool.cpp</innerfile>
+    <innerfile refid="mpool_8h">mpool.h</innerfile>
+    <innerfile refid="mqueue_8h">mqueue.h</innerfile>
+    <innerfile refid="mutex_8cpp">mutex.cpp</innerfile>
+    <innerfile refid="mutex_8h">mutex.h</innerfile>
+    <innerfile refid="sema_8cpp">sema.cpp</innerfile>
+    <innerfile refid="sema_8h">sema.h</innerfile>
+    <innerfile refid="task_8cpp">task.cpp</innerfile>
+    <innerfile refid="task_8h">task.h</innerfile>
+    <innerfile refid="timer_8cpp">timer.cpp</innerfile>
+    <innerfile refid="timer_8h">timer.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="rtos/"/>
+  </compounddef>
+</doxygen>

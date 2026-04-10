@@ -1,0 +1,21 @@
+<map id="publish" name="publish">
+<area shape="rect" id="node1" title="The publish method of MQTT connector class." alt="" coords="764,104,827,131"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="553,41,716,68"/>
+<area shape="rect" id="node4" href="$class_mqtt_connector.html#a902f83037dc5ee6772caad03b74e7326" title="Function to publish data to the MQTT broker." alt="" coords="370,104,462,131"/>
+<area shape="rect" id="node6" href="$class_mqtt_connector.html#a959e4c8768e9fd37a1411a350d04f446" title="Function to publish a response to the MQTT broker." alt="" coords="573,433,696,460"/>
+<area shape="rect" id="node3" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="5,357,52,384"/>
+<area shape="rect" id="node5" href="$class_mqtt_connector.html#a468c248c7d18e226ea56f9c1a8e07be4" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="132,129,247,156"/>
+<area shape="rect" id="node7" href="$class_mqtt_connector.html#ab5d3e83997c930e0ea258cccbee98063" title="Function to publish a accepted response to the MQTT broker." alt="" coords="327,433,505,460"/>
+<area shape="rect" id="node18" href="$class_mqtt_connector.html#aa89c1f584a412e02c6138435a71a4ecc" title="Function to publish a rejected response to the MQTT broker." alt="" coords="329,737,503,764"/>
+<area shape="rect" id="node8" href="$class_mqtt_connector.html#ae07a10cc3041ea092699387b0fdb3257" title="Handler function for handling of boost converter off request." alt="" coords="122,231,257,257"/>
+<area shape="rect" id="node9" href="$class_mqtt_connector.html#af768b2a6ec57840d0ee687f9b25e7b4c" title="Handler function for handling of boost converter on request." alt="" coords="121,281,257,308"/>
+<area shape="rect" id="node10" href="$class_mqtt_connector.html#a7b73774ea55d0112571cf49e98558e37" title="Handler function for handling of cold start request." alt="" coords="120,332,259,359"/>
+<area shape="rect" id="node11" href="$class_mqtt_connector.html#a4ba8232123283b7363cf319d3603b9ac" title="Handler function for handling disable ADXL request." alt="" coords="121,383,258,409"/>
+<area shape="rect" id="node12" href="$class_mqtt_connector.html#a163abf5e1860042a8d2fe54398ee0c53" title="Handler function for handling enable ADXL request." alt="" coords="122,433,257,460"/>
+<area shape="rect" id="node13" href="$class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="116,484,263,511"/>
+<area shape="rect" id="node14" href="$class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="134,535,245,561"/>
+<area shape="rect" id="node15" href="$class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="132,585,247,612"/>
+<area shape="rect" id="node16" href="$class_mqtt_connector.html#ab09a2b3c65e60b502efe51bfaaa6095f" title="Handler function for handling get configuration request." alt="" coords="130,636,249,663"/>
+<area shape="rect" id="node17" href="$class_mqtt_connector.html#ab0b0c6d681f4d9ee936edfc17542f632" title="Function to publish a accepted response to the MQTT broker." alt="" coords="100,687,279,713"/>
+<area shape="rect" id="node19" href="$class_mqtt_connector.html#a0520f0e181a94a9bf2298654692a914e" title="Function to publish a rejected response to the MQTT broker." alt="" coords="102,788,277,815"/>
+</map>

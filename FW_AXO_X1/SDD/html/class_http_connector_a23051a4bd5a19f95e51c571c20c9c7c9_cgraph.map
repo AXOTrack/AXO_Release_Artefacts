@@ -1,0 +1,5 @@
+<map id="http_connect" name="http_connect">
+<area shape="rect" id="node1" title="Function to create a socket stream and send a HTTP connect request." alt="" coords="5,31,103,57"/>
+<area shape="rect" id="node2" href="$class_http_connector.html#a1a1944c6c473b06aff8e74006553efb4" title="HttpConnector connect function." alt="" coords="151,5,273,32"/>
+<area shape="rect" id="node3" href="$class_http_connector.html#aba9d39b4688a9fe5b0ab1fd21b86d658" title="Function to setup TLS peer verification." alt="" coords="175,56,249,83"/>
+</map>

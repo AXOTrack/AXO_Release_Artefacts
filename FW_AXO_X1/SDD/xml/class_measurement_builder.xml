@@ -1,0 +1,828 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_measurement_builder" kind="class" language="C++" prot="public">
+    <compoundname>MeasurementBuilder</compoundname>
+    <includes refid="measurement_8h" local="no">measurement.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_measurement_builder_1aa74c818d418e097e25db7ec7b9320470" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string payload</definition>
+        <argsstring></argsstring>
+        <name>payload</name>
+        <briefdescription>
+<para>the measurement JSON string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="71" column="17" bodyfile="data/measurement.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" compoundref="measurement_8cpp" startline="381" endline="384">getPayload</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+<para>the timestamp in JSON string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="72" column="17" bodyfile="data/measurement.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">addRmsData</referencedby>
+        <referencedby refid="class_measurement_builder_1a743e623dd2220526009eb3783461c1ad" compoundref="measurement_8cpp" startline="395" endline="398">getTimestamp</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sDispMin</definition>
+        <argsstring></argsstring>
+        <name>sDispMin</name>
+        <briefdescription>
+<para>Minimum displacement value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="75" column="18" bodyfile="data/measurement.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">addDispStatistics</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sDispMax</definition>
+        <argsstring></argsstring>
+        <name>sDispMax</name>
+        <briefdescription>
+<para>Maximum displacement value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="77" column="18" bodyfile="data/measurement.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">addDispStatistics</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sDispP2P</definition>
+        <argsstring></argsstring>
+        <name>sDispP2P</name>
+        <briefdescription>
+<para>Peak To Peak displacement value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="79" column="18" bodyfile="data/measurement.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">addDispStatistics</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" compoundref="measurement_8cpp" startline="127" endline="160">isComplete</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sMaxX</definition>
+        <argsstring></argsstring>
+        <name>sMaxX</name>
+        <briefdescription>
+<para>Maximum x value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="81" column="18" bodyfile="data/measurement.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">addMaxXYZ</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sMaxY</definition>
+        <argsstring></argsstring>
+        <name>sMaxY</name>
+        <briefdescription>
+<para>Maximum y value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="83" column="18" bodyfile="data/measurement.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">addMaxXYZ</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sMaxZ</definition>
+        <argsstring></argsstring>
+        <name>sMaxZ</name>
+        <briefdescription>
+<para>Maximum z value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="85" column="18" bodyfile="data/measurement.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">addMaxXYZ</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double max_rms_z</definition>
+        <argsstring></argsstring>
+        <name>max_rms_z</name>
+        <briefdescription>
+<para>Maximun RMS value in z-direction of one train passing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="87" column="11" bodyfile="data/measurement.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">addRmsData</referencedby>
+        <referencedby refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" compoundref="measurement_8cpp" startline="127" endline="160">isComplete</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int16_t &gt;</type>
+        <definition>std::vector&lt;int16_t&gt; med_hit_cnt</definition>
+        <argsstring></argsstring>
+        <name>med_hit_cnt</name>
+        <briefdescription>
+<para>Vector to store medium hit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="91" column="17" bodyfile="data/measurement.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">addRmsData</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" compoundref="measurement_8cpp" startline="80" endline="90">MeasurementBuilder</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int16_t &gt;</type>
+        <definition>std::vector&lt;int16_t&gt; crit_hit_cnt</definition>
+        <argsstring></argsstring>
+        <name>crit_hit_cnt</name>
+        <briefdescription>
+<para>Vector to store critical hit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>flag, indicating that http_connector class is present in device SW </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="93" column="17" bodyfile="data/measurement.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">addRmsData</referencedby>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+        <referencedby refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" compoundref="measurement_8cpp" startline="80" endline="90">MeasurementBuilder</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_measurement_builder_1a068ba51d0a406a1d8d211bd264bdaa15" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool have_http_connector</definition>
+        <argsstring></argsstring>
+        <name>have_http_connector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="95" column="10" bodyfile="data/measurement.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">addRmsData</referencedby>
+        <referencedby refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" compoundref="measurement_8cpp" startline="80" endline="90">MeasurementBuilder</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeasurementBuilder</definition>
+        <argsstring>(bool have_http_connector=true)</argsstring>
+        <name>MeasurementBuilder</name>
+        <param>
+          <type>bool</type>
+          <declname>have_http_connector</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Metric builder constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>have_http_connector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indicationg if HTTP Connector is used (X1 devices) or not (MINI devices)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor reseves memory for 20 hit counter values in the vector variables med_hit_cnt and crit_hit_cnt. Finally the member fuction rset is called to clear the vectors med_hit_cnt and crit_hit_cnt and initialize variable payload (the measurement JSON string). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="48" column="14" bodyfile="data/measurement.cpp" bodystart="80" bodyend="90"/>
+        <references refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" compoundref="measurement_8h" startline="93">crit_hit_cnt</references>
+        <references refid="class_measurement_builder_1a068ba51d0a406a1d8d211bd264bdaa15" compoundref="measurement_8h" startline="95">have_http_connector</references>
+        <references refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" compoundref="measurement_8h" startline="91">med_hit_cnt</references>
+        <references refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a44940e3bb2340bc1c0c6120e664cd80f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MeasurementBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>~MeasurementBuilder</name>
+        <briefdescription>
+<para>Measurement builder destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="49" column="5" bodyfile="data/measurement.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a84e8a4a79512fab4189812987975ce35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addTemperature</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addTemperature</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append prepared measurement data to the measurement JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+According to the message type of the message one of the specific add functions of the class will be called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="53" column="10" bodyfile="data/measurement.cpp" bodystart="305" bodyend="326"/>
+        <references refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">addDispStatistics</references>
+        <references refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">addMaxXYZ</references>
+        <references refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">addRmsData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" compoundref="mpelem_8h" startline="135">eDispStatistics</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" compoundref="mpelem_8h" startline="79">eMaxXYZ</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addRmsData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addRmsData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append RMS data to measurement JSON string and store hit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref> and stored in private member variable <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>. The function calculate the highest RMS value of the complete measurement and store it in member variable max_rms_z. The hit counter for medium and critical hits will be appended to the vectors med_hit_cnt and crit_hit_cnt and the x, y and z RMS values will be appended to the measurement JSON string variable payload. In case it is the first measurement data the message header will be written in front of the first RMS entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="54" column="10" bodyfile="data/measurement.cpp" bodystart="177" bodyend="219"/>
+        <references refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" compoundref="measurement_8h" startline="93">crit_hit_cnt</references>
+        <references refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" compoundref="rms__store_8h" startline="47">adxl_rms_data::critical_hits</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa8417479d61dab4584c62a86300d1b36" compoundref="mpelem_8h" startline="136">eTimestamp</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_measurement_builder_1a068ba51d0a406a1d8d211bd264bdaa15" compoundref="measurement_8h" startline="95">have_http_connector</references>
+        <references refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" compoundref="measurement_8h" startline="87">max_rms_z</references>
+        <references refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" compoundref="measurement_8h" startline="91">med_hit_cnt</references>
+        <references refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" compoundref="rms__store_8h" startline="46">adxl_rms_data::medium_hits</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" compoundref="measurement_8h" startline="72">timestamp</references>
+        <references refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" compoundref="rms__store_8h" startline="42">adxl_rms_data::ts</references>
+        <references refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" compoundref="rms__store_8h" startline="43">adxl_rms_data::x</references>
+        <references refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" compoundref="rms__store_8h" startline="44">adxl_rms_data::y</references>
+        <references refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" compoundref="rms__store_8h" startline="45">adxl_rms_data::z</references>
+        <referencedby refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addDispStatistics</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addDispStatistics</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to store displacement statistic values in member string variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure stDispStatistics and stored in private member variable p. The variables in structure p will be converted to the member string variables sDispMin, sDispMax and sDispP2P by calling function SetFloatStrings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="55" column="10" bodyfile="data/measurement.cpp" bodystart="260" bodyend="270"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" compoundref="disptask_8h" startline="69">_stDispStatistics::max</references>
+        <references refid="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" compoundref="disptask_8h" startline="68">_stDispStatistics::min</references>
+        <references refid="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" compoundref="disptask_8h" startline="70">_stDispStatistics::p2p</references>
+        <references refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" compoundref="measurement_8h" startline="77">sDispMax</references>
+        <references refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" compoundref="measurement_8h" startline="75">sDispMin</references>
+        <references refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" compoundref="measurement_8h" startline="79">sDispP2P</references>
+        <references refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" compoundref="measurement_8cpp" startline="235" endline="246">SetFloatStrings</references>
+        <referencedby refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addMaxXYZ</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addMaxXYZ</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to store x, y and z maximum values in member string variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure <ref refid="struct_adxl__xyz__max__data" kindref="compound">Adxl_xyz_max_data</ref> and stored in private member variable p. The variables in structure p will be converted to the member string variables sMaxX, sMaxY and sMaxZ by calling function SetFloatStrings. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="56" column="10" bodyfile="data/measurement.cpp" bodystart="283" bodyend="294"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" compoundref="measurement_8cpp" startline="235" endline="246">SetFloatStrings</references>
+        <references refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" compoundref="measurement_8h" startline="81">sMaxX</references>
+        <references refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" compoundref="measurement_8h" startline="83">sMaxY</references>
+        <references refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" compoundref="measurement_8h" startline="85">sMaxZ</references>
+        <references refid="struct_adxl__xyz__max__data_1ad0da36b2558901e21e7a30f6c227a45e" compoundref="adxl__store_8h" startline="98">Adxl_xyz_max_data::x</references>
+        <references refid="struct_adxl__xyz__max__data_1aa4f0d3eebc3c443f9be81bf48561a217" compoundref="adxl__store_8h" startline="99">Adxl_xyz_max_data::y</references>
+        <references refid="struct_adxl__xyz__max__data_1af73583b1e980b0aa03f9884812e9fd4d" compoundref="adxl__store_8h" startline="100">Adxl_xyz_max_data::z</references>
+        <referencedby refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to finalize the measurement JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function append the medium hit counter in vector med_hit_cnt to private string variable payload, which represets the measurement JSON string. Afterwards it append the critical hit counter in vector crit_hit_cnt to private string variable payload, before appending the x, y and z maximum values and the displacement minimum, maximum and peak to peak statistic values to string variable payload. The metrics JSON string will be terminated with closing square and curly bracket. Finally member function print will be called to output the measurement JSON string with debug log level INFO. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="58" column="10" bodyfile="data/measurement.cpp" bodystart="341" bodyend="371"/>
+        <references refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" compoundref="measurement_8h" startline="93">crit_hit_cnt</references>
+        <references refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" compoundref="measurement_8h" startline="91">med_hit_cnt</references>
+        <references refid="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" compoundref="measurement_8cpp" startline="405" endline="407">print</references>
+        <references refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" compoundref="measurement_8h" startline="77">sDispMax</references>
+        <references refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" compoundref="measurement_8h" startline="75">sDispMin</references>
+        <references refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" compoundref="measurement_8h" startline="79">sDispP2P</references>
+        <references refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" compoundref="measurement_8h" startline="81">sMaxX</references>
+        <references refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" compoundref="measurement_8h" startline="83">sMaxY</references>
+        <references refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" compoundref="measurement_8h" startline="85">sMaxZ</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Function clear all private string variables related to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initialize member variable max_rms_z with 0, clear the vectors med_hit_cnt and crit_hit_cnt for medium and critical hit counter. Variable payload will be reinitializes with opening curly bracket and entry time_interval with fixed value of 1000 ms (1 sec) and variable timestamp will be initialized with an empty string. By call of function SetFloatStrings the variables sDispMin, sDispMax, sDispP2P and sMaxX, sMaxY, sMaxZ will be initialized with constant value VAL_NOT_INITIALIZED_FLOAT in string representation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="59" column="10" bodyfile="data/measurement.cpp" bodystart="422" bodyend="436"/>
+        <references refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" compoundref="measurement_8h" startline="93">crit_hit_cnt</references>
+        <references refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" compoundref="measurement_8h" startline="87">max_rms_z</references>
+        <references refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" compoundref="measurement_8h" startline="91">med_hit_cnt</references>
+        <references refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" compoundref="measurement_8h" startline="77">sDispMax</references>
+        <references refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" compoundref="measurement_8h" startline="75">sDispMin</references>
+        <references refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" compoundref="measurement_8h" startline="79">sDispP2P</references>
+        <references refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" compoundref="measurement_8cpp" startline="235" endline="246">SetFloatStrings</references>
+        <references refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" compoundref="measurement_8h" startline="81">sMaxX</references>
+        <references refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" compoundref="measurement_8h" startline="83">sMaxY</references>
+        <references refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" compoundref="measurement_8h" startline="85">sMaxZ</references>
+        <references refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" compoundref="measurement_8h" startline="72">timestamp</references>
+        <references refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" compoundref="config_8h" startline="154">VAL_NOT_INITIALIZED_FLOAT</references>
+        <referencedby refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" compoundref="measurement_8cpp" startline="80" endline="90">MeasurementBuilder</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isComplete</definition>
+        <argsstring>(bool disp_mode_off, double rmsZThres)</argsstring>
+        <name>isComplete</name>
+        <param>
+          <type>bool</type>
+          <declname>disp_mode_off</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rmsZThres</declname>
+        </param>
+        <briefdescription>
+<para>isComplete function to check if the measurement JSON string is completely filled </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disp_mode_off</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indication if displacement calculation is disabled </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rmsZThres</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Activation threshold for displacement calculation and raw / displacement data transmission</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns true if measurement JSON string is complete, false otherwise</para>
+</simplesect>
+The function checks if displacement calculation is disabled, flag disp_mode_off is true or maximum RMS z value is lower or equal to RMS z threshold. In this case it checks if the size of measurement JSON string is greater than 30 bytes. If size is greater it is ensured, that at least one measurement entry is present and the function returns true indicating, that JSON string is completely filled. If displacement calculation is enabled the function compairs the content of the string sDispP2P with the string sVal, which contains the value of the VAL_NOT_INITIALIZED_FLOAT constant. If the strings are equal, the displacement calculation is still ongoing and the function returns false. If the strings are not equal, the displacement values are still calculated and stored in measurement JSON string and the function returns true indicating, that JSON string is completely filled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="61" column="10" bodyfile="data/measurement.cpp" bodystart="127" bodyend="160"/>
+        <references refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" compoundref="measurement_8h" startline="87">max_rms_z</references>
+        <references refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" compoundref="measurement_8h" startline="79">sDispP2P</references>
+        <references refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" compoundref="config_8h" startline="154">VAL_NOT_INITIALIZED_FLOAT</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print</definition>
+        <argsstring>(void)</argsstring>
+        <name>print</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to print the measurement JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function print the measurement JSON string with debug log level INFO. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="62" column="10" bodyfile="data/measurement.cpp" bodystart="405" bodyend="407"/>
+        <referencedby refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; getPayload</definition>
+        <argsstring>(void)</argsstring>
+        <name>getPayload</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the measurement JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the private string variable payload</para>
+</simplesect>
+The function returns the private string variable payload, which represents the measurement JSON string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="63" column="23" bodyfile="data/measurement.cpp" bodystart="381" bodyend="384"/>
+        <references refid="class_measurement_builder_1aa74c818d418e097e25db7ec7b9320470" compoundref="measurement_8h" startline="71">payload</references>
+        <referencedby refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">DataManager::publishMeasurements</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a743e623dd2220526009eb3783461c1ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; getTimestamp</definition>
+        <argsstring>(void)</argsstring>
+        <name>getTimestamp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the timestamp of measurement JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the private string variable timestamp</para>
+</simplesect>
+The function returns the private string variable timestamp, which represents the time of sending measurement JSON string. This timestamp will be inserted by HTTP connector class in raw and displacement data header. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="64" column="23" bodyfile="data/measurement.cpp" bodystart="395" bodyend="398"/>
+        <references refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" compoundref="measurement_8h" startline="72">timestamp</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_measurement_builder_1ad98bc3482659941d4a4be816fb76c0f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MeasurementBuilder</definition>
+        <argsstring>(const MeasurementBuilder &amp;)=delete</argsstring>
+        <name>MeasurementBuilder</name>
+        <param>
+          <type>const <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="67" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1a27d140d957b62a533149129405997041" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> &amp;</type>
+        <definition>MeasurementBuilder&amp; operator=</definition>
+        <argsstring>(const MeasurementBuilder &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="68" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetFloatStrings</definition>
+        <argsstring>(std::string &amp;s1, std::string &amp;s2, std::string &amp;s3, double val1, double val2, double val3)</argsstring>
+        <name>SetFloatStrings</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s2</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s3</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val3</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to convert three double values to strings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to first string variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to second string variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to third string variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First double value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second double value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third double value</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The three double values will be converted to char string by calling function snprintf and the char strings will be assiged to the std strings s1, s2 and s3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/measurement.h" line="97" column="10" bodyfile="data/measurement.cpp" bodystart="235" bodyend="246"/>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">addDispStatistics</referencedby>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">addMaxXYZ</referencedby>
+        <referencedby refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">reset</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Measurement builder helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The measurement builder helper class provides methods to create the measurement JSON string, which will be send via LTE with topic /device/<emphasis>DEVICE_ID</emphasis>/measurement/update to the MQTT broker. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>MeasurementBuilder</label>
+        <link refid="class_measurement_builder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-max_rms_z</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-have_http_connector</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-payload</edgelabel>
+          <edgelabel>-sDispMax</edgelabel>
+          <edgelabel>-sDispMin</edgelabel>
+          <edgelabel>-sDispP2P</edgelabel>
+          <edgelabel>-sMaxX</edgelabel>
+          <edgelabel>-sMaxY</edgelabel>
+          <edgelabel>-sMaxZ</edgelabel>
+          <edgelabel>-timestamp</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-crit_hit_cnt</edgelabel>
+          <edgelabel>-med_hit_cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>vector&lt; int16_t &gt;</label>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/measurement.h" line="46" column="1" bodyfile="data/measurement.h" bodystart="46" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>add</name></member>
+      <member refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>addDispStatistics</name></member>
+      <member refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>addMaxXYZ</name></member>
+      <member refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>addRmsData</name></member>
+      <member refid="class_measurement_builder_1a84e8a4a79512fab4189812987975ce35" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>addTemperature</name></member>
+      <member refid="class_measurement_builder_1a4b30babb9e76f1e437242113908aee94" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>crit_hit_cnt</name></member>
+      <member refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>finalize</name></member>
+      <member refid="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>getPayload</name></member>
+      <member refid="class_measurement_builder_1a743e623dd2220526009eb3783461c1ad" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>getTimestamp</name></member>
+      <member refid="class_measurement_builder_1a068ba51d0a406a1d8d211bd264bdaa15" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>have_http_connector</name></member>
+      <member refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>isComplete</name></member>
+      <member refid="class_measurement_builder_1a6197121ef91dd32a587fdda4a4eb05f3" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>max_rms_z</name></member>
+      <member refid="class_measurement_builder_1aef73108e61d194cf55b9c296846e5bd8" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>MeasurementBuilder</name></member>
+      <member refid="class_measurement_builder_1ad98bc3482659941d4a4be816fb76c0f6" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>MeasurementBuilder</name></member>
+      <member refid="class_measurement_builder_1ac16014feff89297e1080a1c42dbdcd26" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>med_hit_cnt</name></member>
+      <member refid="class_measurement_builder_1a27d140d957b62a533149129405997041" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>operator=</name></member>
+      <member refid="class_measurement_builder_1aa74c818d418e097e25db7ec7b9320470" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>payload</name></member>
+      <member refid="class_measurement_builder_1a7e8442e7139d840c15bdee83789f7ae8" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>print</name></member>
+      <member refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>reset</name></member>
+      <member refid="class_measurement_builder_1a46c6960d3e055728e9d6349c8ef20bdc" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>sDispMax</name></member>
+      <member refid="class_measurement_builder_1a7dbced3e1445844ffa8ef217991aeb24" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>sDispMin</name></member>
+      <member refid="class_measurement_builder_1a98b3aa88fc6db557e936554a922d1da4" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>sDispP2P</name></member>
+      <member refid="class_measurement_builder_1af888c7ef2d46bc2ee997ef2762e41f22" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>SetFloatStrings</name></member>
+      <member refid="class_measurement_builder_1af17388f1f2458b8f2bac37024d2bb79f" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>sMaxX</name></member>
+      <member refid="class_measurement_builder_1a8112c2507d5545bbebf74d4d427f05e4" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>sMaxY</name></member>
+      <member refid="class_measurement_builder_1a8f27964742cef6b01dce81207249d31f" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>sMaxZ</name></member>
+      <member refid="class_measurement_builder_1a4695019b9f8d66ac44aaf8901a219259" prot="private" virt="non-virtual"><scope>MeasurementBuilder</scope><name>timestamp</name></member>
+      <member refid="class_measurement_builder_1a44940e3bb2340bc1c0c6120e664cd80f" prot="public" virt="non-virtual"><scope>MeasurementBuilder</scope><name>~MeasurementBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

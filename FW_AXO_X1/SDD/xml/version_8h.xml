@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="version_8h" kind="file" language="C++">
+    <compoundname>version.h</compoundname>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="version_8cpp" local="yes">version.cpp</includedby>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="1">
+        <label>version.h</label>
+        <link refid="version_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>version.cpp</label>
+        <link refid="version_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="version_8h_1a4b00c0a09807f51f932d82cf52dd74f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* getFwVersion</definition>
+        <argsstring>()</argsstring>
+        <name>getFwVersion</name>
+        <briefdescription>
+<para>Getter function to retrieve the software version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the software version string</para>
+</simplesect>
+Getter function to retrieve the software version. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="version.h" line="26" column="12" bodyfile="version.cpp" bodystart="37" bodyend="37" declfile="version.h" declline="26" declcolumn="12"/>
+        <references refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" compoundref="version_8cpp" startline="27">fwVersion</references>
+        <referencedby refid="version_8cpp_1a9d51f4546518b310ff52a88fc3da7ba8" compoundref="version_8cpp" startline="45" endline="47">displayFwVersion</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">MetricsBuilder::finalize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="version_8h_1a9d51f4546518b310ff52a88fc3da7ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void</type>
+        <definition>const void displayFwVersion</definition>
+        <argsstring>()</argsstring>
+        <name>displayFwVersion</name>
+        <briefdescription>
+<para>Function to display the firmware version in Debug Mode at Startup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Display Fimrware version at Startup in Debug Mode (Debug-Level = WRN) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="version.h" line="27" column="12" bodyfile="version.cpp" bodystart="45" bodyend="47" declfile="version.h" declline="27" declcolumn="12"/>
+        <references refid="version_8cpp_1a4b00c0a09807f51f932d82cf52dd74f9" compoundref="version_8cpp" startline="37" endline="37">getFwVersion</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of software version management. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="version_8h_1version"/> <simplesect kind="par"><title>Detailed Description </title><para>This file provides a getter function to retrieve the software version and a function to display the software version at startup im debug mode</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_SRC_UTIL_VERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_SRC_UTIL_VERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="version_8h_1a4b00c0a09807f51f932d82cf52dd74f9" kindref="member">getFwVersion</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="version_8h_1a9d51f4546518b310ff52a88fc3da7ba8" kindref="member">displayFwVersion</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_SRC_UTIL_VERSION_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="version.h"/>
+  </compounddef>
+</doxygen>

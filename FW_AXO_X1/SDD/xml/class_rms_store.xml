@@ -1,0 +1,522 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_rms_store" kind="class" language="C++" prot="public">
+    <compoundname>RmsStore</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="rms__store_8h" local="no">rms_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rms_store_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the RMS storage task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="80" column="10" bodyfile="data/rms_store.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_rms_store_1afa16a4250cde665dfc713e95e1c42f15" compoundref="rms__store_8cpp" startline="45" endline="58">RmsStore</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rms_store_1af02a66a66e4cc731ea35a9b296849728" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+<para>Store RMS and hit values for &apos;capacity&apos; seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="92" column="13" bodyfile="data/rms_store.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool full</definition>
+        <argsstring></argsstring>
+        <name>full</name>
+        <briefdescription>
+<para>Flag indicating, that the reserved memory is full. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="93" column="10" bodyfile="data/rms_store.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_rms_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="rms__store_8cpp" startline="125" endline="129">reset</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">store</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_store_1a97808a9870039f4168da10ecfb5dc472" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool idle</definition>
+        <argsstring></argsstring>
+        <name>idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating, that no data has been received for more than 1 second </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="94" column="10" bodyfile="data/rms_store.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref> &gt;</type>
+        <definition>std::vector&lt;adxl_rms_data&gt; v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+<para>The reserved memory, a vector of type struct <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="97" column="9" bodyfile="data/rms_store.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">dump</referencedby>
+        <referencedby refid="class_rms_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="rms__store_8cpp" startline="96" endline="101">dumpAll</referencedby>
+        <referencedby refid="class_rms_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="rms__store_8cpp" startline="125" endline="129">reset</referencedby>
+        <referencedby refid="class_rms_store_1afa16a4250cde665dfc713e95e1c42f15" compoundref="rms__store_8cpp" startline="45" endline="58">RmsStore</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">store</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rms_store_1afa16a4250cde665dfc713e95e1c42f15" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RmsStore</definition>
+        <argsstring>(const char *name=&quot;??&quot;, uint8_t num_seconds=10)</argsstring>
+        <name>RmsStore</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>num_seconds</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>RMS storage task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds the memory shall be reserved for</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor initializes the member variables capacity with parameter num_seconds, full with false and idle with true. It allocate and register a mailbox and reserve num_seconds entries for storing the data in vector v by calling vector class method reserve. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="77" column="14" bodyfile="data/rms_store.cpp" bodystart="45" bodyend="58"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a404cc0223d699ca876c05973ede3b2ad" compoundref="mbox_8h" startline="77">Mbox::eRmsStore</references>
+        <references refid="class_rms_store_1af2570dd7bace0312470d962f29359fb3" compoundref="rms__store_8h" startline="80">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" compoundref="rms__store_8h" startline="97">v</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_store_1a40afaaa2eee41d88770af83f136004a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~RmsStore</definition>
+        <argsstring>()</argsstring>
+        <name>~RmsStore</name>
+        <briefdescription>
+<para>RMS storage task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="78" column="13" bodyfile="data/rms_store.cpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void) override</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>RMS storage task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function directly enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eAdxl37xRmsData: If RMS storage task is in idle state, indicated by flag idle, flag idle is set to false and stored data will be deleted by calling member function reset. Afterwards the received data will be extracted from messages payload into structure of type struct <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref> and stored in vector by calling member function store. If the vector was not full, indicated by flag full, the data will be forwarded as it is to the data manager task and the pointer to message pElem is set to 0 to prevent releasing the message back to the pool.</para>
+</listitem><listitem><para>eAdxl37xIdle: The flag idle will be set to true and the last entry of the currently stored data will be printed out by call of member function dump.</para>
+</listitem><listitem><para>eRmsReport: The message will be forwarded as it is to the data manager task and the pointer to message pElem is set to 0 to prevent releasing the message back to the pool.</para>
+</listitem><listitem><para>eAdxlStorageDumpAll: All currently stored data will be printed out by call of member function dumpAll. <linebreak/>
+ <linebreak/>
+ For more details see also message sequence charts in section <ref refid="_m_s_c_1SectionMeasurement" kindref="member">Measurement</ref> </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="79" column="10" bodyfile="data/rms_store.cpp" bodystart="159" bodyend="217"/>
+        <references refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">dump</references>
+        <references refid="class_rms_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="rms__store_8cpp" startline="96" endline="101">dumpAll</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" compoundref="mpelem_8h" startline="65">eAdxl37xIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" compoundref="mpelem_8h" startline="68">eAdxlStorageDumpAll</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" compoundref="mbox_8h" startline="82">Mbox::eDataManager</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" compoundref="mbox_8h" startline="70">Mbox::eHttpConnector</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f2350e47b38b05b74e3b66e4ba1353d" compoundref="mpelem_8h" startline="108">eRmsReport</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="rms__store_8h" startline="93">full</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_rms_store_1a97808a9870039f4168da10ecfb5dc472" compoundref="rms__store_8h" startline="94">idle</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_rms_store_1af2570dd7bace0312470d962f29359fb3" compoundref="rms__store_8h" startline="80">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_rms_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="rms__store_8cpp" startline="125" endline="129">reset</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">store</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void store</definition>
+        <argsstring>(const adxl_rms_data &amp;src)</argsstring>
+        <name>store</name>
+        <param>
+          <type>const <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Function to store data of type struct <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to be stored of type struct <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function checks, if vector v is still full, in this case flag full is set to true and the function returns immediately. Oterwise the data will be stored in vector v by calling vector class method push_back. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="82" column="10" bodyfile="data/rms_store.cpp" bodystart="77" bodyend="89"/>
+        <references refid="class_rms_store_1af02a66a66e4cc731ea35a9b296849728" compoundref="rms__store_8h" startline="92">capacity</references>
+        <references refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" compoundref="rms__store_8h" startline="47">adxl_rms_data::critical_hits</references>
+        <references refid="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="rms__store_8h" startline="93">full</references>
+        <references refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" compoundref="rms__store_8h" startline="46">adxl_rms_data::medium_hits</references>
+        <references refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" compoundref="rms__store_8h" startline="97">v</references>
+        <references refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" compoundref="rms__store_8h" startline="43">adxl_rms_data::x</references>
+        <references refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" compoundref="rms__store_8h" startline="44">adxl_rms_data::y</references>
+        <references refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" compoundref="rms__store_8h" startline="45">adxl_rms_data::z</references>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <briefdescription>
+<para>Function to print out last stored data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>If vector v is empty, the function returns immediately, otherwise it prints out the last stored data in vector v of type struct <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="83" column="10" bodyfile="data/rms_store.cpp" bodystart="109" bodyend="117"/>
+        <references refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" compoundref="rms__store_8h" startline="47">adxl_rms_data::critical_hits</references>
+        <references refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" compoundref="rms__store_8h" startline="46">adxl_rms_data::medium_hits</references>
+        <references refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" compoundref="rms__store_8h" startline="97">v</references>
+        <references refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" compoundref="rms__store_8h" startline="43">adxl_rms_data::x</references>
+        <references refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" compoundref="rms__store_8h" startline="44">adxl_rms_data::y</references>
+        <references refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" compoundref="rms__store_8h" startline="45">adxl_rms_data::z</references>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dumpAll</definition>
+        <argsstring>()</argsstring>
+        <name>dumpAll</name>
+        <briefdescription>
+<para>Function to print out stored data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function prints out all the stored data in vector v. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="84" column="10" bodyfile="data/rms_store.cpp" bodystart="96" bodyend="101"/>
+        <references refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" compoundref="rms__store_8h" startline="97">v</references>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_store_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Function to delete the stored data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function deletes all the stored data in vector v by calling vector class method clear. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="85" column="10" bodyfile="data/rms_store.cpp" bodystart="125" bodyend="129"/>
+        <references refid="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="rms__store_8h" startline="93">full</references>
+        <references refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" compoundref="rms__store_8h" startline="97">v</references>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_rms_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shell_dump</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>shell_dump</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;r&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function request a message from message pool, set message type to eAdxlStorageDumpAll, set eMain as sender and send message to RMS storage mailbox. <simplesect kind="note"><para>For testing only: trigger dump via shell command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="88" column="16" bodyfile="data/rms_store.cpp" bodystart="226" bodyend="236"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" compoundref="mpelem_8h" startline="68">eAdxlStorageDumpAll</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rms_store_1a95d0a61deece2b257cb009beb7a0296f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RmsStore</definition>
+        <argsstring>()=delete</argsstring>
+        <name>RmsStore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="91" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_rms_store" kindref="compound">RmsStore</ref> class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The RMS storage class is responsible to store the received RMS and hit values from RMS task and to forward them to the data manager task. On receiving a RMS report request from power manager task, the request shall be also forwarded to the data manager task. The RMS storage class provides a store and reset method and methods to print out the data for testing purposes. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>RMS task</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem><listitem><para>RMS storage (self, callback function for shell command &apos;r&apos;)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Data manager task</para>
+</listitem><listitem><para>RMS storage (self, callback function for shell command &apos;r&apos;) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RmsStore</label>
+        <link refid="class_rms_store"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RmsStore</label>
+        <link refid="class_rms_store"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-v</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-full</edgelabel>
+          <edgelabel>-idle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-capacity</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="9">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="10">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="11">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vector&lt; adxl_rms_data &gt;</label>
+      </node>
+      <node id="8">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/rms_store.h" line="74" column="1" bodyfile="data/rms_store.h" bodystart="74" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_rms_store_1af02a66a66e4cc731ea35a9b296849728" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>capacity</name></member>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>RmsStore</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>create</name></member>
+      <member refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>dump</name></member>
+      <member refid="class_rms_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>dumpAll</name></member>
+      <member refid="class_rms_store_1a19f31d9744c12503a9cbdaa1fd3a9848" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>full</name></member>
+      <member refid="class_rms_store_1a97808a9870039f4168da10ecfb5dc472" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>idle</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>RmsStore</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>RmsStore</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>operator=</name></member>
+      <member refid="class_rms_store_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>pInMbox</name></member>
+      <member refid="class_rms_store_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>reset</name></member>
+      <member refid="class_rms_store_1afa16a4250cde665dfc713e95e1c42f15" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>RmsStore</name></member>
+      <member refid="class_rms_store_1a95d0a61deece2b257cb009beb7a0296f" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>RmsStore</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>setId</name></member>
+      <member refid="class_rms_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>shell_dump</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>start</name></member>
+      <member refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>store</name></member>
+      <member refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" prot="public" virt="virtual"><scope>RmsStore</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>RmsStore</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>RmsStore</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>RmsStore</scope><name>tid</name></member>
+      <member refid="class_rms_store_1adabe479449e9babc2a96e5d7b895cbaa" prot="private" virt="non-virtual"><scope>RmsStore</scope><name>v</name></member>
+      <member refid="class_rms_store_1a40afaaa2eee41d88770af83f136004a6" prot="public" virt="virtual"><scope>RmsStore</scope><name>~RmsStore</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>RmsStore</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

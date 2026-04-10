@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_hash" kind="class" language="C++" prot="public">
+    <compoundname>Hash</compoundname>
+    <includes refid="hash_8h" local="no">hash.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hash_1ac20a57823cce14ef73019e401acae3be" prot="private" static="no" mutable="no">
+        <type>mbedtls_sha256_context</type>
+        <definition>mbedtls_sha256_context sha_ctx</definition>
+        <argsstring></argsstring>
+        <name>sha_ctx</name>
+        <briefdescription>
+<para>Context for SHA256 calculation <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="84" column="28" bodyfile="util/hash.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="class_hash_1a32d626626eee0bc4ade146973f6abb1c" compoundref="hash_8cpp" startline="105" endline="116">finalize</referencedby>
+        <referencedby refid="class_hash_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="hash_8cpp" startline="65" endline="75">init</referencedby>
+        <referencedby refid="class_hash_1aab35e0dc9a227b6e04900a79a0e61e4c" compoundref="hash_8cpp" startline="86" endline="94">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hash_1a415b494d0da72d5fd3752ec42dba9ad5" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t hash[SHA_HASH_SIZE]</definition>
+        <argsstring>[SHA_HASH_SIZE]</argsstring>
+        <name>hash</name>
+        <briefdescription>
+<para>The calculated SHA1 or SHA256 checksum. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="87" column="13" bodyfile="util/hash.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_hash_1a32d626626eee0bc4ade146973f6abb1c" compoundref="hash_8cpp" startline="105" endline="116">finalize</referencedby>
+        <referencedby refid="class_hash_1aed0418757092adfbf7c56758b190cf0e" compoundref="hash_8cpp" startline="141" endline="143">getHash</referencedby>
+        <referencedby refid="class_hash_1a388f572c62279f839ee138a9afbdeeb5" compoundref="hash_8cpp" startline="125" endline="131">print</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hash_1a61eb0a4fd618a50962a699397586d181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Hash</definition>
+        <argsstring>()</argsstring>
+        <name>~Hash</name>
+        <briefdescription>
+<para><ref refid="class_hash" kindref="compound">Hash</ref> class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="66" column="5" bodyfile="util/hash.cpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The init function to start SHA checksum calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function starts the SHA checksum calculation with call of the functions mbedtls_sha1_init and mbedtls_sha1_starts or mbedtls_sha256_init and mbedtls_sha256_starts provided by mbedtls crypto library with SHA context variable sha_ctx. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="70" column="10" bodyfile="util/hash.cpp" bodystart="65" bodyend="75"/>
+        <references refid="class_hash_1ac20a57823cce14ef73019e401acae3be" compoundref="hash_8h" startline="84">sha_ctx</references>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">HttpConnector::StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_1aab35e0dc9a227b6e04900a79a0e61e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void update</definition>
+        <argsstring>(uint8_t *pBuf, size_t len)</argsstring>
+        <name>update</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pBuf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>The update function of SHA1 checksum calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBuf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data buffer in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The SHA1 checksum will be updated with the data in input buffer pBuf with length len by calling function mbedtls_sha1_update provided by mbedtls crypto library. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="71" column="10" bodyfile="util/hash.cpp" bodystart="86" bodyend="94"/>
+        <references refid="class_hash_1ac20a57823cce14ef73019e401acae3be" compoundref="hash_8h" startline="84">sha_ctx</references>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HttpConnector::HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">HttpConnector::StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_1a32d626626eee0bc4ade146973f6abb1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void finalize</definition>
+        <argsstring>()</argsstring>
+        <name>finalize</name>
+        <briefdescription>
+<para>Function to finalize SHA1 checksum calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the hash will be cleared with call of funtion memset. Afterwards the SHA1 hash checksum will be finalized by calling function mbedtls_sha1_finish and the context variable sha1_ctx will be released by call of function mbedtls_sha1_free, both provided by mbedtls crypto library. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="72" column="10" bodyfile="util/hash.cpp" bodystart="105" bodyend="116"/>
+        <references refid="class_hash_1a415b494d0da72d5fd3752ec42dba9ad5" compoundref="hash_8h" startline="87">hash</references>
+        <references refid="class_hash_1ac20a57823cce14ef73019e401acae3be" compoundref="hash_8h" startline="84">sha_ctx</references>
+        <references refid="hash_8h_1ab5d5090e6ee6aa9ac00d798cf84887af" compoundref="hash_8h" startline="51">SHA_HASH_SIZE</references>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HttpConnector::HandleRcvdData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_1a388f572c62279f839ee138a9afbdeeb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print</definition>
+        <argsstring>()</argsstring>
+        <name>print</name>
+        <briefdescription>
+<para>Function to print the SHA1 checksum at terminal window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function transform the binary hash value into a character array by calling function bin2hex, add the terminating zero and print the string with debug message at debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="73" column="10" bodyfile="util/hash.cpp" bodystart="125" bodyend="131"/>
+        <references refid="class_hash_1a415b494d0da72d5fd3752ec42dba9ad5" compoundref="hash_8h" startline="87">hash</references>
+        <references refid="hash_8h_1ab5d5090e6ee6aa9ac00d798cf84887af" compoundref="hash_8h" startline="51">SHA_HASH_SIZE</references>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HttpConnector::HandleRcvdData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_1aed0418757092adfbf7c56758b190cf0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t * getHash</definition>
+        <argsstring>()</argsstring>
+        <name>getHash</name>
+        <briefdescription>
+<para>Getter function to retrieve the hash checksum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the calculated SHA checksum</para>
+</simplesect>
+The function returns the calculated SHA checksum </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="75" column="13" bodyfile="util/hash.cpp" bodystart="141" bodyend="143"/>
+        <references refid="class_hash_1a415b494d0da72d5fd3752ec42dba9ad5" compoundref="hash_8h" startline="87">hash</references>
+      </memberdef>
+      <memberdef kind="function" id="class_hash_1a1a7a3a7f1908b7d0b1beced37930877e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t getHashLen</definition>
+        <argsstring>()</argsstring>
+        <name>getHashLen</name>
+        <briefdescription>
+<para>Getter function to retrieve the hash checksum length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the length of the SHA checksum</para>
+</simplesect>
+The function returns the length of the SHA checksum </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="76" column="14" bodyfile="util/hash.cpp" bodystart="152" bodyend="154"/>
+        <references refid="hash_8h_1ab5d5090e6ee6aa9ac00d798cf84887af" compoundref="hash_8h" startline="51">SHA_HASH_SIZE</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_hash_1ab692cd219fad2ef5a612e06aa4b32c1b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_hash" kindref="compound">Hash</ref> *</type>
+        <definition>Hash * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="68" column="17" bodyfile="util/hash.cpp" bodystart="36" bodyend="40"/>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HttpConnector::HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">HttpConnector::StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_hash_1a7d97a81e3e1f24c0b1785ac1c1d193e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Hash</definition>
+        <argsstring>()</argsstring>
+        <name>Hash</name>
+        <briefdescription>
+<para><ref refid="class_hash" kindref="compound">Hash</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/hash.h" line="79" column="5" bodyfile="util/hash.cpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_hash" kindref="compound">Hash</ref> class to calculate SHA1 or SHA256 checksum implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para>The <ref refid="class_hash" kindref="compound">Hash</ref> class provides methods to init, updata and finalize a SHA1 or SHA256 hash checksum. Furthermore getter functions to retrieve calculated hash checksum and their length and a method to print out the checksum as string in a terminal window. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>mbedtls_sha256_context</label>
+      </node>
+      <node id="2">
+        <label>uint8_t</label>
+      </node>
+      <node id="1">
+        <label>Hash</label>
+        <link refid="class_hash"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-hash</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-sha_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="util/hash.h" line="64" column="1" bodyfile="util/hash.h" bodystart="64" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_hash_1a32d626626eee0bc4ade146973f6abb1c" prot="public" virt="non-virtual"><scope>Hash</scope><name>finalize</name></member>
+      <member refid="class_hash_1aed0418757092adfbf7c56758b190cf0e" prot="public" virt="non-virtual"><scope>Hash</scope><name>getHash</name></member>
+      <member refid="class_hash_1a1a7a3a7f1908b7d0b1beced37930877e" prot="public" virt="non-virtual"><scope>Hash</scope><name>getHashLen</name></member>
+      <member refid="class_hash_1a415b494d0da72d5fd3752ec42dba9ad5" prot="private" virt="non-virtual"><scope>Hash</scope><name>hash</name></member>
+      <member refid="class_hash_1a7d97a81e3e1f24c0b1785ac1c1d193e8" prot="private" virt="non-virtual"><scope>Hash</scope><name>Hash</name></member>
+      <member refid="class_hash_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>Hash</scope><name>init</name></member>
+      <member refid="class_hash_1ab692cd219fad2ef5a612e06aa4b32c1b" prot="public" virt="non-virtual"><scope>Hash</scope><name>inst</name></member>
+      <member refid="class_hash_1a388f572c62279f839ee138a9afbdeeb5" prot="public" virt="non-virtual"><scope>Hash</scope><name>print</name></member>
+      <member refid="class_hash_1ac20a57823cce14ef73019e401acae3be" prot="private" virt="non-virtual"><scope>Hash</scope><name>sha_ctx</name></member>
+      <member refid="class_hash_1aab35e0dc9a227b6e04900a79a0e61e4c" prot="public" virt="non-virtual"><scope>Hash</scope><name>update</name></member>
+      <member refid="class_hash_1a61eb0a4fd618a50962a699397586d181" prot="public" virt="non-virtual"><scope>Hash</scope><name>~Hash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

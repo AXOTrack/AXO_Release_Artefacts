@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mpool_8cpp" kind="file" language="C++">
+    <compoundname>mpool.cpp</compoundname>
+    <includes refid="mpool_8h" local="yes">rtos/mpool.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includes refid="mempool_8h" local="yes">rtos/mempool.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="mutex_8h" local="yes">rtos/mutex.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="4">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="10">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>rtos/mpool.cpp</label>
+        <link refid="mpool_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="2">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mpool_8cpp_1a6730345f454fc9ba5e35456667c6d8e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(mpool, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>mpool</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpool.cpp" line="31" column="1" declfile="rtos/mpool.cpp" declline="31" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of of <ref refid="class_msg_pool" kindref="compound">MsgPool</ref> class for message allocation support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpool_8h" kindref="compound">rtos/mpool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mempool_8h" kindref="compound">rtos/mempool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mutex_8h" kindref="compound">rtos/mutex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="mpool_8cpp_1a6730345f454fc9ba5e35456667c6d8e5" refkind="member"><highlight class="normal"><ref refid="mpool_8cpp_1a6730345f454fc9ba5e35456667c6d8e5" kindref="member">LOG_MODULE_REGISTER</ref>(mpool,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_msg_pool_1a540945db23d0ff1aa2d8e881e94b25a4" refkind="member"><highlight class="normal"><ref refid="class_msg_pool_1a540945db23d0ff1aa2d8e881e94b25a4" kindref="member">MsgPool::MsgPool</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;MsgPool::MsgPool<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_msg_pool_1a0f3b9b311f9b443feb3be08fd773e2e3" refkind="member"><highlight class="normal"><ref refid="class_msg_pool_1a0f3b9b311f9b443feb3be08fd773e2e3" kindref="member">MsgPool::~MsgPool</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;MsgPool::~MsgPool<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" refkind="member"><highlight class="normal"><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/><ref refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" kindref="member">MsgPool::getNewElem</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" kindref="member">getNewElem</ref>(0);<sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" refkind="member"><highlight class="normal"><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/><ref refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" kindref="member">MsgPool::getNewElem</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minSize)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;MsgPool::getNewElem<sp/>this:<sp/>%p<sp/>minSize:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>minSize);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(minSize<sp/>&lt;=<sp/>1024);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscoped__lock" kindref="compound">scoped_lock</ref><sp/>mylock(&amp;<ref refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" kindref="member">lock</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>p<sp/>=<sp/><ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>++num_elements;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minSize<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minSize<sp/>&lt;=<sp/>32)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>p-&gt;buf<sp/>=<sp/>(uint8_t(*)[])buf32Pool.alloc();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref><sp/>=(uint8_t<sp/>(*)[<ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">PoolElem::maxAlloc</ref>])<ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref><sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minSize<sp/>&lt;=<sp/>128)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>p-&gt;buf<sp/>=<sp/>(uint8_t(*)[])buf128Pool.alloc();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref><sp/>=<sp/>(uint8_t<sp/>(*)[<ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">PoolElem::maxAlloc</ref>])<ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref><sp/>=<sp/>128;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minSize<sp/>&lt;=<sp/>256)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>p-&gt;buf<sp/>=<sp/>(uint8_t(*)[])buf256Pool.alloc();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref><sp/>=<sp/>(uint8_t<sp/>(*)[<ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">PoolElem::maxAlloc</ref>])<ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref><sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minSize<sp/>&lt;=<sp/>512)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>p-&gt;buf<sp/>=<sp/>(uint8_t(*)[])buf512Pool.alloc();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref><sp/>=<sp/>(uint8_t<sp/>(*)[<ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">PoolElem::maxAlloc</ref>])<ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref><sp/>=<sp/>512;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(minSize<sp/>&lt;=<sp/>1024)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>p-&gt;buf<sp/>=<sp/>(uint8_t(*)[])buf1024Pool.alloc();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref><sp/>=<sp/>(uint8_t<sp/>(*)[<ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">PoolElem::maxAlloc</ref>])<ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref><sp/>=<sp/>1024;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" kindref="member">dataLen</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" kindref="member">pool</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>p-&gt;<ref refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" kindref="member">inPool</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" kindref="member">MsgPool::freeElem</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>elem)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(elem);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;MsgPool::freeElem<sp/>this:<sp/>%p<sp/>inPool:<sp/>%d<sp/>bufLen:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem-&gt;<ref refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" kindref="member">inPool</ref>,<sp/>elem-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscoped__lock" kindref="compound">scoped_lock</ref><sp/>mylock(&amp;<ref refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" kindref="member">lock</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(!elem-&gt;<ref refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" kindref="member">inPool</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(elem-&gt;<ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>32:</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>128:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>256:</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>512:</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1024:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(elem-&gt;<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(1<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(elem);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>elem-&gt;<ref refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" kindref="member">inPool</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--num_elements;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">MsgPool::stats</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MsgPool::stats&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" refkind="member"><highlight class="normal"><ref refid="class_msg_pool" kindref="compound">MsgPool</ref>*<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;MsgPool::inst&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_msg_pool" kindref="compound">MsgPool</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;myInstance;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">MsgPool::size</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint16_t)<ref refid="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" kindref="member">max_elements</ref>;<sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" kindref="member">MsgPool::used</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint16_t)<ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>();<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="class_msg_pool_1a371b26884552759e7161090fea883e00" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1a371b26884552759e7161090fea883e00" kindref="member">MsgPool::maxused</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint16_t)<ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>();<sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" kindref="member">MsgPool::available</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint16_t)(<ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>()<sp/>-<sp/><ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>());<sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" kindref="member">MsgPool::bufpool_size</ref>(uint16_t<sp/>size)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>rc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1<sp/>...<sp/>32:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>();<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>33<sp/>...<sp/>128:<sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>129<sp/>...<sp/>256:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>257<sp/>...<sp/>512:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>513<sp/>...<sp/>1024:<sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;MsgPool::bufpool_size<sp/>-<sp/>Invalid<sp/>size:<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc;<sp/><sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" kindref="member">MsgPool::bufpool_used</ref>(uint16_t<sp/>size)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>rc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" kindref="member">used</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1<sp/>...<sp/>32:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>();<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>33<sp/>...<sp/>128:<sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>129<sp/>...<sp/>256:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>257<sp/>...<sp/>512:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>513<sp/>...<sp/>1024:<sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;MsgPool::bufpool_used<sp/>-<sp/>Invalid<sp/>size:<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc;<sp/><sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" kindref="member">MsgPool::bufpool_maxused</ref>(uint16_t<sp/>size)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>rc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a371b26884552759e7161090fea883e00" kindref="member">maxused</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1<sp/>...<sp/>32:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>();<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>33<sp/>...<sp/>128:<sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>129<sp/>...<sp/>256:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>257<sp/>...<sp/>512:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>513<sp/>...<sp/>1024:<sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;MsgPool::bufpool_maxused<sp/>-<sp/>Invalid<sp/>size:<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc;<sp/><sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" kindref="member">MsgPool::bufpool_available</ref>(uint16_t<sp/>size)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>rc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" kindref="member">available</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1<sp/>...<sp/>32:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>.<ref refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" kindref="member">available</ref>();<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>33<sp/>...<sp/>128:<sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>.<ref refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" kindref="member">available</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>129<sp/>...<sp/>256:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>.<ref refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" kindref="member">available</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>257<sp/>...<sp/>512:<sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>.<ref refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" kindref="member">available</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>513<sp/>...<sp/>1024:<sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>.<ref refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" kindref="member">available</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;MsgPool::bufpool_available<sp/>-<sp/>Invalid<sp/>size:<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc;<sp/><sp/></highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight><highlight class="comment">//<sp/>total<sp/>number<sp/>of<sp/>preallocated<sp/>message<sp/>(PoolElem)<sp/>objects<sp/>currently<sp/>in<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="comment">//<sp/>uint8_t<sp/>MsgPool::num_elements<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;PoolElem, MsgPool::max_elements&gt;</ref><sp/><ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">MsgPool::elemPool</ref>;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[32], MsgPool::max_buf32&gt;</ref><sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">MsgPool::buf32Pool</ref>;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[128], MsgPool::max_buf128&gt;</ref><sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">MsgPool::buf128Pool</ref>;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[256], MsgPool::max_buf256&gt;</ref><sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">MsgPool::buf256Pool</ref>;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[512], MsgPool::max_buf512&gt;</ref><sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">MsgPool::buf512Pool</ref>;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[1024], MsgPool::max_buf1024&gt;</ref><sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">MsgPool::buf1024Pool</ref>;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;awe<sp/>tttest:<sp/>main:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(2));</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>e1<sp/>=<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" kindref="member">getNewElem</ref>(16);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(100));</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(100));</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>e1-&gt;<ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="stringliteral">&quot;111&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>e1-&gt;<ref refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" kindref="member">Dump</ref>();</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>e1-&gt;<ref refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" kindref="member">DumpAsString</ref>();</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>e1-&gt;<ref refid="class_pool_elem_1ae133e27cdb6a4873d2223e0d78768b87" kindref="member">DumpAsStringHex</ref>();</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>e1-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>e2<sp/>=<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" kindref="member">getNewElem</ref>(16);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>e2-&gt;<ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="stringliteral">&quot;222&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>e2-&gt;<ref refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" kindref="member">Dump</ref>();</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>e2-&gt;<ref refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" kindref="member">DumpAsString</ref>();</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>e2-&gt;<ref refid="class_pool_elem_1ae133e27cdb6a4873d2223e0d78768b87" kindref="member">DumpAsStringHex</ref>();</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>e3<sp/>=<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" kindref="member">getNewElem</ref>(100);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>e3-&gt;<ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="stringliteral">&quot;33333333333333333333&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/>e3-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>e2-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>e4<sp/>=<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" kindref="member">getNewElem</ref>(128);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>e4-&gt;<ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="stringliteral">&quot;44444444444444444444&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>e4-&gt;<ref refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" kindref="member">DumpAsString</ref>();</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>e4-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e3-&gt;free();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e2-&gt;free();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>assertion<sp/>on<sp/>duplicate<sp/>free</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e2-&gt;free();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MsgPool::inst()-&gt;stats();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>e5<sp/>=<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" kindref="member">getNewElem</ref>(265);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(e5-&gt;<ref refid="class_pool_elem_1aec1895e5aee815d55df87f27184794e3" kindref="member">getBufferSize</ref>()<sp/>==<sp/>512);</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/>e5-&gt;<ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="stringliteral">&quot;55555555555555555555&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/>e5-&gt;<ref refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" kindref="member">DumpAsString</ref>();</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>e5-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>e6<sp/>=<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" kindref="member">getNewElem</ref>(1024);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>e6-&gt;<ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="stringliteral">&quot;66666666666666666666&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>e6-&gt;<ref refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" kindref="member">DumpAsString</ref>();</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>e6-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">MsgPool::inst</ref>()-&gt;<ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(3));</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;awe<sp/>tttest:<sp/>main:<sp/>exiting\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="rtos/mpool.cpp"/>
+  </compounddef>
+</doxygen>

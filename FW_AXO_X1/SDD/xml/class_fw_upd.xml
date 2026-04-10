@@ -1,0 +1,600 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_fw_upd" kind="class" language="C++" prot="public">
+    <compoundname>FwUpd</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="update_8h" local="no">update.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_fw_upd_1a0411cd49bb5b71852cecd93bcbf0ca2d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@7</name>
+        <enumvalue id="class_fw_upd_1a0411cd49bb5b71852cecd93bcbf0ca2da4819a74c795e4e689abc93eef4828a13" prot="public">
+          <name>max_filename_size</name>
+          <initializer>= 80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="89" column="5" bodyfile="update/update.h" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_fw_upd_1abed82baf7f470b522273a3e37c24c600" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@8</name>
+        <enumvalue id="class_fw_upd_1abed82baf7f470b522273a3e37c24c600a8e9bd182eecabfbfe7e58d8f83af3206" prot="public">
+          <name>max_hostname_size</name>
+          <initializer>= 80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="94" column="5" bodyfile="update/update.h" bodystart="94" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_fw_upd_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the firmware update task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="76" column="10" bodyfile="update/update.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_fw_upd_1a2733937cfc01da7cb39c6c3db38d1474" compoundref="update_8cpp" startline="55" endline="59">FwUpd</referencedby>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sha1_expected[41]</definition>
+        <argsstring>[41]</argsstring>
+        <name>sha1_expected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Expected checksum from fw_info <xrefsect id="todo_1_todo000016"><xreftitle>Todo</xreftitle><xrefdescription><para>no magic numbers </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="100" column="13" bodyfile="update/update.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_upd_1a3c2d775d8305c003ab1207cb193f7cf1" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t size_expected</definition>
+        <argsstring></argsstring>
+        <name>size_expected</name>
+        <briefdescription>
+<para>Expected file size from fw_info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="102" column="13" bodyfile="update/update.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_fw_upd_1a59efd8e3381b74de00d04b14232abc68" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char filename</definition>
+        <argsstring>[max_filename_size]</argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File to request in download, e.g. &quot;/stg/app_update.bin&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="92" column="17" bodyfile="update/update.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" compoundref="update_8cpp" startline="140" endline="148">download_start</referencedby>
+        <referencedby refid="class_fw_upd_1ae2d1187c25234b18b1950e6556e9590b" compoundref="update_8cpp" startline="88" endline="91">setFilename</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_upd_1a4722587e22db9c74822f86afe5b71c54" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char hostname</definition>
+        <argsstring>[max_hostname_size]</argsstring>
+        <name>hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>http server to download from, e.g. &quot;myserver.amazonaws.com&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="97" column="17" bodyfile="update/update.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" compoundref="update_8cpp" startline="140" endline="148">download_start</referencedby>
+        <referencedby refid="class_fw_upd_1a31f87e6e026d0f6617cb8d36f553c880" compoundref="update_8cpp" startline="76" endline="79">setHostname</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fw_upd_1a2733937cfc01da7cb39c6c3db38d1474" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwUpd</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>FwUpd</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Firmware update task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocates and register the mailbox of the task. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="73" column="14" bodyfile="update/update.cpp" bodystart="55" bodyend="59"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" compoundref="mbox_8h" startline="86">Mbox::eFwUpd</references>
+        <references refid="class_fw_upd_1af2570dd7bace0312470d962f29359fb3" compoundref="update_8h" startline="76">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1ae6d69a666e74786294605d838c843b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~FwUpd</definition>
+        <argsstring>()</argsstring>
+        <name>~FwUpd</name>
+        <briefdescription>
+<para>Firmware update control task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="74" column="13" bodyfile="update/update.cpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Firmware update task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the task function calls function boot_write_img_confirmed provided by the MCUboot API. This marks the currently running image as confirmed, which will install it permanently, preventing MCUboot from reverting it for an older image at the next reset. <linebreak/>
+ Afterwards the function fota_download_init, provided by the FOTA download library of the nRF Connect SDK, will be called to initialize the firmware over-the-air download library. <linebreak/>
+ The function than enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eFwInfo: The function allocates an object of type <ref refid="class_fw_info" kindref="compound">FwInfo</ref> and call its method parse to parse the JSON string and to extract the download parameters. To check the validity of the parameters method validate will be called. It extracts the size of the firmware binary and the sha1 checksum and write to download library with call of function fota_download_set_expected provided by the FOTA download library ofthe nRF Connect SDK. With a call of method splitUrl of the <ref refid="class_fw_info" kindref="compound">FwInfo</ref> instance the received URL will be split into host (the http server to download from) and filename (File to request in download) and both will be stored in the member variables hostname and filename by calling the appropriate setter functions. Finally the download will be started by calling the member function download_start.</para>
+</listitem><listitem><para>eFwDownload: Download will be retried because of a previous failure by calling the member function download_start. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="75" column="18" bodyfile="update/update.cpp" bodystart="233" bodyend="290"/>
+        <references refid="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" compoundref="update_8cpp" startline="140" endline="148">download_start</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2403b4f87e6b8309416a7fee507c3980" compoundref="mpelem_8h" startline="98">eFwDownload</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba82c20ffc9867aa5fced24331aa471d69" compoundref="mpelem_8h" startline="97">eFwInfo</references>
+        <references refid="class_fw_upd_1a17f00d41a2f949c4f02b489d9f0f39d2" compoundref="update_8cpp" startline="105" endline="127">fota_dl_handler</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" compoundref="fwinfo_8cpp" startline="108" endline="108">FwInfo::getFileName</references>
+        <references refid="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" compoundref="fwinfo_8cpp" startline="144" endline="144">FwInfo::getFileSize</references>
+        <references refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" compoundref="fwinfo_8cpp" startline="99" endline="99">FwInfo::getHost</references>
+        <references refid="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" compoundref="fwinfo_8cpp" startline="135" endline="135">FwInfo::getProto</references>
+        <references refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" compoundref="fwinfo_8cpp" startline="117" endline="117">FwInfo::getSha1</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" compoundref="fwinfo_8cpp" startline="211" endline="248">FwInfo::parse</references>
+        <references refid="class_fw_upd_1af2570dd7bace0312470d962f29359fb3" compoundref="update_8h" startline="76">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_fw_upd_1ae2d1187c25234b18b1950e6556e9590b" compoundref="update_8cpp" startline="88" endline="91">setFilename</references>
+        <references refid="class_fw_upd_1a31f87e6e026d0f6617cb8d36f553c880" compoundref="update_8cpp" startline="76" endline="79">setHostname</references>
+        <references refid="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" compoundref="update_8h" startline="100">sha1_expected</references>
+        <references refid="class_fw_upd_1a3c2d775d8305c003ab1207cb193f7cf1" compoundref="update_8h" startline="102">size_expected</references>
+        <references refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" compoundref="fwinfo_8cpp" startline="159" endline="194">FwInfo::splitUrl</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <references refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" compoundref="fwinfo_8cpp" startline="76" endline="81">FwInfo::validate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1ab778908496401da0e107c228bae8aa42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setUrl</definition>
+        <argsstring>(const char *url)</argsstring>
+        <name>setUrl</name>
+        <param>
+          <type>const char *</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1a31f87e6e026d0f6617cb8d36f553c880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setHostname</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>setHostname</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set the hostname. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the host of type C++ string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The Function copy parameter name in c string member variable hostname. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="86" column="10" bodyfile="update/update.cpp" bodystart="76" bodyend="79"/>
+        <references refid="class_fw_upd_1a4722587e22db9c74822f86afe5b71c54" compoundref="update_8h" startline="97">hostname</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1ae2d1187c25234b18b1950e6556e9590b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setFilename</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>setFilename</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set the filename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file of type C++ string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The Function copy parameter name in c string member variable filename. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="87" column="10" bodyfile="update/update.cpp" bodystart="88" bodyend="91"/>
+        <references refid="class_fw_upd_1a59efd8e3381b74de00d04b14232abc68" compoundref="update_8h" startline="92">filename</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_fw_upd_1a17f00d41a2f949c4f02b489d9f0f39d2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fota_dl_handler</definition>
+        <argsstring>(const struct fota_download_evt *evt)</argsstring>
+        <name>fota_dl_handler</name>
+        <param>
+          <type>const struct fota_download_evt *</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para>Callback function to receive the FOTA download events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the event of type struct fota_download_evt</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function checks the event ID. In case the event ID is FOTA_DOWNLOAD_EVT_ERROR or FOTA_DOWNLOAD_EVT_CANCELLED member function download_failed will be called with an appropriate error code. In case the event ID is FOTA_DOWNLOAD_EVT_FINISHED member function download_success will be called. On unexpected event IDs a debug message at error level will be printed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="79" column="17" bodyfile="update/update.cpp" bodystart="105" bodyend="127"/>
+        <references refid="class_fw_upd_1a888e034456d9b16489ac0ff76f1c8bf9" compoundref="update_8cpp" startline="159" endline="173">download_failed</references>
+        <references refid="class_fw_upd_1ae2c42220dbc908b869a944c2612d7b71" compoundref="update_8cpp" startline="184" endline="197">download_success</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1a888e034456d9b16489ac0ff76f1c8bf9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void download_failed</definition>
+        <argsstring>(int error_code=3)</argsstring>
+        <name>download_failed</name>
+        <param>
+          <type>int</type>
+          <declname>error_code</declname>
+          <defval>3</defval>
+        </param>
+        <briefdescription>
+<para>Send OTA Failure event message to firmware update control task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function defines the JSON string with the OTA Failure event, request a message from message pool, set message type to eFwDlFailed, set eFwUpd as sender, copy the JSON string in the message payload, retrieve a pointer to the mailbox of the firmware update control task and send message to firmware update control task&apos;s mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="81" column="17" bodyfile="update/update.cpp" bodystart="159" bodyend="173"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" compoundref="mpelem_8h" startline="96">eFwDlFailed</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" compoundref="update_8cpp" startline="140" endline="148">download_start</referencedby>
+        <referencedby refid="class_fw_upd_1a17f00d41a2f949c4f02b489d9f0f39d2" compoundref="update_8cpp" startline="105" endline="127">fota_dl_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1ae2c42220dbc908b869a944c2612d7b71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void download_success</definition>
+        <argsstring>(void)</argsstring>
+        <name>download_success</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Send OTA Success event message to firmware update control task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function defines the JSON string with the OTA Success event, request a message from message pool, set message type to eFwDlSuccess, set eFwUpd as sender, copy the JSON string in the message payload, retrieve a pointer to the mailbox of the firmware update control task and send message to firmware update control task&apos;s mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="82" column="17" bodyfile="update/update.cpp" bodystart="184" bodyend="197"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf0f41fc324f07c49083014e0df2ad9c1" compoundref="mpelem_8h" startline="95">eFwDlSuccess</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_fw_upd_1a17f00d41a2f949c4f02b489d9f0f39d2" compoundref="update_8cpp" startline="105" endline="127">fota_dl_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void download_start</definition>
+        <argsstring>(void)</argsstring>
+        <name>download_start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to start the OTA download process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function start the OTA download process by calling function fota_download_start provided by the FOTA download library of the nRF Connect SDK. Function fota_download_start start downloading the given file from the given host. When the download is complete, the secondary slot of MCUboot is tagged as having valid firmware inside it. The completion is reported through an event (see fota_dl_handler). In case of an error, indicated by a return value unequal to 0, the member function download_failed will be called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="83" column="17" bodyfile="update/update.cpp" bodystart="140" bodyend="148"/>
+        <references refid="class_fw_upd_1a888e034456d9b16489ac0ff76f1c8bf9" compoundref="update_8cpp" startline="159" endline="173">download_failed</references>
+        <references refid="class_fw_upd_1a59efd8e3381b74de00d04b14232abc68" compoundref="update_8h" startline="92">filename</references>
+        <references refid="class_fw_upd_1a4722587e22db9c74822f86afe5b71c54" compoundref="update_8h" startline="97">hostname</references>
+        <references refid="update_8h_1a07d3e3ac0d4a3fedbdfa28292ae6962e" compoundref="update_8h" startline="42">SEC_TAG</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fw_upd_1a45865f1da0f35d6a7496c063c40cde3d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwUpd</definition>
+        <argsstring>()=delete</argsstring>
+        <name>FwUpd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="105" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Firmware update task class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The firmware update task implements the interface to the FOTA download library. It starts the download process and receives the FOTA download event. It provides a callback function to receive and process the FOTA events, a function to start the download process and functions to call on download success and download failure. Furthermore two setter functions to set the name of the host, which is the server to download from and name of the binary file to be downloaded.<itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>FOTA download events via callback function</para>
+</listitem><listitem><para>Firmware update control task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Firmware update control task </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FwUpd</label>
+        <link refid="class_fw_upd"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>static char</label>
+      </node>
+      <node id="1">
+        <label>FwUpd</label>
+        <link refid="class_fw_upd"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+size_expected</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+sha1_expected</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+filename</edgelabel>
+          <edgelabel>+hostname</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>int32_t</label>
+      </node>
+      <node id="12">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="9">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="10">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="11">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="update/update.h" line="70" column="1" bodyfile="update/update.h" bodystart="70" bodyend="106"/>
+    <listofallmembers>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>FwUpd</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>create</name></member>
+      <member refid="class_fw_upd_1a888e034456d9b16489ac0ff76f1c8bf9" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>download_failed</name></member>
+      <member refid="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>download_start</name></member>
+      <member refid="class_fw_upd_1ae2c42220dbc908b869a944c2612d7b71" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>download_success</name></member>
+      <member refid="class_fw_upd_1a59efd8e3381b74de00d04b14232abc68" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>filename</name></member>
+      <member refid="class_fw_upd_1a17f00d41a2f949c4f02b489d9f0f39d2" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>fota_dl_handler</name></member>
+      <member refid="class_fw_upd_1a2733937cfc01da7cb39c6c3db38d1474" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>FwUpd</name></member>
+      <member refid="class_fw_upd_1a45865f1da0f35d6a7496c063c40cde3d" prot="private" virt="non-virtual"><scope>FwUpd</scope><name>FwUpd</name></member>
+      <member refid="class_fw_upd_1a4722587e22db9c74822f86afe5b71c54" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>hostname</name></member>
+      <member refid="class_fw_upd_1a0411cd49bb5b71852cecd93bcbf0ca2da4819a74c795e4e689abc93eef4828a13" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>max_filename_size</name></member>
+      <member refid="class_fw_upd_1abed82baf7f470b522273a3e37c24c600a8e9bd182eecabfbfe7e58d8f83af3206" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>max_hostname_size</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>FwUpd</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>FwUpd</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>FwUpd</scope><name>operator=</name></member>
+      <member refid="class_fw_upd_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>pInMbox</name></member>
+      <member refid="class_fw_upd_1ae2d1187c25234b18b1950e6556e9590b" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>setFilename</name></member>
+      <member refid="class_fw_upd_1a31f87e6e026d0f6617cb8d36f553c880" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>setHostname</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>setId</name></member>
+      <member refid="class_fw_upd_1ab778908496401da0e107c228bae8aa42" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>setUrl</name></member>
+      <member refid="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>sha1_expected</name></member>
+      <member refid="class_fw_upd_1a3c2d775d8305c003ab1207cb193f7cf1" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>size_expected</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>start</name></member>
+      <member refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>FwUpd</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>FwUpd</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>FwUpd</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>FwUpd</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>FwUpd</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>FwUpd</scope><name>tid</name></member>
+      <member refid="class_fw_upd_1ae6d69a666e74786294605d838c843b5c" prot="public" virt="virtual"><scope>FwUpd</scope><name>~FwUpd</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>FwUpd</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

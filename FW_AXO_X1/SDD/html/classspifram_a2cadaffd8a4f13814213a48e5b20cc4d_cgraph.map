@@ -1,0 +1,7 @@
+<map id="wakeup" name="wakeup">
+<area shape="rect" id="node1" title="Function to wake up FRAM from deep power down mode." alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node2" href="$classspifram.html#a7b6017c27f8b34a91104422c88c4954f" title="Function to wake up FRAM from deep power down mode." alt="" coords="120,5,191,32"/>
+<area shape="rect" id="node3" href="$classspifram.html#a012fd03b5c4e8fb72719e55317c6b1b9" title="Function to read multiple bytes from FRAM." alt="" coords="239,5,320,32"/>
+<area shape="rect" id="node4" href="$classspifram.html#a3f8be5a2578127c3fc0e74e3532f284b" title="Function to read multiple bytes to FRAM." alt="" coords="368,5,455,32"/>
+<area shape="rect" id="node5" href="$classspifram.html#a2b5d6c97c3b1b81c410898f8b4d88dba" title="Function to access FRAM for reading and writing." alt="" coords="503,5,599,32"/>
+</map>

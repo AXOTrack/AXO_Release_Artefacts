@@ -1,0 +1,1772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classspimram" kind="class" language="C++" prot="public">
+    <compoundname>spimram</compoundname>
+    <includes refid="mram_8h" local="no">mram.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" prot="private" static="no" mutable="no">
+        <type>const struct gpio_dt_spec</type>
+        <definition>const struct gpio_dt_spec power_gpio</definition>
+        <argsstring></argsstring>
+        <name>power_gpio</name>
+        <initializer>= {
+        .port = DEVICE_DT_GET(DT_NODELABEL(gpio0)),
+        .pin = 13,
+        .dt_flags = GPIO_ACTIVE_HIGH,
+    }</initializer>
+        <briefdescription>
+<para>Devicetree setup for the MRAM power enable pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="97" column="9" bodyfile="drv/spi/mram.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</referencedby>
+        <referencedby refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</referencedby>
+        <referencedby refid="classspimram_1a66c05174e928d7b8cf235eeca26e8e87" compoundref="mram_8cpp" startline="55" endline="64">spimram</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1afc1e96f581f0d7eaee421c1bf6f506b8" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t power_delay_usec</definition>
+        <argsstring></argsstring>
+        <name>power_delay_usec</name>
+        <briefdescription>
+<para>Power on delay. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="107" column="14" bodyfile="drv/spi/mram.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</referencedby>
+        <referencedby refid="classspimram_1a612a64d4a29763d8a055b397a5ecf7ab" compoundref="mram_8cpp" startline="80" endline="84">setPowerOnDelay</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1af055b4b148c703eaeda1bedfeda907ae" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t id[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>id</name>
+        <briefdescription>
+<para>The device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="133" column="13" bodyfile="drv/spi/mram.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</referencedby>
+        <referencedby refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" compoundref="mram_8cpp" startline="359" endline="375">read_device_id</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t status_reg</definition>
+        <argsstring></argsstring>
+        <name>status_reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to hold the content of the status register Bit 7: WPEN, R/W, HW Based Protect Bit, 1:P. Enabled, 0:P. Disabled <linebreak/>
+Bit 6: SNPEN, R/W, SerialNr Protect Bit, 1:Wr protected, 0;Writable <linebreak/>
+Bit 5: TB, R/W, Top/Bottom Memory Array Protect Selection, 1: Bottom P. Enabled, 0: Top P. Enabled <linebreak/>
+Bit 4: BP[2], R/W, Block Protection Bit 2 <linebreak/>
+Bit 3: BP[1], R/W, Block Protection Bit 1 <linebreak/>
+Bit 2: BP[0], R/W, Block Protection Bit 0 <linebreak/>
+Bit 1: WREN, R, Write Protection Enable, 1:Disabled, 0:Enabled <linebreak/>
+Bit 0: RSVD, R, Reserved for future use <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="145" column="13" bodyfile="drv/spi/mram.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+        <referencedby refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" compoundref="mram_8cpp" startline="393" endline="409">read_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a30c9df0ab1132585c97c219b1a136658" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t config1_reg</definition>
+        <argsstring></argsstring>
+        <name>config1_reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable to hold the content of the configuration register 1 Bit 7: RSVD, R/W, Reserved for future use <linebreak/>
+Bit 6: RSVD, R/W, Reserved for future use <linebreak/>
+Bit 5: RSVD, R/W, Reserved for future use <linebreak/>
+Bit 4: RSVD, R/W, Reserved for future use <linebreak/>
+Bit 3: RSVD, R/W, Reserved for future use <linebreak/>
+Bit 2: MAPLK, R/W, Status Register TB, BP[2:0] Protect, 1: Lock TB and BP[2:0], 0: Unlock TB and BP[2:0] <linebreak/>
+Bit 1: RSVD, R/W, Reserved for future use <linebreak/>
+Bit 0: ASPLK, R/W, Augmented 256-Byte Area Data Protection, 1: Write Protection for Augmented Area Data regardless of ASP[7:0], 0: Write Protection for Augmented Area Data depending on ASP[7:0] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="159" column="13" bodyfile="drv/spi/mram.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+        <referencedby refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" compoundref="mram_8cpp" startline="428" endline="444">read_config1_reg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a0861409233820f636c44759f690cae93" prot="private" static="no" mutable="no">
+        <type>const struct device *</type>
+        <definition>const struct device* spi_dev</definition>
+        <argsstring></argsstring>
+        <name>spi_dev</name>
+        <briefdescription>
+<para>SPI controller device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="161" column="24" bodyfile="drv/spi/mram.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</referencedby>
+        <referencedby refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</referencedby>
+        <referencedby refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+        <referencedby refid="classspimram_1abe711231d06a16e60c4b48c336ddee16" compoundref="mram_8cpp" startline="764" endline="766">readBytes</referencedby>
+        <referencedby refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="mram_8cpp" startline="783" endline="791">sleep</referencedby>
+        <referencedby refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="mram_8cpp" startline="808" endline="816">wakeup</referencedby>
+        <referencedby refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" compoundref="mram_8cpp" startline="747" endline="749">writeBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" prot="private" static="no" mutable="no">
+        <type>struct spi_config *</type>
+        <definition>struct spi_config* spi_cfg</definition>
+        <argsstring></argsstring>
+        <name>spi_cfg</name>
+        <briefdescription>
+<para>SPI controller configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="162" column="22" bodyfile="drv/spi/mram.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="classspimram_1a4c258e05757b678d415740cfe2d9c592" compoundref="mram_8cpp" startline="458" endline="463">enter_deep_power_down</referencedby>
+        <referencedby refid="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" compoundref="mram_8cpp" startline="477" endline="482">exit_deep_power_down</referencedby>
+        <referencedby refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</referencedby>
+        <referencedby refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</referencedby>
+        <referencedby refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+        <referencedby refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" compoundref="mram_8cpp" startline="318" endline="340">mram_access</referencedby>
+        <referencedby refid="classspimram_1a3b4493540590f441cae894bea51d5e17" compoundref="mram_8cpp" startline="146" endline="158">read_bytes</referencedby>
+        <referencedby refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" compoundref="mram_8cpp" startline="428" endline="444">read_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" compoundref="mram_8cpp" startline="359" endline="375">read_device_id</referencedby>
+        <referencedby refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" compoundref="mram_8cpp" startline="393" endline="409">read_status_reg</referencedby>
+        <referencedby refid="classspimram_1abe711231d06a16e60c4b48c336ddee16" compoundref="mram_8cpp" startline="764" endline="766">readBytes</referencedby>
+        <referencedby refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" compoundref="mram_8cpp" startline="287" endline="294">send_command</referencedby>
+        <referencedby refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="mram_8cpp" startline="783" endline="791">sleep</referencedby>
+        <referencedby refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="mram_8cpp" startline="808" endline="816">wakeup</referencedby>
+        <referencedby refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" compoundref="mram_8cpp" startline="179" endline="195">write_bytes</referencedby>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+        <referencedby refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" compoundref="mram_8cpp" startline="747" endline="749">writeBytes</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classspimram_1a554f398888f5c215ad5e631339ef2804" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_WRSR</definition>
+        <argsstring></argsstring>
+        <name>CMD_WRSR</name>
+        <initializer>= 0x01</initializer>
+        <briefdescription>
+<para>Command to write the status register. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="110" column="30" bodyfile="drv/spi/mram.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1af977da597f5db3f6e482e8f3bc468acb" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_WRTE</definition>
+        <argsstring></argsstring>
+        <name>CMD_WRTE</name>
+        <initializer>= 0x02</initializer>
+        <briefdescription>
+<para>Command to write a memory array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="112" column="30" bodyfile="drv/spi/mram.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" compoundref="mram_8cpp" startline="179" endline="195">write_bytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1adae436778867d75213af0895f4e04638" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_READ</definition>
+        <argsstring></argsstring>
+        <name>CMD_READ</name>
+        <initializer>= 0x03</initializer>
+        <briefdescription>
+<para>Command to read memory area. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="114" column="30" bodyfile="drv/spi/mram.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classspimram_1a3b4493540590f441cae894bea51d5e17" compoundref="mram_8cpp" startline="146" endline="158">read_bytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1afe28f2f1929d428f6fab150257120a0b" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_RDSR</definition>
+        <argsstring></argsstring>
+        <name>CMD_RDSR</name>
+        <initializer>= 0x05</initializer>
+        <briefdescription>
+<para>Command to read the status register. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="116" column="30" bodyfile="drv/spi/mram.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" compoundref="mram_8cpp" startline="393" endline="409">read_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_WREN</definition>
+        <argsstring></argsstring>
+        <name>CMD_WREN</name>
+        <initializer>= 0x06</initializer>
+        <briefdescription>
+<para>Write enable command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="118" column="30" bodyfile="drv/spi/mram.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" compoundref="mram_8cpp" startline="179" endline="195">write_bytes</referencedby>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1aebb461a2e2057c9e18f7bc4408dcd54d" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_RDC1</definition>
+        <argsstring></argsstring>
+        <name>CMD_RDC1</name>
+        <initializer>= 0x35</initializer>
+        <briefdescription>
+<para>Command to read configuration register 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="120" column="30" bodyfile="drv/spi/mram.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" compoundref="mram_8cpp" startline="428" endline="444">read_config1_reg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a6a54e87e2f90c0ca53d3d012fb883974" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_RDAR</definition>
+        <argsstring></argsstring>
+        <name>CMD_RDAR</name>
+        <initializer>= 0x65</initializer>
+        <briefdescription>
+<para>Command to read any register, address based. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="122" column="30" bodyfile="drv/spi/mram.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1aabd869221f35a6681844b3d5d3063808" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_WRAR</definition>
+        <argsstring></argsstring>
+        <name>CMD_WRAR</name>
+        <initializer>= 0x71</initializer>
+        <briefdescription>
+<para>Command to write any register, address based. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="124" column="30" bodyfile="drv/spi/mram.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a27c6a2208e765fdc6dce110f890f62ba" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_RDID</definition>
+        <argsstring></argsstring>
+        <name>CMD_RDID</name>
+        <initializer>= 0x9F</initializer>
+        <briefdescription>
+<para>Command to read the device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="126" column="30" bodyfile="drv/spi/mram.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" compoundref="mram_8cpp" startline="359" endline="375">read_device_id</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1a7d38cabe409955bac035631fe0e06ea5" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_DPD_ENTER</definition>
+        <argsstring></argsstring>
+        <name>CMD_DPD_ENTER</name>
+        <initializer>= 0xB9</initializer>
+        <briefdescription>
+<para>Command to enter deep power down mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="128" column="30" bodyfile="drv/spi/mram.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classspimram_1a4c258e05757b678d415740cfe2d9c592" compoundref="mram_8cpp" startline="458" endline="463">enter_deep_power_down</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspimram_1adba761d9088a954deccb8a97349f685e" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CMD_DPD_EXIT</definition>
+        <argsstring></argsstring>
+        <name>CMD_DPD_EXIT</name>
+        <initializer>= 0xAB</initializer>
+        <briefdescription>
+<para>Command to exit deep power down mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="130" column="30" bodyfile="drv/spi/mram.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" compoundref="mram_8cpp" startline="477" endline="482">exit_deep_power_down</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classspimram_1a5554be202f1923f4f14c1b1c179dc1c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~spimram</definition>
+        <argsstring>()</argsstring>
+        <name>~spimram</name>
+        <briefdescription>
+<para>SPI MRAM class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="55" column="5" bodyfile="drv/spi/mram.cpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t * getDeviceId</definition>
+        <argsstring>()</argsstring>
+        <name>getDeviceId</name>
+        <briefdescription>
+<para>Function to retrieve MRAM device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return pointer to the device ID, NULL otherwise</para>
+</simplesect>
+Function switch on MRAM power supply by calling member function power_on. In case of an error function returns error code NULL, otherwise it read the device ID by call of member function read_device_id and switch off MRAM power supply by calling member function power_off. In case of an error function returns with error code NULL, otherwise the read device ID in member variable id will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="58" column="13" bodyfile="drv/spi/mram.cpp" bodystart="572" bodyend="586"/>
+        <references refid="classspimram_1af055b4b148c703eaeda1bedfeda907ae" compoundref="mram_8h" startline="133">id</references>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" compoundref="mram_8cpp" startline="359" endline="375">read_device_id</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getStatusRegVal</definition>
+        <argsstring>()</argsstring>
+        <name>getStatusRegVal</name>
+        <briefdescription>
+<para>Function to retrieve MRAM status register content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return 0 on success, otherwise error code -1</para>
+</simplesect>
+Function switch on MRAM power supply by calling member function power_on. In case of an error function returns with error code -1, otherwise it read the status register by call of member function read_status_reg and switch off MRAM power supply by calling member function power_off. In case of an error function returns with error code -1, otherwise the read content of the status register in member variable status_reg will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="59" column="9" bodyfile="drv/spi/mram.cpp" bodystart="601" bodyend="616"/>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" compoundref="mram_8cpp" startline="393" endline="409">read_status_reg</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <references refid="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" compoundref="mram_8h" startline="145">status_reg</references>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1af6a647eebae4154398a76d42e427c4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getConfig1RegVal</definition>
+        <argsstring>()</argsstring>
+        <name>getConfig1RegVal</name>
+        <briefdescription>
+<para>Function to retrieve MRAM configuration register 1 content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return 0 on success, otherwise error code -1</para>
+</simplesect>
+Function switch on MRAM power supply by calling member function power_on. In case of an error function returns with error code -1, otherwise it read the configuration register 1 by call of member function read_config1_reg and switch off MRAM power supply by calling member function power_off. In case of an error function returns with error code -1, otherwise the read content of the configuration register 1 in member variable config1_reg will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="60" column="9" bodyfile="drv/spi/mram.cpp" bodystart="631" bodyend="646"/>
+        <references refid="classspimram_1a30c9df0ab1132585c97c219b1a136658" compoundref="mram_8h" startline="159">config1_reg</references>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" compoundref="mram_8cpp" startline="428" endline="444">read_config1_reg</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1af139f30d28b7dc61f5051c0d595af368" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erase</definition>
+        <argsstring>()</argsstring>
+        <name>erase</name>
+        <briefdescription>
+<para>Function to erase the content of the MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Function initialize an array of size 256 Byte with 0xFF and write this array in a loop into MRAM by calling member function writeBytes until the complete memory has been written. In case of an error the loop will be interrupted and the function returns. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="61" column="10" bodyfile="drv/spi/mram.cpp" bodystart="656" bodyend="671"/>
+        <references refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" compoundref="mram_8cpp" startline="747" endline="749">writeBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a3ff4d48173e8f1800f6f569f77b4b35e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erase</definition>
+        <argsstring>(void *from, size_t len)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>void *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to erase content of the MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start address for erase operation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytesd to be erased</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function initialize an array of size 256 Byte with 0xFF and write this array in a loop into MRAM by calling member function writeBytes until the complete memory from address from up to address from + len has been written. In case of an error the loop will be interrupted and the function returns. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="62" column="10" bodyfile="drv/spi/mram.cpp" bodystart="684" bodyend="702"/>
+        <references refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" compoundref="mram_8cpp" startline="747" endline="749">writeBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1ad1859b447a9f871ccbe660b0df4c5768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump</definition>
+        <argsstring>(uint32_t from, size_t len)</argsstring>
+        <name>dump</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to print the content of the MRAM in a terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start point of data to be printed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length (number of bytes) of data to be printed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function read blockwise bytes in a loop from start point until end point (from + len) by calling function readBytes. In case of an error the loop will be terminated, otherwise the read data will be printed out by call of macro LOG_HEXDUMP_INF. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="63" column="10" bodyfile="drv/spi/mram.cpp" bodystart="715" bodyend="732"/>
+        <references refid="classspimram_1abe711231d06a16e60c4b48c336ddee16" compoundref="mram_8cpp" startline="764" endline="766">readBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1ab9d179e656fc5552c392b174d03457f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int writeBytes</definition>
+        <argsstring>(uint32_t addr, uint8_t *data, size_t num_bytes)</argsstring>
+        <name>writeBytes</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function to write multiple bytes into MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for writing the data in MRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array with the data to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method write_bytes (0 no error, otherwise error code)</para>
+</simplesect>
+Function writes num_bytes from array data into MRAM starting at address addr by calling private method write_bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="64" column="9" bodyfile="drv/spi/mram.cpp" bodystart="747" bodyend="749"/>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <references refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" compoundref="mram_8cpp" startline="179" endline="195">write_bytes</references>
+        <referencedby refid="classspimram_1af139f30d28b7dc61f5051c0d595af368" compoundref="mram_8cpp" startline="656" endline="671">erase</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1abe711231d06a16e60c4b48c336ddee16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int readBytes</definition>
+        <argsstring>(uint32_t addr, uint8_t *data, size_t num_bytes)</argsstring>
+        <name>readBytes</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_bytes</declname>
+        </param>
+        <briefdescription>
+<para>Function to read multiple bytes from MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for reading the data from MRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method read_bytes (0 no error, otherwise error code)</para>
+</simplesect>
+Function read num_bytes into array data from MRAM starting at address addr by calling private method read_bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="65" column="9" bodyfile="drv/spi/mram.cpp" bodystart="764" bodyend="766"/>
+        <references refid="classspimram_1a3b4493540590f441cae894bea51d5e17" compoundref="mram_8cpp" startline="146" endline="158">read_bytes</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <referencedby refid="classspimram_1ad1859b447a9f871ccbe660b0df4c5768" compoundref="mram_8cpp" startline="715" endline="732">dump</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sleep</definition>
+        <argsstring>()</argsstring>
+        <name>sleep</name>
+        <briefdescription>
+<para>Function to enter deep power down mode of MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return value of method enter_deep_power_down (0 no error, otherwise error code)</para>
+</simplesect>
+Function</para>
+<para>Function switch on MRAM power supply by calling member function power_on. In case of an error function returns with error code , otherwise it enters deep power down mode by calling private method dpd_enter and switch off MRAM power supply by calling member function power_off. The function returns the return value of method enter_deep_power_down (0 no error, otherwise error code) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="66" column="9" bodyfile="drv/spi/mram.cpp" bodystart="783" bodyend="791"/>
+        <references refid="classspimram_1a4c258e05757b678d415740cfe2d9c592" compoundref="mram_8cpp" startline="458" endline="463">enter_deep_power_down</references>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wakeup</definition>
+        <argsstring>()</argsstring>
+        <name>wakeup</name>
+        <briefdescription>
+<para>Function to leave deep power down mode of MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns return value of method exit_deep_power_down (0 no error, otherwise error code)</para>
+</simplesect>
+Function</para>
+<para>Function switch on MRAM power supply by calling member function power_on. In case of an error function returns with error code , otherwise it enters deep power down mode by calling private method dpd_enter and switch off MRAM power supply by calling member function power_off. The function returns the return value of method exit_deep_power_down (0 no error, otherwise error code) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="67" column="9" bodyfile="drv/spi/mram.cpp" bodystart="808" bodyend="816"/>
+        <references refid="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" compoundref="mram_8cpp" startline="477" endline="482">exit_deep_power_down</references>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a612a64d4a29763d8a055b397a5ecf7ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPowerOnDelay</definition>
+        <argsstring>(uint32_t usec)</argsstring>
+        <name>setPowerOnDelay</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>usec</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set the power on delay. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function assign the parameter usec to the private member variable power_delay_usec. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="68" column="10" bodyfile="drv/spi/mram.cpp" bodystart="80" bodyend="84"/>
+        <references refid="classspimram_1afc1e96f581f0d7eaee421c1bf6f506b8" compoundref="mram_8h" startline="107">power_delay_usec</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The initialization function of the SPI MRAM class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initialize the value for status register with 0x40 (Serial Number Write protected) and for the configuration register 1 with 0x01 (Unlock TB and BP[2:0], Write Protection for Augmented Area Data) and the private member variables spi_dev (SPI controller device) and spi_cfg (SPI controller configuration) by calling the functions getController and getConfig of the spibus instance <ref refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" kindref="member">spibus::inst()</ref>. Afterwards if wake up the MRAM by calling member function wakeup, read device id, status register and configuration register 1 by vall of the member functions getDeviceId, getStatusRegVal and getConfig1RegVal. If status register has not value 0x40, configuration register 1 and status register will be read by calling the member functions write_config1_reg and write_status_reg and status register will be read again by call of function getStatusRegVal. Finally device ID and content of status register will be checked. If davice ID is not 0xD9010501 or status register has not value 0x40, an exception will be raised with call of macro __ASSERT_NO_MSG. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="69" column="10" bodyfile="drv/spi/mram.cpp" bodystart="504" bodyend="558"/>
+        <references refid="classspimram_1a30c9df0ab1132585c97c219b1a136658" compoundref="mram_8h" startline="159">config1_reg</references>
+        <references refid="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" compoundref="spibus_8h" startline="90" endline="90">spibus::getConfig</references>
+        <references refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</references>
+        <references refid="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" compoundref="spibus_8h" startline="89" endline="89">spibus::getController</references>
+        <references refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</references>
+        <references refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</references>
+        <references refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">spibus::init</references>
+        <references refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" compoundref="spibus_8cpp" startline="85" endline="89">spibus::inst</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a0861409233820f636c44759f690cae93" compoundref="mram_8h" startline="161">spi_dev</references>
+        <references refid="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" compoundref="mram_8h" startline="145">status_reg</references>
+        <references refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="mram_8cpp" startline="808" endline="816">wakeup</references>
+        <references refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</references>
+        <references refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int power_on</definition>
+        <argsstring>()</argsstring>
+        <name>power_on</name>
+        <briefdescription>
+<para>Function to switch on MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns 0 on success, error code otherwise</para>
+</simplesect>
+The method calls function gpio_pin_set_dt provided by zephyr GPIO library to initialize private member variable power_gpio of type struct gpio_dt_spec. In case function returns an error the method returns the error code immediately, otherwise method performs a delay to prevent abnormal read/write operations(see MRAM data sheet, page 9) and returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="70" column="9" bodyfile="drv/spi/mram.cpp" bodystart="97" bodyend="107"/>
+        <references refid="classspimram_1afc1e96f581f0d7eaee421c1bf6f506b8" compoundref="mram_8h" startline="107">power_delay_usec</references>
+        <references refid="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" compoundref="mram_8h" startline="101">power_gpio</references>
+        <referencedby refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</referencedby>
+        <referencedby refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</referencedby>
+        <referencedby refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</referencedby>
+        <referencedby refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="mram_8cpp" startline="783" endline="791">sleep</referencedby>
+        <referencedby refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="mram_8cpp" startline="808" endline="816">wakeup</referencedby>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1af1f8781e94de62b193539c9513be36a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int power_off</definition>
+        <argsstring>()</argsstring>
+        <name>power_off</name>
+        <briefdescription>
+<para>Function to switch off MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns 0 on success, error code otherwise</para>
+</simplesect>
+The method calls function gpio_pin_set_dt provided by zephyr GPIO library to initialize private member variable power_gpio of type struct gpio_dt_spec. In case function returns an error the method returns the error code immediately, otherwise it returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="71" column="9" bodyfile="drv/spi/mram.cpp" bodystart="119" bodyend="127"/>
+        <references refid="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" compoundref="mram_8h" startline="101">power_gpio</references>
+        <referencedby refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</referencedby>
+        <referencedby refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</referencedby>
+        <referencedby refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</referencedby>
+        <referencedby refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="mram_8cpp" startline="783" endline="791">sleep</referencedby>
+        <referencedby refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="mram_8cpp" startline="808" endline="816">wakeup</referencedby>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classspimram_1aedb792a1bff701ec260dfcb7b49ca4a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classspimram" kindref="compound">spimram</ref> *</type>
+        <definition>spimram * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="56" column="20" bodyfile="drv/spi/mram.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classspimram_1a66c05174e928d7b8cf235eeca26e8e87" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spimram</definition>
+        <argsstring>(uint32_t delay_usec=2500)</argsstring>
+        <name>spimram</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>delay_usec</declname>
+          <defval>2500</defval>
+        </param>
+        <briefdescription>
+<para>SPI MRAM class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor is declared as private according to singleton pattern. It is called in the static inst function to create the exclusiv only instance of the class. It initializes the power delay and configures the power gpio for MRAM activity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="74" column="14" bodyfile="drv/spi/mram.cpp" bodystart="55" bodyend="64"/>
+        <references refid="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" compoundref="mram_8h" startline="101">power_gpio</references>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int send_command</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint8_t cmd)</argsstring>
+        <name>send_command</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+<para>Function to send a command to MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the command to be send</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns The return code of function spi_write (0 no error, otherwise error code)</para>
+</simplesect>
+Function initializes transmit buffer with the OP code command cmd and call function spi_write. Finally the return value of spi_write will be returned to the calling function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="75" column="9" bodyfile="drv/spi/mram.cpp" bodystart="287" bodyend="294"/>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a4c258e05757b678d415740cfe2d9c592" compoundref="mram_8cpp" startline="458" endline="463">enter_deep_power_down</referencedby>
+        <referencedby refid="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" compoundref="mram_8cpp" startline="477" endline="482">exit_deep_power_down</referencedby>
+        <referencedby refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" compoundref="mram_8cpp" startline="179" endline="195">write_bytes</referencedby>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mram_access</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint8_t cmd, uint32_t addr, uint8_t *data, size_t len, bool is_write)</argsstring>
+        <name>mram_access</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_write</declname>
+        </param>
+        <briefdescription>
+<para>Function to access MRAM for reading and writing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OP code command </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for reading or writing the data from / in FRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be read or to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be read or to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>is_write</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to specify read / write direction</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return value of method spi_transceive in case of reading or of method spi_write in case of writing (0 no error, otherwise error code)</para>
+</simplesect>
+Function initializes transmit buffer and set the OP code command cmd and start address in array access. In case of reading the receive buffer is initialized and read the data by calling function spi_transceive. In case of writing the data will be written by calling function spi_write. Finally the return value of function spi_transceive or spi_write will be returned to calling function. See MRAM data sheet, page 12ff. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="77" column="9" bodyfile="drv/spi/mram.cpp" bodystart="318" bodyend="340"/>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a3b4493540590f441cae894bea51d5e17" compoundref="mram_8cpp" startline="146" endline="158">read_bytes</referencedby>
+        <referencedby refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" compoundref="mram_8cpp" startline="179" endline="195">write_bytes</referencedby>
+        <referencedby refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" compoundref="mram_8cpp" startline="253" endline="270">write_config1_reg</referencedby>
+        <referencedby refid="classspimram_1a4b5e60928853a99f55e507c03d082960" compoundref="mram_8cpp" startline="216" endline="232">write_status_reg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a29e1fba759049f2506cd3dce4606ea30" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_device_id</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</argsstring>
+        <name>read_device_id</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>id_buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to read the device ID from MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unused </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000007"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
+</xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unused </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000008"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="return"><para>returns return value of method spi_transceive (0 no error, otherwise error code)</para>
+</simplesect>
+Function initializes transmit and receive buffer, set the read Device ID OP code command CMD_RDID and read the device ID by calling function spi_transceive. See MRAM data sheet, page 12ff for OP code commands and page 22 for device ID. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="80" column="9" bodyfile="drv/spi/mram.cpp" bodystart="359" bodyend="375"/>
+        <references refid="classspimram_1a27c6a2208e765fdc6dce110f890f62ba" compoundref="mram_8h" startline="126">CMD_RDID</references>
+        <references refid="classspimram_1af055b4b148c703eaeda1bedfeda907ae" compoundref="mram_8h" startline="133">id</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" compoundref="mram_8cpp" startline="572" endline="586">getDeviceId</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a3b4493540590f441cae894bea51d5e17" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_bytes</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint32_t addr, uint8_t *data, size_t len)</argsstring>
+        <name>read_bytes</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to read multiple bytes to MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for reading the data from MRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function read the data calling function mram_access with OP code command CMD_READ. In case of an error function returns error code, otherwise returns 0 for success indication. See MB85RS4MTY data sheet, page 12ff. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="82" column="9" bodyfile="drv/spi/mram.cpp" bodystart="146" bodyend="158"/>
+        <references refid="classspimram_1adae436778867d75213af0895f4e04638" compoundref="mram_8h" startline="114">CMD_READ</references>
+        <references refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" compoundref="mram_8cpp" startline="318" endline="340">mram_access</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1abe711231d06a16e60c4b48c336ddee16" compoundref="mram_8cpp" startline="764" endline="766">readBytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1aaccd14e38a401a9979170c5addc43e29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_bytes</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint32_t addr, const uint8_t *data, size_t len)</argsstring>
+        <name>write_bytes</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to write multiple bytes to MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Startaddress for writing the data in MRAM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to array for the data to be written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function enable writing by calling function send_command with OP code command CMD_WREN. In case of an error function returns immediately with error code, otherwise the data will be written by calling function mram_access with OP code command CMD_WRTE. In case of an error function returns error code, otherwise returns 0 for indication success. See MRAM data sheet, page 12ff. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="84" column="9" bodyfile="drv/spi/mram.cpp" bodystart="179" bodyend="195"/>
+        <references refid="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" compoundref="mram_8h" startline="118">CMD_WREN</references>
+        <references refid="classspimram_1af977da597f5db3f6e482e8f3bc468acb" compoundref="mram_8h" startline="112">CMD_WRTE</references>
+        <references refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" compoundref="mram_8cpp" startline="318" endline="340">mram_access</references>
+        <references refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" compoundref="mram_8cpp" startline="287" endline="294">send_command</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" compoundref="mram_8cpp" startline="747" endline="749">writeBytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a4b5e60928853a99f55e507c03d082960" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_status_reg</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, const uint8_t *data)</argsstring>
+        <name>write_status_reg</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Function to write MRAM status register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data array to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function switch on MRAM power supply by calling member function power_on. In case of an error function returns with error code, otherwise it enable writing by calling function send_command with OP code command CMD_WREN. In case of an error function returns immediately with error code, otherwise the status register will be written by calling function mram_access with OP code command CMD_WRAR. In case of an error function returns error code, otherwise returns 0 for indication success. See MRAM data sheet, page 12ff. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="87" column="9" bodyfile="drv/spi/mram.cpp" bodystart="216" bodyend="232"/>
+        <references refid="classspimram_1aabd869221f35a6681844b3d5d3063808" compoundref="mram_8h" startline="124">CMD_WRAR</references>
+        <references refid="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" compoundref="mram_8h" startline="118">CMD_WREN</references>
+        <references refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" compoundref="mram_8cpp" startline="318" endline="340">mram_access</references>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" compoundref="mram_8cpp" startline="287" endline="294">send_command</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int write_config1_reg</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, const uint8_t *data)</argsstring>
+        <name>write_config1_reg</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Function to write MRAM configuration register 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data array to be written</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function switch on MRAM power supply by calling member function power_on. In case of an error function returns with error code, otherwise it enable writing by calling function send_command with OP code command CMD_WREN. In case of an error function returns immediately with error code, otherwise the configuration register 1 will be written by calling function mram_access with OP code command CMD_WRAR. In case of an error function returns error code, otherwise returns 0 for indication success. See MRAM data sheet, page 12ff. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="89" column="9" bodyfile="drv/spi/mram.cpp" bodystart="253" bodyend="270"/>
+        <references refid="classspimram_1aabd869221f35a6681844b3d5d3063808" compoundref="mram_8h" startline="124">CMD_WRAR</references>
+        <references refid="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" compoundref="mram_8h" startline="118">CMD_WREN</references>
+        <references refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" compoundref="mram_8cpp" startline="318" endline="340">mram_access</references>
+        <references refid="classspimram_1af1f8781e94de62b193539c9513be36a2" compoundref="mram_8cpp" startline="119" endline="127">power_off</references>
+        <references refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" compoundref="mram_8cpp" startline="97" endline="107">power_on</references>
+        <references refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" compoundref="mram_8cpp" startline="287" endline="294">send_command</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a4c258e05757b678d415740cfe2d9c592" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int enter_deep_power_down</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg)</argsstring>
+        <name>enter_deep_power_down</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <briefdescription>
+<para>Function to enter deep power down mode of MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return code of function send_command</para>
+</simplesect>
+The function send the command CMD_DPD_ENTER to enter deep power down mode to MRAM by calling member function send_command. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="91" column="9" bodyfile="drv/spi/mram.cpp" bodystart="458" bodyend="463"/>
+        <references refid="classspimram_1a7d38cabe409955bac035631fe0e06ea5" compoundref="mram_8h" startline="128">CMD_DPD_ENTER</references>
+        <references refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" compoundref="mram_8cpp" startline="287" endline="294">send_command</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" compoundref="mram_8cpp" startline="783" endline="791">sleep</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int exit_deep_power_down</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg)</argsstring>
+        <name>exit_deep_power_down</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <briefdescription>
+<para>Function to exit deep power down mode of MRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns return code of function send_command</para>
+</simplesect>
+The function send the command CMD_DPD_EXIT to exit deep power down mode to MRAM by calling member function send_command. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="93" column="9" bodyfile="drv/spi/mram.cpp" bodystart="477" bodyend="482"/>
+        <references refid="classspimram_1adba761d9088a954deccb8a97349f685e" compoundref="mram_8h" startline="130">CMD_DPD_EXIT</references>
+        <references refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" compoundref="mram_8cpp" startline="287" endline="294">send_command</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" compoundref="mram_8cpp" startline="808" endline="816">wakeup</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1a181ae46b639fd08007a4349fba1b853d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_status_reg</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</argsstring>
+        <name>read_status_reg</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>id_buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to read MRAM status register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNUSED </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
+</xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNUSED </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function initializes transmit and receive buffer, set the read read status register ID OP code command CMD_RDSR and read the status register by calling function spi_transceive. See MRAM data sheet, page 12ff for OP code commands and page 15 for status register. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="95" column="9" bodyfile="drv/spi/mram.cpp" bodystart="393" bodyend="409"/>
+        <references refid="classspimram_1afe28f2f1929d428f6fab150257120a0b" compoundref="mram_8h" startline="116">CMD_RDSR</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <references refid="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" compoundref="mram_8h" startline="145">status_reg</references>
+        <referencedby refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" compoundref="mram_8cpp" startline="601" endline="616">getStatusRegVal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_config1_reg</definition>
+        <argsstring>(const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</argsstring>
+        <name>read_config1_reg</name>
+        <param>
+          <type>const struct device *</type>
+          <declname>spi</declname>
+        </param>
+        <param>
+          <type>struct spi_config *</type>
+          <declname>spi_cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>id_buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to read MRAM configuration register 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI device node identifier of type struct device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spi_cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI controller configuration structure of type struct spi_config </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNUSED </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
+</xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UNUSED </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000012"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
+</simplesect>
+Function initializes transmit and receive buffer, set the read read configuration register 1 ID OP code command CMD_RDC1 and read the configuration register 1 by calling function spi_transceive. See MRAM data sheet, page 12ff for OP code commands and page 17 for configuration register 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/mram.h" line="97" column="9" bodyfile="drv/spi/mram.cpp" bodystart="428" bodyend="444"/>
+        <references refid="classspimram_1aebb461a2e2057c9e18f7bc4408dcd54d" compoundref="mram_8h" startline="120">CMD_RDC1</references>
+        <references refid="classspimram_1a30c9df0ab1132585c97c219b1a136658" compoundref="mram_8h" startline="159">config1_reg</references>
+        <references refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" compoundref="mram_8h" startline="162">spi_cfg</references>
+        <referencedby refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" compoundref="mram_8cpp" startline="631" endline="646">getConfig1RegVal</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SPI MRAM class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The SPI MRAM class handle the storage of the acceleration raw data in MRAM. It provides methods to initialize and erase MRAM, to read and write the data, to push MRAM into power saving mode or release from it, to dump the data and to read and ship the devcie ID. </para>
+</simplesect>
+<xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system.</para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>struct spi_config *</label>
+      </node>
+      <node id="2">
+        <label>const struct gpio_dt_spec</label>
+      </node>
+      <node id="1">
+        <label>spimram</label>
+        <link refid="classspimram"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-power_gpio</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-spi_cfg</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-power_delay_usec</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-CMD_DPD_ENTER</edgelabel>
+          <edgelabel>-CMD_DPD_EXIT</edgelabel>
+          <edgelabel>-CMD_RDAR</edgelabel>
+          <edgelabel>-CMD_RDC1</edgelabel>
+          <edgelabel>-CMD_RDID</edgelabel>
+          <edgelabel>-CMD_RDSR</edgelabel>
+          <edgelabel>-CMD_READ</edgelabel>
+          <edgelabel>-CMD_WRAR</edgelabel>
+          <edgelabel>-CMD_WREN</edgelabel>
+          <edgelabel>-CMD_WRSR</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-spi_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>uint32_t</label>
+      </node>
+      <node id="5">
+        <label>uint8_t</label>
+      </node>
+      <node id="6">
+        <label>const struct device *</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/spi/mram.h" line="53" column="1" bodyfile="drv/spi/mram.h" bodystart="53" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classspimram_1a7d38cabe409955bac035631fe0e06ea5" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_DPD_ENTER</name></member>
+      <member refid="classspimram_1adba761d9088a954deccb8a97349f685e" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_DPD_EXIT</name></member>
+      <member refid="classspimram_1a6a54e87e2f90c0ca53d3d012fb883974" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_RDAR</name></member>
+      <member refid="classspimram_1aebb461a2e2057c9e18f7bc4408dcd54d" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_RDC1</name></member>
+      <member refid="classspimram_1a27c6a2208e765fdc6dce110f890f62ba" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_RDID</name></member>
+      <member refid="classspimram_1afe28f2f1929d428f6fab150257120a0b" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_RDSR</name></member>
+      <member refid="classspimram_1adae436778867d75213af0895f4e04638" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_READ</name></member>
+      <member refid="classspimram_1aabd869221f35a6681844b3d5d3063808" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_WRAR</name></member>
+      <member refid="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_WREN</name></member>
+      <member refid="classspimram_1a554f398888f5c215ad5e631339ef2804" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_WRSR</name></member>
+      <member refid="classspimram_1af977da597f5db3f6e482e8f3bc468acb" prot="private" virt="non-virtual"><scope>spimram</scope><name>CMD_WRTE</name></member>
+      <member refid="classspimram_1a30c9df0ab1132585c97c219b1a136658" prot="private" virt="non-virtual"><scope>spimram</scope><name>config1_reg</name></member>
+      <member refid="classspimram_1ad1859b447a9f871ccbe660b0df4c5768" prot="public" virt="non-virtual"><scope>spimram</scope><name>dump</name></member>
+      <member refid="classspimram_1a4c258e05757b678d415740cfe2d9c592" prot="private" virt="non-virtual"><scope>spimram</scope><name>enter_deep_power_down</name></member>
+      <member refid="classspimram_1af139f30d28b7dc61f5051c0d595af368" prot="public" virt="non-virtual"><scope>spimram</scope><name>erase</name></member>
+      <member refid="classspimram_1a3ff4d48173e8f1800f6f569f77b4b35e" prot="public" virt="non-virtual"><scope>spimram</scope><name>erase</name></member>
+      <member refid="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" prot="private" virt="non-virtual"><scope>spimram</scope><name>exit_deep_power_down</name></member>
+      <member refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" prot="public" virt="non-virtual"><scope>spimram</scope><name>getConfig1RegVal</name></member>
+      <member refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" prot="public" virt="non-virtual"><scope>spimram</scope><name>getDeviceId</name></member>
+      <member refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" prot="public" virt="non-virtual"><scope>spimram</scope><name>getStatusRegVal</name></member>
+      <member refid="classspimram_1af055b4b148c703eaeda1bedfeda907ae" prot="private" virt="non-virtual"><scope>spimram</scope><name>id</name></member>
+      <member refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>spimram</scope><name>init</name></member>
+      <member refid="classspimram_1aedb792a1bff701ec260dfcb7b49ca4a5" prot="public" virt="non-virtual"><scope>spimram</scope><name>inst</name></member>
+      <member refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" prot="private" virt="non-virtual"><scope>spimram</scope><name>mram_access</name></member>
+      <member refid="classspimram_1afc1e96f581f0d7eaee421c1bf6f506b8" prot="private" virt="non-virtual"><scope>spimram</scope><name>power_delay_usec</name></member>
+      <member refid="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" prot="private" virt="non-virtual"><scope>spimram</scope><name>power_gpio</name></member>
+      <member refid="classspimram_1af1f8781e94de62b193539c9513be36a2" prot="public" virt="non-virtual"><scope>spimram</scope><name>power_off</name></member>
+      <member refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" prot="public" virt="non-virtual"><scope>spimram</scope><name>power_on</name></member>
+      <member refid="classspimram_1a3b4493540590f441cae894bea51d5e17" prot="private" virt="non-virtual"><scope>spimram</scope><name>read_bytes</name></member>
+      <member refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" prot="private" virt="non-virtual"><scope>spimram</scope><name>read_config1_reg</name></member>
+      <member refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" prot="private" virt="non-virtual"><scope>spimram</scope><name>read_device_id</name></member>
+      <member refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" prot="private" virt="non-virtual"><scope>spimram</scope><name>read_status_reg</name></member>
+      <member refid="classspimram_1abe711231d06a16e60c4b48c336ddee16" prot="public" virt="non-virtual"><scope>spimram</scope><name>readBytes</name></member>
+      <member refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" prot="private" virt="non-virtual"><scope>spimram</scope><name>send_command</name></member>
+      <member refid="classspimram_1a612a64d4a29763d8a055b397a5ecf7ab" prot="public" virt="non-virtual"><scope>spimram</scope><name>setPowerOnDelay</name></member>
+      <member refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" prot="public" virt="non-virtual"><scope>spimram</scope><name>sleep</name></member>
+      <member refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" prot="private" virt="non-virtual"><scope>spimram</scope><name>spi_cfg</name></member>
+      <member refid="classspimram_1a0861409233820f636c44759f690cae93" prot="private" virt="non-virtual"><scope>spimram</scope><name>spi_dev</name></member>
+      <member refid="classspimram_1a66c05174e928d7b8cf235eeca26e8e87" prot="private" virt="non-virtual"><scope>spimram</scope><name>spimram</name></member>
+      <member refid="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" prot="private" virt="non-virtual"><scope>spimram</scope><name>status_reg</name></member>
+      <member refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" prot="public" virt="non-virtual"><scope>spimram</scope><name>wakeup</name></member>
+      <member refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" prot="private" virt="non-virtual"><scope>spimram</scope><name>write_bytes</name></member>
+      <member refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" prot="private" virt="non-virtual"><scope>spimram</scope><name>write_config1_reg</name></member>
+      <member refid="classspimram_1a4b5e60928853a99f55e507c03d082960" prot="private" virt="non-virtual"><scope>spimram</scope><name>write_status_reg</name></member>
+      <member refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" prot="public" virt="non-virtual"><scope>spimram</scope><name>writeBytes</name></member>
+      <member refid="classspimram_1a5554be202f1923f4f14c1b1c179dc1c3" prot="public" virt="non-virtual"><scope>spimram</scope><name>~spimram</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

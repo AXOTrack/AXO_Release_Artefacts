@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="spibus_8h" kind="file" language="C++">
+    <compoundname>spibus.h</compoundname>
+    <includes local="no">zephyr/drivers/spi.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="spibus_8cpp" local="yes">bus/spi/spibus.cpp</includedby>
+    <includedby refid="adxl__store_8h" local="yes">data/adxl_store.h</includedby>
+    <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
+    <includedby refid="fram_8cpp" local="yes">drv/spi/fram.cpp</includedby>
+    <includedby refid="fram_8h" local="yes">drv/spi/fram.h</includedby>
+    <includedby refid="mram_8h" local="yes">drv/spi/mram.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>zephyr/drivers/spi.h</label>
+      </node>
+      <node id="1">
+        <label>bus/spi/spibus.h</label>
+        <link refid="spibus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>bus/spi/spibus.cpp</label>
+        <link refid="spibus_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="12">
+        <label>drv/spi/fram.h</label>
+        <link refid="fram_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>drv/spi/fram.cpp</label>
+        <link refid="fram_8cpp"/>
+      </node>
+      <node id="13">
+        <label>drv/spi/mram.h</label>
+        <link refid="mram_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="6">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="1">
+        <label>bus/spi/spibus.h</label>
+        <link refid="spibus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="8">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="14">
+        <label>drv/spi/mram.cpp</label>
+        <link refid="mram_8cpp"/>
+      </node>
+      <node id="9">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="10">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classspibus" prot="public">spibus</innerclass>
+    <briefdescription>
+<para>Header file of SPI bus driver class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="spibus_8h_1SpiBus"/> <simplesect kind="par"><title>Detailed Description </title><para>Devices communicating via SPI are in a master-slave relationship. The master is the controlling device (usually a microcontroller), while the slave (usually a sensor, display, or memory chip) takes instruction from the master. One master can control more than one slave. <linebreak/>
+ SPI uses four wires: <itemizedlist>
+<listitem>
+<para>MOSI (Master Output/Slave Input) – Line for the master to send data to the slave. </para>
+</listitem>
+<listitem>
+<para>MISO (Master Input/Slave Output) – Line for the slave to send data to the master. </para>
+</listitem>
+<listitem>
+<para>SCLK (Clock) – Line for the clock signal. </para>
+</listitem>
+<listitem>
+<para>CS (Chip Select) – Line for the master to select which slave to send data to.</para>
+</listitem>
+</itemizedlist>
+<linebreak/>
+ <bold>Steps of SPI Data Transmission:</bold> <linebreak/>
+ <image type="html" name="SPI1.png" inline="yes"></image>
+ Step 1. The master outputs the clock signal <image type="html" name="SPI2.png" inline="yes"></image>
+ Step 2. The master switches the CS pin to a low voltage state, which activates the slave The slave reads the bits as they are received <image type="html" name="SPI3.png" inline="yes"></image>
+ Step 3. The master sends the data one bit at a time to the slave along the MOSI line. along the MISO line. The master reads the bits as they are received <image type="html" name="SPI4.png" inline="yes"></image>
+ Step 4. If a response is needed, the slave returns data one bit at a time to the master <linebreak/>
+ <linebreak/>
+ <subscript>Source: <ulink url="https://www.circuitbasics.com/basics-of-the-spi-communication-protocol">https://www.circuitbasics.com/basics-of-the-spi-communication-protocol</ulink></subscript> <linebreak/>
+ <linebreak/>
+ Acceleration sensor ADXL372 and FRAM are connected via the SPI bus with the nRF9160. ADXL372 is connected as SPI slave 2 (spi2) and FRAM as SPI slave 3 (spi3). The implementation uses the <ulink url="https://docs.zephyrproject.org/latest/kernel/drivers/index.html">Zephyr Device Driver Model</ulink>. Major part of the configuration and initialization of the SPI bus and the SPI slave devices are defined in the device tree files nrf9160dk_switch_common.dts and nrf9160dk_switch_common-pinctrl.dtsi. See <ulink url="https://docs.zephyrproject.org/latest/build/dts/api/bindings/spi/nordic,nrf-spi.html">https://docs.zephyrproject.org/latest/build/dts/api/bindings/spi/nordic,nrf-spi.html</ulink> for details of node properties.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_BUS_SPI_SPIBUS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_BUS_SPI_SPIBUS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_BUS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/spi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#ifdef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/drv/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/bus/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classspibus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classspibus" kindref="compound">spibus</ref><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspibus_1a19985700cffec9c3a4d3d7283fb2d87a" kindref="member">~spibus</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classspibus" kindref="compound">spibus</ref>*<sp/><ref refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="89" refid="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" kindref="member">getController</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classspibus_1a0861409233820f636c44759f690cae93" kindref="member">spi_dev</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="90" refid="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">spi_config*<sp/><ref refid="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" kindref="member">getConfig</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="classspibus_1a401e92d4e6afa09344209ed0b2f05a57" kindref="member">spi_cfg</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classspibus_1afad61703dae34fa9946e730854d5d8d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="classspibus_1a0861409233820f636c44759f690cae93" kindref="member">spi_dev</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">spi_config<sp/><ref refid="classspibus_1a401e92d4e6afa09344209ed0b2f05a57" kindref="member">spi_cfg</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">spi_cs_control<sp/><ref refid="classspibus_1afad61703dae34fa9946e730854d5d8d8" kindref="member">cs_ctrl</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspibus_1a63713c6cc302c1bb9c68da575139bf83" kindref="member">spibus</ref>();</highlight></codeline>
+<codeline lineno="98" refid="classspibus_1ac28675e9f599e4310cf860d8cd396cea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classspibus_1ac28675e9f599e4310cf860d8cd396cea" kindref="member">init_done</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="classspibus_1ae7065952827f83f9d9ce4a42e8dba281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classspibus_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_BUS_SPI_SPIBUS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="bus/spi/spibus.h"/>
+  </compounddef>
+</doxygen>

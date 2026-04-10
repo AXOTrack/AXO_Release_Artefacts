@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_cfg_general" kind="struct" language="C++" prot="public">
+    <compoundname>_stCfgGeneral</compoundname>
+    <includes refid="config_8h" local="no">config.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_cfg_general_1a9b45b3e13bd9167aab02e17e08916231" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Name of the device class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="164" column="13" bodyfile="conf/config.h" bodystart="164" bodyend="-1"/>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_cfg_general_1a75b160f574a0be26114bae2c7686a5e1" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Type of the device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="165" column="13" bodyfile="conf/config.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+<para>Version of the configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="166" column="13" bodyfile="conf/config.h" bodystart="166" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for general related dynamic configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>_stCfgGeneral</label>
+        <link refid="struct__st_cfg_general"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+name</edgelabel>
+          <edgelabel>+type</edgelabel>
+          <edgelabel>+version</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="conf/config.h" line="163" column="1" bodyfile="conf/config.h" bodystart="163" bodyend="167"/>
+    <listofallmembers>
+      <member refid="struct__st_cfg_general_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>_stCfgGeneral</scope><name>name</name></member>
+      <member refid="struct__st_cfg_general_1a75b160f574a0be26114bae2c7686a5e1" prot="public" virt="non-virtual"><scope>_stCfgGeneral</scope><name>type</name></member>
+      <member refid="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" prot="public" virt="non-virtual"><scope>_stCfgGeneral</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

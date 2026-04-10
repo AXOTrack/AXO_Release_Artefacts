@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hw__metrics_8cpp" kind="file" language="C++">
+    <compoundname>hw_metrics.cpp</compoundname>
+    <includes refid="hw__metrics_8h" local="yes">data/hw_metrics.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes local="no">zephyr/sys/sys_heap.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="mpool_8h" local="yes">rtos/mpool.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="18">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="1">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="19">
+        <label>string.h</label>
+      </node>
+      <node id="14">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>zephyr/sys/ring_buffer.h</label>
+      </node>
+      <node id="2">
+        <label>data/hw_metrics.h</label>
+        <link refid="hw__metrics_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="17">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>zephyr/sys/sys_heap.h</label>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hw__metrics_8cpp_1acfee5358f7bb72d1bf26cf503834f993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(hwmetrics, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type><ref refid="main_8cpp_1a6577614d9be42bce724bb27a9bc6bc51" kindref="member">hwmetrics</ref></type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.cpp" line="33" column="1" declfile="data/hw_metrics.cpp" declline="33" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of <ref refid="class_hw_metrics" kindref="compound">HwMetrics</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="hw__metrics_8h_1hw_metrics" kindref="member">hw_metrics</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hw__metrics_8h" kindref="compound">data/hw_metrics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/sys_heap.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpool_8h" kindref="compound">rtos/mpool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="hw__metrics_8cpp_1acfee5358f7bb72d1bf26cf503834f993" refkind="member"><highlight class="normal"><ref refid="hw__metrics_8cpp_1acfee5358f7bb72d1bf26cf503834f993" kindref="member">LOG_MODULE_REGISTER</ref>(<ref refid="main_8cpp_1a6577614d9be42bce724bb27a9bc6bc51" kindref="member">hwmetrics</ref>,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" kindref="member">HwMetrics::report</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HwMetrics::report&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" kindref="member">Mbox::sendMsg</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" kindref="member">msgType::eHwMetrics</ref>,<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" kindref="member">Mbox::MboxId::eHwMetrics</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mbox::MboxId::eDataManager,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint8_t*)<sp/>&amp;<ref refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" kindref="member">metrics</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structhw__metrics" kindref="compound">hw_metrics</ref>));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" kindref="member">HwMetrics::HandleHwStatusAdxl37x</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;HwMetrics:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HandleHwStatusAdxl37x&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhw__metrics" kindref="compound">hw_metrics</ref>*<sp/>hw_m<sp/>=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhw__metrics" kindref="compound">hw_metrics</ref>*)pElem-&gt;<ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" kindref="member">metrics</ref>.<ref refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" kindref="member">hw_status</ref><sp/>=<sp/>hw_m-&gt;<ref refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" kindref="member">hw_status</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hw_m-&gt;<ref refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" kindref="member">hw_status</ref><sp/>==<sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8af215c6ea9d04fafde73b2673b72e0f49" kindref="member">eHwFailure</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" kindref="member">metrics</ref>.<ref refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" kindref="member">num_errors</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" kindref="member">metrics</ref>.<ref refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" kindref="member">num_errors</ref><sp/>=<sp/>hw_m-&gt;<ref refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" kindref="member">num_errors</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" refkind="member"><highlight class="normal"><ref refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" kindref="member">HwMetrics::HwMetrics</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)<sp/>:<sp/><ref refid="class_task" kindref="compound">Task</ref>(name)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;HwMetrics:<sp/>HwMetrics<sp/>this:<sp/>%p<sp/>name:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>(name);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" kindref="member">Mbox::registerMbox</ref>(<ref refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501aa843b3f2ac3a19d86c6458d34f9dde8b" kindref="member">Mbox::eHwMetrics</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_hw_metrics_1ae61ab46a96f1567e2d70afc4d2f0b36f" refkind="member"><highlight class="normal"><ref refid="class_hw_metrics_1ae61ab46a96f1567e2d70afc4d2f0b36f" kindref="member">HwMetrics::~HwMetrics</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;HwMetrics::~HwMetrics<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">HwMetrics::task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;HwMetrics::task<sp/>this:<sp/>%p<sp/>myName:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s<sp/>waiting<sp/>for<sp/>messages&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem<sp/>=<sp/><ref refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>-&gt;<ref refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pElem)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pElem-&gt;Dump();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf000aa89d3688b0800056b25d85aa1c" kindref="member">eHwReport</ref>:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HwMetrics::Forward<sp/>msg<sp/>eHwReport&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>to<sp/>Adxl73xTask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" kindref="member">Mbox::send</ref>(pElem,<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501adf216f84add395cce5f0564ed8beda08" kindref="member">Mbox::eAdxl37xTask</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pElem<sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>prevent<sp/>free(),<sp/>receiver<sp/>task<sp/>will<sp/>do<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7574a17690f3fe5b7db8ff3ad15daea3" kindref="member">eHwStatusAdxl37x</ref>:</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" kindref="member">metrics</ref>.<ref refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" kindref="member">num_errors</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" kindref="member">HandleHwStatusAdxl37x</ref>(pElem);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" kindref="member">report</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;unexpected<sp/>message<sp/>(%d)&quot;</highlight><highlight class="normal">,<sp/>pElem-&gt;<ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pElem)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pElem-&gt;<ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" kindref="member">UNIT_TEST_STOP_LOOP</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="data/hw_metrics.cpp"/>
+  </compounddef>
+</doxygen>

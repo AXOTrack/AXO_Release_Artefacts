@@ -1,0 +1,12 @@
+<map id="mram_access" name="mram_access">
+<area shape="rect" id="node1" title="Function to access MRAM for reading and writing." alt="" coords="409,81,513,108"/>
+<area shape="rect" id="node2" href="$classspimram.html#a3b4493540590f441cae894bea51d5e17" title="Function to read multiple bytes to MRAM." alt="" coords="257,5,343,32"/>
+<area shape="rect" id="node5" href="$classspimram.html#aaccd14e38a401a9979170c5addc43e29" title="Function to write multiple bytes to MRAM." alt="" coords="256,56,344,83"/>
+<area shape="rect" id="node8" href="$classspimram.html#a366ab51ac1f5201dda5779fe12b2a52b" title="Function to write MRAM configuration register 1." alt="" coords="239,107,361,133"/>
+<area shape="rect" id="node10" href="$classspimram.html#a4b5e60928853a99f55e507c03d082960" title="Function to write MRAM status register." alt="" coords="241,157,359,184"/>
+<area shape="rect" id="node3" href="$classspimram.html#abe711231d06a16e60c4b48c336ddee16" title="Function to read multiple bytes from MRAM." alt="" coords="109,5,190,32"/>
+<area shape="rect" id="node4" href="$classspimram.html#ad1859b447a9f871ccbe660b0df4c5768" title="Function to print the content of the MRAM in a terminal." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node6" href="$classspimram.html#ab9d179e656fc5552c392b174d03457f2" title="Function to write multiple bytes into MRAM." alt="" coords="108,56,191,83"/>
+<area shape="rect" id="node7" href="$classspimram.html#af139f30d28b7dc61f5051c0d595af368" title="Function to erase the content of the MRAM." alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node9" href="$classspimram.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The initialization function of the SPI MRAM class." alt="" coords="130,132,169,159"/>
+</map>

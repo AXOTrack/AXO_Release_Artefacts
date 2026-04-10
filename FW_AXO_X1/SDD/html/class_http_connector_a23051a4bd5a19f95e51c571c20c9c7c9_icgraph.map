@@ -1,0 +1,6 @@
+<map id="http_connect" name="http_connect">
+<area shape="rect" id="node1" title="Function to create a socket stream and send a HTTP connect request." alt="" coords="352,31,449,57"/>
+<area shape="rect" id="node2" href="$class_http_connector.html#a29908d64354956f5a5f4dbe67041e92c" title="Function to initiate the displacement data transmission to the host." alt="" coords="100,5,304,32"/>
+<area shape="rect" id="node4" href="$class_http_connector.html#ac2afd18be5d01c5b8183757e7843beca" title="Function to initiate the raw data transmission to the host." alt="" coords="101,56,303,83"/>
+<area shape="rect" id="node3" href="$class_http_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="HTTP connector task function." alt="" coords="5,31,52,57"/>
+</map>

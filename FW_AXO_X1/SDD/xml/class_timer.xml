@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_timer" kind="class" language="C++" prot="public">
+    <compoundname>Timer</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_timer_1ada26f13d709bdab75b0edad1bb47d872" prot="protected" static="no" mutable="no">
+        <type>struct k_timer</type>
+        <definition>struct k_timer timer_handle</definition>
+        <argsstring></argsstring>
+        <name>timer_handle</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> administration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="46" column="10" bodyfile="rtos/timer.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">start</referencedby>
+        <referencedby refid="class_timer_1a8c528baf37154d347366083f0f816846" compoundref="timer_8cpp" startline="101" endline="104">stop</referencedby>
+        <referencedby refid="class_timer_1a502e6de158eedd4ec29fba39572f4ca0" compoundref="timer_8cpp" startline="51" endline="60">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_1a49f89df0e765bee620c337c51d397eff" prot="protected" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> duration in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="50" column="14" bodyfile="rtos/timer.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_timer_1a0c4565c97488da56e47736f7b693407b" compoundref="timer_8cpp" startline="126" endline="129">reconfigure</referencedby>
+        <referencedby refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">start</referencedby>
+        <referencedby refid="class_timer_1a502e6de158eedd4ec29fba39572f4ca0" compoundref="timer_8cpp" startline="51" endline="60">Timer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_timer_1a81b43df06332b4fef558297592bb7ff1" prot="protected" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t period</definition>
+        <argsstring></argsstring>
+        <name>period</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> period for cyclic timer in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="51" column="14" bodyfile="rtos/timer.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_timer_1a0c4565c97488da56e47736f7b693407b" compoundref="timer_8cpp" startline="126" endline="129">reconfigure</referencedby>
+        <referencedby refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">start</referencedby>
+        <referencedby refid="class_timer_1a502e6de158eedd4ec29fba39572f4ca0" compoundref="timer_8cpp" startline="51" endline="60">Timer</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_timer_1a502e6de158eedd4ec29fba39572f4ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Timer</definition>
+        <argsstring>(k_timer_expiry_t cb, void *pUser, uint32_t duration, uint32_t period=0)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type>k_timer_expiry_t</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pUser</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expiry callback function of type k_timer_expiry_t </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pUser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the owner of the timer (normally this pointer of task) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> duration in seconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> period in seconds for cyclic timer, default is 0 (not a cyclic timer)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor initializes a timer, prior to its first use by calling function k_timer_init provided by the operating system, which assign the expiry callback function and returns the timer administration structure timer_handle. It set the owner of the timer by calling function k_timer_user_data_set also provided by the operating system and initializes the protected varaibles duration and period. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="38" column="5" bodyfile="rtos/timer.cpp" bodystart="51" bodyend="60"/>
+        <references refid="class_timer_1a49f89df0e765bee620c337c51d397eff" compoundref="timer_8h" startline="50">duration</references>
+        <references refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" compoundref="timer_8h" startline="51">period</references>
+        <references refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" compoundref="timer_8h" startline="49">timer_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a6004025d2ecf76d515770885b02640d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Timer</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="40" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a7837d31d1aeda174eb9e3fdb625a73f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="41" column="13" bodyfile="rtos/timer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a60de64d75454385b23995437f1d72669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> start function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function starts a timer by calling function k_timer_start provided by the operating system, with the protected varaibles duration and period assigned by the constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="42" column="10" bodyfile="rtos/timer.cpp" bodystart="69" bodyend="74"/>
+        <references refid="class_timer_1a49f89df0e765bee620c337c51d397eff" compoundref="timer_8h" startline="50">duration</references>
+        <references refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" compoundref="timer_8h" startline="51">period</references>
+        <references refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" compoundref="timer_8h" startline="49">timer_handle</references>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">MqttConnector::connect</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HttpConnector::HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector::HttpConnector</referencedby>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+        <referencedby refid="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" compoundref="timer_8cpp" startline="111" endline="115">restart</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1acf548f75f0d8ee18592f9d641c69c2f7" compoundref="update__ctrl_8cpp" startline="93" endline="96">FwUpdCtrl::startRebootTimer</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1a37177c6f6e9271bc6ed124518209357e" compoundref="update__ctrl_8cpp" startline="108" endline="118">FwUpdCtrl::startRetryTimer</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1a6a1385149594b164e59fcfe124454c78" compoundref="update__ctrl_8cpp" startline="127" endline="131">FwUpdCtrl::startTimeout</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">LteConnector::task</referencedby>
+        <referencedby refid="class_power_mgr_x1_1ab71d737dc66dac5a81a5240f5493b9db" compoundref="power__mgr__x1_8cpp" startline="219" endline="227">PowerMgrX1::taskInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a618a39b19e431d51e6b79c741e04094f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start</definition>
+        <argsstring>(uint32_t duration, uint32_t period)</argsstring>
+        <name>start</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> start function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> duration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> period for cyclic timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function starts a timer by calling function k_timer_start provided by the operating system. Duration and period will be overloaded by the parameter of the function and stored the protected varaibles duration and period. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="43" column="10" bodyfile="rtos/timer.cpp" bodystart="86" bodyend="93"/>
+        <references refid="class_timer_1a49f89df0e765bee620c337c51d397eff" compoundref="timer_8h" startline="50">duration</references>
+        <references refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" compoundref="timer_8h" startline="51">period</references>
+        <references refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" compoundref="timer_8h" startline="49">timer_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a8c528baf37154d347366083f0f816846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> stop function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function stops a timer by calling function k_timer_stop provided by the operating system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="44" column="10" bodyfile="rtos/timer.cpp" bodystart="101" bodyend="104"/>
+        <references refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" compoundref="timer_8h" startline="49">timer_handle</references>
+        <referencedby refid="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" compoundref="timer_8cpp" startline="111" endline="115">restart</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void restart</definition>
+        <argsstring>()</argsstring>
+        <name>restart</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> restart function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function restarts a timer by calling the member functions stop and start. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="45" column="10" bodyfile="rtos/timer.cpp" bodystart="111" bodyend="115"/>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">start</references>
+        <references refid="class_timer_1a8c528baf37154d347366083f0f816846" compoundref="timer_8cpp" startline="101" endline="104">stop</references>
+      </memberdef>
+      <memberdef kind="function" id="class_timer_1a0c4565c97488da56e47736f7b693407b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reconfigure</definition>
+        <argsstring>(uint32_t duration, uint32_t period)</argsstring>
+        <name>reconfigure</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> reconfigure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New timer duration </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New timer period for cyclic timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function reconfigure the values for duration and period with the given parameter values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/timer.h" line="46" column="10" bodyfile="rtos/timer.cpp" bodystart="126" bodyend="129"/>
+        <references refid="class_timer_1a49f89df0e765bee620c337c51d397eff" compoundref="timer_8h" startline="50">duration</references>
+        <references refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" compoundref="timer_8h" startline="51">period</references>
+        <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">PowerMgr::configure</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for software timer support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The timer class implements a C++ wrapper of the timer API provided by the Zephyr operating system. See details in Zephyr <linebreak/>
+ <ulink url="https://docs.zephyrproject.org/latest/kernel/services/timing/timers.html">timer documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__timer__apis.html">API documentation</ulink>. The timer class provides methods to start and stop timers. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uint32_t</label>
+      </node>
+      <node id="3">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/timer.h" line="36" column="1" bodyfile="rtos/timer.h" bodystart="36" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_timer_1a49f89df0e765bee620c337c51d397eff" prot="protected" virt="non-virtual"><scope>Timer</scope><name>duration</name></member>
+      <member refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" prot="protected" virt="non-virtual"><scope>Timer</scope><name>period</name></member>
+      <member refid="class_timer_1a0c4565c97488da56e47736f7b693407b" prot="public" virt="non-virtual"><scope>Timer</scope><name>reconfigure</name></member>
+      <member refid="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" prot="public" virt="non-virtual"><scope>Timer</scope><name>restart</name></member>
+      <member refid="class_timer_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>Timer</scope><name>start</name></member>
+      <member refid="class_timer_1a618a39b19e431d51e6b79c741e04094f" prot="public" virt="non-virtual"><scope>Timer</scope><name>start</name></member>
+      <member refid="class_timer_1a8c528baf37154d347366083f0f816846" prot="public" virt="non-virtual"><scope>Timer</scope><name>stop</name></member>
+      <member refid="class_timer_1a502e6de158eedd4ec29fba39572f4ca0" prot="public" virt="non-virtual"><scope>Timer</scope><name>Timer</name></member>
+      <member refid="class_timer_1a6004025d2ecf76d515770885b02640d4" prot="public" virt="non-virtual"><scope>Timer</scope><name>Timer</name></member>
+      <member refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" prot="protected" virt="non-virtual"><scope>Timer</scope><name>timer_handle</name></member>
+      <member refid="class_timer_1a7837d31d1aeda174eb9e3fdb625a73f5" prot="public" virt="virtual"><scope>Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

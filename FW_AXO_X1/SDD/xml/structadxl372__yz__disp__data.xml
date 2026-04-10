@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structadxl372__yz__disp__data" kind="struct" language="C++" prot="public">
+    <compoundname>adxl372_yz_disp_data</compoundname>
+    <includes refid="adxl__store_8h" local="no">adxl_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structadxl372__yz__disp__data_1af64066d134a77e01b3d6eb8da813627a" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>y value of intermediate (S) and final displacement result D after detrending. All have 32-bit Q16 format (6,26) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="70" column="9" bodyfile="data/adxl_store.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl372__yz__disp__data_1abd938edbea27ed4f351dc19d69039222" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>measured z value of the acceleration data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="72" column="13" bodyfile="data/adxl_store.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure containing the y, and z values of the acceleration data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>int16_t</label>
+      </node>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+      <node id="1">
+        <label>adxl372_yz_disp_data</label>
+        <link refid="structadxl372__yz__disp__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+y</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/adxl_store.h" line="68" column="1" bodyfile="data/adxl_store.h" bodystart="68" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structadxl372__yz__disp__data_1af64066d134a77e01b3d6eb8da813627a" prot="public" virt="non-virtual"><scope>adxl372_yz_disp_data</scope><name>y</name></member>
+      <member refid="structadxl372__yz__disp__data_1abd938edbea27ed4f351dc19d69039222" prot="public" virt="non-virtual"><scope>adxl372_yz_disp_data</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

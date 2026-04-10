@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Software documentation - AXO Track GmbH - AXO X1 Firmware 2023</title>
+    <tableofcontents>
+      <tocsect>
+        <name>Service Information</name>
+        <reference>indexpage_1service_info</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Document Version and History</name>
+        <reference>indexpage_1doc_version</reference>
+    </tocsect>
+      <tocsect>
+        <name>Contact</name>
+        <reference>indexpage_1contact</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>General Description</name>
+        <reference>indexpage_1gen_desc</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>1. Introduction</name>
+        <reference>indexpage_1intro_sec</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>1.1. Purpose</name>
+        <reference>indexpage_1intro_pur</reference>
+    </tocsect>
+      <tocsect>
+        <name>1.2. Scope</name>
+        <reference>indexpage_1intro_sco</reference>
+    </tocsect>
+      <tocsect>
+        <name>1.3. Definitions, acronyms and abbreviations</name>
+        <reference>indexpage_1intro_def</reference>
+    </tocsect>
+      <tocsect>
+        <name>1.4. File Overview</name>
+        <reference>indexpage_1intro_ove</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>2. Project Environment and Tools</name>
+        <reference>indexpage_1project_env</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>2.1. Hardware</name>
+        <reference>indexpage_1dev_chip</reference>
+    </tocsect>
+      <tocsect>
+        <name>2.2. Operating System</name>
+        <reference>indexpage_1dev_os</reference>
+    </tocsect>
+      <tocsect>
+        <name>2.1. Software development tools</name>
+        <reference>indexpage_1dev_toolchain</reference>
+    </tocsect>
+      <tocsect>
+        <name>2.3. Test Tools</name>
+        <reference>indexpage_1dev_test</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+    </tableofcontents>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1service_info">
+<title>Service Information</title>
+<sect2 id="index_1doc_version">
+<title>Document Version and History</title>
+<para><simplesect kind="version"><para>1.1.1</para>
+</simplesect>
+<simplesect kind="par"><title>History </title><para></para>
+</simplesect>
+<table rows="6" cols="4"><row>
+<entry thead="yes"><para>Version</para>
+</entry><entry thead="yes"><para>Description</para>
+</entry><entry thead="yes"><para>Author</para>
+</entry><entry thead="yes"><para>Date </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0.0.1</para>
+</entry><entry thead="no"><para>Initial version</para>
+</entry><entry thead="no"><para>A. Stenger </para>
+</entry><entry thead="no"><para>01.12.2023 </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1.0.0</para>
+</entry><entry thead="no"><para>First completed version, current SW release 1.4 </para>
+</entry><entry thead="no"><para>A. Stenger</para>
+</entry><entry thead="no"><para>22.12.2023 </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1.0.1</para>
+</entry><entry thead="no"><para>Added raw data transmission feature </para>
+</entry><entry thead="no"><para>A. Stenger</para>
+</entry><entry thead="no"><para>26.02.2024 </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1.1.1</para>
+</entry><entry thead="no"><para>Adapted structure for X1, X1G and mini </para>
+</entry><entry thead="no"><para>A. Stenger</para>
+</entry><entry thead="no"><para>11.07.2024 </para>
+</entry></row>
+<row>
+<entry thead="no"><para></para>
+</entry><entry thead="no"><para></para>
+</entry><entry thead="no"><para></para>
+</entry><entry thead="no"><para></para>
+</entry></row>
+</table>
+</para>
+</sect2>
+<sect2 id="index_1contact">
+<title>Contact</title>
+<para>AXO Track GmbH <linebreak/>
+Bachstraße 12 <linebreak/>
+D-10555 Berlin <linebreak/>
+email: <ulink url="mailto:info@axotrack.de">info@axotrack.de</ulink> <linebreak/>
+<ulink url="https://axotrack.de">www.axotrack.de</ulink> <hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1gen_desc">
+<title>General Description</title>
+<sect2 id="index_1intro_sec">
+<title>1. Introduction</title>
+<sect3 id="index_1intro_pur">
+<title>1.1. Purpose</title>
+<para>This document describes the software detailed design (SDD) of the application &quot;AXO X1&quot; for the measurement of accelerometer data of company Next Big Thing AG.</para>
+</sect3>
+<sect3 id="index_1intro_sco">
+<title>1.2. Scope</title>
+<para>This document is intended for the people programming and testing the software of the AXO X1.</para>
+</sect3>
+<sect3 id="index_1intro_def">
+<title>1.3. Definitions, acronyms and abbreviations</title>
+<para><table rows="20" cols="2"><row>
+<entry thead="yes"><para>Abbreviation </para>
+</entry><entry thead="yes"><para>Description  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>CID </para>
+</entry><entry thead="no"><para>Cell-ID  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>DRX </para>
+</entry><entry thead="no"><para>Discontinuous Reception  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>ECDSA </para>
+</entry><entry thead="no"><para>Elliptic Curve Digital Signature Algorithm  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>HTTP </para>
+</entry><entry thead="no"><para>Hypertext Transfer Protocol  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>HTTPS </para>
+</entry><entry thead="no"><para>Hypertext Transfer Protocol Secure  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>JSON </para>
+</entry><entry thead="no"><para>JavaScript Object Notation  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>LTE </para>
+</entry><entry thead="no"><para>Long Term Evolution  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>MQTT </para>
+</entry><entry thead="no"><para>Message Queuing Telemetry Transport  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>PDN </para>
+</entry><entry thead="no"><para>Packet Data Network  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>PDP </para>
+</entry><entry thead="no"><para>Packet Data Protocol  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>PSM </para>
+</entry><entry thead="no"><para>Power Saving Mode  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>PWM </para>
+</entry><entry thead="no"><para>Pulse Width Modulation  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>RMS </para>
+</entry><entry thead="no"><para>Root Mean Square  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>RRC </para>
+</entry><entry thead="no"><para>Radio Resource Control  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>RTC </para>
+</entry><entry thead="no"><para>Real Time Clock  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>SHA </para>
+</entry><entry thead="no"><para>Secure <ref refid="class_hash" kindref="compound">Hash</ref> Algorithm  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>SPI </para>
+</entry><entry thead="no"><para>Serial Peripheral Interface  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>TAU </para>
+</entry><entry thead="no"><para>Tracking Area Update  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>TLS </para>
+</entry><entry thead="no"><para>Transport Layer Security  </para>
+</entry></row>
+</table>
+</para>
+</sect3>
+<sect3 id="index_1intro_ove">
+<title>1.4. File Overview</title>
+<para>All software modules/files can be found here: <ulink url="files.html"><bold>Modules/Files</bold></ulink> <hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1project_env">
+<title>2. Project Environment and Tools</title>
+<sect3 id="index_1dev_chip">
+<title>2.1. Hardware</title>
+<para><itemizedlist>
+<listitem><para>*Microchip** <linebreak/>
+AXO X1 hardware uses <ulink url="https://infocenter.nordicsemi.com/pdf/nRF9160_PS_v2.0.pdf">nRF9160 microchip</ulink> from Nordic Semicondutor with integrated LTE modem <linebreak/>
+ <bold>Acceleration Sensor</bold> <linebreak/>
+Acceleration Sensor used is <ulink url="https://www.analog.com/media/en/technical-documentation/data-sheets/adxl372.pdf">ADXL372</ulink> from Analog Devices</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Humidity and Temperature Sensor</bold> <linebreak/>
+Humidity and Temperature Sensor used is <ulink url="https://sensirion.com/media/documents/643F9C8E/63A5A436/Datasheet_SHTC3.pdf">SHTC3</ulink> from Sensirion Sensor Company</para>
+<para><bold>FRAM</bold> <linebreak/>
+FRAM (Ferroelectric Random Access Memory) chip used is Fujitsu Semicondutor <ulink url="https://www.mouser.com/datasheet/2/1113/MB85RS4MTY_DS501_00065_0v1_E-2329189.pdf">MB85RS4MTY</ulink> with 512 KByte memory and SPI interface</para>
+<para><bold>Boost Converter</bold> <linebreak/>
+As boost converter <ulink url="https://www.mouser.com/datasheet/2/760/XC9145-3178685.pdf">XC9145</ulink> step-up DC/DC converter of Torex Semiconductor is used</para>
+<para><bold>Schematic</bold> <ulink url="file://./Prometheus_for_AxoTrack_Mk5.4rn.pdf">Prometheus_for_AxoTrack_Mk5.4rn.pdf</ulink></para>
+</sect3>
+<sect3 id="index_1dev_os">
+<title>2.2. Operating System</title>
+<para>As operating system <ulink url="https://www.zephyrproject.org/">Zephyr RTOS</ulink> is used in AXO X1 project, used version is 3.2.99.</para>
+</sect3>
+<sect3 id="index_1dev_toolchain">
+<title>2.1. Software development tools</title>
+<para>Visual Studio Code is used as development environment. The environment can be seup in a docker container or plain on an Linux Ubuntu 10.04 computer. Environment setup process is explained in detail <ulink url="https://github.com/next-big-thing-ag/prometheus-xl-firmware">AXO GitHub repository main page</ulink> <simplesect kind="note"><para>Setting up the docker container under windows will fail, because link generation is part of the setup process and is designed only for Linus links.</para>
+</simplesect>
+</para>
+</sect3>
+<sect3 id="index_1dev_test">
+<title>2.3. Test Tools</title>
+<para>AXO X1 firmware uses the Zephyr test framework <ulink url="https://docs.zephyrproject.org/latest/develop/test/ztest.html">Ztest</ulink>. For code coverage gcc tool <ulink url="https://gcovr.com/en/stable/guide.html">gcov</ulink> is used.</para>
+<para><hruler/>
+ </para>
+</sect3>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="main.h"/>
+  </compounddef>
+</doxygen>

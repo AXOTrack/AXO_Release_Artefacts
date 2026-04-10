@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_fw_state.html" title="State base class." alt="" coords="5,81,76,108"/>
+<area shape="rect" id="node2" href="$class_fw_download.html" title="Firmware download state class derived from base class FwState." alt="" coords="124,5,219,32"/>
+<area shape="rect" id="node3" href="$class_fw_idle.html" title="Idle state class derived from base class FwState." alt="" coords="142,56,201,83"/>
+<area shape="rect" id="node4" href="$class_fw_ready.html" title="Ready state class derived from base class FwState." alt="" coords="133,107,209,133"/>
+<area shape="rect" id="node5" href="$class_fw_triggered.html" title="Triggered state class derived from base class FwState." alt="" coords="125,157,217,184"/>
+</map>

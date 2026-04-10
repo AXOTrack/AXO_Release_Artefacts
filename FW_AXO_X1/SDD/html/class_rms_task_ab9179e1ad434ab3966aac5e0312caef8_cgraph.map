@@ -1,0 +1,17 @@
+<map id="update_rms" name="update_rms">
+<area shape="rect" id="node1" title="Function to update the RMS and hit values and send result to RMS storage task." alt="" coords="5,107,96,133"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="157,5,294,32"/>
+<area shape="rect" id="node3" href="$class_hit_detector.html#a97024cd8a7fd0e3745e7f01b69cae87e" title=" " alt="" coords="144,56,307,83"/>
+<area shape="rect" id="node4" href="$class_rms_task.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function for the RMS task." alt="" coords="206,107,245,133"/>
+<area shape="rect" id="node6" href="$class_hit_detector.html#a5d27da9908456967f0c2cd14b5369ca3" title="Function checks if sample z fullfills hit detection condition." alt="" coords="164,157,287,184"/>
+<area shape="rect" id="node7" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="168,208,283,235"/>
+<area shape="rect" id="node5" href="$class_hit_detector.html#ad20897c5c8bd47f5d4005989bead0e55" title="Reset method to clear hit counter." alt="" coords="370,107,494,133"/>
+<area shape="rect" id="node8" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="355,157,509,184"/>
+<area shape="rect" id="node10" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="381,208,483,235"/>
+<area shape="rect" id="node11" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="387,259,477,285"/>
+<area shape="rect" id="node9" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="561,157,692,184"/>
+<area shape="rect" id="node12" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="557,233,696,260"/>
+<area shape="rect" id="node13" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="582,284,671,311"/>
+<area shape="rect" id="node14" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="744,259,864,285"/>
+<area shape="rect" id="node15" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="755,309,853,336"/>
+</map>

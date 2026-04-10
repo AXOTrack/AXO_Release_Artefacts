@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structshtcx__sensor__value" kind="struct" language="C++" prot="public">
+    <compoundname>shtcx_sensor_value</compoundname>
+    <includes refid="shtcx_8h" local="no">shtcx.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structshtcx__sensor__value_1ae48906eccf1d54afe96c1ceecd34b716" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t val1</definition>
+        <argsstring></argsstring>
+        <name>val1</name>
+        <briefdescription>
+<para>Integer part of the value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="43" column="13" bodyfile="drv/i2c/shtcx.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshtcx__sensor__value_1af4dea61c7974b13086e3198f531bad9b" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t val2</definition>
+        <argsstring></argsstring>
+        <name>val2</name>
+        <briefdescription>
+<para>Fractional part of the value (in one-millionth parts). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="44" column="13" bodyfile="drv/i2c/shtcx.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshtcx__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t ts</definition>
+        <argsstring></argsstring>
+        <name>ts</name>
+        <briefdescription>
+<para>Timestamp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="45" column="12" bodyfile="drv/i2c/shtcx.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1accd2600060dbaee3a3b41aed4034c63c" compoundref="shtcx_8cpp" startline="138" endline="148">Shtcx::dump</referencedby>
+        <referencedby refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" compoundref="shtcx_8cpp" startline="193" endline="210">Shtcx::readHumidity</referencedby>
+        <referencedby refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" compoundref="shtcx_8cpp" startline="162" endline="179">Shtcx::readTemperature</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure representing a SHCTX sensor value. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>int32_t</label>
+      </node>
+      <node id="1">
+        <label>shtcx_sensor_value</label>
+        <link refid="structshtcx__sensor__value"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+ts</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+val1</edgelabel>
+          <edgelabel>+val2</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>time_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/i2c/shtcx.h" line="42" column="1" bodyfile="drv/i2c/shtcx.h" bodystart="42" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structshtcx__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" prot="public" virt="non-virtual"><scope>shtcx_sensor_value</scope><name>ts</name></member>
+      <member refid="structshtcx__sensor__value_1ae48906eccf1d54afe96c1ceecd34b716" prot="public" virt="non-virtual"><scope>shtcx_sensor_value</scope><name>val1</name></member>
+      <member refid="structshtcx__sensor__value_1af4dea61c7974b13086e3198f531bad9b" prot="public" virt="non-virtual"><scope>shtcx_sensor_value</scope><name>val2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

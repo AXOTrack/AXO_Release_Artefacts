@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="theme-green">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>GCC Code Coverage Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="coverage.css"/>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>GCC Code Coverage Report</h1>
+      <hr/>
+      <div class="summary">
+<div>
+  <table class="legend">
+    <tr>
+      <th scope="row">Directory:</th>
+      <td>./</td>
+    </tr>
+    <tr>
+      <th scope="row">Date:</th>
+      <td>2025-09-24 12:54:55</td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <table class="coverage">
+    <tr>
+      <th></th>
+      <th scope="col">Exec</th>
+      <th scope="col">Total</th>
+      <th scope="col">Coverage</th>
+    </tr>
+    <tr>
+      <th scope="row">Lines:</th>
+      <td>1034</td>
+      <td>1034</td>
+      <td class="coverage-high">100.0%</td>
+    </tr>
+    <tr>
+      <th scope="row">Functions:</th>
+      <td>77</td>
+      <td>77</td>
+      <td class="coverage-high">100.0%</td>
+    </tr>
+    <tr>
+      <th scope="row">Branches:</th>
+      <td>301</td>
+      <td>317</td>
+      <td class="coverage-high">95.0%</td>
+    </tr>
+  </table>
+</div>
+      </div>
+      <hr/>
+    </header>
+    <nav>
+    </nav>
+    <main>
+<table class="listOfFunctions">
+  <tr>
+    <th>Function (File:Line)</th>
+    <th>Call count</th>
+    <th>Block coverage</th>
+  </tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l400">HttpConnector::BuildDataHeader(_eDataType) (http_connector.cpp:400)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l797">HttpConnector::HandleAdxlIdleInd(PoolElem*) (http_connector.cpp:797)</a></td><td>called 8 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l760">HttpConnector::HandleRawDataStatus(PoolElem*) (http_connector.cpp:760)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l641">HttpConnector::HandleRcvdData(PoolElem*, unsigned short) (http_connector.cpp:641)</a></td><td>called 6 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l732">HttpConnector::HandleRcvdDispData(PoolElem*) (http_connector.cpp:732)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l695">HttpConnector::HandleRcvdRawData(PoolElem*) (http_connector.cpp:695)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l72">HttpConnector::HttpConnector(char const*) (http_connector.cpp:72)</a></td><td>called 70 times</td><td>87.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l1145">HttpConnector::HttpDispDataSend(shell const*, unsigned int, char**) (http_connector.cpp:1145)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l1127">HttpConnector::HttpRawDataSend(shell const*, unsigned int, char**) (http_connector.cpp:1127)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l363">HttpConnector::SendHttpPostHeader(_eDataType) (http_connector.cpp:363)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l459">HttpConnector::SendSignatureFrame(std::__cxx11::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;&amp;, unsigned char) (http_connector.cpp:459)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l434">HttpConnector::SendSingleDataFrame(unsigned char*, unsigned int) (http_connector.cpp:434)</a></td><td>called 7 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l523">HttpConnector::StartHttpDispDataTransmission() (http_connector.cpp:523)</a></td><td>called 3 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l491">HttpConnector::StartHttpRawDataTransmission() (http_connector.cpp:491)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l158">HttpConnector::blocking_connect(int, sockaddr*, unsigned int) (http_connector.cpp:158)</a></td><td>called 12 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l218">HttpConnector::blocking_recv(int, unsigned char*, unsigned int, unsigned int) (http_connector.cpp:218)</a></td><td>called 7 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l188">HttpConnector::blocking_send(int, unsigned char*, unsigned int, unsigned int) (http_connector.cpp:188)</a></td><td>called 18 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l115">HttpConnector::configure() (http_connector.cpp:115)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l865">HttpConnector::delayTimer_cb(k_timer*) (http_connector.cpp:865)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l880">HttpConnector::delayTimer_expired() (http_connector.cpp:880)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l309">HttpConnector::http_connect() (http_connector.cpp:309)</a></td><td>called 9 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l852">HttpConnector::http_disconnect() (http_connector.cpp:852)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l897">HttpConnector::oneDayTimer_cb(k_timer*) (http_connector.cpp:897)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l912">HttpConnector::oneDayTimer_expired() (http_connector.cpp:912)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l569">HttpConnector::reqData(msgType) (http_connector.cpp:569)</a></td><td>called 5 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l608">HttpConnector::reqDispData() (http_connector.cpp:608)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l597">HttpConnector::reqRawData() (http_connector.cpp:597)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l551">HttpConnector::reqRawDataStatus() (http_connector.cpp:551)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l982">HttpConnector::task() (http_connector.cpp:982)</a></td><td>called 43 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l250">HttpConnector::tls_setup(int) (http_connector.cpp:250)</a></td><td>called 10 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.http_connector.cpp.3013848509401f16ec7894c1798fac22.html#l95">HttpConnector::~HttpConnector() (http_connector.cpp:95)</a></td><td>called 138 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l230">LteConnector::LteConnector(char const*) (lte_connector.cpp:230)</a></td><td>called 18 times</td><td>88.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l68">LteConnector::lte_event_handler(lte_lc_evt const*) (lte_connector.cpp:68)</a></td><td>called 20 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l312">LteConnector::notify(msgType) (lte_connector.cpp:312)</a></td><td>called 5 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l179">LteConnector::pdn_event_handler(unsigned char, pdn_event, int) (lte_connector.cpp:179)</a></td><td>called 6 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l340">LteConnector::registerListener(Mbox*) (lte_connector.cpp:340)</a></td><td>called 3 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l294">LteConnector::sendMsg2OwnMbox(msgType) (lte_connector.cpp:294)</a></td><td>called 9 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l405">LteConnector::task() (lte_connector.cpp:405)</a></td><td>called 13 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l279">LteConnector::timer1_expired() (lte_connector.cpp:279)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l264">LteConnector::timer_cb(k_timer*) (lte_connector.cpp:264)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.lte_connector.cpp.d96a062e229d4e322f8a6c88bb2924fb.html#l251">LteConnector::~LteConnector() (lte_connector.cpp:251)</a></td><td>called 36 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l874">MqttConnector::HandleBoostOffReq(PoolElem*) (mqtt_connector.cpp:874)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l854">MqttConnector::HandleBoostOnReq(PoolElem*) (mqtt_connector.cpp:854)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l834">MqttConnector::HandleColdStartReq(PoolElem*) (mqtt_connector.cpp:834)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l917">MqttConnector::HandleDisableADXL(PoolElem*) (mqtt_connector.cpp:917)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l938">MqttConnector::HandleEnableADXL(PoolElem*) (mqtt_connector.cpp:938)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l812">MqttConnector::HandleFactoryDefault(PoolElem*) (mqtt_connector.cpp:812)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l896">MqttConnector::HandleFsErase(PoolElem*) (mqtt_connector.cpp:896)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l976">MqttConnector::HandleFsStatus() (mqtt_connector.cpp:976)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l959">MqttConnector::HandleGetConfig() (mqtt_connector.cpp:959)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l662">MqttConnector::HandleNewConfiguration(PoolElem*) (mqtt_connector.cpp:662)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l535">MqttConnector::MqttConnector(char const*) (mqtt_connector.cpp:535)</a></td><td>called 58 times</td><td>87.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l778">MqttConnector::PublishAcceptedResponse(PoolElem*, char const*) (mqtt_connector.cpp:778)</a></td><td>called 11 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l747">MqttConnector::PublishAcceptedResponse(char const*, unsigned char*) (mqtt_connector.cpp:747)</a></td><td>called 13 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l697">MqttConnector::PublishData(char const*, unsigned char*) (mqtt_connector.cpp:697)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l794">MqttConnector::PublishRejectedResponse(PoolElem*, char const*) (mqtt_connector.cpp:794)</a></td><td>called 3 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l762">MqttConnector::PublishRejectedResponse(char const*, unsigned char*) (mqtt_connector.cpp:762)</a></td><td>called 3 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l722">MqttConnector::PublishResponse(char const*, unsigned char*, char const*) (mqtt_connector.cpp:722)</a></td><td>called 16 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l519">MqttConnector::abort() (mqtt_connector.cpp:519)</a></td><td>called 8 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l393">MqttConnector::cmd_subscribe() (mqtt_connector.cpp:393)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l417">MqttConnector::config_subscribe() (mqtt_connector.cpp:417)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l603">MqttConnector::configure() (mqtt_connector.cpp:603)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l449">MqttConnector::connect() (mqtt_connector.cpp:449)</a></td><td>called 7 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l506">MqttConnector::disconnect() (mqtt_connector.cpp:506)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l429">MqttConnector::getDeviceId() (mqtt_connector.cpp:429)</a></td><td>called 58 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l87">MqttConnector::on_connack(mqtt_conn_return_code) (mqtt_connector.cpp:87)</a></td><td>called 2 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l112">MqttConnector::on_disconnect(int) (mqtt_connector.cpp:112)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l296">MqttConnector::on_puback(unsigned short, int) (mqtt_connector.cpp:296)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l163">MqttConnector::on_publish(mqtt_helper_buf, mqtt_helper_buf) (mqtt_connector.cpp:163)</a></td><td>called 23 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l312">MqttConnector::on_suback(unsigned short, int) (mqtt_connector.cpp:312)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l405">MqttConnector::ota_subscribe() (mqtt_connector.cpp:405)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l336">MqttConnector::publish(payload*, topic*) (mqtt_connector.cpp:336)</a></td><td>called 24 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l370">MqttConnector::subscribe(unsigned char const*) (mqtt_connector.cpp:370)</a></td><td>called 4 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l1352">MqttConnector::task() (mqtt_connector.cpp:1352)</a></td><td>called 50 times</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l636">MqttConnector::timer1_expired() (mqtt_connector.cpp:636)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l621">MqttConnector::timer_cb(k_timer*) (mqtt_connector.cpp:621)</a></td><td>called 1 time</td><td>100.0%</td></tr>
+  <tr><td><a href="coverage.mqtt_connector.cpp.46e2e3de9d97d5c0f060592d926f4102.html#l590">MqttConnector::~MqttConnector() (mqtt_connector.cpp:590)</a></td><td>called 114 times</td><td>100.0%</td></tr>
+</table>
+
+      <hr/>
+    </main>
+    <footer>
+      Generated by: <a href="http://gcovr.com/en/8.3">GCOVR (Version 8.3)</a>
+    </footer>
+  </body>
+</html>

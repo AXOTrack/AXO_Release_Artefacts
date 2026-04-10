@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="keygen_8h" kind="file" language="C++">
+    <compoundname>keygen.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="pdata_8cpp" local="yes">data/pdata.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
+    <includedby refid="keygen_8cpp" local="yes">util/keygen.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>util/keygen.h</label>
+        <link refid="keygen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>util/keygen.h</label>
+        <link refid="keygen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="7">
+        <label>util/keygen.cpp</label>
+        <link refid="keygen_8cpp"/>
+      </node>
+      <node id="4">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="5">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_key_gen" prot="public">KeyGen</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="keygen_8h_1a031777abf525fc89df9f249e0e604936" prot="public" static="no">
+        <name>PRIVATE_KEY_FILENAME</name>
+        <initializer>&quot;/lfs/private_key.pem&quot;</initializer>
+        <briefdescription>
+<para>Definition of the private key file name and location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="42" column="9" bodyfile="util/keygen.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" prot="public" static="no">
+        <name>PUBLIC_KEY_FILENAME</name>
+        <initializer>&quot;/lfs/public_key.pem&quot;</initializer>
+        <briefdescription>
+<para>Definition of the public key file name and location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="44" column="9" bodyfile="util/keygen.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="keygen_8h_1ab6697b69019c0100c3a2ebf9c7f3e3d6" prot="public" static="no">
+        <name>KEY_TRANSFERED_FILENAME</name>
+        <initializer>&quot;/lfs/key_transfered.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition of the indicator file name and location. If file exist key is still transfered to MQTT server </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="47" column="9" bodyfile="util/keygen.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of TLS key generation class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="keygen_8h_1keygen"/> <simplesect kind="par"><title>Detailed Description </title><para>AXO software use <ulink url="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">Elliptic Curve Digital Signature Algorithm (ECDSA)</ulink>. for signing the calculated hash checksum for the data transfer of raw and displacement data via HTTP. On server side these signature and hash checksum will be verified to ensure:<itemizedlist>
+<listitem><para>a) the correctness of the received data</para>
+</listitem><listitem><para>b) the validity of the sender identity <linebreak/>
+ The software use the <ulink url="https://github.com/Mbed-TLS/mbedtls">mbedtls crypto library</ulink>. For a detailed documentation see <ulink url="https://mbed-tls.readthedocs.io/en/latest/kb/how-to/mbedtls-tutorial/">Mbed TLS tutorial</ulink>. <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_KEYGEN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_KEYGEN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="keygen_8h_1a031777abf525fc89df9f249e0e604936" refkind="member"><highlight class="preprocessor">#define<sp/>PRIVATE_KEY_FILENAME<sp/>&quot;/lfs/private_key.pem&quot;</highlight></codeline>
+<codeline lineno="44" refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" refkind="member"><highlight class="preprocessor">#define<sp/>PUBLIC_KEY_FILENAME<sp/>&quot;/lfs/public_key.pem&quot;</highlight></codeline>
+<codeline lineno="47" refid="keygen_8h_1ab6697b69019c0100c3a2ebf9c7f3e3d6" refkind="member"><highlight class="preprocessor">#define<sp/>KEY_TRANSFERED_FILENAME<sp/>&quot;/lfs/key_transfered.txt&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_key_gen" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_key_gen" kindref="compound">KeyGen</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_key_gen_1aaec6852936a3f479264893b7f1170d4d" kindref="member">~KeyGen</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_key_gen" kindref="compound">KeyGen</ref>*<sp/><ref refid="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1a034b50f5527541d0a731c70ed03e7519" kindref="member">bIsKeyTransfered</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" kindref="member">setKeyTransfered</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1af604e6567f39709f20a2b949bf34b9fa" kindref="member">resetKeyTransfered</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" kindref="member">getPublicKey</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" kindref="member">getPrivateKey</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1a290303ddeb22987037be90caca412f85" kindref="member">deleteKeyFiles</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1a1b66535fadf3a11fef6115b676e27a78" kindref="member">printKey</ref>(std::string<sp/>key);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_key_gen_1a263dfd11badf0bd1e85853033a878ca1" kindref="member">KeyGen</ref>();</highlight></codeline>
+<codeline lineno="85" refid="class_key_gen_1ad194270dfee83e3660c59945947f0764" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1ad194270dfee83e3660c59945947f0764" kindref="member">keygen_done</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" kindref="member">transfer_done</ref>;<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_key_gen_1a1b66535fadf3a11fef6115b676e27a78" kindref="member">printKey</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_KEYGEN_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="util/keygen.h"/>
+  </compounddef>
+</doxygen>

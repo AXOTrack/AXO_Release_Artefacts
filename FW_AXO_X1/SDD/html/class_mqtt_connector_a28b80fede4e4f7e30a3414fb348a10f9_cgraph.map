@@ -1,0 +1,12 @@
+<map id="HandleNewConfiguration" name="HandleNewConfiguration">
+<area shape="rect" id="node1" title="Handler function for new incoming JSON configuration." alt="" coords="5,183,168,209"/>
+<area shape="rect" id="node2" href="$class_config.html#a4530f1c50511acfe103d8788a85d3500" title="Function to automatically correct invalid configuration values." alt="" coords="230,56,381,83"/>
+<area shape="rect" id="node6" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="237,107,374,133"/>
+<area shape="rect" id="node7" href="$class_config.html#a9b3a6fc9e2b45eac27ab8bc00231bd87" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="262,157,349,184"/>
+<area shape="rect" id="node8" href="$class_reset_ctrl.html#a6c639dcc49b79a7610d1925749cc2359" title="Convenience function to perform a SW reset." alt="" coords="216,208,395,235"/>
+<area shape="rect" id="node9" href="$class_mqtt_connector.html#afd64f589c503525f02261a850b822527" title="The publish method of MQTT connector class." alt="" coords="274,259,337,285"/>
+<area shape="rect" id="node10" href="$class_config.html#a7b0b73b517a5c380220f46d722f4481b" title="Function to store JSON configuration string in file system." alt="" coords="242,309,369,336"/>
+<area shape="rect" id="node3" href="$class_config.html#abbed406bd7169794eed499057c17142e" title="Function to retrieve a single value from a JSON group object." alt="" coords="443,5,560,32"/>
+<area shape="rect" id="node4" href="$class_config.html#a774b533b0a7a6ba5dbe9214642f04245" title="Function to write object representation from memory to input string." alt="" coords="455,56,547,83"/>
+<area shape="rect" id="node5" href="$class_config.html#ae06cb6427fcd926b24a5def4fb459e3f" title="Function to store a single value in a JSON group object." alt="" coords="443,107,560,133"/>
+</map>

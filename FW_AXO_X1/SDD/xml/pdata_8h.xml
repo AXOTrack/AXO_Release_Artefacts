@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pdata_8h" kind="file" language="C++">
+    <compoundname>pdata.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes refid="measurement_8h" local="yes">data/measurement.h</includes>
+    <includes refid="metric_8h" local="yes">data/metric.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="pdata_8cpp" local="yes">data/pdata.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>data/rms_store.h</label>
+        <link refid="rms__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>data/measurement.h</label>
+        <link refid="measurement_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>data/pdata.h</label>
+        <link refid="pdata_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>data/metric.h</label>
+        <link refid="metric_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="4">
+        <label>zephyr/drivers/sensor.h</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>data/pdata.h</label>
+        <link refid="pdata_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_data_manager" prot="public">DataManager</innerclass>
+    <briefdescription>
+<para>Header file of data manager class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="pdata_8h_1pdata"/> <simplesect kind="par"><title>Detailed Description </title><para>The data mamager received metrics and measurement data from various tasks in the system, build the JSON strings for metrics and measurement topic and send these strings to the MQTT connnector task, which publish them to the MQTT broker. See <ref refid="mqtt__connector_8h_1mqtt_connector" kindref="member">mqtt_connector</ref>.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_PDATA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_PDATA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DATA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="measurement_8h" kindref="compound">data/measurement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="metric_8h" kindref="compound">data/metric.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/data2/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_data_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_data_manager" kindref="compound">DataManager</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1ac2d09b38680ac9a38866e3eeb93f9d3d" kindref="member">DataManager</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" kindref="member">have_mqtt_connector</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66" refid="class_data_manager_1ac2d09b38680ac9a38866e3eeb93f9d3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data_manager_1ac2d09b38680ac9a38866e3eeb93f9d3d" kindref="member">DataManager</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1a6fbfb5f67ba6ffa1f6feed3679bf827d" kindref="member">~DataManager</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75" refid="class_data_manager_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_data_manager_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref><sp/><ref refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" kindref="member">metrics</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref><sp/><ref refid="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" kindref="member">measurements</ref>;</highlight></codeline>
+<codeline lineno="83" refid="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" kindref="member">have_mqtt_connector</ref>;</highlight></codeline>
+<codeline lineno="86" refid="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" kindref="member">bDispModeOff</ref>;</highlight></codeline>
+<codeline lineno="89" refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" kindref="member">rms_z_thres</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" kindref="member">publishMeasurements</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" kindref="member">publishMetrics</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_PDATA_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/pdata.h"/>
+  </compounddef>
+</doxygen>

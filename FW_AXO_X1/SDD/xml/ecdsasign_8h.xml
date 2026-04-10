@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ecdsasign_8h" kind="file" language="C++">
+    <compoundname>ecdsasign.h</compoundname>
+    <includes local="no">mbedtls/ctr_drbg.h</includes>
+    <includes local="no">mbedtls/pk.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="ecdsasign_8cpp" local="yes">util/ecdsasign.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>util/ecdsasign.h</label>
+        <link refid="ecdsasign_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mbedtls/ctr_drbg.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>mbedtls/pk.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>util/ecdsasign.h</label>
+        <link refid="ecdsasign_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>util/ecdsasign.cpp</label>
+        <link refid="ecdsasign_8cpp"/>
+      </node>
+      <node id="2">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_e_c_d_s_a_signer" prot="public">ECDSASigner</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ecdsasign_8h_1a5aa2d0d5fbab5781b7d27d1d60e4fab2" prot="public" static="no">
+        <name>MAX_SIGNATURE_LEN</name>
+        <initializer>72</initializer>
+        <briefdescription>
+<para>the maximal length of the generated signature </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/ecdsasign.h" line="46" column="9" bodyfile="util/ecdsasign.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of ECDSA signing class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="ecdsasign_8h_1ecdsa"/> <simplesect kind="par"><title>Detailed Description </title><para>AXO software use <ulink url="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">Elliptic Curve Digital Signature Algorithm (ECDSA)</ulink>. for signing the calculated hash checksum for the data transfer of raw and displacement data via HTTP. On server side these signature and hash checksum will be verified to ensure:<itemizedlist>
+<listitem><para>a) the correctness of the received data</para>
+</listitem><listitem><para>b) the validity of the sender identity <linebreak/>
+ The software use the <ulink url="https://github.com/Mbed-TLS/mbedtls">mbedtls crypto library</ulink>. For a detailed documentation see <ulink url="https://mbed-tls.readthedocs.io/en/latest/kb/how-to/mbedtls-tutorial/">Mbed TLS tutorial</ulink>. <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_ECDSASIGN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_ECDSASIGN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_UTIL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;mbedtls/ctr_drbg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;mbedtls/pk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&quot;../../tests/util/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="ecdsasign_8h_1a5aa2d0d5fbab5781b7d27d1d60e4fab2" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_SIGNATURE_LEN<sp/>72</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_e_c_d_s_a_signer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_e_c_d_s_a_signer" kindref="compound">ECDSASigner</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_e_c_d_s_a_signer_1a14ec82be453b64ab603d3285eec2b43f" kindref="member">~ECDSASigner</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_e_c_d_s_a_signer" kindref="compound">ECDSASigner</ref>*<sp/><ref refid="class_e_c_d_s_a_signer_1a51e26c47c395412d648054c040300163" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_c_d_s_a_signer_1ac6bf3c6917d0ae57fc81c4de5378492b" kindref="member">setPrivateKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>pemKey);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_e_c_d_s_a_signer_1a9b3c2dc9b287d66e779dc199c1bb9ba3" kindref="member">signHash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hashLen);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_c_d_s_a_signer_1a6f3747059314021b44be07498f4f7187" kindref="member">printSignature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>signature);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_e_c_d_s_a_signer_1a7e978182df21fad006a232d231c13aaf" kindref="member">ECDSASigner</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="class_e_c_d_s_a_signer_1a6a0158fab362fa830848b1bc5dff7da4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_pk_context<sp/><ref refid="class_e_c_d_s_a_signer_1a6a0158fab362fa830848b1bc5dff7da4" kindref="member">pk</ref>;<sp/></highlight></codeline>
+<codeline lineno="80" refid="class_e_c_d_s_a_signer_1a8cd92353613502fb837c645e6e72076b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_ctr_drbg_context<sp/><ref refid="class_e_c_d_s_a_signer_1a8cd92353613502fb837c645e6e72076b" kindref="member">ctr_drbg</ref>;<sp/></highlight></codeline>
+<codeline lineno="81" refid="class_e_c_d_s_a_signer_1ae7ee94bd6572ecf4a26dab023cc55b62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_e_c_d_s_a_signer_1ae7ee94bd6572ecf4a26dab023cc55b62" kindref="member">privateKeyPEM</ref>;<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_e_c_d_s_a_signer_1a1291d4f421d5ccb8e2d34e5e836595a6" kindref="member">string_to_hex</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>input);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_ECDSASIGN_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="util/ecdsasign.h"/>
+  </compounddef>
+</doxygen>

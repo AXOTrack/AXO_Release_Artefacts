@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_27e2760d5e2ac71e887b4a8ca289f056" kind="dir">
+    <compoundname>bus/spi</compoundname>
+    <innerfile refid="spibus_8cpp">spibus.cpp</innerfile>
+    <innerfile refid="spibus_8h">spibus.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="bus/spi/"/>
+  </compounddef>
+</doxygen>

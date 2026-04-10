@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="task_8cpp" kind="file" language="C++">
+    <compoundname>task.cpp</compoundname>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="1">
+        <label>rtos/task.cpp</label>
+        <link refid="task_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="task_8cpp_1a4ae4f54c52f7020623a289bdc44eca22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(task, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>task</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.cpp" line="33" column="1" declfile="rtos/task.cpp" declline="33" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of RTOS wrapper class <ref refid="class_task" kindref="compound">Task</ref> for multithreading support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="task_8h_1task" kindref="member">task</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>typedef<sp/>void<sp/>(*taskFunc_t)(void*<sp/>pInstance);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>using<sp/>taskFunc_t<sp/>=<sp/>void<sp/>(*)(void*<sp/>pInstance);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="task_8cpp_1a4ae4f54c52f7020623a289bdc44eca22" refkind="member"><highlight class="normal"><ref refid="task_8cpp_1a4ae4f54c52f7020623a289bdc44eca22" kindref="member">LOG_MODULE_REGISTER</ref>(task,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" kindref="member">Task::taskCode</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p1,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p2,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>p3)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task::taskCode<sp/>p1:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>p1);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(p1<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_task" kindref="compound">Task</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p1)-&gt;<ref refid="class_task_1a1951102653a5e603f2131b33d7636232" kindref="member">task</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" kindref="member">Task::create</ref>(k_thread_stack_t*<sp/>stack,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>stack_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prio)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task::create<sp/>this:<sp/>%p<sp/>stack_size:<sp/>%d<sp/>prio:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>stack_size,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prio);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_task_1a31a7c928ad7e979f387432933c8044f4" kindref="member">tid</ref><sp/>=<sp/>k_thread_create(&amp;<ref refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" kindref="member">thread_handle</ref>,<sp/>stack,<sp/>stack_size,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(k_thread_entry_t)<ref refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" kindref="member">taskCode</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL,<sp/>prio,<sp/>0,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_FOREVER<sp/></highlight><highlight class="comment">/*K_NO_WAIT*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(<ref refid="class_task_1a31a7c928ad7e979f387432933c8044f4" kindref="member">tid</ref><sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>k_thread_name_set(<ref refid="class_task_1a31a7c928ad7e979f387432933c8044f4" kindref="member">tid</ref>,<sp/><ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_task_1a60de64d75454385b23995437f1d72669" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_task_1a60de64d75454385b23995437f1d72669" kindref="member">Task::start</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task::Start<sp/>this:<sp/>%p<sp/>name:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>this-&gt;<ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>k_thread_start(<ref refid="class_task_1a31a7c928ad7e979f387432933c8044f4" kindref="member">tid</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" kindref="member">Task::setId</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task::setId<sp/>this:<sp/>%p<sp/>name:<sp/>%s<sp/>id:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>this-&gt;<ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" kindref="member">myId</ref><sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" refkind="member"><highlight class="normal"><ref refid="class_task_1ac35df3116dbe12d965a403dd946d530a" kindref="member">Task::Task</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task::Task<sp/>this:<sp/>%p<sp/>name:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(strlen(name)<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>snprintf(<ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" kindref="member">myName</ref>),<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>name);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" refkind="member"><highlight class="normal"><ref refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" kindref="member">Task::~Task</ref>()<sp/>{<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task~::Task<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>CONFIG_UNIT_TEST_RTOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>k_thread_abort(<ref refid="class_task_1a31a7c928ad7e979f387432933c8044f4" kindref="member">tid</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">Task::configure</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Task::configure<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;base<sp/>class&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="rtos/task.cpp"/>
+  </compounddef>
+</doxygen>

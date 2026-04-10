@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="disptask_8h" kind="file" language="C++">
+    <compoundname>disptask.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="filter_8h" local="yes">disp/filter.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="measurement_8cpp" local="yes">data/measurement.cpp</includedby>
+    <includedby refid="disptask_8cpp" local="yes">disp/disptask.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="1">
+        <label>disp/disptask.h</label>
+        <link refid="disptask_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>disp/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="11">
+        <label>algorithm</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="1">
+        <label>disp/disptask.h</label>
+        <link refid="disptask_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__st_detrend_var" prot="public">_stDetrendVar</innerclass>
+    <innerclass refid="struct__st_disp_statistics" prot="public">_stDispStatistics</innerclass>
+    <innerclass refid="class_disp_task" prot="public">DispTask</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="disptask_8h_1a6e9a4300372c092658d374143db87f60" prot="public" static="no">
+        <name>NUM_FILT_REMOVE</name>
+        <initializer>500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of samples to be removed (set to 0) after filtering to avoid the influence of transient effects </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="46" column="9" bodyfile="disp/disptask.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="disptask_8h_1a5400b1f2028d38732e4377be4f32b255" prot="public" static="no">
+        <name>DELTA_T</name>
+        <initializer>0.0002273</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition of delta t (time between two consecutive samples, Sample rate = 4400Hz) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="50" column="9" bodyfile="disp/disptask.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" prot="public" static="no">
+        <type>struct <ref refid="struct__st_detrend_var" kindref="compound">_stDetrendVar</ref></type>
+        <definition>typedef struct _stDetrendVar stDetrendVar</definition>
+        <argsstring></argsstring>
+        <name>stDetrendVar</name>
+        <briefdescription>
+<para>Structure defining the intermediate results for detrend calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="62" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="disptask_8h_1ab4e8fc76152f6b7587773278905b8e11" prot="public" static="no">
+        <type>struct <ref refid="struct__st_disp_statistics" kindref="compound">_stDispStatistics</ref></type>
+        <definition>typedef struct _stDispStatistics stDispStatistics</definition>
+        <argsstring></argsstring>
+        <name>stDispStatistics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure defining the displacement statistics, to be send to backend with RMS values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="71" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of <ref refid="class_disp_task" kindref="compound">DispTask</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="disptask_8h_1disptask"/> <simplesect kind="par"><title>Detailed Description </title><para>Calculation of displacement values based on the recorded acceleration data in z-direction. The implementation of this class is based on the calculation done by <ulink url="https://endaq.com/pages/vibration-shock-analysis-software-vibrationdata-toolbox?utm_source=youtube&amp;utm_medium=video&amp;utm_campaign=download-software&amp;utm_content=how-to-calculate-velocity-from-acceleration-data-to-vibrationdata-toolbox">enDAQ VibrationData Toolbox Version 13.3 by Tom Irvine</ulink>. To reprodice the calculation results of the toolbox a small python script has been developed which was used as the base of the implementation in this class. The python script is located at <ulink url="https://github.com/AXOTrack/disp-calc-python">AXOTrack repository</ulink>. <linebreak/>
+Because of memory restrictions the implementation on the AXO X1 device could not transfer the complete acceleration data in one vector to the alorithm, instead the acceleration data is requested in small pieces from ADXL store task, so that the calculation can be performed sequentially. <linebreak/>
+ See also message sequence chart in section <ref refid="_m_s_c_1SectionDisplacement" kindref="member">Displacement Calculation</ref>.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_DISPTASK_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_DISPTASK_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="filter_8h" kindref="compound">disp/filter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="disptask_8h_1a6e9a4300372c092658d374143db87f60" refkind="member"><highlight class="preprocessor">#define<sp/>NUM_FILT_REMOVE<sp/>500</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="disptask_8h_1a5400b1f2028d38732e4377be4f32b255" refkind="member"><highlight class="preprocessor">#define<sp/>DELTA_T<sp/>0.0002273</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>DELTA_T<sp/>0.00025<sp/><sp/>//<sp/>Sample<sp/>rate<sp/>=<sp/>4000Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="struct__st_detrend_var" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_detrend_var" kindref="compound">_stDetrendVar</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56" refid="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" kindref="member">sumX</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" kindref="member">sumY</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" kindref="member">sumXY</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" kindref="member">sumX2</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="struct__st_detrend_var_1a723974ead8c85a6b9c70c6e018cb64c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_detrend_var_1a723974ead8c85a6b9c70c6e018cb64c1" kindref="member">slope</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="struct__st_detrend_var_1a9f8a715ab550e57412af1f1545841ae3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_detrend_var_1a9f8a715ab550e57412af1f1545841ae3" kindref="member">intercept</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" refkind="member"><highlight class="normal">}<sp/><ref refid="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" kindref="member">stDetrendVar</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="struct__st_disp_statistics" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_disp_statistics" kindref="compound">_stDispStatistics</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68" refid="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" kindref="member">min</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" kindref="member">max</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" kindref="member">p2p</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="disptask_8h_1ab4e8fc76152f6b7587773278905b8e11" refkind="member"><highlight class="normal">}<sp/><ref refid="disptask_8h_1ab4e8fc76152f6b7587773278905b8e11" kindref="member">stDispStatistics</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_disp_task" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_disp_task" kindref="compound">DispTask</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" kindref="member">DispTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" kindref="member">have_http_connector</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a667fa2480a3fcec33a3887a8d51925d0" kindref="member">~DispTask</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_disp_task_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_disp_task_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" kindref="member">bIdle</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1af805a1118ef27529d966b67349c4e46d" kindref="member">filt_dump</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="112" refid="class_disp_task_1af3adad0893ab002ab59967c50c4c9cf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1af3adad0893ab002ab59967c50c4c9cf3" kindref="member">itegrate_detrend</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="115" refid="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" kindref="member">nfilt</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" kindref="member">nfact</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" kindref="member">totalNumEntries</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" kindref="member">startReadPos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" kindref="member">rcvdEntries</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120" refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" kindref="member">requestedEntries</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" kindref="member">startWritePos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" kindref="member">sentEntries</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" kindref="member">requestedWrEntries</ref>;<sp/></highlight></codeline>
+<codeline lineno="127" refid="class_disp_task_1a32575b5386f8e1ff58b80985e27800ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1a32575b5386f8e1ff58b80985e27800ac" kindref="member">detrendIdx</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_disp_task_1aaefe49dcf736b1f1bbb1711cebca73e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_disp_task_1aaefe49dcf736b1f1bbb1711cebca73e0" kindref="member">leftpad</ref>;</highlight></codeline>
+<codeline lineno="134" refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" kindref="member">rightpad</ref>;</highlight></codeline>
+<codeline lineno="136" refid="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" kindref="member">leftpadFilt</ref>;</highlight></codeline>
+<codeline lineno="138" refid="class_disp_task_1adc64f9fc514f9d643444fda968136c42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_disp_task_1adc64f9fc514f9d643444fda968136c42" kindref="member">rightpadFilt</ref>;</highlight></codeline>
+<codeline lineno="140" refid="class_disp_task_1a231d895643fdbde850908c3436194727" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_disp_task_1a231d895643fdbde850908c3436194727" kindref="member">leftpadFiltFilt</ref>;</highlight></codeline>
+<codeline lineno="142" refid="class_disp_task_1a3999181a3aa7304b4a1737626650d8db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_disp_task_1a3999181a3aa7304b4a1737626650d8db" kindref="member">rightpadFiltFilt</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_detrend_var" kindref="compound">stDetrendVar</ref><sp/><ref refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" kindref="member">detrendVars</ref>;</highlight></codeline>
+<codeline lineno="146" refid="class_disp_task_1a12105e756adcc893d5be7b6d999b6edd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_disp_task_1a12105e756adcc893d5be7b6d999b6edd" kindref="member">dVIdx</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="147" refid="class_disp_task_1ae7bdf6b2bde3ccdb37cc29a346bd2e49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1ae7bdf6b2bde3ccdb37cc29a346bd2e49" kindref="member">V_last</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149" refid="class_disp_task_1ae5918d75f4c08438447250a3cc6f5d2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1ae5918d75f4c08438447250a3cc6f5d2b" kindref="member">S_last</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="152" refid="class_disp_task_1aaf4a74e9be098efec98511663545b291" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1aaf4a74e9be098efec98511663545b291" kindref="member">IN_last</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" kindref="member">have_http_connector</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="class_disp_task_1a518601811cafb966415fe620ab71ac4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a518601811cafb966415fe620ab71ac4f" kindref="member">dispMin</ref>;</highlight></codeline>
+<codeline lineno="160" refid="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" kindref="member">dispMax</ref>;</highlight></codeline>
+<codeline lineno="162" refid="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" kindref="member">dispP2P</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" kindref="member">b1</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" kindref="member">HandleCalcDisplacementReq</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" kindref="member">HandleDispFirstEntries</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" kindref="member">HandleDispLastEntries</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" kindref="member">HandleRawDataStatus</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" kindref="member">HandleRawData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" kindref="member">InitBwFiltering</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" kindref="member">HandleFwFiltData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" kindref="member">InitDispCalc</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" kindref="member">HandleBwFiltData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" kindref="member">InitDetrend</ref>();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" kindref="member">HandleSResultData</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" kindref="member">reqRawData</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" kindref="member">reqFwFiltData</ref>();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" kindref="member">reqBwFiltData</ref>();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" kindref="member">reqSResultData</ref>();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" kindref="member">reqFiltResultWrite</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>F,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>mType);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" kindref="member">reqSResultWrite</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>S);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" kindref="member">reqDResultWrite</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>D);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>report();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" kindref="member">sendDispStatistics</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" kindref="member">calcDisplacement</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>in,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;Vout,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;Sout);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" kindref="member">detrendCalcSums</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>inVal,<sp/><ref refid="struct__st_detrend_var" kindref="compound">stDetrendVar</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" kindref="member">detrendCalcSlopeIntercept</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numValues,<sp/><ref refid="struct__st_detrend_var" kindref="compound">stDetrendVar</ref>&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>detrendRemoveTrend(vectord<sp/>inp,<sp/>vectord&amp;<sp/>out,<sp/>int<sp/>numValues,<sp/>stDetrendVar<sp/>v);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_disp_task_1a5d5c2ce1a8b4d44ffc2c8fda65923812" kindref="member">detrendRemoveTrend</ref>(uint32_t<sp/>idx,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>inp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>out,<sp/><ref refid="struct__st_detrend_var" kindref="compound">stDetrendVar</ref><sp/>v);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_DISPTASK_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="disp/disptask.h"/>
+  </compounddef>
+</doxygen>

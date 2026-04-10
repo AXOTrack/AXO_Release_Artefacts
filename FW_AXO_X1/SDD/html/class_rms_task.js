@@ -1,0 +1,27 @@
+var class_rms_task =
+[
+    [ "RmsTask", "class_rms_task.html#a93f0dabed5d00e46a0c2239dbea4f642", null ],
+    [ "~RmsTask", "class_rms_task.html#ab00c99e6599d7963850a2a04c3663480", null ],
+    [ "RmsTask", "class_rms_task.html#a0b38580605654394e49099df0afdfb1b", null ],
+    [ "task", "class_rms_task.html#aaad4f4d77885dd2457f79c20ac27db19", null ],
+    [ "init", "class_rms_task.html#a02fd73d861ef2e4aabb38c0c9ff82947", null ],
+    [ "update_rms", "class_rms_task.html#ab9179e1ad434ab3966aac5e0312caef8", null ],
+    [ "timer_cb", "class_rms_task.html#aaa25421e04a507bcced8f9bb02af5213", null ],
+    [ "timer1_expired", "class_rms_task.html#adc25c829b13636794219a3f61f31f34d", null ],
+    [ "myTimer", "class_rms_task.html#a64024edd0c45f1deb9a9bf67b746a8e1", null ],
+    [ "pInMbox", "class_rms_task.html#af2570dd7bace0312470d962f29359fb3", null ],
+    [ "myDetectorMed", "class_rms_task.html#a413428da865cfc6205de7f039ed3a6fd", null ],
+    [ "myDetectorCrit", "class_rms_task.html#aaed7c44f51ad2221adea110ec5d38f03", null ],
+    [ "samples_per_sec", "class_rms_task.html#ab65df7a1efcbcbc1b38a951e1f1b3b95", null ],
+    [ "n_seconds", "class_rms_task.html#ad07bbc8841c16a2548141fbb12a7d0a2", null ],
+    [ "n_sample", "class_rms_task.html#af2616f8a70c933b0d4808ed8dee71f8d", null ],
+    [ "x_square_sum", "class_rms_task.html#a6e3792671f5ef62d5c2b818baed632be", null ],
+    [ "y_square_sum", "class_rms_task.html#aea2710c37926604790a4c9ef3f65c5c8", null ],
+    [ "z_square_sum", "class_rms_task.html#a20a8e6578541c181c3c6abbbd287f136", null ],
+    [ "x_rms", "class_rms_task.html#a406facadccb6ea06509e8d1ab28a7fdf", null ],
+    [ "y_rms", "class_rms_task.html#ad86d11bdd69cdf9d37d224cf76af962e", null ],
+    [ "z_rms", "class_rms_task.html#a38b6b5532e9611be2456a98febe10864", null ],
+    [ "idle", "class_rms_task.html#a97808a9870039f4168da10ecfb5dc472", null ],
+    [ "rx_cnt", "class_rms_task.html#a3b1e23a496d25dd87f7b1f223fe0d60c", null ],
+    [ "rx_cnt_prev", "class_rms_task.html#a2a855ec4ae79d9dc71f4f3418769ef51", null ]
+];

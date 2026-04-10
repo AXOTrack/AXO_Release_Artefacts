@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="matrix_8h" kind="file" language="C++">
+    <compoundname>matrix.h</compoundname>
+    <includes local="no">vector</includes>
+    <includedby refid="filter_8cpp" local="yes">disp/filter.cpp</includedby>
+    <includedby refid="matrix_8cpp" local="yes">disp/matrix.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>disp/matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>disp/filter.cpp</label>
+        <link refid="filter_8cpp"/>
+      </node>
+      <node id="1">
+        <label>disp/matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>disp/matrix.cpp</label>
+        <link refid="matrix_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_matrix" prot="public">CMatrix</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" prot="public" static="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>typedef std::vector&lt;std::vector&lt;double&gt; &gt; MatrixT</definition>
+        <argsstring></argsstring>
+        <name>MatrixT</name>
+        <briefdescription>
+<para>Type definition of matrix of type double. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/matrix.h" line="31" column="21" bodyfile="disp/matrix.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of matrix helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="matrix_8h_1matrix"/> <simplesect kind="par"><title>Detailed Description </title><para>This class implements some matrix operations. It is not a complete support class with complete matrix functionality, it only implements these functionalities needed by filter algorithms in class <ref refid="filter_8h_1filter" kindref="member">filter</ref>.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_MATRIX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_MATRIX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/><ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="class_c_matrix" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_matrix" kindref="compound">CMatrix</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/><ref refid="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" kindref="member">getInverse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>vect);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1abfe2ea26d6d1ea16e5dd6a3ea517f797" kindref="member">printMatrix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>vect);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1a8f8a1ffc38f2590cb4b26aa3665d9837" kindref="member">printVector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/>vect);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1a8f8a1ffc38f2590cb4b26aa3665d9837" kindref="member">printVector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/>vect);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1a9b76530283d163a21940fede6653a1c9" kindref="member">initMatrix</ref>(<ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref>&amp;<sp/>mat,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1ab4fafb9eacd543d60604d0457c870a43" kindref="member">initVector</ref>(std::vector&lt;double&gt;&amp;<sp/>vec,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1a14cbbe97805ff33325cdc3a372daa66f" kindref="member">setVal</ref>(<ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref>&amp;<sp/>mat,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_c_matrix_1a0d9e4a39ecd9f82b64bb5d564de617b6" kindref="member">mult</ref>(<ref refid="matrix_8h_1a07d676e89edc0ac2af9d7c2232ce9d19" kindref="member">MatrixT</ref>&amp;<sp/>mat,<sp/>std::vector&lt;double&gt;<sp/>vec);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/><ref refid="class_c_matrix_1ae673f4e0a8049108954b8a56c51a03ca" kindref="member">substract</ref>(std::vector&lt;double&gt;<sp/>vec1,<sp/>std::vector&lt;double&gt;<sp/>vec2);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/><ref refid="class_c_matrix_1a1ed6f0e7c5347b0857ffa858e8510f1b" kindref="member">getCofactor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>vect);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/><ref refid="class_c_matrix_1ab2d089ed0a14f22057d3a22b47fb0bd9" kindref="member">getTranspose</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>matrix1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_c_matrix_1a22817604cff59c9f83caece3cf3cdfa9" kindref="member">getDeterminant</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>vect);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_MATRIX_H_</highlight></codeline>
+    </programlisting>
+    <location file="disp/matrix.h"/>
+  </compounddef>
+</doxygen>

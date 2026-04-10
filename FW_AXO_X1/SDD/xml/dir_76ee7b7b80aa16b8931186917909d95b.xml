@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_76ee7b7b80aa16b8931186917909d95b" kind="dir">
+    <compoundname>modem</compoundname>
+    <innerfile refid="lte__monitor_8cpp">lte_monitor.cpp</innerfile>
+    <innerfile refid="lte__monitor_8h">lte_monitor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="modem/"/>
+  </compounddef>
+</doxygen>

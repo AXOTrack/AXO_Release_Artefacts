@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="pwm_8cpp" kind="file" language="C++">
+    <compoundname>pwm.cpp</compoundname>
+    <includes refid="pwm_8h" local="yes">drv/pwm/pwm.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes local="no">zephyr/sys/printk.h</includes>
+    <includes local="no">zephyr/device.h</includes>
+    <includes local="no">zephyr/devicetree.h</includes>
+    <includes local="no">zephyr/drivers/pwm.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>drv/pwm/pwm.cpp</label>
+        <link refid="pwm_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drv/pwm/pwm.h</label>
+        <link refid="pwm_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/device.h</label>
+      </node>
+      <node id="4">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="10">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="8">
+        <label>zephyr/devicetree.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/sys/printk.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="9">
+        <label>zephyr/drivers/pwm.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" prot="public" static="no">
+        <name>PWM_DEVICE_NAME</name>
+        <initializer>DT_PROP(DT_NODELABEL(pwm0), label)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.cpp" line="36" column="13" bodyfile="drv/pwm/pwm.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pwm_8cpp_1a17d58f26252226e3fcca5f70b3a29cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(pwm, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>pwm</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pwm/pwm.cpp" line="41" column="1" declfile="drv/pwm/pwm.cpp" declline="41" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of PWM class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="pwm_8h_1pwm" kindref="member">pwm</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pwm_8h" kindref="compound">drv/pwm/pwm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/printk.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/devicetree.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/pwm.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/drv/src/stubs.h&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PWM_DEVICE_NAME<sp/>DT_PROP(DT_NODELABEL(pwm0),<sp/>label)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PWM_DEVICE_NAME<sp/>&quot;pwmname&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="pwm_8cpp_1a17d58f26252226e3fcca5f70b3a29cd9" refkind="member"><highlight class="normal"><ref refid="pwm_8cpp_1a17d58f26252226e3fcca5f70b3a29cd9" kindref="member">LOG_MODULE_REGISTER</ref>(pwm,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">Pwm::init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Pwm::init<sp/>init_done:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" kindref="member">init_done</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" kindref="member">init_done</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref><sp/>=<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">struct<sp/>device*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(device_get_binding(<ref refid="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" kindref="member">PWM_DEVICE_NAME</ref>));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(<ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ready<sp/>=<sp/>device_is_ready(<ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref><sp/>=<sp/>(ready<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_pwm_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s<sp/>failed&quot;</highlight><highlight class="normal">,<sp/>__func__);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;Found<sp/>device<sp/>\&quot;%s\&quot;&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>-&gt;name);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" kindref="member">init_done</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" kindref="member">Pwm::setPeriod</ref>(uint32_t<sp/>period)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Pwm::setPeriod<sp/>period:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;period<sp/>=<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" kindref="member">Pwm::setPulseWidth</ref>(uint32_t<sp/>width)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Pwm::setPulseWidth<sp/>width:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>width);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" kindref="member">pulse</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" kindref="member">Pwm::sync</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;Pwm::start<sp/>sync:<sp/>%d<sp/>pulse:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>,<sp/><ref refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" kindref="member">pulse</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>pwm_set(<ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>,<sp/>0,<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>,<sp/><ref refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" kindref="member">pulse</ref>,<sp/><ref refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" kindref="member">polarity_inverted</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!rc<sp/>==<sp/>0)<sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;pwm_set<sp/>failed:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>rc);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_pwm_1a60de64d75454385b23995437f1d72669" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a60de64d75454385b23995437f1d72669" kindref="member">Pwm::start</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Pwm::start<sp/>period:<sp/>%d<sp/>pulse:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>,<sp/><ref refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" kindref="member">pulse</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>pwm_set(<ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>,<sp/>0,<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>,<sp/><ref refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" kindref="member">pulse</ref>,<sp/><ref refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" kindref="member">polarity_inverted</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!rc<sp/>==<sp/>0)<sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;pwm_set<sp/>failed:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>rc);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_pwm_1a8c528baf37154d347366083f0f816846" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pwm_1a8c528baf37154d347366083f0f816846" kindref="member">Pwm::stop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Pwm::stop&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>pwm_set(<ref refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" kindref="member">pwm_dev</ref>,<sp/>0,<sp/><ref refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>,<sp/>0,<sp/><ref refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" kindref="member">polarity_inverted</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!rc<sp/>==<sp/>0)<sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;pwm_set<sp/>failed:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>rc);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" refkind="member"><highlight class="normal"><ref refid="class_pwm" kindref="compound">Pwm</ref>*<sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LOG_DBG(&quot;%s&quot;,<sp/>&quot;Pwm::inst&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_pwm" kindref="compound">Pwm</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;myInstance;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="class_pwm_1ae80a1a9182a0a372f4db59152c2f78a2" refkind="member"><highlight class="normal"><ref refid="class_pwm_1ae80a1a9182a0a372f4db59152c2f78a2" kindref="member">Pwm::Pwm</ref>()<sp/>:<sp/>polarity_inverted(false),<sp/>period(50000),<sp/>pulse(25000)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Pwm::Pwm<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="class_pwm_1a5a2f9d4500be3b3e46524921eb6b0360" refkind="member"><highlight class="normal"><ref refid="class_pwm_1a5a2f9d4500be3b3e46524921eb6b0360" kindref="member">Pwm::~Pwm</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;Pwm::~Pwm<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PWM<sp/>Application&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" kindref="member">setPeriod</ref>(50000);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" kindref="member">setPulseWidth</ref>(1000);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pulse<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>200;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" kindref="member">setPulseWidth</ref>(pulse);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" kindref="member">sync</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(100));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pulse<sp/>=<sp/>pulse<sp/>+<sp/>200;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pulse<sp/>&gt;<sp/>20000)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pulse<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pwm_1aee502d2d4a23aa6bf075705012950c91" kindref="member">Pwm::inst</ref>()-&gt;<ref refid="class_pwm_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PWM<sp/>Application<sp/>exiting&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;PWM<sp/>Application<sp/>has<sp/>started!\r\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>pulse<sp/>=<sp/>1000;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>period<sp/>=<sp/>50000;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/>pwm_dev<sp/>=<sp/>device_get_binding(<ref refid="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" kindref="member">PWM_DEVICE_NAME</ref>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pwm_dev)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;Cannot<sp/>find<sp/>%s!\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" kindref="member">PWM_DEVICE_NAME</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!device_is_ready(pwm_dev))<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;PWM<sp/>device<sp/>is<sp/>not<sp/>ready\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(2));</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pwm_set_cycles(pwm_dev,<sp/>0,<sp/>period,<sp/>0,<sp/>0<sp/></highlight><highlight class="comment">/*PWM_POLARITY_INVERTED*/</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;Fail<sp/>to<sp/>set<sp/>the<sp/>period<sp/>and<sp/>pulse<sp/>width\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(2));</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pulse<sp/>=<sp/>pulse<sp/>+<sp/>1000;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pulse<sp/>&gt;<sp/>period)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pulse<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pwm_set_cycles(pwm_dev,<sp/>0,<sp/>period,<sp/>pulse,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/></highlight><highlight class="comment">/*PWM_POLARITY_INVERTED*/</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;Fail<sp/>to<sp/>set<sp/>the<sp/>period<sp/>and<sp/>pulse<sp/>width\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(100));</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="drv/pwm/pwm.cpp"/>
+  </compounddef>
+</doxygen>

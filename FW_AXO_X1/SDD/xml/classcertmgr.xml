@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classcertmgr" kind="class" language="C++" prot="public">
+    <compoundname>certmgr</compoundname>
+    <includes refid="certmgr_8h" local="no">certmgr.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcertmgr_1a615bad6a4e1bc9bf1a95a261ae5f1bf0" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char certBuf[2048]</definition>
+        <argsstring>[2048]</argsstring>
+        <name>certBuf</name>
+        <briefdescription>
+<para>Buffer for the device certificates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="133" column="10" bodyfile="util/certmgr.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcertmgr_1aa606aad2497e77899771c4194c976aca" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char keyBuf[512]</definition>
+        <argsstring>[512]</argsstring>
+        <name>keyBuf</name>
+        <briefdescription>
+<para>Buffer for the device key. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="134" column="10" bodyfile="util/certmgr.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcertmgr_1a0432e69b1f1ae879b9e5670d05509b4d" prot="private" static="no" mutable="no">
+        <type>struct cJSON *</type>
+        <definition>struct cJSON* root_obj</definition>
+        <argsstring></argsstring>
+        <name>root_obj</name>
+        <briefdescription>
+<para>The JSON root object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="136" column="17" bodyfile="util/certmgr.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcertmgr_1af3da6753e4916f328721d324d62af50d" prot="private" static="no" mutable="no">
+        <type>struct cJSON *</type>
+        <definition>struct cJSON* child</definition>
+        <argsstring></argsstring>
+        <name>child</name>
+        <briefdescription>
+<para>A JSON child object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="137" column="17" bodyfile="util/certmgr.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcertmgr_1a06e2b34096fd017bc1fece1edb448583" prot="private" static="no" mutable="no">
+        <type><ref refid="certmgr_8h_1a3788edea90d62a780803a815880b258f" kindref="member">stBrokerCfg</ref></type>
+        <definition>stBrokerCfg brokerCfg</definition>
+        <argsstring></argsstring>
+        <name>brokerCfg</name>
+        <briefdescription>
+<para>The current broker configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="139" column="17" bodyfile="util/certmgr.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcertmgr_1a8be16a6a4a8ecfa40776a4c5c1107003" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bBrokerSwitchRequested</definition>
+        <argsstring></argsstring>
+        <name>bBrokerSwitchRequested</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="141" column="10" bodyfile="util/certmgr.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcertmgr_1aef7cda25c0d6516daa8a26bad5037665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~certmgr</definition>
+        <argsstring>()</argsstring>
+        <name>~certmgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="82" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="85" column="10"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a3e4cabc7036c6e38d45566eae9b0f5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WriteJoviaRootCert2Modem</definition>
+        <argsstring>()</argsstring>
+        <name>WriteJoviaRootCert2Modem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="87" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1adb43734e3a6e734e698f7ba5420abd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WriteThingsboardRootCert2Modem</definition>
+        <argsstring>()</argsstring>
+        <name>WriteThingsboardRootCert2Modem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="88" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1ab47df076da51a869f33f936f1af4f94c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WriteDeviceCert2Modem</definition>
+        <argsstring>()</argsstring>
+        <name>WriteDeviceCert2Modem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="89" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a3c7b2cce28c5128ee2c09cb24bdd8eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WriteDeviceKey2Modem</definition>
+        <argsstring>()</argsstring>
+        <name>WriteDeviceKey2Modem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="90" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1acaa47cb858edbe466a2e1821b932e0d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CheckCertExistInModem</definition>
+        <argsstring>(enum modem_key_mgmt_cred_type credType)</argsstring>
+        <name>CheckCertExistInModem</name>
+        <param>
+          <type>enum modem_key_mgmt_cred_type</type>
+          <declname>credType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="92" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1aca6cf1d7dfb970e03316691f3c73eac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CompareRootCertInModem</definition>
+        <argsstring>(const char *pCert, size_t len)</argsstring>
+        <name>CompareRootCertInModem</name>
+        <param>
+          <type>const char *</type>
+          <declname>pCert</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="93" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1ad1478b5b41dbe6a6f5ffce5997a96000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+        <definition>enBroker GetConfiguredBrokerInModem</definition>
+        <argsstring>()</argsstring>
+        <name>GetConfiguredBrokerInModem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="94" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a5cb82b27d240fbc954e0050df3e861f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="certmgr_8h_1a3788edea90d62a780803a815880b258f" kindref="member">stBrokerCfg</ref></type>
+        <definition>stBrokerCfg readBrokerCfg</definition>
+        <argsstring>()</argsstring>
+        <name>readBrokerCfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="96" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1af0654790e06b5ac06e0f356de34ed4e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeBrokerCfg</definition>
+        <argsstring>(enBroker current, enBroker desired)</argsstring>
+        <name>writeBrokerCfg</name>
+        <param>
+          <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+          <declname>current</declname>
+        </param>
+        <param>
+          <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+          <declname>desired</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="97" column="10"/>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">MqttConnector::connect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1af5293bd514ca5d83c32a243953e61b1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+        <definition>enBroker getCurrentBroker</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentBroker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="98" column="14"/>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">MqttConnector::connect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1aa75f5002ea3a14893cd6b74e532da203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+        <definition>enBroker getDesiredBroker</definition>
+        <argsstring>()</argsstring>
+        <name>getDesiredBroker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="99" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a91b38311ca74af5235bb56d7bd90c5ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeDeviceCert</definition>
+        <argsstring>(enBroker broker, const char *pCert)</argsstring>
+        <name>writeDeviceCert</name>
+        <param>
+          <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+          <declname>broker</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pCert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a6a6ed762b6f58ba3798538243bf57ba3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void appendDeviceCert</definition>
+        <argsstring>(enBroker broker, const char *pCert)</argsstring>
+        <name>appendDeviceCert</name>
+        <param>
+          <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+          <declname>broker</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pCert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1aae8ce4a89afc75a5183ab9f5a89cc228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void appendDeviceKey</definition>
+        <argsstring>(enBroker broker, const char *pCert)</argsstring>
+        <name>appendDeviceKey</name>
+        <param>
+          <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+          <declname>broker</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pCert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="103" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a5d9d14f76663146e1c2f1c33242d5968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void readDeviceCertAndKey</definition>
+        <argsstring>(enBroker broker)</argsstring>
+        <name>readDeviceCertAndKey</name>
+        <param>
+          <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+          <declname>broker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="104" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1af54618982714450a2ef1e1a67df2cf8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string parseCert</definition>
+        <argsstring>(char *pJsonBuf, char *cmd)</argsstring>
+        <name>parseCert</name>
+        <param>
+          <type>char *</type>
+          <declname>pJsonBuf</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>cmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="106" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a03e1e03938ee182860000094ae625913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeJoviaCert1</definition>
+        <argsstring>(char *pBuf)</argsstring>
+        <name>storeJoviaCert1</name>
+        <param>
+          <type>char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="108" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1aa818420262a6d726a50f2123fc7a0fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeJoviaCert2</definition>
+        <argsstring>(char *pBuf)</argsstring>
+        <name>storeJoviaCert2</name>
+        <param>
+          <type>char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="109" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a09decb14b305fcddbb4443b25fc69b81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeJoviaKey</definition>
+        <argsstring>(char *pBuf)</argsstring>
+        <name>storeJoviaKey</name>
+        <param>
+          <type>char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="110" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a002c4a662311bf3504e9faebb6dadcd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeThingsboardCert1</definition>
+        <argsstring>(char *pBuf)</argsstring>
+        <name>storeThingsboardCert1</name>
+        <param>
+          <type>char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="112" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1adac4083d0c314e17ba9364c8b6bf8bdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeThingsboardCert2</definition>
+        <argsstring>(char *pBuf)</argsstring>
+        <name>storeThingsboardCert2</name>
+        <param>
+          <type>char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="113" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a96e78d5e925e8967498bcfc15077752c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeThingsboardKey</definition>
+        <argsstring>(char *pBuf)</argsstring>
+        <name>storeThingsboardKey</name>
+        <param>
+          <type>char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="114" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a3a4721db9a187b4f8967f8879842766d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AllPrecondFullFilled</definition>
+        <argsstring>()</argsstring>
+        <name>AllPrecondFullFilled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="116" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1ac8130054a623ef8f4c2a356369dab5c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GetFsStat</definition>
+        <argsstring>()</argsstring>
+        <name>GetFsStat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="118" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a741f584cf7fb2eab9930bd83c56942a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EraseFs</definition>
+        <argsstring>()</argsstring>
+        <name>EraseFs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="119" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1adecf32de9b53b1475261f40d37c674d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ListFs</definition>
+        <argsstring>()</argsstring>
+        <name>ListFs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="120" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1ac03319f16f9c414a1dc9fd98d740dfdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BrokerSwitchRequested</definition>
+        <argsstring>()</argsstring>
+        <name>BrokerSwitchRequested</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="123" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a119aab00792ccace8235e70745c29498" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClearBrokerSwitchRequested</definition>
+        <argsstring>()</argsstring>
+        <name>ClearBrokerSwitchRequested</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="124" column="10"/>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a1cb1bf8f3d38c020dd8a746f1d22cac2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printCert</definition>
+        <argsstring>(char *pCert)</argsstring>
+        <name>printCert</name>
+        <param>
+          <type>char *</type>
+          <declname>pCert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="126" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcertmgr_1acc45f4d4d5957998c083aac888aa8050" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcertmgr" kindref="compound">certmgr</ref> *</type>
+        <definition>static certmgr* inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="84" column="20"/>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">MqttConnector::connect</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcertmgr_1a631d4dc9ec32bdc5f7c41448ed57e5a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int shell_switch2jovia</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>shell_switch2jovia</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="128" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcertmgr_1a2f17ee0617cd64756e71d9322036169f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>certmgr</definition>
+        <argsstring>()</argsstring>
+        <name>certmgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="131" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Certification management class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>Certification manager class is the central module for the broker switching feature. It provides methods to store received device keys abnd certificates in the file system and into the modem, methods to read and write the broker configuration file and getter function to retrieve current and desired broker. Furthermore it provides a metod to check if all precondition for the broker switching are full filled. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>_stBrokerCfg</label>
+        <link refid="struct__st_broker_cfg"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+currentBroker</edgelabel>
+          <edgelabel>+desiredBroker</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>struct cJSON *</label>
+      </node>
+      <node id="5">
+        <label>enum _enBroker</label>
+      </node>
+      <node id="6">
+        <label>bool</label>
+      </node>
+      <node id="1">
+        <label>certmgr</label>
+        <link refid="classcertmgr"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-certBuf</edgelabel>
+          <edgelabel>-keyBuf</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-child</edgelabel>
+          <edgelabel>-root_obj</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-brokerCfg</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-bBrokerSwitchRequested</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="util/certmgr.h" line="80" column="1" bodyfile="util/certmgr.h" bodystart="80" bodyend="142"/>
+    <listofallmembers>
+      <member refid="classcertmgr_1a3a4721db9a187b4f8967f8879842766d" prot="public" virt="non-virtual"><scope>certmgr</scope><name>AllPrecondFullFilled</name></member>
+      <member refid="classcertmgr_1a6a6ed762b6f58ba3798538243bf57ba3" prot="public" virt="non-virtual"><scope>certmgr</scope><name>appendDeviceCert</name></member>
+      <member refid="classcertmgr_1aae8ce4a89afc75a5183ab9f5a89cc228" prot="public" virt="non-virtual"><scope>certmgr</scope><name>appendDeviceKey</name></member>
+      <member refid="classcertmgr_1a8be16a6a4a8ecfa40776a4c5c1107003" prot="private" virt="non-virtual"><scope>certmgr</scope><name>bBrokerSwitchRequested</name></member>
+      <member refid="classcertmgr_1a06e2b34096fd017bc1fece1edb448583" prot="private" virt="non-virtual"><scope>certmgr</scope><name>brokerCfg</name></member>
+      <member refid="classcertmgr_1ac03319f16f9c414a1dc9fd98d740dfdf" prot="public" virt="non-virtual"><scope>certmgr</scope><name>BrokerSwitchRequested</name></member>
+      <member refid="classcertmgr_1a615bad6a4e1bc9bf1a95a261ae5f1bf0" prot="private" virt="non-virtual"><scope>certmgr</scope><name>certBuf</name></member>
+      <member refid="classcertmgr_1a2f17ee0617cd64756e71d9322036169f" prot="private" virt="non-virtual"><scope>certmgr</scope><name>certmgr</name></member>
+      <member refid="classcertmgr_1acaa47cb858edbe466a2e1821b932e0d2" prot="public" virt="non-virtual"><scope>certmgr</scope><name>CheckCertExistInModem</name></member>
+      <member refid="classcertmgr_1af3da6753e4916f328721d324d62af50d" prot="private" virt="non-virtual"><scope>certmgr</scope><name>child</name></member>
+      <member refid="classcertmgr_1a119aab00792ccace8235e70745c29498" prot="public" virt="non-virtual"><scope>certmgr</scope><name>ClearBrokerSwitchRequested</name></member>
+      <member refid="classcertmgr_1aca6cf1d7dfb970e03316691f3c73eac7" prot="public" virt="non-virtual"><scope>certmgr</scope><name>CompareRootCertInModem</name></member>
+      <member refid="classcertmgr_1a741f584cf7fb2eab9930bd83c56942a9" prot="public" virt="non-virtual"><scope>certmgr</scope><name>EraseFs</name></member>
+      <member refid="classcertmgr_1ad1478b5b41dbe6a6f5ffce5997a96000" prot="public" virt="non-virtual"><scope>certmgr</scope><name>GetConfiguredBrokerInModem</name></member>
+      <member refid="classcertmgr_1af5293bd514ca5d83c32a243953e61b1a" prot="public" virt="non-virtual"><scope>certmgr</scope><name>getCurrentBroker</name></member>
+      <member refid="classcertmgr_1aa75f5002ea3a14893cd6b74e532da203" prot="public" virt="non-virtual"><scope>certmgr</scope><name>getDesiredBroker</name></member>
+      <member refid="classcertmgr_1ac8130054a623ef8f4c2a356369dab5c7" prot="public" virt="non-virtual"><scope>certmgr</scope><name>GetFsStat</name></member>
+      <member refid="classcertmgr_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>certmgr</scope><name>init</name></member>
+      <member refid="classcertmgr_1acc45f4d4d5957998c083aac888aa8050" prot="public" virt="non-virtual"><scope>certmgr</scope><name>inst</name></member>
+      <member refid="classcertmgr_1aa606aad2497e77899771c4194c976aca" prot="private" virt="non-virtual"><scope>certmgr</scope><name>keyBuf</name></member>
+      <member refid="classcertmgr_1adecf32de9b53b1475261f40d37c674d7" prot="public" virt="non-virtual"><scope>certmgr</scope><name>ListFs</name></member>
+      <member refid="classcertmgr_1af54618982714450a2ef1e1a67df2cf8e" prot="public" virt="non-virtual"><scope>certmgr</scope><name>parseCert</name></member>
+      <member refid="classcertmgr_1a1cb1bf8f3d38c020dd8a746f1d22cac2" prot="public" virt="non-virtual"><scope>certmgr</scope><name>printCert</name></member>
+      <member refid="classcertmgr_1a5cb82b27d240fbc954e0050df3e861f7" prot="public" virt="non-virtual"><scope>certmgr</scope><name>readBrokerCfg</name></member>
+      <member refid="classcertmgr_1a5d9d14f76663146e1c2f1c33242d5968" prot="public" virt="non-virtual"><scope>certmgr</scope><name>readDeviceCertAndKey</name></member>
+      <member refid="classcertmgr_1a0432e69b1f1ae879b9e5670d05509b4d" prot="private" virt="non-virtual"><scope>certmgr</scope><name>root_obj</name></member>
+      <member refid="classcertmgr_1a631d4dc9ec32bdc5f7c41448ed57e5a8" prot="public" virt="non-virtual"><scope>certmgr</scope><name>shell_switch2jovia</name></member>
+      <member refid="classcertmgr_1a03e1e03938ee182860000094ae625913" prot="public" virt="non-virtual"><scope>certmgr</scope><name>storeJoviaCert1</name></member>
+      <member refid="classcertmgr_1aa818420262a6d726a50f2123fc7a0fc1" prot="public" virt="non-virtual"><scope>certmgr</scope><name>storeJoviaCert2</name></member>
+      <member refid="classcertmgr_1a09decb14b305fcddbb4443b25fc69b81" prot="public" virt="non-virtual"><scope>certmgr</scope><name>storeJoviaKey</name></member>
+      <member refid="classcertmgr_1a002c4a662311bf3504e9faebb6dadcd9" prot="public" virt="non-virtual"><scope>certmgr</scope><name>storeThingsboardCert1</name></member>
+      <member refid="classcertmgr_1adac4083d0c314e17ba9364c8b6bf8bdf" prot="public" virt="non-virtual"><scope>certmgr</scope><name>storeThingsboardCert2</name></member>
+      <member refid="classcertmgr_1a96e78d5e925e8967498bcfc15077752c" prot="public" virt="non-virtual"><scope>certmgr</scope><name>storeThingsboardKey</name></member>
+      <member refid="classcertmgr_1af0654790e06b5ac06e0f356de34ed4e6" prot="public" virt="non-virtual"><scope>certmgr</scope><name>writeBrokerCfg</name></member>
+      <member refid="classcertmgr_1a91b38311ca74af5235bb56d7bd90c5ff" prot="public" virt="non-virtual"><scope>certmgr</scope><name>writeDeviceCert</name></member>
+      <member refid="classcertmgr_1ab47df076da51a869f33f936f1af4f94c" prot="public" virt="non-virtual"><scope>certmgr</scope><name>WriteDeviceCert2Modem</name></member>
+      <member refid="classcertmgr_1a3c7b2cce28c5128ee2c09cb24bdd8eda" prot="public" virt="non-virtual"><scope>certmgr</scope><name>WriteDeviceKey2Modem</name></member>
+      <member refid="classcertmgr_1a3e4cabc7036c6e38d45566eae9b0f5ea" prot="public" virt="non-virtual"><scope>certmgr</scope><name>WriteJoviaRootCert2Modem</name></member>
+      <member refid="classcertmgr_1adb43734e3a6e734e698f7ba5420abd9b" prot="public" virt="non-virtual"><scope>certmgr</scope><name>WriteThingsboardRootCert2Modem</name></member>
+      <member refid="classcertmgr_1aef7cda25c0d6516daa8a26bad5037665" prot="public" virt="non-virtual"><scope>certmgr</scope><name>~certmgr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

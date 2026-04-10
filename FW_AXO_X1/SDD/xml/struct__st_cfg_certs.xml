@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_cfg_certs" kind="struct" language="C++" prot="public">
+    <compoundname>_stCfgCerts</compoundname>
+    <includes refid="common_2src_2conf_2config_8h" local="no">config.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_cfg_certs_1a37f6bd5f71bbe893877d9cd4c61434f7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rawtransfer</definition>
+        <argsstring></argsstring>
+        <name>rawtransfer</name>
+        <briefdescription>
+<para>&lt; Private key for raw and displacement data transmission </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="162" column="16" bodyfile="conf/config.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="89" endline="109">HttpConnector::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="353" endline="383">Config::parseAllValues</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for certification related dynamic configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>_stCfgCerts</label>
+        <link refid="struct__st_cfg_certs"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+rawtransfer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="conf/config.h" line="160" column="1" bodyfile="conf/config.h" bodystart="160" bodyend="163"/>
+    <listofallmembers>
+      <member refid="struct__st_cfg_certs_1a37f6bd5f71bbe893877d9cd4c61434f7" prot="public" virt="non-virtual"><scope>_stCfgCerts</scope><name>rawtransfer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

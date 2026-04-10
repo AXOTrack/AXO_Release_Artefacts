@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_fw_idle" kind="class" language="C++" prot="public">
+    <compoundname>FwIdle</compoundname>
+    <basecompoundref refid="class_fw_state" prot="public" virt="non-virtual">FwState</basecompoundref>
+    <includes refid="fsm_8h" local="no">fsm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fw_idle_1af7870c6deb6c7a30b18123edee51977c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwIdle</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>FwIdle</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+          <defname>pData</defname>
+        </param>
+        <briefdescription>
+<para>Constructor of idle state class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ponter to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor simply triggers a debug message on info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="148" column="14" bodyfile="update/fsm.cpp" bodystart="366" bodyend="368"/>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_idle_1aea6c0a2a6794f9e0d2f257038eac1e0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~FwIdle</definition>
+        <argsstring>()</argsstring>
+        <name>~FwIdle</name>
+        <briefdescription>
+<para>Destructor of idle state class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor simply triggers a debug message on info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="149" column="13" bodyfile="update/fsm.cpp" bodystart="375" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_idle_1a4ab8ab28eb13e8e31b6084f058ca9220" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref></type>
+        <definition>FwFsm::StateId handle_OtaStart</definition>
+        <argsstring>()</argsstring>
+        <name>handle_OtaStart</name>
+        <reimplements refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220">handle_OtaStart</reimplements>
+        <briefdescription>
+<para>Idle state handler function for OtaStart events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the state ID of the triggered state</para>
+</simplesect>
+The function notify platform that command is accepted by calling function otaStartConfirm of the <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Pointer variable pd is assigned to <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Function start the trigger timeout timer by calling function startTimeout of the <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Finally function returns the state ID eTriggered. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="150" column="20" bodyfile="update/fsm.cpp" bodystart="388" bodyend="397"/>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea24ca71dbc15a678644ec75d56fefd91d" compoundref="fsm_8h" startline="62">FwFsm::eTriggered</references>
+        <references refid="class_fw_fsm_1aabded454c81c64bebd96473139b26c16" compoundref="fsm_8h" startline="84" endline="84">FwFsm::getTriggerTimeout</references>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Idle state class derived from base class <ref refid="class_fw_state" kindref="compound">FwState</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The idle state class overrides the handler function of OtaStart events. This is the initial state. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FwIdle</label>
+        <link refid="class_fw_idle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FwState</label>
+        <link refid="class_fw_state"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>void *</label>
+      </node>
+      <node id="1">
+        <label>FwIdle</label>
+        <link refid="class_fw_idle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FwState</label>
+        <link refid="class_fw_state"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+maxDownloadDelay</edgelabel>
+          <edgelabel>+startDownloadTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+pd</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uint32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="update/fsm.h" line="146" column="1" bodyfile="update/fsm.h" bodystart="146" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_fw_idle_1af7870c6deb6c7a30b18123edee51977c" prot="public" virt="non-virtual"><scope>FwIdle</scope><name>FwIdle</name></member>
+      <member refid="class_fw_state_1ad39a248d77bc9ced7021430a0710247b" prot="public" virt="non-virtual"><scope>FwIdle</scope><name>FwState</name></member>
+      <member refid="class_fw_state_1a949503c431c3db37ae1a46e138b2ce24" prot="public" virt="virtual"><scope>FwIdle</scope><name>handle_DlComplete</name></member>
+      <member refid="class_fw_state_1a9bb661eb7e96c9043e0960d3a01af6a8" prot="public" virt="virtual"><scope>FwIdle</scope><name>handle_DlFailed</name></member>
+      <member refid="class_fw_state_1a7e95001afaeb737eb109dafdc1425b1d" prot="public" virt="virtual"><scope>FwIdle</scope><name>handle_FwInfo</name></member>
+      <member refid="class_fw_idle_1a4ab8ab28eb13e8e31b6084f058ca9220" prot="public" virt="virtual"><scope>FwIdle</scope><name>handle_OtaStart</name></member>
+      <member refid="class_fw_state_1a22de52c28e140efcdb90423ce29714eb" prot="public" virt="virtual"><scope>FwIdle</scope><name>handle_timer_exp</name></member>
+      <member refid="class_fw_state_1a27c1291a625f9f943fb24a647ac60448" prot="public" virt="non-virtual"><scope>FwIdle</scope><name>maxDownloadDelay</name></member>
+      <member refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" prot="public" virt="non-virtual"><scope>FwIdle</scope><name>pd</name></member>
+      <member refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" prot="public" virt="non-virtual"><scope>FwIdle</scope><name>startDownloadTimestamp</name></member>
+      <member refid="class_fw_idle_1aea6c0a2a6794f9e0d2f257038eac1e0c" prot="public" virt="virtual"><scope>FwIdle</scope><name>~FwIdle</name></member>
+      <member refid="class_fw_state_1a2c016110456db682987bb5dcaf30da31" prot="public" virt="virtual"><scope>FwIdle</scope><name>~FwState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

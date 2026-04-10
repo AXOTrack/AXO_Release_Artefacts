@@ -1,0 +1,9 @@
+<map id="autoSample" name="autoSample">
+<area shape="rect" id="node1" title="Function to start cyclic automatic sampling if specified ADC channels." alt="" coords="5,31,96,57"/>
+<area shape="rect" id="node2" href="$struct_a_d_converter.html#a43e27f320417d5e460c0b79097cb20e6" title="Function to register a listener for a specific ADC channels." alt="" coords="144,5,255,32"/>
+<area shape="rect" id="node3" href="$struct_a_d_converter.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the cyclic sample timers." alt="" coords="163,56,235,83"/>
+<area shape="rect" id="node4" href="$struct_a_d_converter.html#a6d8339b874db1bc63ee9fee453ea933d" title="Timer expired function for the cyclic sample timer." alt="" coords="303,56,409,83"/>
+<area shape="rect" id="node5" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="457,56,547,83"/>
+<area shape="rect" id="node6" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="595,31,715,57"/>
+<area shape="rect" id="node7" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="606,81,703,108"/>
+</map>

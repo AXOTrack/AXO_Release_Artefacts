@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="metric_8h" kind="file" language="C++">
+    <compoundname>metric.h</compoundname>
+    <includes local="no">zephyr/drivers/sensor.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <includedby refid="pdata_8h" local="yes">data/pdata.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>data/metric.h</label>
+        <link refid="metric_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/drivers/sensor.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/pdata.h</label>
+        <link refid="pdata_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>data/metric.h</label>
+        <link refid="metric_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_metrics_builder" prot="public">MetricsBuilder</innerclass>
+    <briefdescription>
+<para>Header file of metrics builder helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="metric_8h_1metrics_builder"/> <simplesect kind="par"><title>Detailed Description </title><para>Metrics are send cyclically via LTE to the MQTT broker. the metrics builder is responsible to prepare the metrics JSON string, which contains all provided metrics data and to clear it after transmission. See also message sequence charts <ref refid="_m_s_c_1SectionMetrics" kindref="member">Metrics</ref>.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_METRIC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_METRIC_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;temperature&quot;:<sp/>17.9,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;humidity&quot;:<sp/>59.2,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;light&quot;:<sp/>1610,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>....</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_metrics_builder" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_metrics_builder_1ae838f7d41a1a4cee8306ddf06b324802" kindref="member">MetricsBuilder</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_metrics_builder_1ada2a8350a330421d1a40f8937ef10c96" kindref="member">~MetricsBuilder</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" kindref="member">addModemTemp</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" kindref="member">addModemBattV</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" kindref="member">addModemLinkQuality</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" kindref="member">addModemPsmAct</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);<sp/><sp/></highlight><highlight class="comment">//<sp/>PSM<sp/>parameter<sp/>granted<sp/>by<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>addeDRXAct(PoolElem*<sp/>pElem);<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>eDRX<sp/>parameter<sp/>granted<sp/>by<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" kindref="member">addIMSI</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>15-digit<sp/>IMSI<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" kindref="member">addResetCause</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>reason</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" kindref="member">addBootCnt</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>boot<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35" kindref="member">addBattV</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" kindref="member">addTemperature</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" kindref="member">addHumidity</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" kindref="member">addHwMetrics</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" kindref="member">add</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" kindref="member">setConfigVersion</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" kindref="member">setActivationThres</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" kindref="member">setDeactivationThres</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" kindref="member">setDispModeOffFlag</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" kindref="member">setRawTransferOnFlag</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" kindref="member">setDispTransferOnFlag</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" kindref="member">setPublicKey</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" kindref="member">setMetricsInterval</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" kindref="member">set_Z_RmsThres</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" kindref="member">set_max_raw_per_day</ref>(std::string&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a3260d0318d001560fe429994039dcfa1" kindref="member">scaleBattIn</ref>(int32_t<sp/>ad_in);<sp/><sp/></highlight><highlight class="comment">//<sp/>consider<sp/>voltage<sp/>divider<sp/>at<sp/>A/D<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" kindref="member">finalize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" kindref="member">isComplete</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder_1a7e8442e7139d840c15bdee83789f7ae8" kindref="member">print</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string&amp;<sp/><ref refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" kindref="member">getPayload</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="88" refid="class_metrics_builder_1a30aa207d61060cd829f2420a1ab60c66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_metrics_builder_1a30aa207d61060cd829f2420a1ab60c66" kindref="member">MetricsBuilder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Disallow<sp/>copying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_metrics_builder_1abfbcefc7922d69a1b46b11385a3c4d94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref>&amp;<sp/><ref refid="class_metrics_builder_1abfbcefc7922d69a1b46b11385a3c4d94" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" kindref="member">reset_cause</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" kindref="member">vbat1</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" kindref="member">vbat2</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" kindref="member">vdd_det</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" kindref="member">vdd_int</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" kindref="member">mdm_batv</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" kindref="member">mdm_temp</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" kindref="member">mdm_link</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" kindref="member">psm_tau</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" kindref="member">psm_active</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102" refid="class_metrics_builder_1a1b3f11008193b93fd584723e71ce5af8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a1b3f11008193b93fd584723e71ce5af8" kindref="member">edrx_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="class_metrics_builder_1a983798e8289b6a64bedda87b9b3eb7c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a983798e8289b6a64bedda87b9b3eb7c2" kindref="member">edrx_ptw</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="class_metrics_builder_1a29043e3c481c242bbe70ce42f34781d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a29043e3c481c242bbe70ce42f34781d5" kindref="member">uptime</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="class_metrics_builder_1a2e9ee8a201840e4535fed1ff394311c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a2e9ee8a201840e4535fed1ff394311c6" kindref="member">heap_free</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="class_metrics_builder_1a768c83aa0b205c143d62d2107dfb289d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a768c83aa0b205c143d62d2107dfb289d" kindref="member">heap_used</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="class_metrics_builder_1aa3d2d96ef3b10e0d19d889f77cbde78b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1aa3d2d96ef3b10e0d19d889f77cbde78b" kindref="member">heap_max_used</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="class_metrics_builder_1aa74c818d418e097e25db7ec7b9320470" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1aa74c818d418e097e25db7ec7b9320470" kindref="member">payload</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" kindref="member">temperature</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" kindref="member">humidity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" kindref="member">imsi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" kindref="member">boot_cnt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" kindref="member">num_hw_errors</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" kindref="member">adxl_status</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" kindref="member">config_version</ref>;<sp/></highlight></codeline>
+<codeline lineno="116" refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" kindref="member">act_thres</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" kindref="member">deact_thres</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" kindref="member">disp_mode_off</ref>;</highlight></codeline>
+<codeline lineno="121" refid="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" kindref="member">raw_transfer_on</ref>;</highlight></codeline>
+<codeline lineno="123" refid="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" kindref="member">disp_transfer_on</ref>;</highlight></codeline>
+<codeline lineno="125" refid="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" kindref="member">pubkey</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126" refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" kindref="member">interval</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" kindref="member">rms_thres</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" kindref="member">max_raw_per_day</ref>;<sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_METRIC_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/metric.h"/>
+  </compounddef>
+</doxygen>

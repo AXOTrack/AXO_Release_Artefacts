@@ -1,0 +1,4 @@
+<map id="cmd_subscribe" name="cmd_subscribe">
+<area shape="rect" id="node1" title="Function to send a subscribe request for the command topic to the MQTT broker." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#a0fc7bb8f849d8634227e7e2d4a1ac9f0" title="Function to send a subscribe request to the MQTT broker." alt="" coords="164,5,243,32"/>
+</map>

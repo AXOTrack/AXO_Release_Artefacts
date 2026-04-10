@@ -1,0 +1,765 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_rms_task" kind="class" language="C++" prot="public">
+    <compoundname>RmsTask</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="rms_8h" local="no">rms.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rms_task_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* myTimer</definition>
+        <argsstring></argsstring>
+        <name>myTimer</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> used for idle detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="84" column="11" bodyfile="data/rms.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the RMS task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="85" column="10" bodyfile="data/rms.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+        <referencedby refid="class_rms_task_1adc25c829b13636794219a3f61f31f34d" compoundref="rms_8cpp" startline="121" endline="126">timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" prot="public" static="no" mutable="no">
+        <type><ref refid="class_hit_detector" kindref="compound">HitDetector</ref> *</type>
+        <definition>HitDetector* myDetectorMed</definition>
+        <argsstring></argsstring>
+        <name>myDetectorMed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> for medium hit detection </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="86" column="17" bodyfile="data/rms.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</referencedby>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" prot="public" static="no" mutable="no">
+        <type><ref refid="class_hit_detector" kindref="compound">HitDetector</ref> *</type>
+        <definition>HitDetector* myDetectorCrit</definition>
+        <argsstring></argsstring>
+        <name>myDetectorCrit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> for critical hit detection </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="88" column="17" bodyfile="data/rms.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</referencedby>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t samples_per_sec</definition>
+        <argsstring></argsstring>
+        <name>samples_per_sec</name>
+        <briefdescription>
+<para>Expected samples per second (sample rate in Hz) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="93" column="9" bodyfile="data/rms.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1ad07bbc8841c16a2548141fbb12a7d0a2" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t n_seconds</definition>
+        <argsstring></argsstring>
+        <name>n_seconds</name>
+        <briefdescription>
+<para>Calculated result over n seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="94" column="14" bodyfile="data/rms.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t n_sample</definition>
+        <argsstring></argsstring>
+        <name>n_sample</name>
+        <briefdescription>
+<para>Current sample, range 1..(samples per second) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="95" column="14" bodyfile="data/rms.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float x_square_sum</definition>
+        <argsstring></argsstring>
+        <name>x_square_sum</name>
+        <briefdescription>
+<para>Current sum of x^2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="96" column="11" bodyfile="data/rms.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float y_square_sum</definition>
+        <argsstring></argsstring>
+        <name>y_square_sum</name>
+        <briefdescription>
+<para>Current sum of y^2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="97" column="11" bodyfile="data/rms.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float z_square_sum</definition>
+        <argsstring></argsstring>
+        <name>z_square_sum</name>
+        <briefdescription>
+<para>Current sum of z^2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="98" column="11" bodyfile="data/rms.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a406facadccb6ea06509e8d1ab28a7fdf" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float x_rms</definition>
+        <argsstring></argsstring>
+        <name>x_rms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RMS result in longitudinal direction at sample rate (samples per second) processed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="100" column="11" bodyfile="data/rms.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1ad86d11bdd69cdf9d37d224cf76af962e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float y_rms</definition>
+        <argsstring></argsstring>
+        <name>y_rms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RMS result in transversal direction at sample rate (samples per second) processed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="102" column="11" bodyfile="data/rms.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a38b6b5532e9611be2456a98febe10864" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float z_rms</definition>
+        <argsstring></argsstring>
+        <name>z_rms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RMS result in vertical direction at sample rate (samples per second) processed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="104" column="11" bodyfile="data/rms.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a97808a9870039f4168da10ecfb5dc472" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool idle</definition>
+        <argsstring></argsstring>
+        <name>idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating, that no data received for more than 1 second </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="107" column="10" bodyfile="data/rms.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a3b1e23a496d25dd87f7b1f223fe0d60c" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t rx_cnt</definition>
+        <argsstring></argsstring>
+        <name>rx_cnt</name>
+        <briefdescription>
+<para>Indicator that we are receiving data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="109" column="14" bodyfile="data/rms.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rms_task_1a2a855ec4ae79d9dc71f4f3418769ef51" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t rx_cnt_prev</definition>
+        <argsstring></argsstring>
+        <name>rx_cnt_prev</name>
+        <briefdescription>
+<para>Previous data count to allow change detection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="110" column="14" bodyfile="data/rms.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RmsTask</definition>
+        <argsstring>(const char *name=&quot;??&quot;, uint8_t num_seconds=1, uint16_t samples_per_sec=4400)</argsstring>
+        <name>RmsTask</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>num_seconds</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>samples_per_sec</declname>
+          <defval>4400</defval>
+        </param>
+        <briefdescription>
+<para>RMS task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds the result shall be calculated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples_per_sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sample rate in Hz</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor initializes the member variables samples_per_sec and n_seconds with parameter num_seconds and samples_per_sec, the idle flag with true and the variables n_sample, x_square_sum, y_square_sum, z_square_sum, rx_cnt and rx_cnt_prev with 0. It allocate and register a mailbox and allocates and initialize the cyclic idle detection timer with duration of 1 ms and period of 1 ms. Finally it allocates and initialize two instances of the class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> for medium and critical hit detection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="75" column="14" bodyfile="data/rms.cpp" bodystart="63" bodyend="87"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af37a207eee727d2ff5a2660920cfefb4" compoundref="mbox_8h" startline="78">Mbox::eAdxlRms</references>
+        <references refid="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" compoundref="rms_8h" startline="88">myDetectorCrit</references>
+        <references refid="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" compoundref="rms_8h" startline="86">myDetectorMed</references>
+        <references refid="class_rms_task_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="rms_8h" startline="84">myTimer</references>
+        <references refid="class_rms_task_1af2570dd7bace0312470d962f29359fb3" compoundref="rms_8h" startline="85">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" compoundref="rms_8h" startline="93">samples_per_sec</references>
+        <references refid="class_rms_task_1aaa25421e04a507bcced8f9bb02af5213" compoundref="rms_8cpp" startline="106" endline="112">timer_cb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_task_1ab00c99e6599d7963850a2a04c3663480" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~RmsTask</definition>
+        <argsstring>()</argsstring>
+        <name>~RmsTask</name>
+        <briefdescription>
+<para>RMS storage task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="77" column="13" bodyfile="data/rms.cpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>()</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <briefdescription>
+<para>RMS task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function directly enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eAdxl37xSensorData: Member function update_rms will be callled to process the received raw data samples from acceleration sensor. Afterwards function checks if RMS task is in idle state, indicated by flag idle. If RMS task is not in idle state receive count rx_cnt will be incremented by 1, the message released back to the pool and the function returns. If RMS task is in idle state, the message is the first data message after sensor wake up. The flag idle will be set to false and the idle detection timer will be started. The power manager task will be informed by sending message eAdxl37xWake from sender eAdxlRms to power manager mailbox, before incrementing rx_cnt and releasing received message to the pool.</para>
+</listitem><listitem><para>eTimerExpired: The pointer pElem will be set to 0, to prevent releasing the message because it is allocated static. The function checks the idle condition, which will be true, if no new data has been received within the last timer period of 1 ms. In this case the flag idle will be set to true, the timer will be stopped and sample task will be informed by sending message eAdxl37xIdle from sender eAdxlRms to eAdxl37xTask mailbox. Finally the function set the previous receive counter rx_cnt_prev to the value of the current receive counter rx_cnt.</para>
+</listitem><listitem><para>eFwUpdateActive: For testing purposes only, print out debug message at warning level. <linebreak/>
+ <linebreak/>
+ For more details see also message sequence charts in section <ref refid="_m_s_c_1SectionMeasurement" kindref="member">Measurement</ref> </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="78" column="18" bodyfile="data/rms.cpp" bodystart="315" bodyend="374"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" compoundref="mpelem_8h" startline="65">eAdxl37xIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6c96e50e0d4c7d15c8ca7bca261619f9" compoundref="mpelem_8h" startline="61">eAdxl37xSensorData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75f6477e8cb8aa5c80928dced69e2604" compoundref="mpelem_8h" startline="64">eAdxl37xWake</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8de8fcdbbc04723219977f9db4e7b148" compoundref="mpelem_8h" startline="99">eFwUpdateActive</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_rms_task_1a97808a9870039f4168da10ecfb5dc472" compoundref="rms_8h" startline="107">idle</references>
+        <references refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_rms_task_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="rms_8h" startline="84">myTimer</references>
+        <references refid="class_rms_task_1af2570dd7bace0312470d962f29359fb3" compoundref="rms_8h" startline="85">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_rms_task_1a3b1e23a496d25dd87f7b1f223fe0d60c" compoundref="rms_8h" startline="109">rx_cnt</references>
+        <references refid="class_rms_task_1a2a855ec4ae79d9dc71f4f3418769ef51" compoundref="rms_8h" startline="110">rx_cnt_prev</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="class_timer_1a8c528baf37154d347366083f0f816846" compoundref="timer_8cpp" startline="101" endline="104">Timer::stop</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <references refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initialization function for the RMS task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the private member variables x_square_sum, y_square_sum, z_square_sum and n_sample with 0 and clear medium and critical hit counter by calling the function reset for the two instances of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="79" column="10" bodyfile="data/rms.cpp" bodystart="139" bodyend="147"/>
+        <references refid="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" compoundref="rms_8h" startline="88">myDetectorCrit</references>
+        <references refid="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" compoundref="rms_8h" startline="86">myDetectorMed</references>
+        <references refid="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" compoundref="rms_8h" startline="95">n_sample</references>
+        <references refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="hit__detect_8cpp" startline="77" endline="82">HitDetector::reset</references>
+        <references refid="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" compoundref="rms_8h" startline="96">x_square_sum</references>
+        <references refid="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" compoundref="rms_8h" startline="97">y_square_sum</references>
+        <references refid="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" compoundref="rms_8h" startline="98">z_square_sum</references>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void update_rms</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>update_rms</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to update the RMS and hit values and send result to RMS storage task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts the acceleration raw data of type struct <ref refid="structadxl37x__sensor__value" kindref="compound">adxl37x_sensor_value</ref> from the payload of the message and enter a loop over the number of raw data samples. In the loop the x, y and z raw values will be converted to micro meter per squared seconds. These calculated values will be powered by 2 and added to the current square sums x_square_sum, y_square_sum and z_square_sum. Afterwards the calculated z-value will be passed into function inpit of the two hit detector instances. If n_sample reached the maximum of samples_per_sec * n_seconds, the final result will be calculated by dividing the square sum values through the number of samples and extracting the root by calling function sqrt for x, y and z axis. The result are the x, y and z RMS values. The number of medium and critical hits will be retrieved by calling the getter function getNumHits for both hit detector instances. <linebreak/>
+ Afterwards a message of type eAdxl37xRmsData with attached structure of type struct <ref refid="structadxl__rms__data" kindref="compound">adxl_rms_data</ref> with the calculated RMS and hit values and a timestamp will be send to RMS store mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. <linebreak/>
+ After processing of the loop, the function checks if all samples has been processed and in this case the functions returns. Otherwise square sum and maximum values will be set to 0 and the hit counter will be reset by calling member function init before entering a new loop over the remaining raw data samples where again x, y and z raw values will be converted to micro meter per squared seconds, the maximum in x, y and z direction calculated, also powered by 2 and added to the current square sums x_square_sum, y_square_sum and z_square_sum, before sample counter n_sample will be incremented by 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="80" column="10" bodyfile="data/rms.cpp" bodystart="180" bodyend="280"/>
+        <references refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" compoundref="adxl37x_8h" startline="54">adxl37x_sensor_value::cnt</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" compoundref="hit__detect_8h" startline="60" endline="60">HitDetector::getNumHits</references>
+        <references refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">init</references>
+        <references refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" compoundref="hit__detect_8cpp" startline="101" endline="111">HitDetector::input</references>
+        <references refid="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" compoundref="rms_8h" startline="88">myDetectorCrit</references>
+        <references refid="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" compoundref="rms_8h" startline="86">myDetectorMed</references>
+        <references refid="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" compoundref="rms_8h" startline="95">n_sample</references>
+        <references refid="class_rms_task_1ad07bbc8841c16a2548141fbb12a7d0a2" compoundref="rms_8h" startline="94">n_seconds</references>
+        <references refid="rms_8cpp_1a9a1a80dcaf876a3295a7653159a0e90a" compoundref="rms_8cpp" startline="129">pow2</references>
+        <references refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" compoundref="adxl37x_8h" startline="52">adxl37x_sensor_value::samples</references>
+        <references refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" compoundref="rms_8h" startline="93">samples_per_sec</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
+        <references refid="class_rms_task_1a406facadccb6ea06509e8d1ab28a7fdf" compoundref="rms_8h" startline="100">x_rms</references>
+        <references refid="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" compoundref="rms_8h" startline="96">x_square_sum</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
+        <references refid="class_rms_task_1ad86d11bdd69cdf9d37d224cf76af962e" compoundref="rms_8h" startline="102">y_rms</references>
+        <references refid="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" compoundref="rms_8h" startline="97">y_square_sum</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="class_rms_task_1a38b6b5532e9611be2456a98febe10864" compoundref="rms_8h" startline="104">z_rms</references>
+        <references refid="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" compoundref="rms_8h" startline="98">z_square_sum</references>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_rms_task_1adc25c829b13636794219a3f61f31f34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>()</argsstring>
+        <name>timer1_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the idle detection timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eTimerExpired, set eAdxlRms as sender and put message into own (RMS task&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="83" column="10" bodyfile="data/rms.cpp" bodystart="121" bodyend="126"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_rms_task_1af2570dd7bace0312470d962f29359fb3" compoundref="rms_8h" startline="85">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_rms_task_1aaa25421e04a507bcced8f9bb02af5213" compoundref="rms_8cpp" startline="106" endline="112">timer_cb</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_rms_task_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the idle detection timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call MQTT connector timer expired function timer1_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="82" column="17" bodyfile="data/rms.cpp" bodystart="106" bodyend="112"/>
+        <references refid="class_rms_task_1adc25c829b13636794219a3f61f31f34d" compoundref="rms_8cpp" startline="121" endline="126">timer1_expired</references>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rms_task_1a0b38580605654394e49099df0afdfb1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RmsTask</definition>
+        <argsstring>()=delete</argsstring>
+        <name>RmsTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms.h" line="106" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RMS task class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>RMS task (self)</para>
+</listitem><listitem><para>ADXL data store task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>RMS store task</para>
+</listitem><listitem><para>RMS task (self, transmission in timer callback) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RmsTask</label>
+        <link refid="class_rms_task"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>int16_t</label>
+      </node>
+      <node id="8">
+        <label>int32_t</label>
+      </node>
+      <node id="10">
+        <label>float</label>
+      </node>
+      <node id="7">
+        <label>HitDetector</label>
+        <link refid="class_hit_detector"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-samples_per_sec</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-hit_cnt</edgelabel>
+          <edgelabel>-max_msec</edgelabel>
+          <edgelabel>-max_samples</edgelabel>
+          <edgelabel>-n_cur</edgelabel>
+          <edgelabel>-n_high</edgelabel>
+          <edgelabel>-threshold</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="13">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RmsTask</label>
+        <link refid="class_rms_task"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+myDetectorCrit</edgelabel>
+          <edgelabel>+myDetectorMed</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-x_rms</edgelabel>
+          <edgelabel>-x_square_sum</edgelabel>
+          <edgelabel>-y_rms</edgelabel>
+          <edgelabel>-y_square_sum</edgelabel>
+          <edgelabel>-z_rms</edgelabel>
+          <edgelabel>-z_square_sum</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-n_sample</edgelabel>
+          <edgelabel>-n_seconds</edgelabel>
+          <edgelabel>-rx_cnt</edgelabel>
+          <edgelabel>-rx_cnt_prev</edgelabel>
+          <edgelabel>-samples_per_sec</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-idle</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+myTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="14">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="15">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="18">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/rms.h" line="72" column="1" bodyfile="data/rms.h" bodystart="72" bodyend="111"/>
+    <listofallmembers>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>RmsTask</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>create</name></member>
+      <member refid="class_rms_task_1a97808a9870039f4168da10ecfb5dc472" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>idle</name></member>
+      <member refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>init</name></member>
+      <member refid="class_rms_task_1aaed7c44f51ad2221adea110ec5d38f03" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>myDetectorCrit</name></member>
+      <member refid="class_rms_task_1a413428da865cfc6205de7f039ed3a6fd" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>myDetectorMed</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>RmsTask</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>RmsTask</scope><name>myName</name></member>
+      <member refid="class_rms_task_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>myTimer</name></member>
+      <member refid="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>n_sample</name></member>
+      <member refid="class_rms_task_1ad07bbc8841c16a2548141fbb12a7d0a2" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>n_seconds</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>operator=</name></member>
+      <member refid="class_rms_task_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>pInMbox</name></member>
+      <member refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>RmsTask</name></member>
+      <member refid="class_rms_task_1a0b38580605654394e49099df0afdfb1b" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>RmsTask</name></member>
+      <member refid="class_rms_task_1a3b1e23a496d25dd87f7b1f223fe0d60c" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>rx_cnt</name></member>
+      <member refid="class_rms_task_1a2a855ec4ae79d9dc71f4f3418769ef51" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>rx_cnt_prev</name></member>
+      <member refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>samples_per_sec</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>start</name></member>
+      <member refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" prot="public" virt="virtual"><scope>RmsTask</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>RmsTask</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>RmsTask</scope><name>tid</name></member>
+      <member refid="class_rms_task_1adc25c829b13636794219a3f61f31f34d" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>timer1_expired</name></member>
+      <member refid="class_rms_task_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>timer_cb</name></member>
+      <member refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" prot="public" virt="non-virtual"><scope>RmsTask</scope><name>update_rms</name></member>
+      <member refid="class_rms_task_1a406facadccb6ea06509e8d1ab28a7fdf" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>x_rms</name></member>
+      <member refid="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>x_square_sum</name></member>
+      <member refid="class_rms_task_1ad86d11bdd69cdf9d37d224cf76af962e" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>y_rms</name></member>
+      <member refid="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>y_square_sum</name></member>
+      <member refid="class_rms_task_1a38b6b5532e9611be2456a98febe10864" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>z_rms</name></member>
+      <member refid="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" prot="private" virt="non-virtual"><scope>RmsTask</scope><name>z_square_sum</name></member>
+      <member refid="class_rms_task_1ab00c99e6599d7963850a2a04c3663480" prot="public" virt="virtual"><scope>RmsTask</scope><name>~RmsTask</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>RmsTask</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

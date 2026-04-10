@@ -1,0 +1,672 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_shtcx" kind="class" language="C++" prot="public">
+    <compoundname>Shtcx</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="shtcx_8h" local="no">shtcx.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_shtcx_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the Shctx task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="86" column="10" bodyfile="drv/i2c/shtcx.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1a19a654e3605451204cc9340fbc8dbf79" compoundref="shtcx_8cpp" startline="249" endline="255">Shtcx</referencedby>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+        <referencedby refid="class_shtcx_1adc25c829b13636794219a3f61f31f34d" compoundref="shtcx_8cpp" startline="106" endline="111">timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shtcx_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* myTimer</definition>
+        <argsstring></argsstring>
+        <name>myTimer</name>
+        <briefdescription>
+<para>Cyclic timer to sample sensor data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="87" column="11" bodyfile="drv/i2c/shtcx.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1a19a654e3605451204cc9340fbc8dbf79" compoundref="shtcx_8cpp" startline="249" endline="255">Shtcx</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_shtcx_1a24071b2369ffb26926354dd64fe69fb1" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t i2c_cfg</definition>
+        <argsstring></argsstring>
+        <name>i2c_cfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>32-bit bit mask for the device runtime configuration of the I2C controller. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="96" column="21" bodyfile="drv/i2c/shtcx.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shtcx_1a410b698cf91ae22eb9ccd4d3537bb990" prot="private" static="no" mutable="no">
+        <type>struct device *</type>
+        <definition>struct device* sensorDev</definition>
+        <argsstring></argsstring>
+        <name>sensorDev</name>
+        <briefdescription>
+<para>Pointer to the sensor device driver structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="99" column="9" bodyfile="drv/i2c/shtcx.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1ac1d2043bb6ede9c12212992591d63d91" compoundref="shtcx_8cpp" startline="65" endline="80">initDevice</referencedby>
+        <referencedby refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" compoundref="shtcx_8cpp" startline="193" endline="210">readHumidity</referencedby>
+        <referencedby refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" compoundref="shtcx_8cpp" startline="162" endline="179">readTemperature</referencedby>
+        <referencedby refid="class_shtcx_1a50a2ce599e896bfb535e70a42003ed23" compoundref="shtcx_8cpp" startline="121" endline="130">sample</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shtcx_1a9e74642af0774ec0db16297dd0cb41c3" prot="private" static="no" mutable="no">
+        <type>struct <ref refid="structshtcx__sensor__value" kindref="compound">shtcx_sensor_value</ref></type>
+        <definition>struct shtcx_sensor_value temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <briefdescription>
+<para>The measured temperature value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="99" column="9" bodyfile="drv/i2c/shtcx.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1accd2600060dbaee3a3b41aed4034c63c" compoundref="shtcx_8cpp" startline="138" endline="148">dump</referencedby>
+        <referencedby refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" compoundref="shtcx_8cpp" startline="162" endline="179">readTemperature</referencedby>
+        <referencedby refid="class_shtcx_1a2a8129102eab0745dbd35323202addcc" compoundref="shtcx_8cpp" startline="219" endline="224">reportTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shtcx_1a568afe9b60e93a15575fbff2ba2a0413" prot="private" static="no" mutable="no">
+        <type>struct <ref refid="structshtcx__sensor__value" kindref="compound">shtcx_sensor_value</ref></type>
+        <definition>struct shtcx_sensor_value hum</definition>
+        <argsstring></argsstring>
+        <name>hum</name>
+        <briefdescription>
+<para>The measured humidity value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="99" column="9" bodyfile="drv/i2c/shtcx.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1accd2600060dbaee3a3b41aed4034c63c" compoundref="shtcx_8cpp" startline="138" endline="148">dump</referencedby>
+        <referencedby refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" compoundref="shtcx_8cpp" startline="193" endline="210">readHumidity</referencedby>
+        <referencedby refid="class_shtcx_1a783d547e346f24d0673dd0741a3074af" compoundref="shtcx_8cpp" startline="233" endline="239">reportHumidity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shtcx_1a6818c4bbbf0261199424ee9d63392952" prot="private" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t sample_ts</definition>
+        <argsstring></argsstring>
+        <name>sample_ts</name>
+        <briefdescription>
+<para>Timestamp at calling <ref refid="class_shtcx_1a50a2ce599e896bfb535e70a42003ed23" kindref="member">sample()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="102" column="12" bodyfile="drv/i2c/shtcx.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" compoundref="shtcx_8cpp" startline="193" endline="210">readHumidity</referencedby>
+        <referencedby refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" compoundref="shtcx_8cpp" startline="162" endline="179">readTemperature</referencedby>
+        <referencedby refid="class_shtcx_1a50a2ce599e896bfb535e70a42003ed23" compoundref="shtcx_8cpp" startline="121" endline="130">sample</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shtcx_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool device_good</definition>
+        <argsstring></argsstring>
+        <name>device_good</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if hardware init was successful or not </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="103" column="10" bodyfile="drv/i2c/shtcx.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="class_shtcx_1ac1d2043bb6ede9c12212992591d63d91" compoundref="shtcx_8cpp" startline="65" endline="80">initDevice</referencedby>
+        <referencedby refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" compoundref="shtcx_8cpp" startline="193" endline="210">readHumidity</referencedby>
+        <referencedby refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" compoundref="shtcx_8cpp" startline="162" endline="179">readTemperature</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shtcx_1a19a654e3605451204cc9340fbc8dbf79" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Shtcx</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>Shtcx</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_shtcx" kindref="compound">Shtcx</ref> task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register a mailbox and allocate the cyclic sample timer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="79" column="14" bodyfile="drv/i2c/shtcx.cpp" bodystart="249" bodyend="255"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab7bd866dc75a69cf1e11ef076c71ad94" compoundref="mbox_8h" startline="73">Mbox::eShtcxTask</references>
+        <references refid="class_shtcx_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="shtcx_8h" startline="87">myTimer</references>
+        <references refid="class_shtcx_1af2570dd7bace0312470d962f29359fb3" compoundref="shtcx_8h" startline="86">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_shtcx_1aaa25421e04a507bcced8f9bb02af5213" compoundref="shtcx_8cpp" startline="91" endline="97">timer_cb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1a1132015db16aef7a88958d40be768dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Shtcx</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Shtcx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="80" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1adf93ac285d1962fc1c5cd1a4f9d2d32d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~Shtcx</definition>
+        <argsstring>()</argsstring>
+        <name>~Shtcx</name>
+        <briefdescription>
+<para><ref refid="class_shtcx" kindref="compound">Shtcx</ref> task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="81" column="13" bodyfile="drv/i2c/shtcx.cpp" bodystart="263" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_shtcx" kindref="compound">Shtcx</ref> task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the I2C bus will be initialized by calling init function provided by <ref refid="class_i2c_bus" kindref="compound">I2cBus</ref> instance. Then the sensor device will be initialized by call of member function initDevice. For testing purposes a cyclic timer can be activated by commenting in the start method of the timer to initiate a cyclic sampling of the sensor data. <linebreak/>
+ Afterwards the function enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: On sample timer expiry sensor data will be sampled by calling function sample and the temperature and humidity data will be read out from internal driver buffer by calling the functions readTemperature and readHumidity. The pointer pElem will be set to 0, to prevent releasing the message because it is allocated static.</para>
+</listitem><listitem><para>eShtcxReport: On report request sensor data will be sampled by calling function sample and the temperature and humidity data will be read out from internal driver buffer by calling the functions readTemperature and readHumidity. Afterwards the data will be send to data manager task by calling the functions reportTemperature and reportHumidity. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="82" column="18" bodyfile="drv/i2c/shtcx.cpp" bodystart="291" bodyend="335"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad6e9f2d231aae9820c265b75a1608e5c" compoundref="mpelem_8h" startline="58">eShtcxReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="i2cbus_8cpp" startline="59" endline="76">I2cBus::init</references>
+        <references refid="class_shtcx_1ac1d2043bb6ede9c12212992591d63d91" compoundref="shtcx_8cpp" startline="65" endline="80">initDevice</references>
+        <references refid="class_i2c_bus_1afea1cf24ffb2af3df6cd42029053e852" compoundref="i2cbus_8cpp" startline="86" endline="90">I2cBus::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_shtcx_1af2570dd7bace0312470d962f29359fb3" compoundref="shtcx_8h" startline="86">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" compoundref="shtcx_8cpp" startline="193" endline="210">readHumidity</references>
+        <references refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" compoundref="shtcx_8cpp" startline="162" endline="179">readTemperature</references>
+        <references refid="class_shtcx_1a783d547e346f24d0673dd0741a3074af" compoundref="shtcx_8cpp" startline="233" endline="239">reportHumidity</references>
+        <references refid="class_shtcx_1a2a8129102eab0745dbd35323202addcc" compoundref="shtcx_8cpp" startline="219" endline="224">reportTemperature</references>
+        <references refid="class_shtcx_1a50a2ce599e896bfb535e70a42003ed23" compoundref="shtcx_8cpp" startline="121" endline="130">sample</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1accd2600060dbaee3a3b41aed4034c63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <briefdescription>
+<para>Function to print out temperature and humidity data from sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Temperature and humidity data will be printed out together with the timestamp with debug message at info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="84" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="138" bodyend="148"/>
+        <references refid="class_shtcx_1a568afe9b60e93a15575fbff2ba2a0413" compoundref="shtcx_8h" startline="101">hum</references>
+        <references refid="class_shtcx_1a9e74642af0774ec0db16297dd0cb41c3" compoundref="shtcx_8h" startline="100">temp</references>
+        <references refid="structshtcx__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" compoundref="shtcx_8h" startline="45">shtcx_sensor_value::ts</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1adc25c829b13636794219a3f61f31f34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>()</argsstring>
+        <name>timer1_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the cyclic sample timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eTimerExpired, set <ref refid="class_shtcx" kindref="compound">Shtcx</ref> task as sender and put message into own (<ref refid="class_shtcx" kindref="compound">Shtcx</ref>) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="85" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="106" bodyend="111"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_shtcx_1af2570dd7bace0312470d962f29359fb3" compoundref="shtcx_8h" startline="86">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_shtcx_1aaa25421e04a507bcced8f9bb02af5213" compoundref="shtcx_8cpp" startline="91" endline="97">timer_cb</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_shtcx_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the cyclic sample timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call timer expired member function timer1_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="83" column="17" bodyfile="drv/i2c/shtcx.cpp" bodystart="91" bodyend="97"/>
+        <references refid="class_shtcx_1adc25c829b13636794219a3f61f31f34d" compoundref="shtcx_8cpp" startline="106" endline="111">timer1_expired</references>
+        <referencedby refid="class_shtcx_1a19a654e3605451204cc9340fbc8dbf79" compoundref="shtcx_8cpp" startline="249" endline="255">Shtcx</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_shtcx_1ac1d2043bb6ede9c12212992591d63d91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initDevice</definition>
+        <argsstring>()</argsstring>
+        <name>initDevice</name>
+        <briefdescription>
+<para>The init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The sensor driver controller device structure will be retrieved by calling macro DEVICE_DT_GET and function checks if the device is ready for usage with call of function device_is_ready. The return value ready of this function will be assigned to flag device_good. In case of an error a debug message at error level will be printed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="90" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="65" bodyend="80"/>
+        <references refid="class_shtcx_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="shtcx_8h" startline="103">device_good</references>
+        <references refid="shtcx_8cpp_1a6b477359cc1d6970e2d12f0188644553" compoundref="shtcx_8cpp" startline="51">MY_SENSOR</references>
+        <references refid="class_shtcx_1a410b698cf91ae22eb9ccd4d3537bb990" compoundref="shtcx_8h" startline="98">sensorDev</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1a50a2ce599e896bfb535e70a42003ed23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sample</definition>
+        <argsstring>()</argsstring>
+        <name>sample</name>
+        <briefdescription>
+<para>Function to sample temperature and humidity data from sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>With call of function sensor_sample_fetch provided by the zephyr API sample temperature and humidity data will be fetched from the sensor and stored it in an internal driver buffer. Afterwards the timestamp for this sample will be stored in private member variable sample_ts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="91" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="121" bodyend="130"/>
+        <references refid="class_shtcx_1a6818c4bbbf0261199424ee9d63392952" compoundref="shtcx_8h" startline="102">sample_ts</references>
+        <references refid="class_shtcx_1a410b698cf91ae22eb9ccd4d3537bb990" compoundref="shtcx_8h" startline="98">sensorDev</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void readTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>readTemperature</name>
+        <briefdescription>
+<para>Read function to retrieve temperature from internal driver buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>If device has not been initialized successfully, indicated by flag device_good a defined dummy value will be written into member variable temp by calling function sensor_value_from_double provided by the zephyr API, which converts a double value to struct sensor_value and the function returns immediately. Otherwise the temperature will be read out from internal driver buffer by call of function sensor_channel_get provided by the zephyr API and the stored timestamp will be copied into structure temp of type struct <ref refid="structshtcx__sensor__value" kindref="compound">shtcx_sensor_value</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="92" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="162" bodyend="179"/>
+        <references refid="class_shtcx_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="shtcx_8h" startline="103">device_good</references>
+        <references refid="class_shtcx_1a6818c4bbbf0261199424ee9d63392952" compoundref="shtcx_8h" startline="102">sample_ts</references>
+        <references refid="class_shtcx_1a410b698cf91ae22eb9ccd4d3537bb990" compoundref="shtcx_8h" startline="98">sensorDev</references>
+        <references refid="class_shtcx_1a9e74642af0774ec0db16297dd0cb41c3" compoundref="shtcx_8h" startline="100">temp</references>
+        <references refid="structshtcx__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" compoundref="shtcx_8h" startline="45">shtcx_sensor_value::ts</references>
+        <references refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" compoundref="config_8h" startline="154">VAL_NOT_INITIALIZED_FLOAT</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void readHumidity</definition>
+        <argsstring>()</argsstring>
+        <name>readHumidity</name>
+        <briefdescription>
+<para>Read function to retrieve humidity from internal driver buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>If device has not been initialized successfully, indicated by flag device_good a defined dummy value will be written into member variable hum by calling function sensor_value_from_double provided by the zephyr API, which converts a double value to struct sensor_value and the function returns immediately. Otherwise the humidity will be read out from internal driver buffer by call of function sensor_channel_get provided by the zephyr API and the storedtimestamp will be copied into structure hum of type struct <ref refid="structshtcx__sensor__value" kindref="compound">shtcx_sensor_value</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="93" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="193" bodyend="210"/>
+        <references refid="class_shtcx_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="shtcx_8h" startline="103">device_good</references>
+        <references refid="class_shtcx_1a568afe9b60e93a15575fbff2ba2a0413" compoundref="shtcx_8h" startline="101">hum</references>
+        <references refid="class_shtcx_1a6818c4bbbf0261199424ee9d63392952" compoundref="shtcx_8h" startline="102">sample_ts</references>
+        <references refid="class_shtcx_1a410b698cf91ae22eb9ccd4d3537bb990" compoundref="shtcx_8h" startline="98">sensorDev</references>
+        <references refid="structshtcx__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" compoundref="shtcx_8h" startline="45">shtcx_sensor_value::ts</references>
+        <references refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" compoundref="config_8h" startline="154">VAL_NOT_INITIALIZED_FLOAT</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1a2a8129102eab0745dbd35323202addcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>reportTemperature</name>
+        <briefdescription>
+<para>Send temperature data message to data manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eShtcxTemperature with attached temperature data to data manager mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="94" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="219" bodyend="224"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" compoundref="mpelem_8h" startline="59">eShtcxTemperature</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_shtcx_1a9e74642af0774ec0db16297dd0cb41c3" compoundref="shtcx_8h" startline="100">temp</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shtcx_1a783d547e346f24d0673dd0741a3074af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportHumidity</definition>
+        <argsstring>()</argsstring>
+        <name>reportHumidity</name>
+        <briefdescription>
+<para>Send humidity data message to data manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eShtcxHumidity with attached humidity data to data manager mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/i2c/shtcx.h" line="95" column="10" bodyfile="drv/i2c/shtcx.cpp" bodystart="233" bodyend="239"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba153fbb27bae81bd546a1bbde27a299e6" compoundref="mpelem_8h" startline="60">eShtcxHumidity</references>
+        <references refid="class_shtcx_1a568afe9b60e93a15575fbff2ba2a0413" compoundref="shtcx_8h" startline="101">hum</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_shtcx" kindref="compound">Shtcx</ref> temperature sensor class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The <ref refid="class_shtcx" kindref="compound">Shtcx</ref> class handle the reception of the temperature and humidity data and report these values to the data manager class on request to add them to the metrics JSON string. Temperature and humidity data is sampled by request. For testing purposes a cyclic timer handling is implemented, but the timer is not started. It can be activated manually in the init function to initiate a cyclic sampling of the sensor data. <linebreak/>
+ The <ref refid="class_shtcx" kindref="compound">Shtcx</ref> class provides methods to read temperature and humidity data from the sensor, to initialize the sensor and to report the data to the data manager task. It uses the public zephyr API for the sensor driver provided in file sensor.h. See details in <ulink url="https://docs.zephyrproject.org/apidoc/latest/sensor_8h.html">Zephyr API documentation</ulink>. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>Shctx task (self)</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Data manager task</para>
+</listitem><listitem><para>Shctx task (self, transmission in timer callback) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Shtcx</label>
+        <link refid="class_shtcx"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>int32_t</label>
+      </node>
+      <node id="10">
+        <label>shtcx_sensor_value</label>
+        <link refid="structshtcx__sensor__value"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+ts</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+val1</edgelabel>
+          <edgelabel>+val2</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Shtcx</label>
+        <link refid="class_shtcx"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-sample_ts</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-i2c_cfg</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-device_good</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-hum</edgelabel>
+          <edgelabel>-temp</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-sensorDev</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+myTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="13">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>struct device *</label>
+      </node>
+      <node id="7">
+        <label>time_t</label>
+      </node>
+      <node id="17">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="14">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="15">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="18">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/i2c/shtcx.h" line="77" column="1" bodyfile="drv/i2c/shtcx.h" bodystart="77" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>Shtcx</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>create</name></member>
+      <member refid="class_shtcx_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>device_good</name></member>
+      <member refid="class_shtcx_1accd2600060dbaee3a3b41aed4034c63c" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>dump</name></member>
+      <member refid="class_shtcx_1a568afe9b60e93a15575fbff2ba2a0413" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>hum</name></member>
+      <member refid="class_shtcx_1a24071b2369ffb26926354dd64fe69fb1" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>i2c_cfg</name></member>
+      <member refid="class_shtcx_1ac1d2043bb6ede9c12212992591d63d91" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>initDevice</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>Shtcx</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>Shtcx</scope><name>myName</name></member>
+      <member refid="class_shtcx_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>myTimer</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>operator=</name></member>
+      <member refid="class_shtcx_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>pInMbox</name></member>
+      <member refid="class_shtcx_1a4d9dff4f6b3dd17fc1e4bb67760e9dea" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>readHumidity</name></member>
+      <member refid="class_shtcx_1a0c9bb1ef1489b6d388529d4351e3b12d" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>readTemperature</name></member>
+      <member refid="class_shtcx_1a783d547e346f24d0673dd0741a3074af" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>reportHumidity</name></member>
+      <member refid="class_shtcx_1a2a8129102eab0745dbd35323202addcc" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>reportTemperature</name></member>
+      <member refid="class_shtcx_1a50a2ce599e896bfb535e70a42003ed23" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>sample</name></member>
+      <member refid="class_shtcx_1a6818c4bbbf0261199424ee9d63392952" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>sample_ts</name></member>
+      <member refid="class_shtcx_1a410b698cf91ae22eb9ccd4d3537bb990" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>sensorDev</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>setId</name></member>
+      <member refid="class_shtcx_1a19a654e3605451204cc9340fbc8dbf79" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>Shtcx</name></member>
+      <member refid="class_shtcx_1a1132015db16aef7a88958d40be768dad" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>Shtcx</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>start</name></member>
+      <member refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>Shtcx</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>taskCode</name></member>
+      <member refid="class_shtcx_1a9e74642af0774ec0db16297dd0cb41c3" prot="private" virt="non-virtual"><scope>Shtcx</scope><name>temp</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>Shtcx</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>Shtcx</scope><name>tid</name></member>
+      <member refid="class_shtcx_1adc25c829b13636794219a3f61f31f34d" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>timer1_expired</name></member>
+      <member refid="class_shtcx_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>Shtcx</scope><name>timer_cb</name></member>
+      <member refid="class_shtcx_1adf93ac285d1962fc1c5cd1a4f9d2d32d" prot="public" virt="virtual"><scope>Shtcx</scope><name>~Shtcx</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>Shtcx</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

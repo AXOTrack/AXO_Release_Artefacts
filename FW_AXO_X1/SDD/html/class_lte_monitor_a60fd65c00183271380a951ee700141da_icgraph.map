@@ -1,0 +1,4 @@
+<map id="reportBattVoltage" name="reportBattVoltage">
+<area shape="rect" id="node1" title="Send modem battery voltage to the receiver mailbox." alt="" coords="100,5,223,32"/>
+<area shape="rect" id="node2" href="$class_lte_monitor.html#a557b206172fbde7a204eb0d2376b7f71" title="MQTT connector task function." alt="" coords="5,5,52,32"/>
+</map>

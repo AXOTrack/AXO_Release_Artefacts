@@ -1,0 +1,25 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="RMS task function." alt="" coords="5,157,52,184"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="100,5,207,32"/>
+<area shape="rect" id="node5" href="$class_rms_task.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function for the RMS task." alt="" coords="317,56,355,83"/>
+<area shape="rect" id="node7" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="110,208,197,235"/>
+<area shape="rect" id="node9" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="279,107,393,133"/>
+<area shape="rect" id="node18" href="$class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="109,259,197,285"/>
+<area shape="rect" id="node19" href="$class_timer.html#a8c528baf37154d347366083f0f816846" title="Timer stop function." alt="" coords="110,309,197,336"/>
+<area shape="rect" id="node20" href="$class_rms_task.html#ab9179e1ad434ab3966aac5e0312caef8" title="Function to update the RMS and hit values and send result to RMS storage task." alt="" coords="108,157,199,184"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="270,5,402,32"/>
+<area shape="rect" id="node4" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="481,5,605,32"/>
+<area shape="rect" id="node6" href="$class_hit_detector.html#ad20897c5c8bd47f5d4005989bead0e55" title="Reset method to clear hit counter." alt="" coords="481,56,605,83"/>
+<area shape="rect" id="node8" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="287,309,385,336"/>
+<area shape="rect" id="node10" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="465,107,620,133"/>
+<area shape="rect" id="node12" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="491,157,594,184"/>
+<area shape="rect" id="node13" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="497,208,588,235"/>
+<area shape="rect" id="node11" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="672,107,803,133"/>
+<area shape="rect" id="node14" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="668,183,807,209"/>
+<area shape="rect" id="node15" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="693,233,782,260"/>
+<area shape="rect" id="node16" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="855,208,975,235"/>
+<area shape="rect" id="node17" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="866,259,963,285"/>
+<area shape="rect" id="node21" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="267,157,405,184"/>
+<area shape="rect" id="node22" href="$class_hit_detector.html#a97024cd8a7fd0e3745e7f01b69cae87e" title=" " alt="" coords="255,208,417,235"/>
+<area shape="rect" id="node23" href="$class_hit_detector.html#a5d27da9908456967f0c2cd14b5369ca3" title="Function checks if sample z fullfills hit detection condition." alt="" coords="275,259,397,285"/>
+</map>

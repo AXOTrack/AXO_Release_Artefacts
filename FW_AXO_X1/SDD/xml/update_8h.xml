@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="update_8h" kind="file" language="C++">
+    <compoundname>update.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="update_8cpp" local="yes">update/update.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="11">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>update/update.h</label>
+        <link refid="update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="3">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="1">
+        <label>update/update.h</label>
+        <link refid="update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_fw_upd" prot="public">FwUpd</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="update_8h_1a462e63b220ba3e16d1fa3e8c3048978f" prot="public" static="no">
+        <name>TLS_SEC_TAG</name>
+        <initializer>956</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="40" column="9" bodyfile="update/update.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="update_8h_1a07d3e3ac0d4a3fedbdfa28292ae6962e" prot="public" static="no">
+        <name>SEC_TAG</name>
+        <initializer>(<ref refid="update_8h_1a462e63b220ba3e16d1fa3e8c3048978f" kindref="member">TLS_SEC_TAG</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/update.h" line="42" column="9" bodyfile="update/update.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of the firmware update task. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="update_8h_1update"/> <simplesect kind="par"><title>Detailed Description </title><para>The AXO software uses the <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/libraries/networking/fota_download.html">firmware over-the-air (FOTA) download library</ulink>, which provides functions for downloading a firmware file as an upgrade candidate to the target. <linebreak/>
+ The firmware update task implements the interface to the FOTA download library. AXO X1 uses bootloader <ulink url="https://github.com/mcu-tools/mcuboot">MCUboot</ulink>. MCUboot is a secure bootloader for 32-bits microcontrollers. It defines a common infrastructure for the bootloader and the system flash layout on microcontroller systems, and provides a secure bootloader that enables easy software upgrade. MCUboot is not dependent on any specific operating system and hardware and relies on hardware porting layers from the operating system it works with. <linebreak/>
+ The <ulink url="https://docs.zephyrproject.org/latest/services/device_mgmt/dfu.html#mcuboot">MCUboot API</ulink> is provided to get version information and boot status of application images. It allows to select application image and boot type for the next boot.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_UPDATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_UPDATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="update_8h_1a462e63b220ba3e16d1fa3e8c3048978f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TLS_SEC_TAG<sp/>956</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="update_8h_1a07d3e3ac0d4a3fedbdfa28292ae6962e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEC_TAG<sp/>(TLS_SEC_TAG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>not<sp/>defined<sp/>CONFIG_UNIT_TEST_UPDATE<sp/>&amp;&amp;<sp/>not<sp/>defined<sp/>CONFIG_UNIT_TEST_UPDATE2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;net/fota_download.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_fw_upd" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fw_upd" kindref="compound">FwUpd</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FwUpd();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1a45865f1da0f35d6a7496c063c40cde3d" kindref="member">FwUpd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1ae6d69a666e74786294605d838c843b5c" kindref="member">~FwUpd</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76" refid="class_fw_upd_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_fw_upd_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>callback<sp/>at<sp/>notifications<sp/>from<sp/>the<sp/>download<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1a17f00d41a2f949c4f02b489d9f0f39d2" kindref="member">fota_dl_handler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fota_download_evt*<sp/>evt);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1a888e034456d9b16489ac0ff76f1c8bf9" kindref="member">download_failed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error_code<sp/>=<sp/>3);<sp/><sp/></highlight><highlight class="comment">//<sp/>something<sp/>went<sp/>wrong</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1ae2c42220dbc908b869a944c2612d7b71" kindref="member">download_success</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>ready<sp/>to<sp/>apply<sp/>update<sp/>on<sp/>reboot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1add2f91f57f8f0c466b6e280dbf814856" kindref="member">download_start</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>begin<sp/>downloading<sp/>FOTA<sp/>update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_fw_upd_1ab778908496401da0e107c228bae8aa42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1ab778908496401da0e107c228bae8aa42" kindref="member">setUrl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>url);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>firmware<sp/>download<sp/>URL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1a31f87e6e026d0f6617cb8d36f553c880" kindref="member">setHostname</ref>(std::string<sp/>name);<sp/><sp/></highlight><highlight class="comment">//<sp/>http<sp/>server<sp/>to<sp/>download<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1ae2d1187c25234b18b1950e6556e9590b" kindref="member">setFilename</ref>(std::string<sp/>name);<sp/><sp/></highlight><highlight class="comment">//<sp/>file<sp/>to<sp/>request<sp/>in<sp/>download</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_1a0411cd49bb5b71852cecd93bcbf0ca2da4819a74c795e4e689abc93eef4828a13" kindref="member">max_filename_size</ref><sp/>=<sp/>80</highlight></codeline>
+<codeline lineno="91" refid="class_fw_upd_1a0411cd49bb5b71852cecd93bcbf0ca2da4819a74c795e4e689abc93eef4828a13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="class_fw_upd_1a59efd8e3381b74de00d04b14232abc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1a59efd8e3381b74de00d04b14232abc68" kindref="member">filename</ref>[<ref refid="class_fw_upd_1a0411cd49bb5b71852cecd93bcbf0ca2da4819a74c795e4e689abc93eef4828a13" kindref="member">max_filename_size</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_1abed82baf7f470b522273a3e37c24c600a8e9bd182eecabfbfe7e58d8f83af3206" kindref="member">max_hostname_size</ref><sp/>=<sp/>80</highlight></codeline>
+<codeline lineno="96" refid="class_fw_upd_1abed82baf7f470b522273a3e37c24c600a8e9bd182eecabfbfe7e58d8f83af3206" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="class_fw_upd_1a4722587e22db9c74822f86afe5b71c54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_1a4722587e22db9c74822f86afe5b71c54" kindref="member">hostname</ref>[<ref refid="class_fw_upd_1abed82baf7f470b522273a3e37c24c600a8e9bd182eecabfbfe7e58d8f83af3206" kindref="member">max_hostname_size</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" kindref="member">sha1_expected</ref>[41];<sp/><sp/></highlight></codeline>
+<codeline lineno="102" refid="class_fw_upd_1a3c2d775d8305c003ab1207cb193f7cf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_fw_upd_1a3c2d775d8305c003ab1207cb193f7cf1" kindref="member">size_expected</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105" refid="class_fw_upd_1a45865f1da0f35d6a7496c063c40cde3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_1a45865f1da0f35d6a7496c063c40cde3d" kindref="member">FwUpd</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_UPDATE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="update/update.h"/>
+  </compounddef>
+</doxygen>

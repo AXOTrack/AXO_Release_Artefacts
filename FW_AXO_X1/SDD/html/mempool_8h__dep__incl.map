@@ -1,0 +1,31 @@
+<map id="rtos/mempool.h" name="rtos/mempool.h">
+<area shape="rect" id="node1" title="Header file of RTOS wrapper class mempool for message allocation support." alt="" coords="403,5,515,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="Implementation of AXO Track main function." alt="" coords="770,304,844,331"/>
+<area shape="rect" id="node3" href="$http__connector_8cpp.html" title="Implementation of HTTP connector class." alt="" coords="38,155,192,181"/>
+<area shape="rect" id="node4" href="$mqtt__connector_8cpp.html" title="Implementation of MQTT connector class." alt="" coords="217,155,376,181"/>
+<area shape="rect" id="node5" href="$mpelem_8cpp.html" title="Implementation of PoolElem class for message support." alt="" coords="400,155,518,181"/>
+<area shape="rect" id="node6" href="$mpool_8cpp.html" title="Implementation of of MsgPool class for message allocation support." alt="" coords="542,155,650,181"/>
+<area shape="rect" id="node7" href="$mpool_8h.html" title="Header file of MsgPool class for message allocation support." alt="" coords="1644,80,1738,107"/>
+<area shape="rect" id="node25" href="$fsm_8cpp.html" title="Implementation of Finite State Machine (FSM) for firmware updates." alt="" coords="3026,304,3137,331"/>
+<area shape="rect" id="node8" href="$adxl__store_8cpp.html" title="Implementation of AdxlDataStore class." alt="" coords="1182,155,1318,181"/>
+<area shape="rect" id="node9" href="$hw__metrics_8cpp.html" title="Implementation of HwMetrics class." alt="" coords="1342,155,1485,181"/>
+<area shape="rect" id="node10" href="$pdata_8cpp.html" title="Implementation of data manager class." alt="" coords="1509,155,1617,181"/>
+<area shape="rect" id="node11" href="$rms_8cpp.html" title="Implementation of RMS task." alt="" coords="1642,155,1740,181"/>
+<area shape="rect" id="node12" href="$rms__store_8cpp.html" title="Implementation of RMS storage class." alt="" coords="1765,155,1900,181"/>
+<area shape="rect" id="node13" href="$disptask_8cpp.html" title="Implementation of DispTask class." alt="" coords="1924,155,2048,181"/>
+<area shape="rect" id="node14" href="$adconverter_8cpp.html" title="Implementation of AD converter driver class." alt="" coords="2072,155,2230,181"/>
+<area shape="rect" id="node15" href="$batt__mgr_8cpp.html" title="Implementation of battery manager class." alt="" coords="2254,155,2397,181"/>
+<area shape="rect" id="node16" href="$shtcx_8cpp.html" title="Implementation of Shtcx sensor driver class." alt="" coords="2422,155,2542,181"/>
+<area shape="rect" id="node17" href="$boost_8cpp.html" title="Implementation of BoostConverter class." alt="" coords="2566,155,2688,181"/>
+<area shape="rect" id="node18" href="$adxl37x_8cpp.html" title="Implementation of Adxl37x class." alt="" coords="2712,155,2846,181"/>
+<area shape="rect" id="node19" href="$lte__monitor_8cpp.html" title="Implementation of LTE monitor class." alt="" coords="2870,155,3029,181"/>
+<area shape="rect" id="node20" href="$lte__connector_8cpp.html" title="Implementation of LTE modem connector class." alt="" coords="3054,155,3200,181"/>
+<area shape="rect" id="node21" href="$power__mgr_8cpp.html" title="Implementation of power manager base class." alt="" coords="3225,155,3357,181"/>
+<area shape="rect" id="node22" href="$power__mgr__x1_8cpp.html" title="Implementation of power manager X1 class." alt="" coords="3381,155,3534,181"/>
+<area shape="rect" id="node23" href="$reset__ctrl_8cpp.html" title="Implementation of reset control task." alt="" coords="3559,155,3682,181"/>
+<area shape="rect" id="node24" href="$mbox_8cpp.html" title="Implementation of RTOS wrapper class MBox for mailbox support." alt="" coords="674,155,780,181"/>
+<area shape="rect" id="node26" href="$fsm_8h.html" title="Header file of Finite State Machine (FSM) for firmware updates." alt="" coords="906,155,1004,181"/>
+<area shape="rect" id="node27" href="$update__ctrl_8cpp.html" title="Implementation of update controller module." alt="" coords="868,304,1023,331"/>
+<area shape="rect" id="node29" href="$update_8cpp.html" title="Implementation of the firmware update task." alt="" coords="1028,155,1157,181"/>
+<area shape="rect" id="node28" href="$update__ctrl_8h.html" title="Header file of update controller module." alt="" coords="974,229,1114,256"/>
+</map>

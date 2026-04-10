@@ -1,0 +1,710 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_power_mgr_x1" kind="class" language="C++" prot="public">
+    <compoundname>PowerMgrX1</compoundname>
+    <basecompoundref refid="class_power_mgr" prot="public" virt="non-virtual">PowerMgr</basecompoundref>
+    <includes refid="power__mgr__x1_8h" local="no">power_mgr_x1.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PmX1Tmo</name>
+        <enumvalue id="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca92d436bd4b6b961b3da495f74c59485a" prot="public">
+          <name>eLteStartTmo</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>initial timeout for boost on to lte start (e.g. 30 sec) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca30837326536dd1511f461be9916381d7" prot="public">
+          <name>eLteWakeTmo</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para>timeout for boost on to lte wake by tx (e.g. 30 sec) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca668eee6d24ede1f83a39e049e5e76c35" prot="public">
+          <name>kNumTimerEvents</name>
+          <briefdescription>
+<para>Indicator for the number of timeout events. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Power manager timeout values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="88" column="5" bodyfile="pm/power_mgr_x1.h" bodystart="88" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_power_mgr_x1_1a4c7853b8a5948b7c020e777f5dee4607" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* BoostCtrlTimer</definition>
+        <argsstring></argsstring>
+        <name>BoostCtrlTimer</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> to control boost on before initial metrics tx (eLteWakeTmo) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="114" column="11" bodyfile="pm/power_mgr_x1.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">message_handler</referencedby>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_x1_1a9bb358ef90b39bc2f7a54d58382f9e27" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* LteStartDelayTimer</definition>
+        <argsstring></argsstring>
+        <name>LteStartDelayTimer</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> to control inital LTE start delay (eLteStartTmo) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> to control adxl wakeup to measurements tx (eLteWakeTmo) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="116" column="11" bodyfile="pm/power_mgr_x1.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1</referencedby>
+        <referencedby refid="class_power_mgr_x1_1ab71d737dc66dac5a81a5240f5493b9db" compoundref="power__mgr__x1_8cpp" startline="219" endline="227">taskInit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_x1_1ab2e0bcc1598d68f2b8d283476e40cb4a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* AdxlWakeupTimer</definition>
+        <argsstring></argsstring>
+        <name>AdxlWakeupTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="118" column="11" bodyfile="pm/power_mgr_x1.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">message_handler</referencedby>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_x1_1a01af3dd987478214dfe8ca1b3ec8bec8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lte_connected</definition>
+        <argsstring></argsstring>
+        <name>lte_connected</name>
+        <briefdescription>
+<para>Flag indicating LTE is connected or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="120" column="10" bodyfile="pm/power_mgr_x1.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">message_handler</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PowerMgrX1</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>PowerMgrX1</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Power manager X1 task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor register all provider tasks for metric updates by calling function registerMetricProvider provided by the power manager base class. The provider tasks are:<itemizedlist>
+<listitem><para>The shtcx task for temperature and humidity</para>
+</listitem><listitem><para>The battery manager task for battery metrics</para>
+</listitem><listitem><para>The HW metrics task for hardware metrics</para>
+</listitem><listitem><para>The data manager task for LTE metrics Afterwards it allocates the timer for initial boost on, inital LTE start delay and adxl wakeup to measurements transmission. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="96" column="14" bodyfile="pm/power_mgr_x1.cpp" bodystart="171" bodyend="198"/>
+        <references refid="class_power_mgr_x1_1ab2e0bcc1598d68f2b8d283476e40cb4a" compoundref="power__mgr__x1_8h" startline="118">AdxlWakeupTimer</references>
+        <references refid="class_power_mgr_x1_1a195fbfe9c32f4ee7ad2cde53b58b2d89" compoundref="power__mgr__x1_8cpp" startline="134" endline="140">AdxlWakeupTimer_cb</references>
+        <references refid="class_power_mgr_x1_1a4c7853b8a5948b7c020e777f5dee4607" compoundref="power__mgr__x1_8h" startline="114">BoostCtrlTimer</references>
+        <references refid="class_power_mgr_x1_1a6c30bcbca6d8b01938f5fa0230de0d21" compoundref="power__mgr__x1_8cpp" startline="71" endline="77">BoostCtrlTimer_cb</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf4a52d9583b230adc681e4c4ff67afc" compoundref="mpelem_8h" startline="107">eBattReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" compoundref="mpelem_8h" startline="85">eHwMetrics</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf000aa89d3688b0800056b25d85aa1c" compoundref="mpelem_8h" startline="83">eHwReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba952b403a2dbb1541de1754b39dca5a04" compoundref="mpelem_8h" startline="48">eLteReport</references>
+        <references refid="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca30837326536dd1511f461be9916381d7" compoundref="power__mgr__x1_8h" startline="92">eLteWakeTmo</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad6e9f2d231aae9820c265b75a1608e5c" compoundref="mpelem_8h" startline="58">eShtcxReport</references>
+        <references refid="class_power_mgr_x1_1a9bb358ef90b39bc2f7a54d58382f9e27" compoundref="power__mgr__x1_8h" startline="116">LteStartDelayTimer</references>
+        <references refid="class_power_mgr_x1_1afc0b6976f199341eee10a076c93b2cca" compoundref="power__mgr__x1_8cpp" startline="102" endline="108">LteStartDelayTimer_cb</references>
+        <references refid="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" compoundref="power__mgr_8cpp" startline="187" endline="192">PowerMgr::registerMetricProvider</references>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1ae0e5dbf3b27317fea3d5944c7fce86f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~PowerMgrX1</definition>
+        <argsstring>()</argsstring>
+        <name>~PowerMgrX1</name>
+        <briefdescription>
+<para>Power manager X1 task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="97" column="13" bodyfile="pm/power_mgr_x1.cpp" bodystart="206" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1ab71d737dc66dac5a81a5240f5493b9db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void taskInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>taskInit</name>
+        <reimplements refid="class_power_mgr_1ab8b5bdce7b224850fa9971ea40124828">taskInit</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="99" column="18" bodyfile="pm/power_mgr_x1.cpp" bodystart="219" bodyend="227"/>
+        <references refid="class_power_mgr_x1_1a9bb358ef90b39bc2f7a54d58382f9e27" compoundref="power__mgr__x1_8h" startline="116">LteStartDelayTimer</references>
+        <references refid="class_power_mgr_x1_1ae7817820b13ebcb1ea023212d05c74ca" compoundref="power__mgr__x1_8cpp" startline="55" endline="60">reqBoostConverter</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+        <definition>PoolElem * message_handler</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>message_handler</name>
+        <reimplements refid="class_power_mgr_1ad479bd08691837a4c2ea0f4b28a79234">message_handler</reimplements>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="100" column="22" bodyfile="pm/power_mgr_x1.cpp" bodystart="283" bodyend="372"/>
+        <references refid="class_power_mgr_x1_1ab2e0bcc1598d68f2b8d283476e40cb4a" compoundref="power__mgr__x1_8h" startline="118">AdxlWakeupTimer</references>
+        <references refid="class_power_mgr_x1_1a4c7853b8a5948b7c020e777f5dee4607" compoundref="power__mgr__x1_8h" startline="114">BoostCtrlTimer</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75f6477e8cb8aa5c80928dced69e2604" compoundref="mpelem_8h" startline="64">eAdxl37xWake</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba386949f0f8e4c5a5002c759f42cf7bff" compoundref="mpelem_8h" startline="104">eAdxlWakeupTimerExpired</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5d2c6bce1214af92e814a4aeb69d2637" compoundref="mpelem_8h" startline="102">eBoostCtrlTimerExpired</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" compoundref="mpelem_8h" startline="40">eLteConnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" compoundref="mpelem_8h" startline="41">eLteDisconnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" compoundref="mpelem_8h" startline="49">eLteSleepEnter</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" compoundref="mpelem_8h" startline="50">eLteSleepExit</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83962a046b00d58c93be14eb54df546e" compoundref="mpelem_8h" startline="103">eLteStartDelayTimerExpired</references>
+        <references refid="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca92d436bd4b6b961b3da495f74c59485a" compoundref="power__mgr__x1_8h" startline="90">eLteStartTmo</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac5e5587e5c6d28d06a40c2879f93b5b3" compoundref="mpelem_8h" startline="101">eMetricsTxTimerExpired</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7e687f39e23a633f7a561c1c2ff124b0" compoundref="mpelem_8h" startline="52">eMqttConnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" compoundref="mpelem_8h" startline="89">eResume</references>
+        <references refid="class_power_mgr_x1_1a01af3dd987478214dfe8ca1b3ec8bec8" compoundref="power__mgr__x1_8h" startline="120">lte_connected</references>
+        <references refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" compoundref="power__mgr_8cpp" startline="216" endline="221">PowerMgr::metricProviderNotifyAll</references>
+        <references refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" compoundref="power__mgr_8h" startline="96">PowerMgr::MetricsTxTimer</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" compoundref="power__mgr_8cpp" startline="102" endline="107">PowerMgr::reportBootCnt</references>
+        <references refid="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" compoundref="power__mgr_8cpp" startline="89" endline="93">PowerMgr::reportResetCause</references>
+        <references refid="class_power_mgr_x1_1ae7817820b13ebcb1ea023212d05c74ca" compoundref="power__mgr__x1_8cpp" startline="55" endline="60">reqBoostConverter</references>
+        <references refid="class_power_mgr_1af50a5d25bd752742525e9d960a36dd01" compoundref="power__mgr_8cpp" startline="76" endline="80">PowerMgr::reqRmsReport</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="class_power_mgr_1a4a9097cc9610c3987e92ed8016a4f970" compoundref="power__mgr_8cpp" startline="47" endline="47">PowerMgr::uart0_off</references>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1afaa90604923c6189d35207509fb4900f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoostCtrlTimer_expired</definition>
+        <argsstring>()</argsstring>
+        <name>BoostCtrlTimer_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for initial boost on timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eBoostCtrlTimerExpired, set power manager as sender and put message into own (powermanager&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="103" column="10" bodyfile="pm/power_mgr_x1.cpp" bodystart="86" bodyend="91"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5d2c6bce1214af92e814a4aeb69d2637" compoundref="mpelem_8h" startline="102">eBoostCtrlTimerExpired</references>
+        <references refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="power__mgr_8h" startline="95">PowerMgr::pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_power_mgr_x1_1a6c30bcbca6d8b01938f5fa0230de0d21" compoundref="power__mgr__x1_8cpp" startline="71" endline="77">BoostCtrlTimer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1ab00563fad1160d3df8c36aec60f9852a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LteStartDelayTimer_expired</definition>
+        <argsstring>()</argsstring>
+        <name>LteStartDelayTimer_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for inital LTE start delay timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eLteStartDelayTimerExpired, set power manager as sender and put message into own (powermanager&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="106" column="10" bodyfile="pm/power_mgr_x1.cpp" bodystart="117" bodyend="123"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83962a046b00d58c93be14eb54df546e" compoundref="mpelem_8h" startline="103">eLteStartDelayTimerExpired</references>
+        <references refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="power__mgr_8h" startline="95">PowerMgr::pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_power_mgr_x1_1afc0b6976f199341eee10a076c93b2cca" compoundref="power__mgr__x1_8cpp" startline="102" endline="108">LteStartDelayTimer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1a280773fc9201606b6ad92dd6c2ca3b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdxlWakeupTimer_expired</definition>
+        <argsstring>()</argsstring>
+        <name>AdxlWakeupTimer_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for adxl wakeup to measurements tx timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eAdxlWakeupTimerExpired, set power manager as sender and put message into own (powermanager&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="109" column="10" bodyfile="pm/power_mgr_x1.cpp" bodystart="149" bodyend="154"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba386949f0f8e4c5a5002c759f42cf7bff" compoundref="mpelem_8h" startline="104">eAdxlWakeupTimerExpired</references>
+        <references refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="power__mgr_8h" startline="95">PowerMgr::pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_power_mgr_x1_1a195fbfe9c32f4ee7ad2cde53b58b2d89" compoundref="power__mgr__x1_8cpp" startline="134" endline="140">AdxlWakeupTimer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1ae7817820b13ebcb1ea023212d05c74ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqBoostConverter</definition>
+        <argsstring>(bool on=false)</argsstring>
+        <name>reqBoostConverter</name>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Send resume or suspend message to boost converter task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>on</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool parameter to select message type eResume or eSuspend</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a resume or suspend message to the boost converter task by calling function sendMsg provided by class <ref refid="class_mbox" kindref="compound">Mbox</ref>. The message type is set according to input parameter &apos;on&apos; (eResume if on = true, eSuspend if on = false). This request is the trigger to switch boost converter on or off. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="111" column="10" bodyfile="pm/power_mgr_x1.cpp" bodystart="55" bodyend="60"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" compoundref="mpelem_8h" startline="89">eResume</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20" compoundref="mpelem_8h" startline="88">eSuspend</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">message_handler</referencedby>
+        <referencedby refid="class_power_mgr_x1_1ab71d737dc66dac5a81a5240f5493b9db" compoundref="power__mgr__x1_8cpp" startline="219" endline="227">taskInit</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_power_mgr_x1_1a6c30bcbca6d8b01938f5fa0230de0d21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoostCtrlTimer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>BoostCtrlTimer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for initial boost on timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call power manager timer expired function BoostCtrlTimer_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="102" column="17" bodyfile="pm/power_mgr_x1.cpp" bodystart="71" bodyend="77"/>
+        <references refid="class_power_mgr_x1_1afaa90604923c6189d35207509fb4900f" compoundref="power__mgr__x1_8cpp" startline="86" endline="91">BoostCtrlTimer_expired</references>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1afc0b6976f199341eee10a076c93b2cca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LteStartDelayTimer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>LteStartDelayTimer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for inital LTE start delay timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call power manager timer expired function LteStartDelayTimer_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="105" column="17" bodyfile="pm/power_mgr_x1.cpp" bodystart="102" bodyend="108"/>
+        <references refid="class_power_mgr_x1_1ab00563fad1160d3df8c36aec60f9852a" compoundref="power__mgr__x1_8cpp" startline="117" endline="123">LteStartDelayTimer_expired</references>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_x1_1a195fbfe9c32f4ee7ad2cde53b58b2d89" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdxlWakeupTimer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>AdxlWakeupTimer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for adxl wakeup to measurements tx timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call power manager timer expired function AdxlWakeupTimer_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="108" column="17" bodyfile="pm/power_mgr_x1.cpp" bodystart="134" bodyend="140"/>
+        <references refid="class_power_mgr_x1_1a280773fc9201606b6ad92dd6c2ca3b46" compoundref="power__mgr__x1_8cpp" startline="149" endline="154">AdxlWakeupTimer_expired</references>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_power_mgr_x1_1a33097505cdc4324b596ef7ed9cb6e52c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PowerMgrX1</definition>
+        <argsstring>()=delete</argsstring>
+        <name>PowerMgrX1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr_x1.h" line="123" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Power Manager class for AXO X1 devices derived from Power Manager base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The power manager X1 class provides the following timer:<itemizedlist>
+<listitem><para>BoostCtrlTimer: <ref refid="class_timer" kindref="compound">Timer</ref> to control boost on before initial metrics tx (eLteWakeTmo)</para>
+</listitem><listitem><para>myTLteStartDelayTimerimer3: <ref refid="class_timer" kindref="compound">Timer</ref> to control inital LTE start delay (eLteStartTmo)</para>
+</listitem><listitem><para>AdxlWakeupTimer: <ref refid="class_timer" kindref="compound">Timer</ref> to control adxl wakeup to measurements tx (eLteWakeTmo) It provides a method to request switching on and off the boost converter, methods to request RMS, environment, battery, HW and LTE reports for metrics collection and methods to report reset cause and boot counter to the data manager task. It furthermore implements the from base class required methods taskInit and message_handler, which are called in the task function provided by the base class. <bold>Message Interaction:</bold></para>
+</listitem><listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>LTE connector task</para>
+</listitem><listitem><para>MQTT connector task</para>
+</listitem><listitem><para>RMS store task</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Boost converter task</para>
+</listitem><listitem><para>RMS store task</para>
+</listitem><listitem><para>SHTCX task</para>
+</listitem><listitem><para>Battery manager task</para>
+</listitem><listitem><para>HW Metrics task</para>
+</listitem><listitem><para>Data manager task</para>
+</listitem><listitem><para>Power manager task (self, transmission in timer callback) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="2">
+        <label>PowerMgr</label>
+        <link refid="class_power_mgr"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PowerMgrX1</label>
+        <link refid="class_power_mgr_x1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>int32_t</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="13">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vector&lt; uint8_t &gt;</label>
+      </node>
+      <node id="17">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>uint32_t</label>
+      </node>
+      <node id="7">
+        <label>uint8_t</label>
+      </node>
+      <node id="14">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>struct k_thread</label>
+      </node>
+      <node id="15">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PowerMgr</label>
+        <link refid="class_power_mgr"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+metricType</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+boot_cnt</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+metricsTmo</edgelabel>
+          <edgelabel>+reason</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+reason_str</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+metricProviders</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+MetricsTxTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>bool</label>
+      </node>
+      <node id="4">
+        <label>k_tid_t</label>
+      </node>
+      <node id="5">
+        <label>char</label>
+      </node>
+      <node id="1">
+        <label>PowerMgrX1</label>
+        <link refid="class_power_mgr_x1"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+lte_connected</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+AdxlWakeupTimer</edgelabel>
+          <edgelabel>+BoostCtrlTimer</edgelabel>
+          <edgelabel>+LteStartDelayTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector&lt; uint16_t &gt;</label>
+      </node>
+      <node id="18">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="pm/power_mgr_x1.h" line="85" column="1" bodyfile="pm/power_mgr_x1.h" bodystart="85" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_power_mgr_x1_1ab2e0bcc1598d68f2b8d283476e40cb4a" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>AdxlWakeupTimer</name></member>
+      <member refid="class_power_mgr_x1_1a195fbfe9c32f4ee7ad2cde53b58b2d89" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>AdxlWakeupTimer_cb</name></member>
+      <member refid="class_power_mgr_x1_1a280773fc9201606b6ad92dd6c2ca3b46" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>AdxlWakeupTimer_expired</name></member>
+      <member refid="class_power_mgr_x1_1a4c7853b8a5948b7c020e777f5dee4607" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>BoostCtrlTimer</name></member>
+      <member refid="class_power_mgr_x1_1a6c30bcbca6d8b01938f5fa0230de0d21" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>BoostCtrlTimer_cb</name></member>
+      <member refid="class_power_mgr_x1_1afaa90604923c6189d35207509fb4900f" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>BoostCtrlTimer_expired</name></member>
+      <member refid="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>boot_cnt</name></member>
+      <member refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>create</name></member>
+      <member refid="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca92d436bd4b6b961b3da495f74c59485a" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>eLteStartTmo</name></member>
+      <member refid="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca30837326536dd1511f461be9916381d7" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>eLteWakeTmo</name></member>
+      <member refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a068ffcca4c58b63a81a2f09ac5159f12" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>eMetricsTmo</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a1b2bdd214ba5b3894ce0acab66636ebf" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>eOff</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8aae61852e6fb193a21c97fb25fd5a13f7" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>eOn</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a8ed96e2c97ef93c4ca0afe5fbcba625c" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>kNumStates</name></member>
+      <member refid="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cca668eee6d24ede1f83a39e049e5e76c35" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>kNumTimerEvents</name></member>
+      <member refid="class_power_mgr_x1_1a01af3dd987478214dfe8ca1b3ec8bec8" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>lte_connected</name></member>
+      <member refid="class_power_mgr_x1_1a9bb358ef90b39bc2f7a54d58382f9e27" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>LteStartDelayTimer</name></member>
+      <member refid="class_power_mgr_x1_1afc0b6976f199341eee10a076c93b2cca" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>LteStartDelayTimer_cb</name></member>
+      <member refid="class_power_mgr_x1_1ab00563fad1160d3df8c36aec60f9852a" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>LteStartDelayTimer_expired</name></member>
+      <member refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>message_handler</name></member>
+      <member refid="class_power_mgr_1aacbc79b9fec14a8eb014564c958b8b95" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>metricProviderNotify</name></member>
+      <member refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>metricProviderNotifyAll</name></member>
+      <member refid="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>metricProviders</name></member>
+      <member refid="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>metricsTmo</name></member>
+      <member refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>MetricsTxTimer</name></member>
+      <member refid="class_power_mgr_1ab068681b97599ab0bf7d11b9f69a2d72" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>MetricsTxTimer_cb</name></member>
+      <member refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>MetricsTxTimer_expired</name></member>
+      <member refid="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>metricType</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>PowerMgrX1</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>PowerMgrX1</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>PowerMgrX1</scope><name>operator=</name></member>
+      <member refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>pInMbox</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>PmState</name></member>
+      <member refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>PmTmo</name></member>
+      <member refid="class_power_mgr_x1_1a0b2c0504d21aa93d234090370f2577cc" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>PmX1Tmo</name></member>
+      <member refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>PowerMgr</name></member>
+      <member refid="class_power_mgr_1a423ed9f71c1ca2d14838b66d23dbc4fe" prot="private" virt="non-virtual"><scope>PowerMgrX1</scope><name>PowerMgr</name></member>
+      <member refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>PowerMgrX1</name></member>
+      <member refid="class_power_mgr_x1_1a33097505cdc4324b596ef7ed9cb6e52c" prot="private" virt="non-virtual"><scope>PowerMgrX1</scope><name>PowerMgrX1</name></member>
+      <member refid="class_power_mgr_1a5ac0b16c31813f87b98e97cc5bacd64a" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>reason</name></member>
+      <member refid="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>reason_str</name></member>
+      <member refid="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>registerMetricProvider</name></member>
+      <member refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>reportBootCnt</name></member>
+      <member refid="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>reportResetCause</name></member>
+      <member refid="class_power_mgr_x1_1ae7817820b13ebcb1ea023212d05c74ca" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>reqBoostConverter</name></member>
+      <member refid="class_power_mgr_1af50a5d25bd752742525e9d960a36dd01" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>reqRmsReport</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>start</name></member>
+      <member refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>PowerMgrX1</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>PowerMgrX1</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>taskCode</name></member>
+      <member refid="class_power_mgr_x1_1ab71d737dc66dac5a81a5240f5493b9db" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>taskInit</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>PowerMgrX1</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>PowerMgrX1</scope><name>tid</name></member>
+      <member refid="class_power_mgr_1a4a9097cc9610c3987e92ed8016a4f970" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>uart0_off</name></member>
+      <member refid="class_power_mgr_1a81fdf3e6a3841bfb2294f792e94a0b38" prot="public" virt="non-virtual"><scope>PowerMgrX1</scope><name>uart0_set_enable</name></member>
+      <member refid="class_power_mgr_1ad20085320c2bdbeb172edf02563f827e" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>~PowerMgr</name></member>
+      <member refid="class_power_mgr_x1_1ae0e5dbf3b27317fea3d5944c7fce86f3" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>~PowerMgrX1</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>PowerMgrX1</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

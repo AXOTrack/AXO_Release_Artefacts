@@ -1,0 +1,18 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="RMS storage task function." alt="" coords="5,183,52,209"/>
+<area shape="rect" id="node2" href="$class_rms_store.html#accd2600060dbaee3a3b41aed4034c63c" title="Function to print out last stored data." alt="" coords="141,5,196,32"/>
+<area shape="rect" id="node3" href="$class_rms_store.html#a8cb66fc5f158a5d28cb9e5d73ecd26cc" title="Function to print out stored data." alt="" coords="134,56,203,83"/>
+<area shape="rect" id="node4" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="115,107,222,133"/>
+<area shape="rect" id="node7" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="100,157,237,184"/>
+<area shape="rect" id="node8" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="125,208,212,235"/>
+<area shape="rect" id="node10" href="$class_rms_store.html#ad20897c5c8bd47f5d4005989bead0e55" title="Function to delete the stored data." alt="" coords="143,259,194,285"/>
+<area shape="rect" id="node11" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="123,309,214,336"/>
+<area shape="rect" id="node16" href="$class_rms_store.html#ad583c3b70e9f7e3846f4a171ccea3e4b" title="Function to store data of type struct adxl_rms_data." alt="" coords="143,360,194,387"/>
+<area shape="rect" id="node5" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="289,107,421,133"/>
+<area shape="rect" id="node6" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="472,107,596,133"/>
+<area shape="rect" id="node9" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="306,208,403,235"/>
+<area shape="rect" id="node12" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="285,284,424,311"/>
+<area shape="rect" id="node13" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="310,335,399,361"/>
+<area shape="rect" id="node14" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="474,309,594,336"/>
+<area shape="rect" id="node15" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="485,360,583,387"/>
+</map>

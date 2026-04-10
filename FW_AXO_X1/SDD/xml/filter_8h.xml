@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="filter_8h" kind="file" language="C++">
+    <compoundname>filter.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">algorithm</includes>
+    <includedby refid="disptask_8cpp" local="yes">disp/disptask.cpp</includedby>
+    <includedby refid="disptask_8h" local="yes">disp/disptask.h</includedby>
+    <includedby refid="filter_8cpp" local="yes">disp/filter.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>disp/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>disp/filter.cpp</label>
+        <link refid="filter_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="3">
+        <label>disp/disptask.h</label>
+        <link refid="disptask_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>disp/filter.h</label>
+        <link refid="filter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_filter" prot="public">CFilter</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="filter_8h_1a44529587d60e73bf0e689a82e5e70a55" prot="public" static="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>typedef std::vector&lt;int&gt; vectori</definition>
+        <argsstring></argsstring>
+        <name>vectori</name>
+        <briefdescription>
+<para>Type definition of integer vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/filter.h" line="33" column="21" bodyfile="disp/filter.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" prot="public" static="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>typedef std::vector&lt;double&gt; vectord</definition>
+        <argsstring></argsstring>
+        <name>vectord</name>
+        <briefdescription>
+<para>Type definition of double vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/filter.h" line="35" column="21" bodyfile="disp/filter.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of digital filter class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="filter_8h_1filter"/> <simplesect kind="par"><title>Detailed Description </title><para>Zero phase filtering inmplementation based on Python and Matlab filtfilt function. The base of this c++ implementation is <ulink url="https://stackoverflow.com/questions/17675053/matlabs-filtfilt-algorithm/27270420#27270420">Implementation of Darien Pardinas</ulink>. Eigen library is replaced by matrix operations. The filtfilt algorithm matches the initial conditions on the filter to minimise start and end transients.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_FILTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_FILTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="filter_8h_1a44529587d60e73bf0e689a82e5e70a55" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="filter_8h_1a44529587d60e73bf0e689a82e5e70a55" kindref="member">vectori</ref>;</highlight></codeline>
+<codeline lineno="35" refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>MAX_INPUT_LEN<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_c_filter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_filter" kindref="compound">CFilter</ref><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1af5535ad789ef57b3adc55238fb0e3e1f" kindref="member">~CFilter</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_c_filter" kindref="compound">CFilter</ref>*<sp/><ref refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a980b8e38dc55adb69c699bccbe64e812" kindref="member">prepare_leftpad</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref>&amp;<sp/>leftpad,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>InputStart);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a4d95f899f3f6dbe6a2bd7d34e06640a1" kindref="member">prepare_rightpad</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref>&amp;<sp/>rightpad,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>InputEnd);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a72e7df4bd2a6a5ee7611b1841b2c60d3" kindref="member">fwfilter_init</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>leftpad_0);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a0231e19a19b4505946fcd352d9bcd715" kindref="member">bwfilter_init</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rightpad_reverse_0);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a2af0fcf40944ac051dc8a31a4da06dd0" kindref="member">filterFirstIter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;X,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;Y);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1ab90d6ce05e8b04993a6fde401a609590" kindref="member">filterNthIter</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;X,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;Y);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a5afb651eb8bb19b0f16d4f5094611757" kindref="member">filterLastIter</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;X,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;Y);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a03ed13edf595420b670dcf96a11f7ce8" kindref="member">filtfilt_init</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>B,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>A);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>filtfilt(const<sp/>vectord<sp/>&amp;X,<sp/>vectord<sp/>&amp;Y);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a6f69e3f7ab4d49efbada4a49a406a888" kindref="member">getNfact</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1aa1e23d3ed975bf89c3889491f6449f64" kindref="member">getNfilt</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_filter_1a0e559dd226ca3a55973ac48d5f5f593f" kindref="member">CFilter</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_c_filter_1a143cde988123f541e164756cf71b2594" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a143cde988123f541e164756cf71b2594" kindref="member">b_coeff</ref>;<sp/></highlight></codeline>
+<codeline lineno="80" refid="class_c_filter_1a553b341011c35c68fbb1f5f76bd7628a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a553b341011c35c68fbb1f5f76bd7628a" kindref="member">a_coeff</ref>;<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>function<sp/>filtfilt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_c_filter_1a727a89a8dcfb337fb3ad40a97dc7f4b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a727a89a8dcfb337fb3ad40a97dc7f4b1" kindref="member">nfilt</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="class_c_filter_1a8f1d2f0688a5fab7fc710fb308da0729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a8f1d2f0688a5fab7fc710fb308da0729" kindref="member">nfact</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="class_c_filter_1a9b238f5cd7dd70f32b106ff36ea4bef4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a9b238f5cd7dd70f32b106ff36ea4bef4" kindref="member">zzi</ref>;<sp/></highlight></codeline>
+<codeline lineno="86" refid="class_c_filter_1a402376f35b4925c595d8ae8eb0309184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a402376f35b4925c595d8ae8eb0309184" kindref="member">zi</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>function<sp/>filter<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_c_filter_1ac85c301dcec8cc311a6260e896852c55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1ac85c301dcec8cc311a6260e896852c55" kindref="member">filter_order</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="class_c_filter_1a829e601a55a2e7d90be3469f75a1c83e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="class_c_filter_1a829e601a55a2e7d90be3469f75a1c83e" kindref="member">b</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="class_c_filter_1a878844d5bbd8f10c8d48f82f19d2141b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="class_c_filter_1a878844d5bbd8f10c8d48f82f19d2141b" kindref="member">a</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="class_c_filter_1ab8411cfcac6e2dffd09b5098a04907e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*<ref refid="class_c_filter_1ab8411cfcac6e2dffd09b5098a04907e5" kindref="member">z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="class_c_filter_1ad73d339cbf1b5713c5ec81f6618771c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1ad73d339cbf1b5713c5ec81f6618771c5" kindref="member">n_B</ref>;<sp/></highlight></codeline>
+<codeline lineno="94" refid="class_c_filter_1adee0ee3c064710e85f6800664f3246b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1adee0ee3c064710e85f6800664f3246b3" kindref="member">n_A</ref>;<sp/></highlight></codeline>
+<codeline lineno="95" refid="class_c_filter_1a2732677c00fa0064b371f9c57ffd1dda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a2732677c00fa0064b371f9c57ffd1dda" kindref="member">n_zi</ref>;</highlight></codeline>
+<codeline lineno="96" refid="class_c_filter_1a023ec95cd6f77783a7448919788bf197" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a023ec95cd6f77783a7448919788bf197" kindref="member">X_old</ref>;<sp/></highlight></codeline>
+<codeline lineno="97" refid="class_c_filter_1a45a21019f563db26323bf4fc1ff4e2d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1a45a21019f563db26323bf4fc1ff4e2d8" kindref="member">Y_old</ref>;<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a6fcd45c6f259beba623c64d6c10803b6" kindref="member">add_index_range</ref>(<ref refid="filter_8h_1a44529587d60e73bf0e689a82e5e70a55" kindref="member">vectori</ref><sp/>&amp;indices,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>beg,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inc<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a8a7912f97220144ff4907daca6025097" kindref="member">add_index_const</ref>(<ref refid="filter_8h_1a44529587d60e73bf0e689a82e5e70a55" kindref="member">vectori</ref><sp/>&amp;indices,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>numel);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1af02fd236674e19727c3d2751f805df92" kindref="member">append_vector</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;vec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;tail);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/><ref refid="class_c_filter_1ac541fb874726cff28c1b179968a7a027" kindref="member">subvector_reverse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;vec,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx_end,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx_start);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifndef<sp/>CONFIG_UNIT_TEST_DISP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1a71433efc1784b0ab0af0bd94ad52c080" kindref="member">max_val</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="filter_8h_1a44529587d60e73bf0e689a82e5e70a55" kindref="member">vectori</ref>&amp;<sp/>vec);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_filter_1ae46fa30dfd1ce09430daa2bcabf85f4c" kindref="member">filter_initialize</ref>(<ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>B,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>A,<sp/><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref><sp/>&amp;Zi);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DISP_FILTER_H_</highlight></codeline>
+    </programlisting>
+    <location file="disp/filter.h"/>
+  </compounddef>
+</doxygen>

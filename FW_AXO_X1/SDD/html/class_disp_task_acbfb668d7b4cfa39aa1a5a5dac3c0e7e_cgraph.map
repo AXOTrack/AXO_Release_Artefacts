@@ -1,0 +1,54 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="DispTask task function." alt="" coords="5,671,52,697"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="142,31,249,57"/>
+<area shape="rect" id="node5" href="$class_disp_task.html#a8cb8f29f9f9216b026099a7e9c916acf" title="Function handle incoming message with backward filtered data and realize the displacement calculation..." alt="" coords="133,107,258,133"/>
+<area shape="rect" id="node10" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="577,740,692,767"/>
+<area shape="rect" id="node20" href="$class_disp_task.html#a54ee52cb2309dee2eb2c1842fd1bb7a1" title="Function handle incoming request to calculate displacement values." alt="" coords="100,360,291,387"/>
+<area shape="rect" id="node21" href="$class_disp_task.html#a94ffa2ab3108c5373e8caad61ffe2f48" title="Function handle incoming raw data message for left initial condition calculation." alt="" coords="118,487,273,513"/>
+<area shape="rect" id="node29" href="$class_disp_task.html#a372a1a239b4683a1d40b7dc40efdb0ff" title="Function handle incoming raw data message for right initial condition calculation." alt="" coords="118,639,273,665"/>
+<area shape="rect" id="node32" href="$class_disp_task.html#af7fbbdc38b04ca5ee0f945c2cf54ea80" title="Function handle incoming message with forward filtered data and realize the backward filtering." alt="" coords="133,759,257,785"/>
+<area shape="rect" id="node37" href="$class_disp_task.html#a62980b31ea3fb727feb6613268798b13" title="Function handle incoming raw data message for forward filtering the received data." alt="" coords="138,703,253,729"/>
+<area shape="rect" id="node38" href="$class_disp_task.html#a5b2ffff9e2ea4e58dc40300aab0ab775" title="Function handle incoming raw data status indication message." alt="" coords="119,936,271,963"/>
+<area shape="rect" id="node41" href="$class_disp_task.html#aa1b33da4a44539cdb25533038f079003" title="Function handle incoming message with S values (displacement values before detrending)" alt="" coords="128,1196,263,1223"/>
+<area shape="rect" id="node46" href="$class_disp_task.html#a4bba3d222a6552352e4a8ca64796c32f" title="Function to initialize the backward filtering." alt="" coords="144,809,247,836"/>
+<area shape="rect" id="node48" href="$class_disp_task.html#a024287e67c62f8287d6a189b5741017f" title="Function to initialize the detrend calculation." alt="" coords="153,1323,237,1349"/>
+<area shape="rect" id="node50" href="$class_disp_task.html#a89aba3a7f8ac228fdf0914eb42951bb4" title="Function to initialize the displacement calculation." alt="" coords="150,157,241,184"/>
+<area shape="rect" id="node51" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="152,1399,239,1425"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="360,5,492,32"/>
+<area shape="rect" id="node4" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="573,5,697,32"/>
+<area shape="rect" id="node6" href="$class_disp_task.html#a956de3f4a997de306b901f84ff2e4846" title="Function to calculate displacement before detrending." alt="" coords="363,56,489,83"/>
+<area shape="rect" id="node8" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="357,664,495,691"/>
+<area shape="rect" id="node9" href="$class_disp_task.html#ab01c3b3c13b0144dd413168c073e7028" title="Function to request backward filtered data from AdxlStore task." alt="" coords="375,157,477,184"/>
+<area shape="rect" id="node19" href="$class_disp_task.html#acd1ca8dcf90d4b205d5837a60bad2722" title="Function to request writing of S result values into FRAM (displacement data before detrending)" alt="" coords="367,107,485,133"/>
+<area shape="rect" id="node7" href="$class_disp_task.html#a90a29724ea1c18dc6e689922664ef720" title="Function to calculate intermediate sums for detrending." alt="" coords="572,56,697,83"/>
+<area shape="rect" id="node11" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="756,689,911,716"/>
+<area shape="rect" id="node13" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="782,740,885,767"/>
+<area shape="rect" id="node14" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="788,791,879,817"/>
+<area shape="rect" id="node12" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="963,689,1093,716"/>
+<area shape="rect" id="node15" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="959,765,1097,792"/>
+<area shape="rect" id="node16" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="983,816,1073,843"/>
+<area shape="rect" id="node17" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="1145,791,1265,817"/>
+<area shape="rect" id="node18" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="1157,841,1254,868"/>
+<area shape="rect" id="node22" href="$struct_adxl37x.html#a17c8ff5a47f5a81a4153da1ccde7f03e" title="Conversion of received sensor value." alt="" coords="367,461,485,488"/>
+<area shape="rect" id="node23" href="$class_c_filter.html#a2af0fcf40944ac051dc8a31a4da06dd0" title="Function to start forward or backward filtering with first iteration." alt="" coords="358,512,494,539"/>
+<area shape="rect" id="node24" href="$class_c_filter.html#a72e7df4bd2a6a5ee7611b1841b2c60d3" title="Function to prepair the forward filtering." alt="" coords="362,309,490,336"/>
+<area shape="rect" id="node26" href="$class_c_filter.html#addab61485dd5a3f79436415f9e5b24bb" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="381,715,471,741"/>
+<area shape="rect" id="node27" href="$class_c_filter.html#a980b8e38dc55adb69c699bccbe64e812" title="Function to calculate initial conditions for forward filtering." alt="" coords="348,360,504,387"/>
+<area shape="rect" id="node25" href="$class_c_filter.html#ae46fa30dfd1ce09430daa2bcabf85f4c" title="Sub&#45;Function to prepair the forward filtering." alt="" coords="561,309,708,336"/>
+<area shape="rect" id="node28" href="$class_c_filter.html#ac541fb874726cff28c1b179968a7a027" title="Function to reverse a sub&#45;vector." alt="" coords="573,458,696,499"/>
+<area shape="rect" id="node30" href="$class_c_filter.html#a4d95f899f3f6dbe6a2bd7d34e06640a1" title="Function to calculate initial conditions for forward filtering." alt="" coords="344,563,508,589"/>
+<area shape="rect" id="node31" href="$class_disp_task.html#a19cf3eae3207a4ee78a870f504edf3a4" title="Function to request raw data from AdxlStore task." alt="" coords="380,613,472,640"/>
+<area shape="rect" id="node33" href="$class_c_filter.html#a5afb651eb8bb19b0f16d4f5094611757" title="Function to finish forward or backward filtering with last iteration." alt="" coords="359,765,493,792"/>
+<area shape="rect" id="node34" href="$class_c_filter.html#ab90d6ce05e8b04993a6fde401a609590" title="Function to resume forward or backward filtering with next iteration." alt="" coords="361,816,491,843"/>
+<area shape="rect" id="node35" href="$class_disp_task.html#a9915bdc07cd539a0b8b7236d83747572" title="Function to request writing of filtered result values into FRAM." alt="" coords="363,867,489,893"/>
+<area shape="rect" id="node36" href="$class_disp_task.html#a87595605dab61fd51166fad4cf83f17b" title="Function to request forward filtered data from AdxlStore task." alt="" coords="375,917,477,944"/>
+<area shape="rect" id="node39" href="$class_c_filter.html#a6f69e3f7ab4d49efbada4a49a406a888" title="Getter function to retrieve the length of edge transients." alt="" coords="368,1069,484,1096"/>
+<area shape="rect" id="node40" href="$class_c_filter.html#aa1e23d3ed975bf89c3889491f6449f64" title="Getter function to retrieve the filter order." alt="" coords="372,1120,480,1147"/>
+<area shape="rect" id="node42" href="$class_disp_task.html#a5d5c2ce1a8b4d44ffc2c8fda65923812" title="Detrend function to remove a linear trend from a calculated displacement data point" alt="" coords="355,1171,497,1197"/>
+<area shape="rect" id="node43" href="$class_disp_task.html#a547fc0920e6e58ed598402441bae2b9b" title="Function to request writing of D result values into FRAM (displacement data after detrending,..." alt="" coords="367,1221,485,1248"/>
+<area shape="rect" id="node44" href="$class_disp_task.html#ade5e15e66069cbbeb962241113bd4b18" title="Function to request intermediate S result (displacement data before detrending) data from AdxlStore t..." alt="" coords="369,1323,483,1349"/>
+<area shape="rect" id="node45" href="$class_disp_task.html#af6034be5cb1b0e2d95983deb2e28c415" title="Function to request intermediate S result (displacement data before detrending) data from AdxlStore t..." alt="" coords="361,1272,491,1299"/>
+<area shape="rect" id="node47" href="$class_c_filter.html#a0231e19a19b4505946fcd352d9bcd715" title="Function to prepair the backward filtering." alt="" coords="360,968,492,995"/>
+<area shape="rect" id="node49" href="$class_disp_task.html#a144988738a8a58fe114a73d01b5317ed" title="Function to calculate slope and intercept for detrending." alt="" coords="339,1373,513,1400"/>
+<area shape="rect" id="node52" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="377,1424,475,1451"/>
+</map>

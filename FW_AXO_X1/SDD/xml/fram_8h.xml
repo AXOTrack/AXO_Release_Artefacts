@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fram_8h" kind="file" language="C++">
+    <compoundname>fram.h</compoundname>
+    <includes local="no">zephyr/device.h</includes>
+    <includes local="no">zephyr/drivers/spi.h</includes>
+    <includes refid="spibus_8h" local="yes">bus/spi/spibus.h</includes>
+    <includedby refid="fram_8cpp" local="yes">drv/spi/fram.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>drv/spi/fram.h</label>
+        <link refid="fram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/device.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/drivers/spi.h</label>
+      </node>
+      <node id="4">
+        <label>bus/spi/spibus.h</label>
+        <link refid="spibus_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>drv/spi/fram.h</label>
+        <link refid="fram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drv/spi/fram.cpp</label>
+        <link refid="fram_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classspifram" prot="public">spifram</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fram_8h_1acb7bf420f05981cca45773b72e1e7c92" prot="public" static="no">
+        <name>MB85RS4MTY_MANUFACTURER_ID_CMD</name>
+        <initializer>0x9f</initializer>
+        <briefdescription>
+<para>Read Device ID OP code command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="48" column="9" bodyfile="drv/spi/fram.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1ace73731877c7cf1bc5b11d67c8de60dc" prot="public" static="no">
+        <name>MB85RS4MTY_STATUS_REG</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+<para>Read Status Register OP code command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="49" column="9" bodyfile="drv/spi/fram.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1a791d050cc497fca5223fb179034d11c4" prot="public" static="no">
+        <name>MB85RS4MTY_WRITE_ENABLE_CMD</name>
+        <initializer>    0x06</initializer>
+        <briefdescription>
+<para>Set Write Enable Latch OP code command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="50" column="9" bodyfile="drv/spi/fram.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1ad2f62460b8b5731d70e0b5f00965cf26" prot="public" static="no">
+        <name>MB85RS4MTY_READ_CMD</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+<para>Read Memory Code OP code command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="52" column="9" bodyfile="drv/spi/fram.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1ae6f51d1fae13efe475754e8d7cc3ad0c" prot="public" static="no">
+        <name>MB85RS4MTY_WRITE_CMD</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+<para>Write Memory Code OP code command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="53" column="9" bodyfile="drv/spi/fram.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1aba8aaf475badd457450b770d2075ca52" prot="public" static="no">
+        <name>MB85SR4MTY_DPD_CMD</name>
+        <initializer>0xba</initializer>
+        <briefdescription>
+<para>Deep Power Down Mode OP code command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="54" column="9" bodyfile="drv/spi/fram.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1a19436abc188b401ac42616d49fd0223d" prot="public" static="no">
+        <name>FRAM_DEVICE_ID_1</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+<para>First byte of FRAM device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="56" column="9" bodyfile="drv/spi/fram.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1a9cccbbabf42644b2557d6c808cd3d721" prot="public" static="no">
+        <name>FRAM_DEVICE_ID_2</name>
+        <initializer>0x7F</initializer>
+        <briefdescription>
+<para>Second byte of FRAM device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="57" column="9" bodyfile="drv/spi/fram.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1ab13481fb966a52da30f6261bceaad221" prot="public" static="no">
+        <name>FRAM_DEVICE_ID_3</name>
+        <initializer>0x49</initializer>
+        <briefdescription>
+<para>Third byte of FRAM device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="58" column="9" bodyfile="drv/spi/fram.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fram_8h_1a8bc9c027ca2792b54adde27be6e9e219" prot="public" static="no">
+        <name>FRAM_DEVICE_ID_4</name>
+        <initializer>0x0B</initializer>
+        <briefdescription>
+<para>Forth byte of FRAM device ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/fram.h" line="59" column="9" bodyfile="drv/spi/fram.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of spifram class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="fram_8h_1fram"/> <simplesect kind="par"><title>Detailed Description </title><para>FRAM chip is connected to nRF9160 via SPI bus. FRAM is used to store the acceleration raw data. FRAM has 512 byte storage capacity. In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
+ To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <ref refid="_m_s_c_1SectionDisplacement" kindref="member">Displacement Calculation</ref> for further details). <image type="html" name="FramLayout.png" inline="yes"></image>
+ <linebreak/>
+ See MB85RS4MTY data sheet, page 5 for SPI connection.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_SPI_FRAM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_SPI_FRAM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/spi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spibus_8h" kindref="compound">bus/spi/spibus.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fujitsu<sp/>MB85RS4MTY<sp/>FRAM<sp/>through<sp/>SPI.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="fram_8h_1acb7bf420f05981cca45773b72e1e7c92" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MB85RS4MTY_MANUFACTURER_ID_CMD<sp/>0x9f<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="fram_8h_1ace73731877c7cf1bc5b11d67c8de60dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MB85RS4MTY_STATUS_REG<sp/>0x05<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MB85RS4MTY_WRITE_ENABLE_CMD<sp/>\</highlight></codeline>
+<codeline lineno="51" refid="fram_8h_1a791d050cc497fca5223fb179034d11c4" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>0x06<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="fram_8h_1ad2f62460b8b5731d70e0b5f00965cf26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MB85RS4MTY_READ_CMD<sp/>0x03<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="fram_8h_1ae6f51d1fae13efe475754e8d7cc3ad0c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MB85RS4MTY_WRITE_CMD<sp/>0x02<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="fram_8h_1aba8aaf475badd457450b770d2075ca52" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MB85SR4MTY_DPD_CMD<sp/>0xba<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="fram_8h_1a19436abc188b401ac42616d49fd0223d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAM_DEVICE_ID_1<sp/>0x04<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="fram_8h_1a9cccbbabf42644b2557d6c808cd3d721" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAM_DEVICE_ID_2<sp/>0x7F<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="fram_8h_1ab13481fb966a52da30f6261bceaad221" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAM_DEVICE_ID_3<sp/>0x49<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="fram_8h_1a8bc9c027ca2792b54adde27be6e9e219" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAM_DEVICE_ID_4<sp/>0x0B<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classspifram" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classspifram" kindref="compound">spifram</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspifram_1a7152407e89ac43de9a26b3842d708077" kindref="member">~spifram</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classspifram" kindref="compound">spifram</ref>*<sp/><ref refid="classspifram_1a551f8dab86180b322717e3cd04b93126" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspifram_1af139f30d28b7dc61f5051c0d595af368" kindref="member">erase</ref>();</highlight></codeline>
+<codeline lineno="78" refid="classspifram_1ac42264f22f7df3ae9ff3f9fa70c88766" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspifram_1ac42264f22f7df3ae9ff3f9fa70c88766" kindref="member">erase</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>from,<sp/>int32_t<sp/>len);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspifram_1aaf1e695ade80d0f8ede8c830ef743999" kindref="member">dump</ref>(uint32_t<sp/>from,<sp/>int32_t<sp/>len);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a0b5e3feb8817cac78ca7857e2a9d6abe" kindref="member">readDeviceId</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a8966ac02bccc26d8c63b6257c28c6b3a" kindref="member">sleep</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a2cadaffd8a4f13814213a48e5b20cc4d" kindref="member">wakeup</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1ab0a12fdcb7fce8974b2ca43e12a62caa" kindref="member">power_on</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1af1f8781e94de62b193539c9513be36a2" kindref="member">power_off</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/><ref refid="classspifram_1a63a57b6838d0be4a55b8b633dd2aa1ec" kindref="member">getDeviceId</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a1bd30127afd8f18cff8a7eebbbac532c" kindref="member">writeBytes</ref>(uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/>uint32_t<sp/>num_bytes);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a012fd03b5c4e8fb72719e55317c6b1b9" kindref="member">readBytes</ref>(uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/>uint32_t<sp/>num_bytes);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classspifram_1af055b4b148c703eaeda1bedfeda907ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[4];</highlight></codeline>
+<codeline lineno="90" refid="classspifram_1a0861409233820f636c44759f690cae93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="classspifram_1a0861409233820f636c44759f690cae93" kindref="member">spi_dev</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspifram_1a6d267482059c32c5a47e8f3f16177f1f" kindref="member">spifram</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>enter<sp/>DPD<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1abdd1c2aa5bf67c7b12d0983839037f60" kindref="member">dpd_enter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>exit<sp/>DPD<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a7b6017c27f8b34a91104422c88c4954f" kindref="member">dpd_exit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a2ea7e3192751179e5d1730f154dcdbc9" kindref="member">read_device_id</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a2b5d6c97c3b1b81c410898f8b4d88dba" kindref="member">fram_access</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmd,<sp/>uint32_t<sp/>addr,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a3b8249f30cb998de07e43307c96667f8" kindref="member">write_bytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/>uint32_t<sp/>num_bytes);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a3f8be5a2578127c3fc0e74e3532f284b" kindref="member">read_bytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspifram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/>uint32_t<sp/>num_bytes);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a9d8f65ef2d9b6593e836282a55a11222" kindref="member">selftest</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classspifram_1a90919b38d8d7ea79bcdae2ecbed0ff88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classspifram_1a90919b38d8d7ea79bcdae2ecbed0ff88" kindref="member">dpd_active</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_SPI_FRAM_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="drv/spi/fram.h"/>
+  </compounddef>
+</doxygen>

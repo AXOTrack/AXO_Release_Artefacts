@@ -1,0 +1,73 @@
+menu "Unit Test Options"
+
+config UNIT_TEST
+    bool "Enable Unit Test Mode"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests verwendet wird.
+
+config UNIT_TEST_DATA
+    bool "Enable Unit Test Mode for folder data"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder data verwendet wird.
+
+config UNIT_TEST_RTOS
+    bool "Enable Unit Test Mode for folder rtos"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder rtos verwendet wird.
+
+config UNIT_TEST_MODEM
+    bool "Enable Unit Test Mode for folder modem"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder rtos verwendet wird.
+
+config UNIT_TEST_CONF
+    bool "Enable Unit Test Mode for folder conf"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder modem verwendet wird.
+
+config UNIT_TEST_FS
+    bool "Enable Unit Test Mode for folder fs"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder fs verwendet wird.
+
+config UNIT_TEST_BUS
+    bool "Enable Unit Test Mode for folder bus"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder bus verwendet wird.
+
+config UNIT_TEST_UTIL
+    bool "Enable Unit Test Mode for folder util"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder util verwendet wird.
+
+config UNIT_TEST_NET
+    bool "Enable Unit Test Mode for folder net"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder net verwendet wird.
+
+config UNIT_TEST_DRV
+    bool "Enable Unit Test Mode for folder drv"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder drv verwendet wird.
+
+config UNIT_TEST_PM
+    bool "Enable Unit Test Mode for folder pm"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder pm verwendet wird.
+
+config UNIT_TEST_UPDATE
+    bool "Enable Unit Test Mode for folder update"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder update verwendet wird.
+
+config UNIT_TEST_UPDATE2
+    bool "Enable Unit Test Mode for folder update"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder update verwendet wird.
+
+config UNIT_TEST_DISP
+    bool "Enable Unit Test Mode for folder disp"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder disp verwendet wird.
+
+endmenu

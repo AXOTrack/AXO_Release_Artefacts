@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_adc_timer_info" kind="struct" language="C++" prot="public">
+    <compoundname>AdcTimerInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_adc_timer_info_1a496dc4ed941761748f0be464e9e1e71c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> *</type>
+        <definition>ADConverter* self</definition>
+        <argsstring></argsstring>
+        <name>self</name>
+        <briefdescription>
+<para>Pointer to AD converter instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.cpp" line="65" column="17" bodyfile="drv/adc/adconverter.cpp" bodystart="65" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" compoundref="adconverter_8cpp" startline="292" endline="306">ADConverter::autoSample</referencedby>
+        <referencedby refid="struct_a_d_converter_1aaa25421e04a507bcced8f9bb02af5213" compoundref="adconverter_8cpp" startline="103" endline="111">ADConverter::timer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adc_timer_info_1a7c78ba1afcd2fa12e37cfca796438ae8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ch_mask</definition>
+        <argsstring></argsstring>
+        <name>ch_mask</name>
+        <briefdescription>
+<para>The AD channel bitmask. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.cpp" line="66" column="13" bodyfile="drv/adc/adconverter.cpp" bodystart="66" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" compoundref="adconverter_8cpp" startline="292" endline="306">ADConverter::autoSample</referencedby>
+        <referencedby refid="struct_a_d_converter_1aaa25421e04a507bcced8f9bb02af5213" compoundref="adconverter_8cpp" startline="103" endline="111">ADConverter::timer_cb</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>static size_t</label>
+      </node>
+      <node id="14">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="11">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AdcTimerInfo</label>
+        <link refid="struct_adc_timer_info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+ch_mask</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+self</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ADConverter</label>
+        <link refid="struct_a_d_converter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-timers</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-adc_channels</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+          <edgelabel>-adc_listeners</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-adc_total_channels</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vector&lt; Timer * &gt;</label>
+      </node>
+      <node id="10">
+        <label>static struct adc_dt_spec</label>
+      </node>
+      <node id="15">
+        <label>uint32_t</label>
+      </node>
+      <node id="2">
+        <label>uint8_t</label>
+      </node>
+      <node id="12">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>struct k_thread</label>
+      </node>
+      <node id="13">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>adc_channels</label>
+        <link refid="classadc__channels"/>
+      </node>
+      <node id="6">
+        <label>k_tid_t</label>
+      </node>
+      <node id="7">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/adc/adconverter.cpp" line="64" column="1" bodyfile="drv/adc/adconverter.cpp" bodystart="64" bodyend="67"/>
+    <listofallmembers>
+      <member refid="struct_adc_timer_info_1a7c78ba1afcd2fa12e37cfca796438ae8" prot="public" virt="non-virtual"><scope>AdcTimerInfo</scope><name>ch_mask</name></member>
+      <member refid="struct_adc_timer_info_1a496dc4ed941761748f0be464e9e1e71c" prot="public" virt="non-virtual"><scope>AdcTimerInfo</scope><name>self</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

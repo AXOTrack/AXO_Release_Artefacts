@@ -1,0 +1,6 @@
+<map id="bufpool_maxused" name="bufpool_maxused">
+<area shape="rect" id="node1" title="Getter function to retrieve the maximum number of used buffer memory in one of the buffer pools." alt="" coords="5,31,128,57"/>
+<area shape="rect" id="node2" href="$class_memory_pool.html#a0f9a5f3524a798b9e33330d7194344be" title=" " alt="" coords="299,5,455,32"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a371b26884552759e7161090fea883e00" title="Getter function to retrieve the maximum number of used messages of the pool." alt="" coords="176,31,251,57"/>
+<area shape="rect" id="node4" href="$class_msg_pool.html#af99d263aff7881a5d1f712fda81dab92" title="Getter function to retrieve the total number of messages in the pool." alt="" coords="190,81,237,108"/>
+</map>

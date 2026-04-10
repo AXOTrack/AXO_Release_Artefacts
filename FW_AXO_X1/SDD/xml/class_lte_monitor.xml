@@ -1,0 +1,1314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_lte_monitor" kind="class" language="C++" prot="public">
+    <compoundname>LteMonitor</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="lte__monitor_8h" local="no">lte_monitor.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@4</name>
+        <enumvalue id="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06ca4e7bc8cbed1ac99fb5ae006919494e2e" prot="public">
+          <name>IMEI_LEN</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="120" column="5" bodyfile="modem/lte_monitor.h" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@5</name>
+        <enumvalue id="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9eac682517261a132723590fcd007a94816" prot="public">
+          <name>IMSI_LEN</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="121" column="5" bodyfile="modem/lte_monitor.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the LTE monitor task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="139" column="10" bodyfile="modem/lte_monitor.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" compoundref="lte__monitor_8cpp" startline="88" endline="97">LteMonitor</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+        <referencedby refid="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__monitor_8cpp" startline="72" endline="78">timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* myTimer</definition>
+        <argsstring></argsstring>
+        <name>myTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>One shot timer provides delay for IMSI and IMEI reading + printing </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="140" column="11" bodyfile="modem/lte_monitor.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" compoundref="lte__monitor_8cpp" startline="88" endline="97">LteMonitor</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_lte_monitor_1a951801a126de704431d09c30cbf1bce4" prot="public" static="yes" mutable="no">
+        <type>struct at_monitor_entry</type>
+        <definition>struct at_monitor_entry catch_all</definition>
+        <argsstring></argsstring>
+        <name>catch_all</name>
+        <briefdescription>
+<para>The AT monitor to catch all notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="155" column="10" bodyfile="modem/lte_monitor.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a5acea4174e144830b82c203aa1b2520e" compoundref="lte__monitor_8cpp" startline="227" endline="230">resume_all_notifications</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a8857a4451e4bcf53175c836918ae26bc" prot="public" static="yes" mutable="no">
+        <type>struct at_monitor_entry</type>
+        <definition>struct at_monitor_entry link_quality</definition>
+        <argsstring></argsstring>
+        <name>link_quality</name>
+        <briefdescription>
+<para>The AT monitor to receive the link quality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="155" column="10" bodyfile="modem/lte_monitor.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1ab00a3c465f5fbef791a7e11d321b92ae" compoundref="lte__monitor_8cpp" startline="310" endline="313">resume_link_quality_notifications</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1aa1e5bc8ab252459de6e70e9a06c0da68" prot="public" static="yes" mutable="no">
+        <type>struct at_monitor_entry</type>
+        <definition>struct at_monitor_entry network</definition>
+        <argsstring></argsstring>
+        <name>network</name>
+        <briefdescription>
+<para>The AT monitor to catch network notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="155" column="10" bodyfile="modem/lte_monitor.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1ae2159a6ddb5b42946e17fd3d88b0e456" compoundref="lte__monitor_8cpp" startline="353" endline="356">resume_network_notifications</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lte_monitor_1ac9b7d069db9698b12acb7c5688171cb8" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t battVoltage</definition>
+        <argsstring></argsstring>
+        <name>battVoltage</name>
+        <briefdescription>
+<para>The LTE modem battery voltage in [mV]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="170" column="13" bodyfile="modem/lte_monitor.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a866ad538c57b1ee9ce3f29d0e2c6ade4" compoundref="lte__monitor_8cpp" startline="475" endline="484">getBattVoltage</referencedby>
+        <referencedby refid="class_lte_monitor_1a60fd65c00183271380a951ee700141da" compoundref="lte__monitor_8cpp" startline="496" endline="500">reportBattVoltage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1adefe78cee42d4007a3a5ee8a7f7e89ca" prot="private" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t linkQuality</definition>
+        <argsstring></argsstring>
+        <name>linkQuality</name>
+        <briefdescription>
+<para>The LTE modem link quality in [dBm]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="171" column="12" bodyfile="modem/lte_monitor.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" compoundref="lte__monitor_8cpp" startline="580" endline="584">reportLinkQuality</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a015ae21dbf3e9d5aa583088391fd61ee" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+<para>The LTE modem temperature in [°C]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="172" column="13" bodyfile="modem/lte_monitor.h" bodystart="172" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a16ccc3d2766f7f89894fe1ab2db4ec8c" compoundref="lte__monitor_8cpp" startline="511" endline="520">getTemperature</referencedby>
+        <referencedby refid="class_lte_monitor_1a0ea3d7720052aaf3a4beec85f8a4e817" compoundref="lte__monitor_8cpp" startline="532" endline="536">reportTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1af0781047a5f63342f39127f3a440f802" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t psm_enabled</definition>
+        <argsstring></argsstring>
+        <name>psm_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if power saving mode is enabled or not </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="173" column="13" bodyfile="modem/lte_monitor.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">psm_read</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a9fb3d1b61b85343618ddec9cbeb7c570" prot="private" static="no" mutable="no">
+        <type><ref refid="structpsm__timer" kindref="compound">psm_timer</ref></type>
+        <definition>psm_timer psm_act</definition>
+        <argsstring></argsstring>
+        <name>psm_act</name>
+        <briefdescription>
+<para>TAU period and active time granted by operator [sec]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="176" column="9" bodyfile="modem/lte_monitor.h" bodystart="176" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">psm_read</referencedby>
+        <referencedby refid="class_lte_monitor_1a019b275f1e08dd596c3e2621002eaee3" compoundref="lte__monitor_8cpp" startline="596" endline="600">reportPsmAct</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a131207d1c824c9d22b52154e123462a7" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char request_periodic_tau[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>request_periodic_tau</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Requested periodic TAU timer value (Tracking Area Update) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="177" column="10" bodyfile="modem/lte_monitor.h" bodystart="177" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">psm_read</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1adce38aeda515937ba1f81855bca1c2c5" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char request_active_time[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>request_active_time</name>
+        <briefdescription>
+<para>Requested active timer value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="179" column="10" bodyfile="modem/lte_monitor.h" bodystart="179" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">psm_read</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a327c47a51aaa1e7872be053ba8b8af49" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char imei[IMEI_LEN+1]</definition>
+        <argsstring>[IMEI_LEN+1]</argsstring>
+        <name>imei</name>
+        <briefdescription>
+<para>The IMEI string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="180" column="10" bodyfile="modem/lte_monitor.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a32a7f9e108e4af1791d412c03fc5ce4f" compoundref="lte__monitor_8cpp" startline="612" endline="629">getIMEI</referencedby>
+        <referencedby refid="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" compoundref="lte__monitor_8cpp" startline="640" endline="644">reportIMEI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a050f6bcec19508798b0d388075f8e883" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char imsi[IMSI_LEN+1]</definition>
+        <argsstring>[IMSI_LEN+1]</argsstring>
+        <name>imsi</name>
+        <briefdescription>
+<para>The IMSI string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="181" column="10" bodyfile="modem/lte_monitor.h" bodystart="181" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a6b80917e4072e07f6c6c258ccec6ad54" compoundref="lte__monitor_8cpp" startline="656" endline="673">getIMSI</referencedby>
+        <referencedby refid="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" compoundref="lte__monitor_8cpp" startline="684" endline="688">reportIMSI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_monitor_1a840e44fb862ed33802cc78e7768e65a5" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char fw_version[MODEM_INFO_FWVER_SIZE]</definition>
+        <argsstring>[MODEM_INFO_FWVER_SIZE]</argsstring>
+        <name>fw_version</name>
+        <briefdescription>
+<para>The firmware version string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="182" column="10" bodyfile="modem/lte_monitor.h" bodystart="182" bodyend="-1"/>
+        <referencedby refid="class_lte_monitor_1a8adcd0cc397ff8bc603e5e87577aa467" compoundref="lte__monitor_8cpp" startline="547" endline="554">getFwVersion</referencedby>
+        <referencedby refid="class_lte_monitor_1a0400f54e33cecd307fb744d9a2892a26" compoundref="lte__monitor_8cpp" startline="565" endline="569">reportFwVersion</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LteMonitor</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>LteMonitor</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>LTE monitor task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register a mailbox and allocates and initialize the one shot IMSI and IMEI read timer with duration of 5 ms. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="123" column="14" bodyfile="modem/lte_monitor.cpp" bodystart="88" bodyend="97"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ad649ff5017ffe9536f577aa226689085" compoundref="mbox_8h" startline="71">Mbox::eLteMonitor</references>
+        <references refid="class_lte_monitor_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="lte__monitor_8h" startline="140">myTimer</references>
+        <references refid="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" compoundref="lte__monitor_8h" startline="139">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_lte_monitor_1aaa25421e04a507bcced8f9bb02af5213" compoundref="lte__monitor_8cpp" startline="57" endline="63">timer_cb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a2cd5e6e3906694db599fdb0e999be7a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LteMonitor</definition>
+        <argsstring>()=delete</argsstring>
+        <name>LteMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="124" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1aca4347efebad73ea26ab291180468f87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~LteMonitor</definition>
+        <argsstring>()</argsstring>
+        <name>~LteMonitor</name>
+        <briefdescription>
+<para>LTE monitor task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="125" column="13" bodyfile="modem/lte_monitor.cpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void) override</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>MQTT connector task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the function initialize the modem information library by calling function modem_info_init provided by the modem information library. The one shot IMSI / IMEI read timer will be started and firmware version will be retrieved by call of function getFwVersion provided from version module. <linebreak/>
+Afterwards the function enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: On timer expiry the pointer pElem will be set to 0, to prevent releasing the message because it is allocated static. Afterwards the function read and print out IMSI and IMEI by calling the member functions getIMSI and getIMEI. Afterwards</para>
+</listitem><listitem><para>eLteLinkQuality: On receiving the link quality from AT handler callback function at_ecsq_handler, the link quality value will be extracted from message payload and stored in private member variable linkQuality.</para>
+</listitem><listitem><para>eLteReport: On receiving LTE report request from data manger task, LTE modem specific data will be read by calling the functions psm_read, getIMSI, getBattVoltage and getTemperature. These informations will be reported to data manger task by call of the functions reportLinkQuality, reportIMSI, reportPsmAct, reportBattVoltage and reportTemperature. <simplesect kind="note"><para>that the sequence of the reports matters, since the receiver deduces &quot;metrics
+complete&quot; when modem voltage and temperature are received </para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="126" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="137" bodyend="204"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" compoundref="mbox_8h" startline="70">Mbox::eHttpConnector</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" compoundref="mpelem_8h" startline="42">eLteLinkQuality</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba952b403a2dbb1541de1754b39dca5a04" compoundref="mpelem_8h" startline="48">eLteReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_lte_monitor_1a866ad538c57b1ee9ce3f29d0e2c6ade4" compoundref="lte__monitor_8cpp" startline="475" endline="484">getBattVoltage</references>
+        <references refid="class_lte_monitor_1a8adcd0cc397ff8bc603e5e87577aa467" compoundref="lte__monitor_8cpp" startline="547" endline="554">getFwVersion</references>
+        <references refid="class_lte_monitor_1a32a7f9e108e4af1791d412c03fc5ce4f" compoundref="lte__monitor_8cpp" startline="612" endline="629">getIMEI</references>
+        <references refid="class_lte_monitor_1a6b80917e4072e07f6c6c258ccec6ad54" compoundref="lte__monitor_8cpp" startline="656" endline="673">getIMSI</references>
+        <references refid="class_lte_monitor_1a16ccc3d2766f7f89894fe1ab2db4ec8c" compoundref="lte__monitor_8cpp" startline="511" endline="520">getTemperature</references>
+        <references refid="class_lte_monitor_1adefe78cee42d4007a3a5ee8a7f7e89ca" compoundref="lte__monitor_8h" startline="171">linkQuality</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_lte_monitor_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="lte__monitor_8h" startline="140">myTimer</references>
+        <references refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" compoundref="mpelem_8h" startline="223">PoolElem::p2</references>
+        <references refid="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" compoundref="lte__monitor_8h" startline="139">pInMbox</references>
+        <references refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">psm_read</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_lte_monitor_1a60fd65c00183271380a951ee700141da" compoundref="lte__monitor_8cpp" startline="496" endline="500">reportBattVoltage</references>
+        <references refid="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" compoundref="lte__monitor_8cpp" startline="640" endline="644">reportIMEI</references>
+        <references refid="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" compoundref="lte__monitor_8cpp" startline="684" endline="688">reportIMSI</references>
+        <references refid="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" compoundref="lte__monitor_8cpp" startline="580" endline="584">reportLinkQuality</references>
+        <references refid="class_lte_monitor_1a019b275f1e08dd596c3e2621002eaee3" compoundref="lte__monitor_8cpp" startline="596" endline="600">reportPsmAct</references>
+        <references refid="class_lte_monitor_1a0ea3d7720052aaf3a4beec85f8a4e817" compoundref="lte__monitor_8cpp" startline="532" endline="536">reportTemperature</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>()</argsstring>
+        <name>timer1_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the IMSI / IMEI read timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eTimerExpired, set LTE connector as sender and put message into own (LTE monitor&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="128" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="72" bodyend="78"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" compoundref="lte__monitor_8h" startline="139">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_lte_monitor_1aaa25421e04a507bcced8f9bb02af5213" compoundref="lte__monitor_8cpp" startline="57" endline="63">timer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportIMEI</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportIMEI</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send IMEI to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteIMEI with attached IMEI to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="129" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="640" bodyend="644"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba609c475acb8ae87abecdcb90b64734dd" compoundref="mpelem_8h" startline="46">eLteIMEI</references>
+        <references refid="class_lte_monitor_1a327c47a51aaa1e7872be053ba8b8af49" compoundref="lte__monitor_8h" startline="180">imei</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportIMSI</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportIMSI</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send IMSI to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteIMSI with attached IMSI to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="130" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="684" bodyend="688"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4fdd614c2d67ec152bd599336e8b59a5" compoundref="mpelem_8h" startline="47">eLteIMSI</references>
+        <references refid="class_lte_monitor_1a050f6bcec19508798b0d388075f8e883" compoundref="lte__monitor_8h" startline="181">imsi</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a60fd65c00183271380a951ee700141da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportBattVoltage</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportBattVoltage</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send modem battery voltage to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteBattVoltage with attached battery voltage to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="131" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="496" bodyend="500"/>
+        <references refid="class_lte_monitor_1ac9b7d069db9698b12acb7c5688171cb8" compoundref="lte__monitor_8h" startline="170">battVoltage</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9b4ebe21df63da73fd88095d52108213" compoundref="mpelem_8h" startline="44">eLteBattVoltage</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a0ea3d7720052aaf3a4beec85f8a4e817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportTemperature</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportTemperature</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send modem temperature to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteTemperature with attached temperature to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="132" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="532" bodyend="536"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2eed0a4913bbe04d264158625760ed70" compoundref="mpelem_8h" startline="43">eLteTemperature</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_lte_monitor_1a015ae21dbf3e9d5aa583088391fd61ee" compoundref="lte__monitor_8h" startline="172">temperature</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportLinkQuality</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportLinkQuality</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send link quality value to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteLinkQuality with attached link quality to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="133" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="580" bodyend="584"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" compoundref="mpelem_8h" startline="42">eLteLinkQuality</references>
+        <references refid="class_lte_monitor_1adefe78cee42d4007a3a5ee8a7f7e89ca" compoundref="lte__monitor_8h" startline="171">linkQuality</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a0400f54e33cecd307fb744d9a2892a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportFwVersion</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportFwVersion</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send firmware version of the modem software to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteFwVersion with attached firmware version to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="134" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="565" bodyend="569"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafc94700321744cf389c08351f616eff9" compoundref="mpelem_8h" startline="51">eLteFwVersion</references>
+        <references refid="class_lte_monitor_1a840e44fb862ed33802cc78e7768e65a5" compoundref="lte__monitor_8h" startline="182">fw_version</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a019b275f1e08dd596c3e2621002eaee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportPsmAct</definition>
+        <argsstring>(Mbox::MboxId toWhom=Mbox::eDataManager)</argsstring>
+        <name>reportPsmAct</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>toWhom</declname>
+          <defval><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref></defval>
+        </param>
+        <briefdescription>
+<para>Send TAU period and active time to the receiver mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the receiver mailbox, where to send the message, default is ID eDataManager</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type eLteIMEI with attached TAU period and active time in structure psm_act to mailbox toWhom by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="137" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="596" bodyend="600"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf9d3717bc9984a4608b9de3054a64f33" compoundref="mpelem_8h" startline="45">eLtePsmAct</references>
+        <references refid="class_lte_monitor_1a9fb3d1b61b85343618ddec9cbeb7c570" compoundref="lte__monitor_8h" startline="176">psm_act</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void psm_read</definition>
+        <argsstring>(void)</argsstring>
+        <name>psm_read</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to retrieve power saving mode informations of the modem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The method send the AT command &quot;Power saving mode setting&quot; +CPSMS to the modem and read the formatted response into the arguments psm_enabled, request_periodic_tau and request_active_time by calling function nrf_modem_at_scanf provided by the modem library of nrfxlib provided by Nordic semiconductor. In case of an error the method returns immediately. See <ulink url="https://infocenter.nordicsemi.com/pdf/nrf91_at_commands_v1.0.pdf">Command Reference Guide</ulink>, page 88ff for details. Afterwards function lte_lc_psm_get is called for getting the current PSM (Power Saving Mode) configurations for periodic TAU (Tracking Area Update) and active time, both in units of seconds. In case of an error the method returns immediately. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="155" column="10" bodyfile="modem/lte_monitor.cpp" bodystart="427" bodyend="464"/>
+        <references refid="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" compoundref="lte__monitor_8h" startline="93">psm_timer::active_time</references>
+        <references refid="class_lte_monitor_1a9fb3d1b61b85343618ddec9cbeb7c570" compoundref="lte__monitor_8h" startline="176">psm_act</references>
+        <references refid="class_lte_monitor_1af0781047a5f63342f39127f3a440f802" compoundref="lte__monitor_8h" startline="173">psm_enabled</references>
+        <references refid="class_lte_monitor_1adce38aeda515937ba1f81855bca1c2c5" compoundref="lte__monitor_8h" startline="179">request_active_time</references>
+        <references refid="class_lte_monitor_1a131207d1c824c9d22b52154e123462a7" compoundref="lte__monitor_8h" startline="177">request_periodic_tau</references>
+        <references refid="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" compoundref="lte__monitor_8h" startline="90">psm_timer::tau</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_lte_monitor_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the IMSI / IMEI read timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call MQTT connector timer expired function timer1_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="127" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="57" bodyend="63"/>
+        <references refid="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__monitor_8cpp" startline="72" endline="78">timer1_expired</references>
+        <referencedby refid="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" compoundref="lte__monitor_8cpp" startline="88" endline="97">LteMonitor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a5acea4174e144830b82c203aa1b2520e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resume_all_notifications</definition>
+        <argsstring>()</argsstring>
+        <name>resume_all_notifications</name>
+        <briefdescription>
+<para>Function to resume the AT monitor for all notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By call of function at_monitor_resume, provided by the AT monitor library this method resumes the AT monitor for all notifications. <simplesect kind="note"><para>This function is unused and will never called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="143" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="227" bodyend="230"/>
+        <references refid="class_lte_monitor_1a951801a126de704431d09c30cbf1bce4" compoundref="lte__monitor_8h" startline="157">catch_all</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1aff7059b4906bb5b63f78242c88e97aa4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at_notif_handler</definition>
+        <argsstring>(const char *notif)</argsstring>
+        <name>at_notif_handler</name>
+        <param>
+          <type>const char *</type>
+          <declname>notif</declname>
+        </param>
+        <briefdescription>
+<para>Handler callback function to receive all notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>notif</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the notification string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function only prints a debug message al information level. <simplesect kind="note"><para>This function is unused and will never called </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="144" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="240" bodyend="242"/>
+        <referencedby refid="lte__monitor_8cpp_1a54ea7c404dd898033db8b10d5d0b893c" compoundref="lte__monitor_8cpp" startline="206" endline="218">__attribute__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a21ccfade383d732986c846a2bf017196" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void register_link_quality_notifications</definition>
+        <argsstring>()</argsstring>
+        <name>register_link_quality_notifications</name>
+        <briefdescription>
+<para>Function to subscribe to signal quality notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By call of function nrf_modem_at_printf, provided by the modem library of nrfxlib this method send the AT command CESQ with parameter 1 to the modem to enable link quality notifications, which will be received by the link quality AT monitor handler callback function at_ecsq_handler. See <ulink url="https://infocenter.nordicsemi.com/pdf/nrf91_at_commands_v1.0.pdf">Command Reference Guide</ulink>, page 19f for details. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="146" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="269" bodyend="274"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1ab00a3c465f5fbef791a7e11d321b92ae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resume_link_quality_notifications</definition>
+        <argsstring>()</argsstring>
+        <name>resume_link_quality_notifications</name>
+        <briefdescription>
+<para>Function to resume the AT monitor for link quality notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By call of function at_monitor_resume, provided by the AT monitor library this method resumes the AT monitor for link quality notifications. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="147" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="310" bodyend="313"/>
+        <references refid="class_lte_monitor_1a8857a4451e4bcf53175c836918ae26bc" compoundref="lte__monitor_8h" startline="159">link_quality</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a1517efba6a658177615905efaeed0d21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at_ecsq_handler</definition>
+        <argsstring>(const char *notif)</argsstring>
+        <name>at_ecsq_handler</name>
+        <param>
+          <type>const char *</type>
+          <declname>notif</declname>
+        </param>
+        <briefdescription>
+<para>Handler callback function to receive link quality notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>notif</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the notification string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function transforms the notification into an integer dBm value. If the dBm value is invalid the function returns immediately, otherwise the function send a message of type eLteLinkQualitywith attached link quality dBm to its own (LTE monitor&apos;s) mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="148" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="287" bodyend="302"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" compoundref="mpelem_8h" startline="42">eLteLinkQuality</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a8785c39f5f600d014c8253c8ef8b380f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void register_network_notifications</definition>
+        <argsstring>()</argsstring>
+        <name>register_network_notifications</name>
+        <briefdescription>
+<para>Function to set network registration status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By call of function nrf_modem_at_printf, provided by the modem library of nrfxlib this method send the AT command +CEREG with parameter 1 to the modem to enable unsolicited status result codes, which will be received by the network AT monitor handler callback function at_cereg_handler. See <ulink url="https://infocenter.nordicsemi.com/pdf/nrf91_at_commands_v1.0.pdf">Command Reference Guide</ulink>, page 97f for details. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="150" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="326" bodyend="331"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1ae2159a6ddb5b42946e17fd3d88b0e456" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resume_network_notifications</definition>
+        <argsstring>()</argsstring>
+        <name>resume_network_notifications</name>
+        <briefdescription>
+<para>Function to resume the AT monitor for network notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By call of function at_monitor_resume, provided by the AT monitor library this method resumes the AT monitor for network notifications. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="151" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="353" bodyend="356"/>
+        <references refid="class_lte_monitor_1aa1e5bc8ab252459de6e70e9a06c0da68" compoundref="lte__monitor_8h" startline="161">network</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a729b6b8693d1fe82adb1955367911431" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at_cereg_handler</definition>
+        <argsstring>(const char *notif)</argsstring>
+        <name>at_cereg_handler</name>
+        <param>
+          <type>const char *</type>
+          <declname>notif</declname>
+        </param>
+        <briefdescription>
+<para>Handler callback function to receive network notifications. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>notif</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the notification string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function transforms the notification into an integer status value and cast it to enumeration type enum cereg_status to pass it into function cereg_str_get to get the status in string format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="152" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="400" bodyend="410"/>
+        <references refid="class_lte_monitor_1ae23601eab621f370fa3133297c06672f" compoundref="lte__monitor_8cpp" startline="368" endline="389">cereg_str_get</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1ae23601eab621f370fa3133297c06672f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * cereg_str_get</definition>
+        <argsstring>(enum cereg_status status)</argsstring>
+        <name>cereg_str_get</name>
+        <param>
+          <type>enum <ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeb" kindref="member">cereg_status</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Function to get network notification status as string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status of enumeration type enum cereg_status</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the network notification status as string</para>
+</simplesect>
+The function returns a string for the network notification status according to input parameter status of enumeration type enum cereg_status. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="153" column="23" bodyfile="modem/lte_monitor.cpp" bodystart="368" bodyend="389"/>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba08f1ea1cb5cac34a4f4237e5259fcabb" compoundref="lte__monitor_8h" startline="81">DENIED</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba0666e7ee289b420b8f016b5269fa8244" compoundref="lte__monitor_8h" startline="84">EMERGENCY</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba8f280224da64e98f2d52d50ec43bc197" compoundref="lte__monitor_8h" startline="79">HOME</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba9f7ef72c65684239432dae3599e916d7" compoundref="lte__monitor_8h" startline="78">NO_NETWORK</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebab12d371de3b04f305919e344ee38805f" compoundref="lte__monitor_8h" startline="83">ROAMING</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebaa0c0f46a51df7452ca25be1d4594e8ba" compoundref="lte__monitor_8h" startline="80">SEARCHING</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebafd58c2248853ee9eb048caa78fe122b9" compoundref="lte__monitor_8h" startline="85">UICC_FAILURE</references>
+        <references refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba6ce26a62afab55d7606ad4e92428b30c" compoundref="lte__monitor_8h" startline="82">UNKNOWN</references>
+        <referencedby refid="class_lte_monitor_1a729b6b8693d1fe82adb1955367911431" compoundref="lte__monitor_8cpp" startline="400" endline="410">at_cereg_handler</referencedby>
+        <referencedby refid="class_lte_connector_1a4542179448b664409c38b4e403e972d2" compoundref="lte__connector_8cpp" startline="68" endline="154">LteConnector::lte_event_handler</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_lte_monitor_1a866ad538c57b1ee9ce3f29d0e2c6ade4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getBattVoltage</definition>
+        <argsstring>()</argsstring>
+        <name>getBattVoltage</name>
+        <briefdescription>
+<para>Function to retrieve the battery voltage of the modem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>The battery voltage in mV</para>
+</simplesect>
+The method retrieves the battery voltage of the modem by calling function modem_info_get_batt_voltage provided by the modem information library of the nRF Connect SDK and store it in member variable battVoltage. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="165" column="9" bodyfile="modem/lte_monitor.cpp" bodystart="475" bodyend="484"/>
+        <references refid="class_lte_monitor_1ac9b7d069db9698b12acb7c5688171cb8" compoundref="lte__monitor_8h" startline="170">battVoltage</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a16ccc3d2766f7f89894fe1ab2db4ec8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>getTemperature</name>
+        <briefdescription>
+<para>Function to retrieve the temperature of the modem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>The temperature value in °C</para>
+</simplesect>
+The method retrieves the temperature of the modem by calling function modem_info_get_temperature provided by the modem information library of the nRF Connect SDK and store it in member variable temperature. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="166" column="9" bodyfile="modem/lte_monitor.cpp" bodystart="511" bodyend="520"/>
+        <references refid="class_lte_monitor_1a015ae21dbf3e9d5aa583088391fd61ee" compoundref="lte__monitor_8h" startline="172">temperature</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a8adcd0cc397ff8bc603e5e87577aa467" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * getFwVersion</definition>
+        <argsstring>()</argsstring>
+        <name>getFwVersion</name>
+        <briefdescription>
+<para>Function to retrieve the firmware version of the modem software. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Ponter to the firmware version of the modem software</para>
+</simplesect>
+The method retrieves the firmware version of the modem software by calling function modem_info_get_fw_version provided by the modem information library of the nRF Connect SDK and store it in member variable fw_version. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="167" column="16" bodyfile="modem/lte_monitor.cpp" bodystart="547" bodyend="554"/>
+        <references refid="class_lte_monitor_1a840e44fb862ed33802cc78e7768e65a5" compoundref="lte__monitor_8h" startline="182">fw_version</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a32a7f9e108e4af1791d412c03fc5ce4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getIMEI</definition>
+        <argsstring>()</argsstring>
+        <name>getIMEI</name>
+        <briefdescription>
+<para>Function to retrieve the IMEI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>0 on success, error code otherwise</para>
+</simplesect>
+The method retrieves the IMEI by calling function modem_info_string_get provided by the modem information library of the nRF Connect SDK. In case of an error the function returns error code -EIO, otherwise the received IMEI will be stored in member variable imei and function returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="168" column="9" bodyfile="modem/lte_monitor.cpp" bodystart="612" bodyend="629"/>
+        <references refid="class_lte_monitor_1a327c47a51aaa1e7872be053ba8b8af49" compoundref="lte__monitor_8h" startline="180">imei</references>
+        <references refid="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06ca4e7bc8cbed1ac99fb5ae006919494e2e" compoundref="lte__monitor_8h" startline="120">IMEI_LEN</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_monitor_1a6b80917e4072e07f6c6c258ccec6ad54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getIMSI</definition>
+        <argsstring>()</argsstring>
+        <name>getIMSI</name>
+        <briefdescription>
+<para>Function to retrieve the IMSI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>0 on success, error code otherwise</para>
+</simplesect>
+The method retrieves the IMSI by calling function modem_info_string_get provided by the modem information library of the nRF Connect SDK. In case of an error the function returns error code -EIO, otherwise the received IMSI will be stored in member variable imsi and function returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="169" column="9" bodyfile="modem/lte_monitor.cpp" bodystart="656" bodyend="673"/>
+        <references refid="class_lte_monitor_1a050f6bcec19508798b0d388075f8e883" compoundref="lte__monitor_8h" startline="181">imsi</references>
+        <references refid="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9eac682517261a132723590fcd007a94816" compoundref="lte__monitor_8h" startline="121">IMSI_LEN</references>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LTE monitor class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para></para>
+</simplesect>
+<xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para>RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>RMS task (self)</para>
+</listitem><listitem><para>ADXL data store task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>RMS store task</para>
+</listitem><listitem><para>RMS task (self, transmission in timer callback)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LteMonitor</label>
+        <link refid="class_lte_monitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LteMonitor</label>
+        <link refid="class_lte_monitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-linkQuality</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+catch_all</edgelabel>
+          <edgelabel>+link_quality</edgelabel>
+          <edgelabel>+network</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-fw_version</edgelabel>
+          <edgelabel>-imei</edgelabel>
+          <edgelabel>-imsi</edgelabel>
+          <edgelabel>-request_active_time</edgelabel>
+          <edgelabel>-request_periodic_tau</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-battVoltage</edgelabel>
+          <edgelabel>-psm_enabled</edgelabel>
+          <edgelabel>-temperature</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-psm_act</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+myTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>int32_t</label>
+      </node>
+      <node id="15">
+        <label>psm_timer</label>
+        <link refid="structpsm__timer"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+active_time</edgelabel>
+          <edgelabel>+tau</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="10">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="11">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="12">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>int8_t</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="8">
+        <label>static struct at_monitor_entry</label>
+      </node>
+      <node id="17">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="modem/lte_monitor.h" line="118" column="1" bodyfile="modem/lte_monitor.h" bodystart="118" bodyend="183"/>
+    <listofallmembers>
+      <member refid="class_lte_monitor_1a729b6b8693d1fe82adb1955367911431" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>at_cereg_handler</name></member>
+      <member refid="class_lte_monitor_1a1517efba6a658177615905efaeed0d21" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>at_ecsq_handler</name></member>
+      <member refid="class_lte_monitor_1aff7059b4906bb5b63f78242c88e97aa4" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>at_notif_handler</name></member>
+      <member refid="class_lte_monitor_1ac9b7d069db9698b12acb7c5688171cb8" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>battVoltage</name></member>
+      <member refid="class_lte_monitor_1a951801a126de704431d09c30cbf1bce4" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>catch_all</name></member>
+      <member refid="class_lte_monitor_1ae23601eab621f370fa3133297c06672f" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>cereg_str_get</name></member>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>LteMonitor</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>create</name></member>
+      <member refid="class_lte_monitor_1a840e44fb862ed33802cc78e7768e65a5" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>fw_version</name></member>
+      <member refid="class_lte_monitor_1a866ad538c57b1ee9ce3f29d0e2c6ade4" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>getBattVoltage</name></member>
+      <member refid="class_lte_monitor_1a8adcd0cc397ff8bc603e5e87577aa467" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>getFwVersion</name></member>
+      <member refid="class_lte_monitor_1a32a7f9e108e4af1791d412c03fc5ce4f" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>getIMEI</name></member>
+      <member refid="class_lte_monitor_1a6b80917e4072e07f6c6c258ccec6ad54" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>getIMSI</name></member>
+      <member refid="class_lte_monitor_1a16ccc3d2766f7f89894fe1ab2db4ec8c" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>getTemperature</name></member>
+      <member refid="class_lte_monitor_1a327c47a51aaa1e7872be053ba8b8af49" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>imei</name></member>
+      <member refid="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06ca4e7bc8cbed1ac99fb5ae006919494e2e" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>IMEI_LEN</name></member>
+      <member refid="class_lte_monitor_1a050f6bcec19508798b0d388075f8e883" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>imsi</name></member>
+      <member refid="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9eac682517261a132723590fcd007a94816" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>IMSI_LEN</name></member>
+      <member refid="class_lte_monitor_1a8857a4451e4bcf53175c836918ae26bc" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>link_quality</name></member>
+      <member refid="class_lte_monitor_1adefe78cee42d4007a3a5ee8a7f7e89ca" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>linkQuality</name></member>
+      <member refid="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>LteMonitor</name></member>
+      <member refid="class_lte_monitor_1a2cd5e6e3906694db599fdb0e999be7a2" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>LteMonitor</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>LteMonitor</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>LteMonitor</scope><name>myName</name></member>
+      <member refid="class_lte_monitor_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>myTimer</name></member>
+      <member refid="class_lte_monitor_1aa1e5bc8ab252459de6e70e9a06c0da68" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>network</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>operator=</name></member>
+      <member refid="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>pInMbox</name></member>
+      <member refid="class_lte_monitor_1a9fb3d1b61b85343618ddec9cbeb7c570" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>psm_act</name></member>
+      <member refid="class_lte_monitor_1af0781047a5f63342f39127f3a440f802" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>psm_enabled</name></member>
+      <member refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>psm_read</name></member>
+      <member refid="class_lte_monitor_1a21ccfade383d732986c846a2bf017196" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>register_link_quality_notifications</name></member>
+      <member refid="class_lte_monitor_1a8785c39f5f600d014c8253c8ef8b380f" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>register_network_notifications</name></member>
+      <member refid="class_lte_monitor_1a60fd65c00183271380a951ee700141da" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportBattVoltage</name></member>
+      <member refid="class_lte_monitor_1a0400f54e33cecd307fb744d9a2892a26" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportFwVersion</name></member>
+      <member refid="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportIMEI</name></member>
+      <member refid="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportIMSI</name></member>
+      <member refid="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportLinkQuality</name></member>
+      <member refid="class_lte_monitor_1a019b275f1e08dd596c3e2621002eaee3" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportPsmAct</name></member>
+      <member refid="class_lte_monitor_1a0ea3d7720052aaf3a4beec85f8a4e817" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>reportTemperature</name></member>
+      <member refid="class_lte_monitor_1adce38aeda515937ba1f81855bca1c2c5" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>request_active_time</name></member>
+      <member refid="class_lte_monitor_1a131207d1c824c9d22b52154e123462a7" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>request_periodic_tau</name></member>
+      <member refid="class_lte_monitor_1a5acea4174e144830b82c203aa1b2520e" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>resume_all_notifications</name></member>
+      <member refid="class_lte_monitor_1ab00a3c465f5fbef791a7e11d321b92ae" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>resume_link_quality_notifications</name></member>
+      <member refid="class_lte_monitor_1ae2159a6ddb5b42946e17fd3d88b0e456" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>resume_network_notifications</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>start</name></member>
+      <member refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" prot="public" virt="virtual"><scope>LteMonitor</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>taskCode</name></member>
+      <member refid="class_lte_monitor_1a015ae21dbf3e9d5aa583088391fd61ee" prot="private" virt="non-virtual"><scope>LteMonitor</scope><name>temperature</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>LteMonitor</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>LteMonitor</scope><name>tid</name></member>
+      <member refid="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>timer1_expired</name></member>
+      <member refid="class_lte_monitor_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>LteMonitor</scope><name>timer_cb</name></member>
+      <member refid="class_lte_monitor_1aca4347efebad73ea26ab291180468f87" prot="public" virt="virtual"><scope>LteMonitor</scope><name>~LteMonitor</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>LteMonitor</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

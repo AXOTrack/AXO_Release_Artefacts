@@ -1,0 +1,10 @@
+<map id="start" name="start">
+<area shape="rect" id="node1" title="Function to start PWM generation." alt="" coords="1165,31,1213,57"/>
+<area shape="rect" id="node2" href="$struct_adxl37x.html#aa40b55f092609cc5710dd1af8da9316b" title="Function to start or stop external synchronization clock." alt="" coords="953,31,1117,57"/>
+<area shape="rect" id="node3" href="$struct_adxl37x.html#a53b39be4f224783448cee0a1a1cc8a13" title="Function to set synchronization mode of the sensor device driver." alt="" coords="760,31,905,57"/>
+<area shape="rect" id="node4" href="$struct_adxl37x.html#a715341f6ab01b559c6fd46d649bdb947" title="The FIFO handler callback function." alt="" coords="569,5,712,32"/>
+<area shape="rect" id="node8" href="$struct_adxl37x.html#a3605b58fb45d69d498721bc2f2a14b1c" title="Function to suspend the sensor measurement." alt="" coords="383,56,509,83"/>
+<area shape="rect" id="node5" href="$struct_adxl37x.html#a303839680fa319517f4fed6d5455b52e" title="Getter function to retrieve status information and number of FIFO entries." alt="" coords="371,5,521,32"/>
+<area shape="rect" id="node6" href="$struct_adxl37x.html#a1f115a7336973884012f7fe5f5c095e2" title="Function to send a HW status message to HW metrics task." alt="" coords="156,5,323,32"/>
+<area shape="rect" id="node7" href="$struct_adxl37x.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl37x task function." alt="" coords="5,31,108,57"/>
+</map>

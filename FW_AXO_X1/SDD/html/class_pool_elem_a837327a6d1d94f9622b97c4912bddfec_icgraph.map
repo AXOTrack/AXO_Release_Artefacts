@@ -1,0 +1,53 @@
+<map id="getBuffer" name="getBuffer">
+<area shape="rect" id="node1" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="688,1182,761,1209"/>
+<area shape="rect" id="node2" href="$class_metrics_builder.html#a19401fc2be9d03fe089817c79ff1c684" title="Add function to append boot counter to metrics JSON string." alt="" coords="440,370,621,397"/>
+<area shape="rect" id="node5" href="$class_measurement_builder.html#a4e5fd8a3677a589e1a2c3c17e5fd5381" title="Add function to store displacement statistic values in member string variables." alt="" coords="460,5,601,47"/>
+<area shape="rect" id="node7" href="$class_metrics_builder.html#a166f87b32d2bfd72b0fa9bc171fdaef3" title="Add function to append humidity of external sensor to metrics JSON string." alt="" coords="438,421,623,447"/>
+<area shape="rect" id="node8" href="$class_metrics_builder.html#ada2af421e31f157ba6069d86842afe26" title="Add function to append HW status information to metrics JSON string." alt="" coords="433,471,628,498"/>
+<area shape="rect" id="node9" href="$class_metrics_builder.html#a4aa8d2f7dd366f1343d057cccdffdb11" title="Add function to append modem DRX to metrics JSON string." alt="" coords="451,522,611,549"/>
+<area shape="rect" id="node10" href="$class_measurement_builder.html#a0d94000f43699989a2a5c80a6d72213f" title="Add function to store x, y and z maximum values in member string variables." alt="" coords="460,71,601,112"/>
+<area shape="rect" id="node11" href="$class_metrics_builder.html#a2cfdd07b0705abdbe2691f27f90185d2" title="Add function to append modem battery voltage to metrics JSON string." alt="" coords="442,573,619,615"/>
+<area shape="rect" id="node12" href="$class_metrics_builder.html#a6357149b49be40b47a0d24b5f7971fd3" title="Add function to append modem battery voltage to metrics JSON string." alt="" coords="442,639,619,680"/>
+<area shape="rect" id="node13" href="$class_metrics_builder.html#a9dfda63be345c99947e053cdc32f48c5" title="Add function to append modem temeperature to metrics JSON string." alt="" coords="426,202,635,229"/>
+<area shape="rect" id="node14" href="$class_metrics_builder.html#a24803a7c934bf6b9d47cdd47420aa92c" title="Add function to append reset cause to metrics JSON string." alt="" coords="447,253,615,295"/>
+<area shape="rect" id="node15" href="$class_measurement_builder.html#ac97be061f59019f39f973a1ac28a68b9" title="Add function to append RMS data to measurement JSON string and store hit counter." alt="" coords="460,136,601,177"/>
+<area shape="rect" id="node16" href="$class_metrics_builder.html#a84e8a4a79512fab4189812987975ce35" title="Add function to append temperature of external sensor to metrics JSON string." alt="" coords="427,319,634,346"/>
+<area shape="rect" id="node17" href="$class_fw_info.html#a52cad5018211f7c297fd558cb96768c2" title="Firmware info class constructor." alt="" coords="479,705,583,731"/>
+<area shape="rect" id="node18" href="$class_disp_task.html#a8cb8f29f9f9216b026099a7e9c916acf" title="Function handle incoming message with backward filtered data and realize the displacement calculation..." alt="" coords="437,755,624,782"/>
+<area shape="rect" id="node20" href="$class_disp_task.html#a94ffa2ab3108c5373e8caad61ffe2f48" title="Function handle incoming raw data message for left initial condition calculation." alt="" coords="443,807,619,848"/>
+<area shape="rect" id="node21" href="$class_disp_task.html#a372a1a239b4683a1d40b7dc40efdb0ff" title="Function handle incoming raw data message for right initial condition calculation." alt="" coords="443,872,618,913"/>
+<area shape="rect" id="node22" href="$class_disp_task.html#af7fbbdc38b04ca5ee0f945c2cf54ea80" title="Function handle incoming message with forward filtered data and realize the backward filtering." alt="" coords="437,938,624,965"/>
+<area shape="rect" id="node23" href="$class_hw_metrics.html#a331eee3755eac4cc05f7bd2a23870020" title="Handler function for incoming message eHwStatusAdxl37x." alt="" coords="437,1141,624,1183"/>
+<area shape="rect" id="node25" href="$class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="441,1207,621,1248"/>
+<area shape="rect" id="node26" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="213,1273,353,1299"/>
+<area shape="rect" id="node27" href="$class_disp_task.html#a62980b31ea3fb727feb6613268798b13" title="Function handle incoming raw data message for forward filtering the received data." alt="" coords="443,989,619,1015"/>
+<area shape="rect" id="node28" href="$class_disp_task.html#a5b2ffff9e2ea4e58dc40300aab0ab775" title="Function handle incoming raw data status indication message." alt="" coords="423,1039,638,1066"/>
+<area shape="rect" id="node29" href="$class_http_connector.html#a5b2ffff9e2ea4e58dc40300aab0ab775" title="Function to handle received raw data status from AdxlStore task." alt="" coords="193,1572,372,1613"/>
+<area shape="rect" id="node30" href="$class_http_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="HTTP connector task function." alt="" coords="5,1482,144,1509"/>
+<area shape="rect" id="node31" href="$class_http_connector.html#aeaf0505dd1e05287635672b027c55d6f" title="Function to handle received data from AdxlStore task." alt="" coords="427,1441,635,1467"/>
+<area shape="rect" id="node34" href="$class_disp_task.html#aa1b33da4a44539cdb25533038f079003" title="Function handle incoming message with S values (displacement values before detrending)" alt="" coords="432,1090,629,1117"/>
+<area shape="rect" id="node35" href="$class_mqtt_connector.html#ab0b0c6d681f4d9ee936edfc17542f632" title="Function to publish a accepted response to the MQTT broker." alt="" coords="424,1492,637,1533"/>
+<area shape="rect" id="node36" href="$class_mqtt_connector.html#a468c248c7d18e226ea56f9c1a8e07be4" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="445,1324,616,1365"/>
+<area shape="rect" id="node37" href="$class_mqtt_connector.html#a0520f0e181a94a9bf2298654692a914e" title="Function to publish a rejected response to the MQTT broker." alt="" coords="426,1609,635,1651"/>
+<area shape="rect" id="node38" href="$class_adxl_data_store.html#af0008c5962b253accee045558363163b" title="Function to send backward filtered data to the HTTP Connector task." alt="" coords="428,1777,633,1803"/>
+<area shape="rect" id="node39" href="$class_adxl_data_store.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl data store task function." alt="" coords="213,1903,352,1930"/>
+<area shape="rect" id="node40" href="$class_adxl_data_store.html#a3dd1d967afcd8a9649677f9c875fc89e" title="Function to send displacement data to the requesting sender task." alt="" coords="433,1878,628,1905"/>
+<area shape="rect" id="node41" href="$class_adxl_data_store.html#af827585056c20cb0bf6b2c4855319b3a" title="Function to send forward filtered data to the HTTP Connector task." alt="" coords="429,1929,633,1955"/>
+<area shape="rect" id="node42" href="$class_adxl_data_store.html#a194013319bd1a593fc74449c985d88e0" title="Function to send raw data to the requesting sender task." alt="" coords="433,1979,628,2006"/>
+<area shape="rect" id="node43" href="$class_adxl_data_store.html#accb06ff5b11f5a9b4ab23bec4a1c1266" title="Function to send displacement data (SResult, not detrended) to the HTTP Connector task." alt="" coords="423,2030,638,2057"/>
+<area shape="rect" id="node44" href="$class_adxl_data_store.html#a9620c421f72c50898ba7b042d8ffe474" title="Function to store backward filtered data in FRAM." alt="" coords="421,2081,640,2107"/>
+<area shape="rect" id="node45" href="$class_adxl_data_store.html#a05ff270ebf9bfe4df4d98646f30e761a" title="Function to store D values (displacement after detrending) in FRAM. D values reoresent the final resu..." alt="" coords="436,2131,625,2158"/>
+<area shape="rect" id="node46" href="$class_adxl_data_store.html#acb7adcf211d7a97fe23fe5029b674e54" title="Function to store forward filtered data in FRAM." alt="" coords="427,1675,634,1702"/>
+<area shape="rect" id="node47" href="$class_adxl_data_store.html#acbcf08a573dd3531e1bbd4e254a44adb" title="Function to store S values (displacement before detrending) in FRAM." alt="" coords="436,1726,625,1753"/>
+<area shape="rect" id="node48" href="$class_rms_store.html#a557b206172fbde7a204eb0d2376b7f71" title="RMS storage task function." alt="" coords="474,2182,587,2209"/>
+<area shape="rect" id="node49" href="$class_battery_mgr.html#a557b206172fbde7a204eb0d2376b7f71" title="Battery manager task function." alt="" coords="471,2233,590,2259"/>
+<area shape="rect" id="node50" href="$class_rms_task.html#ab9179e1ad434ab3966aac5e0312caef8" title="Function to update the RMS and hit values and send result to RMS storage task." alt="" coords="454,2283,607,2310"/>
+<area shape="rect" id="node3" href="$class_metrics_builder.html#aeb63a44cb675e1a837046cbf4373f040" title="Add function to append prepared metrics data to the metrics JSON string." alt="" coords="215,395,350,422"/>
+<area shape="rect" id="node4" href="$class_data_manager.html#a557b206172fbde7a204eb0d2376b7f71" title="Data manager task function." alt="" coords="9,254,141,281"/>
+<area shape="rect" id="node6" href="$class_measurement_builder.html#aeb63a44cb675e1a837046cbf4373f040" title="Add function to append prepared measurement data to the measurement JSON string." alt="" coords="197,111,368,138"/>
+<area shape="rect" id="node19" href="$class_disp_task.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="DispTask task function." alt="" coords="228,938,337,965"/>
+<area shape="rect" id="node24" href="$class_hw_metrics.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl37x task function." alt="" coords="225,1149,341,1175"/>
+<area shape="rect" id="node32" href="$class_http_connector.html#a9670125458a21e0df605ff8ec0a72cc3" title="Function to handle received displacement data from AdxlStore task." alt="" coords="192,1507,373,1548"/>
+<area shape="rect" id="node33" href="$class_http_connector.html#a70b7c8bda814beee628f8625439b59cf" title="Function to handle received raw data from AdxlStore task." alt="" coords="192,1441,373,1483"/>
+<area shape="rect" id="node51" href="$class_rms_task.html#aaad4f4d77885dd2457f79c20ac27db19" title="RMS task function." alt="" coords="227,2283,338,2310"/>
+</map>

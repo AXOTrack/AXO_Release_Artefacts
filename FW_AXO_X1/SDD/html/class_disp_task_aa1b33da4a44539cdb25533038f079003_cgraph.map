@@ -1,0 +1,17 @@
+<map id="HandleSResultData" name="HandleSResultData">
+<area shape="rect" id="node1" title="Function handle incoming message with S values (displacement values before detrending)" alt="" coords="5,107,140,133"/>
+<area shape="rect" id="node2" href="$class_disp_task.html#a5d5c2ce1a8b4d44ffc2c8fda65923812" title="Detrend function to remove a linear trend from a calculated displacement data point" alt="" coords="188,5,331,32"/>
+<area shape="rect" id="node3" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="191,56,328,83"/>
+<area shape="rect" id="node4" href="$class_disp_task.html#a547fc0920e6e58ed598402441bae2b9b" title="Function to request writing of D result values into FRAM (displacement data after detrending,..." alt="" coords="201,107,318,133"/>
+<area shape="rect" id="node14" href="$class_disp_task.html#ade5e15e66069cbbeb962241113bd4b18" title="Function to request intermediate S result (displacement data before detrending) data from AdxlStore t..." alt="" coords="203,157,316,184"/>
+<area shape="rect" id="node15" href="$class_disp_task.html#af6034be5cb1b0e2d95983deb2e28c415" title="Function to request intermediate S result (displacement data before detrending) data from AdxlStore t..." alt="" coords="194,208,325,235"/>
+<area shape="rect" id="node5" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="379,157,493,184"/>
+<area shape="rect" id="node6" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="541,107,696,133"/>
+<area shape="rect" id="node8" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="567,157,670,184"/>
+<area shape="rect" id="node9" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="573,208,664,235"/>
+<area shape="rect" id="node7" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="748,107,879,133"/>
+<area shape="rect" id="node10" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="744,183,883,209"/>
+<area shape="rect" id="node11" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="769,233,858,260"/>
+<area shape="rect" id="node12" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="931,208,1051,235"/>
+<area shape="rect" id="node13" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="942,259,1039,285"/>
+</map>

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="i2cbus_8h" kind="file" language="C++">
+    <compoundname>i2cbus.h</compoundname>
+    <includes local="no">zephyr/drivers/sensor.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="i2cbus_8cpp" local="yes">bus/i2c/i2cbus.cpp</includedby>
+    <includedby refid="shtcx_8cpp" local="yes">drv/i2c/shtcx.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>bus/i2c/i2cbus.h</label>
+        <link refid="i2cbus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/drivers/sensor.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>bus/i2c/i2cbus.h</label>
+        <link refid="i2cbus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="2">
+        <label>bus/i2c/i2cbus.cpp</label>
+        <link refid="i2cbus_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_i2c_bus" prot="public">I2cBus</innerclass>
+    <briefdescription>
+<para>Header file of I<superscript>2</superscript>C bus driver class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="i2cbus_8h_1i2cbus"/> <simplesect kind="par"><title>Detailed Description </title><para>With I2C, you can connect multiple slaves to a single master and you can have multiple masters controlling single, or multiple slaves. I2C only uses two wires to transmit data between devices: <itemizedlist>
+<listitem>
+<para>SDA (Serial Data) – The line for the master and slave to send and receive data. </para>
+</listitem>
+<listitem>
+<para>SCL (Serial Clock) – The line that carries the clock signal.</para>
+</listitem>
+</itemizedlist>
+I2C is a serial communication protocol, so data is transferred bit by bit along a single wire (the SDA line). I2C is synchronous, so the output of bits is synchronized to the sampling of bits by a clock signal shared between the master and the slave. The clock signal is always controlled by the master. <linebreak/>
+<bold>Messages</bold> <linebreak/>
+Data is transferred in messages. Messages are broken up into frames of data. Each message has an address frame that contains the binary address of the slave, and one or more data frames that contain the data being transmitted. The message also includes start and stop conditions, read/write bits, and ACK/NACK bits between each data frame. <image type="html" name="I2Cmessage.png" inline="yes"></image>
+ <itemizedlist>
+<listitem>
+<para>Start Condition: The SDA line switches from a high voltage level to a low voltage level before the SCL line switches from high to low. </para>
+</listitem>
+<listitem>
+<para>Stop Condition: The SDA line switches from a low voltage level to a high voltage level after the SCL line switches from low to high. </para>
+</listitem>
+<listitem>
+<para>Address Frame: A 7 or 10 bit sequence unique to each slave that identifies the slave when the master wants to talk to it. </para>
+</listitem>
+<listitem>
+<para>Read/Write Bit: A single bit specifying whether the master is sending data to the slave (low voltage level) or requesting data from it (high voltage level). </para>
+</listitem>
+<listitem>
+<para>ACK/NACK Bit: Each frame in a message is followed by an acknowledge/no-acknowledge bit. If an address frame or data frame was successfully received, an ACK bit is returned to the sender from the receiving device.</para>
+</listitem>
+</itemizedlist>
+<linebreak/>
+<bold>Addressing</bold> <linebreak/>
+ The address frame is always the first frame after the start bit in a new message. The master sends the address of the slave it wants to communicate with to every slave connected to it. Each slave then compares the address sent from the master to its own address. If the address matches, it sends a low voltage ACK bit back to the master. If the address doesn’t match, the slave does nothing and the SDA line remains high. <linebreak/>
+ <bold>Read / Write Bit</bold> <linebreak/>
+The address frame includes a single bit at the end that informs the slave whether the master wants to write data to it or receive data from it. If the master wants to send data to the slave, the read/write bit is a low voltage level. If the master is requesting data from the slave, the bit is a high voltage level. <linebreak/>
+ <bold>The Data Frame</bold> <linebreak/>
+ After the master detects the ACK bit from the slave, the first data frame is ready to be sent. The data frame is always 8 bits long, and sent with the most significant bit first. Each data frame is immediately followed by an ACK/NACK bit to verify that the frame has been received successfully. The ACK bit must be received by either the master or the slave (depending on who is sending the data) before the next data frame can be sent. <linebreak/>
+ After all of the data frames have been sent, the master can send a stop condition to the slave to halt the transmission. The stop condition is a voltage transition from low to high on the SDA line after a low to high transition on the SCL line, with the SCL line remaining high. <linebreak/>
+<bold>Steps of I2C Data Transmission</bold> <linebreak/>
+ <orderedlist>
+<listitem>
+<para>The master sends the start condition to every connected slave by switching the SDA line from a high voltage level to a low voltage level before switching the SCL line from high to low </para>
+</listitem>
+<listitem>
+<para>The master sends each slave the 7 or 10 bit address of the slave it wants to communicate with, along with the read/write bit </para>
+</listitem>
+<listitem>
+<para>Each slave compares the address sent from the master to its own address. If the address matches, the slave returns an ACK bit by pulling the SDA line low for one bit. If the address from the master does not match the slave’s own address, the slave leaves the SDA line high </para>
+</listitem>
+<listitem>
+<para>The master sends or receives the data frame </para>
+</listitem>
+<listitem>
+<para>After each data frame has been transferred, the receiving device returns another ACK bit to the sender to acknowledge successful receipt of the frame </para>
+</listitem>
+<listitem>
+<para>To stop the data transmission, the master sends a stop condition to the slave by switching SCL high before switching SDA high</para>
+</listitem>
+</orderedlist>
+<image type="html" name="I2Cstartstop.png" inline="yes"></image>
+ <linebreak/>
+ <linebreak/>
+ <subscript>Source: <ulink url="https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol">https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol</ulink></subscript> <linebreak/>
+ <linebreak/>
+ Sensirion SHTC3 humidity and temperature sensor is connected via the I2C bus with the nRF9160.The implementation uses the <ulink url="https://docs.zephyrproject.org/latest/kernel/drivers/index.html">Zephyr Device Driver Model</ulink>.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_BUS_I2C_I2CBUS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_BUS_I2C_I2CBUS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_i2c_bus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_i2c_bus" kindref="compound">I2cBus</ref><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i2c_bus_1a765be8a42d077ae6e9fcf302df2b8018" kindref="member">~I2cBus</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_i2c_bus_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_i2c_bus" kindref="compound">I2cBus</ref>*<sp/><ref refid="class_i2c_bus_1afea1cf24ffb2af3df6cd42029053e852" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i2c_bus_1a5d33f3f4598e2c79e6d8d59f8f5083f5" kindref="member">I2cBus</ref>();</highlight></codeline>
+<codeline lineno="122" refid="class_i2c_bus_1ac28675e9f599e4310cf860d8cd396cea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_i2c_bus_1ac28675e9f599e4310cf860d8cd396cea" kindref="member">init_done</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="class_i2c_bus_1ae7065952827f83f9d9ce4a42e8dba281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_i2c_bus_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="class_i2c_bus_1a24071b2369ffb26926354dd64fe69fb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="class_i2c_bus_1a24071b2369ffb26926354dd64fe69fb1" kindref="member">i2c_cfg</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_BUS_I2C_I2CBUS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="bus/i2c/i2cbus.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="lte__monitor_8h" kind="file" language="C++">
+    <compoundname>lte_monitor.h</compoundname>
+    <includes local="no">modem/modem_info.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <includedby refid="lte__monitor_8cpp" local="yes">modem/lte_monitor.cpp</includedby>
+    <includedby refid="lte__connector_8cpp" local="yes">net/lte_connector.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>modem/lte_monitor.h</label>
+        <link refid="lte__monitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>modem/modem_info.h</label>
+      </node>
+      <node id="5">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>modem/lte_monitor.h</label>
+        <link refid="lte__monitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="4">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="5">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpsm__timer" prot="public">psm_timer</innerclass>
+    <innerclass refid="class_lte_monitor" prot="public">LteMonitor</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>cereg_status</name>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba9f7ef72c65684239432dae3599e916d7" prot="public">
+          <name>NO_NETWORK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Status = no network. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba8f280224da64e98f2d52d50ec43bc197" prot="public">
+          <name>HOME</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Status = home. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebaa0c0f46a51df7452ca25be1d4594e8ba" prot="public">
+          <name>SEARCHING</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Status = searching. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba08f1ea1cb5cac34a4f4237e5259fcabb" prot="public">
+          <name>DENIED</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Status = permission denied. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba6ce26a62afab55d7606ad4e92428b30c" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Status = unknown. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebab12d371de3b04f305919e344ee38805f" prot="public">
+          <name>ROAMING</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Status = roaming. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba0666e7ee289b420b8f016b5269fa8244" prot="public">
+          <name>EMERGENCY</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Status = emergency. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebafd58c2248853ee9eb048caa78fe122b9" prot="public">
+          <name>UICC_FAILURE</name>
+          <initializer>= 90</initializer>
+          <briefdescription>
+<para>Status = UICC failure. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration representing the poosible network registration status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="modem/lte_monitor.h" line="77" column="1" bodyfile="modem/lte_monitor.h" bodystart="77" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of LTE monitor class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="lte__monitor_8h_1lte_monitor"/> <simplesect kind="par"><title>Detailed Description </title><para>The LTE monitor class is responsible to retrieve specific data from the modem with AT commands and to receiving notifications from the modem via handler callback functions. The informations from the modem will than provided to data manger task, which them to the JSON metrics string. <linebreak/>
+The implementation uses the <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/libraries/modem/at_monitor.html">AT monitor library</ulink> from the nRF Connect SDK provided by Nordic Semiconductor. The AT monitor library is used to define AT monitors, which consist of a handler function that receives AT notifications from the <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrfxlib/nrf_modem/README.html#nrf-modem">Modem library</ulink>, based on a filter. The handler is executed from the system workqueue or from an ISR, depending on the type of monitor. <linebreak/>
+The application can define an AT monitors to receive notifications. An AT monitor has a name, a filter string, and a callback function. In addition, it can be paused or activated (using PAUSED and ACTIVE respectively). Multiple parts of the application can define their own AT monitor with the same filter as another AT monitor, and thus receive the same notifications, if desired. <linebreak/>
+The supported AT commands are described in the <ulink url="https://infocenter.nordicsemi.com/pdf/nrf91_at_commands_v1.0.pdf">Command Reference Guide</ulink> provided by Nordic Semiconductor. For retrieving specific modem informations, like temperature or battery voltage, the <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/libraries/modem/modem_info.html">modem information library</ulink> from the nRF Connect SDK provided by Nordic Semiconductor. It issues AT commands to retrieve the following data:<itemizedlist>
+<listitem><para>Signal strength indication (RSRP)</para>
+</listitem><listitem><para>Current and supported LTE bands</para>
+</listitem><listitem><para>Tracking area code, mobile country code, and mobile network code</para>
+</listitem><listitem><para>Current mode and operator</para>
+</listitem><listitem><para>The cell ID and IP address of the device</para>
+</listitem><listitem><para>UICC state, SIM ICCID and SIM IMSI</para>
+</listitem><listitem><para>The battery voltage and temperature level, measured by the modem</para>
+</listitem><listitem><para>The modem firmware version</para>
+</listitem><listitem><para>The modem serial number</para>
+</listitem><listitem><para>The LTE-M, NB-IoT, and GNSS support mode</para>
+</listitem><listitem><para>Mobile network time and date</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_MODEM_LTE_MONITOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_MODEM_LTE_MONITOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_MODEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;modem/modem_info.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/modem/src/stubs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeb" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeb" kindref="member">cereg_status</ref><sp/>{</highlight></codeline>
+<codeline lineno="78" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba9f7ef72c65684239432dae3599e916d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba9f7ef72c65684239432dae3599e916d7" kindref="member">NO_NETWORK</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba8f280224da64e98f2d52d50ec43bc197" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba8f280224da64e98f2d52d50ec43bc197" kindref="member">HOME</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebaa0c0f46a51df7452ca25be1d4594e8ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebaa0c0f46a51df7452ca25be1d4594e8ba" kindref="member">SEARCHING</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba08f1ea1cb5cac34a4f4237e5259fcabb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba08f1ea1cb5cac34a4f4237e5259fcabb" kindref="member">DENIED</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba6ce26a62afab55d7606ad4e92428b30c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba6ce26a62afab55d7606ad4e92428b30c" kindref="member">UNKNOWN</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebab12d371de3b04f305919e344ee38805f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebab12d371de3b04f305919e344ee38805f" kindref="member">ROAMING</ref><sp/>=<sp/>5,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba0666e7ee289b420b8f016b5269fa8244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeba0666e7ee289b420b8f016b5269fa8244" kindref="member">EMERGENCY</ref><sp/>=<sp/>8,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebafd58c2248853ee9eb048caa78fe122b9" kindref="member">UICC_FAILURE</ref><sp/>=<sp/>90<sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aebafd58c2248853ee9eb048caa78fe122b9" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structpsm__timer" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsm__timer" kindref="compound">psm_timer</ref><sp/>{</highlight></codeline>
+<codeline lineno="90" refid="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" kindref="member">tau</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" kindref="member">active_time</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_lte_monitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_lte_monitor" kindref="compound">LteMonitor</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120" refid="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06ca4e7bc8cbed1ac99fb5ae006919494e2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06ca4e7bc8cbed1ac99fb5ae006919494e2e" kindref="member">IMEI_LEN</ref><sp/>=<sp/>15<sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="121" refid="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9eac682517261a132723590fcd007a94816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9eac682517261a132723590fcd007a94816" kindref="member">IMSI_LEN</ref><sp/>=<sp/>15<sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>LteMonitor();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a2cd5e6e3906694db599fdb0e999be7a2" kindref="member">LteMonitor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124" refid="class_lte_monitor_1a2cd5e6e3906694db599fdb0e999be7a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_lte_monitor_1a2cd5e6e3906694db599fdb0e999be7a2" kindref="member">LteMonitor</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1aca4347efebad73ea26ab291180468f87" kindref="member">~LteMonitor</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" kindref="member">reportIMEI</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" kindref="member">reportIMSI</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a60fd65c00183271380a951ee700141da" kindref="member">reportBattVoltage</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a0ea3d7720052aaf3a4beec85f8a4e817" kindref="member">reportTemperature</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" kindref="member">reportLinkQuality</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a0400f54e33cecd307fb744d9a2892a26" kindref="member">reportFwVersion</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>actual<sp/>PSM<sp/>para<sp/>granted<sp/>by<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a019b275f1e08dd596c3e2621002eaee3" kindref="member">reportPsmAct</ref>(<ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref><sp/>toWhom<sp/>=<sp/><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" kindref="member">Mbox::eDataManager</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_lte_monitor_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="class_lte_monitor_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_lte_monitor_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a5acea4174e144830b82c203aa1b2520e" kindref="member">resume_all_notifications</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1aff7059b4906bb5b63f78242c88e97aa4" kindref="member">at_notif_handler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>notif);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a21ccfade383d732986c846a2bf017196" kindref="member">register_link_quality_notifications</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1ab00a3c465f5fbef791a7e11d321b92ae" kindref="member">resume_link_quality_notifications</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a1517efba6a658177615905efaeed0d21" kindref="member">at_ecsq_handler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>notif);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a8785c39f5f600d014c8253c8ef8b380f" kindref="member">register_network_notifications</ref>();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1ae2159a6ddb5b42946e17fd3d88b0e456" kindref="member">resume_network_notifications</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a729b6b8693d1fe82adb1955367911431" kindref="member">at_cereg_handler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>notif);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_lte_monitor_1ae23601eab621f370fa3133297c06672f" kindref="member">cereg_str_get</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="lte__monitor_8h_1af5ca5f82ce1487551a761208d00d4aeb" kindref="member">cereg_status</ref><sp/>status);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_lte_monitor_1a951801a126de704431d09c30cbf1bce4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" kindref="member">psm_read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">at_monitor_entry</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_lte_monitor_1a951801a126de704431d09c30cbf1bce4" kindref="member">catch_all</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">at_monitor_entry</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_lte_monitor_1a8857a4451e4bcf53175c836918ae26bc" kindref="member">link_quality</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">at_monitor_entry</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_lte_monitor_1aa1e5bc8ab252459de6e70e9a06c0da68" kindref="member">network</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a866ad538c57b1ee9ce3f29d0e2c6ade4" kindref="member">getBattVoltage</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a16ccc3d2766f7f89894fe1ab2db4ec8c" kindref="member">getTemperature</ref>();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_lte_monitor_1a8adcd0cc397ff8bc603e5e87577aa467" kindref="member">getFwVersion</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a32a7f9e108e4af1791d412c03fc5ce4f" kindref="member">getIMEI</ref>();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a6b80917e4072e07f6c6c258ccec6ad54" kindref="member">getIMSI</ref>();</highlight></codeline>
+<codeline lineno="170" refid="class_lte_monitor_1ac9b7d069db9698b12acb7c5688171cb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_lte_monitor_1ac9b7d069db9698b12acb7c5688171cb8" kindref="member">battVoltage</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="class_lte_monitor_1adefe78cee42d4007a3a5ee8a7f7e89ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="class_lte_monitor_1adefe78cee42d4007a3a5ee8a7f7e89ca" kindref="member">linkQuality</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="class_lte_monitor_1a015ae21dbf3e9d5aa583088391fd61ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_lte_monitor_1a015ae21dbf3e9d5aa583088391fd61ee" kindref="member">temperature</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="class_lte_monitor_1af0781047a5f63342f39127f3a440f802" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_lte_monitor_1af0781047a5f63342f39127f3a440f802" kindref="member">psm_enabled</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpsm__timer" kindref="compound">psm_timer</ref></highlight></codeline>
+<codeline lineno="176" refid="class_lte_monitor_1a9fb3d1b61b85343618ddec9cbeb7c570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_lte_monitor_1a9fb3d1b61b85343618ddec9cbeb7c570" kindref="member">psm_act</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="177" refid="class_lte_monitor_1a131207d1c824c9d22b52154e123462a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a131207d1c824c9d22b52154e123462a7" kindref="member">request_periodic_tau</ref>[8];<sp/><sp/></highlight></codeline>
+<codeline lineno="179" refid="class_lte_monitor_1adce38aeda515937ba1f81855bca1c2c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1adce38aeda515937ba1f81855bca1c2c5" kindref="member">request_active_time</ref>[8];<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180" refid="class_lte_monitor_1a327c47a51aaa1e7872be053ba8b8af49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a327c47a51aaa1e7872be053ba8b8af49" kindref="member">imei</ref>[<ref refid="class_lte_monitor_1adc29c2ff13d900c2f185ee95427fb06ca4e7bc8cbed1ac99fb5ae006919494e2e" kindref="member">IMEI_LEN</ref><sp/>+<sp/>1];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="class_lte_monitor_1a050f6bcec19508798b0d388075f8e883" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a050f6bcec19508798b0d388075f8e883" kindref="member">imsi</ref>[<ref refid="class_lte_monitor_1a61dadd085c1777f559549e05962b2c9eac682517261a132723590fcd007a94816" kindref="member">IMSI_LEN</ref><sp/>+<sp/>1];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182" refid="class_lte_monitor_1a840e44fb862ed33802cc78e7768e65a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_lte_monitor_1a840e44fb862ed33802cc78e7768e65a5" kindref="member">fw_version</ref>[MODEM_INFO_FWVER_SIZE];<sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_MODEM_LTE_MONITOR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="modem/lte_monitor.h"/>
+  </compounddef>
+</doxygen>

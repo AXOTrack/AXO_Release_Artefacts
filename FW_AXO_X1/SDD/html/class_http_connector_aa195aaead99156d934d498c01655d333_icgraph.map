@@ -1,0 +1,10 @@
+<map id="reqData" name="reqData">
+<area shape="rect" id="node1" title="Function to request raw data from AdxlStore task." alt="" coords="493,81,560,108"/>
+<area shape="rect" id="node2" href="$class_http_connector.html#ae411b87edda7448c8bf4d4e2d4cdd474" title="Function to request displacement data from AdxlStore task." alt="" coords="352,56,445,83"/>
+<area shape="rect" id="node6" href="$class_http_connector.html#a19cf3eae3207a4ee78a870f504edf3a4" title="Function to request raw data from AdxlStore task." alt="" coords="353,107,445,133"/>
+<area shape="rect" id="node3" href="$class_http_connector.html#a9670125458a21e0df605ff8ec0a72cc3" title="Function to handle received displacement data from AdxlStore task." alt="" coords="131,5,273,32"/>
+<area shape="rect" id="node5" href="$class_http_connector.html#a29908d64354956f5a5f4dbe67041e92c" title="Function to initiate the displacement data transmission to the host." alt="" coords="100,56,304,83"/>
+<area shape="rect" id="node4" href="$class_http_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="HTTP connector task function." alt="" coords="5,81,52,108"/>
+<area shape="rect" id="node7" href="$class_http_connector.html#a5b2ffff9e2ea4e58dc40300aab0ab775" title="Function to handle received raw data status from AdxlStore task." alt="" coords="126,107,278,133"/>
+<area shape="rect" id="node8" href="$class_http_connector.html#a70b7c8bda814beee628f8625439b59cf" title="Function to handle received raw data from AdxlStore task." alt="" coords="131,157,273,184"/>
+</map>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b50e5e8de61ce31b4985c113695ced3e" kind="dir">
+    <compoundname>bus/i2c</compoundname>
+    <innerfile refid="i2cbus_8cpp">i2cbus.cpp</innerfile>
+    <innerfile refid="i2cbus_8h">i2cbus.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="bus/i2c/"/>
+  </compounddef>
+</doxygen>

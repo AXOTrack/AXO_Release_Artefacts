@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_key_gen" kind="class" language="C++" prot="public">
+    <compoundname>KeyGen</compoundname>
+    <includes refid="keygen_8h" local="no">keygen.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_key_gen_1ad194270dfee83e3660c59945947f0764" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool keygen_done</definition>
+        <argsstring></argsstring>
+        <name>keygen_done</name>
+        <briefdescription>
+<para>Flag indicating that key generation has been done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="85" column="10" bodyfile="util/keygen.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="keygen_8cpp" startline="92" endline="173">init</referencedby>
+        <referencedby refid="class_key_gen_1a263dfd11badf0bd1e85853033a878ca1" compoundref="keygen_8cpp" startline="194" endline="198">KeyGen</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool transfer_done</definition>
+        <argsstring></argsstring>
+        <name>transfer_done</name>
+        <briefdescription>
+<para>Flag indicating that key transfer has been done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="86" column="10" bodyfile="util/keygen.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_key_gen_1a034b50f5527541d0a731c70ed03e7519" compoundref="keygen_8cpp" startline="217" endline="219">bIsKeyTransfered</referencedby>
+        <referencedby refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="keygen_8cpp" startline="92" endline="173">init</referencedby>
+        <referencedby refid="class_key_gen_1a263dfd11badf0bd1e85853033a878ca1" compoundref="keygen_8cpp" startline="194" endline="198">KeyGen</referencedby>
+        <referencedby refid="class_key_gen_1af604e6567f39709f20a2b949bf34b9fa" compoundref="keygen_8cpp" startline="226" endline="228">resetKeyTransfered</referencedby>
+        <referencedby refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" compoundref="keygen_8cpp" startline="237" endline="248">setKeyTransfered</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_key_gen_1aaec6852936a3f479264893b7f1170d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~KeyGen</definition>
+        <argsstring>()</argsstring>
+        <name>~KeyGen</name>
+        <briefdescription>
+<para>TLS key generation class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="68" column="5" bodyfile="util/keygen.cpp" bodystart="206" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function checks if both TLS key files still exist. If yes the member variable keygen_done will be set to true. Aftwards the function checks if the &quot;key tranferred&quot; file exist and in this case it set member variable transfer_done. If key generation is still done, indicated by flag keygen_done the function returns immediately. <linebreak/>
+If key generation is not done, the key generation will be initialized by call of the function mbedtls_ctr_drbg_init provided by mbedtls crypto library, which initializes the CTR_DRBG context and prepare it for seed generation. Afterwards the entropy controller device structure will be retrieved from device tree by calling macro DEVICE_DT_GET and the function checks if the device is ready for usage with call of function device_is_ready. If device is not ready a debug message at error level will be printed, otherwise seed will be generated by call of function mbedtls_ctr_drbg_seed, which also set up the CTR_DRBG entropy source for future reseeds. <linebreak/>
+With call of the functions mbedtls_pk_init and mbedtls_pk_setup provided by the mbedtls crypto library the mbedTLS structure of type mbedtls_pk_context will be initialized. Calling function mbedtls_ecp_gen_key generates the TLS keypair. Calling function mbedtls_pk_write_key_pem extract the private key into a string, which will than be stored into file system. Calling function mbedtls_pk_write_key_pem extract the public key into a string, which will than also be stored into file system. Finally the called functions mbedtls_pk_free and mbedtls_ctr_drbg_free release the components of the context variables. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="70" column="10" bodyfile="util/keygen.cpp" bodystart="92" bodyend="173"/>
+        <references refid="keygen_8cpp_1acea7dd5e84ea49f2b0289c0cb3454fe0" compoundref="keygen_8cpp" startline="53" endline="55">entropy_func2</references>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="keygen_8h_1ab6697b69019c0100c3a2ebf9c7f3e3d6" compoundref="keygen_8h" startline="47">KEY_TRANSFERED_FILENAME</references>
+        <references refid="class_key_gen_1ad194270dfee83e3660c59945947f0764" compoundref="keygen_8h" startline="85">keygen_done</references>
+        <references refid="keygen_8h_1a031777abf525fc89df9f249e0e604936" compoundref="keygen_8h" startline="42">PRIVATE_KEY_FILENAME</references>
+        <references refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" compoundref="keygen_8h" startline="44">PUBLIC_KEY_FILENAME</references>
+        <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a034b50f5527541d0a731c70ed03e7519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool bIsKeyTransfered</definition>
+        <argsstring>()</argsstring>
+        <name>bIsKeyTransfered</name>
+        <briefdescription>
+<para>Function to check if public key is still done. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Return true if key transfer is done, false otherwise</para>
+</simplesect>
+Function to check if the public key is still transfered to backend. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="73" column="10" bodyfile="util/keygen.cpp" bodystart="217" bodyend="219"/>
+        <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setKeyTransfered</definition>
+        <argsstring>()</argsstring>
+        <name>setKeyTransfered</name>
+        <briefdescription>
+<para>Function to mark that public key is still done. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function write the file KEY_TRANSFERED_FILENAME in file system as persistent indicator that the public key is still transfered to backend. Additionally the non persistent flag transfer_done is set to true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="74" column="10" bodyfile="util/keygen.cpp" bodystart="237" bodyend="248"/>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="keygen_8h_1ab6697b69019c0100c3a2ebf9c7f3e3d6" compoundref="keygen_8h" startline="47">KEY_TRANSFERED_FILENAME</references>
+        <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1af604e6567f39709f20a2b949bf34b9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resetKeyTransfered</definition>
+        <argsstring>()</argsstring>
+        <name>resetKeyTransfered</name>
+        <briefdescription>
+<para>Function to reset flag transfer_done. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Function set flag transfer_done to false </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="75" column="10" bodyfile="util/keygen.cpp" bodystart="226" bodyend="228"/>
+        <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t getPublicKey</definition>
+        <argsstring>(unsigned char *pBuf, size_t len)</argsstring>
+        <name>getPublicKey</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to retrieve the public key from file system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBuf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer for the public key </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired length of the pubilc key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return the real (read) len of the public key</para>
+</simplesect>
+The function read the public key from file PUBLIC_KEY_FILENAME in file system and store it in buffer pBuf. Length of the key will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="76" column="14" bodyfile="util/keygen.cpp" bodystart="261" bodyend="273"/>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" compoundref="flashfs_8cpp" startline="330" endline="335">FlashFS::file_read</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" compoundref="keygen_8h" startline="44">PUBLIC_KEY_FILENAME</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1ac3cd9437903afea95036a7720881218d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getPrivateKey</definition>
+        <argsstring>()</argsstring>
+        <name>getPrivateKey</name>
+        <briefdescription>
+<para>Function to retrieve the private key from file system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Return a std::string containing the private key</para>
+</simplesect>
+The function read the private key from file PRIVATE_KEY_FILENAME in file system and store it in a std::string, which finally will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="77" column="17" bodyfile="util/keygen.cpp" bodystart="283" bodyend="303"/>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" compoundref="flashfs_8cpp" startline="330" endline="335">FlashFS::file_read</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="keygen_8h_1a031777abf525fc89df9f249e0e604936" compoundref="keygen_8h" startline="42">PRIVATE_KEY_FILENAME</references>
+        <references refid="keygen_8cpp_1a50d6f01ddd6a618217321629f3f99b63">READ_BUF_LEN</references>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a290303ddeb22987037be90caca412f85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deleteKeyFiles</definition>
+        <argsstring>()</argsstring>
+        <name>deleteKeyFiles</name>
+        <briefdescription>
+<para>Function to delete all key related files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function checks if file PRIVATE_KEY_FILENAME exist and in this case the file will be deleted by call of function remove provided by class <ref refid="class_flash_f_s" kindref="compound">FlashFS</ref>. <linebreak/>
+The function checks if file PUBLIC_KEY_FILENAME exist and in this case the file will be deleted by call of function remove provided by class <ref refid="class_flash_f_s" kindref="compound">FlashFS</ref>. <linebreak/>
+The function checks if file KEY_TRANSFERED_FILENAME exist and in this case the file will be deleted by call of function remove provided by class <ref refid="class_flash_f_s" kindref="compound">FlashFS</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="79" column="10" bodyfile="util/keygen.cpp" bodystart="350" bodyend="370"/>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="keygen_8h_1ab6697b69019c0100c3a2ebf9c7f3e3d6" compoundref="keygen_8h" startline="47">KEY_TRANSFERED_FILENAME</references>
+        <references refid="keygen_8h_1a031777abf525fc89df9f249e0e604936" compoundref="keygen_8h" startline="42">PRIVATE_KEY_FILENAME</references>
+        <references refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" compoundref="keygen_8h" startline="44">PUBLIC_KEY_FILENAME</references>
+        <references refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" compoundref="flashfs_8cpp" startline="243" endline="248">FlashFS::remove</references>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a1b66535fadf3a11fef6115b676e27a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printKey</definition>
+        <argsstring>(std::string key)</argsstring>
+        <name>printKey</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Function to print a key to terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sts::string with the key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+In a loop over the length of the key each character will be printed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="81" column="10" bodyfile="util/keygen.cpp" bodystart="330" bodyend="338"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_key_gen" kindref="compound">KeyGen</ref> *</type>
+        <definition>KeyGen * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="71" column="19" bodyfile="util/keygen.cpp" bodystart="183" bodyend="187"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_key_gen_1a263dfd11badf0bd1e85853033a878ca1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KeyGen</definition>
+        <argsstring>()</argsstring>
+        <name>KeyGen</name>
+        <briefdescription>
+<para>TLS key generation class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="84" column="5" bodyfile="util/keygen.cpp" bodystart="194" bodyend="198"/>
+        <references refid="class_key_gen_1ad194270dfee83e3660c59945947f0764" compoundref="keygen_8h" startline="85">keygen_done</references>
+        <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
+      </memberdef>
+      <memberdef kind="function" id="class_key_gen_1a88e1fe20ccb7b6457e8166a0e18642b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printKey</definition>
+        <argsstring>(unsigned char *pBuf, size_t len)</argsstring>
+        <name>printKey</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>pBuf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to print a key to terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pBuf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer with the key </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the key</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+In a loop over the length of the key each character will be printed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/keygen.h" line="88" column="10" bodyfile="util/keygen.cpp" bodystart="313" bodyend="321"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TLS key generation class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para>The <ref refid="class_key_gen" kindref="compound">KeyGen</ref> class use the <ulink url="https://github.com/Mbed-TLS/mbedtls">mbedtls crypto library</ulink>. See details in <ulink url="https://mbed-tls.readthedocs.io/projects/api/en/development/">Mbed TLS API documentation</ulink> It provide a init method which generate the TLS key pair if not exisiting, <linebreak/>
+ a method to check if keys are generated, a method to check if public key is transfered to backend, methods to retrieve public and private key, methods to priont out a key, a method to set the indicator that public key is transfered and a methos to delete all key related files. This last function is only for development purposes. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>KeyGen</label>
+        <link refid="class_key_gen"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-keygen_done</edgelabel>
+          <edgelabel>-transfer_done</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="util/keygen.h" line="66" column="1" bodyfile="util/keygen.h" bodystart="66" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_key_gen_1a034b50f5527541d0a731c70ed03e7519" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>bIsKeyTransfered</name></member>
+      <member refid="class_key_gen_1a290303ddeb22987037be90caca412f85" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>deleteKeyFiles</name></member>
+      <member refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>getPrivateKey</name></member>
+      <member refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>getPublicKey</name></member>
+      <member refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>init</name></member>
+      <member refid="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>inst</name></member>
+      <member refid="class_key_gen_1a263dfd11badf0bd1e85853033a878ca1" prot="private" virt="non-virtual"><scope>KeyGen</scope><name>KeyGen</name></member>
+      <member refid="class_key_gen_1ad194270dfee83e3660c59945947f0764" prot="private" virt="non-virtual"><scope>KeyGen</scope><name>keygen_done</name></member>
+      <member refid="class_key_gen_1a1b66535fadf3a11fef6115b676e27a78" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>printKey</name></member>
+      <member refid="class_key_gen_1a88e1fe20ccb7b6457e8166a0e18642b3" prot="private" virt="non-virtual"><scope>KeyGen</scope><name>printKey</name></member>
+      <member refid="class_key_gen_1af604e6567f39709f20a2b949bf34b9fa" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>resetKeyTransfered</name></member>
+      <member refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>setKeyTransfered</name></member>
+      <member refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" prot="private" virt="non-virtual"><scope>KeyGen</scope><name>transfer_done</name></member>
+      <member refid="class_key_gen_1aaec6852936a3f479264893b7f1170d4d" prot="public" virt="non-virtual"><scope>KeyGen</scope><name>~KeyGen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

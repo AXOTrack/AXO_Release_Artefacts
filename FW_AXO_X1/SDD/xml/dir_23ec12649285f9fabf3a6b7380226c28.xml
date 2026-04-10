@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_23ec12649285f9fabf3a6b7380226c28" kind="dir">
+    <compoundname>util</compoundname>
+    <innerfile refid="certmgr_8cpp">certmgr.cpp</innerfile>
+    <innerfile refid="certmgr_8h">certmgr.h</innerfile>
+    <innerfile refid="ecdsasign_8cpp">ecdsasign.cpp</innerfile>
+    <innerfile refid="ecdsasign_8h">ecdsasign.h</innerfile>
+    <innerfile refid="hash_8cpp">hash.cpp</innerfile>
+    <innerfile refid="hash_8h">hash.h</innerfile>
+    <innerfile refid="keygen_8cpp">keygen.cpp</innerfile>
+    <innerfile refid="keygen_8h">keygen.h</innerfile>
+    <innerfile refid="popcount_8cpp">popcount.cpp</innerfile>
+    <innerfile refid="popcount_8h">popcount.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="util/"/>
+  </compounddef>
+</doxygen>

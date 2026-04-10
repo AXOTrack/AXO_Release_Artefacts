@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classspibus" kind="class" language="C++" prot="public">
+    <compoundname>spibus</compoundname>
+    <includes refid="spibus_8h" local="no">spibus.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classspibus_1a0861409233820f636c44759f690cae93" prot="public" static="no" mutable="no">
+        <type>const struct device *</type>
+        <definition>const struct device* spi_dev</definition>
+        <argsstring></argsstring>
+        <name>spi_dev</name>
+        <briefdescription>
+<para>SPI controller device structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="92" column="24" bodyfile="bus/spi/spibus.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" compoundref="spibus_8h" startline="89" endline="89">getController</referencedby>
+        <referencedby refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspibus_1a401e92d4e6afa09344209ed0b2f05a57" prot="public" static="no" mutable="no">
+        <type>struct spi_config</type>
+        <definition>struct spi_config spi_cfg</definition>
+        <argsstring></argsstring>
+        <name>spi_cfg</name>
+        <briefdescription>
+<para>SPI controller configuration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="92" column="24" bodyfile="bus/spi/spibus.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" compoundref="spibus_8h" startline="90" endline="90">getConfig</referencedby>
+        <referencedby refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspibus_1afad61703dae34fa9946e730854d5d8d8" prot="public" static="no" mutable="no">
+        <type>struct spi_cs_control</type>
+        <definition>struct spi_cs_control cs_ctrl</definition>
+        <argsstring></argsstring>
+        <name>cs_ctrl</name>
+        <briefdescription>
+<para>SPI Chip Select control. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="92" column="24" bodyfile="bus/spi/spibus.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classspibus_1ac28675e9f599e4310cf860d8cd396cea" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool init_done</definition>
+        <argsstring></argsstring>
+        <name>init_done</name>
+        <briefdescription>
+<para>Flag indicating that the initalization has been done. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="98" column="10" bodyfile="bus/spi/spibus.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classspibus_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool device_good</definition>
+        <argsstring></argsstring>
+        <name>device_good</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating that hardware initalization was successful </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="99" column="10" bodyfile="bus/spi/spibus.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classspibus_1a19985700cffec9c3a4d3d7283fb2d87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~spibus</definition>
+        <argsstring>()</argsstring>
+        <name>~spibus</name>
+        <briefdescription>
+<para>SPI bus class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="85" column="5" bodyfile="bus/spi/spibus.cpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>The init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>In case initialization still has been performed, indicated by flag init_done the function returns immediately, otherwise chip select gpios will be assigned by call of macro GPIO_DT_SPEC_GET and delay set to 0. The SPI controller device structure will be retrieved by calling macro DEVICE_DT_GET and function checks if the device is ready for usage with call of function device_is_ready. The return value of this function will be assigned to flag device_good. In case of an error a debug message at error level will be printed. Finally operation mode is set to loop mode, clock frequency is set to 8 MHz and chip select configuration is assigned before init_done flag is set to true. <simplesect kind="note"><para>Adjustment of clock frequency for FRAM SPI is done here with line spi_cfg.frequency = 8000000U; The value must be unsigned integer in Hz. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="88" column="10" bodyfile="bus/spi/spibus.cpp" bodystart="52" bodyend="75"/>
+        <references refid="classspibus_1afad61703dae34fa9946e730854d5d8d8" compoundref="spibus_8h" startline="94">cs_ctrl</references>
+        <references refid="classspibus_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="spibus_8h" startline="99">device_good</references>
+        <references refid="classspibus_1ac28675e9f599e4310cf860d8cd396cea" compoundref="spibus_8h" startline="98">init_done</references>
+        <references refid="classspibus_1a401e92d4e6afa09344209ed0b2f05a57" compoundref="spibus_8h" startline="93">spi_cfg</references>
+        <references refid="classspibus_1a0861409233820f636c44759f690cae93" compoundref="spibus_8h" startline="92">spi_dev</references>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">spifram::init</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">spimram::init</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const struct device *</type>
+        <definition>const struct device* getController</definition>
+        <argsstring>()</argsstring>
+        <name>getController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="89" column="24" bodyfile="bus/spi/spibus.h" bodystart="89" bodyend="89"/>
+        <references refid="classspibus_1a0861409233820f636c44759f690cae93" compoundref="spibus_8h" startline="92">spi_dev</references>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">spifram::init</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">spimram::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>struct spi_config *</type>
+        <definition>struct spi_config* getConfig</definition>
+        <argsstring>()</argsstring>
+        <name>getConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="90" column="22" bodyfile="bus/spi/spibus.h" bodystart="90" bodyend="90"/>
+        <references refid="classspibus_1a401e92d4e6afa09344209ed0b2f05a57" compoundref="spibus_8h" startline="93">spi_cfg</references>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">spifram::init</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">spimram::init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classspibus_1a5f30bf965b5abb588c055623a3373ce9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classspibus" kindref="compound">spibus</ref> *</type>
+        <definition>spibus * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="87" column="19" bodyfile="bus/spi/spibus.cpp" bodystart="85" bodyend="89"/>
+        <referencedby refid="classspifram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="fram_8cpp" startline="82" endline="94">spifram::init</referencedby>
+        <referencedby refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="mram_8cpp" startline="504" endline="558">spimram::init</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classspibus_1a63713c6cc302c1bb9c68da575139bf83" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spibus</definition>
+        <argsstring>()</argsstring>
+        <name>spibus</name>
+        <briefdescription>
+<para>SPI bus class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus/spi/spibus.h" line="97" column="5" bodyfile="bus/spi/spibus.cpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SPI bus driver class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The SPI bus class handles the initialization of the attached SPI slave and the communication over the SPI bus. Major part of configuration and initialization is located in the device tree, other parts are located in the init function of this class. storage of the acceleration raw See details in <ulink url="https://docs.zephyrproject.org/latest/kernel/drivers/index.html">Device Driver Model documentation</ulink> and in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__spi__interface.html">API documentation</ulink> <linebreak/>
+ The spibus class provides the init method. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>struct spi_cs_control</label>
+      </node>
+      <node id="1">
+        <label>spibus</label>
+        <link refid="classspibus"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+cs_ctrl</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-device_good</edgelabel>
+          <edgelabel>-init_done</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+spi_cfg</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+spi_dev</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>struct spi_config</label>
+      </node>
+      <node id="3">
+        <label>bool</label>
+      </node>
+      <node id="5">
+        <label>const struct device *</label>
+      </node>
+    </collaborationgraph>
+    <location file="bus/spi/spibus.h" line="83" column="1" bodyfile="bus/spi/spibus.h" bodystart="83" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classspibus_1afad61703dae34fa9946e730854d5d8d8" prot="public" virt="non-virtual"><scope>spibus</scope><name>cs_ctrl</name></member>
+      <member refid="classspibus_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" virt="non-virtual"><scope>spibus</scope><name>device_good</name></member>
+      <member refid="classspibus_1a5a7bcb0808c68a96569d8d1e891f047b" prot="public" virt="non-virtual"><scope>spibus</scope><name>getConfig</name></member>
+      <member refid="classspibus_1ac03072d1a0866e9a0eb353f3e080530e" prot="public" virt="non-virtual"><scope>spibus</scope><name>getController</name></member>
+      <member refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" prot="public" virt="non-virtual"><scope>spibus</scope><name>init</name></member>
+      <member refid="classspibus_1ac28675e9f599e4310cf860d8cd396cea" prot="private" virt="non-virtual"><scope>spibus</scope><name>init_done</name></member>
+      <member refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" prot="public" virt="non-virtual"><scope>spibus</scope><name>inst</name></member>
+      <member refid="classspibus_1a401e92d4e6afa09344209ed0b2f05a57" prot="public" virt="non-virtual"><scope>spibus</scope><name>spi_cfg</name></member>
+      <member refid="classspibus_1a0861409233820f636c44759f690cae93" prot="public" virt="non-virtual"><scope>spibus</scope><name>spi_dev</name></member>
+      <member refid="classspibus_1a63713c6cc302c1bb9c68da575139bf83" prot="private" virt="non-virtual"><scope>spibus</scope><name>spibus</name></member>
+      <member refid="classspibus_1a19985700cffec9c3a4d3d7283fb2d87a" prot="public" virt="non-virtual"><scope>spibus</scope><name>~spibus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

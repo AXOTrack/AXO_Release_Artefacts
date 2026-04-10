@@ -1,0 +1,11 @@
+<map id="power_on" name="power_on">
+<area shape="rect" id="node1" title="Function to switch on MRAM." alt="" coords="265,157,343,184"/>
+<area shape="rect" id="node2" href="$classspimram.html#af6a647eebae4154398a76d42e427c4ab" title="Function to retrieve MRAM configuration register 1 content." alt="" coords="92,5,217,32"/>
+<area shape="rect" id="node4" href="$classspimram.html#a63a57b6838d0be4a55b8b633dd2aa1ec" title="Function to retrieve MRAM device ID." alt="" coords="111,56,199,83"/>
+<area shape="rect" id="node5" href="$classspimram.html#a4ffb6fd03608ef93f4be2c768e591efb" title="Function to retrieve MRAM status register content." alt="" coords="95,107,215,133"/>
+<area shape="rect" id="node6" href="$classspimram.html#a8966ac02bccc26d8c63b6257c28c6b3a" title="Function to enter deep power down mode of MRAM." alt="" coords="128,157,181,184"/>
+<area shape="rect" id="node7" href="$classspimram.html#a2cadaffd8a4f13814213a48e5b20cc4d" title="Function to leave deep power down mode of MRAM." alt="" coords="121,208,188,235"/>
+<area shape="rect" id="node8" href="$classspimram.html#a366ab51ac1f5201dda5779fe12b2a52b" title="Function to write MRAM configuration register 1." alt="" coords="93,259,216,285"/>
+<area shape="rect" id="node9" href="$classspimram.html#a4b5e60928853a99f55e507c03d082960" title="Function to write MRAM status register." alt="" coords="96,309,213,336"/>
+<area shape="rect" id="node3" href="$classspimram.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The initialization function of the SPI MRAM class." alt="" coords="5,157,44,184"/>
+</map>

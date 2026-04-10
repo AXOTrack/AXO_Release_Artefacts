@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_adxl__xyz__max__data" kind="struct" language="C++" prot="public">
+    <compoundname>Adxl_xyz_max_data</compoundname>
+    <includes refid="adxl__store_8h" local="no">adxl_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_adxl__xyz__max__data_1ad0da36b2558901e21e7a30f6c227a45e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>maximum in vertical direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="98" column="11" bodyfile="data/adxl_store.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">MeasurementBuilder::addMaxXYZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adxl__xyz__max__data_1aa4f0d3eebc3c443f9be81bf48561a217" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>maximum in transversal direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="99" column="11" bodyfile="data/adxl_store.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">MeasurementBuilder::addMaxXYZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adxl__xyz__max__data_1af73583b1e980b0aa03f9884812e9fd4d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>maximum in longitudinal direction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="100" column="11" bodyfile="data/adxl_store.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">MeasurementBuilder::addMaxXYZ</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure to store x, y and z maximal values per train passing. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Adxl_xyz_max_data</label>
+        <link refid="struct_adxl__xyz__max__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+x</edgelabel>
+          <edgelabel>+y</edgelabel>
+          <edgelabel>+z</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/adxl_store.h" line="97" column="1" bodyfile="data/adxl_store.h" bodystart="97" bodyend="101"/>
+    <listofallmembers>
+      <member refid="struct_adxl__xyz__max__data_1ad0da36b2558901e21e7a30f6c227a45e" prot="public" virt="non-virtual"><scope>Adxl_xyz_max_data</scope><name>x</name></member>
+      <member refid="struct_adxl__xyz__max__data_1aa4f0d3eebc3c443f9be81bf48561a217" prot="public" virt="non-virtual"><scope>Adxl_xyz_max_data</scope><name>y</name></member>
+      <member refid="struct_adxl__xyz__max__data_1af73583b1e980b0aa03f9884812e9fd4d" prot="public" virt="non-virtual"><scope>Adxl_xyz_max_data</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

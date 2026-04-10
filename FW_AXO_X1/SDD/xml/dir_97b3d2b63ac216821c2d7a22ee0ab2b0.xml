@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_97b3d2b63ac216821c2d7a22ee0ab2b0" kind="dir">
+    <compoundname>fs</compoundname>
+    <innerfile refid="flashfs_8cpp">flashfs.cpp</innerfile>
+    <innerfile refid="flashfs_8h">flashfs.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="fs/"/>
+  </compounddef>
+</doxygen>

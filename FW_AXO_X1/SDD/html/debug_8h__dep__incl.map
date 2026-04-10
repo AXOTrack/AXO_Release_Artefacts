@@ -1,0 +1,54 @@
+<map id="debug.h" name="debug.h">
+<area shape="rect" id="node1" title="Header file of debug configuration for files in common folder." alt="" coords="3522,5,3590,32"/>
+<area shape="rect" id="node2" href="$i2cbus_8cpp.html" title="Implementation of I2C bus driver class." alt="" coords="5,80,136,107"/>
+<area shape="rect" id="node3" href="$spibus_8cpp.html" title="Implementation of SPI bus driver class." alt="" coords="160,80,291,107"/>
+<area shape="rect" id="node4" href="$config_8cpp.html" title="Implementation of Config class." alt="" coords="315,80,424,107"/>
+<area shape="rect" id="node5" href="$adxl__store_8cpp.html" title="Implementation of AdxlDataStore class." alt="" coords="448,80,584,107"/>
+<area shape="rect" id="node6" href="$hit__detect_8cpp.html" title="Implementation of HitDetector class." alt="" coords="608,80,741,107"/>
+<area shape="rect" id="node7" href="$hw__metrics_8cpp.html" title="Implementation of HwMetrics class." alt="" coords="766,80,909,107"/>
+<area shape="rect" id="node8" href="$measurement_8cpp.html" title="Implementation of measurement builder helper class." alt="" coords="933,80,1088,107"/>
+<area shape="rect" id="node9" href="$metric_8cpp.html" title="Implementation of metrics builder helper class." alt="" coords="1112,80,1224,107"/>
+<area shape="rect" id="node10" href="$pdata_8cpp.html" title="Implementation of data manager class." alt="" coords="1207,155,1315,181"/>
+<area shape="rect" id="node11" href="$rms_8cpp.html" title="Implementation of RMS task." alt="" coords="1736,80,1835,107"/>
+<area shape="rect" id="node12" href="$rms__store_8cpp.html" title="Implementation of RMS storage class." alt="" coords="1859,80,1994,107"/>
+<area shape="rect" id="node13" href="$disptask_8cpp.html" title="Implementation of DispTask class." alt="" coords="2018,80,2142,107"/>
+<area shape="rect" id="node14" href="$filter_8cpp.html" title="Implementation of digital filter class." alt="" coords="2167,80,2265,107"/>
+<area shape="rect" id="node15" href="$matrix_8cpp.html" title="Implementation of matrix helper class." alt="" coords="2290,80,2401,107"/>
+<area shape="rect" id="node16" href="$adconverter_8cpp.html" title="Implementation of AD converter driver class." alt="" coords="2425,80,2583,107"/>
+<area shape="rect" id="node17" href="$batt__mgr_8cpp.html" title="Implementation of battery manager class." alt="" coords="2607,80,2750,107"/>
+<area shape="rect" id="node18" href="$mux__controller_8cpp.html" title="Implementation of MUX controller driver class." alt="" coords="2774,80,2951,107"/>
+<area shape="rect" id="node19" href="$shtcx_8cpp.html" title="Implementation of Shtcx sensor driver class." alt="" coords="2976,80,3096,107"/>
+<area shape="rect" id="node20" href="$boost_8cpp.html" title="Implementation of BoostConverter class." alt="" coords="3121,80,3242,107"/>
+<area shape="rect" id="node21" href="$pwm_8cpp.html" title="Implementation of PWM class." alt="" coords="3267,80,3392,107"/>
+<area shape="rect" id="node22" href="$adxl37x_8cpp.html" title="Implementation of Adxl37x class." alt="" coords="3416,80,3549,107"/>
+<area shape="rect" id="node23" href="$fram_8cpp.html" title="Implementation of spifram class." alt="" coords="3574,80,3687,107"/>
+<area shape="rect" id="node24" href="$mram_8cpp.html" title="Implementation of spimram class." alt="" coords="3711,80,3833,107"/>
+<area shape="rect" id="node25" href="$flashfs_8cpp.html" title="Implementation of flash file system controller module." alt="" coords="3857,80,3956,107"/>
+<area shape="rect" id="node26" href="$lte__monitor_8cpp.html" title="Implementation of LTE monitor class." alt="" coords="3981,80,4139,107"/>
+<area shape="rect" id="node27" href="$http__connector_8cpp.html" title="Implementation of HTTP connector class." alt="" coords="1621,155,1776,181"/>
+<area shape="rect" id="node28" href="$http__connector_8h.html" title="Header file of HTTP connector class." alt="" coords="1520,80,1661,107"/>
+<area shape="rect" id="node30" href="$lte__connector_8cpp.html" title="Implementation of LTE modem connector class." alt="" coords="4164,80,4311,107"/>
+<area shape="rect" id="node31" href="$mqtt__connector_8cpp.html" title="Implementation of MQTT connector class." alt="" coords="1339,155,1498,181"/>
+<area shape="rect" id="node32" href="$mqtt__connector_8h.html" title="Header file of MQTT connector class." alt="" coords="1350,80,1495,107"/>
+<area shape="rect" id="node33" href="$boot__cnt_8cpp.html" title="Implementation of boot count class." alt="" coords="4335,80,4454,107"/>
+<area shape="rect" id="node34" href="$power__mgr_8cpp.html" title="Implementation of power manager base class." alt="" coords="4478,80,4610,107"/>
+<area shape="rect" id="node35" href="$power__mgr__x1_8cpp.html" title="Implementation of power manager X1 class." alt="" coords="4634,80,4787,107"/>
+<area shape="rect" id="node36" href="$reset__ctrl_8cpp.html" title="Implementation of reset control task." alt="" coords="4812,80,4935,107"/>
+<area shape="rect" id="node37" href="$reset__reason_8cpp.html" title="Implementation of reset reason class." alt="" coords="4959,80,5103,107"/>
+<area shape="rect" id="node38" href="$mbox_8cpp.html" title="Implementation of RTOS wrapper class MBox for mailbox support." alt="" coords="5127,80,5233,107"/>
+<area shape="rect" id="node39" href="$mpelem_8cpp.html" title="Implementation of PoolElem class for message support." alt="" coords="5257,80,5375,107"/>
+<area shape="rect" id="node40" href="$mpool_8cpp.html" title="Implementation of of MsgPool class for message allocation support." alt="" coords="5399,80,5507,107"/>
+<area shape="rect" id="node41" href="$mutex_8cpp.html" title="Implementation of RTOS wrapper class Mutex for mutex support." alt="" coords="5532,80,5641,107"/>
+<area shape="rect" id="node42" href="$sema_8cpp.html" title="Implementation of RTOS wrapper class sema for semaphore support." alt="" coords="5666,80,5771,107"/>
+<area shape="rect" id="node43" href="$task_8cpp.html" title="Implementation of RTOS wrapper class Task for multithreading support." alt="" coords="5796,80,5895,107"/>
+<area shape="rect" id="node44" href="$timer_8cpp.html" title="Implementation of RTOS wrapper class Timer for software timer support." alt="" coords="5919,80,6022,107"/>
+<area shape="rect" id="node45" href="$leds_8cpp.html" title="Implementation of user interface class leds." alt="" coords="6047,80,6132,107"/>
+<area shape="rect" id="node46" href="$fsm_8cpp.html" title="Implementation of Finite State Machine (FSM) for firmware updates." alt="" coords="6157,80,6267,107"/>
+<area shape="rect" id="node47" href="$fwinfo_8cpp.html" title="Implementation of firmware info class." alt="" coords="6292,80,6415,107"/>
+<area shape="rect" id="node48" href="$update_8cpp.html" title="Implementation of the firmware update task." alt="" coords="6439,80,6569,107"/>
+<area shape="rect" id="node49" href="$update__ctrl_8cpp.html" title="Implementation of update controller module." alt="" coords="6593,80,6748,107"/>
+<area shape="rect" id="node50" href="$ecdsasign_8cpp.html" title="Implementation of ECDSA signing class." alt="" coords="6773,80,6899,107"/>
+<area shape="rect" id="node51" href="$hash_8cpp.html" title="Implementation of SHA1 hash checksum calculation." alt="" coords="6924,80,7020,107"/>
+<area shape="rect" id="node52" href="$keygen_8cpp.html" title="Implementation of TLS key generation class." alt="" coords="7045,80,7155,107"/>
+<area shape="rect" id="node29" href="$main_8cpp.html" title="Implementation of AXO Track main function." alt="" coords="1523,155,1597,181"/>
+</map>

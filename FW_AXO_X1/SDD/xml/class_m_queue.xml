@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_m_queue" kind="class" language="C++" prot="public">
+    <compoundname>MQueue</compoundname>
+    <includes refid="mqueue_8h" local="no">mqueue.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" prot="private" static="no" mutable="no">
+        <type>struct k_msgq</type>
+        <definition>struct k_msgq my_msgq</definition>
+        <argsstring></argsstring>
+        <name>my_msgq</name>
+        <briefdescription>
+<para>Message queue administration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="160" column="10" bodyfile="rtos/mqueue.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="class_m_queue_1a0f0046a53033c889afaa2e477f75d519" compoundref="mqueue_8h" startline="135" endline="135">avail</referencedby>
+        <referencedby refid="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" compoundref="mqueue_8h" startline="124" endline="124">count</referencedby>
+        <referencedby refid="class_m_queue_1ac051b2568208e363ae2dffb23c0ad9ba" compoundref="mqueue_8h" startline="107" endline="114">get</referencedby>
+        <referencedby refid="class_m_queue_1adb43e5a3b88f45cafe40f4fb45101e71" compoundref="mqueue_8h" startline="62" endline="68">MQueue</referencedby>
+        <referencedby refid="class_m_queue_1a2d87d3e33e499697cece071cb83250d6" compoundref="mqueue_8h" startline="153" endline="153">msg_size</referencedby>
+        <referencedby refid="class_m_queue_1a28a1c1e86bbe9d32c6a239e657cedc2e" compoundref="mqueue_8h" startline="84" endline="95">put</referencedby>
+        <referencedby refid="class_m_queue_1ad99ea5881a3c8a380f6835cf10fa151d" compoundref="mqueue_8h" startline="144" endline="144">size</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_queue_1adb43e5a3b88f45cafe40f4fb45101e71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MQueue</definition>
+        <argsstring>()</argsstring>
+        <name>MQueue</name>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor initializes the message queue by calling RTOS function k_msgq_init. This function initializes the message queue object, prior to its first use. It returns the message queue administration structure my_msgq. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="62" column="5" bodyfile="rtos/mqueue.h" bodystart="62" bodyend="68"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1a28a1c1e86bbe9d32c6a239e657cedc2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t put</definition>
+        <argsstring>(T *data)</argsstring>
+        <name>put</name>
+        <param>
+          <type>T *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> put function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>0 Message sent. </para>
+</simplesect>
+<simplesect kind="return"><para>ENOMSG Returned without waiting or queue purged. </para>
+</simplesect>
+<simplesect kind="return"><para>EAGAIN Waiting period timed out.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to message object. Type needs to be concretized by calling task</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function sends a message to message queue by calling function k_msgq_put provided by the operating system. Sending means putting the message object at the end position of the queue (FIFO). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="84" column="13" bodyfile="rtos/mqueue.h" bodystart="84" bodyend="95"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+        <referencedby refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1ac051b2568208e363ae2dffb23c0ad9ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> get function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>data Pointer to message object. Type needs to be concretized by calling task</para>
+</simplesect>
+This function receives a message from the message queue by calling function k_msgq_get provided by the operating system. Receiving means getting the message object from the start position of the queue (FIFO). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="107" column="7" bodyfile="rtos/mqueue.h" bodystart="107" bodyend="114"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+        <referencedby refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t count</definition>
+        <argsstring>()</argsstring>
+        <name>count</name>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> count function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Number of used objects in the queue</para>
+</simplesect>
+This function returns the number of used objects the message queue by calling function k_msgq_num_used_get provided by the operating system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="124" column="14" bodyfile="rtos/mqueue.h" bodystart="124" bodyend="124"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+        <referencedby refid="class_mbox_1a81dbffbc68e17ae5bfc34d4d1f451f17" compoundref="mbox_8h" startline="102" endline="102">Mbox::count</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1a0f0046a53033c889afaa2e477f75d519" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t avail</definition>
+        <argsstring>()</argsstring>
+        <name>avail</name>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> available function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Number of available objects in the queue</para>
+</simplesect>
+This function returns the number of available objects the message queue by calling function k_msgq_num_free_get provided by the operating system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="135" column="14" bodyfile="rtos/mqueue.h" bodystart="135" bodyend="135"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1ad99ea5881a3c8a380f6835cf10fa151d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> size function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Total number of objects in the queue</para>
+</simplesect>
+This function returns the total number of objects of the message queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="144" column="14" bodyfile="rtos/mqueue.h" bodystart="144" bodyend="144"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1a2d87d3e33e499697cece071cb83250d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t msg_size</definition>
+        <argsstring>()</argsstring>
+        <name>msg_size</name>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> message size function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Size of the objects of the queue</para>
+</simplesect>
+This function returns the size of objects of the message queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="153" column="14" bodyfile="rtos/mqueue.h" bodystart="153" bodyend="153"/>
+        <references refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" compoundref="mqueue_8h" startline="170">my_msgq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_m_queue_1ac83a0ed4be890f2a31e4dd6aab2216a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void stats</definition>
+        <argsstring>(void)</argsstring>
+        <name>stats</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_m_queue" kindref="compound">MQueue</ref> status function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function print out statistics about the message queue. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="160" column="10" bodyfile="rtos/mqueue.h" bodystart="160" bodyend="167"/>
+        <referencedby refid="class_mbox_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mbox_8h" startline="103" endline="103">Mbox::stats</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_m_queue_1ab75b8ff2e6ae4599fed75d87fbe76b1e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char __aligned</definition>
+        <argsstring>(4) my_msgq_buffer[sizeof(T) *num_slots]</argsstring>
+        <name>__aligned</name>
+        <param>
+          <type>4</type>
+        </param>
+        <briefdescription>
+<para>Reserved memory to store the objects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mqueue.h" line="171" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="1">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mqueue.h" line="52" column="1" bodyfile="rtos/mqueue.h" bodystart="52" bodyend="174"/>
+    <listofallmembers>
+      <member refid="class_m_queue_1ab75b8ff2e6ae4599fed75d87fbe76b1e" prot="private" virt="non-virtual"><scope>MQueue</scope><name>__aligned</name></member>
+      <member refid="class_m_queue_1a0f0046a53033c889afaa2e477f75d519" prot="public" virt="non-virtual"><scope>MQueue</scope><name>avail</name></member>
+      <member refid="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" prot="public" virt="non-virtual"><scope>MQueue</scope><name>count</name></member>
+      <member refid="class_m_queue_1ac051b2568208e363ae2dffb23c0ad9ba" prot="public" virt="non-virtual"><scope>MQueue</scope><name>get</name></member>
+      <member refid="class_m_queue_1adb43e5a3b88f45cafe40f4fb45101e71" prot="public" virt="non-virtual"><scope>MQueue</scope><name>MQueue</name></member>
+      <member refid="class_m_queue_1a2d87d3e33e499697cece071cb83250d6" prot="public" virt="non-virtual"><scope>MQueue</scope><name>msg_size</name></member>
+      <member refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" prot="private" virt="non-virtual"><scope>MQueue</scope><name>my_msgq</name></member>
+      <member refid="class_m_queue_1a28a1c1e86bbe9d32c6a239e657cedc2e" prot="public" virt="non-virtual"><scope>MQueue</scope><name>put</name></member>
+      <member refid="class_m_queue_1ad99ea5881a3c8a380f6835cf10fa151d" prot="public" virt="non-virtual"><scope>MQueue</scope><name>size</name></member>
+      <member refid="class_m_queue_1ac83a0ed4be890f2a31e4dd6aab2216a1" prot="public" virt="non-virtual"><scope>MQueue</scope><name>stats</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

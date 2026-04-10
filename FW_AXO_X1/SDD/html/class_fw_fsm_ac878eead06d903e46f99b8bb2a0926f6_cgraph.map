@@ -1,0 +1,13 @@
+<map id="setState" name="setState">
+<area shape="rect" id="node1" title="Function to perform state transition to old state to new state." alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$class_fw_fsm.html#a70b9199eead78c93ba62a89cd54dfe96" title="Send firmware update active message to Adxl37x task." alt="" coords="124,56,281,83"/>
+<area shape="rect" id="node3" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="329,56,444,83"/>
+<area shape="rect" id="node4" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="492,5,647,32"/>
+<area shape="rect" id="node6" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="518,56,621,83"/>
+<area shape="rect" id="node7" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="524,107,615,133"/>
+<area shape="rect" id="node5" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="699,5,829,32"/>
+<area shape="rect" id="node8" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="695,81,833,108"/>
+<area shape="rect" id="node9" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="719,132,809,159"/>
+<area shape="rect" id="node10" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="881,107,1001,133"/>
+<area shape="rect" id="node11" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="893,157,990,184"/>
+</map>

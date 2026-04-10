@@ -1,0 +1,15 @@
+<map id="fifo_handler" name="fifo_handler">
+<area shape="rect" id="node1" title="The FIFO handler callback function." alt="" coords="5,56,92,83"/>
+<area shape="rect" id="node2" href="$adxl37x_8h.html#ac23e14111f8333a53037df128ebba6fc" title=" " alt="" coords="140,5,315,32"/>
+<area shape="rect" id="node3" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="182,56,273,83"/>
+<area shape="rect" id="node8" href="$struct_adxl37x.html#a53b39be4f224783448cee0a1a1cc8a13" title="Function to set synchronization mode of the sensor device driver." alt="" coords="182,107,273,133"/>
+<area shape="rect" id="node4" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="369,5,508,32"/>
+<area shape="rect" id="node5" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="394,56,483,83"/>
+<area shape="rect" id="node6" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="563,5,683,32"/>
+<area shape="rect" id="node7" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="574,56,671,83"/>
+<area shape="rect" id="node9" href="$adxl37x_8h.html#a88ac7567f0d1464b2698eacc3a8796b2" title=" " alt="" coords="363,107,515,133"/>
+<area shape="rect" id="node10" href="$struct_adxl37x.html#aa40b55f092609cc5710dd1af8da9316b" title="Function to start or stop external synchronization clock." alt="" coords="384,157,493,184"/>
+<area shape="rect" id="node11" href="$class_pwm.html#aee502d2d4a23aa6bf075705012950c91" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="583,107,663,133"/>
+<area shape="rect" id="node12" href="$class_pwm.html#a60de64d75454385b23995437f1d72669" title="Function to start PWM generation." alt="" coords="580,157,665,184"/>
+<area shape="rect" id="node13" href="$class_pwm.html#a8c528baf37154d347366083f0f816846" title="Function to stop PWM generation." alt="" coords="581,208,665,235"/>
+</map>

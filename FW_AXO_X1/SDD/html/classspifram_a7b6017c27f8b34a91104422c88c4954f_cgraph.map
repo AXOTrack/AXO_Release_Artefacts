@@ -1,0 +1,6 @@
+<map id="dpd_exit" name="dpd_exit">
+<area shape="rect" id="node1" title="Function to wake up FRAM from deep power down mode." alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node2" href="$classspifram.html#a012fd03b5c4e8fb72719e55317c6b1b9" title="Function to read multiple bytes from FRAM." alt="" coords="124,5,205,32"/>
+<area shape="rect" id="node3" href="$classspifram.html#a3f8be5a2578127c3fc0e74e3532f284b" title="Function to read multiple bytes to FRAM." alt="" coords="253,5,340,32"/>
+<area shape="rect" id="node4" href="$classspifram.html#a2b5d6c97c3b1b81c410898f8b4d88dba" title="Function to access FRAM for reading and writing." alt="" coords="388,5,484,32"/>
+</map>

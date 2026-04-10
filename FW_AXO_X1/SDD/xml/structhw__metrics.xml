@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structhw__metrics" kind="struct" language="C++" prot="public">
+    <compoundname>hw_metrics</compoundname>
+    <includes refid="hw__metrics_8h" local="no">hw_metrics.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t num_errors</definition>
+        <argsstring></argsstring>
+        <name>num_errors</name>
+        <briefdescription>
+<para>The error counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="49" column="13" bodyfile="data/hw_metrics.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">MetricsBuilder::addHwMetrics</referencedby>
+        <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HwMetrics::HandleHwStatusAdxl37x</referencedby>
+        <referencedby refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" compoundref="adxl37x_8cpp" startline="437" endline="451">Adxl37x::reportHwStatus</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" kindref="member">hw_stat</ref></type>
+        <definition>enum hw_stat hw_status</definition>
+        <argsstring></argsstring>
+        <name>hw_status</name>
+        <briefdescription>
+<para>The HW failure state of type hw_stat. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="49" column="13" bodyfile="data/hw_metrics.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">MetricsBuilder::addHwMetrics</referencedby>
+        <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HwMetrics::HandleHwStatusAdxl37x</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for HW metrics. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>uint8_t</label>
+      </node>
+      <node id="2">
+        <label>enum hw_stat</label>
+      </node>
+      <node id="1">
+        <label>hw_metrics</label>
+        <link refid="structhw__metrics"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+hw_status</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+num_errors</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/hw_metrics.h" line="48" column="1" bodyfile="data/hw_metrics.h" bodystart="48" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" prot="public" virt="non-virtual"><scope>hw_metrics</scope><name>hw_status</name></member>
+      <member refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" prot="public" virt="non-virtual"><scope>hw_metrics</scope><name>num_errors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

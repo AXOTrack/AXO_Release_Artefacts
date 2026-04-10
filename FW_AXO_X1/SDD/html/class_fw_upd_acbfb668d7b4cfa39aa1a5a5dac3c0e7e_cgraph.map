@@ -1,0 +1,31 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="Firmware update task function." alt="" coords="5,360,52,387"/>
+<area shape="rect" id="node2" href="$class_fw_upd.html#add2f91f57f8f0c466b6e280dbf814856" title="Function to start the OTA download process." alt="" coords="115,31,225,57"/>
+<area shape="rect" id="node13" href="$class_fw_upd.html#a17f00d41a2f949c4f02b489d9f0f39d2" title="Callback function to receive the FOTA download events." alt="" coords="115,81,225,108"/>
+<area shape="rect" id="node15" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="117,132,223,159"/>
+<area shape="rect" id="node18" href="$class_fw_info.html#af24b297cb2d75fd05f5b8a441e00010e" title="Getter function to retrieve the filename." alt="" coords="100,183,240,209"/>
+<area shape="rect" id="node19" href="$class_fw_info.html#a7c67c85479412dcd8d6a72733fabf254" title="Getter function to retrieve the file size." alt="" coords="104,233,236,260"/>
+<area shape="rect" id="node20" href="$class_fw_info.html#aacd441cca3001449a4de6508aea46bd4" title="Getter function to retrieve the host string." alt="" coords="114,284,226,311"/>
+<area shape="rect" id="node21" href="$class_fw_info.html#aa039351317a9d1308a123c8279a75a1b" title="Getter function to retrieve the protocol specifier string." alt="" coords="112,335,228,361"/>
+<area shape="rect" id="node22" href="$class_fw_info.html#a25f9a9c768ec415c596f83b8f2cb5089" title="Getter function to retrieve the Secure Hash Algorithm Checksum string." alt="" coords="113,385,227,412"/>
+<area shape="rect" id="node23" href="$class_fw_info.html#a67007fc2be130666fbf3b065022756f4" title="Function to parse the OTA update topic JSON and extract the data." alt="" coords="121,436,219,463"/>
+<area shape="rect" id="node24" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="127,487,213,513"/>
+<area shape="rect" id="node26" href="$class_fw_upd.html#ae2d1187c25234b18b1950e6556e9590b" title="Setter function to set the filename." alt="" coords="123,537,217,564"/>
+<area shape="rect" id="node27" href="$class_fw_upd.html#a31f87e6e026d0f6617cb8d36f553c880" title="Setter function to set the hostname." alt="" coords="121,588,219,615"/>
+<area shape="rect" id="node28" href="$class_fw_info.html#a4659b23c49e8463e85dd9c14f9ef5e23" title="Function to split an URL into host and filename." alt="" coords="117,639,223,665"/>
+<area shape="rect" id="node29" href="$class_fw_info.html#a072559ae30aae0e5e9bb88331dc35175" title="Function to validate the correctness of the OTA update topic JSON data." alt="" coords="115,689,225,716"/>
+<area shape="rect" id="node3" href="$class_fw_upd.html#a888e034456d9b16489ac0ff76f1c8bf9" title="Send OTA Failure event message to firmware update control task." alt="" coords="297,31,411,57"/>
+<area shape="rect" id="node4" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="473,56,587,83"/>
+<area shape="rect" id="node5" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="640,5,795,32"/>
+<area shape="rect" id="node7" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="666,56,769,83"/>
+<area shape="rect" id="node8" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="672,107,763,133"/>
+<area shape="rect" id="node6" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="847,5,977,32"/>
+<area shape="rect" id="node9" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="843,81,981,108"/>
+<area shape="rect" id="node10" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="867,132,957,159"/>
+<area shape="rect" id="node11" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="1029,107,1149,133"/>
+<area shape="rect" id="node12" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="1041,157,1138,184"/>
+<area shape="rect" id="node14" href="$class_fw_upd.html#ae2c42220dbc908b869a944c2612d7b71" title="Send OTA Success event message to firmware update control task." alt="" coords="288,81,420,108"/>
+<area shape="rect" id="node16" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="288,132,420,159"/>
+<area shape="rect" id="node17" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="468,132,592,159"/>
+<area shape="rect" id="node25" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="305,487,403,513"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="stop" name="stop">
+<area shape="rect" id="node1" title="Timer stop function." alt="" coords="196,107,243,133"/>
+<area shape="rect" id="node2" href="$class_timer.html#a22ee094ca3f45aa4156b97d34fe678bf" title="Timer restart function." alt="" coords="47,5,106,32"/>
+<area shape="rect" id="node3" href="$class_rms_task.html#aaad4f4d77885dd2457f79c20ac27db19" title="RMS task function." alt="" coords="21,56,132,83"/>
+<area shape="rect" id="node4" href="$class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Boost converter task function." alt="" coords="5,107,148,133"/>
+<area shape="rect" id="node5" href="$struct_adxl37x.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl37x task function." alt="" coords="25,157,128,184"/>
+<area shape="rect" id="node6" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="7,208,147,235"/>
+</map>

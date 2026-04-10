@@ -1,0 +1,7 @@
+<map id="BoostCtrlTimer_cb" name="BoostCtrlTimer_cb">
+<area shape="rect" id="node1" title="Timer callback function for initial boost on timer." alt="" coords="5,31,135,57"/>
+<area shape="rect" id="node2" href="$class_power_mgr_x1.html#afaa90604923c6189d35207509fb4900f" title="Timer expired function for initial boost on timer." alt="" coords="183,31,340,57"/>
+<area shape="rect" id="node3" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="388,31,477,57"/>
+<area shape="rect" id="node4" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="525,5,645,32"/>
+<area shape="rect" id="node5" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="537,56,634,83"/>
+</map>

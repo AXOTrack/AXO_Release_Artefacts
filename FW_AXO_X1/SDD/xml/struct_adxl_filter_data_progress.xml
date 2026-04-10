@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_adxl_filter_data_progress" kind="struct" language="C++" prot="public">
+    <compoundname>AdxlFilterDataProgress</compoundname>
+    <includes refid="adxl__store_8h" local="no">adxl_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t startWr</definition>
+        <argsstring></argsstring>
+        <name>startWr</name>
+        <briefdescription>
+<para>Start write position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="89" column="14" bodyfile="data/adxl_store.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">DispTask::reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">DispTask::reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">DispTask::reqSResultWrite</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">AdxlDataStore::storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">AdxlDataStore::storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">AdxlDataStore::storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sentEntries</definition>
+        <argsstring></argsstring>
+        <name>sentEntries</name>
+        <briefdescription>
+<para>Number of sent entries to displacement task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="90" column="14" bodyfile="data/adxl_store.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">DispTask::reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">DispTask::reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">DispTask::reqSResultWrite</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">AdxlDataStore::storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">AdxlDataStore::storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">AdxlDataStore::storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t requestedEntries</definition>
+        <argsstring></argsstring>
+        <name>requestedEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of requestes entries from displacement task </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="91" column="14" bodyfile="data/adxl_store.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">DispTask::reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">DispTask::reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">DispTask::reqSResultWrite</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">AdxlDataStore::storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">AdxlDataStore::storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">AdxlDataStore::storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t data[sizeof(double) *MAX_NUM_REQ_ENTRIES]</definition>
+        <argsstring>[sizeof(double) *MAX_NUM_REQ_ENTRIES]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="93" column="13" bodyfile="data/adxl_store.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">DispTask::reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">DispTask::reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">DispTask::reqSResultWrite</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">AdxlDataStore::storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">AdxlDataStore::storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">AdxlDataStore::storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>AdxlFilterDataProgress</label>
+        <link refid="struct_adxl_filter_data_progress"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+requestedEntries</edgelabel>
+          <edgelabel>+sentEntries</edgelabel>
+          <edgelabel>+startWr</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uint32_t</label>
+      </node>
+      <node id="3">
+        <label>uint8_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/adxl_store.h" line="88" column="1" bodyfile="data/adxl_store.h" bodystart="88" bodyend="94"/>
+    <listofallmembers>
+      <member refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" prot="public" virt="non-virtual"><scope>AdxlFilterDataProgress</scope><name>data</name></member>
+      <member refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" prot="public" virt="non-virtual"><scope>AdxlFilterDataProgress</scope><name>requestedEntries</name></member>
+      <member refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" prot="public" virt="non-virtual"><scope>AdxlFilterDataProgress</scope><name>sentEntries</name></member>
+      <member refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" prot="public" virt="non-virtual"><scope>AdxlFilterDataProgress</scope><name>startWr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

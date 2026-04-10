@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="popcount_8h" kind="file" language="C++">
+    <compoundname>popcount.h</compoundname>
+    <includedby refid="reset__reason_8cpp" local="yes">pm/reset_reason.cpp</includedby>
+    <includedby refid="popcount_8cpp" local="yes">util/popcount.cpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>util/popcount.h</label>
+        <link refid="popcount_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>util/popcount.cpp</label>
+        <link refid="popcount_8cpp"/>
+      </node>
+      <node id="2">
+        <label>pm/reset_reason.cpp</label>
+        <link refid="reset__reason_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="popcount_8h_1ad67001fecbc0a50a73b32445e88b5042" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int popcount32</definition>
+        <argsstring>(unsigned int x)</argsstring>
+        <name>popcount32</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Function to count number of bits equal to 1 in parameter x. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 32 bit unsigned int prameter to count the bits equal to 1</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the number of bits equal to 1 in parameter x</para>
+</simplesect>
+Function to count number of bits equal to 1 in the 32 bit unsigned int parameter x. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/popcount.h" line="25" column="5" bodyfile="util/popcount.cpp" bodystart="32" bodyend="36" declfile="util/popcount.h" declline="25" declcolumn="5"/>
+        <referencedby refid="class_reset_reason_1a24c18a12a144f7ce1024a8fe8c0c23cc" compoundref="reset__reason_8cpp" startline="88" endline="135">ResetReason::get</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of popcount. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="popcount_8h_1popcount"/> <simplesect kind="par"><title>Detailed Description </title><para>This file provides a function to count number of bits equal to 1 in an 32 bit unsigned int variable.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_POPCOUNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_POPCOUNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="popcount_8h_1ad67001fecbc0a50a73b32445e88b5042" kindref="member">popcount32</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_POPCOUNT_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="util/popcount.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+<map id="getPayload" name="getPayload">
+<area shape="rect" id="node1" title="Getter function to retrieve the measurement JSON string." alt="" coords="468,5,555,32"/>
+<area shape="rect" id="node2" href="$class_data_manager.html#afdfa16a6f13166684940d2ce4f0bf91e" title="Send function to publish measurement JSON string to MQTT connector task." alt="" coords="185,5,420,32"/>
+<area shape="rect" id="node3" href="$class_data_manager.html#a557b206172fbde7a204eb0d2376b7f71" title="Data manager task function." alt="" coords="5,5,137,32"/>
+</map>

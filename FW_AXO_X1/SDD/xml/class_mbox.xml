@@ -1,0 +1,1202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_mbox" kind="class" language="C++" prot="public">
+    <compoundname>Mbox</compoundname>
+    <includes refid="mbox_8h" local="no">mbox.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MboxId</name>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a51060f19a5d0006e2cb20df8786a330b" prot="public">
+          <name>eMain</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ID of the main process, only used as sender ID, e.g. for shell input </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5774f90fab30d23d3631e62cc2a616d2" prot="public">
+          <name>eLteConnector</name>
+          <briefdescription>
+<para>ID of the LTE connector task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" prot="public">
+          <name>eMqttConnector</name>
+          <briefdescription>
+<para>ID of the MQTT connector task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" prot="public">
+          <name>eHttpConnector</name>
+          <briefdescription>
+<para>ID of the HTTP connector task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ad649ff5017ffe9536f577aa226689085" prot="public">
+          <name>eLteMonitor</name>
+          <briefdescription>
+<para>ID of the LTE monitor task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab8e2ef5afb6c75b04d76c42e7cd11924" prot="public">
+          <name>eSi705xTask</name>
+          <briefdescription>
+<para>ID of the Si705x temperature sensor task (5) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab7bd866dc75a69cf1e11ef076c71ad94" prot="public">
+          <name>eShtcxTask</name>
+          <briefdescription>
+<para>ID of the <ref refid="class_shtcx" kindref="compound">Shtcx</ref> temperature and humidity sensor task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a2c300b16b26ff1a3c362a26d76ce2931" prot="public">
+          <name>eBme68xTask</name>
+          <briefdescription>
+<para>ID of the Bme68x temperature sensor task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501adf216f84add395cce5f0564ed8beda08" prot="public">
+          <name>eAdxl37xTask</name>
+          <briefdescription>
+<para>ID of the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> acceleration sensor task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab4dc4e589837500613a7909deee1c737" prot="public">
+          <name>eAdxlStore</name>
+          <briefdescription>
+<para>ID of the ADXL store task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a404cc0223d699ca876c05973ede3b2ad" prot="public">
+          <name>eRmsStore</name>
+          <briefdescription>
+<para>ID of the RMS store task (10) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af37a207eee727d2ff5a2660920cfefb4" prot="public">
+          <name>eAdxlRms</name>
+          <briefdescription>
+<para>ID of the ADXL RMS task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7c62e8460701d99d6495f8d125d1bc93" prot="public">
+          <name>eADConverter</name>
+          <briefdescription>
+<para>ID of the AD converter task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6bf6ebd882f5adee283d170e8bf0d683" prot="public">
+          <name>eNTC</name>
+          <briefdescription>
+<para>ID of the NTC task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6a7a752cd7371d7581256cdf1056cc09" prot="public">
+          <name>eBattMgr</name>
+          <briefdescription>
+<para>ID of the battery manager task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" prot="public">
+          <name>eDataManager</name>
+          <briefdescription>
+<para>ID of the data manager task (15) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a18ff7321499e436e48b793d1d6ac2757" prot="public">
+          <name>ePowerManager</name>
+          <briefdescription>
+<para>ID of the power manager task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501abe8cd9bda40f9a78f53bc3296970f7cc" prot="public">
+          <name>eBoostConverter</name>
+          <briefdescription>
+<para>ID of the boost converter task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a32261b0fb4efd2d532c0bb01118bc55c" prot="public">
+          <name>eMetrics</name>
+          <briefdescription>
+<para>ID of the metrics task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" prot="public">
+          <name>eFwUpd</name>
+          <briefdescription>
+<para>ID of the firmware update task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a8a413f9159c6aea754a4a6825ba8d523" prot="public">
+          <name>eFwUpdCtrl</name>
+          <briefdescription>
+<para>ID of the firmware update control task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a220c27ca6093f6608278ff8dc1f21bdb" prot="public">
+          <name>eResetCtrl</name>
+          <briefdescription>
+<para>ID of the reset control task (20) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a08983b829204a5f02d19db678b7d28c4" prot="public">
+          <name>eDemoTask</name>
+          <briefdescription>
+<para>ID of the demo task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501aa843b3f2ac3a19d86c6458d34f9dde8b" prot="public">
+          <name>eHwMetrics</name>
+          <briefdescription>
+<para>ID of the HW metrics task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5694dbf9d110513fa0f836215e315809" prot="public">
+          <name>eDispTask</name>
+          <briefdescription>
+<para>ID of the displacement task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af41394e040d5a50e20f6d54e4e3ee7bf" prot="public">
+          <name>eMbReceive</name>
+          <briefdescription>
+<para>ID of the modbus message receiver task. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" prot="public">
+          <name>eMboxMax</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Last entry, indicating the number of mailboxes in the system </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration with all maibox ID&apos;s of the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="65" column="5" bodyfile="rtos/mbox.h" bodystart="65" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mbox_1a4cb3fadb6462e3c51946ca46eb196132" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char myName[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>myName</name>
+        <briefdescription>
+<para>The name of the mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="120" column="10" bodyfile="rtos/mbox.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="class_mbox_1a7b9d649e1f48c4a81e61185885647b7c" compoundref="mbox_8cpp" startline="40" endline="44">Mbox</referencedby>
+        <referencedby refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_m_queue" kindref="compound">MQueue</ref>&lt; <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>, <ref refid="class_mbox_1ae2450d36dd70d46044e14809901f7af2" kindref="member">max_slots</ref> &gt;</type>
+        <definition>MQueue&lt;PoolElem, max_slots&gt; pQueue</definition>
+        <argsstring></argsstring>
+        <name>pQueue</name>
+        <briefdescription>
+<para>The message queue object for masseges of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="124" column="9" bodyfile="rtos/mbox.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="class_mbox_1a81dbffbc68e17ae5bfc34d4d1f451f17" compoundref="mbox_8h" startline="102" endline="102">count</referencedby>
+        <referencedby refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">read</referencedby>
+        <referencedby refid="class_mbox_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mbox_8h" startline="103" endline="103">stats</referencedby>
+        <referencedby refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">write</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_mbox_1ae2450d36dd70d46044e14809901f7af2" prot="private" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t max_slots</definition>
+        <argsstring></argsstring>
+        <name>max_slots</name>
+        <initializer>=
+        8</initializer>
+        <briefdescription>
+<para>The number of message slots in the mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="121" column="27" bodyfile="rtos/mbox.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_mbox_1a784f962493b7498b2f0b560390d82816" compoundref="mbox_8h" startline="104" endline="104">getMaxSlots</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mbox_1a6477707ed67117dad4daef43e8a5f560" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox * mBoxAll</definition>
+        <argsstring>[eMboxMax]</argsstring>
+        <name>mBoxAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array with all registered <ref refid="class_mbox" kindref="compound">Mbox</ref> pointers, index = ID of enumerator MboxId </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="127" column="9" bodyfile="rtos/mbox.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="class_mbox_1aa4f60789a8ab9bb2e04b37a2e04a4d71" compoundref="mbox_8cpp" startline="133" endline="139">getMboxById</referencedby>
+        <referencedby refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">registerMbox</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mbox_1a7b9d649e1f48c4a81e61185885647b7c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mbox</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>Mbox</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_mbox" kindref="compound">Mbox</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the mailbox</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor store the name of the mailbox in private member variable myName. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="96" column="14" bodyfile="rtos/mbox.cpp" bodystart="40" bodyend="44"/>
+        <references refid="class_mbox_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="mbox_8h" startline="120">myName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1aec6b5f492b41bd08c78e0a6a77e2aa63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mbox</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Mbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="97" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a2d2f86b45a6d431eea5f73a1849c22ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~Mbox</definition>
+        <argsstring>()</argsstring>
+        <name>~Mbox</name>
+        <briefdescription>
+<para><ref refid="class_mbox" kindref="compound">Mbox</ref> class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="98" column="13" bodyfile="rtos/mbox.cpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1aec0858a23fe789ef1782caab906baf2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void write</definition>
+        <argsstring>(PoolElem *elem)</argsstring>
+        <name>write</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>elem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="99" column="10" bodyfile="rtos/mbox.cpp" bodystart="54" bodyend="64"/>
+        <references refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">PoolElem::Dump</references>
+        <references refid="class_mbox_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="mbox_8h" startline="120">myName</references>
+        <references refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" compoundref="mbox_8h" startline="124">pQueue</references>
+        <references refid="class_m_queue_1a28a1c1e86bbe9d32c6a239e657cedc2e" compoundref="mqueue_8h" startline="84" endline="95">MQueue::put</references>
+        <referencedby refid="class_power_mgr_x1_1a280773fc9201606b6ad92dd6c2ca3b46" compoundref="power__mgr__x1_8cpp" startline="149" endline="154">PowerMgrX1::AdxlWakeupTimer_expired</referencedby>
+        <referencedby refid="class_power_mgr_x1_1afaa90604923c6189d35207509fb4900f" compoundref="power__mgr__x1_8cpp" startline="86" endline="91">PowerMgrX1::BoostCtrlTimer_expired</referencedby>
+        <referencedby refid="class_http_connector_1af8d925a524b176e256196165d672fdec" compoundref="http__connector_8cpp" startline="880" endline="886">HttpConnector::delayTimer_expired</referencedby>
+        <referencedby refid="class_power_mgr_x1_1ab00563fad1160d3df8c36aec60f9852a" compoundref="power__mgr__x1_8cpp" startline="117" endline="123">PowerMgrX1::LteStartDelayTimer_expired</referencedby>
+        <referencedby refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" compoundref="power__mgr_8cpp" startline="133" endline="138">PowerMgr::MetricsTxTimer_expired</referencedby>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">LteConnector::notify</referencedby>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">ADConverter::notifyListener</referencedby>
+        <referencedby refid="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" compoundref="http__connector_8cpp" startline="912" endline="918">HttpConnector::oneDayTimer_expired</referencedby>
+        <referencedby refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</referencedby>
+        <referencedby refid="class_data_manager_1adc25c829b13636794219a3f61f31f34d" compoundref="pdata_8cpp" startline="78" endline="83">DataManager::timer1_expired</referencedby>
+        <referencedby refid="class_rms_task_1adc25c829b13636794219a3f61f31f34d" compoundref="rms_8cpp" startline="121" endline="126">RmsTask::timer1_expired</referencedby>
+        <referencedby refid="class_shtcx_1adc25c829b13636794219a3f61f31f34d" compoundref="shtcx_8cpp" startline="106" endline="111">Shtcx::timer1_expired</referencedby>
+        <referencedby refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" compoundref="boost_8cpp" startline="77" endline="83">BoostConverter::timer1_expired</referencedby>
+        <referencedby refid="struct_adxl37x_1adc25c829b13636794219a3f61f31f34d" compoundref="adxl37x_8cpp" startline="506" endline="511">Adxl37x::timer1_expired</referencedby>
+        <referencedby refid="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__monitor_8cpp" startline="72" endline="78">LteMonitor::timer1_expired</referencedby>
+        <referencedby refid="class_lte_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__connector_8cpp" startline="279" endline="284">LteConnector::timer1_expired</referencedby>
+        <referencedby refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="636" endline="642">MqttConnector::timer1_expired</referencedby>
+        <referencedby refid="class_reset_ctrl_1adc25c829b13636794219a3f61f31f34d" compoundref="reset__ctrl_8cpp" startline="116" endline="121">ResetCtrl::timer1_expired</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1adc25c829b13636794219a3f61f31f34d" compoundref="update__ctrl_8cpp" startline="79" endline="84">FwUpdCtrl::timer1_expired</referencedby>
+        <referencedby refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" compoundref="adconverter_8cpp" startline="124" endline="131">ADConverter::timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+        <definition>PoolElem * read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <briefdescription>
+<para><ref refid="class_mbox" kindref="compound">Mbox</ref> read function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Pointer to the received (read) message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</simplesect>
+The function receive (read) the message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> by calling the get function of the message queue class <ref refid="class_m_queue" kindref="compound">MQueue</ref>. Finally it returns a pointer to the received message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="101" column="14" bodyfile="rtos/mbox.cpp" bodystart="98" bodyend="104"/>
+        <references refid="class_m_queue_1ac051b2568208e363ae2dffb23c0ad9ba" compoundref="mqueue_8h" startline="107" endline="114">MQueue::get</references>
+        <references refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" compoundref="mbox_8h" startline="124">pQueue</references>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
+        <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update__ctrl_8cpp" startline="316" endline="362">FwUpdCtrl::task</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">LteConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a81dbffbc68e17ae5bfc34d4d1f451f17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t count</definition>
+        <argsstring>()</argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="102" column="14" bodyfile="rtos/mbox.h" bodystart="102" bodyend="102"/>
+        <references refid="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" compoundref="mqueue_8h" startline="124" endline="124">MQueue::count</references>
+        <references refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" compoundref="mbox_8h" startline="124">pQueue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a058d67da96727cd260cfdfcd9554a06a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void stats</definition>
+        <argsstring>()</argsstring>
+        <name>stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="103" column="10" bodyfile="rtos/mbox.h" bodystart="103" bodyend="103"/>
+        <references refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" compoundref="mbox_8h" startline="124">pQueue</references>
+        <references refid="class_m_queue_1ac83a0ed4be890f2a31e4dd6aab2216a1" compoundref="mqueue_8h" startline="160" endline="167">MQueue::stats</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a784f962493b7498b2f0b560390d82816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t getMaxSlots</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxSlots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="104" column="14" bodyfile="rtos/mbox.h" bodystart="104" bodyend="104"/>
+        <references refid="class_mbox_1ae2450d36dd70d46044e14809901f7af2" compoundref="mbox_8h" startline="121">max_slots</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void send</definition>
+        <argsstring>(PoolElem *elem, MboxId toWhom)</argsstring>
+        <name>send</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>elem</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>toWhom</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_mbox" kindref="compound">Mbox</ref> send function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>elem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to be send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toWhom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the receiver mailbox</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the pointer to the receiver mailbox by calling member function getMboxById and uses the pointer to call the function write with message elem of the receiver mailbox object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="100" column="17" bodyfile="rtos/mbox.cpp" bodystart="76" bodyend="87"/>
+        <references refid="class_mbox_1aa4f60789a8ab9bb2e04b37a2e04a4d71" compoundref="mbox_8cpp" startline="133" endline="139">getMboxById</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">write</references>
+        <referencedby refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" compoundref="adxl37x_8cpp" startline="363" endline="401">Adxl37x::fifo_handler</referencedby>
+        <referencedby refid="class_fw_download_1a949503c431c3db37ae1a46e138b2ce24" compoundref="fsm_8cpp" startline="505" endline="518">FwDownload::handle_DlComplete</referencedby>
+        <referencedby refid="class_fw_download_1a9bb661eb7e96c9043e0960d3a01af6a8" compoundref="fsm_8cpp" startline="536" endline="572">FwDownload::handle_DlFailed</referencedby>
+        <referencedby refid="class_fw_triggered_1a7e95001afaeb737eb109dafdc1425b1d" compoundref="fsm_8cpp" startline="449" endline="473">FwTriggered::handle_FwInfo</referencedby>
+        <referencedby refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">sendMsg</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerMbox</definition>
+        <argsstring>(Mbox *me, MboxId myId)</argsstring>
+        <name>registerMbox</name>
+        <param>
+          <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+          <declname>me</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>myId</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_mbox" kindref="compound">Mbox</ref> register function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>me</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the maibox to be registered </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>myId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the mailbox to be registered</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function register the pointer to the mailbox by storing it in the array mBoxAll at index myId. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="106" column="17" bodyfile="rtos/mbox.cpp" bodystart="115" bodyend="120"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" compoundref="mbox_8h" startline="93">eMboxMax</references>
+        <references refid="class_mbox_1a6477707ed67117dad4daef43e8a5f560" compoundref="mbox_8h" startline="127">mBoxAll</references>
+        <referencedby refid="struct_a_d_converter_1adf17391456f6e7aa288440dd96357b52" compoundref="adconverter_8cpp" startline="254" endline="260">ADConverter::ADConverter</referencedby>
+        <referencedby refid="struct_adxl37x_1a97ada7139b0b7a2f9da33f33213e2a4d" compoundref="adxl37x_8cpp" startline="461" endline="472">Adxl37x::Adxl37x</referencedby>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore::AdxlDataStore</referencedby>
+        <referencedby refid="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" compoundref="batt__mgr_8cpp" startline="46" endline="70">BatteryMgr::BatteryMgr</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter::BoostConverter</referencedby>
+        <referencedby refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" compoundref="pdata_8cpp" startline="96" endline="106">DataManager::DataManager</referencedby>
+        <referencedby refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" compoundref="disptask_8cpp" startline="61" endline="78">DispTask::DispTask</referencedby>
+        <referencedby refid="class_fw_upd_1a2733937cfc01da7cb39c6c3db38d1474" compoundref="update_8cpp" startline="55" endline="59">FwUpd::FwUpd</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1aa124fe852a7fef997df6ab7b091cb009" compoundref="update__ctrl_8cpp" startline="265" endline="284">FwUpdCtrl::FwUpdCtrl</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector::HttpConnector</referencedby>
+        <referencedby refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" compoundref="hw__metrics_8cpp" startline="84" endline="89">HwMetrics::HwMetrics</referencedby>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector::LteConnector</referencedby>
+        <referencedby refid="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" compoundref="lte__monitor_8cpp" startline="88" endline="97">LteMonitor::LteMonitor</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector::MqttConnector</referencedby>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr::PowerMgr</referencedby>
+        <referencedby refid="class_reset_ctrl_1ae8ed38498e7322a40aa6b0a2632af26d" compoundref="reset__ctrl_8cpp" startline="132" endline="144">ResetCtrl::ResetCtrl</referencedby>
+        <referencedby refid="class_rms_store_1afa16a4250cde665dfc713e95e1c42f15" compoundref="rms__store_8cpp" startline="45" endline="58">RmsStore::RmsStore</referencedby>
+        <referencedby refid="class_rms_task_1a93f0dabed5d00e46a0c2239dbea4f642" compoundref="rms_8cpp" startline="63" endline="87">RmsTask::RmsTask</referencedby>
+        <referencedby refid="class_shtcx_1a19a654e3605451204cc9340fbc8dbf79" compoundref="shtcx_8cpp" startline="249" endline="255">Shtcx::Shtcx</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1aa4f60789a8ab9bb2e04b37a2e04a4d71" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox * getMboxById</definition>
+        <argsstring>(MboxId id)</argsstring>
+        <name>getMboxById</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the mailbox pointer by given ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the mailbox</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the mailbox</para>
+</simplesect>
+The function retrieve the pointer to the mailbox by read it from array mBoxAll at index id and returns the pointer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="107" column="17" bodyfile="rtos/mbox.cpp" bodystart="133" bodyend="139"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" compoundref="mbox_8h" startline="93">eMboxMax</references>
+        <references refid="class_mbox_1a6477707ed67117dad4daef43e8a5f560" compoundref="mbox_8h" startline="127">mBoxAll</references>
+        <referencedby refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMsg</definition>
+        <argsstring>(enum msgType mType, MboxId senderId, MboxId receiverId)</argsstring>
+        <name>sendMsg</name>
+        <param>
+          <type>enum <ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>mType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>senderId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>receiverId</declname>
+        </param>
+        <briefdescription>
+<para>Message send convinience function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the sender task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiverId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the receiver task</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function request a message from message pool, set message type to parameter mType, set senderId as sender and send message to mailbox indicated by parameter receiverId by calling static member function send. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="109" column="17" bodyfile="rtos/mbox.cpp" bodystart="154" bodyend="161"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</references>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_lte_monitor_1a1517efba6a658177615905efaeed0d21" compoundref="lte__monitor_8cpp" startline="287" endline="302">LteMonitor::at_ecsq_handler</referencedby>
+        <referencedby refid="class_fw_upd_1a888e034456d9b16489ac0ff76f1c8bf9" compoundref="update_8cpp" startline="159" endline="173">FwUpd::download_failed</referencedby>
+        <referencedby refid="class_fw_upd_1ae2c42220dbc908b869a944c2612d7b71" compoundref="update_8cpp" startline="184" endline="197">FwUpd::download_success</referencedby>
+        <referencedby refid="class_disp_task_1af805a1118ef27529d966b67349c4e46d" compoundref="disptask_8cpp" startline="1202" endline="1210">DispTask::filt_dump</referencedby>
+        <referencedby refid="class_fw_triggered_1a22de52c28e140efcdb90423ce29714eb" compoundref="fsm_8cpp" startline="428" endline="433">FwTriggered::handle_timer_exp</referencedby>
+        <referencedby refid="class_fw_download_1a22de52c28e140efcdb90423ce29714eb" compoundref="fsm_8cpp" startline="589" endline="613">FwDownload::handle_timer_exp</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HttpConnector::HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="890" endline="897">MqttConnector::HandleBoostOffReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="870" endline="877">MqttConnector::HandleBoostOnReq</referencedby>
+        <referencedby refid="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" compoundref="disptask_8cpp" startline="177" endline="181">DispTask::HandleCalcDisplacementReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="850" endline="857">MqttConnector::HandleColdStartReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="933" endline="941">MqttConnector::HandleDisableADXL</referencedby>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">DispTask::HandleDispFirstEntries</referencedby>
+        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="954" endline="962">MqttConnector::HandleEnableADXL</referencedby>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">DispTask::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" compoundref="http__connector_8cpp" startline="732" endline="743">HttpConnector::HandleRcvdDispData</referencedby>
+        <referencedby refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" compoundref="http__connector_8cpp" startline="695" endline="714">HttpConnector::HandleRcvdRawData</referencedby>
+        <referencedby refid="class_http_connector_1a45989dc8b33cb068db005100a2f11679" compoundref="http__connector_8cpp" startline="1145" endline="1153">HttpConnector::HttpDispDataSend</referencedby>
+        <referencedby refid="class_http_connector_1ad9c03afbb6b3d34e26a01b1eea870638" compoundref="http__connector_8cpp" startline="1127" endline="1135">HttpConnector::HttpRawDataSend</referencedby>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+        <referencedby refid="class_power_mgr_1aacbc79b9fec14a8eb014564c958b8b95" compoundref="power__mgr_8cpp" startline="203" endline="207">PowerMgr::metricProviderNotify</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">AdxlDataStore::notifyRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1ac058b87e11aed87cf5da0f7963edd2b5" compoundref="adxl__store_8cpp" startline="756" endline="759">AdxlDataStore::notifySender</referencedby>
+        <referencedby refid="class_adxl_data_store_1a607e1620392c10d97bc7d9280f3df928" compoundref="adxl__store_8cpp" startline="767" endline="770">AdxlDataStore::notifyStorageFull</referencedby>
+        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="87" endline="101">MqttConnector::on_connack</referencedby>
+        <referencedby refid="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" compoundref="mqtt__connector_8cpp" startline="112" endline="118">MqttConnector::on_disconnect</referencedby>
+        <referencedby refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="163" endline="287">MqttConnector::on_publish</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1ad91120d26573451fb5eda5a3c735a698" compoundref="update__ctrl_8cpp" startline="208" endline="218">FwUpdCtrl::otaFwConfirm</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1a8aa799fd7cf777ded1db827ba946b07a" compoundref="update__ctrl_8cpp" startline="229" endline="251">FwUpdCtrl::otaFwReject</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1a1f13c32a42f24d5e28b53fa9b3cd9b81" compoundref="update__ctrl_8cpp" startline="154" endline="164">FwUpdCtrl::otaStartConfirm</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1a950faa8460d442cc9048523876994131" compoundref="update__ctrl_8cpp" startline="175" endline="197">FwUpdCtrl::otaStartReject</referencedby>
+        <referencedby refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">DataManager::publishMeasurements</referencedby>
+        <referencedby refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">DataManager::publishMetrics</referencedby>
+        <referencedby refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" compoundref="hw__metrics_8cpp" startline="44" endline="52">HwMetrics::report</referencedby>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <referencedby refid="class_lte_monitor_1a60fd65c00183271380a951ee700141da" compoundref="lte__monitor_8cpp" startline="496" endline="500">LteMonitor::reportBattVoltage</referencedby>
+        <referencedby refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" compoundref="power__mgr_8cpp" startline="102" endline="107">PowerMgr::reportBootCnt</referencedby>
+        <referencedby refid="class_lte_monitor_1a0400f54e33cecd307fb744d9a2892a26" compoundref="lte__monitor_8cpp" startline="565" endline="569">LteMonitor::reportFwVersion</referencedby>
+        <referencedby refid="class_shtcx_1a783d547e346f24d0673dd0741a3074af" compoundref="shtcx_8cpp" startline="233" endline="239">Shtcx::reportHumidity</referencedby>
+        <referencedby refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" compoundref="adxl37x_8cpp" startline="437" endline="451">Adxl37x::reportHwStatus</referencedby>
+        <referencedby refid="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" compoundref="lte__monitor_8cpp" startline="640" endline="644">LteMonitor::reportIMEI</referencedby>
+        <referencedby refid="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" compoundref="lte__monitor_8cpp" startline="684" endline="688">LteMonitor::reportIMSI</referencedby>
+        <referencedby refid="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" compoundref="lte__monitor_8cpp" startline="580" endline="584">LteMonitor::reportLinkQuality</referencedby>
+        <referencedby refid="class_fw_fsm_1a70b9199eead78c93ba62a89cd54dfe96" compoundref="fsm_8cpp" startline="173" endline="177">FwFsm::ReportOtaUpdateActive</referencedby>
+        <referencedby refid="class_lte_monitor_1a019b275f1e08dd596c3e2621002eaee3" compoundref="lte__monitor_8cpp" startline="596" endline="600">LteMonitor::reportPsmAct</referencedby>
+        <referencedby refid="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" compoundref="power__mgr_8cpp" startline="89" endline="93">PowerMgr::reportResetCause</referencedby>
+        <referencedby refid="class_shtcx_1a2a8129102eab0745dbd35323202addcc" compoundref="shtcx_8cpp" startline="219" endline="224">Shtcx::reportTemperature</referencedby>
+        <referencedby refid="class_lte_monitor_1a0ea3d7720052aaf3a4beec85f8a4e817" compoundref="lte__monitor_8cpp" startline="532" endline="536">LteMonitor::reportTemperature</referencedby>
+        <referencedby refid="class_battery_mgr_1ac201955d3467a5b67075856435290afc" compoundref="batt__mgr_8cpp" startline="90" endline="94">BatteryMgr::reqAdcReport</referencedby>
+        <referencedby refid="class_power_mgr_x1_1ae7817820b13ebcb1ea023212d05c74ca" compoundref="power__mgr__x1_8cpp" startline="55" endline="60">PowerMgrX1::reqBoostConverter</referencedby>
+        <referencedby refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">DispTask::reqBwFiltData</referencedby>
+        <referencedby refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">HttpConnector::reqData</referencedby>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">DispTask::reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">DispTask::reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">DispTask::reqFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">DispTask::reqRawData</referencedby>
+        <referencedby refid="class_http_connector_1a8fb8ecc93c7595585ebf437ea82b631e" compoundref="http__connector_8cpp" startline="551" endline="555">HttpConnector::reqRawDataStatus</referencedby>
+        <referencedby refid="class_power_mgr_1af50a5d25bd752742525e9d960a36dd01" compoundref="power__mgr_8cpp" startline="76" endline="80">PowerMgr::reqRmsReport</referencedby>
+        <referencedby refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">DispTask::reqSResultData</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">DispTask::reqSResultWrite</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1a37a90858b1254def27b1a720965ca1d8" compoundref="update__ctrl_8cpp" startline="139" endline="143">FwUpdCtrl::requestDownload</referencedby>
+        <referencedby refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">AdxlDataStore::sendBwFiltData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">AdxlDataStore::sendDispData</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">DispTask::sendDispStatistics</referencedby>
+        <referencedby refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" compoundref="adxl__store_8cpp" startline="899" endline="927">AdxlDataStore::sendFwFiltData</referencedby>
+        <referencedby refid="class_lte_connector_1a6fcfc5dbae182b52c87b34bd86bd13fb" compoundref="lte__connector_8cpp" startline="294" endline="299">LteConnector::sendMsg2OwnMbox</referencedby>
+        <referencedby refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" compoundref="adxl__store_8cpp" startline="817" endline="845">AdxlDataStore::sendRawData</referencedby>
+        <referencedby refid="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" compoundref="adxl__store_8cpp" startline="986" endline="1016">AdxlDataStore::sendSResultData</referencedby>
+        <referencedby refid="class_adxl_data_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" compoundref="adxl__store_8cpp" startline="1362" endline="1372">AdxlDataStore::shell_dump</referencedby>
+        <referencedby refid="class_rms_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" compoundref="rms__store_8cpp" startline="226" endline="236">RmsStore::shell_dump</referencedby>
+        <referencedby refid="class_adxl_data_store_1a23c20614e69310fd2f68716b7acbec7d" compoundref="adxl__store_8cpp" startline="1380" endline="1388">AdxlDataStore::shell_dump_bytes</referencedby>
+        <referencedby refid="class_adxl_data_store_1ae932af578a253573f31124da08402ea1" compoundref="adxl__store_8cpp" startline="1414" endline="1422">AdxlDataStore::shell_dump_disp</referencedby>
+        <referencedby refid="class_adxl_data_store_1a128fd2feb07d2261c0968b8659488c61" compoundref="adxl__store_8cpp" startline="1397" endline="1405">AdxlDataStore::shell_dump_filt</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">HttpConnector::StartHttpDispDataTransmission</referencedby>
+        <referencedby refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" compoundref="http__connector_8cpp" startline="491" endline="504">HttpConnector::StartHttpRawDataTransmission</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">AdxlDataStore::storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">AdxlDataStore::storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">AdxlDataStore::storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1af67bd3264b53e5e891c6700879482957" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMsg</definition>
+        <argsstring>(enum msgType mType, MboxId senderId, MboxId receiverId, uint8_t u8DataByte)</argsstring>
+        <name>sendMsg</name>
+        <param>
+          <type>enum <ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>mType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>senderId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>receiverId</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8DataByte</declname>
+        </param>
+        <briefdescription>
+<para>Message send convinience function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the sender task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiverId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the receiver task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u8DataByte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 1 byte unsigned data to be send to receiver</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function request a message from message pool, set message type to parameter mType, set senderId as sender, copy the data byte in arbitrary byte parameter p1 and send message to mailbox indicated by parameter receiverId by calling static member function send. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="110" column="17" bodyfile="rtos/mbox.cpp" bodystart="176" bodyend="185"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">PoolElem::p1</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a162de1b36e7d12961295ce50e1e65fd8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMsg</definition>
+        <argsstring>(enum msgType mType, MboxId senderId, MboxId receiverId, int8_t s8DataByte)</argsstring>
+        <name>sendMsg</name>
+        <param>
+          <type>enum <ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>mType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>senderId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>receiverId</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>s8DataByte</declname>
+        </param>
+        <briefdescription>
+<para>Message send convinience function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the sender task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiverId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the receiver task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s8DataByte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 1 byte signed data to be send to receiver</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function request a message from message pool, set message type to parameter mType, set senderId as sender, copy the data byte in arbitrary byte parameter p2 and send message to mailbox indicated by parameter receiverId by calling static member function send. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="112" column="17" bodyfile="rtos/mbox.cpp" bodystart="200" bodyend="209"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" compoundref="mpelem_8h" startline="223">PoolElem::p2</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1a3671963709f80e47c7a27171af92b2ba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMsg</definition>
+        <argsstring>(enum msgType mType, MboxId senderId, MboxId receiverId, uint8_t *pData, uint16_t dataLen)</argsstring>
+        <name>sendMsg</name>
+        <param>
+          <type>enum <ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>mType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>senderId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>receiverId</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <briefdescription>
+<para>Message send convinience function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the sender task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiverId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the receiver task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be send to receiver </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data to be send to receiver in byte</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function request a message from message pool, set message type to parameter mType, set senderId as sender, copy the data in the payload of the message by calling function putData provided by the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class and send message to mailbox indicated by parameter receiverId by calling static member function send. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="114" column="17" bodyfile="rtos/mbox.cpp" bodystart="226" bodyend="235"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" compoundref="mpelem_8cpp" startline="101" endline="108">PoolElem::putData</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mbox_1aab472c8772a942adb140c86f4eb091fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMsg</definition>
+        <argsstring>(enum msgType mType, MboxId senderId, MboxId receiverId, const std::string &amp;str)</argsstring>
+        <name>sendMsg</name>
+        <param>
+          <type>enum <ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>mType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>senderId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">MboxId</ref></type>
+          <declname>receiverId</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Message send convinience function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the sender task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiverId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the receiver task </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be send to receiver</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function request a message from message pool, set message type to parameter mType, set senderId as sender, copy the string in the payload of the message by calling function putString provided by the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class and send message to mailbox indicated by parameter receiverId by calling static member function send. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mbox.h" line="116" column="17" bodyfile="rtos/mbox.cpp" bodystart="251" bodyend="260"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" compoundref="mpelem_8cpp" startline="76" endline="89">PoolElem::putString</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">send</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for mailbox support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The MBox class implements a C++ wrapper for mailbox support using the kernel message queue API provided by the Zephyr operating system. See details in Zephyr <ulink url="https://docs.zephyrproject.org/latest/kernel/services/data_passing/message_queues.html">message queue documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__msgq__apis.html">API documentation</ulink>. The <ref refid="class_mbox" kindref="compound">Mbox</ref> class provides methods to read (receive) objects of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> from the mailbox and to write (send) <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> objects to the mailbox. It provides an enumeration with all maibox ID&apos;s of the system, methods to register a mailbox by storing the pointer to the mailbox in an array, to retrieve the mailbox pointer by given ID Furthermore it provides a method to count the number of objects in the queue and to print statistics. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="1">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>uint32_t</label>
+      </node>
+      <node id="2">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mbox.h" line="62" column="1" bodyfile="rtos/mbox.h" bodystart="62" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_mbox_1a81dbffbc68e17ae5bfc34d4d1f451f17" prot="public" virt="non-virtual"><scope>Mbox</scope><name>count</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7c62e8460701d99d6495f8d125d1bc93" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eADConverter</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501adf216f84add395cce5f0564ed8beda08" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eAdxl37xTask</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af37a207eee727d2ff5a2660920cfefb4" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eAdxlRms</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab4dc4e589837500613a7909deee1c737" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eAdxlStore</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6a7a752cd7371d7581256cdf1056cc09" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eBattMgr</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a2c300b16b26ff1a3c362a26d76ce2931" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eBme68xTask</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501abe8cd9bda40f9a78f53bc3296970f7cc" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eBoostConverter</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eDataManager</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a08983b829204a5f02d19db678b7d28c4" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eDemoTask</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5694dbf9d110513fa0f836215e315809" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eDispTask</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a13a9ef689bb36c60f16064e211f3a680" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eFwUpd</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a8a413f9159c6aea754a4a6825ba8d523" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eFwUpdCtrl</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eHttpConnector</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501aa843b3f2ac3a19d86c6458d34f9dde8b" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eHwMetrics</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5774f90fab30d23d3631e62cc2a616d2" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eLteConnector</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ad649ff5017ffe9536f577aa226689085" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eLteMonitor</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a51060f19a5d0006e2cb20df8786a330b" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eMain</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eMboxMax</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af41394e040d5a50e20f6d54e4e3ee7bf" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eMbReceive</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a32261b0fb4efd2d532c0bb01118bc55c" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eMetrics</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eMqttConnector</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a6bf6ebd882f5adee283d170e8bf0d683" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eNTC</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a18ff7321499e436e48b793d1d6ac2757" prot="public" virt="non-virtual"><scope>Mbox</scope><name>ePowerManager</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a220c27ca6093f6608278ff8dc1f21bdb" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eResetCtrl</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a404cc0223d699ca876c05973ede3b2ad" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eRmsStore</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab7bd866dc75a69cf1e11ef076c71ad94" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eShtcxTask</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab8e2ef5afb6c75b04d76c42e7cd11924" prot="public" virt="non-virtual"><scope>Mbox</scope><name>eSi705xTask</name></member>
+      <member refid="class_mbox_1a784f962493b7498b2f0b560390d82816" prot="public" virt="non-virtual"><scope>Mbox</scope><name>getMaxSlots</name></member>
+      <member refid="class_mbox_1aa4f60789a8ab9bb2e04b37a2e04a4d71" prot="public" virt="non-virtual"><scope>Mbox</scope><name>getMboxById</name></member>
+      <member refid="class_mbox_1ae2450d36dd70d46044e14809901f7af2" prot="private" virt="non-virtual"><scope>Mbox</scope><name>max_slots</name></member>
+      <member refid="class_mbox_1a7b9d649e1f48c4a81e61185885647b7c" prot="public" virt="non-virtual"><scope>Mbox</scope><name>Mbox</name></member>
+      <member refid="class_mbox_1aec6b5f492b41bd08c78e0a6a77e2aa63" prot="public" virt="non-virtual"><scope>Mbox</scope><name>Mbox</name></member>
+      <member refid="class_mbox_1a6477707ed67117dad4daef43e8a5f560" prot="private" virt="non-virtual"><scope>Mbox</scope><name>mBoxAll</name></member>
+      <member refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" prot="public" virt="non-virtual"><scope>Mbox</scope><name>MboxId</name></member>
+      <member refid="class_mbox_1a4cb3fadb6462e3c51946ca46eb196132" prot="private" virt="non-virtual"><scope>Mbox</scope><name>myName</name></member>
+      <member refid="class_mbox_1a464d41b2ed811c8c45148a6eaba3668b" prot="private" virt="non-virtual"><scope>Mbox</scope><name>pQueue</name></member>
+      <member refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" prot="public" virt="non-virtual"><scope>Mbox</scope><name>read</name></member>
+      <member refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" prot="public" virt="non-virtual"><scope>Mbox</scope><name>registerMbox</name></member>
+      <member refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" prot="public" virt="non-virtual"><scope>Mbox</scope><name>send</name></member>
+      <member refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" prot="public" virt="non-virtual"><scope>Mbox</scope><name>sendMsg</name></member>
+      <member refid="class_mbox_1af67bd3264b53e5e891c6700879482957" prot="public" virt="non-virtual"><scope>Mbox</scope><name>sendMsg</name></member>
+      <member refid="class_mbox_1a162de1b36e7d12961295ce50e1e65fd8" prot="public" virt="non-virtual"><scope>Mbox</scope><name>sendMsg</name></member>
+      <member refid="class_mbox_1a3671963709f80e47c7a27171af92b2ba" prot="public" virt="non-virtual"><scope>Mbox</scope><name>sendMsg</name></member>
+      <member refid="class_mbox_1aab472c8772a942adb140c86f4eb091fe" prot="public" virt="non-virtual"><scope>Mbox</scope><name>sendMsg</name></member>
+      <member refid="class_mbox_1a058d67da96727cd260cfdfcd9554a06a" prot="public" virt="non-virtual"><scope>Mbox</scope><name>stats</name></member>
+      <member refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" prot="public" virt="non-virtual"><scope>Mbox</scope><name>write</name></member>
+      <member refid="class_mbox_1a2d2f86b45a6d431eea5f73a1849c22ff" prot="public" virt="virtual"><scope>Mbox</scope><name>~Mbox</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

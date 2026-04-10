@@ -1,0 +1,13 @@
+<map id="send_command" name="send_command">
+<area shape="rect" id="node1" title="Function to send a command to MRAM." alt="" coords="491,107,605,133"/>
+<area shape="rect" id="node2" href="$classspimram.html#a4c258e05757b678d415740cfe2d9c592" title="Function to enter deep power down mode of MRAM." alt="" coords="279,5,443,32"/>
+<area shape="rect" id="node4" href="$classspimram.html#a05230039c2ca0fbaabd8dc3181f83dc6" title="Function to exit deep power down mode of MRAM." alt="" coords="283,157,439,184"/>
+<area shape="rect" id="node7" href="$classspimram.html#aaccd14e38a401a9979170c5addc43e29" title="Function to write multiple bytes to MRAM." alt="" coords="317,56,405,83"/>
+<area shape="rect" id="node10" href="$classspimram.html#a366ab51ac1f5201dda5779fe12b2a52b" title="Function to write MRAM configuration register 1." alt="" coords="108,107,231,133"/>
+<area shape="rect" id="node11" href="$classspimram.html#a4b5e60928853a99f55e507c03d082960" title="Function to write MRAM status register." alt="" coords="302,208,419,235"/>
+<area shape="rect" id="node3" href="$classspimram.html#a8966ac02bccc26d8c63b6257c28c6b3a" title="Function to enter deep power down mode of MRAM." alt="" coords="143,5,196,32"/>
+<area shape="rect" id="node5" href="$classspimram.html#a2cadaffd8a4f13814213a48e5b20cc4d" title="Function to leave deep power down mode of MRAM." alt="" coords="136,157,203,184"/>
+<area shape="rect" id="node6" href="$classspimram.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The initialization function of the SPI MRAM class." alt="" coords="13,157,52,184"/>
+<area shape="rect" id="node8" href="$classspimram.html#ab9d179e656fc5552c392b174d03457f2" title="Function to write multiple bytes into MRAM." alt="" coords="128,56,211,83"/>
+<area shape="rect" id="node9" href="$classspimram.html#af139f30d28b7dc61f5051c0d595af368" title="Function to erase the content of the MRAM." alt="" coords="5,56,60,83"/>
+</map>

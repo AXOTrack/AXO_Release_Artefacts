@@ -1,0 +1,683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_data_manager" kind="class" language="C++" prot="public">
+    <compoundname>DataManager</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="pdata_8h" local="no">pdata.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_manager_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* myTimer</definition>
+        <argsstring></argsstring>
+        <name>myTimer</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> (UNUSED) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="75" column="11" bodyfile="data/pdata.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" compoundref="pdata_8cpp" startline="96" endline="106">DataManager</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_manager_1af2570dd7bace0312470d962f29359fb3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the data manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="76" column="10" bodyfile="data/pdata.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" compoundref="pdata_8cpp" startline="96" endline="106">DataManager</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+        <referencedby refid="class_data_manager_1adc25c829b13636794219a3f61f31f34d" compoundref="pdata_8cpp" startline="78" endline="83">timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" prot="private" static="no" mutable="no">
+        <type><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref></type>
+        <definition>MetricsBuilder metrics</definition>
+        <argsstring></argsstring>
+        <name>metrics</name>
+        <briefdescription>
+<para>Instance of metrics builder helper class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="79" column="20" bodyfile="data/pdata.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">configure</referencedby>
+        <referencedby refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">publishMetrics</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" prot="private" static="no" mutable="no">
+        <type><ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref></type>
+        <definition>MeasurementBuilder measurements</definition>
+        <argsstring></argsstring>
+        <name>measurements</name>
+        <briefdescription>
+<para>Instance of measurement builder helper class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="81" column="24" bodyfile="data/pdata.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">publishMeasurements</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool have_mqtt_connector</definition>
+        <argsstring></argsstring>
+        <name>have_mqtt_connector</name>
+        <briefdescription>
+<para>flag deciding if data are sent to http connector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="83" column="10" bodyfile="data/pdata.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" compoundref="pdata_8cpp" startline="96" endline="106">DataManager</referencedby>
+        <referencedby refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">publishMeasurements</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bDispModeOff</definition>
+        <argsstring></argsstring>
+        <name>bDispModeOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating that displacement calculation is disabled (15 sec raw data storage) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="86" column="10" bodyfile="data/pdata.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">configure</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rms_z_thres</definition>
+        <argsstring></argsstring>
+        <name>rms_z_thres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RMS Z Threshold to enable / disable Raw/Displacement data transmission and displacement calculation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="89" column="12" bodyfile="data/pdata.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">configure</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_manager_1af88c046ebc43d084f223a0f735428663" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataManager</definition>
+        <argsstring>(const char *name=&quot;??&quot;, bool have_mqtt_connector=true)</argsstring>
+        <name>DataManager</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>have_mqtt_connector</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Data manager task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>have_mqtt_connector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indicationg if MQTT Connector is used (X1 devices) or not (MINI devices)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register the mailbox of the AD converter task and allocates and initialize the cyclic timer for <xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>with duration of 10 ms and period of 20 ms.</para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="64" column="14" bodyfile="data/pdata.cpp" bodystart="96" bodyend="106"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" compoundref="mbox_8h" startline="82">Mbox::eDataManager</references>
+        <references refid="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" compoundref="pdata_8h" startline="83">have_mqtt_connector</references>
+        <references refid="class_data_manager_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="pdata_8h" startline="75">myTimer</references>
+        <references refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" compoundref="pdata_8h" startline="76">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_data_manager_1aaa25421e04a507bcced8f9bb02af5213" compoundref="pdata_8cpp" startline="60" endline="66">timer_cb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_data_manager_1ac2d09b38680ac9a38866e3eeb93f9d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataManager</definition>
+        <argsstring>()=delete</argsstring>
+        <name>DataManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="66" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_manager_1a6fbfb5f67ba6ffa1f6feed3679bf827d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~DataManager</definition>
+        <argsstring>()</argsstring>
+        <name>~DataManager</name>
+        <briefdescription>
+<para>Data manager task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="67" column="13" bodyfile="data/pdata.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void) override</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Data manager task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function directly enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eLteReport: Received report request, change sender to eDataManager and forward request to LTE monitor task. The pointer pElem will be set to 0, to prevent releasing the message.</para>
+</listitem><listitem><para>eLteLinkQuality: Add payload to metrics JSON string by calling function add provided by metricsBuilder class. In case metrics JSON string is complete, finalize and publish it by calling function finalize of metricsBuilder class and member function publishMetrics. Finally metrics JSON string will be cleared by calling function reset also provided by metricsBuilder class.</para>
+</listitem><listitem><para>eLteBattVoltage: same as eLteLinkQuality</para>
+</listitem><listitem><para>eLteTemperature: same as eLteLinkQuality</para>
+</listitem><listitem><para>eLtePsmAct: same as eLteLinkQuality</para>
+</listitem><listitem><para>eResetCause: same as eLteLinkQuality</para>
+</listitem><listitem><para>eBootCnt: same as eLteLinkQuality</para>
+</listitem><listitem><para>eAdcData: same as eLteLinkQuality</para>
+</listitem><listitem><para>eShtcxTemperature: same as eLteLinkQuality</para>
+</listitem><listitem><para>eShtcxHumidity: same as eLteLinkQuality</para>
+</listitem><listitem><para>eLteIMSI: same as eLteLinkQuality</para>
+</listitem><listitem><para>eLteFwVersion: same as eLteLinkQuality</para>
+</listitem><listitem><para>eHwMetrics: same as eLteLinkQuality</para>
+</listitem><listitem><para>eAdxl37xRmsData: Add RMS values to payload variable of class measurement and store hit values in member varaibles of this class</para>
+</listitem><listitem><para>eDispStatistics: same as eRmsReport</para>
+</listitem><listitem><para>eMaxXYZ: Add x, y and z maximum values to member variables of measurement class</para>
+</listitem><listitem><para>eRmsReport: In case measurement JSON string is complete, finalize and publish it by calling function finalize of measurementBuilder class and member function publishMeasurements. Finally measurement JSON string will be cleared by calling function reset also provided by measurementBuilder class.</para>
+</listitem><listitem><para>eDispStatistics: In case measurement JSON string is complete, finalize and publish it by calling function finalize of measurementBuilder class and member function publishMeasurements. Finally measurement JSON string will be cleared by calling function reset also provided by measurementBuilder class. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><xrefsect id="todo_1_todo000005"><xreftitle>Todo</xreftitle><xrefdescription><para>remove unused timer ? </para>
+</xrefdescription></xrefsect></para>
+        </inbodydescription>
+        <location file="data/pdata.h" line="68" column="10" bodyfile="data/pdata.cpp" bodystart="267" bodyend="352"/>
+        <references refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">MeasurementBuilder::add</references>
+        <references refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">MetricsBuilder::add</references>
+        <references refid="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" compoundref="pdata_8h" startline="86">bDispModeOff</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" compoundref="mpelem_8h" startline="86">eAdcData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" compoundref="mpelem_8h" startline="106">eBootCnt</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" compoundref="mbox_8h" startline="82">Mbox::eDataManager</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" compoundref="mpelem_8h" startline="135">eDispStatistics</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" compoundref="mpelem_8h" startline="85">eHwMetrics</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9b4ebe21df63da73fd88095d52108213" compoundref="mpelem_8h" startline="44">eLteBattVoltage</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafc94700321744cf389c08351f616eff9" compoundref="mpelem_8h" startline="51">eLteFwVersion</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4fdd614c2d67ec152bd599336e8b59a5" compoundref="mpelem_8h" startline="47">eLteIMSI</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" compoundref="mpelem_8h" startline="42">eLteLinkQuality</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ad649ff5017ffe9536f577aa226689085" compoundref="mbox_8h" startline="71">Mbox::eLteMonitor</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf9d3717bc9984a4608b9de3054a64f33" compoundref="mpelem_8h" startline="45">eLtePsmAct</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba952b403a2dbb1541de1754b39dca5a04" compoundref="mpelem_8h" startline="48">eLteReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2eed0a4913bbe04d264158625760ed70" compoundref="mpelem_8h" startline="43">eLteTemperature</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" compoundref="mpelem_8h" startline="79">eMaxXYZ</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa9d7bd6e7db2ec4192ba05845f0a01c3" compoundref="mpelem_8h" startline="105">eResetCause</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f2350e47b38b05b74e3b66e4ba1353d" compoundref="mpelem_8h" startline="108">eRmsReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba153fbb27bae81bd546a1bbde27a299e6" compoundref="mpelem_8h" startline="60">eShtcxHumidity</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" compoundref="mpelem_8h" startline="59">eShtcxTemperature</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">MeasurementBuilder::finalize</references>
+        <references refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">MetricsBuilder::finalize</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">MetricsBuilder::isComplete</references>
+        <references refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" compoundref="measurement_8cpp" startline="127" endline="160">MeasurementBuilder::isComplete</references>
+        <references refid="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" compoundref="pdata_8h" startline="81">measurements</references>
+        <references refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" compoundref="pdata_8h" startline="79">metrics</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" compoundref="pdata_8h" startline="76">pInMbox</references>
+        <references refid="class_metrics_builder_1a7e8442e7139d840c15bdee83789f7ae8" compoundref="metric_8cpp" startline="722" endline="725">MetricsBuilder::print</references>
+        <references refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">publishMeasurements</references>
+        <references refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">publishMetrics</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">MeasurementBuilder::reset</references>
+        <references refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">MetricsBuilder::reset</references>
+        <references refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" compoundref="pdata_8h" startline="89">rms_z_thres</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_data_manager_1adc25c829b13636794219a3f61f31f34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>()</argsstring>
+        <name>timer1_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the timer (UNUSED) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chmask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel bitmask</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initializes the static pool element e1 with message type eTimerExpired, set AD converter task as sender, copy channel bitmask chmask in the payload of the message and put message into own (data managers&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="70" column="10" bodyfile="data/pdata.cpp" bodystart="78" bodyend="83"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" compoundref="pdata_8h" startline="76">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_data_manager_1aaa25421e04a507bcced8f9bb02af5213" compoundref="pdata_8cpp" startline="60" endline="66">timer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void configure</definition>
+        <argsstring>()</argsstring>
+        <name>configure</name>
+        <reimplements refid="class_task_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplements>
+        <briefdescription>
+<para>Data manager virtual task configure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The configure function overloads the configure function of the task base class. It retrieves the configuration related to sensors by call of the function getCfgSensor to get the sensor threshold values, retrieve the configuration version by call of function getCfgGeneral, retrieve the configuration related to datalog by call of function getCfgDatalog and retrieve the configuration related to metrics by call of function getCfgMetrics. Configuration version, metrics interval, thresholds and activation flags will be stored in internal string variables of the <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> class by calling its related setter functions. <linebreak/>
+Private variable bDispModeOff will be set according to configuration string dispmodeoff and private variable rms_z_thres according to rms_thres. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="72" column="18" bodyfile="data/pdata.cpp" bodystart="134" bodyend="173"/>
+        <references refid="struct__st_cfg_sensor_1a1c3f263cd40107d822599e0480a1687f" compoundref="config_8h" startline="173">_stCfgSensor::actthres</references>
+        <references refid="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" compoundref="pdata_8h" startline="86">bDispModeOff</references>
+        <references refid="struct__st_cfg_sensor_1af360798e10a59792b4b0c7649a42bcdc" compoundref="config_8h" startline="174">_stCfgSensor::deactthres</references>
+        <references refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" compoundref="config_8h" startline="189">_stCfgDatalog::dispmodeoff</references>
+        <references refid="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" compoundref="config_8h" startline="194">_stCfgDatalog::disptransferon</references>
+        <references refid="config_8h_1ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3" compoundref="config_8h" startline="158">eSensor_adxl372</references>
+        <references refid="class_config_1ae6395cad5f0583a45336e008ea4d05fe" compoundref="config_8cpp" startline="756" endline="758">Config::getCfgDatalog</references>
+        <references refid="class_config_1a71f686389bd27e3ca44ab2587ccea9fa" compoundref="config_8cpp" startline="714" endline="716">Config::getCfgGeneral</references>
+        <references refid="class_config_1af106da5a3b67f694963b29186df4b3c1" compoundref="config_8cpp" startline="728" endline="730">Config::getCfgMetrics</references>
+        <references refid="class_config_1a62de71d61d609823188d5f85550de01d" compoundref="config_8cpp" startline="769" endline="772">Config::getCfgSensor</references>
+        <references refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" compoundref="keygen_8cpp" startline="261" endline="273">KeyGen::getPublicKey</references>
+        <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
+        <references refid="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" compoundref="keygen_8cpp" startline="183" endline="187">KeyGen::inst</references>
+        <references refid="struct__st_cfg_metrics_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="config_8h" startline="179">_stCfgMetrics::interval</references>
+        <references refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" compoundref="config_8h" startline="198">_stCfgDatalog::max_raw_per_day</references>
+        <references refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" compoundref="pdata_8h" startline="79">metrics</references>
+        <references refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" compoundref="config_8h" startline="192">_stCfgDatalog::rawtransferon</references>
+        <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
+        <references refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" compoundref="pdata_8h" startline="89">rms_z_thres</references>
+        <references refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" compoundref="metric_8cpp" startline="267" endline="269">MetricsBuilder::set_max_raw_per_day</references>
+        <references refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" compoundref="metric_8cpp" startline="255" endline="257">MetricsBuilder::set_Z_RmsThres</references>
+        <references refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" compoundref="metric_8cpp" startline="171" endline="173">MetricsBuilder::setActivationThres</references>
+        <references refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" compoundref="metric_8cpp" startline="159" endline="161">MetricsBuilder::setConfigVersion</references>
+        <references refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" compoundref="metric_8cpp" startline="183" endline="185">MetricsBuilder::setDeactivationThres</references>
+        <references refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" compoundref="metric_8cpp" startline="195" endline="197">MetricsBuilder::setDispModeOffFlag</references>
+        <references refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" compoundref="metric_8cpp" startline="219" endline="221">MetricsBuilder::setDispTransferOnFlag</references>
+        <references refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" compoundref="metric_8cpp" startline="243" endline="245">MetricsBuilder::setMetricsInterval</references>
+        <references refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" compoundref="metric_8cpp" startline="231" endline="233">MetricsBuilder::setPublicKey</references>
+        <references refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" compoundref="metric_8cpp" startline="207" endline="209">MetricsBuilder::setRawTransferOnFlag</references>
+        <references refid="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" compoundref="config_8h" startline="166">_stCfgGeneral::version</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_data_manager_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the timer (UNUSED) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call timer expired member function timer1_expired with the channel bitmask as parameter extracted from the user-specific data of type <ref refid="struct_adc_timer_info" kindref="compound">AdcTimerInfo</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="69" column="17" bodyfile="data/pdata.cpp" bodystart="60" bodyend="66"/>
+        <references refid="class_data_manager_1adc25c829b13636794219a3f61f31f34d" compoundref="pdata_8cpp" startline="78" endline="83">timer1_expired</references>
+        <referencedby refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" compoundref="pdata_8cpp" startline="96" endline="106">DataManager</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publishMeasurements</definition>
+        <argsstring>()</argsstring>
+        <name>publishMeasurements</name>
+        <briefdescription>
+<para>Send function to publish measurement JSON string to MQTT connector task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function retrieve the measurement JSON string from the <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> class, request a message from message pool, copy the measurement JSON string in the payload of the message by calling function putString of the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class, set message type to eMeasurements, set eDataManager as sender and send message to MQTT connector mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="92" column="10" bodyfile="data/pdata.cpp" bodystart="207" bodyend="219"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac7777da7eda4a8153f23a66a4b84e862" compoundref="mpelem_8h" startline="80">eMeasurements</references>
+        <references refid="class_measurement_builder_1aed45c29f03bf0960ee782bbe667eb665" compoundref="measurement_8cpp" startline="381" endline="384">MeasurementBuilder::getPayload</references>
+        <references refid="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" compoundref="pdata_8h" startline="83">have_mqtt_connector</references>
+        <references refid="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" compoundref="pdata_8h" startline="81">measurements</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void publishMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>publishMetrics</name>
+        <briefdescription>
+<para>Send function to publish metrics JSON string to MQTT connector task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function retrieve the metrics JSON string from the <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> class, request a message from message pool, copy the metrics JSON string in the payload of the message by calling function putString of the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class, set message type to eMetrics, set eDataManager as sender and send message to MQTT connector mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/pdata.h" line="93" column="10" bodyfile="data/pdata.cpp" bodystart="184" bodyend="195"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba32261b0fb4efd2d532c0bb01118bc55c" compoundref="mpelem_8h" startline="81">eMetrics</references>
+        <references refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" compoundref="metric_8cpp" startline="711" endline="714">MetricsBuilder::getPayload</references>
+        <references refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" compoundref="pdata_8h" startline="79">metrics</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_data_manager" kindref="compound">DataManager</ref> class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The data manager class is responsible to collect metrics and measurement data, to construct the metrics and measurement JSON strings with support of the metrics builder class and the measurement builder class and to publish metrics and measurement JSON strings by sending them to the MQTT connector task. It provides two publish methods, one for metrics and the other one for measurement data. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>LTE monitor task</para>
+</listitem><listitem><para>LTE connector task</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem><listitem><para>AD converter task</para>
+</listitem><listitem><para><ref refid="class_shtcx" kindref="compound">Shtcx</ref> task</para>
+</listitem><listitem><para>HW metrics task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>MQTT connector task </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>DataManager</label>
+        <link refid="class_data_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>MeasurementBuilder</label>
+        <link refid="class_measurement_builder"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-max_rms_z</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-have_http_connector</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-payload</edgelabel>
+          <edgelabel>-sDispMax</edgelabel>
+          <edgelabel>-sDispMin</edgelabel>
+          <edgelabel>-sDispP2P</edgelabel>
+          <edgelabel>-sMaxX</edgelabel>
+          <edgelabel>-sMaxY</edgelabel>
+          <edgelabel>-sMaxZ</edgelabel>
+          <edgelabel>-timestamp</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-crit_hit_cnt</edgelabel>
+          <edgelabel>-med_hit_cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>vector&lt; int16_t &gt;</label>
+      </node>
+      <node id="15">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="12">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>double</label>
+      </node>
+      <node id="16">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="13">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="14" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>MetricsBuilder</label>
+        <link refid="class_metrics_builder"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-act_thres</edgelabel>
+          <edgelabel>-adxl_status</edgelabel>
+          <edgelabel>-boot_cnt</edgelabel>
+          <edgelabel>-config_version</edgelabel>
+          <edgelabel>-deact_thres</edgelabel>
+          <edgelabel>-disp_mode_off</edgelabel>
+          <edgelabel>-disp_transfer_on</edgelabel>
+          <edgelabel>-edrx_ptw</edgelabel>
+          <edgelabel>-edrx_time</edgelabel>
+          <edgelabel>-heap_free</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="1">
+        <label>DataManager</label>
+        <link refid="class_data_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-rms_z_thres</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-measurements</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-bDispModeOff</edgelabel>
+          <edgelabel>-have_mqtt_connector</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-metrics</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-myTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="19">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/pdata.h" line="62" column="1" bodyfile="data/pdata.h" bodystart="62" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" prot="private" virt="non-virtual"><scope>DataManager</scope><name>bDispModeOff</name></member>
+      <member refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>DataManager</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>DataManager</scope><name>create</name></member>
+      <member refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" prot="public" virt="non-virtual"><scope>DataManager</scope><name>DataManager</name></member>
+      <member refid="class_data_manager_1ac2d09b38680ac9a38866e3eeb93f9d3d" prot="public" virt="non-virtual"><scope>DataManager</scope><name>DataManager</name></member>
+      <member refid="class_data_manager_1a9cb7138ecd2fbb8ed05820afa37deb82" prot="private" virt="non-virtual"><scope>DataManager</scope><name>have_mqtt_connector</name></member>
+      <member refid="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" prot="private" virt="non-virtual"><scope>DataManager</scope><name>measurements</name></member>
+      <member refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" prot="private" virt="non-virtual"><scope>DataManager</scope><name>metrics</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>DataManager</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>DataManager</scope><name>myName</name></member>
+      <member refid="class_data_manager_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="private" virt="non-virtual"><scope>DataManager</scope><name>myTimer</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>DataManager</scope><name>operator=</name></member>
+      <member refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" prot="private" virt="non-virtual"><scope>DataManager</scope><name>pInMbox</name></member>
+      <member refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" prot="private" virt="non-virtual"><scope>DataManager</scope><name>publishMeasurements</name></member>
+      <member refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" prot="private" virt="non-virtual"><scope>DataManager</scope><name>publishMetrics</name></member>
+      <member refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" prot="private" virt="non-virtual"><scope>DataManager</scope><name>rms_z_thres</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>DataManager</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>DataManager</scope><name>start</name></member>
+      <member refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" prot="public" virt="virtual"><scope>DataManager</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>DataManager</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>DataManager</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>DataManager</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>DataManager</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>DataManager</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>DataManager</scope><name>tid</name></member>
+      <member refid="class_data_manager_1adc25c829b13636794219a3f61f31f34d" prot="public" virt="non-virtual"><scope>DataManager</scope><name>timer1_expired</name></member>
+      <member refid="class_data_manager_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>DataManager</scope><name>timer_cb</name></member>
+      <member refid="class_data_manager_1a6fbfb5f67ba6ffa1f6feed3679bf827d" prot="public" virt="virtual"><scope>DataManager</scope><name>~DataManager</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>DataManager</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

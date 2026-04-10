@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="power__mgr_8h" kind="file" language="C++">
+    <compoundname>power_mgr.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <includedby refid="adxl__store_8h" local="yes">data/adxl_store.h</includedby>
+    <includedby refid="boost_8h" local="yes">drv/pm/boost.h</includedby>
+    <includedby refid="power__mgr_8cpp" local="yes">pm/power_mgr.cpp</includedby>
+    <includedby refid="power__mgr__x1_8h" local="yes">pm/power_mgr_x1.h</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="1">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="4">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="1">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="3">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="14">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="8">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="12">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="10">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="13">
+        <label>pm/power_mgr_x1.h</label>
+        <link refid="power__mgr__x1_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_power_mgr" prot="public">PowerMgr</innerclass>
+    <briefdescription>
+<para>Header file of power manager base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="power__mgr_8h_1power_mgr"/> <simplesect kind="par"><title>Detailed Description </title><para>The tasks of the power manager base class are:<itemizedlist>
+<listitem><para>Controlling the metrics transmission interval using a timer</para>
+</listitem><listitem><para>Providing method to switch off UART</para>
+</listitem><listitem><para>Register and notify metrics providing tasks</para>
+</listitem><listitem><para>Reporting reset cause and boot counter</para>
+</listitem><listitem><para>Providing task function to derived classes</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_POWER_MGR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_POWER_MGR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_power_mgr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_power_mgr" kindref="compound">PowerMgr</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59" refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8" kindref="member">PmState</ref><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a1b2bdd214ba5b3894ce0acab66636ebf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a1b2bdd214ba5b3894ce0acab66636ebf" kindref="member">eOff</ref><sp/>=<sp/>0,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8aae61852e6fb193a21c97fb25fd5a13f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8aae61852e6fb193a21c97fb25fd5a13f7" kindref="member">eOn</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a8ed96e2c97ef93c4ca0afe5fbcba625c" kindref="member">kNumStates</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a8ed96e2c97ef93c4ca0afe5fbcba625c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191" kindref="member">PmTmo</ref><sp/>{</highlight></codeline>
+<codeline lineno="70" refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a068ffcca4c58b63a81a2f09ac5159f12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a068ffcca4c58b63a81a2f09ac5159f12" kindref="member">eMetricsTmo</ref><sp/>=<sp/>2<sp/>*<sp/>60<sp/>*<sp/>60,<sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a668eee6d24ede1f83a39e049e5e76c35" kindref="member">kNumTimerEvents</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a668eee6d24ede1f83a39e049e5e76c35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a423ed9f71c1ca2d14838b66d23dbc4fe" kindref="member">PowerMgr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1ad20085320c2bdbeb172edf02563f827e" kindref="member">~PowerMgr</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77" refid="class_power_mgr_1ab8b5bdce7b224850fa9971ea40124828" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1ab8b5bdce7b224850fa9971ea40124828" kindref="member">taskInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78" refid="class_power_mgr_1ad479bd08691837a4c2ea0f4b28a79234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/><ref refid="class_power_mgr_1ad479bd08691837a4c2ea0f4b28a79234" kindref="member">message_handler</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1ab068681b97599ab0bf7d11b9f69a2d72" kindref="member">MetricsTxTimer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" kindref="member">MetricsTxTimer_expired</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a4a9097cc9610c3987e92ed8016a4f970" kindref="member">uart0_off</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a81fdf3e6a3841bfb2294f792e94a0b38" kindref="member">uart0_set_enable</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1af50a5d25bd752742525e9d960a36dd01" kindref="member">reqRmsReport</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" kindref="member">reportResetCause</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" kindref="member">reportBootCnt</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" kindref="member">registerMetricProvider</ref>(uint8_t<sp/>mboxId,<sp/>uint16_t<sp/>mtype);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1aacbc79b9fec14a8eb014564c958b8b95" kindref="member">metricProviderNotify</ref>(uint8_t<sp/>mboxId,<sp/>uint16_t<sp/>mtype);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" kindref="member">metricProviderNotifyAll</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" kindref="member">MetricsTxTimer</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" kindref="member">metricsTmo</ref>;<sp/></highlight></codeline>
+<codeline lineno="98" refid="class_power_mgr_1a5ac0b16c31813f87b98e97cc5bacd64a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_power_mgr_1a5ac0b16c31813f87b98e97cc5bacd64a" kindref="member">reason</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" kindref="member">reason_str</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" kindref="member">boot_cnt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint8_t&gt;<sp/><ref refid="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" kindref="member">metricProviders</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;uint16_t&gt;<sp/><ref refid="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" kindref="member">metricType</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="106" refid="class_power_mgr_1a423ed9f71c1ca2d14838b66d23dbc4fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_power_mgr_1a423ed9f71c1ca2d14838b66d23dbc4fe" kindref="member">PowerMgr</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_POWER_MGR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="pm/power_mgr.h"/>
+  </compounddef>
+</doxygen>

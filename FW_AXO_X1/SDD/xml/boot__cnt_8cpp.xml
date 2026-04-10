@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="boot__cnt_8cpp" kind="file" language="C++">
+    <compoundname>boot_cnt.cpp</compoundname>
+    <includes refid="boot__cnt_8h" local="yes">pm/boot_cnt.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includes refid="flashfs_8h" local="yes">fs/flashfs.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>zephyr/fs/fs.h</label>
+      </node>
+      <node id="1">
+        <label>pm/boot_cnt.cpp</label>
+        <link refid="boot__cnt_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pm/boot_cnt.h</label>
+        <link refid="boot__cnt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="5">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="9">
+        <label>zephyr/storage/flash_map.h</label>
+      </node>
+      <node id="6">
+        <label>fs/flashfs.h</label>
+        <link refid="flashfs_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>zephyr/fs/littlefs.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="boot__cnt_8cpp_1a5981d35238f477c73ef469462cee9c64" prot="public" static="no">
+        <type><ref refid="class_flash_f_s" kindref="compound">FlashFS</ref></type>
+        <definition>using fs =  FlashFS</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.cpp" line="33" column="1" bodyfile="pm/boot_cnt.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="boot__cnt_8cpp_1a1ccf5b5cde9cf5721f2d1b0dff6faa9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(bootcnt, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>bootcnt</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.cpp" line="31" column="1" declfile="pm/boot_cnt.cpp" declline="31" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of boot count class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="boot__cnt_8h_1boot_cnt" kindref="member">boot_cnt</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="boot__cnt_8h" kindref="compound">pm/boot_cnt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="flashfs_8h" kindref="compound">fs/flashfs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/pm/src/stubs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="boot__cnt_8cpp_1a1ccf5b5cde9cf5721f2d1b0dff6faa9a" refkind="member"><highlight class="normal"><ref refid="boot__cnt_8cpp_1a1ccf5b5cde9cf5721f2d1b0dff6faa9a" kindref="member">LOG_MODULE_REGISTER</ref>(bootcnt,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="boot__cnt_8cpp_1a5981d35238f477c73ef469462cee9c64" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s" kindref="compound">fs</ref><sp/>=<sp/><ref refid="class_flash_f_s" kindref="compound">FlashFS</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" refkind="member"><highlight class="normal"><ref refid="class_boot_cnt" kindref="compound">BootCnt</ref>*<sp/><ref refid="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" kindref="member">BootCnt::inst</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BootCnt::inst&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_boot_cnt" kindref="compound">BootCnt</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;myInstance;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" refkind="member"><highlight class="normal"><ref refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" kindref="member">BootCnt::BootCnt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fname)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;BootCnt::BootCnt<sp/>fname:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>fname);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fs_file_t*<sp/>f<sp/>=<sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" kindref="member">file_open</ref>(fname,<sp/>FS_O_CREATE<sp/>|<sp/>FS_O_RDWR);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" kindref="member">file_read</ref>(f,<sp/>&amp;<ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;boot_count:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>on<sp/>erased<sp/>flash<sp/>boot_count<sp/>may<sp/>be<sp/>negative</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref><sp/>&lt;<sp/>0)<sp/><ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>boot<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref><sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>back<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fs::inst().file_tell(f);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" kindref="member">file_seek</ref>(f,<sp/>0,<sp/>FS_SEEK_SET);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" kindref="member">file_write</ref>(f,<sp/>&amp;<ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" kindref="member">file_sync</ref>(f);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" kindref="member">file_close</ref>(f);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_boot_cnt_1aeed08e35cc4b842201788b36d45cc55f" refkind="member"><highlight class="normal"><ref refid="class_boot_cnt_1aeed08e35cc4b842201788b36d45cc55f" kindref="member">BootCnt::~BootCnt</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;BootCnt::~BootCnt<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" refkind="member"><highlight class="normal">int32_t<sp/><ref refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" kindref="member">BootCnt::get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BootCnt::get&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>cnt<sp/>=<sp/><ref refid="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" kindref="member">BootCnt::inst</ref>()-&gt;<ref refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" kindref="member">get</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;boot<sp/>cnt:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>cnt);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;main:<sp/>sleeping\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(10));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pm/boot_cnt.cpp"/>
+  </compounddef>
+</doxygen>

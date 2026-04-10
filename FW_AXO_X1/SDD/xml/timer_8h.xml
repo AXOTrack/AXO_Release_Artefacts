@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="timer_8h" kind="file" language="C++">
+    <compoundname>timer.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="hw__metrics_8cpp" local="yes">data/hw_metrics.cpp</includedby>
+    <includedby refid="pdata_8h" local="yes">data/pdata.h</includedby>
+    <includedby refid="rms_8cpp" local="yes">data/rms.cpp</includedby>
+    <includedby refid="adconverter_8cpp" local="yes">drv/adc/adconverter.cpp</includedby>
+    <includedby refid="batt__mgr_8cpp" local="yes">drv/adc/batt_mgr.cpp</includedby>
+    <includedby refid="shtcx_8cpp" local="yes">drv/i2c/shtcx.cpp</includedby>
+    <includedby refid="boost_8cpp" local="yes">drv/pm/boost.cpp</includedby>
+    <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
+    <includedby refid="lte__monitor_8cpp" local="yes">modem/lte_monitor.cpp</includedby>
+    <includedby refid="http__connector_8h" local="yes">net/http_connector.h</includedby>
+    <includedby refid="lte__connector_8cpp" local="yes">net/lte_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8h" local="yes">net/mqtt_connector.h</includedby>
+    <includedby refid="power__mgr_8cpp" local="yes">pm/power_mgr.cpp</includedby>
+    <includedby refid="power__mgr_8h" local="yes">pm/power_mgr.h</includedby>
+    <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
+    <includedby refid="power__mgr__x1_8h" local="yes">pm/power_mgr_x1.h</includedby>
+    <includedby refid="reset__ctrl_8cpp" local="yes">pm/reset_ctrl.cpp</includedby>
+    <includedby refid="timer_8cpp" local="yes">rtos/timer.cpp</includedby>
+    <includedby refid="fsm_8cpp" local="yes">update/fsm.cpp</includedby>
+    <includedby refid="update_8cpp" local="yes">update/update.cpp</includedby>
+    <includedby refid="update__ctrl_8cpp" local="yes">update/update_ctrl.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="32">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="21">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>rtos/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="19">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="24">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="13">
+        <label>net/http_connector.h</label>
+        <link refid="http__connector_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="22">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/pdata.h</label>
+        <link refid="pdata_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="23">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="30">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="17">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="27">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="14">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="18">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="25">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="16">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="12">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="11">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="26">
+        <label>pm/power_mgr_x1.h</label>
+        <link refid="power__mgr__x1_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="20">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="6">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="8">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_timer" prot="public">Timer</innerclass>
+    <briefdescription>
+<para>Header file of RTOS wrapper class <ref refid="class_timer" kindref="compound">Timer</ref> for software timer support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="timer_8h_1timer"/> <simplesect kind="par"><title>Detailed Description </title><para>RTOS wrapper for software timer support</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_timer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer_1a6004025d2ecf76d515770885b02640d4" kindref="member">Timer</ref>(k_timer_expiry_t<sp/>cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pUser,<sp/>uint32_t<sp/><ref refid="class_timer_1a49f89df0e765bee620c337c51d397eff" kindref="member">duration</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref><sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="40" refid="class_timer_1a6004025d2ecf76d515770885b02640d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer_1a6004025d2ecf76d515770885b02640d4" kindref="member">Timer</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="class_timer_1a7837d31d1aeda174eb9e3fdb625a73f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_timer_1a7837d31d1aeda174eb9e3fdb625a73f5" kindref="member">~Timer</ref>()<sp/>{}<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_timer_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_timer_1a60de64d75454385b23995437f1d72669" kindref="member">start</ref>(uint32_t<sp/><ref refid="class_timer_1a49f89df0e765bee620c337c51d397eff" kindref="member">duration</ref>,<sp/>uint32_t<sp/><ref refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_timer_1a8c528baf37154d347366083f0f816846" kindref="member">stop</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" kindref="member">restart</ref>();</highlight></codeline>
+<codeline lineno="46" refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_timer_1a0c4565c97488da56e47736f7b693407b" kindref="member">reconfigure</ref>(uint32_t<sp/><ref refid="class_timer_1a49f89df0e765bee620c337c51d397eff" kindref="member">duration</ref>,<sp/>uint32_t<sp/><ref refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">k_timer<sp/><ref refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" kindref="member">timer_handle</ref>;<sp/></highlight></codeline>
+<codeline lineno="50" refid="class_timer_1a49f89df0e765bee620c337c51d397eff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_timer_1a49f89df0e765bee620c337c51d397eff" kindref="member">duration</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" kindref="member">period</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_TIMER_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/timer.h"/>
+  </compounddef>
+</doxygen>

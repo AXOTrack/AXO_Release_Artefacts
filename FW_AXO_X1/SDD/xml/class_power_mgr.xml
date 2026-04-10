@@ -1,0 +1,849 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_power_mgr" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>PowerMgr</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <derivedcompoundref refid="class_power_mgr_x1" prot="public" virt="non-virtual">PowerMgrX1</derivedcompoundref>
+    <includes refid="power__mgr_8h" local="no">power_mgr.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_power_mgr_1a3027861c764da80aa9706246dad298d8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PmState</name>
+        <enumvalue id="class_power_mgr_1a3027861c764da80aa9706246dad298d8a1b2bdd214ba5b3894ce0acab66636ebf" prot="public">
+          <name>eOff</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Power manager state Off. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_power_mgr_1a3027861c764da80aa9706246dad298d8aae61852e6fb193a21c97fb25fd5a13f7" prot="public">
+          <name>eOn</name>
+          <briefdescription>
+<para>Power manager state On. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_power_mgr_1a3027861c764da80aa9706246dad298d8a8ed96e2c97ef93c4ca0afe5fbcba625c" prot="public">
+          <name>kNumStates</name>
+          <briefdescription>
+<para>Indicator for the number of power manager states. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Power manager states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="59" column="5" bodyfile="pm/power_mgr.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="enum" id="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PmTmo</name>
+        <enumvalue id="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a068ffcca4c58b63a81a2f09ac5159f12" prot="public">
+          <name>eMetricsTmo</name>
+          <initializer>= 2 * 60 * 60</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Timeout for metrics tx request (e.g. 2h) NOTE: eMetricsTmo is only used for creation in constructor, real timeout value is set in configure function </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a668eee6d24ede1f83a39e049e5e76c35" prot="public">
+          <name>kNumTimerEvents</name>
+          <briefdescription>
+<para>Indicator for the number of timeout events. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Power manager timeout values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="66" column="5" bodyfile="pm/power_mgr.h" bodystart="66" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the power manager. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="95" column="10" bodyfile="pm/power_mgr.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_x1_1a280773fc9201606b6ad92dd6c2ca3b46" compoundref="power__mgr__x1_8cpp" startline="149" endline="154">PowerMgrX1::AdxlWakeupTimer_expired</referencedby>
+        <referencedby refid="class_power_mgr_x1_1afaa90604923c6189d35207509fb4900f" compoundref="power__mgr__x1_8cpp" startline="86" endline="91">PowerMgrX1::BoostCtrlTimer_expired</referencedby>
+        <referencedby refid="class_power_mgr_x1_1ab00563fad1160d3df8c36aec60f9852a" compoundref="power__mgr__x1_8cpp" startline="117" endline="123">PowerMgrX1::LteStartDelayTimer_expired</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" compoundref="power__mgr_8cpp" startline="133" endline="138">MetricsTxTimer_expired</referencedby>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr</referencedby>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* MetricsTxTimer</definition>
+        <argsstring></argsstring>
+        <name>MetricsTxTimer</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> to control metrics TX interval. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="96" column="11" bodyfile="pm/power_mgr.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">configure</referencedby>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t metricsTmo</definition>
+        <argsstring></argsstring>
+        <name>metricsTmo</name>
+        <briefdescription>
+<para>timeout for metrics tx request (e.g. 2h) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="97" column="14" bodyfile="pm/power_mgr.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">configure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1a5ac0b16c31813f87b98e97cc5bacd64a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t reason</definition>
+        <argsstring></argsstring>
+        <name>reason</name>
+        <briefdescription>
+<para>Reset reason. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="98" column="14" bodyfile="pm/power_mgr.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string reason_str</definition>
+        <argsstring></argsstring>
+        <name>reason_str</name>
+        <briefdescription>
+<para>Reset reason string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="99" column="17" bodyfile="pm/power_mgr.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" compoundref="power__mgr_8cpp" startline="89" endline="93">reportResetCause</referencedby>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t boot_cnt</definition>
+        <argsstring></argsstring>
+        <name>boot_cnt</name>
+        <briefdescription>
+<para>Boot counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="100" column="13" bodyfile="pm/power_mgr.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr</referencedby>
+        <referencedby refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" compoundref="power__mgr_8cpp" startline="102" endline="107">reportBootCnt</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint8_t &gt;</type>
+        <definition>std::vector&lt;uint8_t&gt; metricProviders</definition>
+        <argsstring></argsstring>
+        <name>metricProviders</name>
+        <briefdescription>
+<para>report request receivers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="102" column="17" bodyfile="pm/power_mgr.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" compoundref="power__mgr_8cpp" startline="216" endline="221">metricProviderNotifyAll</referencedby>
+        <referencedby refid="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" compoundref="power__mgr_8cpp" startline="187" endline="192">registerMetricProvider</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; uint16_t &gt;</type>
+        <definition>std::vector&lt;uint16_t&gt; metricType</definition>
+        <argsstring></argsstring>
+        <name>metricType</name>
+        <briefdescription>
+<para>message type in report request </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="103" column="17" bodyfile="pm/power_mgr.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" compoundref="power__mgr_8cpp" startline="216" endline="221">metricProviderNotifyAll</referencedby>
+        <referencedby refid="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" compoundref="power__mgr_8cpp" startline="187" endline="192">registerMetricProvider</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PowerMgr</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>PowerMgr</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Power manager task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor updates boot count by calling the getter function of class <ref refid="class_boot_cnt" kindref="compound">BootCnt</ref>, allocate and register a mailbox and allocates the timer for metrics TX interval. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="74" column="14" bodyfile="pm/power_mgr.cpp" bodystart="149" bodyend="168"/>
+        <references refid="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" compoundref="power__mgr_8h" startline="100">boot_cnt</references>
+        <references refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a068ffcca4c58b63a81a2f09ac5159f12" compoundref="power__mgr_8h" startline="70">eMetricsTmo</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a18ff7321499e436e48b793d1d6ac2757" compoundref="mbox_8h" startline="83">Mbox::ePowerManager</references>
+        <references refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" compoundref="boot__cnt_8cpp" startline="97" endline="100">BootCnt::get</references>
+        <references refid="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" compoundref="boot__cnt_8cpp" startline="43" endline="47">BootCnt::inst</references>
+        <references refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" compoundref="power__mgr_8h" startline="96">MetricsTxTimer</references>
+        <references refid="class_power_mgr_1ab068681b97599ab0bf7d11b9f69a2d72" compoundref="power__mgr_8cpp" startline="118" endline="124">MetricsTxTimer_cb</references>
+        <references refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="power__mgr_8h" startline="95">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1ad20085320c2bdbeb172edf02563f827e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~PowerMgr</definition>
+        <argsstring>()</argsstring>
+        <name>~PowerMgr</name>
+        <briefdescription>
+<para>Power manager task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="75" column="13" bodyfile="pm/power_mgr.cpp" bodystart="176" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="76" column="18" bodyfile="pm/power_mgr.cpp" bodystart="237" bodyend="257"/>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_reset_reason_1a24c18a12a144f7ce1024a8fe8c0c23cc" compoundref="reset__reason_8cpp" startline="88" endline="135">ResetReason::get</references>
+        <references refid="class_reset_reason_1a9b91654f6451c18336184f0a775d75cd" compoundref="reset__reason_8cpp" startline="44" endline="48">ResetReason::inst</references>
+        <references refid="class_power_mgr_1ad479bd08691837a4c2ea0f4b28a79234">message_handler</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="power__mgr_8h" startline="95">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_power_mgr_1a5ac0b16c31813f87b98e97cc5bacd64a" compoundref="power__mgr_8h" startline="98">reason</references>
+        <references refid="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" compoundref="power__mgr_8h" startline="99">reason_str</references>
+        <references refid="class_power_mgr_1ab8b5bdce7b224850fa9971ea40124828">taskInit</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1ab8b5bdce7b224850fa9971ea40124828" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void taskInit</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>taskInit</name>
+        <reimplementedby refid="class_power_mgr_x1_1ab71d737dc66dac5a81a5240f5493b9db">taskInit</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="77" column="18"/>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1ad479bd08691837a4c2ea0f4b28a79234" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+        <definition>virtual PoolElem* message_handler</definition>
+        <argsstring>(PoolElem *pElem)=0</argsstring>
+        <name>message_handler</name>
+        <reimplementedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a">message_handler</reimplementedby>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="78" column="22"/>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void configure</definition>
+        <argsstring>()</argsstring>
+        <name>configure</name>
+        <reimplements refid="class_task_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplements>
+        <briefdescription>
+<para>Power Manager virtual task configure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The configure function overloads the configure function of the task base class. It retrieves the configuration related to metrics by call of the function getCfgMetrics provided by the <ref refid="class_config" kindref="compound">Config</ref> class, convert the timeout intervall in seconds and reconfigure the metrics wakeup interval with this value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="80" column="18" bodyfile="pm/power_mgr.cpp" bodystart="268" bodyend="277"/>
+        <references refid="class_config_1af106da5a3b67f694963b29186df4b3c1" compoundref="config_8cpp" startline="728" endline="730">Config::getCfgMetrics</references>
+        <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
+        <references refid="struct__st_cfg_metrics_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="config_8h" startline="179">_stCfgMetrics::interval</references>
+        <references refid="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" compoundref="power__mgr_8h" startline="97">metricsTmo</references>
+        <references refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" compoundref="power__mgr_8h" startline="96">MetricsTxTimer</references>
+        <references refid="class_timer_1a0c4565c97488da56e47736f7b693407b" compoundref="timer_8cpp" startline="126" endline="129">Timer::reconfigure</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1a37a00b048c70c95ead012eb228161763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MetricsTxTimer_expired</definition>
+        <argsstring>()</argsstring>
+        <name>MetricsTxTimer_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for metrics TX interval timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eMetricsTxTimerExpired, set power manager as sender and put message into own (powermanager&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="83" column="10" bodyfile="pm/power_mgr.cpp" bodystart="133" bodyend="138"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac5e5587e5c6d28d06a40c2879f93b5b3" compoundref="mpelem_8h" startline="101">eMetricsTxTimerExpired</references>
+        <references refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" compoundref="power__mgr_8h" startline="95">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_power_mgr_1ab068681b97599ab0bf7d11b9f69a2d72" compoundref="power__mgr_8cpp" startline="118" endline="124">MetricsTxTimer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1af50a5d25bd752742525e9d960a36dd01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqRmsReport</definition>
+        <argsstring>()</argsstring>
+        <name>reqRmsReport</name>
+        <briefdescription>
+<para>Send request accelerometer data message to RMS store task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eRmsReport to RMS store mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. <linebreak/>
+ This request is the trigger to send accelerometer RMS data to the cloud. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="88" column="10" bodyfile="pm/power_mgr.cpp" bodystart="76" bodyend="80"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f2350e47b38b05b74e3b66e4ba1353d" compoundref="mpelem_8h" startline="108">eRmsReport</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportResetCause</definition>
+        <argsstring>()</argsstring>
+        <name>reportResetCause</name>
+        <briefdescription>
+<para>Send reset reason message to data manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eResetCause with the attached reset reason string to data manager mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="89" column="10" bodyfile="pm/power_mgr.cpp" bodystart="89" bodyend="93"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa9d7bd6e7db2ec4192ba05845f0a01c3" compoundref="mpelem_8h" startline="105">eResetCause</references>
+        <references refid="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" compoundref="power__mgr_8h" startline="99">reason_str</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reportBootCnt</definition>
+        <argsstring>()</argsstring>
+        <name>reportBootCnt</name>
+        <briefdescription>
+<para>Send boot count message to data manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eBootCnt with the attached boot counter to data manager mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="90" column="10" bodyfile="pm/power_mgr.cpp" bodystart="102" bodyend="107"/>
+        <references refid="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" compoundref="power__mgr_8h" startline="100">boot_cnt</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" compoundref="mpelem_8h" startline="106">eBootCnt</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerMetricProvider</definition>
+        <argsstring>(uint8_t mboxId, uint16_t mtype)</argsstring>
+        <name>registerMetricProvider</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mboxId</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>mtype</declname>
+        </param>
+        <briefdescription>
+<para>Register a task that contributes to device metrics for callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboxId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the mailbox, must be ID from enum MboxId </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type for the request, must be from enum msgType</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function expects the Mailbox ID of the task and the expected message type to use in the request. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="91" column="10" bodyfile="pm/power_mgr.cpp" bodystart="187" bodyend="192"/>
+        <references refid="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" compoundref="power__mgr_8h" startline="102">metricProviders</references>
+        <references refid="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" compoundref="power__mgr_8h" startline="103">metricType</references>
+        <referencedby refid="class_power_mgr_x1_1a931cd30f778b911b60414eedb9919035" compoundref="power__mgr__x1_8cpp" startline="171" endline="198">PowerMgrX1::PowerMgrX1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1aacbc79b9fec14a8eb014564c958b8b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void metricProviderNotify</definition>
+        <argsstring>(uint8_t mboxId, uint16_t mtype)</argsstring>
+        <name>metricProviderNotify</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mboxId</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>mtype</declname>
+        </param>
+        <briefdescription>
+<para>Send metric request message to a task that contributes to metrics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mboxId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the mailbox, must be ID from enum MboxId </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type for the request, must be from enum msgType</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type mtype to mboxId mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="92" column="10" bodyfile="pm/power_mgr.cpp" bodystart="203" bodyend="207"/>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" compoundref="power__mgr_8cpp" startline="216" endline="221">metricProviderNotifyAll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void metricProviderNotifyAll</definition>
+        <argsstring>()</argsstring>
+        <name>metricProviderNotifyAll</name>
+        <briefdescription>
+<para>Send metric request message to all registered mailboxes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>In a loop over all registered mailboxes the function calls member function metricProviderNotify with mailbox ID and message type from register lists. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="93" column="10" bodyfile="pm/power_mgr.cpp" bodystart="216" bodyend="221"/>
+        <references refid="class_power_mgr_1aacbc79b9fec14a8eb014564c958b8b95" compoundref="power__mgr_8cpp" startline="203" endline="207">metricProviderNotify</references>
+        <references refid="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" compoundref="power__mgr_8h" startline="102">metricProviders</references>
+        <references refid="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" compoundref="power__mgr_8h" startline="103">metricType</references>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_power_mgr_1ab068681b97599ab0bf7d11b9f69a2d72" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MetricsTxTimer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>MetricsTxTimer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for metrics TX interval timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call power manager timer expired function MetricsTxTimer_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="82" column="17" bodyfile="pm/power_mgr.cpp" bodystart="118" bodyend="124"/>
+        <references refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" compoundref="power__mgr_8cpp" startline="133" endline="138">MetricsTxTimer_expired</references>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1a4a9097cc9610c3987e92ed8016a4f970" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uart0_off</definition>
+        <argsstring>()</argsstring>
+        <name>uart0_off</name>
+        <briefdescription>
+<para>Function to disable UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function disable UART by calling power manager function uart0_set_enable </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="85" column="17" bodyfile="pm/power_mgr.cpp" bodystart="47" bodyend="47"/>
+        <references refid="class_power_mgr_1a81fdf3e6a3841bfb2294f792e94a0b38" compoundref="power__mgr_8cpp" startline="56" endline="67">uart0_set_enable</references>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_power_mgr_1a81fdf3e6a3841bfb2294f792e94a0b38" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uart0_set_enable</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>uart0_set_enable</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Function to enable or disable UART. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true = enable UART, false = disable UART</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function enable or disable UART according to input parameter enable </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="86" column="17" bodyfile="pm/power_mgr.cpp" bodystart="56" bodyend="67"/>
+        <referencedby refid="class_power_mgr_1a4a9097cc9610c3987e92ed8016a4f970" compoundref="power__mgr_8cpp" startline="47" endline="47">uart0_off</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_power_mgr_1a423ed9f71c1ca2d14838b66d23dbc4fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PowerMgr</definition>
+        <argsstring>()=delete</argsstring>
+        <name>PowerMgr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/power_mgr.h" line="106" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Power Manager base class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The power manager task provides a timer to control the metrics TX interval (MetricsTxTimer). It provides methods to report reset cause and boot counter to the data manager task, to switch UART on and off, to register and notify the metrics providing tasks, to configure the metrics transmission interval and the task function. It furthermore declares a task init and a message handler function as pure virtual. These function must be implemented in all derived classes. Both are called in the task function, task init function at the beginning of the task function before entering the endless loop, the message handler function in the endless loop, directly after reading the message from the tasks mailbox. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>PowerMgr</label>
+        <link refid="class_power_mgr"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PowerMgrX1</label>
+        <link refid="class_power_mgr_x1"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>int32_t</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="12">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector&lt; uint8_t &gt;</label>
+      </node>
+      <node id="16">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="13">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="14" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="14">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PowerMgr</label>
+        <link refid="class_power_mgr"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+metricType</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+boot_cnt</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+metricsTmo</edgelabel>
+          <edgelabel>+reason</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+reason_str</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+metricProviders</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+MetricsTxTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="7">
+        <label>vector&lt; uint16_t &gt;</label>
+      </node>
+      <node id="17">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="pm/power_mgr.h" line="56" column="1" bodyfile="pm/power_mgr.h" bodystart="56" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_power_mgr_1a32b9221862edf814895388b47b77bbb6" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>boot_cnt</name></member>
+      <member refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>PowerMgr</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>create</name></member>
+      <member refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a068ffcca4c58b63a81a2f09ac5159f12" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>eMetricsTmo</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a1b2bdd214ba5b3894ce0acab66636ebf" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>eOff</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8aae61852e6fb193a21c97fb25fd5a13f7" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>eOn</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8a8ed96e2c97ef93c4ca0afe5fbcba625c" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>kNumStates</name></member>
+      <member refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191a668eee6d24ede1f83a39e049e5e76c35" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>kNumTimerEvents</name></member>
+      <member refid="class_power_mgr_1ad479bd08691837a4c2ea0f4b28a79234" prot="public" virt="pure-virtual"><scope>PowerMgr</scope><name>message_handler</name></member>
+      <member refid="class_power_mgr_1aacbc79b9fec14a8eb014564c958b8b95" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>metricProviderNotify</name></member>
+      <member refid="class_power_mgr_1a47f75cd650e6967f9a8c429cb39dc888" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>metricProviderNotifyAll</name></member>
+      <member refid="class_power_mgr_1af1593057bff2edb7867ad1c20a8a618d" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>metricProviders</name></member>
+      <member refid="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>metricsTmo</name></member>
+      <member refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>MetricsTxTimer</name></member>
+      <member refid="class_power_mgr_1ab068681b97599ab0bf7d11b9f69a2d72" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>MetricsTxTimer_cb</name></member>
+      <member refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>MetricsTxTimer_expired</name></member>
+      <member refid="class_power_mgr_1ac9c743ff4537aa6ea55df03243e70dfa" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>metricType</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>PowerMgr</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>PowerMgr</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>PowerMgr</scope><name>operator=</name></member>
+      <member refid="class_power_mgr_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>pInMbox</name></member>
+      <member refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>PmState</name></member>
+      <member refid="class_power_mgr_1aeb1edbe6e58cd6d8f00b55be3bc21191" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>PmTmo</name></member>
+      <member refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>PowerMgr</name></member>
+      <member refid="class_power_mgr_1a423ed9f71c1ca2d14838b66d23dbc4fe" prot="private" virt="non-virtual"><scope>PowerMgr</scope><name>PowerMgr</name></member>
+      <member refid="class_power_mgr_1a5ac0b16c31813f87b98e97cc5bacd64a" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>reason</name></member>
+      <member refid="class_power_mgr_1aa766a343d68e8417edb88f40ef67b7ca" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>reason_str</name></member>
+      <member refid="class_power_mgr_1a83dcc9e6e595bd645fc1646cdeff6c57" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>registerMetricProvider</name></member>
+      <member refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>reportBootCnt</name></member>
+      <member refid="class_power_mgr_1a54bfcc3b8b94e512f3283cc904de719a" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>reportResetCause</name></member>
+      <member refid="class_power_mgr_1af50a5d25bd752742525e9d960a36dd01" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>reqRmsReport</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>start</name></member>
+      <member refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>PowerMgr</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>PowerMgr</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>PowerMgr</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>taskCode</name></member>
+      <member refid="class_power_mgr_1ab8b5bdce7b224850fa9971ea40124828" prot="public" virt="pure-virtual"><scope>PowerMgr</scope><name>taskInit</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>PowerMgr</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>PowerMgr</scope><name>tid</name></member>
+      <member refid="class_power_mgr_1a4a9097cc9610c3987e92ed8016a4f970" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>uart0_off</name></member>
+      <member refid="class_power_mgr_1a81fdf3e6a3841bfb2294f792e94a0b38" prot="public" virt="non-virtual"><scope>PowerMgr</scope><name>uart0_set_enable</name></member>
+      <member refid="class_power_mgr_1ad20085320c2bdbeb172edf02563f827e" prot="public" virt="virtual"><scope>PowerMgr</scope><name>~PowerMgr</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>PowerMgr</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

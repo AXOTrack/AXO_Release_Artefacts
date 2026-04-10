@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_73c8488d758244828d0713877235c351" kind="dir">
+    <compoundname>drv/pwm</compoundname>
+    <innerfile refid="pwm_8cpp">pwm.cpp</innerfile>
+    <innerfile refid="pwm_8h">pwm.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="drv/pwm/"/>
+  </compounddef>
+</doxygen>

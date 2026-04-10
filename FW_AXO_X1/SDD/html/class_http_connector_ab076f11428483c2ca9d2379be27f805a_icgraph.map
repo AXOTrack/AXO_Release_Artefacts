@@ -1,0 +1,12 @@
+<map id="blocking_send" name="blocking_send">
+<area shape="rect" id="node1" title="HttpConnector send function." alt="" coords="743,56,848,83"/>
+<area shape="rect" id="node2" href="$class_http_connector.html#aac0c5230931182e816576cfe3be2c5a3" title="Function to send HTTP POST header to the host." alt="" coords="547,5,691,32"/>
+<area shape="rect" id="node6" href="$class_http_connector.html#adf68aa053d518cdf3d69934c3b4aaaee" title="Function to send a single data frame to the host." alt="" coords="547,107,691,133"/>
+<area shape="rect" id="node10" href="$class_http_connector.html#ae49d9549f0e6c082dd23eae06492bd6b" title="Function to send a single data frame to the host." alt="" coords="543,56,695,83"/>
+<area shape="rect" id="node3" href="$class_http_connector.html#a5b2ffff9e2ea4e58dc40300aab0ab775" title="Function to handle received raw data status from AdxlStore task." alt="" coords="317,56,469,83"/>
+<area shape="rect" id="node5" href="$class_http_connector.html#a29908d64354956f5a5f4dbe67041e92c" title="Function to initiate the displacement data transmission to the host." alt="" coords="291,5,495,32"/>
+<area shape="rect" id="node4" href="$class_http_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="HTTP connector task function." alt="" coords="5,81,52,108"/>
+<area shape="rect" id="node7" href="$class_http_connector.html#aeaf0505dd1e05287635672b027c55d6f" title="Function to handle received data from AdxlStore task." alt="" coords="334,107,451,133"/>
+<area shape="rect" id="node8" href="$class_http_connector.html#a9670125458a21e0df605ff8ec0a72cc3" title="Function to handle received displacement data from AdxlStore task." alt="" coords="100,107,243,133"/>
+<area shape="rect" id="node9" href="$class_http_connector.html#a70b7c8bda814beee628f8625439b59cf" title="Function to handle received raw data from AdxlStore task." alt="" coords="100,157,243,184"/>
+</map>

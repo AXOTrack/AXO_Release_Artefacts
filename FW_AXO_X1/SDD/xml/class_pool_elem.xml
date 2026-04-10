@@ -1,0 +1,815 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_pool_elem" kind="class" language="C++" prot="public">
+    <compoundname>PoolElem</compoundname>
+    <includes refid="mpelem_8h" local="no">mpelem.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@6</name>
+        <enumvalue id="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" prot="public">
+          <name>maxAlloc</name>
+          <initializer>= 2048</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="183" column="5" bodyfile="rtos/mpelem.h" bodystart="183" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mtype</definition>
+        <argsstring></argsstring>
+        <name>mtype</name>
+        <briefdescription>
+<para>message/event type/name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="220" column="13" bodyfile="rtos/mpelem.h" bodystart="220" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">MeasurementBuilder::add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">MetricsBuilder::add</referencedby>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">LteConnector::notify</referencedby>
+        <referencedby refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">AdxlDataStore::sendBwFiltData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">AdxlDataStore::sendDispData</referencedby>
+        <referencedby refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" compoundref="adxl__store_8cpp" startline="899" endline="927">AdxlDataStore::sendFwFiltData</referencedby>
+        <referencedby refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</referencedby>
+        <referencedby refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" compoundref="adxl__store_8cpp" startline="817" endline="845">AdxlDataStore::sendRawData</referencedby>
+        <referencedby refid="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" compoundref="adxl__store_8cpp" startline="986" endline="1016">AdxlDataStore::sendSResultData</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update__ctrl_8cpp" startline="316" endline="362">FwUpdCtrl::task</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">LteConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+<para>ID of sender/task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="221" column="13" bodyfile="rtos/mpelem.h" bodystart="221" bodyend="-1"/>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">LteConnector::notify</referencedby>
+        <referencedby refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">AdxlDataStore::sendBwFiltData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">AdxlDataStore::sendDispData</referencedby>
+        <referencedby refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" compoundref="adxl__store_8cpp" startline="899" endline="927">AdxlDataStore::sendFwFiltData</referencedby>
+        <referencedby refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</referencedby>
+        <referencedby refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" compoundref="adxl__store_8cpp" startline="817" endline="845">AdxlDataStore::sendRawData</referencedby>
+        <referencedby refid="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" compoundref="adxl__store_8cpp" startline="986" endline="1016">AdxlDataStore::sendSResultData</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t p1</definition>
+        <argsstring></argsstring>
+        <name>p1</name>
+        <briefdescription>
+<para>arbitrary byte parameter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="222" column="13" bodyfile="rtos/mpelem.h" bodystart="222" bodyend="-1"/>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HttpConnector::HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_mbox_1af67bd3264b53e5e891c6700879482957" compoundref="mbox_8cpp" startline="176" endline="185">Mbox::sendMsg</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" compoundref="adconverter_8cpp" startline="124" endline="131">ADConverter::timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t p2</definition>
+        <argsstring></argsstring>
+        <name>p2</name>
+        <briefdescription>
+<para>arbitrary byte parameter </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="223" column="12" bodyfile="rtos/mpelem.h" bodystart="223" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="387" endline="391">MetricsBuilder::addModemLinkQuality</referencedby>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_mbox_1a162de1b36e7d12961295ce50e1e65fd8" compoundref="mbox_8cpp" startline="200" endline="209">Mbox::sendMsg</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool inPool</definition>
+        <argsstring></argsstring>
+        <name>inPool</name>
+        <briefdescription>
+<para>true after <ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="228" column="10" bodyfile="rtos/mpelem.h" bodystart="228" bodyend="-1"/>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">MsgPool::freeElem</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_msg_pool" kindref="compound">MsgPool</ref> *</type>
+        <definition>MsgPool* pool</definition>
+        <argsstring></argsstring>
+        <name>pool</name>
+        <briefdescription>
+<para>pointer to message originating pool </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="229" column="13" bodyfile="rtos/mpelem.h" bodystart="229" bodyend="-1"/>
+        <referencedby refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">free</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" prot="private" static="no" mutable="no">
+        <type>uint8_t(*</type>
+        <definition>uint8_t(* buf)[maxAlloc]</definition>
+        <argsstring>)[maxAlloc]</argsstring>
+        <name>buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="231" column="5" bodyfile="rtos/mpelem.h" bodystart="231" bodyend="-1"/>
+        <referencedby refid="class_pool_elem_1a20bbd4d45e3f01305dd709f5a9cc9952" compoundref="mpelem_8cpp" startline="62" endline="65">clearBuffer</referencedby>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" compoundref="mpelem_8cpp" startline="133" endline="136">DumpAsString</referencedby>
+        <referencedby refid="class_pool_elem_1ae133e27cdb6a4873d2223e0d78768b87" compoundref="mpelem_8cpp" startline="144" endline="156">DumpAsStringHex</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">MsgPool::freeElem</referencedby>
+        <referencedby refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">getBuffer</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</referencedby>
+        <referencedby refid="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" compoundref="mpelem_8cpp" startline="101" endline="108">putData</referencedby>
+        <referencedby refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" compoundref="mpelem_8cpp" startline="76" endline="89">putString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t bufLen</definition>
+        <argsstring></argsstring>
+        <name>bufLen</name>
+        <briefdescription>
+<para>Length of the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="232" column="14" bodyfile="rtos/mpelem.h" bodystart="232" bodyend="-1"/>
+        <referencedby refid="class_pool_elem_1a20bbd4d45e3f01305dd709f5a9cc9952" compoundref="mpelem_8cpp" startline="62" endline="65">clearBuffer</referencedby>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">MsgPool::freeElem</referencedby>
+        <referencedby refid="class_pool_elem_1aec1895e5aee815d55df87f27184794e3" compoundref="mpelem_8cpp" startline="53" endline="53">getBufferSize</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</referencedby>
+        <referencedby refid="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" compoundref="mpelem_8cpp" startline="101" endline="108">putData</referencedby>
+        <referencedby refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" compoundref="mpelem_8cpp" startline="76" endline="89">putString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t dataLen</definition>
+        <argsstring></argsstring>
+        <name>dataLen</name>
+        <briefdescription>
+<para>Length of the data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="233" column="14" bodyfile="rtos/mpelem.h" bodystart="233" bodyend="-1"/>
+        <referencedby refid="class_pool_elem_1a20bbd4d45e3f01305dd709f5a9cc9952" compoundref="mpelem_8cpp" startline="62" endline="65">clearBuffer</referencedby>
+        <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</referencedby>
+        <referencedby refid="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" compoundref="mpelem_8cpp" startline="101" endline="108">putData</referencedby>
+        <referencedby refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" compoundref="mpelem_8cpp" startline="76" endline="89">putString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_pool_elem_1ad5f1dc91df43f757f242fe445c96b973" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend MsgPool</definition>
+        <argsstring></argsstring>
+        <name>MsgPool</name>
+        <briefdescription>
+<para>allow message pool access to private members </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="235" column="12" bodyfile="rtos/mpelem.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free</definition>
+        <argsstring>()</argsstring>
+        <name>free</name>
+        <briefdescription>
+<para>The pool element free function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function release the message to the pool from which it was allocated by calling the method free of the originating pool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="176" column="10" bodyfile="rtos/mpelem.cpp" bodystart="165" bodyend="168"/>
+        <references refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">MsgPool::freeElem</references>
+        <references refid="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" compoundref="mpelem_8h" startline="229">pool</references>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
+        <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update__ctrl_8cpp" startline="316" endline="362">FwUpdCtrl::task</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">LteConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>uint8_t * getBuffer</definition>
+        <argsstring>(void)</argsstring>
+        <name>getBuffer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the pointer to message buffer content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns the pointer to the message buffer content</para>
+</simplesect>
+The function return the pointer to message buffer content in private member variable buf. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="177" column="13" bodyfile="rtos/mpelem.cpp" bodystart="43" bodyend="43"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+        <referencedby refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="508" endline="513">MetricsBuilder::addBootCnt</referencedby>
+        <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">MeasurementBuilder::addDispStatistics</referencedby>
+        <referencedby refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="552" endline="563">MetricsBuilder::addHumidity</referencedby>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">MetricsBuilder::addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="478" endline="482">MetricsBuilder::addIMSI</referencedby>
+        <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">MeasurementBuilder::addMaxXYZ</referencedby>
+        <referencedby refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="126" endline="132">MetricsBuilder::addModemBattV</referencedby>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">MetricsBuilder::addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="370" endline="376">MetricsBuilder::addModemTemp</referencedby>
+        <referencedby refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="493" endline="497">MetricsBuilder::addResetCause</referencedby>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="527" endline="538">MetricsBuilder::addTemperature</referencedby>
+        <referencedby refid="class_fw_info_1a52cad5018211f7c297fd558cb96768c2" compoundref="fwinfo_8cpp" startline="54" endline="58">FwInfo::FwInfo</referencedby>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">DispTask::HandleBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">DispTask::HandleDispFirstEntries</referencedby>
+        <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">DispTask::HandleDispLastEntries</referencedby>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">DispTask::HandleFwFiltData</referencedby>
+        <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HwMetrics::HandleHwStatusAdxl37x</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">DispTask::HandleRawData</referencedby>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">DispTask::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HttpConnector::HandleRcvdData</referencedby>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">DispTask::HandleSResultData</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab0b0c6d681f4d9ee936edfc17542f632" compoundref="mqtt__connector_8cpp" startline="778" endline="782">MqttConnector::PublishAcceptedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="810" endline="814">MqttConnector::PublishDlResult</referencedby>
+        <referencedby refid="class_mqtt_connector_1a0520f0e181a94a9bf2298654692a914e" compoundref="mqtt__connector_8cpp" startline="794" endline="798">MqttConnector::PublishRejectedResponse</referencedby>
+        <referencedby refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">AdxlDataStore::sendBwFiltData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">AdxlDataStore::sendDispData</referencedby>
+        <referencedby refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" compoundref="adxl__store_8cpp" startline="899" endline="927">AdxlDataStore::sendFwFiltData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" compoundref="adxl__store_8cpp" startline="817" endline="845">AdxlDataStore::sendRawData</referencedby>
+        <referencedby refid="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" compoundref="adxl__store_8cpp" startline="986" endline="1016">AdxlDataStore::sendSResultData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">AdxlDataStore::storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">AdxlDataStore::storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">AdxlDataStore::storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1aec1895e5aee815d55df87f27184794e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t getBufferSize</definition>
+        <argsstring>(void)</argsstring>
+        <name>getBufferSize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the buffer size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns the size of message buffer</para>
+</simplesect>
+The function return the buffer size in private member variable bufLen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="178" column="14" bodyfile="rtos/mpelem.cpp" bodystart="53" bodyend="53"/>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">bufLen</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a20bbd4d45e3f01305dd709f5a9cc9952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>clearBuffer</name>
+        <briefdescription>
+<para>Function to clear the buffer content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function clear the buffer content by setting a value of 0 for all bytes of the buffer and set private member varaible dataLen to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="179" column="10" bodyfile="rtos/mpelem.cpp" bodystart="62" bodyend="65"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">bufLen</references>
+        <references refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" compoundref="mpelem_8h" startline="233">dataLen</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void putString</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>putString</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Function to copy a string in the buffer content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to put in the buffer content</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function copy a string in the buffer content and assign the string length to member variable dataLen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="180" column="10" bodyfile="rtos/mpelem.cpp" bodystart="76" bodyend="89"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">bufLen</references>
+        <references refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" compoundref="mpelem_8h" startline="233">dataLen</references>
+        <referencedby refid="class_mbox_1aab472c8772a942adb140c86f4eb091fe" compoundref="mbox_8cpp" startline="251" endline="260">Mbox::sendMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void putData</definition>
+        <argsstring>(const void *pdata, size_t len)</argsstring>
+        <name>putData</name>
+        <param>
+          <type>const void *</type>
+          <declname>pdata</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Function to copy data in the buffer content. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the data to put in the buffer content </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function copy data in the buffer content and assign the length of the data to member variable dataLen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="181" column="10" bodyfile="rtos/mpelem.cpp" bodystart="101" bodyend="108"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">bufLen</references>
+        <references refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" compoundref="mpelem_8h" startline="233">dataLen</references>
+        <referencedby refid="class_mbox_1a3671963709f80e47c7a27171af92b2ba" compoundref="mbox_8cpp" startline="226" endline="235">Mbox::sendMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1af2500125f6cec4adb1857ae2786d7455" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PoolElem</definition>
+        <argsstring>()</argsstring>
+        <name>PoolElem</name>
+        <briefdescription>
+<para><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="188" column="5" bodyfile="rtos/mpelem.h" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a062d2e378491f5dc361fdf0641bfa8f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PoolElem</definition>
+        <argsstring>(msgType type, uint8_t sender, uint8_t para1=0, int8_t para2=0)</argsstring>
+        <name>PoolElem</name>
+        <param>
+          <type><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>para1</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>para2</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type of enumerator type msgType </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sender ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>para1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit unsigned int parameter, default value is 0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>para2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>8-bit unsigned int parameter, default value is 0</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor initializes member variables mtype, from, p1 and p2. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="202" column="5" bodyfile="rtos/mpelem.h" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a6ba5573b9da5522a391ce1eba38b4d2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>~PoolElem</definition>
+        <argsstring>()</argsstring>
+        <name>~PoolElem</name>
+        <briefdescription>
+<para><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="213" column="5" bodyfile="rtos/mpelem.h" bodystart="213" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a793169e06e9183e678805ce0663b6000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Dump</definition>
+        <argsstring>()</argsstring>
+        <name>Dump</name>
+        <briefdescription>
+<para>Dump function for debug purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function print out statistics of the pool element </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="216" column="10" bodyfile="rtos/mpelem.cpp" bodystart="116" bodyend="125"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+        <references refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" compoundref="mpelem_8h" startline="232">bufLen</references>
+        <references refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" compoundref="mpelem_8h" startline="233">dataLen</references>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">from</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">mtype</references>
+        <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">p1</references>
+        <references refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" compoundref="mpelem_8h" startline="223">p2</references>
+        <referencedby refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumpAsString</definition>
+        <argsstring>()</argsstring>
+        <name>DumpAsString</name>
+        <briefdescription>
+<para>Dump function for debug purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function print out the buffer content as string </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="217" column="10" bodyfile="rtos/mpelem.cpp" bodystart="133" bodyend="136"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pool_elem_1ae133e27cdb6a4873d2223e0d78768b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DumpAsStringHex</definition>
+        <argsstring>(size_t min_len=0)</argsstring>
+        <name>DumpAsStringHex</name>
+        <param>
+          <type>size_t</type>
+          <declname>min_len</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Dump function for debug purposes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function print out the buffer content as hexadecimal values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="218" column="10" bodyfile="rtos/mpelem.cpp" bodystart="144" bodyend="156"/>
+        <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The pool element class that provides the messages to be send or received. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>A pool element is a messages which will be send to or received from tasks. A pool element is allways allocated from an existing message pool of type <ref refid="class_msg_pool" kindref="compound">MsgPool</ref>. The private variable pool held the pointer to the originating pool. The pool element class provides methods for setting and getting the content of the message and for freeing itself, furthermore getter functions to retrieve the pointer to the message content and the buffer size and methods to clear the buffer content and to put data into the buffer. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13">
+        <label>MemoryPool&lt; uint8_t[1024], max_buf1024 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; uint8_t[1024], max_buf1024 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>MemoryPool&lt; uint8_t[32], max_buf32 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; uint8_t[32], max_buf32 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>MemoryPool&lt; T, num_blocks &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-my_slab</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>struct k_mutex</label>
+      </node>
+      <node id="14">
+        <label>MemoryPool&lt; uint8_t[128], max_buf128 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; uint8_t[128], max_buf128 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Mutex</label>
+        <link refid="class_mutex"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-mutex_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PoolElem</label>
+        <link refid="class_pool_elem"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+p2</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-pool</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-bufLen</edgelabel>
+          <edgelabel>-dataLen</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-inPool</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+from</edgelabel>
+          <edgelabel>+mtype</edgelabel>
+          <edgelabel>+p1</edgelabel>
+          <edgelabel>-buf</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-MsgPool</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>uint16_t</label>
+      </node>
+      <node id="4">
+        <label>MemoryPool&lt; uint8_t[512], max_buf512 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; uint8_t[512], max_buf512 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>uint8_t</label>
+      </node>
+      <node id="7">
+        <label>MemoryPool&lt; uint8_t[256], max_buf256 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; uint8_t[256], max_buf256 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MemoryPool&lt; PoolElem, max_elements &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_elements &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MsgPool</label>
+        <link refid="class_msg_pool"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-buf512Pool</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-buf256Pool</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-elemPool</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-buf32Pool</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-max_buf1024</edgelabel>
+          <edgelabel>-max_buf128</edgelabel>
+          <edgelabel>-max_buf256</edgelabel>
+          <edgelabel>-max_buf32</edgelabel>
+          <edgelabel>-max_buf512</edgelabel>
+          <edgelabel>-max_elements</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+lock</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-buf1024Pool</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-buf128Pool</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int8_t</label>
+      </node>
+      <node id="16">
+        <label>bool</label>
+      </node>
+      <node id="6">
+        <label>struct k_mem_slab</label>
+      </node>
+      <node id="17">
+        <label>friend</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mpelem.h" line="174" column="1" bodyfile="rtos/mpelem.h" bodystart="174" bodyend="236"/>
+    <listofallmembers>
+      <member refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" prot="private" virt="non-virtual"><scope>PoolElem</scope><name>buf</name></member>
+      <member refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" prot="private" virt="non-virtual"><scope>PoolElem</scope><name>bufLen</name></member>
+      <member refid="class_pool_elem_1a20bbd4d45e3f01305dd709f5a9cc9952" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>clearBuffer</name></member>
+      <member refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" prot="private" virt="non-virtual"><scope>PoolElem</scope><name>dataLen</name></member>
+      <member refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>Dump</name></member>
+      <member refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>DumpAsString</name></member>
+      <member refid="class_pool_elem_1ae133e27cdb6a4873d2223e0d78768b87" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>DumpAsStringHex</name></member>
+      <member refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>free</name></member>
+      <member refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>from</name></member>
+      <member refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>getBuffer</name></member>
+      <member refid="class_pool_elem_1aec1895e5aee815d55df87f27184794e3" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>getBufferSize</name></member>
+      <member refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" prot="private" virt="non-virtual"><scope>PoolElem</scope><name>inPool</name></member>
+      <member refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>maxAlloc</name></member>
+      <member refid="class_pool_elem_1ad5f1dc91df43f757f242fe445c96b973" prot="private" virt="non-virtual"><scope>PoolElem</scope><name>MsgPool</name></member>
+      <member refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>mtype</name></member>
+      <member refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>p1</name></member>
+      <member refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>p2</name></member>
+      <member refid="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" prot="private" virt="non-virtual"><scope>PoolElem</scope><name>pool</name></member>
+      <member refid="class_pool_elem_1af2500125f6cec4adb1857ae2786d7455" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>PoolElem</name></member>
+      <member refid="class_pool_elem_1a062d2e378491f5dc361fdf0641bfa8f7" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>PoolElem</name></member>
+      <member refid="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>putData</name></member>
+      <member refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>putString</name></member>
+      <member refid="class_pool_elem_1a6ba5573b9da5522a391ce1eba38b4d2b" prot="public" virt="non-virtual"><scope>PoolElem</scope><name>~PoolElem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

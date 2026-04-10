@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structlfs__storage__mnt" kind="struct" language="C++" prot="public">
+    <compoundname>lfs_storage_mnt</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlfs__storage__mnt_1a7aead736a07eaf25623ad7bfa1f0ee2d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= FS_LITTLEFS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/flashfs.cpp" line="77" column="5" bodyfile="fs/flashfs.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlfs__storage__mnt_1a8b8f1e00e2caa7efe465f7d2d8952708" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>mnt_point</definition>
+        <argsstring></argsstring>
+        <name>mnt_point</name>
+        <initializer>= &quot;/lfs&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/flashfs.cpp" line="77" column="11" bodyfile="fs/flashfs.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlfs__storage__mnt_1a18354b515fecc1af5a7c967d18194d1e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>fs_data</definition>
+        <argsstring></argsstring>
+        <name>fs_data</name>
+        <initializer>= &amp;storage</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/flashfs.cpp" line="77" column="22" bodyfile="fs/flashfs.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlfs__storage__mnt_1a5d1601c1a96f2991bd5820d429f5d5f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>storage_dev</definition>
+        <argsstring></argsstring>
+        <name>storage_dev</name>
+        <initializer>=
+        reinterpret_cast&lt;void*&gt;(FIXED_PARTITION_ID(storage_partition))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/flashfs.cpp" line="78" column="5" bodyfile="fs/flashfs.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>lfs_storage_mnt</label>
+        <link refid="structlfs__storage__mnt"/>
+      </node>
+    </collaborationgraph>
+    <location file="fs/flashfs.cpp" line="76" column="8" bodyfile="fs/flashfs.cpp" bodystart="76" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structlfs__storage__mnt_1a18354b515fecc1af5a7c967d18194d1e" prot="public" virt="non-virtual"><scope>lfs_storage_mnt</scope><name>fs_data</name></member>
+      <member refid="structlfs__storage__mnt_1a8b8f1e00e2caa7efe465f7d2d8952708" prot="public" virt="non-virtual"><scope>lfs_storage_mnt</scope><name>mnt_point</name></member>
+      <member refid="structlfs__storage__mnt_1a5d1601c1a96f2991bd5820d429f5d5f9" prot="public" virt="non-virtual"><scope>lfs_storage_mnt</scope><name>storage_dev</name></member>
+      <member refid="structlfs__storage__mnt_1a7aead736a07eaf25623ad7bfa1f0ee2d" prot="public" virt="non-virtual"><scope>lfs_storage_mnt</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

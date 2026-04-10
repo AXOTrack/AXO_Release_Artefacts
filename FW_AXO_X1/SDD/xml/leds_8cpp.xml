@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="leds_8cpp" kind="file" language="C++">
+    <compoundname>leds.cpp</compoundname>
+    <includes refid="leds_8h" local="yes">ui/leds.h</includes>
+    <includes local="no">zephyr/arch/cpu.h</includes>
+    <includes local="no">zephyr/drivers/gpio.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>zephyr/drivers/gpio.h</label>
+      </node>
+      <node id="7">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="2">
+        <label>ui/leds.h</label>
+        <link refid="leds_8h"/>
+      </node>
+      <node id="6">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="8">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="1">
+        <label>ui/leds.cpp</label>
+        <link refid="leds_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structled" prot="public">led</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="leds_8cpp_1a661852bec8ab9683d43ad02881c2f2b5" prot="public" static="no">
+        <name>LED0_NODE</name>
+        <initializer>DT_ALIAS(ledred)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="31" column="9" bodyfile="ui/leds.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="leds_8cpp_1ac8b7bbb65d5065e43a35775d9fc3e322" prot="public" static="no">
+        <name>LED1_NODE</name>
+        <initializer>DT_ALIAS(ledgreen)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="32" column="9" bodyfile="ui/leds.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structled" kindref="compound">led</ref></type>
+        <definition>const struct led led0</definition>
+        <argsstring></argsstring>
+        <name>led0</name>
+        <initializer>= {
+    .spec = GPIO_DT_SPEC_GET_OR(<ref refid="leds_8cpp_1a661852bec8ab9683d43ad02881c2f2b5" kindref="member">LED0_NODE</ref>, gpios,
+                                {0}),  
+    .num = 0,                          
+}</initializer>
+        <briefdescription>
+<para>LED control structure for LED0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="29" column="1" bodyfile="ui/leds.cpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" compoundref="leds_8cpp" startline="98" endline="106">Leds::Leds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="leds_8cpp_1a431149c740efd031491fb75f4be608dd" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structled" kindref="compound">led</ref></type>
+        <definition>const struct led led1</definition>
+        <argsstring></argsstring>
+        <name>led1</name>
+        <initializer>= {
+    .spec = GPIO_DT_SPEC_GET_OR(<ref refid="leds_8cpp_1ac8b7bbb65d5065e43a35775d9fc3e322" kindref="member">LED1_NODE</ref>, gpios,
+                                {0}),  
+    .num = 1,                          
+}</initializer>
+        <briefdescription>
+<para>LED control structure for LED1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="29" column="1" bodyfile="ui/leds.cpp" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" compoundref="leds_8cpp" startline="98" endline="106">Leds::Leds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="leds_8cpp_1af2702f649b37b8e4c16e1ceb92700113" prot="public" static="yes" mutable="no">
+        <type><ref refid="structled" kindref="compound">led</ref></type>
+        <definition>led myLeds[ledMax]</definition>
+        <argsstring>[ledMax]</argsstring>
+        <name>myLeds</name>
+        <initializer>= {<ref refid="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" kindref="member">led0</ref>, <ref refid="leds_8cpp_1a431149c740efd031491fb75f4be608dd" kindref="member">led1</ref>}</initializer>
+        <briefdescription>
+<para>static array containing all LED&apos;s of the system to access LED via index </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="88" column="12" bodyfile="ui/leds.cpp" bodystart="88" bodyend="-1"/>
+        <referencedby refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" compoundref="leds_8cpp" startline="126" endline="131">Leds::setLed</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="leds_8cpp_1a391ac7ad951384cb830811d1f5c4db83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(led, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type><ref refid="structled" kindref="compound">led</ref></type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="29" column="1" declfile="ui/leds.cpp" declline="29" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of user interface class leds. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="leds_8h_1leds" kindref="member">leds</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="leds_8h" kindref="compound">ui/leds.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/arch/cpu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" refkind="member"><highlight class="normal"><ref refid="leds_8cpp_1a391ac7ad951384cb830811d1f5c4db83" kindref="member">LOG_MODULE_REGISTER</ref>(<ref refid="structled" kindref="compound">led</ref>,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="leds_8cpp_1a661852bec8ab9683d43ad02881c2f2b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED0_NODE<sp/>DT_ALIAS(ledred)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="leds_8cpp_1ac8b7bbb65d5065e43a35775d9fc3e322" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED1_NODE<sp/>DT_ALIAS(ledgreen)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#define<sp/>LED2_NODE<sp/>DT_ALIAS(ledblue)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!DT_NODE_HAS_STATUS(LED0_NODE,<sp/>okay)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Unsupported<sp/>board:<sp/>led0<sp/>devicetree<sp/>alias<sp/>is<sp/>not<sp/>defined&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!DT_NODE_HAS_STATUS(LED1_NODE,<sp/>okay)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Unsupported<sp/>board:<sp/>led1<sp/>devicetree<sp/>alias<sp/>is<sp/>not<sp/>defined&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#if<sp/>!DT_NODE_HAS_STATUS(LED2_NODE,<sp/>okay)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#error<sp/>&quot;Unsupported<sp/>board:<sp/>led2<sp/>devicetree<sp/>alias<sp/>is<sp/>not<sp/>defined&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structled" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structled" kindref="compound">led</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gpio_dt_spec<sp/><ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structled_1abea371f9030e15a5d2a4c181576833d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structled_1abea371f9030e15a5d2a4c181576833d8" kindref="member">num</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structled" kindref="compound">led</ref><sp/><ref refid="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" kindref="member">led0</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref><sp/>=<sp/>GPIO_DT_SPEC_GET_OR(<ref refid="leds_8cpp_1a661852bec8ab9683d43ad02881c2f2b5" kindref="member">LED0_NODE</ref>,<sp/>gpios,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0}),<sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structled_1abea371f9030e15a5d2a4c181576833d8" kindref="member">num</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structled" kindref="compound">led</ref><sp/><ref refid="leds_8cpp_1a431149c740efd031491fb75f4be608dd" kindref="member">led1</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref><sp/>=<sp/>GPIO_DT_SPEC_GET_OR(<ref refid="leds_8cpp_1ac8b7bbb65d5065e43a35775d9fc3e322" kindref="member">LED1_NODE</ref>,<sp/>gpios,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{0}),<sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>.<ref refid="structled_1abea371f9030e15a5d2a4c181576833d8" kindref="member">num</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>static<sp/>const<sp/>struct<sp/>led<sp/>led2<sp/>=<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>.spec<sp/>=<sp/>GPIO_DT_SPEC_GET_OR(LED2_NODE,<sp/>gpios,<sp/>{0}),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>.num<sp/>=<sp/>2,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_leds_1a1d64907656992d7d2e2ae7354c656f30" refkind="member"><highlight class="normal"><ref refid="class_leds" kindref="compound">Leds</ref>*<sp/><ref refid="class_leds_1a1d64907656992d7d2e2ae7354c656f30" kindref="member">Leds::inst</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Leds::inst&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_leds" kindref="compound">Leds</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;myInstance;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="leds_8cpp_1af2702f649b37b8e4c16e1ceb92700113" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structled" kindref="compound">led</ref><sp/><ref refid="leds_8cpp_1af2702f649b37b8e4c16e1ceb92700113" kindref="member">myLeds</ref>[<ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a063fe4bb288272db12f066992138a212" kindref="member">ledMax</ref>]<sp/>=<sp/>{<ref refid="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" kindref="member">led0</ref>,<sp/><ref refid="leds_8cpp_1a431149c740efd031491fb75f4be608dd" kindref="member">led1</ref></highlight><highlight class="comment">/*,<sp/>led2*/</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" refkind="member"><highlight class="normal"><ref refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" kindref="member">Leds::Leds</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Leds::Leds&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>gpio_pin_configure_dt(&amp;<ref refid="leds_8cpp_1a4e856c61a6b1c829dd2d8f39eda73c6c" kindref="member">led0</ref>.<ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref>,<sp/>GPIO_OUTPUT_INACTIVE);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>rc<sp/>=<sp/>gpio_pin_configure_dt(&amp;<ref refid="leds_8cpp_1a431149c740efd031491fb75f4be608dd" kindref="member">led1</ref>.<ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref>,<sp/>GPIO_OUTPUT_INACTIVE);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rc<sp/>=<sp/>gpio_pin_configure_dt(&amp;led2.spec,<sp/>GPIO_OUTPUT_INACTIVE);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_leds_1ace613a1b3cd2799b2749c8a42d67a445" refkind="member"><highlight class="normal"><ref refid="class_leds_1ace613a1b3cd2799b2749c8a42d67a445" kindref="member">Leds::~Leds</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Leds::~Leds\n&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" kindref="member">Leds::setLed</ref>(<ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" kindref="member">ledId</ref><sp/><ref refid="structled" kindref="compound">led</ref>,<sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657" kindref="member">ledState</ref><sp/>s)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;setLed<sp/>led:<sp/>%d<sp/>s:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="structled" kindref="compound">led</ref>,<sp/>s);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(<ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a6f279b5bf1323619c0037eaf95cd8b44" kindref="member">ledRed</ref><sp/>&lt;=<sp/><ref refid="structled" kindref="compound">led</ref><sp/>&amp;&amp;<sp/><ref refid="structled" kindref="compound">led</ref><sp/>&lt;=<sp/><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a96859d57cbe39e0235d304b8b256ddce" kindref="member">ledGreen</ref></highlight><highlight class="comment">/*ledBlue*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>gpio_pin_set(led0.spec.port,<sp/>led0.spec.pin,<sp/>s);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>gpio_pin_set(<ref refid="leds_8cpp_1af2702f649b37b8e4c16e1ceb92700113" kindref="member">myLeds</ref>[<ref refid="structled" kindref="compound">led</ref>].<ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref>.port,<sp/><ref refid="leds_8cpp_1af2702f649b37b8e4c16e1ceb92700113" kindref="member">myLeds</ref>[<ref refid="structled" kindref="compound">led</ref>].<ref refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" kindref="member">spec</ref>.pin,<sp/>s);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0<sp/><sp/></highlight><highlight class="comment">//<sp/>selftest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>printk(</highlight><highlight class="stringliteral">&quot;awe<sp/>tttest:<sp/>main:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a063fe4bb288272db12f066992138a212" kindref="member">ledMax</ref>;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_leds_1a1d64907656992d7d2e2ae7354c656f30" kindref="member">Leds::inst</ref>()-&gt;<ref refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" kindref="member">setLed</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" kindref="member">ledId</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657ade19f4bb9841de706e572f2951c4df63" kindref="member">ledOn</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(700));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_leds_1a1d64907656992d7d2e2ae7354c656f30" kindref="member">Leds::inst</ref>()-&gt;<ref refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" kindref="member">setLed</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" kindref="member">ledId</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i),<sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657aa94ac32c61d7d2e130f1a83aebc110cd" kindref="member">ledOff</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(700));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ui/leds.cpp"/>
+  </compounddef>
+</doxygen>

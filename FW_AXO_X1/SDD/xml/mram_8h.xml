@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mram_8h" kind="file" language="C++">
+    <compoundname>mram.h</compoundname>
+    <includes local="no">zephyr/device.h</includes>
+    <includes local="no">zephyr/drivers/spi.h</includes>
+    <includes refid="spibus_8h" local="yes">bus/spi/spibus.h</includes>
+    <includedby refid="mram_8cpp" local="yes">drv/spi/mram.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>zephyr/device.h</label>
+      </node>
+      <node id="1">
+        <label>drv/spi/mram.h</label>
+        <link refid="mram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/drivers/spi.h</label>
+      </node>
+      <node id="4">
+        <label>bus/spi/spibus.h</label>
+        <link refid="spibus_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>drv/spi/mram.h</label>
+        <link refid="mram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drv/spi/mram.cpp</label>
+        <link refid="mram_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classspimram" prot="public">spimram</innerclass>
+    <briefdescription>
+<para>Header file of spimram class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mram_8h_1mram"/> <simplesect kind="par"><title>Detailed Description </title><para>MRAM chip is connected to nRF9160 via SPI bus. MRAM is used to store the acceleration raw data. MRAM has 16 MByte storage capacity. </para>
+</simplesect>
+<xrefsect id="todo_1_todo000013"><xreftitle>Todo</xreftitle><xrefdescription><para>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
+ To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <ref refid="_m_s_c_1SectionDisplacement" kindref="member">Displacement Calculation</ref> for further details). </para>
+</xrefdescription></xrefsect><image type="html" name="FramLayout.png" inline="yes"></image>
+ <linebreak/>
+ See MB85RS4MTY data sheet, page 5 for SPI connection.</para>
+<para><simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/spi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spibus_8h" kindref="compound">bus/spi/spibus.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classspimram" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classspimram" kindref="compound">spimram</ref><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspimram_1a5554be202f1923f4f14c1b1c179dc1c3" kindref="member">~spimram</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classspimram" kindref="compound">spimram</ref>*<sp/><ref refid="classspimram_1aedb792a1bff701ec260dfcb7b49ca4a5" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/><ref refid="classspimram_1a63a57b6838d0be4a55b8b633dd2aa1ec" kindref="member">getDeviceId</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a4ffb6fd03608ef93f4be2c768e591efb" kindref="member">getStatusRegVal</ref>();<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1af6a647eebae4154398a76d42e427c4ab" kindref="member">getConfig1RegVal</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspimram_1af139f30d28b7dc61f5051c0d595af368" kindref="member">erase</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspimram_1af139f30d28b7dc61f5051c0d595af368" kindref="member">erase</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>from,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspimram_1ad1859b447a9f871ccbe660b0df4c5768" kindref="member">dump</ref>(uint32_t<sp/>from,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1ab9d179e656fc5552c392b174d03457f2" kindref="member">writeBytes</ref>(uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>num_bytes);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1abe711231d06a16e60c4b48c336ddee16" kindref="member">readBytes</ref>(uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>num_bytes);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a8966ac02bccc26d8c63b6257c28c6b3a" kindref="member">sleep</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a2cadaffd8a4f13814213a48e5b20cc4d" kindref="member">wakeup</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a612a64d4a29763d8a055b397a5ecf7ab" kindref="member">setPowerOnDelay</ref>(uint32_t<sp/>usec);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1ab0a12fdcb7fce8974b2ca43e12a62caa" kindref="member">power_on</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1af1f8781e94de62b193539c9513be36a2" kindref="member">power_off</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a66c05174e928d7b8cf235eeca26e8e87" kindref="member">spimram</ref>(uint32_t<sp/>delay_usec<sp/>=<sp/>2500);<sp/><sp/></highlight><highlight class="comment">//<sp/>default<sp/>2500<sp/>µs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a2ca332a82cb3095dd7bda250ed303e8c" kindref="member">send_command</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmd);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a1795c2a9ad98232f829a8b7e64956ee2" kindref="member">mram_access</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>cmd,<sp/>uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_write);<sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" kindref="member">read_device_id</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/>id_buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a3b4493540590f441cae894bea51d5e17" kindref="member">read_bytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>addr,<sp/>uint8_t*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1aaccd14e38a401a9979170c5addc43e29" kindref="member">write_bytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>addr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a4b5e60928853a99f55e507c03d082960" kindref="member">write_status_reg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>data);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a366ab51ac1f5201dda5779fe12b2a52b" kindref="member">write_config1_reg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>data);<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a4c258e05757b678d415740cfe2d9c592" kindref="member">enter_deep_power_down</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a05230039c2ca0fbaabd8dc3181f83dc6" kindref="member">exit_deep_power_down</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" kindref="member">read_status_reg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/>id_buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="97" refid="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" kindref="member">read_config1_reg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>spi,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/>id_buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gpio_dt_spec<sp/><ref refid="classspimram_1a684ea9e9cc2706389f7c3eca7736e979" kindref="member">power_gpio</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.port<sp/>=<sp/>DEVICE_DT_GET(DT_NODELABEL(gpio0)),</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pin<sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.dt_flags<sp/>=<sp/>GPIO_ACTIVE_HIGH,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classspimram_1afc1e96f581f0d7eaee421c1bf6f506b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classspimram_1afc1e96f581f0d7eaee421c1bf6f506b8" kindref="member">power_delay_usec</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classspimram_1a554f398888f5c215ad5e631339ef2804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1a554f398888f5c215ad5e631339ef2804" kindref="member">CMD_WRSR</ref><sp/>=<sp/>0x01;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="classspimram_1af977da597f5db3f6e482e8f3bc468acb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1af977da597f5db3f6e482e8f3bc468acb" kindref="member">CMD_WRTE</ref><sp/>=<sp/>0x02;</highlight></codeline>
+<codeline lineno="114" refid="classspimram_1adae436778867d75213af0895f4e04638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1adae436778867d75213af0895f4e04638" kindref="member">CMD_READ</ref><sp/>=<sp/>0x03;</highlight></codeline>
+<codeline lineno="116" refid="classspimram_1afe28f2f1929d428f6fab150257120a0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1afe28f2f1929d428f6fab150257120a0b" kindref="member">CMD_RDSR</ref><sp/>=<sp/>0x05;</highlight></codeline>
+<codeline lineno="118" refid="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1a0ac769fa0bb8a18efffeba2a1a25e247" kindref="member">CMD_WREN</ref><sp/>=<sp/>0x06;</highlight></codeline>
+<codeline lineno="120" refid="classspimram_1aebb461a2e2057c9e18f7bc4408dcd54d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1aebb461a2e2057c9e18f7bc4408dcd54d" kindref="member">CMD_RDC1</ref><sp/>=<sp/>0x35;</highlight></codeline>
+<codeline lineno="122" refid="classspimram_1a6a54e87e2f90c0ca53d3d012fb883974" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1a6a54e87e2f90c0ca53d3d012fb883974" kindref="member">CMD_RDAR</ref><sp/>=<sp/>0x65;</highlight></codeline>
+<codeline lineno="124" refid="classspimram_1aabd869221f35a6681844b3d5d3063808" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1aabd869221f35a6681844b3d5d3063808" kindref="member">CMD_WRAR</ref><sp/>=<sp/>0x71;</highlight></codeline>
+<codeline lineno="126" refid="classspimram_1a27c6a2208e765fdc6dce110f890f62ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1a27c6a2208e765fdc6dce110f890f62ba" kindref="member">CMD_RDID</ref><sp/>=<sp/>0x9F;</highlight></codeline>
+<codeline lineno="128" refid="classspimram_1a7d38cabe409955bac035631fe0e06ea5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1a7d38cabe409955bac035631fe0e06ea5" kindref="member">CMD_DPD_ENTER</ref><sp/>=<sp/>0xB9;</highlight></codeline>
+<codeline lineno="130" refid="classspimram_1adba761d9088a954deccb8a97349f685e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>uint8_t<sp/><ref refid="classspimram_1adba761d9088a954deccb8a97349f685e" kindref="member">CMD_DPD_EXIT</ref><sp/>=<sp/>0xAB;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classspimram_1af055b4b148c703eaeda1bedfeda907ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[4];<sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classspimram_1a7fe1e45a5bfd9d243fc5713c3a8f1bb0" kindref="member">status_reg</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classspimram_1a30c9df0ab1132585c97c219b1a136658" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classspimram_1a30c9df0ab1132585c97c219b1a136658" kindref="member">config1_reg</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classspimram_1a0861409233820f636c44759f690cae93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="classspimram_1a0861409233820f636c44759f690cae93" kindref="member">spi_dev</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">spi_config*<sp/><ref refid="classspimram_1a5a0ccd42ad8c6144adb9b74764bc53f7" kindref="member">spi_cfg</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="drv/spi/mram.h"/>
+  </compounddef>
+</doxygen>

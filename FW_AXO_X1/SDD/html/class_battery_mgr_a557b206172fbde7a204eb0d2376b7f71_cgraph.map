@@ -1,0 +1,19 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="Battery manager task function." alt="" coords="5,107,52,133"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="115,5,222,32"/>
+<area shape="rect" id="node5" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="100,56,237,83"/>
+<area shape="rect" id="node6" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="125,107,212,133"/>
+<area shape="rect" id="node8" href="$class_battery_mgr.html#ac201955d3467a5b67075856435290afc" title="Request ADC report of battery channels from AD converter task." alt="" coords="118,157,219,184"/>
+<area shape="rect" id="node13" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="497,208,588,235"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="285,5,417,32"/>
+<area shape="rect" id="node4" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="481,5,605,32"/>
+<area shape="rect" id="node7" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="303,107,400,133"/>
+<area shape="rect" id="node9" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="294,157,409,184"/>
+<area shape="rect" id="node10" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="465,107,620,133"/>
+<area shape="rect" id="node12" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="491,157,594,184"/>
+<area shape="rect" id="node11" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="672,107,803,133"/>
+<area shape="rect" id="node14" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="668,183,807,209"/>
+<area shape="rect" id="node15" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="693,233,782,260"/>
+<area shape="rect" id="node16" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="855,208,975,235"/>
+<area shape="rect" id="node17" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="866,259,963,285"/>
+</map>

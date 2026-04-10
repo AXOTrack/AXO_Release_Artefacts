@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fwinfo_8cpp" kind="file" language="C++">
+    <compoundname>fwinfo.cpp</compoundname>
+    <includes refid="fwinfo_8h" local="yes">update/fwinfo.h</includes>
+    <includes local="no">cJSON.h</includes>
+    <includes local="no">cJSON_os.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>cJSON_os.h</label>
+      </node>
+      <node id="4">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="1">
+        <label>update/fwinfo.cpp</label>
+        <link refid="fwinfo_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="8">
+        <label>cJSON.h</label>
+      </node>
+      <node id="2">
+        <label>update/fwinfo.h</label>
+        <link refid="fwinfo_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fwinfo_8cpp_1ad0a4ce32a0c4d4a48c4bfd087b5aa71e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(fwinfo, COMMON_DEFAULT_DEBUG_LEVEL)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>fwinfo</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.cpp" line="31" column="1" declfile="update/fwinfo.cpp" declline="31" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of firmware info class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="fwinfo_8h_1fwinfo" kindref="member">fwinfo</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fwinfo_8h" kindref="compound">update/fwinfo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cJSON.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cJSON_os.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="fwinfo_8cpp_1ad0a4ce32a0c4d4a48c4bfd087b5aa71e" refkind="member"><highlight class="normal"><ref refid="fwinfo_8cpp_1ad0a4ce32a0c4d4a48c4bfd087b5aa71e" kindref="member">LOG_MODULE_REGISTER</ref>(fwinfo,<sp/><ref refid="debug_8h_1a88d39d33cec75c232e32246b8b6a789f" kindref="member">COMMON_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_fw_info_1ad9cadd855abff02cdb0ce1c0097668be" refkind="member"><highlight class="normal"><ref refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" kindref="member">FwInfo::FwInfo</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwInfo::FwInfo<sp/>str:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>str);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" kindref="member">input</ref><sp/>=<sp/>std::string(str);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_fw_info_1a52cad5018211f7c297fd558cb96768c2" refkind="member"><highlight class="normal"><ref refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" kindref="member">FwInfo::FwInfo</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>msg)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwInfo::FwInfo<sp/>msg:<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(msg-&gt;<ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>()));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" kindref="member">input</ref><sp/>=<sp/>std::string(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(msg-&gt;<ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>()));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_fw_info_1ac116b1e5421fb502590d6d5bdb94eadc" refkind="member"><highlight class="normal"><ref refid="class_fw_info_1ac116b1e5421fb502590d6d5bdb94eadc" kindref="member">FwInfo::~FwInfo</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwInfo::~FwInfo&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" kindref="member">FwInfo::validate</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" kindref="member">url</ref>.size()<sp/>&amp;&amp;<sp/><ref refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" kindref="member">fw_version</ref>.size()<sp/>&amp;&amp;<sp/><ref refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" kindref="member">sha1</ref>.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" kindref="member">filesize</ref><sp/>&gt;<sp/>100000))</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/>0</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>-EINVAL;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" kindref="member">FwInfo::getUrl</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" kindref="member">url</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" kindref="member">FwInfo::getHost</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" kindref="member">host</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" kindref="member">FwInfo::getFileName</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" kindref="member">filename</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" kindref="member">FwInfo::getSha1</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" kindref="member">sha1</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="class_fw_info_1ab428318681b00e380d18e10b687c536f" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_fw_info_1ab428318681b00e380d18e10b687c536f" kindref="member">FwInfo::getFwVersion</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" kindref="member">fw_version</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" refkind="member"><highlight class="normal">std::string<sp/><ref refid="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" kindref="member">FwInfo::getProto</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" kindref="member">proto</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" refkind="member"><highlight class="normal">int32_t<sp/><ref refid="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" kindref="member">FwInfo::getFileSize</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" kindref="member">filesize</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" kindref="member">FwInfo::splitUrl</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;FwInfo:splitUrl<sp/>url:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" kindref="member">url</ref>.c_str());</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>todo:<sp/>ensure<sp/>url<sp/>has<sp/>expected<sp/>format,<sp/>otherwise<sp/>c++<sp/>string<sp/>functions<sp/>may</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>throw<sp/>an<sp/>uncaught<sp/>exception<sp/>resulting<sp/>in<sp/>a<sp/>crash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>tmp(<ref refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" kindref="member">url</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>protocol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string::size_type<sp/>n;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((n<sp/>=<sp/>tmp.rfind(</highlight><highlight class="stringliteral">&quot;http://&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" kindref="member">proto</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;http://&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((n<sp/>=<sp/>tmp.rfind(</highlight><highlight class="stringliteral">&quot;https://&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" kindref="member">proto</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;https://&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>url&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>eat<sp/>up<sp/>protocol<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp.erase(0,<sp/><ref refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" kindref="member">proto</ref>.length());</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>host</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>tmp.find_first_of(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(n<sp/>!=<sp/>std::string::npos);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" kindref="member">host</ref><sp/>=<sp/>tmp.substr(0,<sp/>n);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>eat<sp/>up<sp/>host<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp.erase(0,<sp/><ref refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" kindref="member">host</ref>.length());</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>eat<sp/>up<sp/>slash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>tmp.erase(0,<sp/>1);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>remaining<sp/>part<sp/>is<sp/>the<sp/>filename</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" kindref="member">filename</ref><sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;proto:<sp/>%s<sp/>host:<sp/>%s<sp/>filename:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" kindref="member">proto</ref>.c_str(),<sp/><ref refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" kindref="member">host</ref>.c_str(),</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" kindref="member">filename</ref>.c_str());</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" kindref="member">FwInfo::parse</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FwInfo::parse&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">cJSON<sp/>*root_obj,<sp/>*url_obj,<sp/>*size_obj,<sp/>*sha1_obj,<sp/>*fw_version_obj;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>root_obj<sp/>=<sp/>cJSON_Parse(</highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" kindref="member">input</ref>.data()));</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(root_obj<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>parse<sp/>JSON<sp/>in<sp/>payload&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>url_obj<sp/>=<sp/>cJSON_GetObjectItemCaseSensitive(root_obj,<sp/></highlight><highlight class="stringliteral">&quot;url&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(url_obj);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;url:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>url_obj-&gt;valuestring);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" kindref="member">url</ref><sp/>=<sp/>url_obj-&gt;valuestring;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>sha1_obj<sp/>=<sp/>cJSON_GetObjectItemCaseSensitive(root_obj,<sp/></highlight><highlight class="stringliteral">&quot;sha1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(sha1_obj);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;sha1:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>sha1_obj-&gt;valuestring);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" kindref="member">sha1</ref><sp/>=<sp/>sha1_obj-&gt;valuestring;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>fw_version_obj<sp/>=<sp/>cJSON_GetObjectItemCaseSensitive(root_obj,<sp/></highlight><highlight class="stringliteral">&quot;fw_version&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(fw_version_obj);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;fw_version:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>fw_version_obj-&gt;valuestring);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" kindref="member">fw_version</ref><sp/>=<sp/>fw_version_obj-&gt;valuestring;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>size_obj<sp/>=<sp/>cJSON_GetObjectItemCaseSensitive(root_obj,<sp/></highlight><highlight class="stringliteral">&quot;size&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(size_obj);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_obj-&gt;valueint)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>value<sp/>from<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" kindref="member">filesize</ref><sp/>=<sp/>size_obj-&gt;valueint;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_obj-&gt;valuestring)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>value<sp/>from<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" kindref="member">filesize</ref><sp/>=<sp/>std::stoi(std::string(size_obj-&gt;valuestring));</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;filesize:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" kindref="member">filesize</ref>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>cJSON_Delete(root_obj);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>json[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;{\&quot;url\&quot;:\&quot;https://gomera3.ddns.net/stg/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;app_update.bin\&quot;,\&quot;fw_version\&quot;:\&quot;0.1\&quot;,\&quot;size\&quot;:247996,\&quot;sha1\&quot;:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\&quot;3db38b191b\&quot;}&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;json:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>json);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info" kindref="compound">FwInfo</ref>*<sp/>info<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fw_info" kindref="compound">FwInfo</ref>(json);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>info-&gt;<ref refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" kindref="member">parse</ref>();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>rc<sp/>=<sp/>info-&gt;<ref refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" kindref="member">validate</ref>();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>info-&gt;<ref refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" kindref="member">splitUrl</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;url:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>info-&gt;<ref refid="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" kindref="member">getUrl</ref>().c_str());</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;host:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>info-&gt;<ref refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" kindref="member">getHost</ref>().c_str());</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;name:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>info-&gt;<ref refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" kindref="member">getFileName</ref>().c_str());</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;sha1:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>info-&gt;<ref refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" kindref="member">getSha1</ref>().c_str());</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;version:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>info-&gt;<ref refid="class_fw_info_1ab428318681b00e380d18e10b687c536f" kindref="member">getFwVersion</ref>().c_str());</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(1));</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="update/fwinfo.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structled" kind="struct" language="C++" prot="public">
+    <compoundname>led</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structled_1a95814b4995c4f413b2525dbed0bbedc7" prot="public" static="no" mutable="no">
+        <type>struct gpio_dt_spec</type>
+        <definition>struct gpio_dt_spec spec</definition>
+        <argsstring></argsstring>
+        <name>spec</name>
+        <briefdescription>
+<para>Container for GPIO pin information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="126" column="6" bodyfile="ui/leds.cpp" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" compoundref="leds_8cpp" startline="98" endline="106">Leds::Leds</referencedby>
+        <referencedby refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" compoundref="leds_8cpp" startline="126" endline="131">Leds::setLed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structled_1abea371f9030e15a5d2a4c181576833d8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <briefdescription>
+<para>unique number of LED device </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.cpp" line="50" column="13" bodyfile="ui/leds.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LED control structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>led</label>
+        <link refid="structled"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+spec</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+num</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uint8_t</label>
+      </node>
+      <node id="2">
+        <label>struct gpio_dt_spec</label>
+      </node>
+    </collaborationgraph>
+    <location file="ui/leds.cpp" line="48" column="1" bodyfile="ui/leds.cpp" bodystart="48" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structled_1abea371f9030e15a5d2a4c181576833d8" prot="public" virt="non-virtual"><scope>led</scope><name>num</name></member>
+      <member refid="structled_1a95814b4995c4f413b2525dbed0bbedc7" prot="public" virt="non-virtual"><scope>led</scope><name>spec</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

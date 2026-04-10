@@ -1,0 +1,12 @@
+<map id="HttpConnector" name="HttpConnector">
+<area shape="rect" id="node1" title="HttpConnector task constructor." alt="" coords="5,81,111,108"/>
+<area shape="rect" id="node2" href="$class_http_connector.html#a417dd99cf103bf8a86bdf502eb285a96" title="Timer callback function for the HTTP connector delay timer." alt="" coords="174,5,281,32"/>
+<area shape="rect" id="node7" href="$class_http_connector.html#ac69569fdb1bf3ed35022a1feb8805a6e" title="Timer callback function for the one day timer." alt="" coords="168,56,287,83"/>
+<area shape="rect" id="node9" href="$class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="159,107,296,133"/>
+<area shape="rect" id="node10" href="$class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="183,157,271,184"/>
+<area shape="rect" id="node3" href="$class_http_connector.html#af8d925a524b176e256196165d672fdec" title="Timer expired function for the HTTP connector delay timer." alt="" coords="350,5,485,32"/>
+<area shape="rect" id="node4" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="539,31,628,57"/>
+<area shape="rect" id="node5" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="676,5,796,32"/>
+<area shape="rect" id="node6" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="687,56,785,83"/>
+<area shape="rect" id="node8" href="$class_http_connector.html#a600ebc0f0811da01cd471a04ef4f3be5" title="Timer expired function for the one day timer." alt="" coords="344,56,491,83"/>
+</map>

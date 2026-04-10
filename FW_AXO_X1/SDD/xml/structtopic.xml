@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtopic" kind="struct" language="C++" prot="public">
+    <compoundname>topic</compoundname>
+    <includes refid="mqtt__connector_8h" local="no">mqtt_connector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char string[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="171" column="10" bodyfile="net/mqtt_connector.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="336" endline="357">MqttConnector::publish</referencedby>
+        <referencedby refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="697" endline="707">MqttConnector::PublishData</referencedby>
+        <referencedby refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="722" endline="736">MqttConnector::PublishResponse</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>topic</label>
+        <link refid="structtopic"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+string</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="net/mqtt_connector.h" line="170" column="1" bodyfile="net/mqtt_connector.h" bodystart="170" bodyend="172"/>
+    <listofallmembers>
+      <member refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" prot="public" virt="non-virtual"><scope>topic</scope><name>string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

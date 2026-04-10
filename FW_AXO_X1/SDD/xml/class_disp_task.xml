@@ -1,0 +1,1956 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_disp_task" kind="class" language="C++" prot="public">
+    <compoundname>DispTask</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="disptask_8h" local="no">disptask.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_disp_task_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the HW metrics task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="108" column="10" bodyfile="disp/disptask.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" compoundref="disptask_8cpp" startline="61" endline="78">DispTask</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bIdle</definition>
+        <argsstring></argsstring>
+        <name>bIdle</name>
+        <briefdescription>
+<para>Flag indicating if calculation is in progress or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="109" column="10" bodyfile="disp/disptask.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" compoundref="disptask_8cpp" startline="61" endline="78">DispTask</referencedby>
+        <referencedby refid="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" compoundref="disptask_8cpp" startline="177" endline="181">HandleCalcDisplacementReq</referencedby>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nfilt</definition>
+        <argsstring></argsstring>
+        <name>nfilt</name>
+        <briefdescription>
+<para>filter order </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="115" column="5" bodyfile="disp/disptask.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">reqFiltResultWrite</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nfact</definition>
+        <argsstring></argsstring>
+        <name>nfact</name>
+        <briefdescription>
+<para>length of filter edge transients </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="116" column="9" bodyfile="disp/disptask.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">HandleDispFirstEntries</referencedby>
+        <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">HandleDispLastEntries</referencedby>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t totalNumEntries</definition>
+        <argsstring></argsstring>
+        <name>totalNumEntries</name>
+        <briefdescription>
+<para>Total number of raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="117" column="14" bodyfile="disp/disptask.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">HandleDispFirstEntries</referencedby>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">reqBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">reqFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</referencedby>
+        <referencedby refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">reqSResultData</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">reqSResultWrite</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t startReadPos</definition>
+        <argsstring></argsstring>
+        <name>startReadPos</name>
+        <briefdescription>
+<para>The starting raw data read position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="118" column="14" bodyfile="disp/disptask.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+        <referencedby refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">reqBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">reqFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</referencedby>
+        <referencedby refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">reqSResultData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a8750575eef016431632ec6f7aee5251f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t rcvdEntries</definition>
+        <argsstring></argsstring>
+        <name>rcvdEntries</name>
+        <briefdescription>
+<para>Number of received raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="119" column="14" bodyfile="disp/disptask.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+        <referencedby refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">reqBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">reqFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</referencedby>
+        <referencedby refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">reqSResultData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t requestedEntries</definition>
+        <argsstring></argsstring>
+        <name>requestedEntries</name>
+        <briefdescription>
+<para>Number of requested raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="120" column="14" bodyfile="disp/disptask.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">reqBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">reqFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</referencedby>
+        <referencedby refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">reqSResultData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t startWritePos</definition>
+        <argsstring></argsstring>
+        <name>startWritePos</name>
+        <briefdescription>
+<para>The starting raw data read position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="122" column="14" bodyfile="disp/disptask.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">reqSResultWrite</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sentEntries</definition>
+        <argsstring></argsstring>
+        <name>sentEntries</name>
+        <briefdescription>
+<para>Number of received raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="123" column="14" bodyfile="disp/disptask.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">HandleDispLastEntries</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">reqSResultWrite</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t requestedWrEntries</definition>
+        <argsstring></argsstring>
+        <name>requestedWrEntries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of requested raw data entries </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="124" column="14" bodyfile="disp/disptask.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">reqDResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">reqFiltResultWrite</referencedby>
+        <referencedby refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">reqSResultWrite</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a32575b5386f8e1ff58b80985e27800ac" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t detrendIdx</definition>
+        <argsstring></argsstring>
+        <name>detrendIdx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current index to calculate intermediate sum values for detrend calculation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="127" column="14" bodyfile="disp/disptask.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1aaefe49dcf736b1f1bbb1711cebca73e0" prot="private" static="no" mutable="no">
+        <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+        <definition>vectord leftpad</definition>
+        <argsstring></argsstring>
+        <name>leftpad</name>
+        <briefdescription>
+<para>filtering (calculation of initial conditions based on Matlab) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of type double to store the initial conditions for forward <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="131" column="13" bodyfile="disp/disptask.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">HandleDispFirstEntries</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" prot="private" static="no" mutable="no">
+        <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+        <definition>vectord rightpad</definition>
+        <argsstring></argsstring>
+        <name>rightpad</name>
+        <briefdescription>
+<para>filtering (calculation of initial conditions based on Matlab) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector of type double to store the initial conditions for backward <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="134" column="10" bodyfile="disp/disptask.h" bodystart="134" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">HandleDispLastEntries</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" prot="private" static="no" mutable="no">
+        <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+        <definition>vectord leftpadFilt</definition>
+        <argsstring></argsstring>
+        <name>leftpadFilt</name>
+        <briefdescription>
+<para>Forward filtered left initial conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="136" column="10" bodyfile="disp/disptask.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">HandleDispFirstEntries</referencedby>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1adc64f9fc514f9d643444fda968136c42" prot="private" static="no" mutable="no">
+        <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+        <definition>vectord rightpadFilt</definition>
+        <argsstring></argsstring>
+        <name>rightpadFilt</name>
+        <briefdescription>
+<para>Forward filtered right initial conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="138" column="10" bodyfile="disp/disptask.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a231d895643fdbde850908c3436194727" prot="private" static="no" mutable="no">
+        <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+        <definition>vectord leftpadFiltFilt</definition>
+        <argsstring></argsstring>
+        <name>leftpadFiltFilt</name>
+        <briefdescription>
+<para>Forward and backward filtered left initial conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="140" column="13" bodyfile="disp/disptask.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a3999181a3aa7304b4a1737626650d8db" prot="private" static="no" mutable="no">
+        <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+        <definition>vectord rightpadFiltFilt</definition>
+        <argsstring></argsstring>
+        <name>rightpadFiltFilt</name>
+        <briefdescription>
+<para>Forward and backward filtered right initial conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="142" column="13" bodyfile="disp/disptask.h" bodystart="142" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" prot="private" static="no" mutable="no">
+        <type><ref refid="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" kindref="member">stDetrendVar</ref></type>
+        <definition>stDetrendVar detrendVars</definition>
+        <argsstring></argsstring>
+        <name>detrendVars</name>
+        <briefdescription>
+<para>Structure to store intermediate results for detrend calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="145" column="18" bodyfile="disp/disptask.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a12105e756adcc893d5be7b6d999b6edd" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dVIdx</definition>
+        <argsstring></argsstring>
+        <name>dVIdx</name>
+        <briefdescription>
+<para>Current data point index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="146" column="14" bodyfile="disp/disptask.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1ae7bdf6b2bde3ccdb37cc29a346bd2e49" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double V_last</definition>
+        <argsstring></argsstring>
+        <name>V_last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Previous velocity value V(n-1) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="147" column="12" bodyfile="disp/disptask.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1ae5918d75f4c08438447250a3cc6f5d2b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double S_last</definition>
+        <argsstring></argsstring>
+        <name>S_last</name>
+        <briefdescription>
+<para>Previous displacement value S(n-1), before detrending. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="149" column="12" bodyfile="disp/disptask.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1aaf4a74e9be098efec98511663545b291" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double IN_last</definition>
+        <argsstring></argsstring>
+        <name>IN_last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Previous input (backward filtered) value in(n-1) for velocity calulation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="152" column="12" bodyfile="disp/disptask.h" bodystart="152" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool have_http_connector</definition>
+        <argsstring></argsstring>
+        <name>have_http_connector</name>
+        <briefdescription>
+<para>flag deciding if data are sent to http connector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="155" column="10" bodyfile="disp/disptask.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" compoundref="disptask_8cpp" startline="61" endline="78">DispTask</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a518601811cafb966415fe620ab71ac4f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dispMin</definition>
+        <argsstring></argsstring>
+        <name>dispMin</name>
+        <briefdescription>
+<para>Minimum displacement value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="158" column="12" bodyfile="disp/disptask.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">sendDispStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dispMax</definition>
+        <argsstring></argsstring>
+        <name>dispMax</name>
+        <briefdescription>
+<para>Maximum displacement value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="160" column="12" bodyfile="disp/disptask.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">sendDispStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double dispP2P</definition>
+        <argsstring></argsstring>
+        <name>dispP2P</name>
+        <briefdescription>
+<para>Peak To Peak displacement value, to be send to backend with RMS data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="162" column="12" bodyfile="disp/disptask.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+        <referencedby refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">sendDispStatistics</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double b1</definition>
+        <argsstring></argsstring>
+        <name>b1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Beautification factor b1, multiplication factor for displacement Minimum and Maximum values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="166" column="12" bodyfile="disp/disptask.h" bodystart="166" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" compoundref="disptask_8cpp" startline="97" endline="108">configure</referencedby>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DispTask</definition>
+        <argsstring>(const char *name=&quot;??&quot;, bool have_http_connector=true)</argsstring>
+        <name>DispTask</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>have_http_connector</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Displacement task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>have_http_connector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indicationg if HTTP Connector is used (X1 devices) or not (MINI devices)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor initialize variable bIdle and filter coefficents vectors. Filter coefficents are taken over from python implementation in <ulink url="https://github.com/AXOTrack/disp-calc-python">AXOTrack repository</ulink>. It allocate and register the tasks mailbox and initialize the zero phase highpass filter with call of function filtfilt_init provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="102" column="14" bodyfile="disp/disptask.cpp" bodystart="61" bodyend="78"/>
+        <references refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" compoundref="disptask_8h" startline="109">bIdle</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5694dbf9d110513fa0f836215e315809" compoundref="mbox_8h" startline="91">Mbox::eDispTask</references>
+        <references refid="class_c_filter_1a03ed13edf595420b670dcf96a11f7ce8" compoundref="filter_8cpp" startline="79" endline="145">CFilter::filtfilt_init</references>
+        <references refid="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" compoundref="disptask_8h" startline="155">have_http_connector</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1af2570dd7bace0312470d962f29359fb3" compoundref="disptask_8h" startline="108">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a667fa2480a3fcec33a3887a8d51925d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~DispTask</definition>
+        <argsstring>()</argsstring>
+        <name>~DispTask</name>
+        <briefdescription>
+<para>Displacement task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="103" column="13" bodyfile="disp/disptask.cpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_disp_task" kindref="compound">DispTask</ref> task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function directly enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eCalcDisplacementReq: Member function HandleCalcDisplacementReq will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eRawDataStatus: Member function HandleRawDataStatus will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eDispFirstEntries: Member function HandleDispFirstEntries will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eDispLastEntries: Member function HandleDispLastEntries will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eRawData: Member function HandleRawData will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eStoredFwFiltVals: Member function InitBwFiltering will be called.</para>
+</listitem><listitem><para>eFwFiltData: Member function HandleFwFiltData will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eStoredBwFiltVals: Member function InitDispCalc will be called.</para>
+</listitem><listitem><para>eBwFiltData: Member function HandleBwFiltData will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eStoredSResultVals: Member function InitDetrend will be called.</para>
+</listitem><listitem><para>eSResultData: Member function HandleSResultData will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eStoredDResultVals: Flag bIdle will be set to true, to indicate that displacement calculation has been finished and message eSendDispDataReq will be send to HTTP Connector to start transmission of displacement data to HTTP server. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="104" column="18" bodyfile="disp/disptask.cpp" bodystart="1107" bodyend="1193"/>
+        <references refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" compoundref="disptask_8h" startline="109">bIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab4bb21bd52e29672e189c8db71bee8b5" compoundref="mpelem_8h" startline="129">eBwFiltData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" compoundref="mpelem_8h" startline="117">eCalcDisplacementReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d878bf9348bb885285cd00125e1ca74" compoundref="mpelem_8h" startline="118">eDispFirstEntries</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" compoundref="mpelem_8h" startline="119">eDispLastEntries</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba74b82d96e16916581d8ad268537d8f17" compoundref="mpelem_8h" startline="128">eFwFiltData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" compoundref="mpelem_8h" startline="113">eRawData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" compoundref="mpelem_8h" startline="112">eRawDataStatus</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83f7d57b3b395aaa7b7acb538e944791" compoundref="mpelem_8h" startline="131">eSendDispDataReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babe6992742a3e82d908ff3a3c9ece320b" compoundref="mpelem_8h" startline="130">eSResultData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba52bba38ceb62448a4983f35eb873a57a" compoundref="mpelem_8h" startline="125">eStoredBwFiltVals</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba00dcdef23c04769526c3e0af0763624d" compoundref="mpelem_8h" startline="127">eStoredDResultVals</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf1ea70db78d653be0b303037e01fc4a7" compoundref="mpelem_8h" startline="124">eStoredFwFiltVals</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8840b77f10e3e2dbd4f66ffa80c1d213" compoundref="mpelem_8h" startline="126">eStoredSResultVals</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</references>
+        <references refid="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" compoundref="disptask_8cpp" startline="177" endline="181">HandleCalcDisplacementReq</references>
+        <references refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">HandleDispFirstEntries</references>
+        <references refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">HandleDispLastEntries</references>
+        <references refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</references>
+        <references refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</references>
+        <references refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">HandleRawDataStatus</references>
+        <references refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</references>
+        <references refid="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" compoundref="disptask_8h" startline="155">have_http_connector</references>
+        <references refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</references>
+        <references refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</references>
+        <references refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_disp_task_1af2570dd7bace0312470d962f29359fb3" compoundref="disptask_8h" startline="108">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void configure</definition>
+        <argsstring>()</argsstring>
+        <name>configure</name>
+        <reimplements refid="class_task_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplements>
+        <briefdescription>
+<para><ref refid="class_disp_task" kindref="compound">DispTask</ref> virtual task configure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The configure function overloads the configure function of the task base class. It retrieves the configuration related to datalog by call of the function getCfgDisplacement provided by the <ref refid="class_config" kindref="compound">Config</ref> class and set the beautification factor b1 according to the configuration values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="106" column="18" bodyfile="disp/disptask.cpp" bodystart="97" bodyend="108"/>
+        <references refid="struct__st_cfg_displacement_1a5667be314bbfb5cd43a7932e3327a556" compoundref="config_8h" startline="184">_stCfgDisplacement::b1</references>
+        <references refid="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" compoundref="disptask_8h" startline="166">b1</references>
+        <references refid="class_config_1a02b9c58f87dbf3269338120d45fbe187" compoundref="config_8cpp" startline="742" endline="744">Config::getCfgDisplacement</references>
+        <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_disp_task_1af805a1118ef27529d966b67349c4e46d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int filt_dump</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>filt_dump</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;f&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eCalcDisplacementReq to its own (<ref refid="class_disp_task" kindref="compound">DispTask</ref>) mailbox. <simplesect kind="note"><para>For testing only: trigger to start displacement calculation via shell command. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="111" column="16" bodyfile="disp/disptask.cpp" bodystart="1202" bodyend="1210"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" compoundref="mpelem_8h" startline="117">eCalcDisplacementReq</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1af3adad0893ab002ab59967c50c4c9cf3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int itegrate_detrend</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>itegrate_detrend</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="112" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleCalcDisplacementReq</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleCalcDisplacementReq</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming request to calculate displacement values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the request</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set flag bIdle to false, indicating that displacement calculation is ongoing and send message eRawDataStatus to ADXL store task to retrieve number of raw data entries among other informations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="168" column="10" bodyfile="disp/disptask.cpp" bodystart="177" bodyend="181"/>
+        <references refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" compoundref="disptask_8h" startline="109">bIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" compoundref="mpelem_8h" startline="112">eRawDataStatus</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleDispFirstEntries</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleDispFirstEntries</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming raw data message for left initial condition calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the indication</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts a structure of type <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> from the message payload and initialize a vector Z of type double with length nfact + 2 and the initial values 0. Than the function enters a loop and convert the received z raw values to double and copy them to the vector Z. With call of function prepare_leftpad provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> the left initial conditions will be calculated and stored in vector leftpad. By calling function fwfilter_init the forward filtering will be prepaired and with call of function filterFirstIter also provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> the first filter iteration will be initiated with the values in vector leftpad. Afterwards a structure of type <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be filled with start read position, the number of currently received entries, which in this case is totalNumEntries - (nfact + 1) to get the last recorded samples. Additionally the number of requested entries will be assigned, which is nfact + 1. Finally a message of type eDispLastEntries is send to ADXL store task to retrieve the last raw data values, which than will be used to calculate right initial conditions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="169" column="10" bodyfile="disp/disptask.cpp" bodystart="254" bodyend="283"/>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" compoundref="mpelem_8h" startline="119">eDispLastEntries</references>
+        <references refid="class_c_filter_1a2af0fcf40944ac051dc8a31a4da06dd0" compoundref="filter_8cpp" startline="322" endline="365">CFilter::filterFirstIter</references>
+        <references refid="class_c_filter_1a72e7df4bd2a6a5ee7611b1841b2c60d3" compoundref="filter_8cpp" startline="244" endline="249">CFilter::fwfilter_init</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1aaefe49dcf736b1f1bbb1711cebca73e0" compoundref="disptask_8h" startline="131">leftpad</references>
+        <references refid="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" compoundref="disptask_8h" startline="136">leftpadFilt</references>
+        <references refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" compoundref="disptask_8h" startline="116">nfact</references>
+        <references refid="class_c_filter_1a980b8e38dc55adb69c699bccbe64e812" compoundref="filter_8cpp" startline="485" endline="490">CFilter::prepare_leftpad</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleDispLastEntries</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleDispLastEntries</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming raw data message for right initial condition calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the indication</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts a structure of type <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> from the message payload and initialize a vector Z of type double with length nfact + 1 and the initial values 0. Than the function enters a loop and convert the received z raw values to double and copy them to the vector Z. With call of function prepare_rightpad provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> the right initial conditions will be calculated and stored in vector rightpad. Afterwards the first raw data entries will be requested by call of function reqRawData and finally the member variable sentEntries will be initialized with 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="170" column="10" bodyfile="disp/disptask.cpp" bodystart="446" bodyend="462"/>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" compoundref="disptask_8h" startline="116">nfact</references>
+        <references refid="class_c_filter_1a4d95f899f3f6dbe6a2bd7d34e06640a1" compoundref="filter_8cpp" startline="501" endline="506">CFilter::prepare_rightpad</references>
+        <references refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</references>
+        <references refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" compoundref="disptask_8h" startline="134">rightpad</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleRawDataStatus</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleRawDataStatus</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming raw data status indication message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the indication</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts a structure of type <ref refid="struct_adxl_raw_data_status" kindref="compound">AdxlRawDataStatus</ref> from the message payload and assign start read position and number of samples within structure to the member variables startReadPos and totalNumEntries. Member variable rcvdEntries will be initialized with 0. Please note, that start read position allways points to the beginning of the complete data area, not to the current read position. In case number of samples is greater than zero, the function retrieves the filter order and the length of edge transients, provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> and assign it to the member variables nfact and nfilt. Afterward a structure of type <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be filled with start read position, the number of currently received entries, which in this case is 0 and with the number of requested entries, which is nfact + 2. A message of type eDispFirstEntries is than send to ADXL store task to retrieve the first raw data values, which than will be used to calculate left initial conditions. If number of samples is not greater than 0, the flag bIdle is set to true and the function returns. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="171" column="10" bodyfile="disp/disptask.cpp" bodystart="204" bodyend="229"/>
+        <references refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" compoundref="disptask_8h" startline="109">bIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d878bf9348bb885285cd00125e1ca74" compoundref="mpelem_8h" startline="118">eDispFirstEntries</references>
+        <references refid="struct_adxl_raw_data_status_1a38bad35c844ffd72b0c1132715d5f3a1" compoundref="adxl__store_8h" startline="78">AdxlRawDataStatus::entries</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_c_filter_1a6f69e3f7ab4d49efbada4a49a406a888" compoundref="filter_8cpp" startline="567" endline="569">CFilter::getNfact</references>
+        <references refid="class_c_filter_1aa1e23d3ed975bf89c3889491f6449f64" compoundref="filter_8cpp" startline="578" endline="580">CFilter::getNfilt</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" compoundref="disptask_8h" startline="116">nfact</references>
+        <references refid="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" compoundref="disptask_8h" startline="115">nfilt</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_status_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="77">AdxlRawDataStatus::startRd</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a62980b31ea3fb727feb6613268798b13" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleRawData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleRawData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming raw data message for forward filtering the received data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the raw data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function increases received entries in member variable rcvdEntries by the number of previously requested enttries and extracts a structure of type <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> from the message payload and initialize a vector Z of type double with a length of requestedEntries the initial values 0. Than the function enters a loop and convert the received z raw values to double and copy them to the vector Z. With call of function filterNthIter provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> the raw data will be <linebreak/>
+ forward filtered and the result will be stored stored in vector filterOutput. By call of member function reqFiltResultWrite the storage of the filtered data in FRAM will be initiated. Afterwards the function checks, if number of received entries is equal to the total number of entries and in this case function filterLastIter will be called with the initial conditions in vector rightpad, the result will be stored in vector rightpadFilt. <linebreak/>
+ Otherwise new raw data will be requested from ADXL store by call of member function reqRawData. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="172" column="10" bodyfile="disp/disptask.cpp" bodystart="665" bodyend="702"/>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" compoundref="mpelem_8h" startline="120">eStoreFwFiltResult</references>
+        <references refid="class_c_filter_1a5afb651eb8bb19b0f16d4f5094611757" compoundref="filter_8cpp" startline="441" endline="474">CFilter::filterLastIter</references>
+        <references refid="class_c_filter_1ab90d6ce05e8b04993a6fde401a609590" compoundref="filter_8cpp" startline="381" endline="426">CFilter::filterNthIter</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">reqFiltResultWrite</references>
+        <references refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" compoundref="disptask_8h" startline="134">rightpad</references>
+        <references refid="class_disp_task_1adc64f9fc514f9d643444fda968136c42" compoundref="disptask_8h" startline="138">rightpadFilt</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitBwFiltering</definition>
+        <argsstring>()</argsstring>
+        <name>InitBwFiltering</name>
+        <briefdescription>
+<para>Function to initialize the backward filtering. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function deletes the first nfilt values from vectror rightpadFilt, reverse the vectors leftpadFilt and rightpadFilt by call of function reverse and call the functions bwfilter_init and filterFirstIter, provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> with input vector rightpadFilt. The result of the backward filtering will be stored in vector rightpadFiltFilt. Afterward the member variables rcvdEntries and startReadPos will be initialized with 0 before calling member function reqFwFiltData to request the first forward filtered data stored in FRAM. Finally the number of still sent entries in member variable sentEntries will be set to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="173" column="10" bodyfile="disp/disptask.cpp" bodystart="718" bodyend="735"/>
+        <references refid="class_c_filter_1a0231e19a19b4505946fcd352d9bcd715" compoundref="filter_8cpp" startline="259" endline="266">CFilter::bwfilter_init</references>
+        <references refid="class_c_filter_1a2af0fcf40944ac051dc8a31a4da06dd0" compoundref="filter_8cpp" startline="322" endline="365">CFilter::filterFirstIter</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" compoundref="disptask_8h" startline="136">leftpadFilt</references>
+        <references refid="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" compoundref="disptask_8h" startline="115">nfilt</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">reqFwFiltData</references>
+        <references refid="class_disp_task_1adc64f9fc514f9d643444fda968136c42" compoundref="disptask_8h" startline="138">rightpadFilt</references>
+        <references refid="class_disp_task_1a3999181a3aa7304b4a1737626650d8db" compoundref="disptask_8h" startline="142">rightpadFiltFilt</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleFwFiltData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleFwFiltData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming message with forward filtered data and realize the backward filtering. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the raw data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function increases received entries in member variable rcvdEntries by the number of previously requested enttries and extracts the forward filtered data from the message payload and initialize a vector FwFilt of type double with a length of requestedEntries the initial values 0. Than the function enters a loop and copy the received forward filtered values from message payload into the vector FwFilt. With call of function filterNthIter provided by class <ref refid="class_c_filter" kindref="compound">CFilter</ref> the forward filtered data will be backward filtered and the result will be stored in vector filterOutput. By call of member function reqFiltResultWrite the storage of the filtered data in FRAM will be initiated. Afterwards the function checks, if number of received entries is equal to the total number of entries and in this case function filterLastIter will be called with the forward filtered initial conditions in vector leftpadFilt, the result will be stored in vector leftpadFiltFilt. Otherwise new forward filtered data will be requested from ADXL store by call of member function reqFwFiltData. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="174" column="10" bodyfile="disp/disptask.cpp" bodystart="760" bodyend="795"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaa84aa9145613b6efdbf2139143f4213" compoundref="mpelem_8h" startline="121">eStoreBwFiltResult</references>
+        <references refid="class_c_filter_1a5afb651eb8bb19b0f16d4f5094611757" compoundref="filter_8cpp" startline="441" endline="474">CFilter::filterLastIter</references>
+        <references refid="class_c_filter_1ab90d6ce05e8b04993a6fde401a609590" compoundref="filter_8cpp" startline="381" endline="426">CFilter::filterNthIter</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
+        <references refid="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" compoundref="disptask_8h" startline="136">leftpadFilt</references>
+        <references refid="class_disp_task_1a231d895643fdbde850908c3436194727" compoundref="disptask_8h" startline="140">leftpadFiltFilt</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" compoundref="disptask_8cpp" startline="487" endline="533">reqFiltResultWrite</references>
+        <references refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" compoundref="disptask_8cpp" startline="325" endline="342">reqFwFiltData</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitDispCalc</definition>
+        <argsstring>()</argsstring>
+        <name>InitDispCalc</name>
+        <briefdescription>
+<para>Function to initialize the displacement calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initialize the sum variables in structure detrendVars with 0, afterwards the member variables rcvdEntries, startReadPos and startWritePos will be initialized with 0 before calling member function reqBwFiltData to request the first backward filtered data stored in FRAM. and set number of still sent entries in member variable sentEntries to 0. Finally current data point index is set to 1, previous velocity value V_last, previous displacement value S_last and previous input value IN_last will initialized with 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="175" column="10" bodyfile="disp/disptask.cpp" bodystart="809" bodyend="826"/>
+        <references refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" compoundref="disptask_8h" startline="145">detrendVars</references>
+        <references refid="class_disp_task_1a12105e756adcc893d5be7b6d999b6edd" compoundref="disptask_8h" startline="146">dVIdx</references>
+        <references refid="class_disp_task_1aaf4a74e9be098efec98511663545b291" compoundref="disptask_8h" startline="152">IN_last</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">reqBwFiltData</references>
+        <references refid="class_disp_task_1ae5918d75f4c08438447250a3cc6f5d2b" compoundref="disptask_8h" startline="149">S_last</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" compoundref="disptask_8h" startline="122">startWritePos</references>
+        <references refid="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" compoundref="disptask_8h" startline="56">_stDetrendVar::sumX</references>
+        <references refid="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" compoundref="disptask_8h" startline="59">_stDetrendVar::sumX2</references>
+        <references refid="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" compoundref="disptask_8h" startline="58">_stDetrendVar::sumXY</references>
+        <references refid="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" compoundref="disptask_8h" startline="57">_stDetrendVar::sumY</references>
+        <references refid="class_disp_task_1ae7bdf6b2bde3ccdb37cc29a346bd2e49" compoundref="disptask_8h" startline="147">V_last</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleBwFiltData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleBwFiltData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming message with backward filtered data and realize the displacement calculation (before detrending) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the raw data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function increases received entries in member variable rcvdEntries by the number of previously requested enttries, extracts the backward filtered data from the message payload and initialize the vector FwFilt of type double with a length of requestedEntries the initial values 0. Furthermore two output vectors VOutput and SOutput for the velocity and the displacement values before detrending will be also initialized with a length of requestedEntries and initial values 0. Than the function enters a loop and copy the received backward filtered values from message payload into the vector BwFilt. With call of member function calcDisplacement velocity and displacement will be calculated and stored in the vectors VOutput and SOutput. By call of member function reqSResultWrite the storage of the calculated displacement (S) values in FRAM will be initiated. Afterwards the function checks, if number of received entries is unequal to the total number of entries and in this case new backward filtered data will be requested from ADXL store by call of member function reqBwFiltData. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="176" column="10" bodyfile="disp/disptask.cpp" bodystart="911" bodyend="949"/>
+        <references refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" compoundref="disptask_8cpp" startline="355" endline="372">reqBwFiltData</references>
+        <references refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" compoundref="disptask_8cpp" startline="556" endline="587">reqSResultWrite</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a024287e67c62f8287d6a189b5741017f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitDetrend</definition>
+        <argsstring>()</argsstring>
+        <name>InitDetrend</name>
+        <briefdescription>
+<para>Function to initialize the detrend calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initialize the index detrendIdx in with 0 and calculate slope and intercept value by calling member function detrendCalcSlopeIntercept. Afterwards the member variables rcvdEntries, startReadPos and startWritePos will be initialized with 0 before calling member function reqSResultData to request the first S values (displacement values before detrending) stored in FRAM. Finally the number of still sent entries in member variable sentEntries to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="177" column="10" bodyfile="disp/disptask.cpp" bodystart="962" bodyend="975"/>
+        <references refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">detrendCalcSlopeIntercept</references>
+        <references refid="class_disp_task_1a32575b5386f8e1ff58b80985e27800ac" compoundref="disptask_8h" startline="127">detrendIdx</references>
+        <references refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" compoundref="disptask_8h" startline="145">detrendVars</references>
+        <references refid="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" compoundref="disptask_8h" startline="160">dispMax</references>
+        <references refid="class_disp_task_1a518601811cafb966415fe620ab71ac4f" compoundref="disptask_8h" startline="158">dispMin</references>
+        <references refid="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" compoundref="disptask_8h" startline="162">dispP2P</references>
+        <references refid="disptask_8h_1a6e9a4300372c092658d374143db87f60" compoundref="disptask_8h" startline="46">NUM_FILT_REMOVE</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">reqSResultData</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" compoundref="disptask_8h" startline="122">startWritePos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1aa1b33da4a44539cdb25533038f079003" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleSResultData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleSResultData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function handle incoming message with S values (displacement values before detrending) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The incoming message with the raw data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function increases received entries in member variable rcvdEntries by the number of previously requested enttries, extracts the displacement data from the message payload and initialize the vector SResult of type double with a length of requestedEntries the initial values 0. Furthermore output vector DOutput for the the displacement values after detrending will be also initialized with a length of requestedEntries and initial values 0. Than the function enters a loop and copy the received S values from message payload into the vector SResult. By checking the current detrend index the output values in range [0, NUM_FILT_REMOVE] and [totalNumEntries - NUM_FILT_REMOVE - 1, totalNumEntries -1] will be set to 0. Outside of these ranges the output values will be calculated by call of function detrendRemoveTrend, which removes the linear trend from the input data. At the end of the loop <linebreak/>
+ detrendIdx will be incremented by 1. <linebreak/>
+By call of member function reqDResultWrite the storage of the calculated displacement (D) values in FRAM will be initiated. Afterwards the function checks, if number of received entries is unequal to the total number of entries and in this case new S result data will be requested from ADXL store by call of member function reqSResultData. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="178" column="10" bodyfile="disp/disptask.cpp" bodystart="1005" bodyend="1070"/>
+        <references refid="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" compoundref="disptask_8h" startline="166">b1</references>
+        <references refid="class_disp_task_1a32575b5386f8e1ff58b80985e27800ac" compoundref="disptask_8h" startline="127">detrendIdx</references>
+        <references refid="class_disp_task_1a5d5c2ce1a8b4d44ffc2c8fda65923812" compoundref="disptask_8cpp" startline="162" endline="165">detrendRemoveTrend</references>
+        <references refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" compoundref="disptask_8h" startline="145">detrendVars</references>
+        <references refid="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" compoundref="disptask_8h" startline="160">dispMax</references>
+        <references refid="class_disp_task_1a518601811cafb966415fe620ab71ac4f" compoundref="disptask_8h" startline="158">dispMin</references>
+        <references refid="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" compoundref="disptask_8h" startline="162">dispP2P</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="disptask_8h_1a6e9a4300372c092658d374143db87f60" compoundref="disptask_8h" startline="46">NUM_FILT_REMOVE</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" compoundref="disptask_8cpp" startline="610" endline="641">reqDResultWrite</references>
+        <references refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" compoundref="disptask_8cpp" startline="386" endline="403">reqSResultData</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" compoundref="disptask_8cpp" startline="417" endline="428">sendDispStatistics</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqRawData</definition>
+        <argsstring>()</argsstring>
+        <name>reqRawData</name>
+        <briefdescription>
+<para>Function to request raw data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request raw data from AdxlStore task with message type eRawData. In the payload of the message a structure of type struct <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be copied by function sendMsg. The structure contains the read position of the first raw data entry, the number of currently received raw data entries and the number of currently requested raw data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="180" column="10" bodyfile="disp/disptask.cpp" bodystart="295" bodyend="312"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" compoundref="mpelem_8h" startline="113">eRawData</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">HandleDispLastEntries</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqFwFiltData</definition>
+        <argsstring>()</argsstring>
+        <name>reqFwFiltData</name>
+        <briefdescription>
+<para>Function to request forward filtered data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request forward filtered data from AdxlStore task with message type eFwFiltData. In the payload of the message a structure of type struct <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be copied by function sendMsg. The structure contains the read position of the first forward filtered data entry, the number of currently received forward filtered data entries and the number of currently requested forward filtered data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="181" column="10" bodyfile="disp/disptask.cpp" bodystart="325" bodyend="342"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba74b82d96e16916581d8ad268537d8f17" compoundref="mpelem_8h" startline="128">eFwFiltData</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" compoundref="disptask_8cpp" startline="718" endline="735">InitBwFiltering</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqBwFiltData</definition>
+        <argsstring>()</argsstring>
+        <name>reqBwFiltData</name>
+        <briefdescription>
+<para>Function to request backward filtered data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request backward filtered data from AdxlStore task with message type eBwFiltData. In the payload of the message a structure of type struct <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be copied by function sendMsg. The structure contains the read position of the first backward filtered data entry, the number of currently received backward filtered data entries and the number of currently requested backward filtered data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="182" column="10" bodyfile="disp/disptask.cpp" bodystart="355" bodyend="372"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab4bb21bd52e29672e189c8db71bee8b5" compoundref="mpelem_8h" startline="129">eBwFiltData</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqSResultData</definition>
+        <argsstring>()</argsstring>
+        <name>reqSResultData</name>
+        <briefdescription>
+<para>Function to request intermediate S result (displacement data before detrending) data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request S result data from AdxlStore task with message type eSResultData. In the payload of the message a structure of type struct <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be copied by function sendMsg. The structure contains the read position of the first S result data entry, the number of currently received S result data entries and the number of currently requested S result data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="183" column="10" bodyfile="disp/disptask.cpp" bodystart="386" bodyend="403"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babe6992742a3e82d908ff3a3c9ece320b" compoundref="mpelem_8h" startline="130">eSResultData</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="disptask_8h" startline="118">startReadPos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqFiltResultWrite</definition>
+        <argsstring>(vectord F, enum msgType mType)</argsstring>
+        <name>reqFiltResultWrite</name>
+        <param>
+          <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+          <declname>F</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>mType</declname>
+        </param>
+        <briefdescription>
+<para>Function to request writing of filtered result values into FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>F</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of type double with the filtered result values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type to be send to ADXL store task</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initialize the remaining entries to write in variable remainingWrEntries and set variable requestedWrEntries to the maximum number of requested entries MAX_NUM_REQ_ENTRIES. In case remainingWrEntries are less than MAX_NUM_REQ_ENTRIES variable requestedWrEntries will be set to remainingWrEntries. Afterwards start write address will be assigned in structure progress of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> in dependency of for- or backward filter results indicated by parameter mType. Start write address will be than readjusted. Please note, that the result vector will be stored in reverse order to be in correct direction for the next calculation step (for backward filtering or correct order after backward filtering). Structure progress will be filled with number of still sent entries and number of requested write entries. Afterwards the values in vector S will be stored in a temporary array in reverse order and copied in structure progress. By calling function sendMsg provided by class <ref refid="class_mbox" kindref="compound">Mbox</ref> a message of type mType will be send to ADXL store task with structure progress in the payload. Finally member variable sentEntries will be increased by requestedWrEntries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="184" column="10" bodyfile="disp/disptask.cpp" bodystart="487" bodyend="533"/>
+        <references refid="adxl__store_8h_1a0892059d01223a25c8871a93acd71608" compoundref="adxl__store_8h" startline="52">BW_D_START_ADDR</references>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaa84aa9145613b6efdbf2139143f4213" compoundref="mpelem_8h" startline="121">eStoreBwFiltResult</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" compoundref="mpelem_8h" startline="120">eStoreFwFiltResult</references>
+        <references refid="adxl__store_8h_1a054381bd38b8be928b735402b5820837" compoundref="adxl__store_8h" startline="51">FW_S_START_ADDR</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" compoundref="disptask_8h" startline="115">nfilt</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" compoundref="disptask_8h" startline="124">requestedWrEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">HandleFwFiltData</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">HandleRawData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqSResultWrite</definition>
+        <argsstring>(vectord S)</argsstring>
+        <name>reqSResultWrite</name>
+        <param>
+          <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+          <declname>S</declname>
+        </param>
+        <briefdescription>
+<para>Function to request writing of S result values into FRAM (displacement data before detrending) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of type double with the S result values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initialize the remaining entries to write in variable remainingWrEntries and set variable requestedWrEntries to the maximum number of requested entries MAX_NUM_REQ_ENTRIES. In case remainingWrEntries are less than MAX_NUM_REQ_ENTRIES variable requestedWrEntries will be set to remainingWrEntries. Afterwards start write address will be assigned in structure progress of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> with FW_S_START_ADDR plus number of still sent entries multiplied by sizeof data type double. Structure progress will be filled with number of still sent entries and <linebreak/>
+ number of requested write entries. Afterwards the values in vector S will be stored in a temporary array and copied in structure progress. By calling function sendMsg provided by class <ref refid="class_mbox" kindref="compound">Mbox</ref> a message of type eStoreSResult will be send to ADXL store task with structure progress in the payload. Finally the member variables sentEntries and startWritePos will be increased by requestedWrEntries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="185" column="10" bodyfile="disp/disptask.cpp" bodystart="556" bodyend="587"/>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baccdc9c832cc181c083b566337e394790" compoundref="mpelem_8h" startline="122">eStoreSResult</references>
+        <references refid="adxl__store_8h_1a054381bd38b8be928b735402b5820837" compoundref="adxl__store_8h" startline="51">FW_S_START_ADDR</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" compoundref="disptask_8h" startline="124">requestedWrEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" compoundref="disptask_8h" startline="122">startWritePos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqDResultWrite</definition>
+        <argsstring>(vectord D)</argsstring>
+        <name>reqDResultWrite</name>
+        <param>
+          <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+<para>Function to request writing of D result values into FRAM (displacement data after detrending, final result) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of type double with the D result values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initialize the remaining entries to write in variable remainingWrEntries and set variable requestedWrEntries to the maximum number of requested entries MAX_NUM_REQ_ENTRIES. In case remainingWrEntries are less than MAX_NUM_REQ_ENTRIES variable requestedWrEntries will be set to remainingWrEntries. Afterwards start write address will be assigned in structure progress of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> with BW_D_START_ADDR plus number of still sent entries multiplied by sizeof data type double. Structure progress will be filled with number of still sent entries and <linebreak/>
+ number of requested write entries. Afterwards the values in vector D will be stored in a temporary array and copied in structure progress. By calling function sendMsg provided by class <ref refid="class_mbox" kindref="compound">Mbox</ref> a message of type eStoreDResult will be send to ADXL store task with structure progress in the payload. Finally the member variables sentEntries and startWritePos will be increased by requestedWrEntries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="186" column="10" bodyfile="disp/disptask.cpp" bodystart="610" bodyend="641"/>
+        <references refid="adxl__store_8h_1a0892059d01223a25c8871a93acd71608" compoundref="adxl__store_8h" startline="52">BW_D_START_ADDR</references>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba69e4a9e9ae9e9bb4b6980eb4c648b2c2" compoundref="mpelem_8h" startline="123">eStoreDResult</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" compoundref="disptask_8h" startline="124">requestedWrEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" compoundref="disptask_8h" startline="122">startWritePos</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendDispStatistics</definition>
+        <argsstring>()</argsstring>
+        <name>sendDispStatistics</name>
+        <briefdescription>
+<para>Function to request intermediate S result (displacement data before detrending) data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request S result data from AdxlStore task with message type eSResultData. In the payload of the message a structure of type struct <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be copied by function sendMsg. The structure contains the read position of the first S result data entry, the number of currently received S result data entries and the number of currently requested S result data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="189" column="10" bodyfile="disp/disptask.cpp" bodystart="417" bodyend="428"/>
+        <references refid="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" compoundref="disptask_8h" startline="160">dispMax</references>
+        <references refid="class_disp_task_1a518601811cafb966415fe620ab71ac4f" compoundref="disptask_8h" startline="158">dispMin</references>
+        <references refid="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" compoundref="disptask_8h" startline="162">dispP2P</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" compoundref="mpelem_8h" startline="135">eDispStatistics</references>
+        <references refid="struct__st_disp_statistics_1a0b0ede69e8156eb97acc579b88e883de" compoundref="disptask_8h" startline="69">_stDispStatistics::max</references>
+        <references refid="struct__st_disp_statistics_1aad36546e8175d2922bee165fe028fedc" compoundref="disptask_8h" startline="68">_stDispStatistics::min</references>
+        <references refid="struct__st_disp_statistics_1a3829dc5515fa3267fb40cce71c9ea2ea" compoundref="disptask_8h" startline="70">_stDispStatistics::p2p</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calcDisplacement</definition>
+        <argsstring>(vectord in, vectord &amp;Vout, vectord &amp;Sout)</argsstring>
+        <name>calcDisplacement</name>
+        <param>
+          <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref></type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref> &amp;</type>
+          <declname>Vout</declname>
+        </param>
+        <param>
+          <type><ref refid="filter_8h_1aed839a0813d2d1ae97bfc8ad27fec316" kindref="member">vectord</ref> &amp;</type>
+          <declname>Sout</declname>
+        </param>
+        <briefdescription>
+<para>Function to calculate displacement before detrending. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Incoming vector of type double with for- and backward filtered values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Vout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output vector with the integrated velocity values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Sout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output vector with the integrated displacement values before detrending</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initialize the current data index idx with difference of received entries minus requested entries. To avoid the influence of transient response of the filtering the first and last NUM_FILT_REMOVE entries will be deleted by setting them to 0. By checking the current data index the output values in range [0, NUM_FILT_REMOVE] and [totalNumEntries - NUM_FILT_REMOVE - 1, totalNumEntries -1] will be set to 0. Outside of these ranges the output values of the velocity Vout will be calculated by integration of the filtered input values and the displacement values before detrending Sout will be calculated by integration of the velocity. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="191" column="10" bodyfile="disp/disptask.cpp" bodystart="848" bodyend="885"/>
+        <references refid="disptask_8h_1a5400b1f2028d38732e4377be4f32b255" compoundref="disptask_8h" startline="50">DELTA_T</references>
+        <references refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" compoundref="disptask_8cpp" startline="121" endline="127">detrendCalcSums</references>
+        <references refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" compoundref="disptask_8h" startline="145">detrendVars</references>
+        <references refid="class_disp_task_1a12105e756adcc893d5be7b6d999b6edd" compoundref="disptask_8h" startline="146">dVIdx</references>
+        <references refid="class_disp_task_1aaf4a74e9be098efec98511663545b291" compoundref="disptask_8h" startline="152">IN_last</references>
+        <references refid="disptask_8h_1a6e9a4300372c092658d374143db87f60" compoundref="disptask_8h" startline="46">NUM_FILT_REMOVE</references>
+        <references refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" compoundref="disptask_8h" startline="119">rcvdEntries</references>
+        <references refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="disptask_8h" startline="120">requestedEntries</references>
+        <references refid="class_disp_task_1ae5918d75f4c08438447250a3cc6f5d2b" compoundref="disptask_8h" startline="149">S_last</references>
+        <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
+        <references refid="class_disp_task_1ae7bdf6b2bde3ccdb37cc29a346bd2e49" compoundref="disptask_8h" startline="147">V_last</references>
+        <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">HandleBwFiltData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detrendCalcSums</definition>
+        <argsstring>(int idx, double inVal, stDetrendVar &amp;v)</argsstring>
+        <name>detrendCalcSums</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>inVal</declname>
+        </param>
+        <param>
+          <type><ref refid="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" kindref="member">stDetrendVar</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Function to calculate intermediate sums for detrending. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current index of the data point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current data point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure of type stDetrendVar with the intermediate calculated sums</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function is called whenever new S data (displacement data before detrending) has been calculated. For every data point the sums in structure v will updated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="193" column="10" bodyfile="disp/disptask.cpp" bodystart="121" bodyend="127"/>
+        <references refid="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" compoundref="disptask_8h" startline="56">_stDetrendVar::sumX</references>
+        <references refid="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" compoundref="disptask_8h" startline="59">_stDetrendVar::sumX2</references>
+        <references refid="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" compoundref="disptask_8h" startline="58">_stDetrendVar::sumXY</references>
+        <references refid="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" compoundref="disptask_8h" startline="57">_stDetrendVar::sumY</references>
+        <referencedby refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" compoundref="disptask_8cpp" startline="848" endline="885">calcDisplacement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detrendCalcSlopeIntercept</definition>
+        <argsstring>(int numValues, stDetrendVar &amp;v)</argsstring>
+        <name>detrendCalcSlopeIntercept</name>
+        <param>
+          <type>int</type>
+          <declname>numValues</declname>
+        </param>
+        <param>
+          <type><ref refid="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" kindref="member">stDetrendVar</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Function to calculate slope and intercept for detrending. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of data points </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure of type stDetrendVar with the intermediate results</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function calculate slope and intercept for detrending and store the calculated values in structure v. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="194" column="10" bodyfile="disp/disptask.cpp" bodystart="138" bodyend="142"/>
+        <references refid="struct__st_detrend_var_1a9f8a715ab550e57412af1f1545841ae3" compoundref="disptask_8h" startline="61">_stDetrendVar::intercept</references>
+        <references refid="struct__st_detrend_var_1a723974ead8c85a6b9c70c6e018cb64c1" compoundref="disptask_8h" startline="60">_stDetrendVar::slope</references>
+        <references refid="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" compoundref="disptask_8h" startline="56">_stDetrendVar::sumX</references>
+        <references refid="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" compoundref="disptask_8h" startline="59">_stDetrendVar::sumX2</references>
+        <references refid="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" compoundref="disptask_8h" startline="58">_stDetrendVar::sumXY</references>
+        <references refid="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" compoundref="disptask_8h" startline="57">_stDetrendVar::sumY</references>
+        <referencedby refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" compoundref="disptask_8cpp" startline="962" endline="975">InitDetrend</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_disp_task_1a5d5c2ce1a8b4d44ffc2c8fda65923812" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void detrendRemoveTrend</definition>
+        <argsstring>(uint32_t idx, double inp, double &amp;out, stDetrendVar v)</argsstring>
+        <name>detrendRemoveTrend</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>inp</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type><ref refid="disptask_8h_1ab2c905428722fd33fca9eb2871abc622" kindref="member">stDetrendVar</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Detrend function to remove a linear trend from a calculated displacement data point <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current index of the data point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current data point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The detrended data point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structure of type stDetrendVar with the intermediate results</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function calculate detrended value for one data point at index idx. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="196" column="10" bodyfile="disp/disptask.cpp" bodystart="162" bodyend="165"/>
+        <references refid="struct__st_detrend_var_1a9f8a715ab550e57412af1f1545841ae3" compoundref="disptask_8h" startline="61">_stDetrendVar::intercept</references>
+        <references refid="struct__st_detrend_var_1a723974ead8c85a6b9c70c6e018cb64c1" compoundref="disptask_8h" startline="60">_stDetrendVar::slope</references>
+        <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">HandleSResultData</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Disp class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para>The displacement task class implements the calulation of the displacement values based on the recorded acceleration data in z-direction. The calculation will be performed in the following steps:<itemizedlist>
+<listitem><para>Zero phase highpass filtering</para>
+</listitem><listitem><para>Integration of filtered values to calculate velocity</para>
+</listitem><listitem><para>Integration of velocity to calculate displacement</para>
+</listitem><listitem><para>Removing linear trend from calculated displacement values (detrending) <bold>Zero phase highpass filtering:</bold> <linebreak/>
+Zero phase highpass filtering is implemented according to matlab / python filtfilt function. The filter coefficients were taken over from python (see function butter_highpass in file disp_scipy.py in <ulink url="https://github.com/AXOTrack/disp-calc-python">AXOTrack repository </ulink>). <linebreak/>
+<bold>Integration of filtered values to calculate velocity:</bold> <linebreak/>
+Calculation according to python disp_scipy.py <linebreak/>
+<bold>Integration of velocity to calculate displacement:</bold> <linebreak/>
+Calculation according to python disp_scipy.py <linebreak/>
+<bold>Removing linear trend:</bold> <linebreak/>
+Calculation according to python function signal.detrend(). <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>DispTask</label>
+        <link refid="class_disp_task"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>_stDetrendVar</label>
+        <link refid="struct__st_detrend_var"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+intercept</edgelabel>
+          <edgelabel>+slope</edgelabel>
+          <edgelabel>+sumX</edgelabel>
+          <edgelabel>+sumX2</edgelabel>
+          <edgelabel>+sumXY</edgelabel>
+          <edgelabel>+sumY</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="13">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vector&lt; double &gt;</label>
+      </node>
+      <node id="11">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>double</label>
+      </node>
+      <node id="10">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="14">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DispTask</label>
+        <link refid="class_disp_task"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-leftpad</edgelabel>
+          <edgelabel>-leftpadFilt</edgelabel>
+          <edgelabel>-leftpadFiltFilt</edgelabel>
+          <edgelabel>-rightpad</edgelabel>
+          <edgelabel>-rightpadFilt</edgelabel>
+          <edgelabel>-rightpadFiltFilt</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-detrendVars</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-IN_last</edgelabel>
+          <edgelabel>-S_last</edgelabel>
+          <edgelabel>-V_last</edgelabel>
+          <edgelabel>-b1</edgelabel>
+          <edgelabel>-dispMax</edgelabel>
+          <edgelabel>-dispMin</edgelabel>
+          <edgelabel>-dispP2P</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-dVIdx</edgelabel>
+          <edgelabel>-detrendIdx</edgelabel>
+          <edgelabel>-rcvdEntries</edgelabel>
+          <edgelabel>-requestedEntries</edgelabel>
+          <edgelabel>-requestedWrEntries</edgelabel>
+          <edgelabel>-sentEntries</edgelabel>
+          <edgelabel>-startReadPos</edgelabel>
+          <edgelabel>-startWritePos</edgelabel>
+          <edgelabel>-totalNumEntries</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-nfact</edgelabel>
+          <edgelabel>-nfilt</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+bIdle</edgelabel>
+          <edgelabel>-have_http_connector</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="15">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="disp/disptask.h" line="100" column="1" bodyfile="disp/disptask.h" bodystart="100" bodyend="198"/>
+    <listofallmembers>
+      <member refid="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" prot="private" virt="non-virtual"><scope>DispTask</scope><name>b1</name></member>
+      <member refid="class_disp_task_1a3c73b63132382a94b2dad0b4d591879d" prot="public" virt="non-virtual"><scope>DispTask</scope><name>bIdle</name></member>
+      <member refid="class_disp_task_1a956de3f4a997de306b901f84ff2e4846" prot="private" virt="non-virtual"><scope>DispTask</scope><name>calcDisplacement</name></member>
+      <member refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>DispTask</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>DispTask</scope><name>create</name></member>
+      <member refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" prot="private" virt="non-virtual"><scope>DispTask</scope><name>detrendCalcSlopeIntercept</name></member>
+      <member refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" prot="private" virt="non-virtual"><scope>DispTask</scope><name>detrendCalcSums</name></member>
+      <member refid="class_disp_task_1a32575b5386f8e1ff58b80985e27800ac" prot="private" virt="non-virtual"><scope>DispTask</scope><name>detrendIdx</name></member>
+      <member refid="class_disp_task_1a5d5c2ce1a8b4d44ffc2c8fda65923812" prot="private" virt="non-virtual"><scope>DispTask</scope><name>detrendRemoveTrend</name></member>
+      <member refid="class_disp_task_1a04d2ba4255c026bda6acc300b3cf5918" prot="private" virt="non-virtual"><scope>DispTask</scope><name>detrendVars</name></member>
+      <member refid="class_disp_task_1ae1eed30282678fcc2b1359b805a48663" prot="private" virt="non-virtual"><scope>DispTask</scope><name>dispMax</name></member>
+      <member refid="class_disp_task_1a518601811cafb966415fe620ab71ac4f" prot="private" virt="non-virtual"><scope>DispTask</scope><name>dispMin</name></member>
+      <member refid="class_disp_task_1a87f9b2616bb035f6fc9530b8a5567983" prot="private" virt="non-virtual"><scope>DispTask</scope><name>dispP2P</name></member>
+      <member refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" prot="public" virt="non-virtual"><scope>DispTask</scope><name>DispTask</name></member>
+      <member refid="class_disp_task_1a12105e756adcc893d5be7b6d999b6edd" prot="private" virt="non-virtual"><scope>DispTask</scope><name>dVIdx</name></member>
+      <member refid="class_disp_task_1af805a1118ef27529d966b67349c4e46d" prot="public" virt="non-virtual"><scope>DispTask</scope><name>filt_dump</name></member>
+      <member refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleBwFiltData</name></member>
+      <member refid="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleCalcDisplacementReq</name></member>
+      <member refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleDispFirstEntries</name></member>
+      <member refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleDispLastEntries</name></member>
+      <member refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleFwFiltData</name></member>
+      <member refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleRawData</name></member>
+      <member refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleRawDataStatus</name></member>
+      <member refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" prot="private" virt="non-virtual"><scope>DispTask</scope><name>HandleSResultData</name></member>
+      <member refid="class_disp_task_1a068ba51d0a406a1d8d211bd264bdaa15" prot="private" virt="non-virtual"><scope>DispTask</scope><name>have_http_connector</name></member>
+      <member refid="class_disp_task_1aaf4a74e9be098efec98511663545b291" prot="private" virt="non-virtual"><scope>DispTask</scope><name>IN_last</name></member>
+      <member refid="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" prot="private" virt="non-virtual"><scope>DispTask</scope><name>InitBwFiltering</name></member>
+      <member refid="class_disp_task_1a024287e67c62f8287d6a189b5741017f" prot="private" virt="non-virtual"><scope>DispTask</scope><name>InitDetrend</name></member>
+      <member refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" prot="private" virt="non-virtual"><scope>DispTask</scope><name>InitDispCalc</name></member>
+      <member refid="class_disp_task_1af3adad0893ab002ab59967c50c4c9cf3" prot="public" virt="non-virtual"><scope>DispTask</scope><name>itegrate_detrend</name></member>
+      <member refid="class_disp_task_1aaefe49dcf736b1f1bbb1711cebca73e0" prot="private" virt="non-virtual"><scope>DispTask</scope><name>leftpad</name></member>
+      <member refid="class_disp_task_1abfd406ff06a7ceabc57b42f99f2a06e1" prot="private" virt="non-virtual"><scope>DispTask</scope><name>leftpadFilt</name></member>
+      <member refid="class_disp_task_1a231d895643fdbde850908c3436194727" prot="private" virt="non-virtual"><scope>DispTask</scope><name>leftpadFiltFilt</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>DispTask</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>DispTask</scope><name>myName</name></member>
+      <member refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" prot="private" virt="non-virtual"><scope>DispTask</scope><name>nfact</name></member>
+      <member refid="class_disp_task_1a727a89a8dcfb337fb3ad40a97dc7f4b1" prot="private" virt="non-virtual"><scope>DispTask</scope><name>nfilt</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>DispTask</scope><name>operator=</name></member>
+      <member refid="class_disp_task_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>DispTask</scope><name>pInMbox</name></member>
+      <member refid="class_disp_task_1a8750575eef016431632ec6f7aee5251f" prot="private" virt="non-virtual"><scope>DispTask</scope><name>rcvdEntries</name></member>
+      <member refid="class_disp_task_1ab01c3b3c13b0144dd413168c073e7028" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqBwFiltData</name></member>
+      <member refid="class_disp_task_1a547fc0920e6e58ed598402441bae2b9b" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqDResultWrite</name></member>
+      <member refid="class_disp_task_1a9915bdc07cd539a0b8b7236d83747572" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqFiltResultWrite</name></member>
+      <member refid="class_disp_task_1a87595605dab61fd51166fad4cf83f17b" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqFwFiltData</name></member>
+      <member refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqRawData</name></member>
+      <member refid="class_disp_task_1ade5e15e66069cbbeb962241113bd4b18" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqSResultData</name></member>
+      <member refid="class_disp_task_1acd1ca8dcf90d4b205d5837a60bad2722" prot="private" virt="non-virtual"><scope>DispTask</scope><name>reqSResultWrite</name></member>
+      <member refid="class_disp_task_1a891bea661c0351fdb1c1aeba58cc02d3" prot="private" virt="non-virtual"><scope>DispTask</scope><name>requestedEntries</name></member>
+      <member refid="class_disp_task_1a8eafcd0c03a6f31c266ad9a20bed9f95" prot="private" virt="non-virtual"><scope>DispTask</scope><name>requestedWrEntries</name></member>
+      <member refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" prot="private" virt="non-virtual"><scope>DispTask</scope><name>rightpad</name></member>
+      <member refid="class_disp_task_1adc64f9fc514f9d643444fda968136c42" prot="private" virt="non-virtual"><scope>DispTask</scope><name>rightpadFilt</name></member>
+      <member refid="class_disp_task_1a3999181a3aa7304b4a1737626650d8db" prot="private" virt="non-virtual"><scope>DispTask</scope><name>rightpadFiltFilt</name></member>
+      <member refid="class_disp_task_1ae5918d75f4c08438447250a3cc6f5d2b" prot="private" virt="non-virtual"><scope>DispTask</scope><name>S_last</name></member>
+      <member refid="class_disp_task_1af6034be5cb1b0e2d95983deb2e28c415" prot="private" virt="non-virtual"><scope>DispTask</scope><name>sendDispStatistics</name></member>
+      <member refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" prot="private" virt="non-virtual"><scope>DispTask</scope><name>sentEntries</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>DispTask</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>DispTask</scope><name>start</name></member>
+      <member refid="class_disp_task_1a9cd803b29cf1a2a564dba9f9dc3642ac" prot="private" virt="non-virtual"><scope>DispTask</scope><name>startReadPos</name></member>
+      <member refid="class_disp_task_1ac0c8224ee6f422a9a0bd652f803b81bc" prot="private" virt="non-virtual"><scope>DispTask</scope><name>startWritePos</name></member>
+      <member refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>DispTask</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>DispTask</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>DispTask</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>DispTask</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>DispTask</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>DispTask</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>DispTask</scope><name>tid</name></member>
+      <member refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" prot="private" virt="non-virtual"><scope>DispTask</scope><name>totalNumEntries</name></member>
+      <member refid="class_disp_task_1ae7bdf6b2bde3ccdb37cc29a346bd2e49" prot="private" virt="non-virtual"><scope>DispTask</scope><name>V_last</name></member>
+      <member refid="class_disp_task_1a667fa2480a3fcec33a3887a8d51925d0" prot="public" virt="virtual"><scope>DispTask</scope><name>~DispTask</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>DispTask</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

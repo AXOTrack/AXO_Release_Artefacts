@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_f06177a97ef447254b84c34e6e0a4437" kind="dir">
+    <compoundname>drv/adc</compoundname>
+    <innerfile refid="adconverter_8cpp">adconverter.cpp</innerfile>
+    <innerfile refid="adconverter_8h">adconverter.h</innerfile>
+    <innerfile refid="batt__mgr_8cpp">batt_mgr.cpp</innerfile>
+    <innerfile refid="batt__mgr_8h">batt_mgr.h</innerfile>
+    <innerfile refid="mux__controller_8cpp">mux_controller.cpp</innerfile>
+    <innerfile refid="mux__controller_8h">mux_controller.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="drv/adc/"/>
+  </compounddef>
+</doxygen>

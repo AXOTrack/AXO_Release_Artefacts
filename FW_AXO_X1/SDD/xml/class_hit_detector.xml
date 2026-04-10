@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_hit_detector" kind="class" language="C++" prot="public">
+    <compoundname>HitDetector</compoundname>
+    <includes refid="hit__detect_8h" local="no">hit_detect.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_hit_detector_1a14c5c151bcd550e1a885c754f5bf8783" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t samples_per_sec</definition>
+        <argsstring></argsstring>
+        <name>samples_per_sec</name>
+        <briefdescription>
+<para>Sample rate, expected samples per second. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="67" column="13" bodyfile="data/hit_detect.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1aac16044f087454aaa9d1d17ea8fe0e7f" compoundref="hit__detect_8cpp" startline="44" endline="59">HitDetector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" prot="private" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Threshold to detect hits (for medium hits 300 m/s², for critical hits 800 m/s²) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="68" column="13" bodyfile="data/hit_detect.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1aac16044f087454aaa9d1d17ea8fe0e7f" compoundref="hit__detect_8cpp" startline="44" endline="59">HitDetector</referencedby>
+        <referencedby refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" compoundref="hit__detect_8cpp" startline="101" endline="111">input</referencedby>
+        <referencedby refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="hit__detect_8cpp" startline="77" endline="82">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hit_detector_1a98bf99a9e04936281191c490aaeaba53" prot="private" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t max_msec</definition>
+        <argsstring></argsstring>
+        <name>max_msec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time window in milliseconds (for medium hits 8 ms, for critical hits 2 ms) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="70" column="13" bodyfile="data/hit_detect.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1aac16044f087454aaa9d1d17ea8fe0e7f" compoundref="hit__detect_8cpp" startline="44" endline="59">HitDetector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hit_detector_1a0cf755caeca4d6622c199dc0bf555d11" prot="private" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t n_cur</definition>
+        <argsstring></argsstring>
+        <name>n_cur</name>
+        <briefdescription>
+<para>Current sample, range 1 .. samples per second. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="72" column="13" bodyfile="data/hit_detect.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" compoundref="hit__detect_8cpp" startline="101" endline="111">input</referencedby>
+        <referencedby refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="hit__detect_8cpp" startline="77" endline="82">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hit_detector_1a104bfe89f5f9edf5382d9777a3efe727" prot="private" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t n_high</definition>
+        <argsstring></argsstring>
+        <name>n_high</name>
+        <briefdescription>
+<para>Sample N at crossing threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="73" column="13" bodyfile="data/hit_detect.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" compoundref="hit__detect_8cpp" startline="101" endline="111">input</referencedby>
+        <referencedby refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="hit__detect_8cpp" startline="77" endline="82">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" prot="private" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t hit_cnt</definition>
+        <argsstring></argsstring>
+        <name>hit_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The hit counter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="74" column="13" bodyfile="data/hit_detect.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" compoundref="hit__detect_8h" startline="60" endline="60">getNumHits</referencedby>
+        <referencedby refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" compoundref="hit__detect_8cpp" startline="101" endline="111">input</referencedby>
+        <referencedby refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="hit__detect_8cpp" startline="77" endline="82">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hit_detector_1ac1e5b7f933fe71b161d0fec5bc610f43" prot="private" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t max_samples</definition>
+        <argsstring></argsstring>
+        <name>max_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculated maximal number of samples (max_samples = samples_per_sec * max_msec / 1000). With sample rate of 4400 Hz for medium hits with 8 ms time window = 32 samples With sample rate of 4400 Hz for critical hits with 2 ms time window = 8 samples </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="79" column="13" bodyfile="data/hit_detect.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_hit_detector_1aac16044f087454aaa9d1d17ea8fe0e7f" compoundref="hit__detect_8cpp" startline="44" endline="59">HitDetector</referencedby>
+        <referencedby refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" compoundref="hit__detect_8cpp" startline="101" endline="111">input</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hit_detector_1aac16044f087454aaa9d1d17ea8fe0e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HitDetector</definition>
+        <argsstring>(int32_t samples_per_sec, int16_t threshold, int16_t max_msec)</argsstring>
+        <name>HitDetector</name>
+        <param>
+          <type>int32_t</type>
+          <declname>samples_per_sec</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>max_msec</declname>
+        </param>
+        <briefdescription>
+<para>Hit detector class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples_per_sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample rate in Hz, expected samples per second </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Threshold to detect hits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_msec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time window in milliseconds</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Task of the constructor is to initializes the private member variables of the class and to calculate max_samples value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="54" column="5" bodyfile="data/hit_detect.cpp" bodystart="44" bodyend="59"/>
+        <references refid="class_hit_detector_1a98bf99a9e04936281191c490aaeaba53" compoundref="hit__detect_8h" startline="70">max_msec</references>
+        <references refid="class_hit_detector_1ac1e5b7f933fe71b161d0fec5bc610f43" compoundref="hit__detect_8h" startline="79">max_samples</references>
+        <references refid="class_hit_detector_1a14c5c151bcd550e1a885c754f5bf8783" compoundref="hit__detect_8h" startline="67">samples_per_sec</references>
+        <references refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" compoundref="hit__detect_8h" startline="68">threshold</references>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1a3e4d91534fcf0f84ec8d2cd771c805c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HitDetector</definition>
+        <argsstring>()=delete</argsstring>
+        <name>HitDetector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1a61c046bf54f5c3dd7b473395e4af0c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~HitDetector</definition>
+        <argsstring>()</argsstring>
+        <name>~HitDetector</name>
+        <briefdescription>
+<para>Hit detector class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="57" column="13" bodyfile="data/hit_detect.cpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void input</definition>
+        <argsstring>(float z)</argsstring>
+        <name>input</name>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Function checks if sample z fullfills hit detection condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Acceleration raw data sample in vertical direction</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function increments current sample counter n_cur and set the bool variables is_above and is_below, where is_above is set to true and is_below is set to false if input sample z is higher than hit detection threshold. Variable n_high marks the first value over the threshold and the start of the time window. If a sample value is higher than threshold and there is no time window active n_high will be set to current sample counter n_cur and a new time window has been opened. Within the time window of length max_samples the function checks if there is a value below threshold. In this case hit detection condition is met and hit counter hit_cnt will be incremented by 1 and time window will be closed by setting n_high to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="59" column="10" bodyfile="data/hit_detect.cpp" bodystart="101" bodyend="111"/>
+        <references refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" compoundref="hit__detect_8h" startline="74">hit_cnt</references>
+        <references refid="class_hit_detector_1ac1e5b7f933fe71b161d0fec5bc610f43" compoundref="hit__detect_8h" startline="79">max_samples</references>
+        <references refid="class_hit_detector_1a0cf755caeca4d6622c199dc0bf555d11" compoundref="hit__detect_8h" startline="72">n_cur</references>
+        <references refid="class_hit_detector_1a104bfe89f5f9edf5382d9777a3efe727" compoundref="hit__detect_8h" startline="73">n_high</references>
+        <references refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" compoundref="hit__detect_8h" startline="68">threshold</references>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t getNumHits</definition>
+        <argsstring>()</argsstring>
+        <name>getNumHits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="60" column="13" bodyfile="data/hit_detect.h" bodystart="60" bodyend="60"/>
+        <references refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" compoundref="hit__detect_8h" startline="74">hit_cnt</references>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Reset method to clear hit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function clear thge private variables n_cur, n_high and hit_cnt by setting the values to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="61" column="10" bodyfile="data/hit_detect.cpp" bodystart="77" bodyend="82"/>
+        <references refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" compoundref="hit__detect_8h" startline="74">hit_cnt</references>
+        <references refid="class_hit_detector_1a0cf755caeca4d6622c199dc0bf555d11" compoundref="hit__detect_8h" startline="72">n_cur</references>
+        <references refid="class_hit_detector_1a104bfe89f5f9edf5382d9777a3efe727" compoundref="hit__detect_8h" startline="73">n_high</references>
+        <references refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" compoundref="hit__detect_8h" startline="68">threshold</references>
+        <referencedby refid="class_rms_task_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="rms_8cpp" startline="139" endline="147">RmsTask::init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1a26075aac0c125e42210413b94575e15b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HitDetector</definition>
+        <argsstring>(const HitDetector &amp;)=delete</argsstring>
+        <name>HitDetector</name>
+        <param>
+          <type>const <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hit_detector_1a3c27ab6f7f74dd76e513d38f10c0fb32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_hit_detector" kindref="compound">HitDetector</ref> &amp;</type>
+        <definition>HitDetector&amp; operator=</definition>
+        <argsstring>(const HitDetector &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hit_detect.h" line="64" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Hit detector helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The hit detector class compare measurement data in z direction against threshold and count the number of hits. It provides a method to identify a hit and store it in a private couter variable, a method to retrieve the number of hits and a method to reset the counter variable. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>int16_t</label>
+      </node>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+      <node id="1">
+        <label>HitDetector</label>
+        <link refid="class_hit_detector"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-samples_per_sec</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-hit_cnt</edgelabel>
+          <edgelabel>-max_msec</edgelabel>
+          <edgelabel>-max_samples</edgelabel>
+          <edgelabel>-n_cur</edgelabel>
+          <edgelabel>-n_high</edgelabel>
+          <edgelabel>-threshold</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/hit_detect.h" line="52" column="1" bodyfile="data/hit_detect.h" bodystart="52" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>getNumHits</name></member>
+      <member refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>hit_cnt</name></member>
+      <member refid="class_hit_detector_1aac16044f087454aaa9d1d17ea8fe0e7f" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>HitDetector</name></member>
+      <member refid="class_hit_detector_1a3e4d91534fcf0f84ec8d2cd771c805c1" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>HitDetector</name></member>
+      <member refid="class_hit_detector_1a26075aac0c125e42210413b94575e15b" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>HitDetector</name></member>
+      <member refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>input</name></member>
+      <member refid="class_hit_detector_1a98bf99a9e04936281191c490aaeaba53" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>max_msec</name></member>
+      <member refid="class_hit_detector_1ac1e5b7f933fe71b161d0fec5bc610f43" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>max_samples</name></member>
+      <member refid="class_hit_detector_1a0cf755caeca4d6622c199dc0bf555d11" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>n_cur</name></member>
+      <member refid="class_hit_detector_1a104bfe89f5f9edf5382d9777a3efe727" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>n_high</name></member>
+      <member refid="class_hit_detector_1a3c27ab6f7f74dd76e513d38f10c0fb32" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>operator=</name></member>
+      <member refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>HitDetector</scope><name>reset</name></member>
+      <member refid="class_hit_detector_1a14c5c151bcd550e1a885c754f5bf8783" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>samples_per_sec</name></member>
+      <member refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" prot="private" virt="non-virtual"><scope>HitDetector</scope><name>threshold</name></member>
+      <member refid="class_hit_detector_1a61c046bf54f5c3dd7b473395e4af0c74" prot="public" virt="virtual"><scope>HitDetector</scope><name>~HitDetector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

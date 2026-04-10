@@ -1,0 +1,5 @@
+<map id="timer1_expired" name="timer1_expired">
+<area shape="rect" id="node1" title="Timer expired function of the timer for delay reboot and download retry interval." alt="" coords="256,5,363,32"/>
+<area shape="rect" id="node2" href="$class_fw_upd_ctrl.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function of the timer for delay reboot and download retry interval." alt="" coords="136,5,208,32"/>
+<area shape="rect" id="node3" href="$class_fw_upd_ctrl.html#aa124fe852a7fef997df6ab7b091cb009" title="Firmware update control task constructor." alt="" coords="5,5,88,32"/>
+</map>

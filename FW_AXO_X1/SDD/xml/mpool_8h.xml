@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mpool_8h" kind="file" language="C++">
+    <compoundname>mpool.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="mempool_8h" local="yes">rtos/mempool.h</includes>
+    <includes refid="mutex_8h" local="yes">rtos/mutex.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="adxl__store_8cpp" local="yes">data/adxl_store.cpp</includedby>
+    <includedby refid="hw__metrics_8cpp" local="yes">data/hw_metrics.cpp</includedby>
+    <includedby refid="pdata_8cpp" local="yes">data/pdata.cpp</includedby>
+    <includedby refid="rms_8cpp" local="yes">data/rms.cpp</includedby>
+    <includedby refid="rms__store_8cpp" local="yes">data/rms_store.cpp</includedby>
+    <includedby refid="disptask_8cpp" local="yes">disp/disptask.cpp</includedby>
+    <includedby refid="adconverter_8cpp" local="yes">drv/adc/adconverter.cpp</includedby>
+    <includedby refid="batt__mgr_8cpp" local="yes">drv/adc/batt_mgr.cpp</includedby>
+    <includedby refid="shtcx_8cpp" local="yes">drv/i2c/shtcx.cpp</includedby>
+    <includedby refid="boost_8cpp" local="yes">drv/pm/boost.cpp</includedby>
+    <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
+    <includedby refid="lte__monitor_8cpp" local="yes">modem/lte_monitor.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="lte__connector_8cpp" local="yes">net/lte_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="power__mgr_8cpp" local="yes">pm/power_mgr.cpp</includedby>
+    <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
+    <includedby refid="reset__ctrl_8cpp" local="yes">pm/reset_ctrl.cpp</includedby>
+    <includedby refid="mbox_8cpp" local="yes">rtos/mbox.cpp</includedby>
+    <includedby refid="mpelem_8cpp" local="yes">rtos/mpelem.cpp</includedby>
+    <includedby refid="mpool_8cpp" local="yes">rtos/mpool.cpp</includedby>
+    <includedby refid="fsm_8cpp" local="yes">update/fsm.cpp</includedby>
+    <includedby refid="fsm_8h" local="yes">update/fsm.h</includedby>
+    <includedby refid="update_8cpp" local="yes">update/update.cpp</includedby>
+    <includedby refid="update__ctrl_8cpp" local="yes">update/update_ctrl.cpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="3">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="5">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="1">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="26">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="27">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="20">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="8">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="24">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="28">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="7">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="21">
+        <label>rtos/mbox.cpp</label>
+        <link refid="mbox_8cpp"/>
+      </node>
+      <node id="19">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="15">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="18">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="17">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="23">
+        <label>rtos/mpool.cpp</label>
+        <link refid="mpool_8cpp"/>
+      </node>
+      <node id="14">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="13">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="25">
+        <label>update/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="22">
+        <label>rtos/mpelem.cpp</label>
+        <link refid="mpelem_8cpp"/>
+      </node>
+      <node id="16">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="6">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="10">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_msg_pool" prot="public">MsgPool</innerclass>
+    <briefdescription>
+<para>Header file of <ref refid="class_msg_pool" kindref="compound">MsgPool</ref> class for message allocation support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mpool_8h_1mpool"/> <simplesect kind="par"><title>Detailed Description </title><para>Message objects are dynamically allocated and freed out of a message pool. A simple approach would use malloc()/free() or the C++ new()/delete() methods for implementation. Since many messages of different sizes are expected to be allocated and freed, this leads to heap memory segmentation. An issue which may degrade performance over time. Also these calls are known to be &quot;expensive&quot; with regard to execution time. <linebreak/>
+ Proposed solution: retrieve messages from preallocated &quot;message pools&quot; that have fixed size blocks/buffers. The class <ref refid="class_msg_pool" kindref="compound">MsgPool</ref> implements the logic for obtaining a new message object with an optional fixed size buffer.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mempool_8h" kindref="compound">rtos/mempool.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mutex_8h" kindref="compound">rtos/mutex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_msg_pool" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_msg_pool" kindref="compound">MsgPool</ref><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a0f3b9b311f9b443feb3be08fd773e2e3" kindref="member">~MsgPool</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/><ref refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" kindref="member">getNewElem</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minSize);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/><ref refid="class_msg_pool_1a55cbeb5d8f21ec7e86409e224f24af30" kindref="member">getNewElem</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" kindref="member">freeElem</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>elem);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_msg_pool" kindref="compound">MsgPool</ref>*<sp/><ref refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mutex" kindref="compound">Mutex</ref><sp/><ref refid="class_msg_pool_1aec14015ffe926652443a8c56e45ae889" kindref="member">lock</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" kindref="member">used</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1a371b26884552759e7161090fea883e00" kindref="member">maxused</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" kindref="member">available</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" kindref="member">bufpool_size</ref>(uint16_t<sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" kindref="member">bufpool_used</ref>(uint16_t<sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" kindref="member">bufpool_maxused</ref>(uint16_t<sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" kindref="member">bufpool_available</ref>(uint16_t<sp/><ref refid="class_msg_pool_1af99d263aff7881a5d1f712fda81dab92" kindref="member">size</ref>);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a540945db23d0ff1aa2d8e881e94b25a4" kindref="member">MsgPool</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>statistics:<sp/>total<sp/>elements<sp/>currently<sp/>in<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>static<sp/>uint8_t<sp/>num_elements;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_msg_pool_1a1190a6ba8a2b73d6500ff5e2c09cc789" kindref="member">max_elements</ref><sp/>=</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;PoolElem, max_elements&gt;</ref></highlight></codeline>
+<codeline lineno="86" refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a0840349b5f0b53d70ac3f49df13db46e" kindref="member">elemPool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="class_msg_pool_1a630d4798edf521ce66515040ba64f686" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_msg_pool_1a630d4798edf521ce66515040ba64f686" kindref="member">max_buf32</ref><sp/>=</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[32], max_buf32&gt;</ref></highlight></codeline>
+<codeline lineno="92" refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a247ba093505050c2bbd2326a28558eb8" kindref="member">buf32Pool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_msg_pool_1abd38385a7b8bdab9e7b6335bd931d7f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_msg_pool_1abd38385a7b8bdab9e7b6335bd931d7f2" kindref="member">max_buf128</ref><sp/>=</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[128], max_buf128&gt;</ref></highlight></codeline>
+<codeline lineno="98" refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a33176aa731a9e8fc7ebfb7fef1a91330" kindref="member">buf128Pool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="class_msg_pool_1a212436e9034cf521ffebf5e81310b49a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_msg_pool_1a212436e9034cf521ffebf5e81310b49a" kindref="member">max_buf256</ref><sp/>=</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[256], max_buf256&gt;</ref></highlight></codeline>
+<codeline lineno="104" refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a50aff30a798a8a4de07d20740cc0ed49" kindref="member">buf256Pool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_msg_pool_1add4dc6a9a3b585c3bdbe804b804e779e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_msg_pool_1add4dc6a9a3b585c3bdbe804b804e779e" kindref="member">max_buf512</ref><sp/>=</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[512], max_buf512&gt;</ref></highlight></codeline>
+<codeline lineno="110" refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1a38b7685fbf3287403a2aceb85c4c02d9" kindref="member">buf512Pool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_msg_pool_1a63189f46fe80eecd18345403851b8532" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_msg_pool_1a63189f46fe80eecd18345403851b8532" kindref="member">max_buf1024</ref><sp/>=</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool" kindref="compound">MemoryPool&lt;uint8_t[1024], max_buf1024&gt;</ref></highlight></codeline>
+<codeline lineno="116" refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_msg_pool_1acd75a10cc89fa06380a6753094d5ea41" kindref="member">buf1024Pool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/mpool.h"/>
+  </compounddef>
+</doxygen>

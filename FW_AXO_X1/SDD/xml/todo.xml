@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Global <ref refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">BatteryMgr::task</ref>  (void) override</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000006"/>should be deleted: Battery manager not uses timers  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" kindref="member">DataManager::DataManager</ref>  (const char *name=&quot;??&quot;, bool have_mqtt_connector=true)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000004"/>with duration of 10 ms and period of 20 ms. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">DataManager::task</ref>  (void) override</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000005"/>remove unused timer ?  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" kindref="member">FwUpd::sha1_expected</ref>  [41]</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000016"/>no magic numbers  </para>
+</listitem>
+<varlistentry><term>Class <ref refid="class_lte_monitor" kindref="compound">LteMonitor</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000015"/> RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>RMS task (self)</para>
+</listitem><listitem><para>ADXL data store task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>RMS store task</para>
+</listitem><listitem><para>RMS task (self, transmission in timer callback) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem>
+<varlistentry><term>Page <ref refid="_m_s_c" kindref="compound">Message Sequence Charts</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>enable raw data transmission trigger from configuration HTTP connector task send eAdxlIdleReq to the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task. If the returned indication signals Idle = false, the delay timer will be started. After delay timer expiry the idlse status of <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be requested again until the response indicated Idle = true. Thean HTTP connector task starts data transmission by sending eHttpRawDataSend message to its own mailbox and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about active data transfer by sending eRawDataTransferActive. Afterwards HTTP connector task opens a POSSIX conform socket stream and establish the HTTPS connection. See <ref refid="_m_s_c_1SubSectionRawDataTrans" kindref="member">Message Sequence Raw Data Transmission</ref> for further processing.</para>
+<para><anchor id="todo_1_todo000002"/>enable raw data transmission trigger from configuration HTTP connector task send eAdxlIdleReq to the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task. If the returned indication signals Idle = true, HTTP connector task starts data transmission by sending eHttpRawDataSend message to its own mailbox and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about active data transfer by sending eRawDataTransferActive. Afterwards HTTP connector task opens a POSSIX conform socket stream and establish the HTTPS connection. If connection is established, the HTTP POST Header will be send to remote JOVIA webserver and the raw data status will be requested from ADXL store task. The received response eRawDataStatus indicating that total number of raw data entries is 0 and the Raw Data Header will be constructed with IMEI, timestamp and number of raw data entries = 0 and send to JOVIA webserver in the first chunk frame. Afterwards the end of chunk frame will be send and the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed that data transmission has been completed with message eRawDataTransferComplete. Finally the socket stream will be closed.</para>
+<para><anchor id="todo_1_todo000003"/>Adapt to MRAM !!!!!! At each step the input data needs to read from FRAM in data packets with less than 1024 bytes. These data packets must be requested by the Displacement <ref refid="class_task" kindref="compound">Task</ref> (<ref refid="class_disp_task" kindref="compound">DispTask</ref>) from ADXL Store <ref refid="class_task" kindref="compound">Task</ref>. The Displacement <ref refid="class_task" kindref="compound">Task</ref> calculates the output data for every data packet and send the calculated output values to the ADXL Store <ref refid="class_task" kindref="compound">Task</ref>, which store it in FRAM. The FRAM is separated into three data blocks, First block is reserved for raw data (x, y, z), the second block is used for forward filtered data and S result values and the last block is used for backward filtered data and final D result values. See section <ref refid="fram_8h_1fram" kindref="member">fram</ref> for details of the FRAM memory layout. <linebreak/>
+ <linebreak/>
+ The calculated displacement data will be transmitted via HTTPS protocol. Transmission uses HTTP POST. See <ref refid="http__connector_8h_1http_connector" kindref="member">http_connector</ref>. </para>
+</listitem>
+<varlistentry><term>File <ref refid="mram_8h" kindref="compound">mram.h</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000013"/>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
+ To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <ref refid="_m_s_c_1SectionDisplacement" kindref="member">Displacement Calculation</ref> for further details).  </para>
+</listitem>
+<varlistentry><term>Class <ref refid="classspimram" kindref="compound">spimram</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000014"/>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" kindref="member">spimram::read_config1_reg</ref>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000011"/>remove </para>
+<para><anchor id="todo_1_todo000012"/>remove </para>
+</listitem>
+<varlistentry><term>Global <ref refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" kindref="member">spimram::read_device_id</ref>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000007"/>remove </para>
+<para><anchor id="todo_1_todo000008"/>remove </para>
+</listitem>
+<varlistentry><term>Global <ref refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" kindref="member">spimram::read_status_reg</ref>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000009"/>remove </para>
+<para><anchor id="todo_1_todo000010"/>remove</para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

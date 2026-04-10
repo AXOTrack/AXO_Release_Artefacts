@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="boost_8h" kind="file" language="C++">
+    <compoundname>boost.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/drivers/gpio.h</includes>
+    <includes refid="boost_8h" local="yes">drv/pm/boost.h</includes>
+    <includes refid="power__mgr_8h" local="yes">pm/power_mgr.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <includedby refid="boost_8cpp" local="yes">drv/pm/boost.cpp</includedby>
+    <includedby refid="boost_8h" local="yes">drv/pm/boost.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>zephyr/drivers/gpio.h</label>
+      </node>
+      <node id="15">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="4">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="14">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="1">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_boost_converter" prot="public">BoostConverter</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="boost_8h_1adb78930007c481618718ea80667ddae1" prot="public" static="no">
+        <name>BOOST_ENABLED_FILENAME</name>
+        <initializer>&quot;/lfs/boost_on.inf&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="53" column="9" bodyfile="drv/pm/boost.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of <ref refid="class_boost_converter" kindref="compound">BoostConverter</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="boost_8h_1boost"/> <simplesect kind="par"><title>Detailed Description </title><para>The AXO track sensor device is a battery powered system with two 3,6 V lithium batteries. The expected lifetime for the battery shall be 5 years. To achieve this, the system needs to be power optimized in idle mode as well as measurement mode and it needs to be considered tp reduce the very power intensive transfer operations to the backend. <linebreak/>
+The batteries are the power supply of the nRF9160 at analog input pins P0.16 (AIN3) and P0.15 (AIN2). Because of the very high power consumption of the LTE modem during activity an additional power supply is connected to P0.14 (AIN1). This analog voltage is provided by a supercapacitor backup power supply LM66100. To load the supercap a step-up DC/DC boost converter is connected which connects BOOST_OUT pin with SC_IN pin (see schematic, page 5). SC_OUT pin is than connected to P0.14 (AIN1). Loading the supercap to about 90% output voltage the boost converter needs to be switched on for about 30 seconds (determined empirically). To switch on boost converter GPIO pin P0.21 shall be used, which is connected to BOOST_EN of the boost converter.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_PM_BOOST_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_PM_BOOST_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/gpio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/drv/src/stubs.h&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="boost_8h" kindref="compound">drv/pm/boost.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="power__mgr_8h" kindref="compound">pm/power_mgr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="boost_8h_1adb78930007c481618718ea80667ddae1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOOST_ENABLED_FILENAME<sp/>&quot;/lfs/boost_on.inf&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_boost_converter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_boost_converter" kindref="compound">BoostConverter</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BoostConverter();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1a327de4628838031285a936d94ba1ae1d" kindref="member">BoostConverter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1ad1961b934b7ea5862bf0813ba42b9dd4" kindref="member">~BoostConverter</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" kindref="member">on</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" kindref="member">off</ref>();</highlight></codeline>
+<codeline lineno="86" refid="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" kindref="member">isEnabled</ref>;<sp/></highlight></codeline>
+<codeline lineno="87" refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" kindref="member">isOn</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="class_boost_converter_1aa1ea91323dfb0e89469a545299b82ff1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1aa1ea91323dfb0e89469a545299b82ff1" kindref="member">maxTimeOn</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1afc0873ec70fe10be301b3ec811a1d6e5" kindref="member">refcnt</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gpio_dt_spec<sp/><ref refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" kindref="member">gpio</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="class_boost_converter_1a327de4628838031285a936d94ba1ae1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_boost_converter_1a327de4628838031285a936d94ba1ae1d" kindref="member">BoostConverter</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_PM_BOOST_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="drv/pm/boost.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,102 @@
+<map id="sendMsg" name="sendMsg">
+<area shape="rect" id="node1" title="Message send convinience function." alt="" coords="791,2330,865,2357"/>
+<area shape="rect" id="node2" href="$class_measurement_builder.html#ac97be061f59019f39f973a1ac28a68b9" title="Add function to append RMS data to measurement JSON string and store hit counter." alt="" coords="546,423,687,464"/>
+<area shape="rect" id="node5" href="$class_lte_monitor.html#a1517efba6a658177615905efaeed0d21" title="Handler callback function to receive link quality notifications." alt="" coords="548,73,685,115"/>
+<area shape="rect" id="node6" href="$class_fw_upd.html#a888e034456d9b16489ac0ff76f1c8bf9" title="Send OTA Failure event message to firmware update control task." alt="" coords="536,139,697,166"/>
+<area shape="rect" id="node9" href="$class_fw_upd.html#ae2c42220dbc908b869a944c2612d7b71" title="Send OTA Success event message to firmware update control task." alt="" coords="527,190,707,217"/>
+<area shape="rect" id="node10" href="$class_disp_task.html#af805a1118ef27529d966b67349c4e46d" title="Callback function for console input command &#39;f&#39;." alt="" coords="549,241,685,267"/>
+<area shape="rect" id="node11" href="$class_fw_triggered.html#a22de52c28e140efcdb90423ce29714eb" title="Triggered state handler function for timer expired events." alt="" coords="547,292,686,333"/>
+<area shape="rect" id="node12" href="$class_fw_download.html#a22de52c28e140efcdb90423ce29714eb" title="Firmware download state handler function for timer expired events." alt="" coords="546,357,687,399"/>
+<area shape="rect" id="node13" href="$class_http_connector.html#afe1ca149544e23e510e75d469628107a" title="Function to handle idle indication from AdxlStore task." alt="" coords="236,1513,415,1555"/>
+<area shape="rect" id="node14" href="$class_http_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="HTTP connector task function." alt="" coords="13,1550,152,1577"/>
+<area shape="rect" id="node15" href="$class_mqtt_connector.html#ae07a10cc3041ea092699387b0fdb3257" title="Handler function for handling of boost converter off request." alt="" coords="522,692,711,733"/>
+<area shape="rect" id="node16" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="255,758,395,785"/>
+<area shape="rect" id="node17" href="$class_mqtt_connector.html#af768b2a6ec57840d0ee687f9b25e7b4c" title="Handler function for handling of boost converter on request." alt="" coords="522,809,711,851"/>
+<area shape="rect" id="node18" href="$class_disp_task.html#a54ee52cb2309dee2eb2c1842fd1bb7a1" title="Function handle incoming request to calculate displacement values." alt="" coords="491,1093,743,1119"/>
+<area shape="rect" id="node19" href="$class_disp_task.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="DispTask task function." alt="" coords="271,1118,380,1145"/>
+<area shape="rect" id="node20" href="$class_mqtt_connector.html#a7b73774ea55d0112571cf49e98558e37" title="Handler function for handling of cold start request." alt="" coords="526,875,707,916"/>
+<area shape="rect" id="node21" href="$class_mqtt_connector.html#a4ba8232123283b7363cf319d3603b9ac" title="Handler function for handling disable ADXL request." alt="" coords="501,941,732,967"/>
+<area shape="rect" id="node22" href="$class_disp_task.html#a94ffa2ab3108c5373e8caad61ffe2f48" title="Function handle incoming raw data message for left initial condition calculation." alt="" coords="529,1296,705,1337"/>
+<area shape="rect" id="node23" href="$class_mqtt_connector.html#a163abf5e1860042a8d2fe54398ee0c53" title="Handler function for handling enable ADXL request." alt="" coords="503,991,730,1018"/>
+<area shape="rect" id="node24" href="$class_disp_task.html#a5b2ffff9e2ea4e58dc40300aab0ab775" title="Function handle incoming raw data status indication message." alt="" coords="509,1042,724,1069"/>
+<area shape="rect" id="node25" href="$class_http_connector.html#a9670125458a21e0df605ff8ec0a72cc3" title="Function to handle received displacement data from AdxlStore task." alt="" coords="235,1631,416,1672"/>
+<area shape="rect" id="node26" href="$class_http_connector.html#a70b7c8bda814beee628f8625439b59cf" title="Function to handle received raw data from AdxlStore task." alt="" coords="235,1696,416,1737"/>
+<area shape="rect" id="node27" href="$class_http_connector.html#a45989dc8b33cb068db005100a2f11679" title="Callback function for console input command &#39;zd&#39;." alt="" coords="507,1194,727,1221"/>
+<area shape="rect" id="node28" href="$class_http_connector.html#ad9c03afbb6b3d34e26a01b1eea870638" title="Callback function for console input command &#39;z&#39;." alt="" coords="507,1245,726,1271"/>
+<area shape="rect" id="node29" href="$class_power_mgr_x1.html#a08ce8c479e15601bc1cd0b932a27606a" title=" " alt="" coords="5,2095,160,2136"/>
+<area shape="rect" id="node30" href="$class_power_mgr.html#aacbc79b9fec14a8eb014564c958b8b95" title="Send metric request message to a task that contributes to metrics." alt="" coords="531,1985,702,2027"/>
+<area shape="rect" id="node32" href="$class_adxl_data_store.html#afcbbf8e1a94b3b0e37eee9ee3300cb15" title="Function notify HTTP Connector task the status of the raw data." alt="" coords="240,3809,411,3851"/>
+<area shape="rect" id="node33" href="$class_adxl_data_store.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl data store task function." alt="" coords="13,3817,152,3843"/>
+<area shape="rect" id="node34" href="$class_adxl_data_store.html#ac058b87e11aed87cf5da0f7963edd2b5" title="Function notify Adxl37x task that processing is done." alt="" coords="232,3935,419,3962"/>
+<area shape="rect" id="node35" href="$class_adxl_data_store.html#a607e1620392c10d97bc7d9280f3df928" title="Function notify Adxl37x task that FRAM is full." alt="" coords="511,4275,722,4302"/>
+<area shape="rect" id="node37" href="$class_mqtt_connector.html#a86374deb5f3ee32fb220efbaf0743b0f" title="Callback handlers from MQTT helper library for connack from broker." alt="" coords="524,539,709,566"/>
+<area shape="rect" id="node38" href="$class_mqtt_connector.html#aef147f2b63e45447753b327e4d85079e" title="Callback handlers from MQTT helper library for disconnect indication from broker." alt="" coords="517,590,716,617"/>
+<area shape="rect" id="node39" href="$class_mqtt_connector.html#a8758bc421d3292a0f4431a017446bd24" title="Callback handlers from MQTT helper library for a subscribed topic from broker." alt="" coords="528,641,705,667"/>
+<area shape="rect" id="node40" href="$class_fw_upd_ctrl.html#ad91120d26573451fb5eda5a3c735a698" title="Send firmware confirm message to MQTT connector task." alt="" coords="532,1782,701,1809"/>
+<area shape="rect" id="node41" href="$class_fw_upd_ctrl.html#a8aa799fd7cf777ded1db827ba946b07a" title="Send firmware reject message to MQTT connector task." alt="" coords="535,1833,698,1859"/>
+<area shape="rect" id="node42" href="$class_fw_upd_ctrl.html#a1f13c32a42f24d5e28b53fa9b3cd9b81" title="Send OTA_START command message to MQTT connector task." alt="" coords="527,1883,707,1910"/>
+<area shape="rect" id="node43" href="$class_fw_upd_ctrl.html#a950faa8460d442cc9048523876994131" title="Send OTA_START reject message to MQTT connector task." alt="" coords="530,1934,703,1961"/>
+<area shape="rect" id="node44" href="$class_data_manager.html#afdfa16a6f13166684940d2ce4f0bf91e" title="Send function to publish measurement JSON string to MQTT connector task." alt="" coords="208,485,443,511"/>
+<area shape="rect" id="node45" href="$class_data_manager.html#ad22a1bbf64905f73ed28447a50ae3b21" title="Send function to publish metrics JSON string to MQTT connector task." alt="" coords="230,55,421,82"/>
+<area shape="rect" id="node46" href="$class_hw_metrics.html#ae4499ee0125936e10dde278b4a18c289" title="Function to send a HW metrics message to data manager task." alt="" coords="555,2102,679,2129"/>
+<area shape="rect" id="node48" href="$struct_adxl37x.html#ae4499ee0125936e10dde278b4a18c289" title="Function to send received data to Adxl data store task." alt="" coords="561,2203,672,2230"/>
+<area shape="rect" id="node50" href="$class_lte_monitor.html#a60fd65c00183271380a951ee700141da" title="Send modem battery voltage to the receiver mailbox." alt="" coords="521,2507,713,2534"/>
+<area shape="rect" id="node52" href="$class_power_mgr.html#ac8f276813af104107d1fde5b6e9c2533" title="Send boot count message to data manager task." alt="" coords="241,2153,409,2179"/>
+<area shape="rect" id="node53" href="$class_lte_monitor.html#a0400f54e33cecd307fb744d9a2892a26" title="Send firmware version of the modem software to the receiver mailbox." alt="" coords="524,2305,709,2331"/>
+<area shape="rect" id="node54" href="$class_shtcx.html#a783d547e346f24d0673dd0741a3074af" title="Send humidity data message to data manager task." alt="" coords="543,2761,691,2787"/>
+<area shape="rect" id="node56" href="$struct_adxl37x.html#a1f115a7336973884012f7fe5f5c095e2" title="Function to send a HW status message to HW metrics task." alt="" coords="533,2254,700,2281"/>
+<area shape="rect" id="node57" href="$class_lte_monitor.html#a074ff3aaea45d5c45eba6a99d1a79ce5" title="Send IMEI to the receiver mailbox." alt="" coords="541,2609,692,2635"/>
+<area shape="rect" id="node58" href="$class_lte_monitor.html#af2b8d2875b05dc8922b083300756669a" title="Send IMSI to the receiver mailbox." alt="" coords="541,2355,692,2382"/>
+<area shape="rect" id="node59" href="$class_lte_monitor.html#a6bc897e3a9430a720889ab4bd8e5364b" title="Send link quality value to the receiver mailbox." alt="" coords="522,2406,711,2433"/>
+<area shape="rect" id="node60" href="$class_fw_fsm.html#a70b9199eead78c93ba62a89cd54dfe96" title="Send firmware update active message to Adxl37x task." alt="" coords="513,2811,721,2838"/>
+<area shape="rect" id="node62" href="$class_lte_monitor.html#a019b275f1e08dd596c3e2621002eaee3" title="Send TAU period and active time to the receiver mailbox." alt="" coords="531,2457,702,2483"/>
+<area shape="rect" id="node63" href="$class_power_mgr.html#a54bfcc3b8b94e512f3283cc904de719a" title="Send reset reason message to data manager task." alt="" coords="229,2862,421,2889"/>
+<area shape="rect" id="node64" href="$class_shtcx.html#a2a8129102eab0745dbd35323202addcc" title="Send temperature data message to data manager task." alt="" coords="532,2710,701,2737"/>
+<area shape="rect" id="node65" href="$class_lte_monitor.html#a0ea3d7720052aaf3a4beec85f8a4e817" title="Send modem temperature to the receiver mailbox." alt="" coords="519,2558,715,2585"/>
+<area shape="rect" id="node66" href="$class_battery_mgr.html#ac201955d3467a5b67075856435290afc" title="Request ADC report of battery channels from AD converter task." alt="" coords="530,2913,703,2939"/>
+<area shape="rect" id="node68" href="$class_power_mgr_x1.html#ae7817820b13ebcb1ea023212d05c74ca" title="Send resume or suspend message to boost converter task." alt="" coords="513,2659,721,2686"/>
+<area shape="rect" id="node70" href="$class_disp_task.html#ab01c3b3c13b0144dd413168c073e7028" title="Function to request backward filtered data from AdxlStore task." alt="" coords="534,2963,699,2990"/>
+<area shape="rect" id="node71" href="$class_http_connector.html#aa195aaead99156d934d498c01655d333" title="Function to request raw data from AdxlStore task." alt="" coords="537,3014,696,3041"/>
+<area shape="rect" id="node72" href="$class_disp_task.html#a547fc0920e6e58ed598402441bae2b9b" title="Function to request writing of D result values into FRAM (displacement data after detrending,..." alt="" coords="527,3065,706,3091"/>
+<area shape="rect" id="node73" href="$class_disp_task.html#a9915bdc07cd539a0b8b7236d83747572" title="Function to request writing of filtered result values into FRAM." alt="" coords="523,3115,711,3142"/>
+<area shape="rect" id="node74" href="$class_disp_task.html#a87595605dab61fd51166fad4cf83f17b" title="Function to request forward filtered data from AdxlStore task." alt="" coords="535,3166,699,3193"/>
+<area shape="rect" id="node75" href="$class_disp_task.html#a19cf3eae3207a4ee78a870f504edf3a4" title="Function to request raw data from AdxlStore task." alt="" coords="539,3217,694,3243"/>
+<area shape="rect" id="node76" href="$class_http_connector.html#a8fb8ecc93c7595585ebf437ea82b631e" title="Function to request the raw data status from AdxlStore task." alt="" coords="525,1361,708,1403"/>
+<area shape="rect" id="node77" href="$class_http_connector.html#ac2afd18be5d01c5b8183757e7843beca" title="Function to initiate the raw data transmission to the host." alt="" coords="243,1383,408,1424"/>
+<area shape="rect" id="node78" href="$class_power_mgr.html#af50a5d25bd752742525e9d960a36dd01" title="Send request accelerometer data message to RMS store task." alt="" coords="240,2051,411,2078"/>
+<area shape="rect" id="node79" href="$class_disp_task.html#ade5e15e66069cbbeb962241113bd4b18" title="Function to request intermediate S result (displacement data before detrending) data from AdxlStore t..." alt="" coords="529,3419,704,3446"/>
+<area shape="rect" id="node80" href="$class_disp_task.html#acd1ca8dcf90d4b205d5837a60bad2722" title="Function to request writing of S result values into FRAM (displacement data before detrending)" alt="" coords="527,3470,706,3497"/>
+<area shape="rect" id="node81" href="$class_fw_upd_ctrl.html#a37a90858b1254def27b1a720965ca1d8" title="Send download request message to firmware update task." alt="" coords="522,3521,711,3547"/>
+<area shape="rect" id="node82" href="$class_adxl_data_store.html#af0008c5962b253accee045558363163b" title="Function to send backward filtered data to the HTTP Connector task." alt="" coords="223,3657,428,3683"/>
+<area shape="rect" id="node83" href="$class_adxl_data_store.html#a3dd1d967afcd8a9649677f9c875fc89e" title="Function to send displacement data to the requesting sender task." alt="" coords="228,3741,423,3767"/>
+<area shape="rect" id="node84" href="$class_disp_task.html#af6034be5cb1b0e2d95983deb2e28c415" title="Function to request intermediate S result (displacement data before detrending) data from AdxlStore t..." alt="" coords="520,3673,713,3699"/>
+<area shape="rect" id="node85" href="$class_adxl_data_store.html#af827585056c20cb0bf6b2c4855319b3a" title="Function to send forward filtered data to the HTTP Connector task." alt="" coords="223,4093,427,4119"/>
+<area shape="rect" id="node86" href="$class_lte_connector.html#a6fcfc5dbae182b52c87b34bd86bd13fb" title="Send message to its own (LTE connectors) mailbox." alt="" coords="504,3774,729,3801"/>
+<area shape="rect" id="node87" href="$class_adxl_data_store.html#a194013319bd1a593fc74449c985d88e0" title="Function to send raw data to the requesting sender task." alt="" coords="228,4218,423,4245"/>
+<area shape="rect" id="node88" href="$class_adxl_data_store.html#accb06ff5b11f5a9b4ab23bec4a1c1266" title="Function to send displacement data (SResult, not detrended) to the HTTP Connector task." alt="" coords="218,4418,433,4445"/>
+<area shape="rect" id="node89" href="$class_adxl_data_store.html#ae98eaa6502e0ed1adeb94af4ef0bbdeb" title="Callback function for console input command &#39;d&#39;." alt="" coords="527,3926,707,3953"/>
+<area shape="rect" id="node90" href="$class_rms_store.html#ae98eaa6502e0ed1adeb94af4ef0bbdeb" title="Callback function for console input command &#39;r&#39;." alt="" coords="539,3977,694,4003"/>
+<area shape="rect" id="node91" href="$class_adxl_data_store.html#a23c20614e69310fd2f68716b7acbec7d" title="Callback function for console input command &#39;db&#39;." alt="" coords="546,4028,687,4069"/>
+<area shape="rect" id="node92" href="$class_adxl_data_store.html#ae932af578a253573f31124da08402ea1" title="Callback function for console input command &#39;dd&#39;." alt="" coords="546,4093,687,4135"/>
+<area shape="rect" id="node93" href="$class_adxl_data_store.html#a128fd2feb07d2261c0968b8659488c61" title="Callback function for console input command &#39;df&#39;." alt="" coords="546,4159,687,4200"/>
+<area shape="rect" id="node94" href="$class_http_connector.html#a29908d64354956f5a5f4dbe67041e92c" title="Function to initiate the displacement data transmission to the host." alt="" coords="243,1448,408,1489"/>
+<area shape="rect" id="node95" href="$class_adxl_data_store.html#a9620c421f72c50898ba7b042d8ffe474" title="Function to store backward filtered data in FRAM." alt="" coords="216,3361,435,3387"/>
+<area shape="rect" id="node96" href="$class_adxl_data_store.html#a05ff270ebf9bfe4df4d98646f30e761a" title="Function to store D values (displacement after detrending) in FRAM. D values reoresent the final resu..." alt="" coords="231,3454,420,3481"/>
+<area shape="rect" id="node97" href="$class_adxl_data_store.html#acb7adcf211d7a97fe23fe5029b674e54" title="Function to store forward filtered data in FRAM." alt="" coords="222,3589,429,3615"/>
+<area shape="rect" id="node98" href="$class_adxl_data_store.html#acbcf08a573dd3531e1bbd4e254a44adb" title="Function to store S values (displacement before detrending) in FRAM." alt="" coords="231,3289,420,3315"/>
+<area shape="rect" id="node99" href="$class_rms_task.html#aaad4f4d77885dd2457f79c20ac27db19" title="RMS task function." alt="" coords="270,4503,381,4530"/>
+<area shape="rect" id="node100" href="$class_rms_task.html#ab9179e1ad434ab3966aac5e0312caef8" title="Function to update the RMS and hit values and send result to RMS storage task." alt="" coords="540,4529,693,4555"/>
+<area shape="rect" id="node3" href="$class_measurement_builder.html#aeb63a44cb675e1a837046cbf4373f040" title="Add function to append prepared measurement data to the measurement JSON string." alt="" coords="240,430,411,457"/>
+<area shape="rect" id="node4" href="$class_data_manager.html#a557b206172fbde7a204eb0d2376b7f71" title="Data manager task function." alt="" coords="17,430,149,457"/>
+<area shape="rect" id="node7" href="$class_fw_upd.html#add2f91f57f8f0c466b6e280dbf814856" title="Function to start the OTA download process." alt="" coords="247,139,404,166"/>
+<area shape="rect" id="node8" href="$class_fw_upd.html#a17f00d41a2f949c4f02b489d9f0f39d2" title="Callback function to receive the FOTA download events." alt="" coords="247,190,404,217"/>
+<area shape="rect" id="node31" href="$class_power_mgr.html#a47f75cd650e6967f9a8c429cb39dc888" title="Send metric request message to all registered mailboxes." alt="" coords="240,1985,411,2027"/>
+<area shape="rect" id="node36" href="$class_adxl_data_store.html#a051047da4577611faa7d97507c1aff46" title="Adxl data storage function." alt="" coords="254,4005,397,4031"/>
+<area shape="rect" id="node47" href="$class_hw_metrics.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl37x task function." alt="" coords="267,2102,383,2129"/>
+<area shape="rect" id="node49" href="$struct_adxl37x.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Adxl37x task function." alt="" coords="274,2229,377,2255"/>
+<area shape="rect" id="node51" href="$class_lte_monitor.html#a557b206172fbde7a204eb0d2376b7f71" title="MQTT connector task function." alt="" coords="267,2482,383,2509"/>
+<area shape="rect" id="node55" href="$class_shtcx.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Shtcx task function." alt="" coords="281,2735,370,2762"/>
+<area shape="rect" id="node61" href="$class_fw_fsm.html#ac878eead06d903e46f99b8bb2a0926f6" title="Function to perform state transition to old state to new state." alt="" coords="264,2811,387,2838"/>
+<area shape="rect" id="node67" href="$class_battery_mgr.html#a557b206172fbde7a204eb0d2376b7f71" title="Battery manager task function." alt="" coords="266,2913,385,2939"/>
+<area shape="rect" id="node69" href="$class_power_mgr_x1.html#ab71d737dc66dac5a81a5240f5493b9db" title=" " alt="" coords="253,2659,397,2686"/>
+</map>

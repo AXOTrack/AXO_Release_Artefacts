@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_427baa8a9a5be237f298d4545d0d1ce2" kind="dir">
+    <compoundname>net</compoundname>
+    <innerfile refid="http__connector_8cpp">http_connector.cpp</innerfile>
+    <innerfile refid="http__connector_8h">http_connector.h</innerfile>
+    <innerfile refid="lte__connector_8cpp">lte_connector.cpp</innerfile>
+    <innerfile refid="lte__connector_8h">lte_connector.h</innerfile>
+    <innerfile refid="mqtt__connector_8cpp">mqtt_connector.cpp</innerfile>
+    <innerfile refid="mqtt__connector_8h">mqtt_connector.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="net/"/>
+  </compounddef>
+</doxygen>

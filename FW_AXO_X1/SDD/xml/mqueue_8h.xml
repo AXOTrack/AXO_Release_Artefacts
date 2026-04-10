@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mqueue_8h" kind="file" language="C++">
+    <compoundname>mqueue.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="mbox_8cpp" local="yes">rtos/mbox.cpp</includedby>
+    <includedby refid="mbox_8h" local="yes">rtos/mbox.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="1">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="36">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="21">
+        <label>modem/lte_monitor.h</label>
+        <link refid="lte__monitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="28">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="29">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="24">
+        <label>net/http_connector.h</label>
+        <link refid="http__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="9">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="12">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="25">
+        <label>net/lte_connector.h</label>
+        <link refid="lte__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="33">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="26">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="14">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="5">
+        <label>rtos/mbox.cpp</label>
+        <link refid="mbox_8cpp"/>
+      </node>
+      <node id="31">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="6">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="27">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="22">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="4">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="19">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="30">
+        <label>pm/power_mgr_x1.h</label>
+        <link refid="power__mgr__x1_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="8">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>update/update.h</label>
+        <link refid="update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="13">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="16">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_m_queue" prot="public">MQueue</innerclass>
+    <briefdescription>
+<para>Header file of RTOS wrapper class <ref refid="class_m_queue" kindref="compound">MQueue</ref> for mailbox support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mqueue_8h_1mqueue"/> <simplesect kind="par"><title>Detailed Description </title><para>A message queue is a Zephyr kernel object that implements a simple FIFO message queue, allowing threads and ISRs to asynchronously send and receive fixed-size data items. <linebreak/>
+ A message queue has the following key properties:<itemizedlist>
+<listitem><para>A ring buffer of data items that have been sent but not yet received.</para>
+</listitem><listitem><para>A data item size, measured in bytes.</para>
+</listitem><listitem><para>A maximum quantity of data items that can be queued in the ring buffer. A message queue must be initialized before it can be used. This sets its ring buffer to empty.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MQUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MQUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">8_t<sp/>num_slots&gt;</highlight></codeline>
+<codeline lineno="52" refid="class_m_queue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_queue" kindref="compound">MQueue</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="class_m_queue_1adb43e5a3b88f45cafe40f4fb45101e71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_m_queue_1adb43e5a3b88f45cafe40f4fb45101e71" kindref="member">MQueue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;MQueue::MQueue<sp/>this:<sp/>%p<sp/>sizeof<sp/>type:<sp/>%d<sp/>num_slots:<sp/>%d\n&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof(T),<sp/>num_slots);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memset(my_slab_buffer,<sp/>0,<sp/>sizeof(sizeof(T*)<sp/>*<sp/>num_blocks));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_msgq_init(&amp;<ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>,<sp/>my_msgq_buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T*),<sp/>num_slots);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_m_queue_1a28a1c1e86bbe9d32c6a239e657cedc2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_m_queue_1a28a1c1e86bbe9d32c6a239e657cedc2e" kindref="member">put</ref>(T*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;MQueue::put<sp/>this:<sp/>%p<sp/>data:<sp/>%p\n&quot;,<sp/>this,<sp/>data);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>k_msgq_put(&amp;<ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>,<sp/>&amp;data,<sp/></highlight><highlight class="comment">/*K_FOREVER*/</highlight><highlight class="normal"><sp/>K_NO_WAIT);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(rc)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>PoolElem*<sp/>e1<sp/>=<sp/>reinterpret_cast&lt;PoolElem*&gt;(data);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>printk(&quot;***<sp/>MQueue::put<sp/>failed<sp/>***\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>e1-&gt;Dump();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>k_sleep(K_MSEC(5000));<sp/><sp/>//<sp/>allow<sp/>time<sp/>to<sp/>print<sp/>to<sp/>console</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_m_queue_1ac051b2568208e363ae2dffb23c0ad9ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T*<sp/><ref refid="class_m_queue_1ac051b2568208e363ae2dffb23c0ad9ba" kindref="member">get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T*<sp/>data<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;MQueue::get<sp/>this:<sp/>%p\n&quot;,<sp/>this);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>k_msgq_get(&amp;<ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>,<sp/>&amp;data,<sp/>K_FOREVER);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;MQueue::get<sp/>data:<sp/>%p\n&quot;,<sp/>data);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_m_queue_1a81dbffbc68e17ae5bfc34d4d1f451f17" kindref="member">count</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>k_msgq_num_used_get(&amp;<ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="class_m_queue_1a0f0046a53033c889afaa2e477f75d519" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_m_queue_1a0f0046a53033c889afaa2e477f75d519" kindref="member">avail</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>k_msgq_num_free_get(&amp;<ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>);<sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_m_queue_1ad99ea5881a3c8a380f6835cf10fa151d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_m_queue_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>.max_msgs;<sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="class_m_queue_1a2d87d3e33e499697cece071cb83250d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_m_queue_1a2d87d3e33e499697cece071cb83250d6" kindref="member">msg_size</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>.msg_size;<sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_m_queue_1ac83a0ed4be890f2a31e4dd6aab2216a1" kindref="member">stats</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;MQueue::stats<sp/>this:<sp/>%p<sp/>msg_size:<sp/>%d<sp/>used_msgs:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%d<sp/>available:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>.msg_size,<sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>.used_msgs,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>.max_msgs<sp/>-<sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>.used_msgs);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">k_msgq<sp/><ref refid="class_m_queue_1a2a04d84760a2e3b1526a270f1befb809" kindref="member">my_msgq</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="class_m_queue_1ab75b8ff2e6ae4599fed75d87fbe76b1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_m_queue_1ab75b8ff2e6ae4599fed75d87fbe76b1e" kindref="member">__aligned</ref>(4)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>my_msgq_buffer[sizeof(T)<sp/>*</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_slots];<sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MQUEUE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/mqueue.h"/>
+  </compounddef>
+</doxygen>

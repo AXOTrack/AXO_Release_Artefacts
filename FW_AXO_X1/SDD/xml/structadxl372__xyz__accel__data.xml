@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structadxl372__xyz__accel__data" kind="struct" language="C++" prot="public">
+    <compoundname>adxl372_xyz_accel_data</compoundname>
+    <includes refid="adxl37x_8h" local="no">adxl37x.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>measured x value of the acceleration data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/adxl37x.h" line="60" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">AdxlDataStore::calcMaxXYZ</referencedby>
+        <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">AdxlDataStore::dump</referencedby>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">AdxlDataStore::dumpAll</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>measured y value of the acceleration data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/adxl37x.h" line="61" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">AdxlDataStore::calcMaxXYZ</referencedby>
+        <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">AdxlDataStore::dump</referencedby>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">AdxlDataStore::dumpAll</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>measured z value of the acceleration data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/adxl37x.h" line="62" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">AdxlDataStore::calcMaxXYZ</referencedby>
+        <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">AdxlDataStore::dump</referencedby>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">AdxlDataStore::dumpAll</referencedby>
+        <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">DispTask::HandleDispFirstEntries</referencedby>
+        <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">DispTask::HandleDispLastEntries</referencedby>
+        <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">DispTask::HandleRawData</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure containing the x, y, and z values of the acceleration data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>int16_t</label>
+      </node>
+      <node id="1">
+        <label>adxl372_xyz_accel_data</label>
+        <link refid="structadxl372__xyz__accel__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+x</edgelabel>
+          <edgelabel>+y</edgelabel>
+          <edgelabel>+z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="drv/spi/adxl37x.h" line="59" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="59" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" prot="public" virt="non-virtual"><scope>adxl372_xyz_accel_data</scope><name>x</name></member>
+      <member refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" prot="public" virt="non-virtual"><scope>adxl372_xyz_accel_data</scope><name>y</name></member>
+      <member refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" prot="public" virt="non-virtual"><scope>adxl372_xyz_accel_data</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_472fafaf0f039b9e6b043966c1ef7dbf" kind="dir">
+    <compoundname>data</compoundname>
+    <innerfile refid="adxl__store_8cpp">adxl_store.cpp</innerfile>
+    <innerfile refid="adxl__store_8h">adxl_store.h</innerfile>
+    <innerfile refid="hit__detect_8cpp">hit_detect.cpp</innerfile>
+    <innerfile refid="hit__detect_8h">hit_detect.h</innerfile>
+    <innerfile refid="hw__metrics_8cpp">hw_metrics.cpp</innerfile>
+    <innerfile refid="hw__metrics_8h">hw_metrics.h</innerfile>
+    <innerfile refid="measurement_8cpp">measurement.cpp</innerfile>
+    <innerfile refid="measurement_8h">measurement.h</innerfile>
+    <innerfile refid="metric_8cpp">metric.cpp</innerfile>
+    <innerfile refid="metric_8h">metric.h</innerfile>
+    <innerfile refid="pdata_8cpp">pdata.cpp</innerfile>
+    <innerfile refid="pdata_8h">pdata.h</innerfile>
+    <innerfile refid="rms_8cpp">rms.cpp</innerfile>
+    <innerfile refid="rms_8h">rms.h</innerfile>
+    <innerfile refid="rms__store_8cpp">rms_store.cpp</innerfile>
+    <innerfile refid="rms__store_8h">rms_store.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="data/"/>
+  </compounddef>
+</doxygen>

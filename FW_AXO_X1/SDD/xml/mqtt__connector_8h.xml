@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mqtt__connector_8h" kind="file" language="C++">
+    <compoundname>mqtt_connector.h</compoundname>
+    <includes local="no">net/mqtt_helper.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">string</includes>
+    <includes refid="mbox_8h" local="yes">rtos/mbox.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
+    <includes refid="certmgr_8h" local="yes">util/certmgr.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="pdata_8cpp" local="yes">data/pdata.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>rtos/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>modem/modem_key_mgmt.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="14">
+        <label>util/certmgr.h</label>
+        <link refid="certmgr_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rtos/mqueue.h</label>
+        <link refid="mqueue_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>net/mqtt_helper.h</label>
+      </node>
+      <node id="11">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpayload" prot="public">payload</innerclass>
+    <innerclass refid="structtopic" prot="public">topic</innerclass>
+    <innerclass refid="class_mqtt_connector" prot="public">MqttConnector</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" prot="public" static="no">
+        <name>MEP_TOPIC</name>
+        <initializer>&quot;/device/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="116" column="9" bodyfile="net/mqtt_connector.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" prot="public" static="no">
+        <name>MEP_TOPIC_LEN</name>
+        <initializer>sizeof(<ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="117" column="9" bodyfile="net/mqtt_connector.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" prot="public" static="no">
+        <name>DEV_ID_LEN</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="119" column="9" bodyfile="net/mqtt_connector.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1ac6c040ca23f3cd09a34fe5478eaa69de" prot="public" static="no">
+        <name>MEP_MEASUREMENT_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/measurement/update&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="121" column="9" bodyfile="net/mqtt_connector.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a1182d22f8f380438f9f2b727ebfd4beb" prot="public" static="no">
+        <name>MEP_MEASUREMENT_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 19)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="122" column="9" bodyfile="net/mqtt_connector.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a23b19feccbef17ee2445a0b7949f9ea9" prot="public" static="no">
+        <name>MEP_METRICS_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/metric/update&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="124" column="9" bodyfile="net/mqtt_connector.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a18c2c239b1817808ef23f8533134184d" prot="public" static="no">
+        <name>MEP_METRICS_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="125" column="9" bodyfile="net/mqtt_connector.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a7b1ec7a13fde97515170f958cff1798d" prot="public" static="no">
+        <name>MEP_PUBKEY_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/pubkey/update&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="127" column="9" bodyfile="net/mqtt_connector.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a326ef56a3b10701ea6222b074096a7a2" prot="public" static="no">
+        <name>MEP_PUBKEY_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="128" column="9" bodyfile="net/mqtt_connector.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1acbf7bd73ff3044b6d49d249ba5309eea" prot="public" static="no">
+        <name>MEP_COMMAND_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/command&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="130" column="9" bodyfile="net/mqtt_connector.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a16532f15e6273350dffcbf7c86abbe62" prot="public" static="no">
+        <name>MEP_COMMAND_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="131" column="9" bodyfile="net/mqtt_connector.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a003c490c4ae6e9b64653ea9780384f61" prot="public" static="no">
+        <name>MEP_OTA_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/ota/update&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="133" column="9" bodyfile="net/mqtt_connector.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1aa3aa43a6f5afa4214ac3fcad98dbedf1" prot="public" static="no">
+        <name>MEP_OTA_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="134" column="9" bodyfile="net/mqtt_connector.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1af44653399857221f6dad3b4c06f9d5b6" prot="public" static="no">
+        <name>MEP_EVENT_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/event&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="136" column="9" bodyfile="net/mqtt_connector.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1aba2ad44237886d7065631392f55bd8fe" prot="public" static="no">
+        <name>MEP_EVENT_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="137" column="9" bodyfile="net/mqtt_connector.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a1c2b9e4617273666758b0938e99d1ba0" prot="public" static="no">
+        <name>MEP_CONFIG_TOPIC</name>
+        <initializer><ref refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" kindref="member">MEP_TOPIC</ref> &quot;%s/config/update&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="139" column="9" bodyfile="net/mqtt_connector.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1acb7453187a2531114e74628cf9888394" prot="public" static="no">
+        <name>MEP_CONFIG_TOPIC_LEN</name>
+        <initializer>(<ref refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" kindref="member">MEP_TOPIC_LEN</ref> + <ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref> + 14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="140" column="9" bodyfile="net/mqtt_connector.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1afa9390d2e6071875c32be852a71f2cf5" prot="public" static="no">
+        <name>JOVIA_MQTT_HOSTNAME</name>
+        <initializer>&quot;stg-mqtt.nbt-dev.ag&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="142" column="9" bodyfile="net/mqtt_connector.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a1fafbec84cc1e03a1a136bfcec328004" prot="public" static="no">
+        <name>THINGSBOARD_MQTT_HOSTNAME</name>
+        <initializer>&quot;axo-mqtt.axotrack.de&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="148" column="14" bodyfile="net/mqtt_connector.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1ad49848e4f1fc40ff6bcb5a495d1e077d" prot="public" static="no">
+        <name>MAX_MQTT_HOSTNAME_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="151" column="9" bodyfile="net/mqtt_connector.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a925e6e8864b73efc37aca1fd995b28c5" prot="public" static="no">
+        <name>DEFAULT_MQTT_HOSTNAME</name>
+        <initializer><ref refid="mqtt__connector_8h_1afa9390d2e6071875c32be852a71f2cf5" kindref="member">JOVIA_MQTT_HOSTNAME</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="154" column="9" bodyfile="net/mqtt_connector.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1abe52b9b57497e1cdcbae7ae9392f0e3c" prot="public" static="no">
+        <name>MAX_NUM_CONNECT_RETRIES</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>The maximal number of MQTT connect retries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="157" column="9" bodyfile="net/mqtt_connector.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1af23d98e946f8ff7f197e78695d2f815a" prot="public" static="no">
+        <name>CONNECT_RETRY_DURATION</name>
+        <initializer>60</initializer>
+        <briefdescription>
+<para>The duration to next connect retry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="160" column="9" bodyfile="net/mqtt_connector.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mqtt__connector_8h_1a51f7a92030e93bed1031afef488edb11" prot="public" static="no">
+        <name>SUBSCRIBE_TOPIC_ID</name>
+        <initializer>2469</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID for subscribe topic - Used to verify that a subscription succeeded in on_mqtt_suback(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/mqtt_connector.h" line="164" column="9" bodyfile="net/mqtt_connector.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of MQTT connector class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mqtt__connector_8h_1mqtt_connector"/> <simplesect kind="par"><title>Detailed Description </title><para>MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol for use in cases where clients need a small code footprint and are connected to unreliable networks or networks with limited bandwidth resources. It is primarily used for machine-to-machine (M2M) communication. <linebreak/>
+<bold>MQTT Architecture</bold> <linebreak/>
+MQTT runs on top of TCP/IP using a PUSH/SUBSCRIBE topology. In MQTT architecture, there are two types of systems: clients and brokers. A broker is the server that the clients communicate with. The broker receives communications from clients and sends those communications to other clients. Clients do not communicate directly with each other, but rather connect to the broker. Each client may be either a publisher, a subscriber, or both. <image type="html" name="MQTT.png" inline="yes"></image>
+ <bold>Topics</bold> <linebreak/>
+MQTT is an event-driven protocol. There is no periodic or ongoing data transmission. This keeps transmission to a minimum. A client only publishes when there is information to be sent, and a broker only sends out information to subscribers when new data arrives. <linebreak/>
+ Messages within MQTT are published as topics. Topics are structures in a hierarchy using the slash (/) character as delimiter. A structure such as sensor/data/temperature/ allows a subscriber to specify that it should only be sent data from clients that publish to the temperature topic, or for a broader view, perhaps all data from clients that publish to any sensor/data topic. Topics are not explicitly created in MQTT. If a broker receives data published to a topic that does not currently exist, the topic is simply created, and clients may subscribe to the new topic. <linebreak/>
+<bold>Last will and testament</bold> <linebreak/>
+Where communications are unreliable, it is possible that a publisher will disconnect from the network without warning. A publisher may register a message to be sent to subscribers in the event the publisher disconnects unexpectedly, this is a so called last will and testament. This message is cached on the broker and sent to subscribers should the publisher disconnect improperly. Typically, such a message includes information allowing the disconnected publisher to be identified so that the appropriate actions can be taken. <linebreak/>
+<bold>MQTT messages</bold> <linebreak/>
+There are only four possible actions with any MQTT communication: publish, subscribe, unsubscribe or ping.<itemizedlist>
+<listitem><para>Publish: Sends a block of data containing the message to be sent. This data is specific to each implementation but could be something as simple as an on/off indication, or a value of a certain sensor, such as temperature, pressure, etc. In the case that the topic being published to does not exist, the topic is created on the broker.</para>
+</listitem><listitem><para>Subscribe: Turns a client into a subscriber of a topic. Topics may be subscribed to specifically or via wildcards that allow subscriptions to an entire topic branch or part of any topic branch. To subscribe, a client sends a SUBSCRIBE packet and receives a SUBACK packet in return. If there is a retained message for the topic, the new subscriber receives that message as well.</para>
+</listitem><listitem><para>Ping: A client may ping the broker. A PINGREQ packet is sent by the subscriber and a reply PINGRESP packet is sent in reply. Pings may be used to ensure that the connection is still working and that the TCP session was not unexpectedly closed by other networking equipment like a router or gateway.</para>
+</listitem><listitem><para>Disconnect: A subscriber or publisher may send a DISCONNECT message to the broker. This message informs the broker that it will no longer need to send or queue messages for a subscriber and that it will no longer receive data from a publisher. This kind of shutdown allows the client to reconnect using the same client identity as before. When a client disconnects without sending a disconnect message, its last will and testament is sent to subscribers <linebreak/>
+ <subscript>Source: <ulink url="https://www.paessler.com/de/it-explained/mqtt">https://www.paessler.com/de/it-explained/mqtt</ulink></subscript> <linebreak/>
+For further details see <ulink url="https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html">OASIS MQTT Specification</ulink></para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_NET_MQTT_CONNECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_NET_MQTT_CONNECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_NET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;net/mqtt_helper.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_NET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="certmgr_8h" kindref="compound">util/certmgr.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wg.<sp/>USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/net/src/stubs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_BROKER_SWITCHING</highlight></codeline>
+<codeline lineno="105"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>_enCertState<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_Jovia_First<sp/>=<sp/>1,<sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_Jovia_Second,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_Jovia_Third,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_TB_First,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_TB_Second,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_TB_Third,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/>eCERT_STATE_None<sp/>=<sp/>255,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}<sp/>enCertState;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="mqtt__connector_8h_1afb16f86311ccf0567bdedf793eafe970" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_TOPIC<sp/>&quot;/device/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="mqtt__connector_8h_1a39a67e8692e6b0aa3759bc3f48e1d609" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_TOPIC_LEN<sp/>sizeof(MEP_TOPIC)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEV_ID_LEN<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="mqtt__connector_8h_1ac6c040ca23f3cd09a34fe5478eaa69de" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_MEASUREMENT_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/measurement/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="mqtt__connector_8h_1a1182d22f8f380438f9f2b727ebfd4beb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_MEASUREMENT_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="mqtt__connector_8h_1a23b19feccbef17ee2445a0b7949f9ea9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_METRICS_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/metric/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="mqtt__connector_8h_1a18c2c239b1817808ef23f8533134184d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_METRICS_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="mqtt__connector_8h_1a7b1ec7a13fde97515170f958cff1798d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_PUBKEY_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/pubkey/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="mqtt__connector_8h_1a326ef56a3b10701ea6222b074096a7a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_PUBKEY_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="mqtt__connector_8h_1acbf7bd73ff3044b6d49d249ba5309eea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_COMMAND_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/command&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="mqtt__connector_8h_1a16532f15e6273350dffcbf7c86abbe62" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_COMMAND_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="mqtt__connector_8h_1a003c490c4ae6e9b64653ea9780384f61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_OTA_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/ota/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="mqtt__connector_8h_1aa3aa43a6f5afa4214ac3fcad98dbedf1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_OTA_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="mqtt__connector_8h_1af44653399857221f6dad3b4c06f9d5b6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_EVENT_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/event&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="mqtt__connector_8h_1aba2ad44237886d7065631392f55bd8fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_EVENT_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="mqtt__connector_8h_1a1c2b9e4617273666758b0938e99d1ba0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_CONFIG_TOPIC<sp/>MEP_TOPIC<sp/>&quot;%s/config/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="mqtt__connector_8h_1acb7453187a2531114e74628cf9888394" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEP_CONFIG_TOPIC_LEN<sp/>(MEP_TOPIC_LEN<sp/>+<sp/>DEV_ID_LEN<sp/>+<sp/>14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="mqtt__connector_8h_1afa9390d2e6071875c32be852a71f2cf5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JOVIA_MQTT_HOSTNAME<sp/>&quot;stg-mqtt.nbt-dev.ag&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>THINGSBOARD_MQTT_HOSTNAME<sp/>&quot;axo-mqtt.axotrack.de&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>for<sp/>USE_DEVPOOL_URL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_DEVPOOL_URL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>THINGSBOARD_MQTT_HOSTNAME<sp/>&quot;axo-mqtt.devpool.net&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="mqtt__connector_8h_1a1fafbec84cc1e03a1a136bfcec328004" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>THINGSBOARD_MQTT_HOSTNAME<sp/>&quot;axo-mqtt.axotrack.de&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="mqtt__connector_8h_1ad49848e4f1fc40ff6bcb5a495d1e077d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_MQTT_HOSTNAME_LEN<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>host<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="mqtt__connector_8h_1a925e6e8864b73efc37aca1fd995b28c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFAULT_MQTT_HOSTNAME<sp/>JOVIA_MQTT_HOSTNAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="mqtt__connector_8h_1abe52b9b57497e1cdcbae7ae9392f0e3c" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_NUM_CONNECT_RETRIES<sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="mqtt__connector_8h_1af23d98e946f8ff7f197e78695d2f815a" refkind="member"><highlight class="preprocessor">#define<sp/>CONNECT_RETRY_DURATION<sp/><sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="mqtt__connector_8h_1a51f7a92030e93bed1031afef488edb11" refkind="member"><highlight class="preprocessor">#define<sp/>SUBSCRIBE_TOPIC_ID<sp/>2469</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="structpayload" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpayload" kindref="compound">payload</ref><sp/>{</highlight></codeline>
+<codeline lineno="167" refid="structpayload_1ab463666a2f3e3a35c04f1e29d6a49001" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[1024];</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="structtopic" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtopic" kindref="compound">topic</ref><sp/>{</highlight></codeline>
+<codeline lineno="171" refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[128];</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="class_mqtt_connector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mqtt_connector" kindref="compound">MqttConnector</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ab6c36ce06f69e6726531bb97d2cbebee" kindref="member">MqttConnector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210" refid="class_mqtt_connector_1ab6c36ce06f69e6726531bb97d2cbebee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mqtt_connector_1ab6c36ce06f69e6726531bb97d2cbebee" kindref="member">MqttConnector</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a04739063d8d482d445377f166f9ee92e" kindref="member">~MqttConnector</ref>();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="class_mqtt_connector_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_mqtt_connector_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="class_mqtt_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="class_mqtt_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" kindref="member">connect</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a960705de531a20389fb29928d43258c3" kindref="member">disconnect</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ac54f53dc342019e8db34f4aa581a5792" kindref="member">abort</ref>();</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" kindref="member">publish</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpayload" kindref="compound">payload</ref>*<sp/><ref refid="structpayload" kindref="compound">payload</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structtopic" kindref="compound">topic</ref>*<sp/><ref refid="structtopic" kindref="compound">topic</ref>);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a961bb32487217f663830f3f42d4ff539" kindref="member">getDeviceId</ref>();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" kindref="member">on_connack</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>mqtt_conn_return_code<sp/>return_code);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" kindref="member">on_disconnect</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" kindref="member">on_publish</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>mqtt_helper_buf<sp/><ref refid="structtopic" kindref="compound">topic</ref>,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>mqtt_helper_buf<sp/><ref refid="structpayload" kindref="compound">payload</ref>);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a86e2fd6577ee6e2f7e8feaa35c4f18a6" kindref="member">on_suback</ref>(uint16_t<sp/>message_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aed0e2bc67364b25cbf96f7eff79b437d" kindref="member">on_puback</ref>(uint16_t<sp/>message_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="236" refid="class_mqtt_connector_1a55313def4e54a52e56958a4345969804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a55313def4e54a52e56958a4345969804" kindref="member">device_id</ref>[<ref refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" kindref="member">DEV_ID_LEN</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="238" refid="class_mqtt_connector_1a094ac2451b2e4dcdfc30025893af003e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a094ac2451b2e4dcdfc30025893af003e" kindref="member">host_name</ref>[<ref refid="mqtt__connector_8h_1ad49848e4f1fc40ff6bcb5a495d1e077d" kindref="member">MAX_MQTT_HOSTNAME_LEN</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="242" refid="class_mqtt_connector_1a0186325db214ae47eb0d12e85614ddc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a0186325db214ae47eb0d12e85614ddc7" kindref="member">measurement_topic</ref>[<ref refid="mqtt__connector_8h_1a1182d22f8f380438f9f2b727ebfd4beb" kindref="member">MEP_MEASUREMENT_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="class_mqtt_connector_1a78c27009cb709528c84d69c00238e370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a78c27009cb709528c84d69c00238e370" kindref="member">metrics_topic</ref>[<ref refid="mqtt__connector_8h_1a18c2c239b1817808ef23f8533134184d" kindref="member">MEP_METRICS_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="class_mqtt_connector_1ab6fa18add1c44966d6f15ba03a2e078f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ab6fa18add1c44966d6f15ba03a2e078f" kindref="member">pubkey_topic</ref>[<ref refid="mqtt__connector_8h_1a326ef56a3b10701ea6222b074096a7a2" kindref="member">MEP_PUBKEY_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>subscribe<sp/>topics</highlight></codeline>
+<codeline lineno="255" refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" kindref="member">command_topic</ref>[<ref refid="mqtt__connector_8h_1a16532f15e6273350dffcbf7c86abbe62" kindref="member">MEP_COMMAND_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/device/{device_id}/command/accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/device/{device_id}/command/rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="class_mqtt_connector_1a54561314c70600f9ab3257737e0ee83a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a54561314c70600f9ab3257737e0ee83a" kindref="member">ota_topic</ref>[<ref refid="mqtt__connector_8h_1aa3aa43a6f5afa4214ac3fcad98dbedf1" kindref="member">MEP_OTA_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/device/{device_id}/ota/update/accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/device/{device_id}/ota/update/rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="class_mqtt_connector_1a7d7ac94e3cc35f3da08b057e91193fb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a7d7ac94e3cc35f3da08b057e91193fb4" kindref="member">event_topic</ref>[<ref refid="mqtt__connector_8h_1aba2ad44237886d7065631392f55bd8fe" kindref="member">MEP_EVENT_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="class_mqtt_connector_1a758eb6f193763f906c39b6a966a62d9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a758eb6f193763f906c39b6a966a62d9a" kindref="member">config_topic</ref>[<ref refid="mqtt__connector_8h_1acb7453187a2531114e74628cf9888394" kindref="member">MEP_CONFIG_TOPIC_LEN</ref>];</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/device/{device_id}/config/update/accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>/device/{device_id}/config/update/rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>MeasurementBuilder<sp/>measurements;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="class_mqtt_connector_1ab36823025f12a809217f7771125658c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ab36823025f12a809217f7771125658c2" kindref="member">connected</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278" refid="class_mqtt_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" kindref="member">lte_connected</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>lte_sleeping;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="class_mqtt_connector_1ad9c457d93ccf594637c0c741a779d265" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_mqtt_connector_1ad9c457d93ccf594637c0c741a779d265" kindref="member">last_msg_id</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="class_mqtt_connector_1aa5413839d753bda01f2eb458950592f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_mqtt_connector_1aa5413839d753bda01f2eb458950592f4" kindref="member">numConnectRetries</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="284" refid="class_mqtt_connector_1a27a7f73334bad76cf4ec948ef8f75692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_mqtt_connector_1a27a7f73334bad76cf4ec948ef8f75692" kindref="member">metricsInterval</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>enCertState<sp/>eCertState;<sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" kindref="member">subscribe</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/><ref refid="structtopic" kindref="compound">topic</ref>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" kindref="member">cmd_subscribe</ref>();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" kindref="member">ota_subscribe</ref>();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" kindref="member">config_subscribe</ref>();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" kindref="member">PublishData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pPayload);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" kindref="member">PublishResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pPayload,</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pRespType);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" kindref="member">PublishAcceptedResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pPayload);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" kindref="member">PublishAcceptedResponse</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" kindref="member">PublishRejectedResponse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pPayload);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" kindref="member">PublishRejectedResponse</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem,</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" kindref="member">PublishDlResult</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pTopic);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" kindref="member">HandleNewConfiguration</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" kindref="member">HandleFactoryDefault</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" kindref="member">HandleColdStartReq</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" kindref="member">HandleBoostOnReq</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" kindref="member">HandleBoostOffReq</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleConnectRequest(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem,<sp/></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>currBroker,<sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>newBroker);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleConnectJovia(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleConnectThingsboard(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PublishCertResponse(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem,<sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>condStr1,</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>condStr2,<sp/></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enCertState<sp/>currState,</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpayload" kindref="compound">payload</ref>*<sp/>pMsg);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCertJovia1(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCertJovia2(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCertJoviaKey(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCertThingsboard1(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCertThingsboard2(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HandleCertThingsboardKey(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" kindref="member">HandleFsErase</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" kindref="member">HandleFsStatus</ref>();</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" kindref="member">HandleDisableADXL</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" kindref="member">HandleEnableADXL</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" kindref="member">HandleGetConfig</ref>();</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_NET_MQTT_CONNECTOR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="net/mqtt_connector.h"/>
+  </compounddef>
+</doxygen>

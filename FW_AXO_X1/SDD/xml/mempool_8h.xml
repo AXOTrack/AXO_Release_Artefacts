@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mempool_8h" kind="file" language="C++">
+    <compoundname>mempool.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/sys/__assert.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="mpelem_8cpp" local="yes">rtos/mpelem.cpp</includedby>
+    <includedby refid="mpool_8cpp" local="yes">rtos/mpool.cpp</includedby>
+    <includedby refid="mpool_8h" local="yes">rtos/mpool.h</includedby>
+    <includedby refid="fsm_8cpp" local="yes">update/fsm.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="1">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="4">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="27">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="8">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="28">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="10">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="9">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="13">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="25">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="29">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="12">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="24">
+        <label>rtos/mbox.cpp</label>
+        <link refid="mbox_8cpp"/>
+      </node>
+      <node id="22">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="3">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="21">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="4">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="6">
+        <label>rtos/mpool.cpp</label>
+        <link refid="mpool_8cpp"/>
+      </node>
+      <node id="19">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="18">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="26">
+        <label>update/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="5">
+        <label>rtos/mpelem.cpp</label>
+        <link refid="mpelem_8cpp"/>
+      </node>
+      <node id="20">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="11">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="15">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_memory_pool" prot="public">MemoryPool</innerclass>
+    <briefdescription>
+<para>Header file of RTOS wrapper class mempool for message allocation support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mempool_8h_1mempool"/> <simplesect kind="par"><title>Detailed Description </title><para>A memory slab is a kernel object that allows memory blocks to be dynamically allocated from a designated memory region. All memory blocks in a memory slab have a single fixed size, allowing them to be allocated and released efficiently and avoiding memory fragmentation concerns. <linebreak/>
+ A memory slab has the following key properties:<itemizedlist>
+<listitem><para>The block size of each block, measured in bytes. It must be at least 4N bytes long, where N is greater than 0.</para>
+</listitem><listitem><para>The number of blocks available for allocation. It must be greater than zero.</para>
+</listitem><listitem><para>A buffer that provides the memory for the memory slab’s blocks. It must be at least “block size” times “number of blocks” bytes long. The memory slab’s buffer must be aligned to an N-byte boundary, where N is a power of 2 larger than 2 (i.e. 4, 8, 16, …). To ensure that all memory blocks in the buffer are similarly aligned to this boundary, the block size must also be a multiple of N.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MEMPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MEMPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/__assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">32_t<sp/>num_blocks&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_memory_pool" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71" refid="class_memory_pool_1ad84b296839bf3f443cd44918baa08592" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_memory_pool_1ad84b296839bf3f443cd44918baa08592" kindref="member">MemoryPool</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>&quot;MemoryPool::MemoryPool<sp/>this:<sp/>%p<sp/>sizeof<sp/>type:<sp/>%d<sp/>num_blocks:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>%d\n&quot;,<sp/>this,<sp/>sizeof(T),<sp/>num_blocks);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memset(my_slab_buffer,<sp/>0,<sp/>sizeof(sizeof(T)<sp/>*<sp/>num_blocks));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_mem_slab_init(&amp;<ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>,<sp/>my_slab_buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T),<sp/>num_blocks);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(rc<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T*<sp/><ref refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" kindref="member">alloc</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_used<sp/>&lt;<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_blocks)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>block_ptr;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;MemoryPool::alloc<sp/>this:<sp/>%p\n&quot;,<sp/>this);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>k_mem_slab_alloc(&amp;<ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>,<sp/>&amp;block_ptr,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_MSEC(1000)<sp/></highlight><highlight class="comment">/*K_NO_WAIT*/</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*K_FOREVER*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT(rc<sp/>==<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;alloc<sp/>failed<sp/>at<sp/>size:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(block_ptr,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">T*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(block_ptr);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;<sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>more<sp/>free<sp/>blocks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" kindref="member">free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>block_ptr)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;MemoryPool::free<sp/>this:<sp/>%p<sp/>block_ptr:<sp/>%p\n&quot;,<sp/>this,<sp/>block_ptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_mem_slab_free(&amp;<ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>,<sp/>&amp;block_ptr);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" kindref="member">stats</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printk(</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;MemoryPool::stats<sp/>this:<sp/>%p<sp/>block_size:<sp/>%d\tnum_used:<sp/>%d<sp/>max_used:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%d<sp/>available:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.block_size,<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_used,<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.max_used,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_blocks<sp/>-<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_used);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" kindref="member">size</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_blocks;<sp/>}</highlight></codeline>
+<codeline lineno="137" refid="class_memory_pool_1a8d58317e03953167e3cc27b27bd6f570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_memory_pool_1a8d58317e03953167e3cc27b27bd6f570" kindref="member">blocksize</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.block_size;<sp/>}</highlight></codeline>
+<codeline lineno="138" refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" kindref="member">used</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_used;<sp/>}</highlight></codeline>
+<codeline lineno="139" refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" kindref="member">maxused</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.max_used;<sp/>}</highlight></codeline>
+<codeline lineno="140" refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" kindref="member">available</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_blocks<sp/>-<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>.num_used;<sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">k_mem_slab<sp/><ref refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" kindref="member">my_slab</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="144" refid="class_memory_pool_1a0f5dfd0c2bd16812fe430af274b0cbb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="class_memory_pool_1a0f5dfd0c2bd16812fe430af274b0cbb9" kindref="member">__aligned</ref>(4)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>my_slab_buffer[sizeof(T)<sp/>*<sp/>num_blocks];<sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MEMPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/mempool.h"/>
+  </compounddef>
+</doxygen>

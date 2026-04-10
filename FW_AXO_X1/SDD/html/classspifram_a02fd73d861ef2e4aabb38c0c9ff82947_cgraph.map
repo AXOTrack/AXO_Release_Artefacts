@@ -1,0 +1,19 @@
+<map id="init" name="init">
+<area shape="rect" id="node1" title="The initialization function of the SPI FRAM class." alt="" coords="5,132,44,159"/>
+<area shape="rect" id="node2" href="$classspibus.html#a5a7bcb0808c68a96569d8d1e891f047b" title=" " alt="" coords="101,5,224,32"/>
+<area shape="rect" id="node3" href="$classspibus.html#ac03072d1a0866e9a0eb353f3e080530e" title=" " alt="" coords="92,56,233,83"/>
+<area shape="rect" id="node4" href="$classspibus.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The init function." alt="" coords="120,107,205,133"/>
+<area shape="rect" id="node5" href="$classspibus.html#a5f30bf965b5abb588c055623a3373ce9" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="118,157,207,184"/>
+<area shape="rect" id="node6" href="$classspifram.html#a551f8dab86180b322717e3cd04b93126" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="141,208,184,235"/>
+<area shape="rect" id="node7" href="$classspifram.html#a9d8f65ef2d9b6593e836282a55a11222" title=" " alt="" coords="131,259,195,285"/>
+<area shape="rect" id="node8" href="$classspifram.html#a63a57b6838d0be4a55b8b633dd2aa1ec" title="Getter function to retrieve the device ID." alt="" coords="285,157,373,184"/>
+<area shape="rect" id="node9" href="$classspifram.html#a012fd03b5c4e8fb72719e55317c6b1b9" title="Function to read multiple bytes from FRAM." alt="" coords="582,309,663,336"/>
+<area shape="rect" id="node12" href="$classspifram.html#a0b5e3feb8817cac78ca7857e2a9d6abe" title="Function to read the device ID if the FRAM chip." alt="" coords="281,259,376,285"/>
+<area shape="rect" id="node14" href="$classspifram.html#a2cadaffd8a4f13814213a48e5b20cc4d" title="Function to wake up FRAM from deep power down mode." alt="" coords="295,309,362,336"/>
+<area shape="rect" id="node16" href="$classspifram.html#a1bd30127afd8f18cff8a7eebbbac532c" title="Function to write multiple bytes into FRAM." alt="" coords="436,360,519,387"/>
+<area shape="rect" id="node10" href="$classspifram.html#a3f8be5a2578127c3fc0e74e3532f284b" title="Function to read multiple bytes to FRAM." alt="" coords="715,309,801,336"/>
+<area shape="rect" id="node11" href="$classspifram.html#a2b5d6c97c3b1b81c410898f8b4d88dba" title="Function to access FRAM for reading and writing." alt="" coords="849,335,945,361"/>
+<area shape="rect" id="node13" href="$classspifram.html#a2ea7e3192751179e5d1730f154dcdbc9" title="Function to read the device ID from FRAM." alt="" coords="424,259,531,285"/>
+<area shape="rect" id="node15" href="$classspifram.html#a7b6017c27f8b34a91104422c88c4954f" title="Function to wake up FRAM from deep power down mode." alt="" coords="442,309,513,336"/>
+<area shape="rect" id="node17" href="$classspifram.html#a3b8249f30cb998de07e43307c96667f8" title="Function to write multiple bytes to FRAM." alt="" coords="579,360,667,387"/>
+</map>

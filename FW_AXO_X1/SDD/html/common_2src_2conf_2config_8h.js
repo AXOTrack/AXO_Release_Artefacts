@@ -1,0 +1,35 @@
+var common_2src_2conf_2config_8h =
+[
+    [ "_stCfgGeneral", "struct__st_cfg_general.html", "struct__st_cfg_general" ],
+    [ "_stCfgSensor", "struct__st_cfg_sensor.html", "struct__st_cfg_sensor" ],
+    [ "_stCfgMetrics", "struct__st_cfg_metrics.html", "struct__st_cfg_metrics" ],
+    [ "_stCfgDisplacement", "struct__st_cfg_displacement.html", "struct__st_cfg_displacement" ],
+    [ "_stCfgDatalog", "struct__st_cfg_datalog.html", "struct__st_cfg_datalog" ],
+    [ "Config", "class_config.html", "class_config" ],
+    [ "CONFIG_VERSION", "common_2src_2conf_2config_8h.html#a33fbd7e91d033fa1e09b4ed4de899c02", null ],
+    [ "CONFIG_DEVICE_NAME", "common_2src_2conf_2config_8h.html#af7c3cf5230670f1fd6319f5561217f31", null ],
+    [ "CONFIG_DEVICE_TYPE", "common_2src_2conf_2config_8h.html#a3549495c2b388784973f2f44369f67a1", null ],
+    [ "CONFIG_ACCEL_SENS_NAME", "common_2src_2conf_2config_8h.html#a8ed5706c6752b7807d96234f785e1f82", null ],
+    [ "CONFIG_ACCEL_SENS_TYPE", "common_2src_2conf_2config_8h.html#abc5d899c6513b249163dc0de644ed4d2", null ],
+    [ "CONFIG_FILENAME", "common_2src_2conf_2config_8h.html#af3a37ddad69a98c185798e80a58dcbdb", null ],
+    [ "CONFIG_JSON_SIZE", "common_2src_2conf_2config_8h.html#ac5a47791d04046a9354f867b91c1f216", null ],
+    [ "FRAM_5_SEC_RAW_DATA_SPACE", "common_2src_2conf_2config_8h.html#a96ae51ec4a58a4a86a530f4796f1f590", null ],
+    [ "FRAM_15_SEC_RAW_DATA_SPACE", "common_2src_2conf_2config_8h.html#a6ad2a73820aa8c8a5b865b810fad1ac2", null ],
+    [ "MIN_ACT_THRESHOLD_STR", "common_2src_2conf_2config_8h.html#ac87c41a1e712fb2612375468da55b7ba", null ],
+    [ "MAX_ACT_THRESHOLD_STR", "common_2src_2conf_2config_8h.html#a1f2eb35f54f623585f342a14ca2de33f", null ],
+    [ "MAX_DEACT_THRESHOLD_STR", "common_2src_2conf_2config_8h.html#a476feef5798188ae0332302cf96da100", null ],
+    [ "MIN_ACT_THRESHOLD", "common_2src_2conf_2config_8h.html#a70b42f710ea45d269a511bc990063975", null ],
+    [ "MAX_ACT_THRESHOLD", "common_2src_2conf_2config_8h.html#a49f1cb9ea995633108848d99a04c8b22", null ],
+    [ "MAX_DEACT_THRESHOLD", "common_2src_2conf_2config_8h.html#a006bf46c2e9e0e5d55f7c41aacef79e5", null ],
+    [ "MIN_ACT_DEACT_DIFF", "common_2src_2conf_2config_8h.html#aa9ceed8e2ebc20706ee07fdbdf7e4b93", null ],
+    [ "enCfgSensorId", "common_2src_2conf_2config_8h.html#a2aa0ac06adcc561c573aebc9d2c84735", null ],
+    [ "stCfgGeneral", "common_2src_2conf_2config_8h.html#a4b760cee435ce5b5cad9bdb7f2e976e4", null ],
+    [ "stCfgSensor", "common_2src_2conf_2config_8h.html#ae4748f9659f6e54fd5212402d461a14b", null ],
+    [ "stCfgMetrics", "common_2src_2conf_2config_8h.html#acdb49406321a50693308cf8efc0e46d8", null ],
+    [ "stCfgDisplacement", "common_2src_2conf_2config_8h.html#a4f488f2053de5813c65b297bf5d5882d", null ],
+    [ "stCfgDatalog", "common_2src_2conf_2config_8h.html#a398de94e30a56bd329e10eaadf90aa2f", null ],
+    [ "_enCfgSensorId", "common_2src_2conf_2config_8h.html#ae0844591b2474dfebc9992bba67c617c", [
+      [ "eSensor_adxl372", "common_2src_2conf_2config_8h.html#ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3", null ],
+      [ "eSensor_MAX", "common_2src_2conf_2config_8h.html#ae0844591b2474dfebc9992bba67c617cafada96a1159c3171c1d10fafb70530c1", null ]
+    ] ]
+];

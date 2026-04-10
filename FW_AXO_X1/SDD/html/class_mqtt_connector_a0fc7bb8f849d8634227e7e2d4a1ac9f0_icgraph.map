@@ -1,0 +1,8 @@
+<map id="subscribe" name="subscribe">
+<area shape="rect" id="node1" title="Function to send a subscribe request to the MQTT broker." alt="" coords="417,56,496,83"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#a1c2bd902abdaf7c8a608d8cd9b7403b5" title="Function to send a subscribe request for the command topic to the MQTT broker." alt="" coords="255,5,365,32"/>
+<area shape="rect" id="node5" href="$class_mqtt_connector.html#aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" title="Function to send a subscribe request for the config topic to the &#160;&#160;MQTT broker." alt="" coords="251,56,369,83"/>
+<area shape="rect" id="node6" href="$class_mqtt_connector.html#ae00794e6ab250c0807e70f42b0aee29f" title="Function to send a subscribe request for the OTA topic to the MQTT broker." alt="" coords="100,107,203,133"/>
+<area shape="rect" id="node3" href="$class_mqtt_connector.html#a86374deb5f3ee32fb220efbaf0743b0f" title="Callback handlers from MQTT helper library for connack from broker." alt="" coords="105,56,197,83"/>
+<area shape="rect" id="node4" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="5,81,52,108"/>
+</map>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_sema" kind="class" language="C++" prot="public">
+    <compoundname>Sema</compoundname>
+    <includes refid="sema_8h" local="no">sema.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>uint8_t</type>
+        <declname>num_slots</declname>
+        <defname>num_slots</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" prot="private" static="no" mutable="no">
+        <type>struct k_sem</type>
+        <definition>struct k_sem sema_handle</definition>
+        <argsstring></argsstring>
+        <name>sema_handle</name>
+        <briefdescription>
+<para>Semaphore administration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="74" column="5" bodyfile="rtos/sema.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_sema_1a81dbffbc68e17ae5bfc34d4d1f451f17" compoundref="sema_8cpp" startline="103" endline="105">Sema&lt; T, num_slots &gt;::count</referencedby>
+        <referencedby refid="class_sema_1a0dd80ed300bd27823ea8ef5e4afbf6e4" compoundref="sema_8cpp" startline="42" endline="46">Sema&lt; T, num_slots &gt;::Sema</referencedby>
+        <referencedby refid="class_sema_1a2a0f4bfac2f24aa0a07de86141381aec" compoundref="sema_8cpp" startline="91" endline="94">Sema&lt; T, num_slots &gt;::signal</referencedby>
+        <referencedby refid="class_sema_1a95db92d0c2ab12b431e38f7642c918a2" compoundref="sema_8cpp" startline="58" endline="63">Sema&lt; T, num_slots &gt;::wait</referencedby>
+        <referencedby refid="class_sema_1a726ae117ac3cd26233206bf93d0e7f92" compoundref="sema_8cpp" startline="80" endline="82">Sema&lt; T, num_slots &gt;::wait_timed</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sema_1a0dd80ed300bd27823ea8ef5e4afbf6e4" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sema</definition>
+        <argsstring>(unsigned initial_count=0)</argsstring>
+        <name>Sema</name>
+        <param>
+          <type>unsigned</type>
+          <declname>initial_count</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_sema" kindref="compound">Sema</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initial_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial count of the counting semaphore, default is 0</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor initializes the counting semaphore by calling RTOS function k_sem_init. This routine initializes the semaphore object, prior to its first use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="66" column="14" bodyfile="rtos/sema.cpp" bodystart="42" bodyend="46"/>
+        <references refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" compoundref="sema_8h" startline="75">Sema&lt; T, num_slots &gt;::sema_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sema_1af4fb1c9a9e3acb038fb9d714fbcde313" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ~Sema</definition>
+        <argsstring>()</argsstring>
+        <name>~Sema</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="67" column="13" bodyfile="rtos/sema.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sema_1a95db92d0c2ab12b431e38f7642c918a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wait</definition>
+        <argsstring>()</argsstring>
+        <name>wait</name>
+        <briefdescription>
+<para>Wait for or aquire a semaphore indefinitely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns 0 when semaphore is available</para>
+</simplesect>
+Test a semaphore to see if it has been signaled by calling RTOS function k_sem_take. If the signal count is greater than zero, it is decremented. If signal count is zero, semaphore is taken. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="68" column="9" bodyfile="rtos/sema.cpp" bodystart="58" bodyend="63"/>
+        <references refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" compoundref="sema_8h" startline="75">Sema&lt; T, num_slots &gt;::sema_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sema_1a726ae117ac3cd26233206bf93d0e7f92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wait_timed</definition>
+        <argsstring>(int timeout)</argsstring>
+        <name>wait_timed</name>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Wait for or aquire a semaphore timed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time period to wait for semaphore signal</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 Semaphore taken </para>
+</simplesect>
+<simplesect kind="return"><para>EBUSY Returned without waiting, </para>
+</simplesect>
+<simplesect kind="return"><para>EAGAIN Waiting period timed out, or the semaphore was reset during the waiting period.</para>
+</simplesect>
+Test a semaphore to see if it has been signaled with timeout by calling RTOS function k_sem_take. On timeout function returns. If signal count is zero, semaphore is taken. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="69" column="9" bodyfile="rtos/sema.cpp" bodystart="80" bodyend="82"/>
+        <references refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" compoundref="sema_8h" startline="75">Sema&lt; T, num_slots &gt;::sema_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sema_1a2a0f4bfac2f24aa0a07de86141381aec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void signal</definition>
+        <argsstring>()</argsstring>
+        <name>signal</name>
+        <briefdescription>
+<para>Give or release a semaphore. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This routine gives or relase a semaphore by calling RTOS function k_sem_give, unless the semaphore is already at its maximum permitted count. If signal counter is less than maximum, it is incremented. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="70" column="10" bodyfile="rtos/sema.cpp" bodystart="91" bodyend="94"/>
+        <references refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" compoundref="sema_8h" startline="75">Sema&lt; T, num_slots &gt;::sema_handle</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sema_1a81dbffbc68e17ae5bfc34d4d1f451f17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t count</definition>
+        <argsstring>()</argsstring>
+        <name>count</name>
+        <briefdescription>
+<para>Getter function to retrieve semaphore count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the semaphore count</para>
+</simplesect>
+This routine returns the semaphore count </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="71" column="14" bodyfile="rtos/sema.cpp" bodystart="103" bodyend="105"/>
+        <references refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" compoundref="sema_8h" startline="75">Sema&lt; T, num_slots &gt;::sema_handle</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sema_1a71b9eadc3f91f61964d1873231861aee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sema</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Sema</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/sema.h" line="74" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for message queue support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>RTOS wrapper for counting semaphore support.</para>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The <ref refid="class_m_queue" kindref="compound">MQueue</ref> class implements a C++ wrapper template of the kernel message queue API provided by the Zephyr operating system. See details in Zephyr <ulink url="https://docs.zephyrproject.org/latest/kernel/services/data_passing/message_queues.html">message queue documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__msgq__apis.html">API documentation</ulink>. The <ref refid="class_m_queue" kindref="compound">MQueue</ref> class provides methods to put objects of concretized type T in the queue and to get objects from the queue. Furthermore it provides a method to count the number of objects in the queue and to print statistics.</para>
+</simplesect>
+<hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The sema class implements a C++ wrapper of the semaphore API provided by the Zephyr operating system. See details in Zephyr <linebreak/>
+ <ulink url="https://docs.zephyrproject.org/latest/kernel/services/synchronization/semaphores.html">semaphore documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__semaphore__apis.html">API documentation</ulink>. The sema class provides methods to wait for the availibility of the semaphore and a method to signal the availibility. <dot>
+ digraph Semaphore {
+   rankdir=LR;
+   subgraph {
+     node [shape=point,label=&quot;&quot;,height=.04, fixedsize=true] ENTRY1;
+     node [shape=circle, fontname=Helvetica, fontsize=10, height=1, fixedsize=true, label=&quot;Available&quot;] A;
+     node [shape=circle, fontname=Helvetica, fontsize=10, height=1, fixedsize=true, label=&quot;Unavailable&quot;] U;
+     node [shape=point,label=&quot;&quot;,height=.04, fixedsize=true] ENTRY2;
+     
+     ENTRY1 -&gt; A [ label=&quot;Initial count &gt; 0&quot; ];
+     A     -&gt; U [ label=&quot;Aquire (count = 0)&quot; ];
+     A     -&gt; U [ style=invis ];
+     U     -&gt; A [ label=&quot;Release (count = 1)&quot; ];
+     A:sw  -&gt; A [ label=&quot;Release (count = count + 1)&quot;, dir=back ];
+     A     -&gt; A [ label=&quot;Aquire (count = count - 1)&quot; ];
+     ENTRY2 -&gt; U [ label=&quot;Initial count = 0&quot; ];
+     {rank = same; ENTRY2; U;}
+   } 
+ }
+</dot>
+ </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Sema&lt; T, num_slots &gt;</label>
+        <link refid="class_sema"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-sema_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>struct k_sem</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/sema.h" line="64" column="1" bodyfile="rtos/sema.h" bodystart="64" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_sema_1a81dbffbc68e17ae5bfc34d4d1f451f17" prot="public" virt="non-virtual"><scope>Sema</scope><name>count</name></member>
+      <member refid="class_sema_1a0dd80ed300bd27823ea8ef5e4afbf6e4" prot="public" virt="non-virtual"><scope>Sema</scope><name>Sema</name></member>
+      <member refid="class_sema_1a71b9eadc3f91f61964d1873231861aee" prot="private" virt="non-virtual"><scope>Sema</scope><name>Sema</name></member>
+      <member refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" prot="private" virt="non-virtual"><scope>Sema</scope><name>sema_handle</name></member>
+      <member refid="class_sema_1a2a0f4bfac2f24aa0a07de86141381aec" prot="public" virt="non-virtual"><scope>Sema</scope><name>signal</name></member>
+      <member refid="class_sema_1a95db92d0c2ab12b431e38f7642c918a2" prot="public" virt="non-virtual"><scope>Sema</scope><name>wait</name></member>
+      <member refid="class_sema_1a726ae117ac3cd26233206bf93d0e7f92" prot="public" virt="non-virtual"><scope>Sema</scope><name>wait_timed</name></member>
+      <member refid="class_sema_1af4fb1c9a9e3acb038fb9d714fbcde313" prot="public" virt="virtual"><scope>Sema</scope><name>~Sema</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

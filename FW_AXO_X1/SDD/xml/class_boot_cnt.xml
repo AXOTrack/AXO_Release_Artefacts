@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_boot_cnt" kind="class" language="C++" prot="public">
+    <compoundname>BootCnt</compoundname>
+    <includes refid="boot__cnt_8h" local="no">boot_cnt.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t boot_count</definition>
+        <argsstring></argsstring>
+        <name>boot_count</name>
+        <briefdescription>
+<para>the boot count </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.h" line="48" column="13" bodyfile="pm/boot_cnt.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt</referencedby>
+        <referencedby refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" compoundref="boot__cnt_8cpp" startline="97" endline="100">get</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boot_cnt_1aeed08e35cc4b842201788b36d45cc55f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~BootCnt</definition>
+        <argsstring>()</argsstring>
+        <name>~BootCnt</name>
+        <briefdescription>
+<para>Boot Count destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.h" line="41" column="5" bodyfile="pm/boot_cnt.cpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Getter function to retrieve the boot count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Function returns the private variable boot_count. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.h" line="44" column="13" bodyfile="pm/boot_cnt.cpp" bodystart="97" bodyend="100"/>
+        <references refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" compoundref="boot__cnt_8h" startline="48">boot_count</references>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr::PowerMgr</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_boot_cnt" kindref="compound">BootCnt</ref> *</type>
+        <definition>BootCnt * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.h" line="43" column="20" bodyfile="pm/boot_cnt.cpp" bodystart="43" bodyend="47"/>
+        <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr::PowerMgr</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BootCnt</definition>
+        <argsstring>(const char *fname=&quot;/lfs/boot_count&quot;)</argsstring>
+        <name>BootCnt</name>
+        <param>
+          <type>const char *</type>
+          <declname>fname</declname>
+          <defval>&quot;/lfs/<ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Boot Count constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filename of the boot counter file</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor is declared as private according to singleton pattern. It is called in the static inst function to create the exclusiv only instance of the class. fname &quot;/lfs/boot_count&quot; is defined as default parameter in declaration of the constructor. The constructor open the file and the boot count will than be read from file. In case boot count is negative it will be set to 0. Afterwards boot count will be incremented by 1 and stored in file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/boot_cnt.h" line="47" column="14" bodyfile="pm/boot_cnt.cpp" bodystart="62" bodyend="82"/>
+        <references refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" compoundref="boot__cnt_8h" startline="48">boot_count</references>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" compoundref="flashfs_8cpp" startline="330" endline="335">FlashFS::file_read</references>
+        <references refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" compoundref="flashfs_8cpp" startline="352" endline="357">FlashFS::file_seek</references>
+        <references refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" compoundref="flashfs_8cpp" startline="345" endline="350">FlashFS::file_sync</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Boot count class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The class provides methods to handle the boot counter which is stored persitently in flash file system. Boot count is read at startup and is stored in private variable boot_count. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+      <node id="1">
+        <label>BootCnt</label>
+        <link refid="class_boot_cnt"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-boot_count</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="pm/boot_cnt.h" line="39" column="1" bodyfile="pm/boot_cnt.h" bodystart="39" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" prot="private" virt="non-virtual"><scope>BootCnt</scope><name>boot_count</name></member>
+      <member refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" prot="private" virt="non-virtual"><scope>BootCnt</scope><name>BootCnt</name></member>
+      <member refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" prot="public" virt="non-virtual"><scope>BootCnt</scope><name>get</name></member>
+      <member refid="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" prot="public" virt="non-virtual"><scope>BootCnt</scope><name>inst</name></member>
+      <member refid="class_boot_cnt_1aeed08e35cc4b842201788b36d45cc55f" prot="public" virt="non-virtual"><scope>BootCnt</scope><name>~BootCnt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

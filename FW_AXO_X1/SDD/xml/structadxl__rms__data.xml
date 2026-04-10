@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structadxl__rms__data" kind="struct" language="C++" prot="public">
+    <compoundname>adxl_rms_data</compoundname>
+    <includes refid="rms__store_8h" local="no">rms_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t ts</definition>
+        <argsstring></argsstring>
+        <name>ts</name>
+        <briefdescription>
+<para>The timestamp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="42" column="12" bodyfile="data/rms_store.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>RMS in vertical direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="43" column="11" bodyfile="data/rms_store.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">RmsStore::dump</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">RmsStore::store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>RMS in transversal direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="44" column="11" bodyfile="data/rms_store.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">RmsStore::dump</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">RmsStore::store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>RMS in longitudinal direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="45" column="11" bodyfile="data/rms_store.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">RmsStore::dump</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">RmsStore::store</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t medium_hits</definition>
+        <argsstring></argsstring>
+        <name>medium_hits</name>
+        <briefdescription>
+<para>Medium hit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="46" column="13" bodyfile="data/rms_store.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">RmsStore::dump</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">RmsStore::store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t critical_hits</definition>
+        <argsstring></argsstring>
+        <name>critical_hits</name>
+        <briefdescription>
+<para>Critical hit counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/rms_store.h" line="47" column="13" bodyfile="data/rms_store.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
+        <referencedby refid="class_rms_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="rms__store_8cpp" startline="109" endline="117">RmsStore::dump</referencedby>
+        <referencedby refid="class_rms_store_1ad583c3b70e9f7e3846f4a171ccea3e4b" compoundref="rms__store_8cpp" startline="77" endline="89">RmsStore::store</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure to store root mean square (RMS), hit values and the timestamp. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>int16_t</label>
+      </node>
+      <node id="1">
+        <label>adxl_rms_data</label>
+        <link refid="structadxl__rms__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+ts</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+x</edgelabel>
+          <edgelabel>+y</edgelabel>
+          <edgelabel>+z</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+critical_hits</edgelabel>
+          <edgelabel>+medium_hits</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>float</label>
+      </node>
+      <node id="2">
+        <label>time_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/rms_store.h" line="41" column="1" bodyfile="data/rms_store.h" bodystart="41" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structadxl__rms__data_1ae328d7de11500c269b51b3416cf681d6" prot="public" virt="non-virtual"><scope>adxl_rms_data</scope><name>critical_hits</name></member>
+      <member refid="structadxl__rms__data_1abdbfb4dc4ec9f6873bf1762de63a5034" prot="public" virt="non-virtual"><scope>adxl_rms_data</scope><name>medium_hits</name></member>
+      <member refid="structadxl__rms__data_1ab4cc827edc84c4ada3dc11da02f3d128" prot="public" virt="non-virtual"><scope>adxl_rms_data</scope><name>ts</name></member>
+      <member refid="structadxl__rms__data_1ad0da36b2558901e21e7a30f6c227a45e" prot="public" virt="non-virtual"><scope>adxl_rms_data</scope><name>x</name></member>
+      <member refid="structadxl__rms__data_1aa4f0d3eebc3c443f9be81bf48561a217" prot="public" virt="non-virtual"><scope>adxl_rms_data</scope><name>y</name></member>
+      <member refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" prot="public" virt="non-virtual"><scope>adxl_rms_data</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

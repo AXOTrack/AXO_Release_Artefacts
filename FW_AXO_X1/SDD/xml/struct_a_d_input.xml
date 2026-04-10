@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_a_d_input" kind="struct" language="C++" prot="public">
+    <compoundname>ADInput</compoundname>
+    <includes refid="adconverter_8h" local="no">adconverter.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_d_input_1a715f5cb061d11eb75981741eda4dafcd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <briefdescription>
+<para>The AD channel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="51" column="13" bodyfile="drv/adc/adconverter.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">ADConverter::notifyListener</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_d_input_1a0fa73e362a2e5c784d67168ff308225d" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <briefdescription>
+<para>The measured raw value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="52" column="13" bodyfile="drv/adc/adconverter.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">ADConverter::notifyListener</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_d_input_1afbc95c0607b0a49ba22ad34793ec35f9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t mv</definition>
+        <argsstring></argsstring>
+        <name>mv</name>
+        <briefdescription>
+<para>The measured value converted to millivolt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="53" column="13" bodyfile="drv/adc/adconverter.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">ADConverter::notifyListener</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for an ADC input sample. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ADInput</label>
+        <link refid="struct_a_d_input"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+mv</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+channel</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+raw</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>int16_t</label>
+      </node>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+      <node id="3">
+        <label>uint8_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/adc/adconverter.h" line="50" column="1" bodyfile="drv/adc/adconverter.h" bodystart="50" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_a_d_input_1a715f5cb061d11eb75981741eda4dafcd" prot="public" virt="non-virtual"><scope>ADInput</scope><name>channel</name></member>
+      <member refid="struct_a_d_input_1afbc95c0607b0a49ba22ad34793ec35f9" prot="public" virt="non-virtual"><scope>ADInput</scope><name>mv</name></member>
+      <member refid="struct_a_d_input_1a0fa73e362a2e5c784d67168ff308225d" prot="public" virt="non-virtual"><scope>ADInput</scope><name>raw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

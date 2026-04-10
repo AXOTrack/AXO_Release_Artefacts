@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hit__detect_8h" kind="file" language="C++">
+    <compoundname>hit_detect.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="hit__detect_8cpp" local="yes">data/hit_detect.cpp</includedby>
+    <includedby refid="rms_8cpp" local="yes">data/rms.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>data/hit_detect.h</label>
+        <link refid="hit__detect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>data/hit_detect.h</label>
+        <link refid="hit__detect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>data/hit_detect.cpp</label>
+        <link refid="hit__detect_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_hit_detector" prot="public">HitDetector</innerclass>
+    <briefdescription>
+<para>Header file of <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="hit__detect_8h_1hit_detect"/> <simplesect kind="par"><title>Detailed Description </title><para>Based on the requirements medium * and critical hits for vertical (z) direction shall be calculated automatically from the measured raw accelerator data. <linebreak/>
+<itemizedlist>
+<listitem><para>Impacts (only vertical)<itemizedlist>
+<listitem><para>300 m/s² for 8ms shall be counted as medium hit</para>
+</listitem><listitem><para>800 m/s² for 2ms shall be counted as critical hit The medium hit counter shall be incremented if the acceleration exceeds the threshold on z-axis of 300 m/s² and return to normal within 8 ms, which corresponds to 32 or less samples by a sample frequency of 4400 Hz. If the acceleration persists and continue for more than 8 ms (more than 32 samples), it shall be not longer treated as a medium hit because it’s sustained and not just a momentary spike. <linebreak/>
+ The critical hit counter shall be incremented if the acceleration exceeds the threshold on z-axis of 800 m/s² and return to normal within 2 ms, which corresponds to 8 or less samples by a sample frequency of 4400 Hz. if the acceleration persists and continue for more than 2 ms (more than 8 samples), it is no longer treated as a critical hit because it’s sustained and not just a momentary spike.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_HIT_DETECT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_HIT_DETECT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_hit_detector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hit_detector" kindref="compound">HitDetector</ref><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hit_detector_1a3e4d91534fcf0f84ec8d2cd771c805c1" kindref="member">HitDetector</ref>(int32_t<sp/><ref refid="class_hit_detector_1a14c5c151bcd550e1a885c754f5bf8783" kindref="member">samples_per_sec</ref>,<sp/>int16_t<sp/><ref refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" kindref="member">threshold</ref>,<sp/>int16_t<sp/><ref refid="class_hit_detector_1a98bf99a9e04936281191c490aaeaba53" kindref="member">max_msec</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_hit_detector_1a3e4d91534fcf0f84ec8d2cd771c805c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hit_detector_1a3e4d91534fcf0f84ec8d2cd771c805c1" kindref="member">HitDetector</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_hit_detector_1a61c046bf54f5c3dd7b473395e4af0c74" kindref="member">~HitDetector</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hit_detector_1a5d27da9908456967f0c2cd14b5369ca3" kindref="member">input</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z);</highlight></codeline>
+<codeline lineno="60" refid="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" kindref="member">getNumHits</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" kindref="member">hit_cnt</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hit_detector_1ad20897c5c8bd47f5d4005989bead0e55" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="class_hit_detector_1a26075aac0c125e42210413b94575e15b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hit_detector_1a26075aac0c125e42210413b94575e15b" kindref="member">HitDetector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_hit_detector" kindref="compound">HitDetector</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Disallow<sp/>copying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_hit_detector_1a3c27ab6f7f74dd76e513d38f10c0fb32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_hit_detector" kindref="compound">HitDetector</ref>&amp;<sp/><ref refid="class_hit_detector_1a3c27ab6f7f74dd76e513d38f10c0fb32" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_hit_detector" kindref="compound">HitDetector</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67" refid="class_hit_detector_1a14c5c151bcd550e1a885c754f5bf8783" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_hit_detector_1a14c5c151bcd550e1a885c754f5bf8783" kindref="member">samples_per_sec</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1a6c6833e7252034dc5ba908b684e71b9f" kindref="member">threshold</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="class_hit_detector_1a98bf99a9e04936281191c490aaeaba53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1a98bf99a9e04936281191c490aaeaba53" kindref="member">max_msec</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_hit_detector_1a0cf755caeca4d6622c199dc0bf555d11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1a0cf755caeca4d6622c199dc0bf555d11" kindref="member">n_cur</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="class_hit_detector_1a104bfe89f5f9edf5382d9777a3efe727" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1a104bfe89f5f9edf5382d9777a3efe727" kindref="member">n_high</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1af404edbe42a605648b5991c38f8ea302" kindref="member">hit_cnt</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="class_hit_detector_1ac1e5b7f933fe71b161d0fec5bc610f43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="class_hit_detector_1ac1e5b7f933fe71b161d0fec5bc610f43" kindref="member">max_samples</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_HIT_DETECT_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/hit_detect.h"/>
+  </compounddef>
+</doxygen>

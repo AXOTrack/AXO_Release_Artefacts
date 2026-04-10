@@ -1,0 +1,16 @@
+<map id="HandleRcvdData" name="HandleRcvdData">
+<area shape="rect" id="node1" title="Function to handle received data from AdxlStore task." alt="" coords="5,259,123,285"/>
+<area shape="rect" id="node2" href="$class_http_connector.html#aa79380b9d97bf61888a3b14ff5780ef2" title="HttpConnector receive function." alt="" coords="217,5,317,32"/>
+<area shape="rect" id="node3" href="$class_hash.html#a32d626626eee0bc4ade146973f6abb1c" title="Function to finalize SHA1 checksum calculation." alt="" coords="217,56,317,83"/>
+<area shape="rect" id="node4" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="198,107,335,133"/>
+<area shape="rect" id="node5" href="$class_e_c_d_s_a_signer.html#a51e26c47c395412d648054c040300163" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="200,157,333,184"/>
+<area shape="rect" id="node6" href="$class_hash.html#ab692cd219fad2ef5a612e06aa4b32c1b" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="226,208,307,235"/>
+<area shape="rect" id="node7" href="$class_hash.html#a388f572c62279f839ee138a9afbdeeb5" title="Function to print the SHA1 checksum at terminal window." alt="" coords="224,259,309,285"/>
+<area shape="rect" id="node8" href="$class_e_c_d_s_a_signer.html#a6f3747059314021b44be07498f4f7187" title="Function to print the signature to a terminal window." alt="" coords="171,309,363,336"/>
+<area shape="rect" id="node10" href="$class_http_connector.html#adf68aa053d518cdf3d69934c3b4aaaee" title="Function to send a single data frame to the host." alt="" coords="195,360,339,387"/>
+<area shape="rect" id="node12" href="$class_http_connector.html#ae49d9549f0e6c082dd23eae06492bd6b" title="Function to send a single data frame to the host." alt="" coords="191,411,343,437"/>
+<area shape="rect" id="node13" href="$class_e_c_d_s_a_signer.html#a9b3c2dc9b287d66e779dc199c1bb9ba3" title="Function to sign a SHA256 hash checksum." alt="" coords="183,461,350,488"/>
+<area shape="rect" id="node14" href="$class_hash.html#aab35e0dc9a227b6e04900a79a0e61e4c" title="The update function of SHA1 checksum calculation." alt="" coords="217,512,316,539"/>
+<area shape="rect" id="node9" href="$class_e_c_d_s_a_signer.html#a1291d4f421d5ccb8e2d34e5e836595a6" title="Helper function to transform a string into its hexadecimal representation." alt="" coords="411,302,555,343"/>
+<area shape="rect" id="node11" href="$class_http_connector.html#ab076f11428483c2ca9d2379be27f805a" title="HttpConnector send function." alt="" coords="430,389,535,416"/>
+</map>

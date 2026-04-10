@@ -1,0 +1,1619 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_adxl_data_store" kind="class" language="C++" prot="public">
+    <compoundname>AdxlDataStore</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="adxl__store_8h" local="no">adxl_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_adxl_data_store_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the adxl data store task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="133" column="10" bodyfile="data/adxl_store.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t capa</definition>
+        <argsstring></argsstring>
+        <name>capa</name>
+        <briefdescription>
+<para>capacity in bytes, multiple of <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="158" column="14" bodyfile="data/adxl_store.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">configure</referencedby>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">dumpAll</referencedby>
+        <referencedby refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" compoundref="adxl__store_8cpp" startline="569" endline="616">dumpAllBytes</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">notifyRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" compoundref="adxl__store_8cpp" startline="817" endline="845">sendRawData</referencedby>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a8138bc27e0bf414141e5361507d82121" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t bytes_per_sec</definition>
+        <argsstring></argsstring>
+        <name>bytes_per_sec</name>
+        <briefdescription>
+<para>expected bytes per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="159" column="14" bodyfile="data/adxl_store.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1ab65df7a1efcbcbc1b38a951e1f1b3b95" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t samples_per_sec</definition>
+        <argsstring></argsstring>
+        <name>samples_per_sec</name>
+        <briefdescription>
+<para>expected samples per second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="160" column="14" bodyfile="data/adxl_store.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">configure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t rd</definition>
+        <argsstring></argsstring>
+        <name>rd</name>
+        <briefdescription>
+<para>next read addr, for testing </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="161" column="14" bodyfile="data/adxl_store.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">configure</referencedby>
+        <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">dump</referencedby>
+        <referencedby refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</referencedby>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t wr</definition>
+        <argsstring></argsstring>
+        <name>wr</name>
+        <briefdescription>
+<para>next write addr </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="162" column="14" bodyfile="data/adxl_store.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">configure</referencedby>
+        <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">dump</referencedby>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">dumpAll</referencedby>
+        <referencedby refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" compoundref="adxl__store_8cpp" startline="569" endline="616">dumpAllBytes</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">notifyRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</referencedby>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" compoundref="adxl__store_8cpp" startline="405" endline="428">storeSampleData</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">storeSResult</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a6a330c3b2adf87bfa27e9a9450d8bc40" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <briefdescription>
+<para>current bytes written </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="163" column="14" bodyfile="data/adxl_store.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t num_samples</definition>
+        <argsstring></argsstring>
+        <name>num_samples</name>
+        <briefdescription>
+<para>current samples written </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="164" column="14" bodyfile="data/adxl_store.h" bodystart="164" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1acfb919df3d5bf5d40783f10f91ea0909" compoundref="adxl__store_8cpp" startline="688" endline="733">dumpAllDisp</referencedby>
+        <referencedby refid="class_adxl_data_store_1a96befc23227d1b95e8e15f53c0c1f3db" compoundref="adxl__store_8cpp" startline="634" endline="671">dumpAllFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">notifyRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" compoundref="adxl__store_8cpp" startline="405" endline="428">storeSampleData</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">storeSResult</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool full</definition>
+        <argsstring></argsstring>
+        <name>full</name>
+        <briefdescription>
+<para>indicator for data storage is full </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="167" column="10" bodyfile="data/adxl_store.h" bodystart="167" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">dumpAll</referencedby>
+        <referencedby refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" compoundref="adxl__store_8cpp" startline="569" endline="616">dumpAllBytes</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">notifyRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</referencedby>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+        <referencedby refid="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" compoundref="adxl__store_8cpp" startline="405" endline="428">storeSampleData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a97808a9870039f4168da10ecfb5dc472" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool idle</definition>
+        <argsstring></argsstring>
+        <name>idle</name>
+        <briefdescription>
+<para>no data received for more than 1 second </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="168" column="10" bodyfile="data/adxl_store.h" bodystart="168" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool allow_wrap_around</definition>
+        <argsstring></argsstring>
+        <name>allow_wrap_around</name>
+        <briefdescription>
+<para>flag to allow or forbid wrap around </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="169" column="10" bodyfile="data/adxl_store.h" bodystart="169" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">dumpAll</referencedby>
+        <referencedby refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" compoundref="adxl__store_8cpp" startline="569" endline="616">dumpAllBytes</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">notifyRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+        <referencedby refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">storeBackwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">storeDResult</referencedby>
+        <referencedby refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">storeForwardFilt</referencedby>
+        <referencedby refid="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" compoundref="adxl__store_8cpp" startline="405" endline="428">storeSampleData</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">storeSResult</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1abd3d6bbfa4ad60b3c82066225fee1cd0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_power_mgr_1a3027861c764da80aa9706246dad298d8" kindref="member">PowerMgr::PmState</ref></type>
+        <definition>PowerMgr::PmState pm_state</definition>
+        <argsstring></argsstring>
+        <name>pm_state</name>
+        <briefdescription>
+<para>on/active or off/suspended/power down mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="170" column="23" bodyfile="data/adxl_store.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a068ba51d0a406a1d8d211bd264bdaa15" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool have_http_connector</definition>
+        <argsstring></argsstring>
+        <name>have_http_connector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>flag deciding if indications are sent to http connector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="171" column="10" bodyfile="data/adxl_store.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float x_max</definition>
+        <argsstring></argsstring>
+        <name>x_max</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current maximum x value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="173" column="11" bodyfile="data/adxl_store.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">calcMaxXYZ</referencedby>
+        <referencedby refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float y_max</definition>
+        <argsstring></argsstring>
+        <name>y_max</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current maximum y value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="174" column="11" bodyfile="data/adxl_store.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">calcMaxXYZ</referencedby>
+        <referencedby refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float z_max</definition>
+        <argsstring></argsstring>
+        <name>z_max</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current maximum z value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="175" column="11" bodyfile="data/adxl_store.h" bodystart="175" bodyend="-1"/>
+        <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore</referencedby>
+        <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">calcMaxXYZ</referencedby>
+        <referencedby refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AdxlDataStore</definition>
+        <argsstring>(const char *name=&quot;??&quot;, uint8_t num_seconds=1, uint16_t samples_per_sec=4400, bool have_http_connector=true)</argsstring>
+        <name>AdxlDataStore</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>num_seconds</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>samples_per_sec</declname>
+          <defval>4400</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>have_http_connector</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Adxl data store task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds to be stored within on measurement cycle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples_per_sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sample rate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>have_http_connector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indicationg if HTTP Connector is used (X1 devices) or not (MINI devices)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Task of the constructor is to reserve capacity for samples within n seconds at expected sample rate. It initializes the private member variables of the class, allocate and register a mailbox and calculate the total number of bytes needed for the storage of a complete measurement cycle stored in private variable capa. Finally it calculates the expected number of bytes per second and store it in private variable bytes_per_sec. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="128" column="14" bodyfile="data/adxl_store.cpp" bodystart="57" bodyend="93"/>
+        <references refid="class_adxl_data_store_1a8138bc27e0bf414141e5361507d82121" compoundref="adxl__store_8h" startline="159">bytes_per_sec</references>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab4dc4e589837500613a7909deee1c737" compoundref="mbox_8h" startline="76">Mbox::eAdxlStore</references>
+        <references refid="class_adxl_data_store_1a068ba51d0a406a1d8d211bd264bdaa15" compoundref="adxl__store_8h" startline="171">have_http_connector</references>
+        <references refid="class_adxl_data_store_1af2570dd7bace0312470d962f29359fb3" compoundref="adxl__store_8h" startline="133">pInMbox</references>
+        <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_adxl_data_store_1ab65df7a1efcbcbc1b38a951e1f1b3b95" compoundref="adxl__store_8h" startline="160">samples_per_sec</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <references refid="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" compoundref="adxl__store_8h" startline="173">x_max</references>
+        <references refid="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" compoundref="adxl__store_8h" startline="174">y_max</references>
+        <references refid="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" compoundref="adxl__store_8h" startline="175">z_max</references>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1aa2f3e8292d17ff3a46ccf1c196299f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~AdxlDataStore</definition>
+        <argsstring>()</argsstring>
+        <name>~AdxlDataStore</name>
+        <briefdescription>
+<para>Adxl data store task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="131" column="13" bodyfile="data/adxl_store.cpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Adxl data store task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the SPI bus instance andd the FRAM instance will be initialized by calling the functions <ref refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" kindref="member">spibus::inst()</ref>-&gt;init() and MEMORY_INST-&gt;init(). Afterwards FRAM instance will be forced in suspended/power saving mode by calling MEMORY_INST-&gt;sleep() and the power manger state will be set to off, before entering the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eAdxl37xSensorData: Sensor raw data. If in idle state flag idle is set to false and function reset is called to be able to overwrite old data from last measurement cycle. Payload of message will be extracted and casted to structure <ref refid="structadxl37x__sensor__value" kindref="compound">adxl37x_sensor_value</ref> before message is forwarded to RMS task, message pointer pElem is set to 0 to prevent free(). Afterwards the maximum acceleration values in x, y and z direction will be calculated by calling member function calcMaxXYZ. If power manager state is eOff, FRAM will be activated by calling function MEMORY_INST-&gt;wakeup and power manager state is set to eOn. Data is storen in FRAM by calling funtion store and <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed with message eAdxlStorageDone by calling funtion notifySender.</para>
+</listitem><listitem><para>eAdxl37xIdle: Flag idle will be set to true, FRAM will be forced to low power state by calling function MEMORY_INST-&gt;sleep() and power manager state is set to eOff. Afterwards the received message will be forwarded to RMS store task and message pointer pElem is set to 0 to prevent free(). In case have_http_connector is true, the calculated maximum acceleration values in x, y and z direction will be send to data manager task and finally the HTTP connector will be informed, that raw data is available by sending message eAdxlIdleInd.</para>
+</listitem><listitem><para>eAdxlStorageDumpAll: Implemented for testing purposes. In case user input the command &apos;d&apos; on terminal raw data will be printed. FRAM will be activated by calling function MEMORY_INST-&gt;wakeup and raw data will be printed by calling function dumpAll.</para>
+</listitem><listitem><para>eAdxlStorageDumpBytes: Implemented for testing purposes. In case user input the command &apos;db&apos; on terminal raw data bytes will be printed. FRAM will be activated by calling function MEMORY_INST-&gt;wakeup and raw data will be printed by calling function dumpAllBytes.</para>
+</listitem><listitem><para>eAdxlStorageDumpFilt: Implemented for testing purposes. In case user input the command &apos;df&apos; on terminal filtered values will be printed. FRAM will be activated by calling function MEMORY_INST-&gt;wakeup and raw data will be printed by calling function dumpAllFilt. <simplesect kind="note"><para>only for development phase, inactive for relaese versions.</para>
+</simplesect>
+</para>
+</listitem><listitem><para>eAdxlStorageDumpDisp: Implemented for testing purposes. In case user input the command &apos;dd&apos; on terminal displacement data will be printed. FRAM will be activated by calling function MEMORY_INST-&gt;wakeup and raw data will be printed by calling function dumpAllDisp.</para>
+</listitem><listitem><para>eAdxlIdleReq: The value of the idle flag will be send to HTTP Connector task with message of type eAdxlIdleInd and sender ID eAdxlStore.</para>
+</listitem><listitem><para>eRawDataStatus: Call of handler function notifyRawDataStatus.</para>
+</listitem><listitem><para>eRawData: Payload of the received message will be casted to structure of type <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> and function sendRawData will be called.</para>
+</listitem><listitem><para>eDispFirstEntries: same as eRawData</para>
+</listitem><listitem><para>eDispLastEntries: same as eRawData</para>
+</listitem><listitem><para>eFwFiltData: Send forward filtered values to requesting task by calling member function sendFwFiltData</para>
+</listitem><listitem><para>eBwFiltData: Send backward filtered values to requesting task by calling member function sendBwFiltData</para>
+</listitem><listitem><para>eSResultData: Send S values (displacement before detrending) to requesting task by calling member function sendSResultData</para>
+</listitem><listitem><para>eStoreFwFiltResult: Write forward filtered data into FRAM by calling member function storeForwardFilt</para>
+</listitem><listitem><para>eStoreBwFiltResult: Write backward filtered data into FRAM by calling member function storeBackwardFilt</para>
+</listitem><listitem><para>eStoreSResult: Write S values (displacement before detrending) into FRAM by calling member function storeSResult</para>
+</listitem><listitem><para>eStoreDResult: Write D values (displacement after detrending) into FRAM by calling member function storeDResult (this is final displacement result)</para>
+</listitem><listitem><para>eDispData: Send displacement data to the requesting sender task by calling member function sendDispData </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="132" column="18" bodyfile="data/adxl_store.cpp" bodystart="1126" bodyend="1322"/>
+        <references refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">calcMaxXYZ</references>
+        <references refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" compoundref="adxl37x_8h" startline="54">adxl37x_sensor_value::cnt</references>
+        <references refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">dumpAll</references>
+        <references refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" compoundref="adxl__store_8cpp" startline="569" endline="616">dumpAllBytes</references>
+        <references refid="class_adxl_data_store_1acfb919df3d5bf5d40783f10f91ea0909" compoundref="adxl__store_8cpp" startline="688" endline="733">dumpAllDisp</references>
+        <references refid="class_adxl_data_store_1a96befc23227d1b95e8e15f53c0c1f3db" compoundref="adxl__store_8cpp" startline="634" endline="671">dumpAllFilt</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" compoundref="mpelem_8h" startline="65">eAdxl37xIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6c96e50e0d4c7d15c8ca7bca261619f9" compoundref="mpelem_8h" startline="61">eAdxl37xSensorData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babfad04084144b87c9464b3e580c4a888" compoundref="mpelem_8h" startline="110">eAdxlIdleInd</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5b782a4f6d9db6713ed0ecda008b3ab1" compoundref="mpelem_8h" startline="109">eAdxlIdleReq</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501af37a207eee727d2ff5a2660920cfefb4" compoundref="mbox_8h" startline="78">Mbox::eAdxlRms</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2247935a30918f21b3f38a4492ead331" compoundref="mpelem_8h" startline="72">eAdxlStorageDumpActive</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" compoundref="mpelem_8h" startline="68">eAdxlStorageDumpAll</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badb934a664e2ca788aa0f543f074d0405" compoundref="mpelem_8h" startline="69">eAdxlStorageDumpBytes</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba238e60a970da50cfd36bc03c400b3136" compoundref="mpelem_8h" startline="73">eAdxlStorageDumpComplete</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba37283fdecbb08dd5ec95b153ec9a44e8" compoundref="mpelem_8h" startline="71">eAdxlStorageDumpDisp</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac2303c98875f80b712d76f5e237376a5" compoundref="mpelem_8h" startline="70">eAdxlStorageDumpFilt</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab4bb21bd52e29672e189c8db71bee8b5" compoundref="mpelem_8h" startline="129">eBwFiltData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf77177af3680b79b15f94ef3dd79e8d8" compoundref="mpelem_8h" startline="132">eDispData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d878bf9348bb885285cd00125e1ca74" compoundref="mpelem_8h" startline="118">eDispFirstEntries</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" compoundref="mpelem_8h" startline="119">eDispLastEntries</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba74b82d96e16916581d8ad268537d8f17" compoundref="mpelem_8h" startline="128">eFwFiltData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" compoundref="mpelem_8h" startline="79">eMaxXYZ</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" compoundref="mpelem_8h" startline="113">eRawData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" compoundref="mpelem_8h" startline="112">eRawDataStatus</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a404cc0223d699ca876c05973ede3b2ad" compoundref="mbox_8h" startline="77">Mbox::eRmsStore</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babe6992742a3e82d908ff3a3c9ece320b" compoundref="mpelem_8h" startline="130">eSResultData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaa84aa9145613b6efdbf2139143f4213" compoundref="mpelem_8h" startline="121">eStoreBwFiltResult</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba69e4a9e9ae9e9bb4b6980eb4c648b2c2" compoundref="mpelem_8h" startline="123">eStoreDResult</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" compoundref="mpelem_8h" startline="120">eStoreFwFiltResult</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baccdc9c832cc181c083b566337e394790" compoundref="mpelem_8h" startline="122">eStoreSResult</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_adxl_data_store_1a068ba51d0a406a1d8d211bd264bdaa15" compoundref="adxl__store_8h" startline="171">have_http_connector</references>
+        <references refid="class_adxl_data_store_1a97808a9870039f4168da10ecfb5dc472" compoundref="adxl__store_8h" startline="168">idle</references>
+        <references refid="classspibus_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="spibus_8cpp" startline="52" endline="75">spibus::init</references>
+        <references refid="classspibus_1a5f30bf965b5abb588c055623a3373ce9" compoundref="spibus_8cpp" startline="85" endline="89">spibus::inst</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">notifyRawDataStatus</references>
+        <references refid="class_adxl_data_store_1ac058b87e11aed87cf5da0f7963edd2b5" compoundref="adxl__store_8cpp" startline="756" endline="759">notifySender</references>
+        <references refid="class_adxl_data_store_1af2570dd7bace0312470d962f29359fb3" compoundref="adxl__store_8h" startline="133">pInMbox</references>
+        <references refid="class_adxl_data_store_1abd3d6bbfa4ad60b3c82066225fee1cd0" compoundref="adxl__store_8h" startline="170">pm_state</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</references>
+        <references refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" compoundref="adxl37x_8h" startline="52">adxl37x_sensor_value::samples</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">sendBwFiltData</references>
+        <references refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">sendDispData</references>
+        <references refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" compoundref="adxl__store_8cpp" startline="899" endline="927">sendFwFiltData</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" compoundref="adxl__store_8cpp" startline="817" endline="845">sendRawData</references>
+        <references refid="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" compoundref="adxl__store_8cpp" startline="986" endline="1016">sendSResultData</references>
+        <references refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</references>
+        <references refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" compoundref="adxl__store_8cpp" startline="253" endline="289">storeBackwardFilt</references>
+        <references refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" compoundref="adxl__store_8cpp" startline="356" endline="390">storeDResult</references>
+        <references refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" compoundref="adxl__store_8cpp" startline="202" endline="238">storeForwardFilt</references>
+        <references refid="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" compoundref="adxl__store_8cpp" startline="405" endline="428">storeSampleData</references>
+        <references refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">storeSResult</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <references refid="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" compoundref="adxl__store_8h" startline="173">x_max</references>
+        <references refid="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" compoundref="adxl__store_8h" startline="174">y_max</references>
+        <references refid="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" compoundref="adxl__store_8h" startline="175">z_max</references>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void store</definition>
+        <argsstring>(adxl372_xyz_accel_data *src, uint32_t cnt)</argsstring>
+        <name>store</name>
+        <param>
+          <type><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cnt</declname>
+        </param>
+        <briefdescription>
+<para>Adxl data storage function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to sample data of type <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cnt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of samples</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function checks if FRAM is full with private member variable full. In this case the function returns immediatly. Otherwise the function calculates the needed number of bytes for the new samples. In case write position wr plus needed number of bytes for the new samples exceeds size of FRAM capacity only the number of samples fitting into FRAM will be written, write position wr and remaining bytes to be written in variable len will be actualized and the indicator that FRAM is full will be set to true. eAdxl37xTask will be informed with message eAdxlStorageFull by calling function notifyStorageFull. Furthermore write position wr will be set to 0. <linebreak/>
+If number of bytes to be written in variable len is greater 0 and FRAM is not full or allow_wrap_around is true, samples will be written to FRAM and write position wr will be actualized by adding number of written bytes len. For debug purposes a test is implemented, which check if 1 sec data is available. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="135" column="10" bodyfile="data/adxl_store.cpp" bodystart="125" bodyend="187"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="class_adxl_data_store_1a8138bc27e0bf414141e5361507d82121" compoundref="adxl__store_8h" startline="159">bytes_per_sec</references>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
+        <references refid="class_adxl_data_store_1a6a330c3b2adf87bfa27e9a9450d8bc40" compoundref="adxl__store_8h" startline="163">level</references>
+        <references refid="class_adxl_data_store_1a607e1620392c10d97bc7d9280f3df928" compoundref="adxl__store_8cpp" startline="767" endline="770">notifyStorageFull</references>
+        <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <briefdescription>
+<para>Function prints out the data of the last second. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function enters a loop with current read position rd as start point. Read position will be incremented by size of one data entry sizeof(adxl372_xyz_accel_data) and loop ends if read and write position are equal. In the loop raw data will be read from FRAM at current read position by calling function MEMORY_INST-&gt;readBytes, data will be converted to x, y, z values and these values will be printed by calling function printk. Finally a sleep for 1 msec will be performed by calling function k_sleep. <simplesect kind="note"><para>The function do not handle wrap around </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="138" column="10" bodyfile="data/adxl_store.cpp" bodystart="442" bodyend="472"/>
+        <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dumpAll</definition>
+        <argsstring>()</argsstring>
+        <name>dumpAll</name>
+        <briefdescription>
+<para>Function prints out all the data stored in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function set current position pos and end position end. If FRAM is not full, all the written data shall be mentioned (pos is 0 and end is the current write position). If FRAM is full and wrap around is not allowed, complete FRAM shall be mentioned (pos is 0 and end is the size of FRAM capa). If FRAM is full and wrap around is allowed, also complete FRAM shall be mentioned (pos is the current write position and end is the current write position plus the size of FRAM, wrap around is handled in loop) Afterwards the function calculates the number of data entries and enters the loop over the number of data entries. After every loop cycle the current read position pos is incremented by size of one data entry sizeof(adxl372_xyz_accel_data) modulo size of the FRAM. The modulo operation realize the wrap around. In the loop raw data will be read from FRAM at current read position by calling function MEMORY_INST-&gt;readBytes, data will be converted to x, y, z values and these values will be printed by calling LOG_PRINTK. Finally a sleep for 4 msec will be performed by calling function k_sleep. * </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="139" column="10" bodyfile="data/adxl_store.cpp" bodystart="493" bodyend="548"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dumpAllBytes</definition>
+        <argsstring>()</argsstring>
+        <name>dumpAllBytes</name>
+        <briefdescription>
+<para>Function prints out all the data stored in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function set current position pos and end position end. If FRAM is not full, all the written data shall be mentioned (pos is 0 and end is the current write position). If FRAM is full and wrap around is not allowed, complete FRAM shall be mentioned (pos is 0 and end is the size of FRAM capa). If FRAM is full and wrap around is allowed, also complete FRAM shall be mentioned (pos is the current write position and end is the current write position plus the size of FRAM, wrap around is handled in loop) Afterwards the function calculates the number of data entries and enters the loop over the number of data entries. After every loop cycle the current read position pos is incremented by size of one data entry sizeof(adxl372_xyz_accel_data) modulo size of the FRAM. The modulo operation realize the wrap around. In the loop raw data will be read from FRAM at current read position by calling function MEMORY_INST-&gt;readBytes and the read bytes of the x, y, z values will be printed by calling LOG_PRINTK. Finally a sleep for 8 msec will be performed by calling function k_sleep. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="140" column="10" bodyfile="data/adxl_store.cpp" bodystart="569" bodyend="616"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a96befc23227d1b95e8e15f53c0c1f3db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dumpAllFilt</definition>
+        <argsstring>()</argsstring>
+        <name>dumpAllFilt</name>
+        <briefdescription>
+<para>Function prints out all the data stored in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function set current positions pos to the start address of reserved memory for forward filtered and S (displacement data before detrending) values and pos2 to the start address of reserved memory for backward filtered and D (displacement data after detrending / final displacement result) values. Afterwards the function enters the loop over the number of samples. After every loop cycle the current read positions pos and pos3 are incremented by size of one data entry sizeof(double). In the loop forward and backward filtered data values will be read from FRAM at current read position by calling function MEMORY_INST-&gt;readBytes, data will be converted to double and printed by calling LOG_PRINTK. Finally a sleep for 10 msec will be performed by calling function k_sleep. <simplesect kind="note"><para>Function is only for testing purposes during development! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="141" column="10" bodyfile="data/adxl_store.cpp" bodystart="634" bodyend="671"/>
+        <references refid="adxl__store_8h_1a0892059d01223a25c8871a93acd71608" compoundref="adxl__store_8h" startline="52">BW_D_START_ADDR</references>
+        <references refid="adxl__store_8h_1a054381bd38b8be928b735402b5820837" compoundref="adxl__store_8h" startline="51">FW_S_START_ADDR</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1acfb919df3d5bf5d40783f10f91ea0909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dumpAllDisp</definition>
+        <argsstring>()</argsstring>
+        <name>dumpAllDisp</name>
+        <briefdescription>
+<para>Function prints out all the data stored in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function set current positions pos to the start address of reserved memory for forward filtered and S (displacement data before detrending) values and pos2 to the start address of reserved memory for backward filtered and D (displacement data after detrending / final displacement result) values. Afterwards the function enters the loop over the number of samples. After every loop cycle the current read positions pos and pos3 are incremented by size of one data entry sizeof(double). In the loop S and D data values will be read from FRAM at current read position by calling function MEMORY_INST-&gt;readBytes, data will be converted to double and printed by calling LOG_PRINTK. Finally a sleep for 10 msec will be performed by calling function k_sleep. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="142" column="10" bodyfile="data/adxl_store.cpp" bodystart="688" bodyend="733"/>
+        <references refid="adxl__store_8h_1a0892059d01223a25c8871a93acd71608" compoundref="adxl__store_8h" startline="52">BW_D_START_ADDR</references>
+        <references refid="adxl__store_8h_1a054381bd38b8be928b735402b5820837" compoundref="adxl__store_8h" startline="51">FW_S_START_ADDR</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Function reset FRAM to be empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Read and write position will be set to 0, flag full will be set to false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="143" column="10" bodyfile="data/adxl_store.cpp" bodystart="740" bodyend="747"/>
+        <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
+        <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <references refid="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" compoundref="adxl__store_8h" startline="173">x_max</references>
+        <references refid="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" compoundref="adxl__store_8h" startline="174">y_max</references>
+        <references refid="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" compoundref="adxl__store_8h" startline="175">z_max</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1ac058b87e11aed87cf5da0f7963edd2b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notifySender</definition>
+        <argsstring>()</argsstring>
+        <name>notifySender</name>
+        <briefdescription>
+<para>Function notify <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task that processing is done. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Function send message eAdxlStorageDone with sender id eAdxlStore to <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. This indicates that processing is done and data buffer is free for reuse. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="144" column="10" bodyfile="data/adxl_store.cpp" bodystart="756" bodyend="759"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae890e8709ff152ee0e8a42ffa05fb3" compoundref="mpelem_8h" startline="66">eAdxlStorageDone</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a607e1620392c10d97bc7d9280f3df928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notifyStorageFull</definition>
+        <argsstring>()</argsstring>
+        <name>notifyStorageFull</name>
+        <briefdescription>
+<para>Function notify <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task that FRAM is full. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Function send message eAdxlStorageFull with sender id eAdxlStore to <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="145" column="10" bodyfile="data/adxl_store.cpp" bodystart="767" bodyend="770"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba15e5da10533457b4ca2dc1b2b7657558" compoundref="mpelem_8h" startline="67">eAdxlStorageFull</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" compoundref="adxl__store_8cpp" startline="125" endline="187">store</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void configure</definition>
+        <argsstring>()</argsstring>
+        <name>configure</name>
+        <reimplements refid="class_task_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplements>
+        <briefdescription>
+<para>Adxl DataStore virtual task configure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The configure function overloads the configure function of the task base class. It retrieves the configuration related to ADXLDataStore by call of the function getCfgDatalog provided by the <ref refid="class_config" kindref="compound">Config</ref> class, checks if the displacement calculation is configured to be disabled and set the number of FRAM storage time to 15 seconds in this case, otherwise FRAM storage time is set to 5 seconds. Finally the total number of required bytes are calculated and stored in member variable capa. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="147" column="18" bodyfile="data/adxl_store.cpp" bodystart="1335" bodyend="1352"/>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" compoundref="config_8h" startline="189">_stCfgDatalog::dispmodeoff</references>
+        <references refid="config_8h_1a6ad2a73820aa8c8a5b865b810fad1ac2" compoundref="config_8h" startline="136">FRAM_15_SEC_RAW_DATA_SPACE</references>
+        <references refid="config_8h_1a96ae51ec4a58a4a86a530f4796f1f590" compoundref="config_8h" startline="132">FRAM_5_SEC_RAW_DATA_SPACE</references>
+        <references refid="class_config_1ae6395cad5f0583a45336e008ea4d05fe" compoundref="config_8cpp" startline="756" endline="758">Config::getCfgDatalog</references>
+        <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
+        <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
+        <references refid="class_adxl_data_store_1ab65df7a1efcbcbc1b38a951e1f1b3b95" compoundref="adxl__store_8h" startline="160">samples_per_sec</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_adxl_data_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shell_dump</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>shell_dump</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;d&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function request a message from message pool, set message type to eAdxlStorageDumpAll, set eAdxl37xTask as sender and send message to Adxl-Store mailbox. <simplesect kind="note"><para>For testing only: trigger dump via shell command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="149" column="16" bodyfile="data/adxl_store.cpp" bodystart="1362" bodyend="1372"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" compoundref="mpelem_8h" startline="68">eAdxlStorageDumpAll</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a23c20614e69310fd2f68716b7acbec7d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shell_dump_bytes</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>shell_dump_bytes</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;db&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eAdxlStorageDumpBytes to its own (Adxl-Store) mailbox. <simplesect kind="note"><para>For testing only: trigger byte dump via shell command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="150" column="16" bodyfile="data/adxl_store.cpp" bodystart="1380" bodyend="1388"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badb934a664e2ca788aa0f543f074d0405" compoundref="mpelem_8h" startline="69">eAdxlStorageDumpBytes</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a128fd2feb07d2261c0968b8659488c61" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shell_dump_filt</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>shell_dump_filt</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;df&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eAdxlStorageDumpFilt to its own (Adxl-Store) mailbox. <simplesect kind="note"><para>For testing only: trigger dump of filtered data via shell command </para>
+</simplesect>
+<simplesect kind="note"><para>only for development purposes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="152" column="16" bodyfile="data/adxl_store.cpp" bodystart="1397" bodyend="1405"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac2303c98875f80b712d76f5e237376a5" compoundref="mpelem_8h" startline="70">eAdxlStorageDumpFilt</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1ae932af578a253573f31124da08402ea1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shell_dump_disp</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>shell_dump_disp</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;dd&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message of type eAdxlStorageDumpDisp to its own (Adxl-Store) mailbox. <simplesect kind="note"><para>For testing only: trigger by dump of displacement data via shell command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="154" column="16" bodyfile="data/adxl_store.cpp" bodystart="1414" bodyend="1422"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba37283fdecbb08dd5ec95b153ec9a44e8" compoundref="mpelem_8h" startline="71">eAdxlStorageDumpDisp</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_adxl_data_store_1aa85b47c1fc8ad497feaef20f07a6e99e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AdxlDataStore</definition>
+        <argsstring>()=delete</argsstring>
+        <name>AdxlDataStore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="177" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notifyRawDataStatus</definition>
+        <argsstring>(Mbox::MboxId senderId)</argsstring>
+        <name>notifyRawDataStatus</name>
+        <param>
+          <type><ref refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501" kindref="member">Mbox::MboxId</ref></type>
+          <declname>senderId</declname>
+        </param>
+        <briefdescription>
+<para>Function notify HTTP Connector task the status of the raw data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>senderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the sender task</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function send message eRawDataStatus with sender id eAdxlStore back to sender task. Status includes the start and end position in FRAM and the total number of raw data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="179" column="10" bodyfile="data/adxl_store.cpp" bodystart="781" bodyend="804"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="struct_adxl_raw_data_status_1a38bad35c844ffd72b0c1132715d5f3a1" compoundref="adxl__store_8h" startline="78">AdxlRawDataStatus::entries</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" compoundref="mpelem_8h" startline="112">eRawDataStatus</references>
+        <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_status_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="77">AdxlRawDataStatus::startRd</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendRawData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>sendRawData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to send raw data to the requesting sender task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function calculate the read start position in FRAM, enter a loop and copy the number of requested entries from FRAM to array accel by calling function readBytes, provided by spi(f/m)ram class. Afterwards it send a message with received message type back to the requesting sender task with array accel in payload of the message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="180" column="10" bodyfile="data/adxl_store.cpp" bodystart="817" bodyend="845"/>
+        <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendDispData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>sendDispData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to send displacement data to the requesting sender task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function calculate the read start position in FRAM, enter a loop and copy the number of requested entries from FRAM to array disp by calling function readBytes, provided by spi(f/m)ram class. Afterwards it send a message with received message type back to the requesting sender task with array disp in payload of the message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="181" column="10" bodyfile="data/adxl_store.cpp" bodystart="858" bodyend="886"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendFwFiltData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>sendFwFiltData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to send forward filtered data to the HTTP Connector task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function calculate the read start position in FRAM, enter a loop and copy the number of requested entries from FRAM to array data by calling function readBytes, provided by spi(f/m)ram class. Afterwards it send a message with received message type back to the requesting sender task with array data in payload of the message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="182" column="10" bodyfile="data/adxl_store.cpp" bodystart="899" bodyend="927"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="adxl__store_8h_1a054381bd38b8be928b735402b5820837" compoundref="adxl__store_8h" startline="51">FW_S_START_ADDR</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1af0008c5962b253accee045558363163b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendBwFiltData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>sendBwFiltData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to send backward filtered data to the HTTP Connector task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function calculate the read start position in FRAM, enter a loop and copy the number of requested entries from FRAM to array data by calling function readBytes, provided by spi(f/m)ram class. Afterwards it send a message with received message type back to the requesting sender task with array data in payload of the message. NOTE Function completly equal to sendFwFiltData (join together?) NOTE also equal to sendRawData !!! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="183" column="10" bodyfile="data/adxl_store.cpp" bodystart="942" bodyend="970"/>
+        <references refid="adxl__store_8h_1a0892059d01223a25c8871a93acd71608" compoundref="adxl__store_8h" startline="52">BW_D_START_ADDR</references>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendSResultData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>sendSResultData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to send displacement data (SResult, not detrended) to the HTTP Connector task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> pointer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function calculate the read start position in FRAM, enter a loop and copy the number of requested entries from FRAM to array data by calling function readBytes, provided by spi(f/m)ram class. Afterwards it send a message with received message type back to the requesting sender task with array data in payload of the message. NOTE Function completly equal to sendFwFiltData (join together?) NOTE also equal to sendRawData !!! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="184" column="10" bodyfile="data/adxl_store.cpp" bodystart="986" bodyend="1016"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="adxl__store_8h_1a054381bd38b8be928b735402b5820837" compoundref="adxl__store_8h" startline="51">FW_S_START_ADDR</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeForwardFilt</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>storeForwardFilt</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to store forward filtered data in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts structure of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> from message payload, wake up SPI bus by calling function wakeup of class spi(f/m)ram, assign the write position wr and enter a loop over the number of requested entries. In the loop every single entry is written to write position by call of function writeBytes of class spi(f/m)ram and write position will be incremented by sizeof(double). If forward filtered data is completely written, indicated by num_samples Disp <ref refid="class_task" kindref="compound">Task</ref> will be informed with message of type eStoredFwFiltVals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="185" column="10" bodyfile="data/adxl_store.cpp" bodystart="202" bodyend="238"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf1ea70db78d653be0b303037e01fc4a7" compoundref="mpelem_8h" startline="124">eStoredFwFiltVals</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeBackwardFilt</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>storeBackwardFilt</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to store backward filtered data in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts structure of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> from message payload, wake up SPI bus by calling function wakeup of class spi(f/m)ram, assign the write position wr and enter a loop over the number of requested entries. In the loop every single entry is written to write position by call of function writeBytes of class spi(f/m)ram and write position will be incremented by sizeof(double). If backward filtered data is completely written, indicated by num_samples Disp <ref refid="class_task" kindref="compound">Task</ref> will be informed with message of type eStoredBwFiltVals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="186" column="10" bodyfile="data/adxl_store.cpp" bodystart="253" bodyend="289"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba52bba38ceb62448a4983f35eb873a57a" compoundref="mpelem_8h" startline="125">eStoredBwFiltVals</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeSResult</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>storeSResult</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to store S values (displacement before detrending) in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts structure of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> from message payload, wake up SPI bus by calling function wakeup of class spi(f/m)ram, assign the write position wr and enter a loop over the number of requested entries. In the loop every single entry is written to write position by call of function writeBytes of class spi(f/m)ram and write position will be incremented by sizeof(double). If S values are completely written, indicated by num_samples Disp <ref refid="class_task" kindref="compound">Task</ref> will be informed with message of type eStoredSResultVals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="187" column="10" bodyfile="data/adxl_store.cpp" bodystart="304" bodyend="340"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8840b77f10e3e2dbd4f66ffa80c1d213" compoundref="mpelem_8h" startline="126">eStoredSResultVals</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeDResult</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>storeDResult</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to store D values (displacement after detrending) in FRAM. D values reoresent the final result of displacement calculation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function extracts structure of type <ref refid="struct_adxl_filter_data_progress" kindref="compound">AdxlFilterDataProgress</ref> from message payload, wake up SPI bus by calling function wakeup of class spi(f/m)ram, assign the write position wr and enter a loop over the number of requested entries. In the loop every single entry is written to write position by call of function writeBytes of class spi(f/m)ram and write position will be incremented by sizeof(double). If D values are completely written, indicated by num_samples Disp <ref refid="class_task" kindref="compound">Task</ref> will be informed with message of type eStoredDResultVals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="188" column="10" bodyfile="data/adxl_store.cpp" bodystart="356" bodyend="390"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="struct_adxl_filter_data_progress_1aa6a4979c789316ffa06396a469a50451" compoundref="adxl__store_8h" startline="93">AdxlFilterDataProgress::data</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba00dcdef23c04769526c3e0af0763624d" compoundref="mpelem_8h" startline="127">eStoredDResultVals</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <references refid="struct_adxl_filter_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="91">AdxlFilterDataProgress::requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_filter_data_progress_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="adxl__store_8h" startline="90">AdxlFilterDataProgress::sentEntries</references>
+        <references refid="struct_adxl_filter_data_progress_1ace99e838b70d9fa6d3e921fb788ab0a6" compoundref="adxl__store_8h" startline="89">AdxlFilterDataProgress::startWr</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeSampleData</definition>
+        <argsstring>()</argsstring>
+        <name>storeSampleData</name>
+        <briefdescription>
+<para>Helper function to store known defined acceleration data in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function includes the known defined acceleration data in header file <ref refid="input__accel__bin_8h" kindref="compound">input_accel_bin.h</ref>, wake up SPI bus by calling function wakeup of class spi(f/m)ram, assign the write position wr to address 0 and enter a loop over the number of samples to be written. In the loop every single entry is written to write position by call of function writeBytes of class spi(f/m)ram and write position will be incremented by sizeof(adxl372_xyz_accel_data). <simplesect kind="note"><para>Only the values in z direction will be written </para>
+</simplesect>
+<simplesect kind="note"><para>This funtion is implemented only for development purposes. In release version of the firmware the function is never called. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="190" column="10" bodyfile="data/adxl_store.cpp" bodystart="405" bodyend="428"/>
+        <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
+        <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
+        <references refid="input__accel__bin_8h_1afa787e2d63fe82d6adbe8397fcd5e42c" compoundref="input__accel__bin_8h" startline="1">input_bytes</references>
+        <references refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" compoundref="adxl__store_8h" startline="164">num_samples</references>
+        <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void calcMaxXYZ</definition>
+        <argsstring>(adxl372_xyz_accel_data *src, uint32_t cnt)</argsstring>
+        <name>calcMaxXYZ</name>
+        <param>
+          <type><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>cnt</declname>
+        </param>
+        <briefdescription>
+<para>Function to calculate the maximum acceleration values in x, y and z direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to sample data of type <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cnt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of samples</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function enter a loop over the number of raw data samples. In the loop the x, y and z raw values will be converted to micro meter per squared seconds. These calculated values will be checked if they are greater than the current maximum values. If yes, the current maximum value will be set to the calculated acceleration value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="191" column="10" bodyfile="data/adxl_store.cpp" bodystart="1031" bodyend="1050"/>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
+        <references refid="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" compoundref="adxl__store_8h" startline="173">x_max</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
+        <references refid="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" compoundref="adxl__store_8h" startline="174">y_max</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" compoundref="adxl__store_8h" startline="175">z_max</references>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Adxl data store class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The adxl data store class reserves FRAM space capacity for samples within 15 seconds at expected sample rate of 4400 (samples per second). It provides methods to store the raw data, to reset/clear previously stored data, to dump the data and to indicate that storage is full or free for re-usage. <linebreak/>
+<bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task</para>
+</listitem><listitem><para>RMS task</para>
+</listitem><listitem><para>Adxl data store (self, callback function for shell command &apos;d&apos;)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task</para>
+</listitem><listitem><para>RMS task</para>
+</listitem><listitem><para>RMS store task</para>
+</listitem><listitem><para>Adxl data store (self, callback function for shell command &apos;d&apos;) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>AdxlDataStore</label>
+        <link refid="class_adxl_data_store"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>float</label>
+      </node>
+      <node id="14">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="11">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="12">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="13">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PmState</label>
+      </node>
+      <node id="1">
+        <label>AdxlDataStore</label>
+        <link refid="class_adxl_data_store"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-x_max</edgelabel>
+          <edgelabel>-y_max</edgelabel>
+          <edgelabel>-z_max</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-bytes_per_sec</edgelabel>
+          <edgelabel>-capa</edgelabel>
+          <edgelabel>-level</edgelabel>
+          <edgelabel>-num_samples</edgelabel>
+          <edgelabel>-rd</edgelabel>
+          <edgelabel>-samples_per_sec</edgelabel>
+          <edgelabel>-wr</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-allow_wrap_around</edgelabel>
+          <edgelabel>-full</edgelabel>
+          <edgelabel>-have_http_connector</edgelabel>
+          <edgelabel>-idle</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-pm_state</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/adxl_store.h" line="126" column="1" bodyfile="data/adxl_store.h" bodystart="126" bodyend="192"/>
+    <listofallmembers>
+      <member refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>AdxlDataStore</name></member>
+      <member refid="class_adxl_data_store_1aa85b47c1fc8ad497feaef20f07a6e99e" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>AdxlDataStore</name></member>
+      <member refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>allow_wrap_around</name></member>
+      <member refid="class_adxl_data_store_1a8138bc27e0bf414141e5361507d82121" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>bytes_per_sec</name></member>
+      <member refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>calcMaxXYZ</name></member>
+      <member refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>capa</name></member>
+      <member refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>AdxlDataStore</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>create</name></member>
+      <member refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>dump</name></member>
+      <member refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>dumpAll</name></member>
+      <member refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>dumpAllBytes</name></member>
+      <member refid="class_adxl_data_store_1acfb919df3d5bf5d40783f10f91ea0909" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>dumpAllDisp</name></member>
+      <member refid="class_adxl_data_store_1a96befc23227d1b95e8e15f53c0c1f3db" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>dumpAllFilt</name></member>
+      <member refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>full</name></member>
+      <member refid="class_adxl_data_store_1a068ba51d0a406a1d8d211bd264bdaa15" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>have_http_connector</name></member>
+      <member refid="class_adxl_data_store_1a97808a9870039f4168da10ecfb5dc472" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>idle</name></member>
+      <member refid="class_adxl_data_store_1a6a330c3b2adf87bfa27e9a9450d8bc40" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>level</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>AdxlDataStore</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>AdxlDataStore</scope><name>myName</name></member>
+      <member refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>notifyRawDataStatus</name></member>
+      <member refid="class_adxl_data_store_1ac058b87e11aed87cf5da0f7963edd2b5" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>notifySender</name></member>
+      <member refid="class_adxl_data_store_1a607e1620392c10d97bc7d9280f3df928" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>notifyStorageFull</name></member>
+      <member refid="class_adxl_data_store_1ad405b6295e8f021b5a52b8f65f170595" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>num_samples</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>operator=</name></member>
+      <member refid="class_adxl_data_store_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>pInMbox</name></member>
+      <member refid="class_adxl_data_store_1abd3d6bbfa4ad60b3c82066225fee1cd0" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>pm_state</name></member>
+      <member refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>rd</name></member>
+      <member refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>reset</name></member>
+      <member refid="class_adxl_data_store_1ab65df7a1efcbcbc1b38a951e1f1b3b95" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>samples_per_sec</name></member>
+      <member refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>sendBwFiltData</name></member>
+      <member refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>sendDispData</name></member>
+      <member refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>sendFwFiltData</name></member>
+      <member refid="class_adxl_data_store_1a194013319bd1a593fc74449c985d88e0" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>sendRawData</name></member>
+      <member refid="class_adxl_data_store_1accb06ff5b11f5a9b4ab23bec4a1c1266" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>sendSResultData</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>setId</name></member>
+      <member refid="class_adxl_data_store_1ae98eaa6502e0ed1adeb94af4ef0bbdeb" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>shell_dump</name></member>
+      <member refid="class_adxl_data_store_1a23c20614e69310fd2f68716b7acbec7d" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>shell_dump_bytes</name></member>
+      <member refid="class_adxl_data_store_1ae932af578a253573f31124da08402ea1" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>shell_dump_disp</name></member>
+      <member refid="class_adxl_data_store_1a128fd2feb07d2261c0968b8659488c61" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>shell_dump_filt</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>start</name></member>
+      <member refid="class_adxl_data_store_1a051047da4577611faa7d97507c1aff46" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>store</name></member>
+      <member refid="class_adxl_data_store_1a9620c421f72c50898ba7b042d8ffe474" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>storeBackwardFilt</name></member>
+      <member refid="class_adxl_data_store_1a05ff270ebf9bfe4df4d98646f30e761a" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>storeDResult</name></member>
+      <member refid="class_adxl_data_store_1acb7adcf211d7a97fe23fe5029b674e54" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>storeForwardFilt</name></member>
+      <member refid="class_adxl_data_store_1aeccbd39a494b890f1f79482d443da9d4" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>storeSampleData</name></member>
+      <member refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>storeSResult</name></member>
+      <member refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>AdxlDataStore</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>AdxlDataStore</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>AdxlDataStore</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>AdxlDataStore</scope><name>tid</name></member>
+      <member refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>wr</name></member>
+      <member refid="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>x_max</name></member>
+      <member refid="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>y_max</name></member>
+      <member refid="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" prot="private" virt="non-virtual"><scope>AdxlDataStore</scope><name>z_max</name></member>
+      <member refid="class_adxl_data_store_1aa2f3e8292d17ff3a46ccf1c196299f47" prot="public" virt="virtual"><scope>AdxlDataStore</scope><name>~AdxlDataStore</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>AdxlDataStore</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

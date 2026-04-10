@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_6842baabad453d45d412cb5fd1673487" kind="dir">
+    <compoundname>pm</compoundname>
+    <innerfile refid="boot__cnt_8cpp">boot_cnt.cpp</innerfile>
+    <innerfile refid="boot__cnt_8h">boot_cnt.h</innerfile>
+    <innerfile refid="power__mgr_8cpp">power_mgr.cpp</innerfile>
+    <innerfile refid="power__mgr_8h">power_mgr.h</innerfile>
+    <innerfile refid="power__mgr__x1_8cpp">power_mgr_x1.cpp</innerfile>
+    <innerfile refid="power__mgr__x1_8h">power_mgr_x1.h</innerfile>
+    <innerfile refid="reset__ctrl_8cpp">reset_ctrl.cpp</innerfile>
+    <innerfile refid="reset__ctrl_8h">reset_ctrl.h</innerfile>
+    <innerfile refid="reset__reason_8cpp">reset_reason.cpp</innerfile>
+    <innerfile refid="reset__reason_8h">reset_reason.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="pm/"/>
+  </compounddef>
+</doxygen>

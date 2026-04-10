@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_memory_pool" kind="class" language="C++" prot="public">
+    <compoundname>MemoryPool</compoundname>
+    <includes refid="mempool_8h" local="no">mempool.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>uint32_t</type>
+        <declname>num_blocks</declname>
+        <defname>num_blocks</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" prot="private" static="no" mutable="no">
+        <type>struct k_mem_slab</type>
+        <definition>struct k_mem_slab my_slab</definition>
+        <argsstring></argsstring>
+        <name>my_slab</name>
+        <briefdescription>
+<para>Memory slab administration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="140" column="14" bodyfile="rtos/mempool.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" compoundref="mempool_8h" startline="93" endline="105">MemoryPool&lt; T, num_blocks &gt;::alloc</referencedby>
+        <referencedby refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" compoundref="mempool_8h" startline="140" endline="140">MemoryPool&lt; T, num_blocks &gt;::available</referencedby>
+        <referencedby refid="class_memory_pool_1a8d58317e03953167e3cc27b27bd6f570" compoundref="mempool_8h" startline="137" endline="137">MemoryPool&lt; T, num_blocks &gt;::blocksize</referencedby>
+        <referencedby refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" compoundref="mempool_8h" startline="116" endline="119">MemoryPool&lt; T, num_blocks &gt;::free</referencedby>
+        <referencedby refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" compoundref="mempool_8h" startline="139" endline="139">MemoryPool&lt; T, num_blocks &gt;::maxused</referencedby>
+        <referencedby refid="class_memory_pool_1ad84b296839bf3f443cd44918baa08592" compoundref="mempool_8h" startline="71" endline="79">MemoryPool&lt; T, num_blocks &gt;::MemoryPool</referencedby>
+        <referencedby refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" compoundref="mempool_8h" startline="136" endline="136">MemoryPool&lt; T, num_blocks &gt;::size</referencedby>
+        <referencedby refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mempool_8h" startline="127" endline="134">MemoryPool&lt; T, num_blocks &gt;::stats</referencedby>
+        <referencedby refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" compoundref="mempool_8h" startline="138" endline="138">MemoryPool&lt; T, num_blocks &gt;::used</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_memory_pool_1ad84b296839bf3f443cd44918baa08592" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MemoryPool</definition>
+        <argsstring>()</argsstring>
+        <name>MemoryPool</name>
+        <briefdescription>
+<para><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor initializes the memory slab by calling RTOS function k_msgq_init. This function initializes the memory slab object, prior to its first use. It returns the memory slab administration structure my_slab. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="71" column="5" bodyfile="rtos/mempool.h" bodystart="71" bodyend="79"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* alloc</definition>
+        <argsstring>()</argsstring>
+        <name>alloc</name>
+        <briefdescription>
+<para><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref> allocation function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>A pointer to the memory block of template type T</para>
+</simplesect>
+This function allocates a memory slab object by calling function k_mem_slab_alloc provided by the operating system, which return the pointer to the memory block block_ptr and a pointer to the memory slab administration structure my_slab. Afterwards allocated memory is cleared by setting the conplete content to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="93" column="7" bodyfile="rtos/mempool.h" bodystart="93" bodyend="105"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void free</definition>
+        <argsstring>(void *block_ptr)</argsstring>
+        <name>free</name>
+        <param>
+          <type>void *</type>
+          <declname>block_ptr</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref> free function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the memory slab object to be released</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function release the memory slab object by calling function k_mem_slab_free provided by the operating system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="116" column="10" bodyfile="rtos/mempool.h" bodystart="116" bodyend="119"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1a48a68603785b01760fc79ca0a9b1a65b" compoundref="mpool_8cpp" startline="137" endline="173">MsgPool::freeElem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void stats</definition>
+        <argsstring>()</argsstring>
+        <name>stats</name>
+        <briefdescription>
+<para><ref refid="class_memory_pool" kindref="compound">MemoryPool</ref> status function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function print out statistics of the memory pool. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="127" column="10" bodyfile="rtos/mempool.h" bodystart="127" bodyend="134"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1a058d67da96727cd260cfdfcd9554a06a" compoundref="mpool_8cpp" startline="181" endline="189">MsgPool::stats</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="136" column="14" bodyfile="rtos/mempool.h" bodystart="136" bodyend="136"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" compoundref="mpool_8cpp" startline="247" endline="249">MsgPool::available</referencedby>
+        <referencedby refid="class_msg_pool_1aca969b83fea5aae702fafac1c789aca2" compoundref="mpool_8cpp" startline="261" endline="276">MsgPool::bufpool_size</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1a8d58317e03953167e3cc27b27bd6f570" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t blocksize</definition>
+        <argsstring>()</argsstring>
+        <name>blocksize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="137" column="14" bodyfile="rtos/mempool.h" bodystart="137" bodyend="137"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t used</definition>
+        <argsstring>()</argsstring>
+        <name>used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="138" column="14" bodyfile="rtos/mempool.h" bodystart="138" bodyend="138"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1a6e38266739d54fee053be9b816e834ae" compoundref="mpool_8cpp" startline="247" endline="249">MsgPool::available</referencedby>
+        <referencedby refid="class_msg_pool_1a5def9836d24e8ea913dc679f9971afac" compoundref="mpool_8cpp" startline="288" endline="303">MsgPool::bufpool_used</referencedby>
+        <referencedby refid="class_msg_pool_1a6c1986554e66b6485fb095798f83c35d" compoundref="mpool_8cpp" startline="223" endline="225">MsgPool::used</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t maxused</definition>
+        <argsstring>()</argsstring>
+        <name>maxused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="139" column="14" bodyfile="rtos/mempool.h" bodystart="139" bodyend="139"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1aa178d324c55e1b264ce1c0b9924d704d" compoundref="mpool_8cpp" startline="316" endline="331">MsgPool::bufpool_maxused</referencedby>
+        <referencedby refid="class_msg_pool_1a371b26884552759e7161090fea883e00" compoundref="mpool_8cpp" startline="235" endline="237">MsgPool::maxused</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="140" column="14" bodyfile="rtos/mempool.h" bodystart="140" bodyend="140"/>
+        <references refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" compoundref="mempool_8h" startline="143">MemoryPool&lt; T, num_blocks &gt;::my_slab</references>
+        <referencedby refid="class_msg_pool_1a0663a276b808e9060a62b1f95f380a9f" compoundref="mpool_8cpp" startline="344" endline="359">MsgPool::bufpool_available</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_memory_pool_1a0f5dfd0c2bd16812fe430af274b0cbb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char __aligned</definition>
+        <argsstring>(4) my_slab_buffer[sizeof(T) *num_blocks]</argsstring>
+        <name>__aligned</name>
+        <param>
+          <type>4</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved memory to store the memory objects </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mempool.h" line="144" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for memory pool support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The sema class implements a C++ wrapper of the Memory Slab API provided by the Zephyr operating system. See details in Zephyr <ulink url="https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html">Memory Slab documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__mem__slab__apis.html">API documentation</ulink>. The sema class provides methods to allocate and free fixed size memory blocks of concretized type T. It furthermore provides a method to print out statistics. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>MemoryPool&lt; uint8_t[1024], max_buf1024 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; uint8_t[1024], max_buf1024 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MemoryPool&lt; uint8_t[32], max_buf32 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; uint8_t[32], max_buf32 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MemoryPool&lt; T, num_blocks &gt;</label>
+        <link refid="class_memory_pool"/>
+      </node>
+      <node id="2">
+        <label>MemoryPool&lt; uint8_t[128], max_buf128 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; uint8_t[128], max_buf128 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>MemoryPool&lt; uint8_t[512], max_buf512 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; uint8_t[512], max_buf512 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MemoryPool&lt; uint8_t[256], max_buf256 &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; uint8_t[256], max_buf256 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MemoryPool&lt; PoolElem, max_elements &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_elements &gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MemoryPool&lt; T, num_blocks &gt;</label>
+        <link refid="class_memory_pool"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-my_slab</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>struct k_mem_slab</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/mempool.h" line="60" column="1" bodyfile="rtos/mempool.h" bodystart="60" bodyend="147"/>
+    <listofallmembers>
+      <member refid="class_memory_pool_1a0f5dfd0c2bd16812fe430af274b0cbb9" prot="private" virt="non-virtual"><scope>MemoryPool</scope><name>__aligned</name></member>
+      <member refid="class_memory_pool_1a2d6190969d0a0bec2e1202690c1523ce" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>alloc</name></member>
+      <member refid="class_memory_pool_1af93dbeb8dc6867fcc97a7b42e2898f02" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>available</name></member>
+      <member refid="class_memory_pool_1a8d58317e03953167e3cc27b27bd6f570" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>blocksize</name></member>
+      <member refid="class_memory_pool_1a8e844ae7b745f7bedf3f132e8c1916d4" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>free</name></member>
+      <member refid="class_memory_pool_1a0f9a5f3524a798b9e33330d7194344be" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>maxused</name></member>
+      <member refid="class_memory_pool_1ad84b296839bf3f443cd44918baa08592" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>MemoryPool</name></member>
+      <member refid="class_memory_pool_1a06e11033f928d67e3ca590a37e91f657" prot="private" virt="non-virtual"><scope>MemoryPool</scope><name>my_slab</name></member>
+      <member refid="class_memory_pool_1ad99ea5881a3c8a380f6835cf10fa151d" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>size</name></member>
+      <member refid="class_memory_pool_1a058d67da96727cd260cfdfcd9554a06a" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>stats</name></member>
+      <member refid="class_memory_pool_1af680fed4f48f155b9b93d27b5b631011" prot="public" virt="non-virtual"><scope>MemoryPool</scope><name>used</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

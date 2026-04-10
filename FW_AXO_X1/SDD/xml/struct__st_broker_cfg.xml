@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_broker_cfg" kind="struct" language="C++" prot="public">
+    <compoundname>_stBrokerCfg</compoundname>
+    <includes refid="certmgr_8h" local="no">certmgr.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_broker_cfg_1ade73530586b29046a939e89470c480fc" prot="public" static="no" mutable="no">
+        <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+        <definition>enBroker currentBroker</definition>
+        <argsstring></argsstring>
+        <name>currentBroker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="64" column="13" bodyfile="util/certmgr.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_broker_cfg_1a14fa1a5bdb8f9ec47093819d2538763d" prot="public" static="no" mutable="no">
+        <type><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref></type>
+        <definition>enBroker desiredBroker</definition>
+        <argsstring></argsstring>
+        <name>desiredBroker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="65" column="13" bodyfile="util/certmgr.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure to define current and desired broker. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_stBrokerCfg</label>
+        <link refid="struct__st_broker_cfg"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+currentBroker</edgelabel>
+          <edgelabel>+desiredBroker</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>enum _enBroker</label>
+      </node>
+    </collaborationgraph>
+    <location file="util/certmgr.h" line="63" column="1" bodyfile="util/certmgr.h" bodystart="63" bodyend="66"/>
+    <listofallmembers>
+      <member refid="struct__st_broker_cfg_1ade73530586b29046a939e89470c480fc" prot="public" virt="non-virtual"><scope>_stBrokerCfg</scope><name>currentBroker</name></member>
+      <member refid="struct__st_broker_cfg_1a14fa1a5bdb8f9ec47093819d2538763d" prot="public" virt="non-virtual"><scope>_stBrokerCfg</scope><name>desiredBroker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

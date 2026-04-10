@@ -1,0 +1,550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_fw_info" kind="class" language="C++" prot="public">
+    <compoundname>FwInfo</compoundname>
+    <includes refid="fwinfo_8h" local="no">fwinfo.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+<para>The OTA update topic JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="67" column="17" bodyfile="update/fwinfo.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1ad9cadd855abff02cdb0ce1c0097668be" compoundref="fwinfo_8cpp" startline="41" endline="44">FwInfo</referencedby>
+        <referencedby refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" compoundref="fwinfo_8cpp" startline="211" endline="248">parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <briefdescription>
+<para>URL of update firmware binary file location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="68" column="17" bodyfile="update/fwinfo.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" compoundref="fwinfo_8cpp" startline="90" endline="90">getUrl</referencedby>
+        <referencedby refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" compoundref="fwinfo_8cpp" startline="211" endline="248">parse</referencedby>
+        <referencedby refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" compoundref="fwinfo_8cpp" startline="159" endline="194">splitUrl</referencedby>
+        <referencedby refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" compoundref="fwinfo_8cpp" startline="76" endline="81">validate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sha1</definition>
+        <argsstring></argsstring>
+        <name>sha1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Secure <ref refid="class_hash" kindref="compound">Hash</ref> Algorithm Checksum of update firmware binary file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="69" column="17" bodyfile="update/fwinfo.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" compoundref="fwinfo_8cpp" startline="117" endline="117">getSha1</referencedby>
+        <referencedby refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" compoundref="fwinfo_8cpp" startline="211" endline="248">parse</referencedby>
+        <referencedby refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" compoundref="fwinfo_8cpp" startline="76" endline="81">validate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string host</definition>
+        <argsstring></argsstring>
+        <name>host</name>
+        <briefdescription>
+<para>Host of update firmware binary file location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="71" column="17" bodyfile="update/fwinfo.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" compoundref="fwinfo_8cpp" startline="99" endline="99">getHost</referencedby>
+        <referencedby refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" compoundref="fwinfo_8cpp" startline="159" endline="194">splitUrl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string proto</definition>
+        <argsstring></argsstring>
+        <name>proto</name>
+        <briefdescription>
+<para>Protocol specifier: &apos;<ulink url="http://&apos;">http://&apos;</ulink> or &apos;<ulink url="https://&apos;">https://&apos;</ulink>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="73" column="17" bodyfile="update/fwinfo.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" compoundref="fwinfo_8cpp" startline="135" endline="135">getProto</referencedby>
+        <referencedby refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" compoundref="fwinfo_8cpp" startline="159" endline="194">splitUrl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+<para>The filename of the update firmware binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="74" column="17" bodyfile="update/fwinfo.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" compoundref="fwinfo_8cpp" startline="108" endline="108">getFileName</referencedby>
+        <referencedby refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" compoundref="fwinfo_8cpp" startline="159" endline="194">splitUrl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fw_version</definition>
+        <argsstring></argsstring>
+        <name>fw_version</name>
+        <briefdescription>
+<para>Firmware version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="75" column="17" bodyfile="update/fwinfo.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1ab428318681b00e380d18e10b687c536f" compoundref="fwinfo_8cpp" startline="126" endline="126">getFwVersion</referencedby>
+        <referencedby refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" compoundref="fwinfo_8cpp" startline="211" endline="248">parse</referencedby>
+        <referencedby refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" compoundref="fwinfo_8cpp" startline="76" endline="81">validate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" prot="protected" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t filesize</definition>
+        <argsstring></argsstring>
+        <name>filesize</name>
+        <briefdescription>
+<para>The file size of the update firmware binary file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="76" column="13" bodyfile="update/fwinfo.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" compoundref="fwinfo_8cpp" startline="144" endline="144">getFileSize</referencedby>
+        <referencedby refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" compoundref="fwinfo_8cpp" startline="211" endline="248">parse</referencedby>
+        <referencedby refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" compoundref="fwinfo_8cpp" startline="76" endline="81">validate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fw_info_1ad9cadd855abff02cdb0ce1c0097668be" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwInfo</definition>
+        <argsstring>(char *str)</argsstring>
+        <name>FwInfo</name>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Firmware info class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OTA update topic JSON string as c string</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor copy c string parameter str into private member C++ string variable input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="44" column="14" bodyfile="update/fwinfo.cpp" bodystart="41" bodyend="44"/>
+        <references refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" compoundref="fwinfo_8h" startline="67">input</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a52cad5018211f7c297fd558cb96768c2" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwInfo</definition>
+        <argsstring>(PoolElem *msg)</argsstring>
+        <name>FwInfo</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Firmware info class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message with the OTA update topic JSON string within payload</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor ectract the c string from message payload and store it as C++ string in private member variable input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="45" column="14" bodyfile="update/fwinfo.cpp" bodystart="54" bodyend="58"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" compoundref="fwinfo_8h" startline="67">input</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwInfo</definition>
+        <argsstring>()=delete</argsstring>
+        <name>FwInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1ac116b1e5421fb502590d6d5bdb94eadc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~FwInfo</definition>
+        <argsstring>()</argsstring>
+        <name>~FwInfo</name>
+        <briefdescription>
+<para>Firmware info class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="47" column="13" bodyfile="update/fwinfo.cpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1aa033154cf0936cf2d48437d794e5ec51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwInfo</definition>
+        <argsstring>(const FwInfo &amp;)=delete</argsstring>
+        <name>FwInfo</name>
+        <param>
+          <type>const <ref refid="class_fw_info" kindref="compound">FwInfo</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a0bde698079b208ef987b928e857228c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_fw_info" kindref="compound">FwInfo</ref> &amp;</type>
+        <definition>FwInfo&amp; operator=</definition>
+        <argsstring>(const FwInfo &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_fw_info" kindref="compound">FwInfo</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="50" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a67007fc2be130666fbf3b065022756f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int parse</definition>
+        <argsstring>()</argsstring>
+        <name>parse</name>
+        <briefdescription>
+<para>Function to parse the OTA update topic JSON and extract the data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>0 in case of succeeds, -1 otherwise</para>
+</simplesect>
+The function parses the JSON string input by calling function cJSON_Parse provided by the cJSON API and store it in local variable root_obj of type struct cJSON. If parsing failed the function returns immediately with error code -1. Otherwise the objects url_obj, sha1_obj, fw_version_obj, size_obj of type struct cJSON will be extracted from root object root_obj by calling function cJSON_GetObjectItemCaseSensitive with the arguments &quot;url&quot;, &quot;sha1&quot;, &quot;fw_version&quot; and &quot;size&quot;. The resulting object value string will be stored in the private member string variables url, sha1, fw_version and filesize before deleting the root object by call of function cJSON_Delete. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="52" column="9" bodyfile="update/fwinfo.cpp" bodystart="211" bodyend="248"/>
+        <references refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" compoundref="fwinfo_8h" startline="76">filesize</references>
+        <references refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" compoundref="fwinfo_8h" startline="75">fw_version</references>
+        <references refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" compoundref="fwinfo_8h" startline="67">input</references>
+        <references refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" compoundref="fwinfo_8h" startline="69">sha1</references>
+        <references refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" compoundref="fwinfo_8h" startline="68">url</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int validate</definition>
+        <argsstring>()</argsstring>
+        <name>validate</name>
+        <briefdescription>
+<para>Function to validate the correctness of the OTA update topic JSON data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>0 in case of validation succeeds, error code -EINVAL otherwise</para>
+</simplesect>
+The function checks, if URL, firmware version, sha1 string is not empty and if filesize do not exceed 100.000 bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="53" column="9" bodyfile="update/fwinfo.cpp" bodystart="76" bodyend="81"/>
+        <references refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" compoundref="fwinfo_8h" startline="76">filesize</references>
+        <references refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" compoundref="fwinfo_8h" startline="75">fw_version</references>
+        <references refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" compoundref="fwinfo_8h" startline="69">sha1</references>
+        <references refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" compoundref="fwinfo_8h" startline="68">url</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void splitUrl</definition>
+        <argsstring>()</argsstring>
+        <name>splitUrl</name>
+        <briefdescription>
+<para>Function to split an URL into host and filename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function splits an URL into host and filename. For example: &quot;http://gomera3.ddns.net/stg/app_update.bin&quot; will be split into<itemizedlist>
+<listitem><para>host: gomera3.ddns.net</para>
+</listitem><listitem><para>filename: /stg/app_update.bin The function copy the url into a local string tmp, search for protocol part in url, store it in member variable proto and delete it from string tmp. Than it extract host string and store it in member variable host and delete it also from string tmp. Finally the remaining filename part will be stored in member variable filename. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="54" column="10" bodyfile="update/fwinfo.cpp" bodystart="159" bodyend="194"/>
+        <references refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" compoundref="fwinfo_8h" startline="74">filename</references>
+        <references refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" compoundref="fwinfo_8h" startline="71">host</references>
+        <references refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" compoundref="fwinfo_8h" startline="73">proto</references>
+        <references refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" compoundref="fwinfo_8h" startline="68">url</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getUrl</definition>
+        <argsstring>()</argsstring>
+        <name>getUrl</name>
+        <briefdescription>
+<para>Getter function to retrieve the URL string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the string containing the URL</para>
+</simplesect>
+The function returns the URL string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="55" column="17" bodyfile="update/fwinfo.cpp" bodystart="90" bodyend="90"/>
+        <references refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" compoundref="fwinfo_8h" startline="68">url</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getHost</definition>
+        <argsstring>()</argsstring>
+        <name>getHost</name>
+        <briefdescription>
+<para>Getter function to retrieve the host string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the string containing the host</para>
+</simplesect>
+The function returns the host string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="56" column="17" bodyfile="update/fwinfo.cpp" bodystart="99" bodyend="99"/>
+        <references refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" compoundref="fwinfo_8h" startline="71">host</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getFileName</definition>
+        <argsstring>()</argsstring>
+        <name>getFileName</name>
+        <briefdescription>
+<para>Getter function to retrieve the filename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the filename</para>
+</simplesect>
+The function returns the filename. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="57" column="17" bodyfile="update/fwinfo.cpp" bodystart="108" bodyend="108"/>
+        <references refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" compoundref="fwinfo_8h" startline="74">filename</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getSha1</definition>
+        <argsstring>()</argsstring>
+        <name>getSha1</name>
+        <briefdescription>
+<para>Getter function to retrieve the Secure <ref refid="class_hash" kindref="compound">Hash</ref> Algorithm Checksum string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the string containing the Secure <ref refid="class_hash" kindref="compound">Hash</ref> Algorithm Checksum</para>
+</simplesect>
+The function returns the Secure <ref refid="class_hash" kindref="compound">Hash</ref> Algorithm Checksum string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="58" column="17" bodyfile="update/fwinfo.cpp" bodystart="117" bodyend="117"/>
+        <references refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" compoundref="fwinfo_8h" startline="69">sha1</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1ab428318681b00e380d18e10b687c536f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getFwVersion</definition>
+        <argsstring>()</argsstring>
+        <name>getFwVersion</name>
+        <briefdescription>
+<para>Getter function to retrieve the firmware version string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the string containing the firmware version</para>
+</simplesect>
+The function returns the firmware version string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="59" column="17" bodyfile="update/fwinfo.cpp" bodystart="126" bodyend="126"/>
+        <references refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" compoundref="fwinfo_8h" startline="75">fw_version</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getProto</definition>
+        <argsstring>()</argsstring>
+        <name>getProto</name>
+        <briefdescription>
+<para>Getter function to retrieve the protocol specifier string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the string containing the protocol specifier</para>
+</simplesect>
+The function returns the protocol specifier string (&quot;http://&quot; or &quot;https://&quot;). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="60" column="17" bodyfile="update/fwinfo.cpp" bodystart="135" bodyend="135"/>
+        <references refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" compoundref="fwinfo_8h" startline="73">proto</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t getFileSize</definition>
+        <argsstring>()</argsstring>
+        <name>getFileSize</name>
+        <briefdescription>
+<para>Getter function to retrieve the file size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the file size</para>
+</simplesect>
+The function returns the file size in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fwinfo.h" line="61" column="13" bodyfile="update/fwinfo.cpp" bodystart="144" bodyend="144"/>
+        <references refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" compoundref="fwinfo_8h" startline="76">filesize</references>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Firmware info helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The <ref refid="class_fw_info" kindref="compound">FwInfo</ref> parses the OTA update topic JSON string, extract the content and to store it in private string member variables. It provides methods to parse the JSON string, to validate the received file size and checksum and to split an URL into host and filename. Firthermore it provides getter function to retrieve the extracted strings. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>int32_t</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>FwInfo</label>
+        <link refid="class_fw_info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#filesize</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#filename</edgelabel>
+          <edgelabel>#fw_version</edgelabel>
+          <edgelabel>#host</edgelabel>
+          <edgelabel>#input</edgelabel>
+          <edgelabel>#proto</edgelabel>
+          <edgelabel>#sha1</edgelabel>
+          <edgelabel>#url</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="update/fwinfo.h" line="42" column="1" bodyfile="update/fwinfo.h" bodystart="42" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>filename</name></member>
+      <member refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>filesize</name></member>
+      <member refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>fw_version</name></member>
+      <member refid="class_fw_info_1ad9cadd855abff02cdb0ce1c0097668be" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>FwInfo</name></member>
+      <member refid="class_fw_info_1a52cad5018211f7c297fd558cb96768c2" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>FwInfo</name></member>
+      <member refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>FwInfo</name></member>
+      <member refid="class_fw_info_1aa033154cf0936cf2d48437d794e5ec51" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>FwInfo</name></member>
+      <member refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getFileName</name></member>
+      <member refid="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getFileSize</name></member>
+      <member refid="class_fw_info_1ab428318681b00e380d18e10b687c536f" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getFwVersion</name></member>
+      <member refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getHost</name></member>
+      <member refid="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getProto</name></member>
+      <member refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getSha1</name></member>
+      <member refid="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>getUrl</name></member>
+      <member refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>host</name></member>
+      <member refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>input</name></member>
+      <member refid="class_fw_info_1a0bde698079b208ef987b928e857228c0" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>operator=</name></member>
+      <member refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>parse</name></member>
+      <member refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>proto</name></member>
+      <member refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>sha1</name></member>
+      <member refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>splitUrl</name></member>
+      <member refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" prot="protected" virt="non-virtual"><scope>FwInfo</scope><name>url</name></member>
+      <member refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" prot="public" virt="non-virtual"><scope>FwInfo</scope><name>validate</name></member>
+      <member refid="class_fw_info_1ac116b1e5421fb502590d6d5bdb94eadc" prot="public" virt="virtual"><scope>FwInfo</scope><name>~FwInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

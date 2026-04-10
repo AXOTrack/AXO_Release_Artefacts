@@ -1,0 +1,7 @@
+<map id="selectChannel" name="selectChannel">
+<area shape="rect" id="node1" title="Function to select a single ADC channel." alt="" coords="372,56,476,83"/>
+<area shape="rect" id="node2" href="$mux__controller_8cpp.html#aed77ef58b255548d38e163c6b4879901" title="Callback function for console input command &#39;select&#39;." alt="" coords="191,5,313,32"/>
+<area shape="rect" id="node3" href="$mux__controller_8cpp.html#af79cc78f7f30e56c66841ff37cf20031" title="Callback function for console input command &#39;sweep&#39;." alt="" coords="191,56,313,83"/>
+<area shape="rect" id="node4" href="$struct_a_d_converter.html#a9dc1243f3e218fb3511b33b0fae8bac8" title="Function to sample ADC data for specified channels." alt="" coords="180,107,324,133"/>
+<area shape="rect" id="node5" href="$struct_a_d_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="ADConverter task function." alt="" coords="5,107,132,133"/>
+</map>

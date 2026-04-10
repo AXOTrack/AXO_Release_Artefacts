@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structadxl37x__sensor__value" kind="struct" language="C++" prot="public">
+    <compoundname>adxl37x_sensor_value</compoundname>
+    <includes refid="adxl37x_8h" local="no">adxl37x.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref> *</type>
+        <definition>struct adxl372_xyz_accel_data* samples</definition>
+        <argsstring></argsstring>
+        <name>samples</name>
+        <briefdescription>
+<para>x, y, z axis measured acceleration data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/adxl37x.h" line="53" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t cnt</definition>
+        <argsstring></argsstring>
+        <name>cnt</name>
+        <briefdescription>
+<para>The sample counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/adxl37x.h" line="54" column="14" bodyfile="drv/spi/adxl37x.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structadxl37x__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t ts</definition>
+        <argsstring></argsstring>
+        <name>ts</name>
+        <briefdescription>
+<para>The timestamp of the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/spi/adxl37x.h" line="55" column="12" bodyfile="drv/spi/adxl37x.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure containing the measured acceleration data, a sample counter and the timestamp of measurement </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>int16_t</label>
+      </node>
+      <node id="3">
+        <label>uint16_t</label>
+      </node>
+      <node id="2">
+        <label>time_t</label>
+      </node>
+      <node id="1">
+        <label>adxl37x_sensor_value</label>
+        <link refid="structadxl37x__sensor__value"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+ts</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+cnt</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+samples</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>adxl372_xyz_accel_data</label>
+        <link refid="structadxl372__xyz__accel__data"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+x</edgelabel>
+          <edgelabel>+y</edgelabel>
+          <edgelabel>+z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="drv/spi/adxl37x.h" line="51" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="51" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" prot="public" virt="non-virtual"><scope>adxl37x_sensor_value</scope><name>cnt</name></member>
+      <member refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" prot="public" virt="non-virtual"><scope>adxl37x_sensor_value</scope><name>samples</name></member>
+      <member refid="structadxl37x__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" prot="public" virt="non-virtual"><scope>adxl37x_sensor_value</scope><name>ts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

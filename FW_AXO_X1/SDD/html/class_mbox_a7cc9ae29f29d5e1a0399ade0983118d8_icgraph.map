@@ -1,0 +1,22 @@
+<map id="registerMbox" name="registerMbox">
+<area shape="rect" id="node1" title="Mbox register function." alt="" coords="260,461,357,488"/>
+<area shape="rect" id="node2" href="$struct_a_d_converter.html#adf17391456f6e7aa288440dd96357b52" title="AD converter task constructor." alt="" coords="21,5,196,32"/>
+<area shape="rect" id="node3" href="$struct_adxl37x.html#a97ada7139b0b7a2f9da33f33213e2a4d" title="Adxl data store task constructor." alt="" coords="47,56,171,83"/>
+<area shape="rect" id="node4" href="$class_adxl_data_store.html#ab19b95ca9ddccefb6751a415d378d435" title="Adxl data store task constructor." alt="" coords="9,107,208,133"/>
+<area shape="rect" id="node5" href="$class_battery_mgr.html#ace116e681eb0d364d2896609269c0918" title="Battery manager task constructor." alt="" coords="29,157,188,184"/>
+<area shape="rect" id="node6" href="$class_boost_converter.html#a88773507fbf105e4141ed56ca8ebd3b0" title="Boost converter task constructor." alt="" coords="5,208,212,235"/>
+<area shape="rect" id="node7" href="$class_data_manager.html#af88c046ebc43d084f223a0f735428663" title="Data manager task constructor." alt="" coords="17,259,201,285"/>
+<area shape="rect" id="node8" href="$class_disp_task.html#aee25f0863424116d053cbf1fdae5e961" title="Displacement task constructor." alt="" coords="39,309,178,336"/>
+<area shape="rect" id="node9" href="$class_fw_upd.html#a2733937cfc01da7cb39c6c3db38d1474" title="Firmware update task constructor." alt="" coords="53,360,164,387"/>
+<area shape="rect" id="node10" href="$class_fw_upd_ctrl.html#aa124fe852a7fef997df6ab7b091cb009" title="Firmware update control task constructor." alt="" coords="33,411,184,437"/>
+<area shape="rect" id="node11" href="$class_http_connector.html#a1ac5b7fa21b7ffe5b6cc6fb7521a4986" title="HttpConnector task constructor." alt="" coords="11,461,207,488"/>
+<area shape="rect" id="node12" href="$class_hw_metrics.html#a438ce09cd973637d1f79224263aecf2b" title="HW metrics task constructor." alt="" coords="33,512,185,539"/>
+<area shape="rect" id="node13" href="$class_lte_connector.html#a5e1168a86240e86f2371342437b8900a" title="LteConnector task constructor." alt="" coords="17,563,201,589"/>
+<area shape="rect" id="node14" href="$class_lte_monitor.html#a52dfe336488f1e7407760266fe5de338" title="LTE monitor task constructor." alt="" coords="33,613,185,640"/>
+<area shape="rect" id="node15" href="$class_mqtt_connector.html#ac2ad488365bf0512988f929fa1983a1e" title="MqttConnector task constructor." alt="" coords="9,664,209,691"/>
+<area shape="rect" id="node16" href="$class_power_mgr.html#a0e9dce728e1934dd3185de7b8d5cb957" title="Power manager task constructor." alt="" coords="35,715,182,741"/>
+<area shape="rect" id="node17" href="$class_reset_ctrl.html#ae8ed38498e7322a40aa6b0a2632af26d" title="Reset control task constructor." alt="" coords="39,765,178,792"/>
+<area shape="rect" id="node18" href="$class_rms_store.html#afa16a4250cde665dfc713e95e1c42f15" title="RMS storage task constructor." alt="" coords="35,816,182,843"/>
+<area shape="rect" id="node19" href="$class_rms_task.html#a93f0dabed5d00e46a0c2239dbea4f642" title="RMS task constructor." alt="" coords="39,867,179,893"/>
+<area shape="rect" id="node20" href="$class_shtcx.html#a19a654e3605451204cc9340fbc8dbf79" title="Shtcx task constructor." alt="" coords="59,917,158,944"/>
+</map>

@@ -1,0 +1,686 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="config_8h" kind="file" language="C++">
+    <compoundname>config.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="config_8cpp" local="yes">conf/config.cpp</includedby>
+    <includedby refid="adxl__store_8cpp" local="yes">data/adxl_store.cpp</includedby>
+    <includedby refid="measurement_8cpp" local="yes">data/measurement.cpp</includedby>
+    <includedby refid="pdata_8cpp" local="yes">data/pdata.cpp</includedby>
+    <includedby refid="disptask_8cpp" local="yes">disp/disptask.cpp</includedby>
+    <includedby refid="shtcx_8cpp" local="yes">drv/i2c/shtcx.cpp</includedby>
+    <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="power__mgr_8cpp" local="yes">pm/power_mgr.cpp</includedby>
+    <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>conf/config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="8">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="3">
+        <label>conf/config.cpp</label>
+        <link refid="config_8cpp"/>
+      </node>
+      <node id="6">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="5">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="13">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="1">
+        <label>conf/config.h</label>
+        <link refid="config_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="12">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="11">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="9">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__st_cfg_general" prot="public">_stCfgGeneral</innerclass>
+    <innerclass refid="struct__st_cfg_sensor" prot="public">_stCfgSensor</innerclass>
+    <innerclass refid="struct__st_cfg_metrics" prot="public">_stCfgMetrics</innerclass>
+    <innerclass refid="struct__st_cfg_displacement" prot="public">_stCfgDisplacement</innerclass>
+    <innerclass refid="struct__st_cfg_datalog" prot="public">_stCfgDatalog</innerclass>
+    <innerclass refid="class_config" prot="public">Config</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02" prot="public" static="no">
+        <name>CONFIG_VERSION</name>
+        <initializer>&quot;0.8.0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition of the configuration version 0 in the last number indicates default version </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="110" column="9" bodyfile="conf/config.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1af7c3cf5230670f1fd6319f5561217f31" prot="public" static="no">
+        <name>CONFIG_DEVICE_NAME</name>
+        <initializer>&quot;axo2&quot;</initializer>
+        <briefdescription>
+<para>Definition of the device name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="112" column="9" bodyfile="conf/config.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a3549495c2b388784973f2f44369f67a1" prot="public" static="no">
+        <name>CONFIG_DEVICE_TYPE</name>
+        <initializer>&quot;9160&quot;</initializer>
+        <briefdescription>
+<para>Definition of the device type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="114" column="9" bodyfile="conf/config.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a8ed5706c6752b7807d96234f785e1f82" prot="public" static="no">
+        <name>CONFIG_ACCEL_SENS_NAME</name>
+        <initializer>&quot;adxl372&quot;</initializer>
+        <briefdescription>
+<para>Definition of the acceleration sensor name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="116" column="9" bodyfile="conf/config.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1abc5d899c6513b249163dc0de644ed4d2" prot="public" static="no">
+        <name>CONFIG_ACCEL_SENS_TYPE</name>
+        <initializer>&quot;accel&quot;</initializer>
+        <briefdescription>
+<para>Definition of the acceleration sensor type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="118" column="9" bodyfile="conf/config.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1af3a37ddad69a98c185798e80a58dcbdb" prot="public" static="no">
+        <name>CONFIG_FILENAME</name>
+        <initializer>&quot;/lfs/config.json&quot;</initializer>
+        <briefdescription>
+<para>Definition of the configuration file name and location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="122" column="12" bodyfile="conf/config.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1ac5a47791d04046a9354f867b91c1f216" prot="public" static="no">
+        <name>CONFIG_JSON_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+<para>Definition of the maximum configuration size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="128" column="9" bodyfile="conf/config.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a96ae51ec4a58a4a86a530f4796f1f590" prot="public" static="no">
+        <name>FRAM_5_SEC_RAW_DATA_SPACE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition of FRAM raw data storage time when diplacement calculation is enabled </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="132" column="9" bodyfile="conf/config.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a6ad2a73820aa8c8a5b865b810fad1ac2" prot="public" static="no">
+        <name>FRAM_15_SEC_RAW_DATA_SPACE</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Definition of FRAM raw data storage time when diplacement calculation is disabled </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="136" column="9" bodyfile="conf/config.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1ac87c41a1e712fb2612375468da55b7ba" prot="public" static="no">
+        <name>MIN_ACT_THRESHOLD_STR</name>
+        <initializer>&quot;200&quot;</initializer>
+        <briefdescription>
+<para>Definition of the miniumum activation threshold string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="139" column="9" bodyfile="conf/config.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a1f2eb35f54f623585f342a14ca2de33f" prot="public" static="no">
+        <name>MAX_ACT_THRESHOLD_STR</name>
+        <initializer>&quot;49800&quot;</initializer>
+        <briefdescription>
+<para>Definition of the maxiumum activation threshold string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="141" column="9" bodyfile="conf/config.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a476feef5798188ae0332302cf96da100" prot="public" static="no">
+        <name>MAX_DEACT_THRESHOLD_STR</name>
+        <initializer>&quot;50000&quot;</initializer>
+        <briefdescription>
+<para>Definition of the maxiumum deactivation threshold string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="143" column="9" bodyfile="conf/config.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a70b42f710ea45d269a511bc990063975" prot="public" static="no">
+        <name>MIN_ACT_THRESHOLD</name>
+        <initializer>200</initializer>
+        <briefdescription>
+<para>Definition of the miniumum activation threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="145" column="9" bodyfile="conf/config.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a49f1cb9ea995633108848d99a04c8b22" prot="public" static="no">
+        <name>MAX_ACT_THRESHOLD</name>
+        <initializer>49800</initializer>
+        <briefdescription>
+<para>Definition of the maxiumum activation threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="147" column="9" bodyfile="conf/config.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a006bf46c2e9e0e5d55f7c41aacef79e5" prot="public" static="no">
+        <name>MAX_DEACT_THRESHOLD</name>
+        <initializer>50000</initializer>
+        <briefdescription>
+<para>Definition of the maxiumum deactivation threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="149" column="9" bodyfile="conf/config.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1aa9ceed8e2ebc20706ee07fdbdf7e4b93" prot="public" static="no">
+        <name>MIN_ACT_DEACT_DIFF</name>
+        <initializer>200</initializer>
+        <briefdescription>
+<para>Definition of the miniumum activation/deactivation difference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="151" column="9" bodyfile="conf/config.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1a4ee7a829c5381c740209151002eda3c7" prot="public" static="no">
+        <name>VAL_NOT_INITIALIZED_FLOAT</name>
+        <initializer>-99999.0</initializer>
+        <briefdescription>
+<para>Definition of float value for uninitialized variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="154" column="9" bodyfile="conf/config.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="config_8h_1ae0844591b2474dfebc9992bba67c617c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>_enCfgSensorId</name>
+        <enumvalue id="config_8h_1ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3" prot="public">
+          <name>eSensor_adxl372</name>
+          <briefdescription>
+<para>Acceleration sensor ADXL372. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config_8h_1ae0844591b2474dfebc9992bba67c617cafada96a1159c3171c1d10fafb70530c1" prot="public">
+          <name>eSensor_MAX</name>
+          <briefdescription>
+<para>Number of sensors mentioned in dynamic configuration. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration mention the sensors to be configured dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="157" column="1" bodyfile="conf/config.h" bodystart="157" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="config_8h_1a2aa0ac06adcc561c573aebc9d2c84735" prot="public" static="no">
+        <type>enum <ref refid="config_8h_1ae0844591b2474dfebc9992bba67c617c" kindref="member">_enCfgSensorId</ref></type>
+        <definition>typedef enum _enCfgSensorId enCfgSensorId</definition>
+        <argsstring></argsstring>
+        <name>enCfgSensorId</name>
+        <briefdescription>
+<para>Enumeration mention the sensors to be configured dynamically. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="160" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="config_8h_1a4b760cee435ce5b5cad9bdb7f2e976e4" prot="public" static="no">
+        <type>struct <ref refid="struct__st_cfg_general" kindref="compound">_stCfgGeneral</ref></type>
+        <definition>typedef struct _stCfgGeneral stCfgGeneral</definition>
+        <argsstring></argsstring>
+        <name>stCfgGeneral</name>
+        <briefdescription>
+<para>Structure for general related dynamic configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="167" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="config_8h_1ae4748f9659f6e54fd5212402d461a14b" prot="public" static="no">
+        <type>struct <ref refid="struct__st_cfg_sensor" kindref="compound">_stCfgSensor</ref></type>
+        <definition>typedef struct _stCfgSensor stCfgSensor</definition>
+        <argsstring></argsstring>
+        <name>stCfgSensor</name>
+        <briefdescription>
+<para>Structure for sensor related dynamic configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="175" column="13"/>
+      </memberdef>
+      <memberdef kind="typedef" id="config_8h_1acdb49406321a50693308cf8efc0e46d8" prot="public" static="no">
+        <type>struct <ref refid="struct__st_cfg_metrics" kindref="compound">_stCfgMetrics</ref></type>
+        <definition>typedef struct _stCfgMetrics stCfgMetrics</definition>
+        <argsstring></argsstring>
+        <name>stCfgMetrics</name>
+        <briefdescription>
+<para>Structure for metrics related dynamic configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="180" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="config_8h_1a4f488f2053de5813c65b297bf5d5882d" prot="public" static="no">
+        <type>struct <ref refid="struct__st_cfg_displacement" kindref="compound">_stCfgDisplacement</ref></type>
+        <definition>typedef struct _stCfgDisplacement stCfgDisplacement</definition>
+        <argsstring></argsstring>
+        <name>stCfgDisplacement</name>
+        <briefdescription>
+<para>Structure for displacement related dynamic configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="185" column="19"/>
+      </memberdef>
+      <memberdef kind="typedef" id="config_8h_1a398de94e30a56bd329e10eaadf90aa2f" prot="public" static="no">
+        <type>struct <ref refid="struct__st_cfg_datalog" kindref="compound">_stCfgDatalog</ref></type>
+        <definition>typedef struct _stCfgDatalog stCfgDatalog</definition>
+        <argsstring></argsstring>
+        <name>stCfgDatalog</name>
+        <briefdescription>
+<para>Structure for datalog related dynamic configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="200" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of <ref refid="class_config" kindref="compound">Config</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="config_8h_1Config"/> <simplesect kind="par"><title>Detailed Description </title><para>JSON (JavaScript Object Notation) is a lightweight data- interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language. <linebreak/>
+ JSON is built on two structures:<itemizedlist>
+<listitem><para>A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.</para>
+</listitem><listitem><para>An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence. These are universal data structures. Virtually all modern programming languages support them in one form or another. It makes sense that a data format that is interchangeable with programming languages also be based on these structures. <linebreak/>
+ In JSON, they take on these forms: <linebreak/>
+ An object is an unordered set of name/value pairs. An object begins with &apos;{&apos; (left brace) and ends with &apos;}&apos; (right brace). Each name is followed by &apos;:&apos; (colon) and the name/value pairs are separated by &apos;,&apos; (comma). <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<linebreak/>
+ <subscript>Source: <ulink url="https://www.json.org/json-en.html">https://www.json.org/json-en.html</ulink></subscript> <linebreak/>
+ A simple example based on the used configuration structure: <linebreak/>
+example config structure <linebreak/>
+ /group/entry index/list of key:value pairs <linebreak/>
+ <linebreak/>
+ /general/0/name <linebreak/>
+ /general/0/type <linebreak/>
+ /general/0/version <linebreak/>
+ <linebreak/>
+ /sensors/0/name <linebreak/>
+ /sensors/0/type <linebreak/>
+ /sensors/0/actthres <linebreak/>
+ /sensors/0/deactthres <linebreak/>
+ <linebreak/>
+ /metrics/0/interval <linebreak/>
+ <linebreak/>
+ /displacement/0/b1 <linebreak/>
+<linebreak/>
+/datalog/0/dispmodeoff <linebreak/>
+ /datalog/0/rawtransferon <linebreak/>
+ /datalog/0/disptransferon <linebreak/>
+ /datalog/0/rms_thres <linebreak/>
+<linebreak/>
+ json representation <linebreak/>
+ { <linebreak/>
+ &quot;general&quot;: [ <linebreak/>
+ { <linebreak/>
+ &quot;name&quot;: &quot;axo2&quot;, <linebreak/>
+ &quot;type&quot;: &quot;9160&quot;, <linebreak/>
+ &quot;version&quot;: &quot;0.7.1&quot; <linebreak/>
+ } <linebreak/>
+ ], <linebreak/>
+ &quot;sensors&quot;: [ <linebreak/>
+ { <linebreak/>
+ &quot;name&quot;: &quot;adxl372&quot;, <linebreak/>
+ &quot;type&quot;: &quot;accel&quot;, <linebreak/>
+ &quot;actthres&quot;: &quot;2000&quot; // assume x,y,and z activation thresholds are allways equal <linebreak/>
+ &quot;deactthres&quot;: &quot;2500&quot; // assume x,y,and z deactivation thresholds are allways equal <linebreak/>
+ } <linebreak/>
+ ], <linebreak/>
+ &quot;metrics&quot;: [ <linebreak/>
+ { <linebreak/>
+ &quot;interval&quot; : &quot;120&quot; // in minutes = every 2h <linebreak/>
+ } <linebreak/>
+ ], <linebreak/>
+ &quot;displacement&quot;: [ <linebreak/>
+ { <linebreak/>
+ &quot;b1&quot; : &quot;1.0&quot; // beautification factor <linebreak/>
+ } <linebreak/>
+ ], <linebreak/>
+ &quot;datalog&quot;: [ <linebreak/>
+ { <linebreak/>
+ &quot;dispmodeoff&quot; : &quot;false&quot;, <linebreak/>
+ &quot;rawtransferon&quot; : &quot;true&quot;, <linebreak/>
+ &quot;disptransferon&quot; : &quot;true&quot;, <linebreak/>
+ &quot;rms_thres&quot; : &quot;65&quot;, &quot;max_raw_per_day&quot; : &quot;5&quot; <linebreak/>
+ } <linebreak/>
+ ] } <linebreak/>
+</para>
+<para><simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_CONF_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_CONF_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="config_8h_1a33fbd7e91d033fa1e09b4ed4de899c02" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIG_VERSION<sp/>&quot;0.8.0&quot;</highlight></codeline>
+<codeline lineno="112" refid="config_8h_1af7c3cf5230670f1fd6319f5561217f31" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIG_DEVICE_NAME<sp/>&quot;axo2&quot;</highlight></codeline>
+<codeline lineno="114" refid="config_8h_1a3549495c2b388784973f2f44369f67a1" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIG_DEVICE_TYPE<sp/>&quot;9160&quot;</highlight></codeline>
+<codeline lineno="116" refid="config_8h_1a8ed5706c6752b7807d96234f785e1f82" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIG_ACCEL_SENS_NAME<sp/>&quot;adxl372&quot;</highlight></codeline>
+<codeline lineno="118" refid="config_8h_1abc5d899c6513b249163dc0de644ed4d2" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIG_ACCEL_SENS_TYPE<sp/>&quot;accel&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_DATA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="config_8h_1af3a37ddad69a98c185798e80a58dcbdb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>CONFIG_FILENAME<sp/>&quot;/lfs/config.json&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>CONFIG_FILENAME<sp/>&quot;/workspaces/prometheus-xl-firmware/tests/conf/config.json&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="config_8h_1ac5a47791d04046a9354f867b91c1f216" refkind="member"><highlight class="preprocessor">#define<sp/>CONFIG_JSON_SIZE<sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="config_8h_1a96ae51ec4a58a4a86a530f4796f1f590" refkind="member"><highlight class="preprocessor">#define<sp/>FRAM_5_SEC_RAW_DATA_SPACE<sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="config_8h_1a6ad2a73820aa8c8a5b865b810fad1ac2" refkind="member"><highlight class="preprocessor">#define<sp/>FRAM_15_SEC_RAW_DATA_SPACE<sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="config_8h_1ac87c41a1e712fb2612375468da55b7ba" refkind="member"><highlight class="preprocessor">#define<sp/>MIN_ACT_THRESHOLD_STR<sp/>&quot;200&quot;</highlight></codeline>
+<codeline lineno="141" refid="config_8h_1a1f2eb35f54f623585f342a14ca2de33f" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_ACT_THRESHOLD_STR<sp/>&quot;49800&quot;</highlight></codeline>
+<codeline lineno="143" refid="config_8h_1a476feef5798188ae0332302cf96da100" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_DEACT_THRESHOLD_STR<sp/>&quot;50000&quot;</highlight></codeline>
+<codeline lineno="145" refid="config_8h_1a70b42f710ea45d269a511bc990063975" refkind="member"><highlight class="preprocessor">#define<sp/>MIN_ACT_THRESHOLD<sp/>200</highlight></codeline>
+<codeline lineno="147" refid="config_8h_1a49f1cb9ea995633108848d99a04c8b22" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_ACT_THRESHOLD<sp/>49800</highlight></codeline>
+<codeline lineno="149" refid="config_8h_1a006bf46c2e9e0e5d55f7c41aacef79e5" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_DEACT_THRESHOLD<sp/>50000</highlight></codeline>
+<codeline lineno="151" refid="config_8h_1aa9ceed8e2ebc20706ee07fdbdf7e4b93" refkind="member"><highlight class="preprocessor">#define<sp/>MIN_ACT_DEACT_DIFF<sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="config_8h_1a4ee7a829c5381c740209151002eda3c7" refkind="member"><highlight class="preprocessor">#define<sp/>VAL_NOT_INITIALIZED_FLOAT<sp/>-99999.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="config_8h_1ae0844591b2474dfebc9992bba67c617c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="config_8h_1ae0844591b2474dfebc9992bba67c617c" kindref="member">_enCfgSensorId</ref><sp/>{</highlight></codeline>
+<codeline lineno="158" refid="config_8h_1ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="config_8h_1ae0844591b2474dfebc9992bba67c617caab5ddbf0cf8282e555b3659d4abfc4f3" kindref="member">eSensor_adxl372</ref>,<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="config_8h_1ae0844591b2474dfebc9992bba67c617cafada96a1159c3171c1d10fafb70530c1" kindref="member">eSensor_MAX</ref><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="config_8h_1a2aa0ac06adcc561c573aebc9d2c84735" refkind="member"><highlight class="normal">}<sp/><ref refid="config_8h_1a2aa0ac06adcc561c573aebc9d2c84735" kindref="member">enCfgSensorId</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="struct__st_cfg_general" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_cfg_general" kindref="compound">_stCfgGeneral</ref><sp/>{</highlight></codeline>
+<codeline lineno="164" refid="struct__st_cfg_general_1a9b45b3e13bd9167aab02e17e08916231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_general_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165" refid="struct__st_cfg_general_1a75b160f574a0be26114bae2c7686a5e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_general_1a75b160f574a0be26114bae2c7686a5e1" kindref="member">type</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166" refid="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" kindref="member">version</ref>;<sp/></highlight></codeline>
+<codeline lineno="167" refid="config_8h_1a4b760cee435ce5b5cad9bdb7f2e976e4" refkind="member"><highlight class="normal">}<sp/><ref refid="config_8h_1a4b760cee435ce5b5cad9bdb7f2e976e4" kindref="member">stCfgGeneral</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="struct__st_cfg_sensor" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_cfg_sensor" kindref="compound">_stCfgSensor</ref><sp/>{</highlight></codeline>
+<codeline lineno="171" refid="struct__st_cfg_sensor_1a9b45b3e13bd9167aab02e17e08916231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_sensor_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="struct__st_cfg_sensor_1a75b160f574a0be26114bae2c7686a5e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_sensor_1a75b160f574a0be26114bae2c7686a5e1" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="struct__st_cfg_sensor_1a1c3f263cd40107d822599e0480a1687f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_sensor_1a1c3f263cd40107d822599e0480a1687f" kindref="member">actthres</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="struct__st_cfg_sensor_1af360798e10a59792b4b0c7649a42bcdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_sensor_1af360798e10a59792b4b0c7649a42bcdc" kindref="member">deactthres</ref>;<sp/></highlight></codeline>
+<codeline lineno="175" refid="config_8h_1ae4748f9659f6e54fd5212402d461a14b" refkind="member"><highlight class="normal">}<sp/><ref refid="config_8h_1ae4748f9659f6e54fd5212402d461a14b" kindref="member">stCfgSensor</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="struct__st_cfg_metrics" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_cfg_metrics" kindref="compound">_stCfgMetrics</ref><sp/>{</highlight></codeline>
+<codeline lineno="179" refid="struct__st_cfg_metrics_1ab8b9782271e1e1dbc979e54616b4f1e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_metrics_1ab8b9782271e1e1dbc979e54616b4f1e2" kindref="member">interval</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="180" refid="config_8h_1acdb49406321a50693308cf8efc0e46d8" refkind="member"><highlight class="normal">}<sp/><ref refid="config_8h_1acdb49406321a50693308cf8efc0e46d8" kindref="member">stCfgMetrics</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="struct__st_cfg_displacement" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_cfg_displacement" kindref="compound">_stCfgDisplacement</ref><sp/>{</highlight></codeline>
+<codeline lineno="184" refid="struct__st_cfg_displacement_1a5667be314bbfb5cd43a7932e3327a556" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_displacement_1a5667be314bbfb5cd43a7932e3327a556" kindref="member">b1</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="config_8h_1a4f488f2053de5813c65b297bf5d5882d" refkind="member"><highlight class="normal">}<sp/><ref refid="config_8h_1a4f488f2053de5813c65b297bf5d5882d" kindref="member">stCfgDisplacement</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="struct__st_cfg_datalog" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_cfg_datalog" kindref="compound">_stCfgDatalog</ref><sp/>{<sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" kindref="member">dispmodeoff</ref>;<sp/></highlight></codeline>
+<codeline lineno="192" refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" refkind="member"><highlight class="normal"><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" kindref="member">rawtransferon</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" refkind="member"><highlight class="normal"><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" kindref="member">disptransferon</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="196" refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" refkind="member"><highlight class="normal"><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" kindref="member">rms_thres</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" refkind="member"><highlight class="normal"><sp/><sp/><sp/>std::string<sp/><ref refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" kindref="member">max_raw_per_day</ref>;<sp/></highlight></codeline>
+<codeline lineno="200" refid="config_8h_1a398de94e30a56bd329e10eaadf90aa2f" refkind="member"><highlight class="normal">}<sp/><ref refid="config_8h_1a398de94e30a56bd329e10eaadf90aa2f" kindref="member">stCfgDatalog</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="class_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_config" kindref="compound">Config</ref><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_config" kindref="compound">Config</ref>*<sp/><ref refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>json<sp/>from<sp/>file<sp/>to<sp/>input<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" kindref="member">loadFromFile</ref>(std::string&amp;<sp/>CfgDefault);<sp/><sp/></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>object<sp/>representation<sp/>in<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1af2f473fab5c40aea9a21e89011c959d6" kindref="member">parse</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON**<sp/>jsonObj,<sp/>std::string&amp;<sp/>jsonStr);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_config_1accd2600060dbaee3a3b41aed4034c63c" kindref="member">dump</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>representation<sp/>to<sp/>console<sp/>for<sp/>debugging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1a774b533b0a7a6ba5dbe9214642f04245" kindref="member">save</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>modified<sp/>object<sp/>representation<sp/>to<sp/>input<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" kindref="member">saveToFile</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>input<sp/>string<sp/>to<sp/>json<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" kindref="member">saveToFile</ref>(std::string<sp/>config);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write<sp/>input<sp/>string<sp/>to<sp/>json<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" kindref="member">parseAllValues</ref>();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>test<sp/>if<sp/>group<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1a903c205c1da997fe1d8e98c035e2849e" kindref="member">groupExists</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>jsonObj,<sp/>std::string<sp/>group);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>new<sp/>group,<sp/>return<sp/>0<sp/>on<sp/>success</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>addGroup(std::string<sp/>group);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>number<sp/>of<sp/>sub-elements<sp/>of<sp/>a<sp/>group</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1a74e15929b45b42d60c16ad056fa1c08f" kindref="member">getGroupEntries</ref>(std::string<sp/>group);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>sub-element<sp/>(new<sp/>array<sp/>entry<sp/>at<sp/>index)<sp/>to<sp/>an<sp/>existing<sp/>group</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>index<sp/>of<sp/>newly<sp/>created<sp/>sub-element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>addGroupEntry(std::string<sp/>group);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>test<sp/>if<sp/>key/value<sp/>pair<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1aa460c63f759b01e49ebb29e32dfd2771" kindref="member">keyExists</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>jsonObj,<sp/>std::string<sp/>group,<sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>std::string<sp/>key);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>new<sp/>key/value<sp/>pair<sp/>to<sp/>group<sp/>entry<sp/>at<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>addValue(std::string<sp/>group,<sp/>int<sp/>index,<sp/>std::string<sp/>key,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>val);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>value<sp/>for<sp/>key<sp/>in<sp/>group<sp/>entry<sp/>at<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>usage<sp/>example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::string<sp/>myValue<sp/>=<sp/>getValue(&quot;sensors&quot;,<sp/>0,<sp/>&quot;name&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_config_1abbed406bd7169794eed499057c17142e" kindref="member">getValue</ref>(std::string<sp/>group,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>std::string<sp/>key);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_config_1abbed406bd7169794eed499057c17142e" kindref="member">getValue</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>jsonObj,<sp/>std::string<sp/>group,<sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>std::string<sp/>key);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>value<sp/>for<sp/>key<sp/>in<sp/>group<sp/>entry<sp/>at<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>usage<sp/>example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>setValue(&quot;sensors&quot;,<sp/>1,<sp/>&quot;srate&quot;,<sp/>&quot;25&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" kindref="member">setValue</ref>(std::string<sp/>group,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>std::string<sp/>key,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>val);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" kindref="member">setValue</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>jsonObj,<sp/>std::string<sp/>group,<sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/>std::string<sp/>key,<sp/>std::string<sp/>val);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1aeb17b0c3b98160784d6f58a58025ba39" kindref="member">isValid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buf);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>isValid();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_config_1a4530f1c50511acfe103d8788a85d3500" kindref="member">Autocorrection</ref>();</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_config_1a54dfba499c9d9e1003d4c9bcbe6ad1c5" kindref="member">~Config</ref>();</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="class_config_1a52b64caee9a1f9f56acb8ba05ab06d72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_config_1a52b64caee9a1f9f56acb8ba05ab06d72" kindref="member">Config</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_config" kindref="compound">Config</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Disallow<sp/>copying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="class_config_1adea0710cb91e80fb3835a70cc391ec5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_config" kindref="compound">Config</ref>&amp;<sp/><ref refid="class_config_1adea0710cb91e80fb3835a70cc391ec5b" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_config" kindref="compound">Config</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_general" kindref="compound">stCfgGeneral</ref>*<sp/><ref refid="class_config_1a71f686389bd27e3ca44ab2587ccea9fa" kindref="member">getCfgGeneral</ref>();</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_metrics" kindref="compound">stCfgMetrics</ref>*<sp/><ref refid="class_config_1af106da5a3b67f694963b29186df4b3c1" kindref="member">getCfgMetrics</ref>();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_datalog" kindref="compound">stCfgDatalog</ref>*<sp/><ref refid="class_config_1ae6395cad5f0583a45336e008ea4d05fe" kindref="member">getCfgDatalog</ref>();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_displacement" kindref="compound">stCfgDisplacement</ref>*<sp/><ref refid="class_config_1a02b9c58f87dbf3269338120d45fbe187" kindref="member">getCfgDisplacement</ref>();</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_sensor" kindref="compound">stCfgSensor</ref>*<sp/><sp/><ref refid="class_config_1a62de71d61d609823188d5f85550de01d" kindref="member">getCfgSensor</ref>(<ref refid="config_8h_1a2aa0ac06adcc561c573aebc9d2c84735" kindref="member">enCfgSensorId</ref><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_config_1af1e95a316d50179890c000585e59971f" kindref="member">getConfigJson</ref>();</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_config_1a6e68de84123711b6e53a49c3279606ea" kindref="member">deleteConfigFile</ref>();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_config_1a539a941e29cde8d13e413c515d9801cd" kindref="member">Config</ref>();</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>helper<sp/>counting<sp/>sub-elements<sp/>of<sp/>a<sp/>group<sp/>(represented<sp/>as<sp/>json<sp/>array)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_config_1ac290477e6f4657db9fea69e972aaaac5" kindref="member">getArraySize</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>array_obj);</highlight></codeline>
+<codeline lineno="305" refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" kindref="member">input</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306" refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">cJSON*<sp/><ref refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" kindref="member">root_obj</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="308" refid="class_config_1a6859fe47ce99cac240f725558def3522" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_general" kindref="compound">stCfgGeneral</ref><sp/><ref refid="class_config_1a6859fe47ce99cac240f725558def3522" kindref="member">cfgGeneral</ref>;<sp/></highlight></codeline>
+<codeline lineno="309" refid="class_config_1a5ea632fc10c6c6b5122db4633361876e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_metrics" kindref="compound">stCfgMetrics</ref><sp/><ref refid="class_config_1a5ea632fc10c6c6b5122db4633361876e" kindref="member">cfgMetrics</ref>;<sp/></highlight></codeline>
+<codeline lineno="310" refid="class_config_1a240992a38c57e28c8d701fd42775da79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_datalog" kindref="compound">stCfgDatalog</ref><sp/><ref refid="class_config_1a240992a38c57e28c8d701fd42775da79" kindref="member">cfgDatalog</ref>;<sp/></highlight></codeline>
+<codeline lineno="312" refid="class_config_1a3fba147b9320f4379816dc9e3cde78e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_displacement" kindref="compound">stCfgDisplacement</ref><sp/><ref refid="class_config_1a3fba147b9320f4379816dc9e3cde78e2" kindref="member">cfgDisplacement</ref>;<sp/></highlight></codeline>
+<codeline lineno="314" refid="class_config_1a76bed1aa3e568f829c50a7b4a964b178" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_cfg_sensor" kindref="compound">stCfgSensor</ref><sp/><ref refid="class_config_1a76bed1aa3e568f829c50a7b4a964b178" kindref="member">cfgSensor</ref>[<ref refid="config_8h_1ae0844591b2474dfebc9992bba67c617cafada96a1159c3171c1d10fafb70530c1" kindref="member">eSensor_MAX</ref>];</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1a1d86b351ff36c4701678061905b6b81d" kindref="member">isVersionValid</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>jsonObj);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_config_1a2a0c69b43b4f102dcc0920d0161961ad" kindref="member">mergeConfig</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>rootObj,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>cJSON*<sp/>loadObj);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1a4e1044ab996356d6bd82d2b8b2807a40" kindref="member">areValuesStrings</ref>(std::string<sp/>group);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1aadb926eb277206bb5233c44ca10803fa" kindref="member">strIsInt</ref>(std::string&amp;<sp/>strInput);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1aee4afa7ec317587fc74e0fb88fb4bd3b" kindref="member">strIsFloat</ref>(std::string&amp;<sp/>strInput);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_config_1a35ee662621cdcc9aadce8a5ad8963c51" kindref="member">strIsBool</ref>(std::string&amp;<sp/>strInput);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_CONF_CONFIG_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="conf/config.h"/>
+  </compounddef>
+</doxygen>

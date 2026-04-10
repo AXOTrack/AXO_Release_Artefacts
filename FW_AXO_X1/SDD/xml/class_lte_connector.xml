@@ -1,0 +1,732 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_lte_connector" kind="class" language="C++" prot="public">
+    <compoundname>LteConnector</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="lte__connector_8h" local="no">lte_connector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_lte_connector_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mailbox of the LTE connector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="133" column="10" bodyfile="net/lte_connector.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+        <referencedby refid="class_lte_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__connector_8cpp" startline="279" endline="284">timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* myTimer</definition>
+        <argsstring></argsstring>
+        <name>myTimer</name>
+        <briefdescription>
+<para>One shot timer to control connection timeout and connection retry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="135" column="11" bodyfile="net/lte_connector.h" bodystart="135" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lte_connector_1adf18399d173e7d82e6e2ffba85d1d9e2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bLteConnected</definition>
+        <argsstring></argsstring>
+        <name>bLteConnected</name>
+        <briefdescription>
+<para>Flag indicating if LTE is connected or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="138" column="10" bodyfile="net/lte_connector.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_connector_1af50dd6cc4530bebb458192cce218089e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bConnectRetry</definition>
+        <argsstring></argsstring>
+        <name>bConnectRetry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if connect retry is active or not </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="139" column="10" bodyfile="net/lte_connector.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_connector_1a57e0d12afdc19f1ae7b34c9ce1572f55" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* listeners[max_listeners]</definition>
+        <argsstring>[max_listeners]</argsstring>
+        <name>listeners</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array with pointer to the mailboxes of the listener tasks </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="151" column="10" bodyfile="net/lte_connector.h" bodystart="151" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">notify</referencedby>
+        <referencedby refid="class_lte_connector_1afc13f73534545936ae6edadc7c9c43f3" compoundref="lte__connector_8cpp" startline="340" endline="354">registerListener</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_lte_connector_1a27552af4f0ce526fb27b36beda3e300e" prot="private" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t connectTimeout</definition>
+        <argsstring></argsstring>
+        <name>connectTimeout</name>
+        <initializer>= 15*60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The connection timeout, if there is no LTE connection established after this specified time (15 minutes) the device shall deactivate LTE modem and switch to sleep mode </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="143" column="27" bodyfile="net/lte_connector.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_connector_1ac059d527f7488aa4af4fb5005a830fcc" prot="private" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t connectRetryTime</definition>
+        <argsstring></argsstring>
+        <name>connectRetryTime</name>
+        <initializer>= 24*60*60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If LTE modem is switched off and device is in sleep mode, it shall wake up after this time (24 hours) to try LTE connect again. This functionality is realized by reset of the device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="147" column="27" bodyfile="net/lte_connector.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_lte_connector_1a7ee579b462bc96b33dea1ec3a47a7ce7" prot="private" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t max_listeners</definition>
+        <argsstring></argsstring>
+        <name>max_listeners</name>
+        <initializer>=
+        3</initializer>
+        <briefdescription>
+<para>Maximum number of listener tasks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="149" column="26" bodyfile="net/lte_connector.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+        <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">notify</referencedby>
+        <referencedby refid="class_lte_connector_1afc13f73534545936ae6edadc7c9c43f3" compoundref="lte__connector_8cpp" startline="340" endline="354">registerListener</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LteConnector</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>LteConnector</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_lte_connector" kindref="compound">LteConnector</ref> task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register a mailbox and allocates and initialize the one shot timer with duration of 15 min to control connection timeout and connection retry. Finally the flags bLteConnected and bConnectRetry will be set to false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="114" column="14" bodyfile="net/lte_connector.cpp" bodystart="230" bodyend="243"/>
+        <references refid="class_lte_connector_1af50dd6cc4530bebb458192cce218089e" compoundref="lte__connector_8h" startline="139">bConnectRetry</references>
+        <references refid="class_lte_connector_1adf18399d173e7d82e6e2ffba85d1d9e2" compoundref="lte__connector_8h" startline="138">bLteConnected</references>
+        <references refid="class_lte_connector_1a27552af4f0ce526fb27b36beda3e300e" compoundref="lte__connector_8h" startline="143">connectTimeout</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a5774f90fab30d23d3631e62cc2a616d2" compoundref="mbox_8h" startline="68">Mbox::eLteConnector</references>
+        <references refid="class_lte_connector_1a57e0d12afdc19f1ae7b34c9ce1572f55" compoundref="lte__connector_8h" startline="151">listeners</references>
+        <references refid="class_lte_connector_1a7ee579b462bc96b33dea1ec3a47a7ce7" compoundref="lte__connector_8h" startline="149">max_listeners</references>
+        <references refid="class_lte_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="lte__connector_8h" startline="135">myTimer</references>
+        <references refid="class_lte_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="lte__connector_8h" startline="133">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_lte_connector_1aaa25421e04a507bcced8f9bb02af5213" compoundref="lte__connector_8cpp" startline="264" endline="270">timer_cb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1ab35fb4e249b66b3f1dffd888ce1f99b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LteConnector</definition>
+        <argsstring>()=delete</argsstring>
+        <name>LteConnector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="115" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1a9558a0b7091059d14e8ac89cc532c593" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~LteConnector</definition>
+        <argsstring>()</argsstring>
+        <name>~LteConnector</name>
+        <briefdescription>
+<para><ref refid="class_lte_connector" kindref="compound">LteConnector</ref> task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="116" column="13" bodyfile="net/lte_connector.cpp" bodystart="251" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void) override</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>LTE connector task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the function register the callback functions for PDN events by calling the function pdn_default_ctx_cb_reg from nRF PDN library API and for LTE events by calling function lte_lc_register_handler from nRF public API for the LTE Link Controller. With call of function lte_lc_modem_events_enable the LTE connector enable the modem domain events, which will be handled by LTE link event handler lte_event_handler. LTE module will be initialized and modem will be configured by call of function lte_lc_init and modem&apos;s functional mode is set to LTE_LC_FUNC_MODE_ACTIVATE_UICC by calling function lte_lc_func_mode_set, which activate UICC (Universal Integrated Circuit Card) notifications and is required to read IMSI without network connection. <linebreak/>
+Afterwards the function enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: On timer expiry the pointer pElem will be set to 0, to prevent releasing the message because it is allocated static. Afterwards the function checks if flag bConnectRetry is true and in this case it triggers a reset by call of function sys_reboot. If flag bConnectRetry is not true, the function checks if LTE is still connected (flag bLteConnected is false). In this case the function switch of LTE modem by calling the functions lte_lc_offline, lte_lc_deinit and lte_lc_power_off. Than timer will be sterted with duration of connectRetryTime (24 hours) and flag bConnectRetry is set to true.</para>
+</listitem><listitem><para>eLteConnected: Listeners will be informed by calling member function notify with message of type eLteConnected and flag bLteConnected will be set to true.</para>
+</listitem><listitem><para>eLteDisconnected: Listeners will be informed by calling member function notify with message of type eLteDisconnected and flag bLteConnected will be set to false.</para>
+</listitem><listitem><para>eLteSleepEnter: Listeners will be informed by calling member function notify with message of type eLteSleepEnter.</para>
+</listitem><listitem><para>eLteSleepExit: Listeners will be informed by calling member function notify with message of type eLteSleepExit and a timer will be started with duration connectTimeout (15 min).</para>
+</listitem><listitem><para>eIp6Up: Will be ignored, only debug message at info level will be printed.</para>
+</listitem><listitem><para>eIp6Down: Will be ignored, only debug message at info level will be printed.</para>
+</listitem><listitem><para>eResume: With call of function lte_lc_normal modem will be switched to full functionality. Power Saving Mode will be enabled enabled by calling function lte_lc_psm_req and a LTE connection will be established by calling function lte_lc_connect_async.</para>
+</listitem><listitem><para>eSuspend: Will be ignored, only debug message at info level will be printed </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="117" column="10" bodyfile="net/lte_connector.cpp" bodystart="405" bodyend="523"/>
+        <references refid="class_lte_connector_1af50dd6cc4530bebb458192cce218089e" compoundref="lte__connector_8h" startline="139">bConnectRetry</references>
+        <references refid="class_lte_connector_1adf18399d173e7d82e6e2ffba85d1d9e2" compoundref="lte__connector_8h" startline="138">bLteConnected</references>
+        <references refid="class_lte_connector_1ac059d527f7488aa4af4fb5005a830fcc" compoundref="lte__connector_8h" startline="147">connectRetryTime</references>
+        <references refid="class_lte_connector_1a27552af4f0ce526fb27b36beda3e300e" compoundref="lte__connector_8h" startline="143">connectTimeout</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaaf3f9875b3cd0e9395ec2554a74a11b" compoundref="mpelem_8h" startline="54">eIp6Down</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba192b04fdf953dabead21493a648b972b" compoundref="mpelem_8h" startline="55">eIp6Up</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" compoundref="mpelem_8h" startline="40">eLteConnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" compoundref="mpelem_8h" startline="41">eLteDisconnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" compoundref="mpelem_8h" startline="49">eLteSleepEnter</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" compoundref="mpelem_8h" startline="50">eLteSleepExit</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" compoundref="mpelem_8h" startline="89">eResume</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20" compoundref="mpelem_8h" startline="88">eSuspend</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_lte_connector_1a4542179448b664409c38b4e403e972d2" compoundref="lte__connector_8cpp" startline="68" endline="154">lte_event_handler</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_lte_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="lte__connector_8h" startline="135">myTimer</references>
+        <references refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">notify</references>
+        <references refid="class_lte_connector_1a3a0c30dc5853b53ffe8d6970221e7935" compoundref="lte__connector_8cpp" startline="179" endline="214">pdn_event_handler</references>
+        <references refid="class_lte_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="lte__connector_8h" startline="133">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1adc25c829b13636794219a3f61f31f34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>()</argsstring>
+        <name>timer1_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for unused cyclic timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eTimerExpired, set LTE connector as sender and put message into own (LTE connector&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="121" column="10" bodyfile="net/lte_connector.cpp" bodystart="279" bodyend="284"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_lte_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="lte__connector_8h" startline="133">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_lte_connector_1aaa25421e04a507bcced8f9bb02af5213" compoundref="lte__connector_8cpp" startline="264" endline="270">timer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1afc13f73534545936ae6edadc7c9c43f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerListener</definition>
+        <argsstring>(Mbox *listener)</argsstring>
+        <name>registerListener</name>
+        <param>
+          <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Function to register a listener. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the mailbox of the listener</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function enter a loop over the maximum number of listeners and if there is no listener registered at index i of array listeners (pointer to mailbox is NULL), it register the listener by copy the pointer to the mailbox in array listeners at index i, before leaving the function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="124" column="10" bodyfile="net/lte_connector.cpp" bodystart="340" bodyend="354"/>
+        <references refid="class_lte_connector_1a57e0d12afdc19f1ae7b34c9ce1572f55" compoundref="lte__connector_8h" startline="151">listeners</references>
+        <references refid="class_lte_connector_1a7ee579b462bc96b33dea1ec3a47a7ce7" compoundref="lte__connector_8h" startline="149">max_listeners</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify</definition>
+        <argsstring>(msgType msg)</argsstring>
+        <name>notify</name>
+        <param>
+          <type><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Send message to all registered listeners. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function enter a loop over the maximum number of listeners and if a listener is registered (pointer to listener mailbox in array listeners not NULL) it requests for every registered listener a message from message pool, set message type to parameter msg, set eLteConnector as sender and send message to the listener&apos;s mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="127" column="10" bodyfile="net/lte_connector.cpp" bodystart="312" bodyend="328"/>
+        <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="class_lte_connector_1a57e0d12afdc19f1ae7b34c9ce1572f55" compoundref="lte__connector_8h" startline="151">listeners</references>
+        <references refid="class_lte_connector_1a7ee579b462bc96b33dea1ec3a47a7ce7" compoundref="lte__connector_8h" startline="149">max_listeners</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_lte_connector_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for unused cyclic timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call LTE connector timer expired function timer1_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="118" column="17" bodyfile="net/lte_connector.cpp" bodystart="264" bodyend="270"/>
+        <references refid="class_lte_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__connector_8cpp" startline="279" endline="284">timer1_expired</references>
+        <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1a6fcfc5dbae182b52c87b34bd86bd13fb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendMsg2OwnMbox</definition>
+        <argsstring>(msgType msg)</argsstring>
+        <name>sendMsg2OwnMbox</name>
+        <param>
+          <type><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Send message to its own (LTE connectors) mailbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function send a message of type msg to to its own (LTE connectors) mailbox by calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="119" column="17" bodyfile="net/lte_connector.cpp" bodystart="294" bodyend="299"/>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_lte_connector_1a4542179448b664409c38b4e403e972d2" compoundref="lte__connector_8cpp" startline="68" endline="154">lte_event_handler</referencedby>
+        <referencedby refid="class_lte_connector_1a3a0c30dc5853b53ffe8d6970221e7935" compoundref="lte__connector_8cpp" startline="179" endline="214">pdn_event_handler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1a4542179448b664409c38b4e403e972d2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lte_event_handler</definition>
+        <argsstring>(const struct lte_lc_evt *const evt)</argsstring>
+        <name>lte_event_handler</name>
+        <param>
+          <type>const struct lte_lc_evt *const</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_lte_connector" kindref="compound">LteConnector</ref> LTE link event handler function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received LTE link event of type struct lte_lc_evt</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The handler function notifies the application of sleep, wakeup and DRX events from LTE modem. These events will be mapped to internal message types and send to LTE connectors own or data manager mailbox before function returns. <linebreak/>
+ Mapping is as follows:<itemizedlist>
+<listitem><para>LTE_LC_EVT_MODEM_SLEEP_ENTER -&gt; eLteSleepEnter to own mailbox</para>
+</listitem><listitem><para>LTE_LC_EVT_MODEM_SLEEP_EXIT -&gt; eLteSleepExit to own mailbox</para>
+</listitem><listitem><para>all other LTE link events: will be ignored (only debug message) In case of unexpected events the function print an error debug message returns immediatly. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="129" column="17" bodyfile="net/lte_connector.cpp" bodystart="68" bodyend="154"/>
+        <references refid="class_lte_monitor_1ae23601eab621f370fa3133297c06672f" compoundref="lte__monitor_8cpp" startline="368" endline="389">LteMonitor::cereg_str_get</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" compoundref="mpelem_8h" startline="49">eLteSleepEnter</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" compoundref="mpelem_8h" startline="50">eLteSleepExit</references>
+        <references refid="class_lte_connector_1a6fcfc5dbae182b52c87b34bd86bd13fb" compoundref="lte__connector_8cpp" startline="294" endline="299">sendMsg2OwnMbox</references>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_lte_connector_1a3a0c30dc5853b53ffe8d6970221e7935" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pdn_event_handler</definition>
+        <argsstring>(uint8_t cid, enum pdn_event event, int reason)</argsstring>
+        <name>pdn_event_handler</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>cid</declname>
+        </param>
+        <param>
+          <type>enum pdn_event</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_lte_connector" kindref="compound">LteConnector</ref> PDN event handler function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cell ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The received PDN event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error code</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The handler function notifies the application of events related to the default PDN context, CID 0. The PDN events will be mapped to internal message types and send to LTE connectors own mailbox before function returns. Mapping is as follows:<itemizedlist>
+<listitem><para>PDN_EVENT_CNEC_ESM: will be ignored (only debug message)</para>
+</listitem><listitem><para>PDN_EVENT_ACTIVATED -&gt; eLteConnected</para>
+</listitem><listitem><para>PDN_EVENT_DEACTIVATED -&gt; eLteDisconnected</para>
+</listitem><listitem><para>PDN_EVENT_IPV6_UP -&gt; eIp6Up</para>
+</listitem><listitem><para>PDN_EVENT_IPV6_DOWN -&gt; eIp6Down In case of unexpected events the function print an error debug message returns immediatly </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/lte_connector.h" line="130" column="17" bodyfile="net/lte_connector.cpp" bodystart="179" bodyend="214"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaaf3f9875b3cd0e9395ec2554a74a11b" compoundref="mpelem_8h" startline="54">eIp6Down</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba192b04fdf953dabead21493a648b972b" compoundref="mpelem_8h" startline="55">eIp6Up</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" compoundref="mpelem_8h" startline="40">eLteConnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" compoundref="mpelem_8h" startline="41">eLteDisconnected</references>
+        <references refid="lte__connector_8cpp_1a0f3366d3515cbf5f27300a7c85a14f8f">pdn_esm_strerror</references>
+        <references refid="class_lte_connector_1a6fcfc5dbae182b52c87b34bd86bd13fb" compoundref="lte__connector_8cpp" startline="294" endline="299">sendMsg2OwnMbox</references>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>LTE connector class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>LTE connector task handle the connection to the LTE modem, modem wake up and sleep behaviour and inform its listener tasks (power manager and MQTT connector) about these events. It uses the nRF PDN library API and LTE Link API via AT commands to communicate with LTE modem and to receive PDN and LTE Link events. See details in <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/libraries/modem/lte_lc.html">LTE Link API documentation</ulink> and for PDN library API in <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/libraries/modem/pdn.html">PDN library API documentation</ulink> <linebreak/>
+ The <ref refid="class_lte_connector" kindref="compound">LteConnector</ref> class provides two handler functions to receive LTE link and PDN events, a method to send messages to its own (LTE connector&apos;s) mailbox, which is used by the handler functions to transform external events to internal messages of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>. It provide a timer callback function and a timer expired function, used to transform external timer expiry event from interrupt context to internal timer expired message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>. Furthermore it provide methods to register listener tasks, to notify listener tasks about received external events and to report eDRX values to data manager task. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>External PDN and LTE Link events</para>
+</listitem><listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>LTE connector task (self)</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>LTE connector task (self)</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem><listitem><para>MQTT connector task</para>
+</listitem><listitem><para>Data manager task </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LteConnector</label>
+        <link refid="class_lte_connector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LteConnector</label>
+        <link refid="class_lte_connector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-connectRetryTime</edgelabel>
+          <edgelabel>-connectTimeout</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-max_listeners</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-bConnectRetry</edgelabel>
+          <edgelabel>-bLteConnected</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+          <edgelabel>-listeners</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+myTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="9">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="10">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="11">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="14">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="net/lte_connector.h" line="112" column="1" bodyfile="net/lte_connector.h" bodystart="112" bodyend="154"/>
+    <listofallmembers>
+      <member refid="class_lte_connector_1af50dd6cc4530bebb458192cce218089e" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>bConnectRetry</name></member>
+      <member refid="class_lte_connector_1adf18399d173e7d82e6e2ffba85d1d9e2" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>bLteConnected</name></member>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>LteConnector</scope><name>configure</name></member>
+      <member refid="class_lte_connector_1ac059d527f7488aa4af4fb5005a830fcc" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>connectRetryTime</name></member>
+      <member refid="class_lte_connector_1a27552af4f0ce526fb27b36beda3e300e" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>connectTimeout</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>create</name></member>
+      <member refid="class_lte_connector_1a57e0d12afdc19f1ae7b34c9ce1572f55" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>listeners</name></member>
+      <member refid="class_lte_connector_1a4542179448b664409c38b4e403e972d2" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>lte_event_handler</name></member>
+      <member refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>LteConnector</name></member>
+      <member refid="class_lte_connector_1ab35fb4e249b66b3f1dffd888ce1f99b6" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>LteConnector</name></member>
+      <member refid="class_lte_connector_1a7ee579b462bc96b33dea1ec3a47a7ce7" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>max_listeners</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>LteConnector</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>LteConnector</scope><name>myName</name></member>
+      <member refid="class_lte_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>myTimer</name></member>
+      <member refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>notify</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>operator=</name></member>
+      <member refid="class_lte_connector_1a3a0c30dc5853b53ffe8d6970221e7935" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>pdn_event_handler</name></member>
+      <member refid="class_lte_connector_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>pInMbox</name></member>
+      <member refid="class_lte_connector_1afc13f73534545936ae6edadc7c9c43f3" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>registerListener</name></member>
+      <member refid="class_lte_connector_1a6fcfc5dbae182b52c87b34bd86bd13fb" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>sendMsg2OwnMbox</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>start</name></member>
+      <member refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" prot="public" virt="virtual"><scope>LteConnector</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>LteConnector</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>LteConnector</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>LteConnector</scope><name>tid</name></member>
+      <member refid="class_lte_connector_1adc25c829b13636794219a3f61f31f34d" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>timer1_expired</name></member>
+      <member refid="class_lte_connector_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>LteConnector</scope><name>timer_cb</name></member>
+      <member refid="class_lte_connector_1a9558a0b7091059d14e8ac89cc532c593" prot="public" virt="virtual"><scope>LteConnector</scope><name>~LteConnector</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>LteConnector</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

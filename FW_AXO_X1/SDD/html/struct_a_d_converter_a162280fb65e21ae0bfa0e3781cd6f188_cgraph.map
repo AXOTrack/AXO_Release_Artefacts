@@ -1,0 +1,9 @@
+<map id="notifyListener" name="notifyListener">
+<area shape="rect" id="node1" title="Send ADC data to optional registered listener for specified channel." alt="" coords="5,56,104,83"/>
+<area shape="rect" id="node2" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="152,5,307,32"/>
+<area shape="rect" id="node4" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="178,56,281,83"/>
+<area shape="rect" id="node5" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="185,107,274,133"/>
+<area shape="rect" id="node3" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="355,5,485,32"/>
+<area shape="rect" id="node6" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="360,81,480,108"/>
+<area shape="rect" id="node7" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="371,132,469,159"/>
+</map>

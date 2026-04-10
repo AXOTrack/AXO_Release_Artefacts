@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_2ae16ec5be1c5cb0797b9a5ee9944a4a" kind="dir">
+    <compoundname>drv/spi</compoundname>
+    <innerfile refid="adxl37x_8cpp">adxl37x.cpp</innerfile>
+    <innerfile refid="adxl37x_8h">adxl37x.h</innerfile>
+    <innerfile refid="fram_8cpp">fram.cpp</innerfile>
+    <innerfile refid="fram_8h">fram.h</innerfile>
+    <innerfile refid="mram_8cpp">mram.cpp</innerfile>
+    <innerfile refid="mram_8h">mram.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="drv/spi/"/>
+  </compounddef>
+</doxygen>

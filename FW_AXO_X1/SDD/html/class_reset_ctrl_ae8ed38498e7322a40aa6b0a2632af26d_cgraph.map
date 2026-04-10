@@ -1,0 +1,10 @@
+<map id="ResetCtrl" name="ResetCtrl">
+<area shape="rect" id="node1" title="Reset control task constructor." alt="" coords="5,56,81,83"/>
+<area shape="rect" id="node2" href="$class_reset_ctrl.html#ac1d2043bb6ede9c12212992591d63d91" title="Function initDevice to initialize Pin P0.01." alt="" coords="159,5,237,32"/>
+<area shape="rect" id="node3" href="$class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="129,56,267,83"/>
+<area shape="rect" id="node4" href="$class_reset_ctrl.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the cyclic timer for power cycle reset." alt="" coords="162,107,234,133"/>
+<area shape="rect" id="node5" href="$class_reset_ctrl.html#adc25c829b13636794219a3f61f31f34d" title="Timer expired function for the cyclic timer for power cycle reset." alt="" coords="315,107,421,133"/>
+<area shape="rect" id="node6" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="469,107,559,133"/>
+<area shape="rect" id="node7" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="607,81,727,108"/>
+<area shape="rect" id="node8" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="618,132,715,159"/>
+</map>

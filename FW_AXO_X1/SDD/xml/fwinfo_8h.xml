@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="fwinfo_8h" kind="file" language="C++">
+    <compoundname>fwinfo.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includedby refid="fwinfo_8cpp" local="yes">update/fwinfo.cpp</includedby>
+    <includedby refid="update_8cpp" local="yes">update/update.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>update/fwinfo.h</label>
+        <link refid="fwinfo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="5">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>update/fwinfo.cpp</label>
+        <link refid="fwinfo_8cpp"/>
+      </node>
+      <node id="3">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="1">
+        <label>update/fwinfo.h</label>
+        <link refid="fwinfo_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_fw_info" prot="public">FwInfo</innerclass>
+    <briefdescription>
+<para>Header file of firmware info class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="fwinfo_8h_1fwinfo"/> <simplesect kind="par"><title>Detailed Description </title><para>Helper class to parse the OTA update topic JSON string, to extract the content and to store it in string variables. <linebreak/>
+The implementation uses ultralightweight JSON parser <ulink url="https://github.com/DaveGamble/cJSON">cJSON</ulink> provided by Dave Gamble.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_FWINFO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_FWINFO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_fw_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fw_info" kindref="compound">FwInfo</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" kindref="member">FwInfo</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>content<sp/>copied<sp/>from<sp/>c<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" kindref="member">FwInfo</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>msg);<sp/><sp/></highlight><highlight class="comment">//<sp/>content<sp/>copied<sp/>from<sp/>pool<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1a55a1c1f026572a77cc07895e28d257b3" kindref="member">FwInfo</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1ac116b1e5421fb502590d6d5bdb94eadc" kindref="member">~FwInfo</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_fw_info_1aa033154cf0936cf2d48437d794e5ec51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info_1aa033154cf0936cf2d48437d794e5ec51" kindref="member">FwInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_fw_info" kindref="compound">FwInfo</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Disallow<sp/>copying</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_fw_info_1a0bde698079b208ef987b928e857228c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_info" kindref="compound">FwInfo</ref>&amp;<sp/><ref refid="class_fw_info_1a0bde698079b208ef987b928e857228c0" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_fw_info" kindref="compound">FwInfo</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a67007fc2be130666fbf3b065022756f4" kindref="member">parse</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a072559ae30aae0e5e9bb88331dc35175" kindref="member">validate</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_info_1a4659b23c49e8463e85dd9c14f9ef5e23" kindref="member">splitUrl</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1a39f2f48806274152c96ca278a2cce1e5" kindref="member">getUrl</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1aacd441cca3001449a4de6508aea46bd4" kindref="member">getHost</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1af24b297cb2d75fd05f5b8a441e00010e" kindref="member">getFileName</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1a25f9a9c768ec415c596f83b8f2cb5089" kindref="member">getSha1</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1ab428318681b00e380d18e10b687c536f" kindref="member">getFwVersion</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1aa039351317a9d1308a123c8279a75a1b" kindref="member">getProto</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_fw_info_1a7c67c85479412dcd8d6a72733fabf254" kindref="member">getFileSize</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>clear();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>fromStr(const<sp/>char*<sp/>str);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>fromMsg(const<sp/>PoolElem*<sp/>msg);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67" refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1a84703f07f323f416cd4b531c1bbd59af" kindref="member">input</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1ae43c7d8d482ec3550b30cbc7dc23b9f0" kindref="member">url</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1afec3c3f7721f07dd59393b9bfff9e1dd" kindref="member">sha1</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1a696b1086704b0858059129b61eaa4a9f" kindref="member">host</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>std::string<sp/>port;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1a8bd103924f03d5a5f449d91bcc8f5d16" kindref="member">proto</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1ae80f820219e45772366a2a68de6a54c4" kindref="member">filename</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_fw_info_1a078c8580b65cdb283aab428e415bfad0" kindref="member">fw_version</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_fw_info_1a83e1badf2aa40add2e4d1d5b23b9ebf1" kindref="member">filesize</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_FWINFO_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="update/fwinfo.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,7 @@
+tests:
+  # section.subsection
+  tests.rtos:
+    platform_allow: nrf9160dk_kelvynns 
+    integration_platforms:
+      - nrf9160dk_kelvynns
+    tags: rtos

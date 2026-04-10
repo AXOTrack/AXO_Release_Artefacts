@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_detrend_var" kind="struct" language="C++" prot="public">
+    <compoundname>_stDetrendVar</compoundname>
+    <includes refid="disptask_8h" local="no">disptask.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sumX</definition>
+        <argsstring></argsstring>
+        <name>sumX</name>
+        <briefdescription>
+<para>Intermediate sum of x values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="56" column="8" bodyfile="disp/disptask.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">DispTask::detrendCalcSlopeIntercept</referencedby>
+        <referencedby refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" compoundref="disptask_8cpp" startline="121" endline="127">DispTask::detrendCalcSums</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">DispTask::InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sumY</definition>
+        <argsstring></argsstring>
+        <name>sumY</name>
+        <briefdescription>
+<para>Intermediate sum of y values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="57" column="8" bodyfile="disp/disptask.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">DispTask::detrendCalcSlopeIntercept</referencedby>
+        <referencedby refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" compoundref="disptask_8cpp" startline="121" endline="127">DispTask::detrendCalcSums</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">DispTask::InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sumXY</definition>
+        <argsstring></argsstring>
+        <name>sumXY</name>
+        <briefdescription>
+<para>Intermediate sum of x*y values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="58" column="8" bodyfile="disp/disptask.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">DispTask::detrendCalcSlopeIntercept</referencedby>
+        <referencedby refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" compoundref="disptask_8cpp" startline="121" endline="127">DispTask::detrendCalcSums</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">DispTask::InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sumX2</definition>
+        <argsstring></argsstring>
+        <name>sumX2</name>
+        <briefdescription>
+<para>Intermediate sum of x^2 values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="59" column="8" bodyfile="disp/disptask.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">DispTask::detrendCalcSlopeIntercept</referencedby>
+        <referencedby refid="class_disp_task_1a90a29724ea1c18dc6e689922664ef720" compoundref="disptask_8cpp" startline="121" endline="127">DispTask::detrendCalcSums</referencedby>
+        <referencedby refid="class_disp_task_1a89aba3a7f8ac228fdf0914eb42951bb4" compoundref="disptask_8cpp" startline="809" endline="826">DispTask::InitDispCalc</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_detrend_var_1a723974ead8c85a6b9c70c6e018cb64c1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double slope</definition>
+        <argsstring></argsstring>
+        <name>slope</name>
+        <briefdescription>
+<para>Calculated slope value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="60" column="8" bodyfile="disp/disptask.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">DispTask::detrendCalcSlopeIntercept</referencedby>
+        <referencedby refid="class_disp_task_1a5d5c2ce1a8b4d44ffc2c8fda65923812" compoundref="disptask_8cpp" startline="162" endline="165">DispTask::detrendRemoveTrend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct__st_detrend_var_1a9f8a715ab550e57412af1f1545841ae3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double intercept</definition>
+        <argsstring></argsstring>
+        <name>intercept</name>
+        <briefdescription>
+<para>Calculated intercept value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="disp/disptask.h" line="61" column="8" bodyfile="disp/disptask.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a144988738a8a58fe114a73d01b5317ed" compoundref="disptask_8cpp" startline="138" endline="142">DispTask::detrendCalcSlopeIntercept</referencedby>
+        <referencedby refid="class_disp_task_1a5d5c2ce1a8b4d44ffc2c8fda65923812" compoundref="disptask_8cpp" startline="162" endline="165">DispTask::detrendRemoveTrend</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure defining the intermediate results for detrend calculation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_stDetrendVar</label>
+        <link refid="struct__st_detrend_var"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+intercept</edgelabel>
+          <edgelabel>+slope</edgelabel>
+          <edgelabel>+sumX</edgelabel>
+          <edgelabel>+sumX2</edgelabel>
+          <edgelabel>+sumXY</edgelabel>
+          <edgelabel>+sumY</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+    </collaborationgraph>
+    <location file="disp/disptask.h" line="54" column="1" bodyfile="disp/disptask.h" bodystart="55" bodyend="62"/>
+    <listofallmembers>
+      <member refid="struct__st_detrend_var_1a9f8a715ab550e57412af1f1545841ae3" prot="public" virt="non-virtual"><scope>_stDetrendVar</scope><name>intercept</name></member>
+      <member refid="struct__st_detrend_var_1a723974ead8c85a6b9c70c6e018cb64c1" prot="public" virt="non-virtual"><scope>_stDetrendVar</scope><name>slope</name></member>
+      <member refid="struct__st_detrend_var_1a8aab5cbcedc188c2376568f5b6e9106c" prot="public" virt="non-virtual"><scope>_stDetrendVar</scope><name>sumX</name></member>
+      <member refid="struct__st_detrend_var_1a9064f41ab75857c9ba04aa3dbfc0204d" prot="public" virt="non-virtual"><scope>_stDetrendVar</scope><name>sumX2</name></member>
+      <member refid="struct__st_detrend_var_1a42bbe702179f7a3670cb447f421e5c95" prot="public" virt="non-virtual"><scope>_stDetrendVar</scope><name>sumXY</name></member>
+      <member refid="struct__st_detrend_var_1a5b4b64b13d200348d28559d6bb37cf4c" prot="public" virt="non-virtual"><scope>_stDetrendVar</scope><name>sumY</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

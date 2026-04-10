@@ -1,0 +1,7 @@
+<map id="saveToFile" name="saveToFile">
+<area shape="rect" id="node1" title="Function to store JSON configuration string in file system." alt="" coords="421,42,504,69"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="193,5,373,47"/>
+<area shape="rect" id="node4" href="$class_config.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function of the Config class." alt="" coords="264,71,303,98"/>
+<area shape="rect" id="node3" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="5,13,145,39"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function of AXO Track firmware" alt="" coords="50,71,101,98"/>
+</map>

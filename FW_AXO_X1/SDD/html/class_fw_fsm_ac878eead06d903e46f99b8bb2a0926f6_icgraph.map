@@ -1,0 +1,10 @@
+<map id="setState" name="setState">
+<area shape="rect" id="node1" title="Function to perform state transition to old state to new state." alt="" coords="351,132,421,159"/>
+<area shape="rect" id="node2" href="$class_fw_fsm.html#a2aee9c2434f9953a3ea17fe8f423823e" title="State machine handler function for DlComplete events." alt="" coords="168,5,303,32"/>
+<area shape="rect" id="node4" href="$class_fw_fsm.html#a7a5ea8e9dff39965f86793c07503627b" title="State machine handler function for DlFailed events." alt="" coords="178,56,293,83"/>
+<area shape="rect" id="node5" href="$class_fw_fsm.html#a7e62870608db139036df40627999a148" title="State machine handler function for FwInfo events." alt="" coords="183,107,287,133"/>
+<area shape="rect" id="node6" href="$class_fw_fsm.html#a34c9e23e10f64e42e79d102f0a0ad488" title="State machine handler function for OtaStart events." alt="" coords="177,157,293,184"/>
+<area shape="rect" id="node7" href="$class_fw_fsm.html#af578a13e136400aea29aa8af718e9654" title="State machine handler function for restart events." alt="" coords="181,208,290,235"/>
+<area shape="rect" id="node8" href="$class_fw_fsm.html#ac89b704e7ecc12da7a0a3e1b45cbb3ac" title="State machine handler function for timer expired events." alt="" coords="173,259,297,285"/>
+<area shape="rect" id="node3" href="$class_fw_upd_ctrl.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Firmware update control task function." alt="" coords="5,107,120,133"/>
+</map>

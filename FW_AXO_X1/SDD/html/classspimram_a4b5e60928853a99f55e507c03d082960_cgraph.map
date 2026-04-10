@@ -1,0 +1,7 @@
+<map id="write_status_reg" name="write_status_reg">
+<area shape="rect" id="node1" title="Function to write MRAM status register." alt="" coords="5,81,123,108"/>
+<area shape="rect" id="node2" href="$classspimram.html#a1795c2a9ad98232f829a8b7e64956ee2" title="Function to access MRAM for reading and writing." alt="" coords="176,5,280,32"/>
+<area shape="rect" id="node3" href="$classspimram.html#af1f8781e94de62b193539c9513be36a2" title="Function to switch off MRAM." alt="" coords="190,56,266,83"/>
+<area shape="rect" id="node4" href="$classspimram.html#ab0a12fdcb7fce8974b2ca43e12a62caa" title="Function to switch on MRAM." alt="" coords="189,107,267,133"/>
+<area shape="rect" id="node5" href="$classspimram.html#a2ca332a82cb3095dd7bda250ed303e8c" title="Function to send a command to MRAM." alt="" coords="171,157,285,184"/>
+</map>

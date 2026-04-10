@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hw__metrics_8h" kind="file" language="C++">
+    <compoundname>hw_metrics.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/sys/ring_buffer.h</includes>
+    <includes refid="mpelem_8h" local="yes">rtos/mpelem.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="hw__metrics_8cpp" local="yes">data/hw_metrics.cpp</includedby>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <includedby refid="adxl37x_8h" local="yes">drv/spi/adxl37x.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/sys/ring_buffer.h</label>
+      </node>
+      <node id="1">
+        <label>data/hw_metrics.h</label>
+        <link refid="hw__metrics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="5">
+        <label>drv/spi/adxl37x.h</label>
+        <link refid="adxl37x_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="8">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="10">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="11">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="4">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="13">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="1">
+        <label>data/hw_metrics.h</label>
+        <link refid="hw__metrics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhw__metrics" prot="public">hw_metrics</innerclass>
+    <innerclass refid="class_hw_metrics" prot="public">HwMetrics</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>hw_stat</name>
+        <enumvalue id="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a77c49b7ddecca73845e2821c8688787e" prot="public">
+          <name>eHwOK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8af215c6ea9d04fafde73b2673b72e0f49" prot="public">
+          <name>eHwFailure</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a47ddab85fd832aa8511a7cdff02413e4" prot="public">
+          <name>eHwSelftestFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration for HW failure states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="41" column="1" bodyfile="data/hw_metrics.h" bodystart="41" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of <ref refid="class_hw_metrics" kindref="compound">HwMetrics</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="hw__metrics_8h_1hw_metrics"/> <simplesect kind="par"><title>Detailed Description </title><para>Metrics are send cyclically via LTE to the MQTT broker. To inform the MQTT broker about HW failure the class HW metrics collects all supported HW status information and send them to the data manager, which is responsible to send out the JSON metrics data. HW metrics provide a counter to summarize all HW errors, where<itemizedlist>
+<listitem><para>Counter = 0: No hardware errors detected;</para>
+</listitem><listitem><para>Counter &gt; 0: Shows number of detected hardware failures (counting per device) The following HW is supported:</para>
+</listitem><listitem><para>ADXL372 acceleration sensor: Each time the device wakes up to send metric data the sanity of the adxl372 sensor should be checked by reading the status registers. The check should be made before metric data are sent.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_HW_METRICS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_HW_METRICS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/sys/ring_buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpelem_8h" kindref="compound">rtos/mpelem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" kindref="member">hw_stat</ref><sp/>{<sp/></highlight></codeline>
+<codeline lineno="42" refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a77c49b7ddecca73845e2821c8688787e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a77c49b7ddecca73845e2821c8688787e" kindref="member">eHwOK</ref>,<sp/></highlight></codeline>
+<codeline lineno="43" refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8af215c6ea9d04fafde73b2673b72e0f49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8af215c6ea9d04fafde73b2673b72e0f49" kindref="member">eHwFailure</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a47ddab85fd832aa8511a7cdff02413e4" kindref="member">eHwSelftestFailed</ref></highlight></codeline>
+<codeline lineno="45" refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a47ddab85fd832aa8511a7cdff02413e4" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structhw__metrics" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhw__metrics" kindref="compound">hw_metrics</ref><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" kindref="member">num_errors</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" kindref="member">hw_stat</ref><sp/><ref refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" kindref="member">hw_status</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_hw_metrics" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hw_metrics" kindref="compound">HwMetrics</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" kindref="member">HwMetrics</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1ae61ab46a96f1567e2d70afc4d2f0b36f" kindref="member">~HwMetrics</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78" refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhw__metrics" kindref="compound">hw_metrics</ref><sp/><ref refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" kindref="member">metrics</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" kindref="member">HandleHwStatusAdxl37x</ref>(<ref refid="class_pool_elem" kindref="compound">PoolElem</ref>*<sp/>pElem);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" kindref="member">report</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DATA_HW_METRICS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="data/hw_metrics.h"/>
+  </compounddef>
+</doxygen>

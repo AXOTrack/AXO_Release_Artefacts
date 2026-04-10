@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="batt__mgr_8h" kind="file" language="C++">
+    <compoundname>batt_mgr.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="batt__mgr_8cpp" local="yes">drv/adc/batt_mgr.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="1">
+        <label>drv/adc/batt_mgr.h</label>
+        <link refid="batt__mgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>drv/adc/batt_mgr.h</label>
+        <link refid="batt__mgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_battery_mgr" prot="public">BatteryMgr</innerclass>
+    <briefdescription>
+<para>Header file of battery manager class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="batt__mgr_8h_1batt_mgr"/> <simplesect kind="par"><title>Detailed Description </title><para>The battery manager class specify the ADC channels used for battery management, These are:<itemizedlist>
+<listitem><para>AIN1 -&gt; ANALOG_VDD</para>
+</listitem><listitem><para>AIN2 -&gt; ANALOG_VBAT2</para>
+</listitem><listitem><para>AIN3 -&gt; ANALOG_VBAT1</para>
+</listitem><listitem><para>AIN7 -&gt; NRF_SAADC_VDD The battery manager is responsible to request the ADC measurement values from AD converter task and to report these values to data manger task, which will add them to the metrics JSON string. See also <ref refid="_m_s_c_1SubSectionMetricsTx" kindref="member">Message Sequence Chart Cyclic Metrics</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_ADC_BATT_MGR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_ADC_BATT_MGR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_battery_mgr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_battery_mgr" kindref="compound">BatteryMgr</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_battery_mgr_1a75d5c8a7ed239f930bc9ac83bccf2d50" kindref="member">BatteryMgr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67" refid="class_battery_mgr_1a75d5c8a7ed239f930bc9ac83bccf2d50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_battery_mgr_1a75d5c8a7ed239f930bc9ac83bccf2d50" kindref="member">BatteryMgr</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_battery_mgr_1a1786144e12bc86f94964ef79fec3d783" kindref="member">~BatteryMgr</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70" refid="class_battery_mgr_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_battery_mgr_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_battery_mgr_1ad34fc4a65245aeb6c33bee8dfb3282a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_battery_mgr_1ad34fc4a65245aeb6c33bee8dfb3282a4" kindref="member">getAdcChannels</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" kindref="member">adcChannels</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="72" refid="class_battery_mgr_1a116f43968e6eaf11a0da1792b44a589c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_battery_mgr_1a116f43968e6eaf11a0da1792b44a589c" kindref="member">setAdcChannels</ref>(uint8_t<sp/>chmask)<sp/>{<sp/><ref refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" kindref="member">adcChannels</ref><sp/>=<sp/>chmask;<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_battery_mgr_1ac201955d3467a5b67075856435290afc" kindref="member">reqAdcReport</ref>(uint8_t<sp/>chmask);</highlight></codeline>
+<codeline lineno="76" refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" kindref="member">adcChannels</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_ADC_BATT_MGR_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="drv/adc/batt_mgr.h"/>
+  </compounddef>
+</doxygen>

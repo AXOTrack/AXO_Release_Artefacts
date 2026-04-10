@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_adxl_raw_data_status" kind="struct" language="C++" prot="public">
+    <compoundname>AdxlRawDataStatus</compoundname>
+    <includes refid="adxl__store_8h" local="no">adxl_store.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_adxl_raw_data_status_1a0531b0c7d4eab17ee58c56cccc22fcf4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t startRd</definition>
+        <argsstring></argsstring>
+        <name>startRd</name>
+        <briefdescription>
+<para>Start read position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="77" column="14" bodyfile="data/adxl_store.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">DispTask::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">AdxlDataStore::notifyRawDataStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_adxl_raw_data_status_1a38bad35c844ffd72b0c1132715d5f3a1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t entries</definition>
+        <argsstring></argsstring>
+        <name>entries</name>
+        <briefdescription>
+<para>Total number of entries in FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/adxl_store.h" line="78" column="14" bodyfile="data/adxl_store.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">DispTask::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
+        <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">AdxlDataStore::notifyRawDataStatus</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>uint32_t</label>
+      </node>
+      <node id="1">
+        <label>AdxlRawDataStatus</label>
+        <link refid="struct_adxl_raw_data_status"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+entries</edgelabel>
+          <edgelabel>+startRd</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/adxl_store.h" line="76" column="1" bodyfile="data/adxl_store.h" bodystart="76" bodyend="79"/>
+    <listofallmembers>
+      <member refid="struct_adxl_raw_data_status_1a38bad35c844ffd72b0c1132715d5f3a1" prot="public" virt="non-virtual"><scope>AdxlRawDataStatus</scope><name>entries</name></member>
+      <member refid="struct_adxl_raw_data_status_1a0531b0c7d4eab17ee58c56cccc22fcf4" prot="public" virt="non-virtual"><scope>AdxlRawDataStatus</scope><name>startRd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

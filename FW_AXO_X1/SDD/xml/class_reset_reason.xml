@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_reset_reason" kind="class" language="C++" prot="public">
+    <compoundname>ResetReason</compoundname>
+    <includes refid="reset__reason_8h" local="no">reset_reason.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_reset_reason_1a99d8567bfb7e1d00e8acf5a25bad06a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~ResetReason</definition>
+        <argsstring>()</argsstring>
+        <name>~ResetReason</name>
+        <briefdescription>
+<para>Reset Reason destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/reset_reason.h" line="49" column="5" bodyfile="pm/reset_reason.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_reset_reason_1a24c18a12a144f7ce1024a8fe8c0c23cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get</definition>
+        <argsstring>(unsigned int *mask, std::string *reason_str)</argsstring>
+        <name>get</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>reason_str</declname>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the reset reason. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to unsigned int variable to store content of register RESETREAS </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reason_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reset reason as string representation</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function retrieve the reset reason from register RESETREAS by calling function nrfx_reset_reason_get and store the value in variable reason and assign it to pointer mask. It count the number of reasons by calling function popcount and clear register RESETREAS by calling function nrfx_reset_reason_clear. According to the content of variable reason a string variable will be filled, in case of more than one reset reasons string will be expanded. Finally string will be assigned to pointer reason_str. Both parameter will be passed to caller of this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/reset_reason.h" line="52" column="10" bodyfile="pm/reset_reason.cpp" bodystart="88" bodyend="135"/>
+        <references refid="popcount_8cpp_1ad67001fecbc0a50a73b32445e88b5042" compoundref="popcount_8cpp" startline="32" endline="36">popcount32</references>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_reset_reason_1a9b91654f6451c18336184f0a775d75cd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_reset_reason" kindref="compound">ResetReason</ref> *</type>
+        <definition>ResetReason * inst</definition>
+        <argsstring>()</argsstring>
+        <name>inst</name>
+        <briefdescription>
+<para>The inst function to retrieve the exclusiv only instance of the class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns a pointer to the class instance</para>
+</simplesect>
+In case there is no instance created, the constructor will be called to create the instance. Finally a pointer to the instance is returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/reset_reason.h" line="51" column="24" bodyfile="pm/reset_reason.cpp" bodystart="44" bodyend="48"/>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_reset_reason_1a23530491428cbdea8f3f5ef202476e44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResetReason</definition>
+        <argsstring>()</argsstring>
+        <name>ResetReason</name>
+        <briefdescription>
+<para>Reset Reason constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor is declared as private according to singleton pattern. It is called in the static inst function to create the exclusiv only instance of the class. The constructor simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/reset_reason.h" line="55" column="5" bodyfile="pm/reset_reason.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reset Reason class implemented according to C++ singleton design pattern. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The class provides methods to handle the reset reason, which is determined at startup by reading register RESETREAS. Register value and reset reason string are stored outside of this class in context of the caller of getter function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ResetReason</label>
+        <link refid="class_reset_reason"/>
+      </node>
+    </collaborationgraph>
+    <location file="pm/reset_reason.h" line="47" column="1" bodyfile="pm/reset_reason.h" bodystart="47" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_reset_reason_1a24c18a12a144f7ce1024a8fe8c0c23cc" prot="public" virt="non-virtual"><scope>ResetReason</scope><name>get</name></member>
+      <member refid="class_reset_reason_1a9b91654f6451c18336184f0a775d75cd" prot="public" virt="non-virtual"><scope>ResetReason</scope><name>inst</name></member>
+      <member refid="class_reset_reason_1a23530491428cbdea8f3f5ef202476e44" prot="private" virt="non-virtual"><scope>ResetReason</scope><name>ResetReason</name></member>
+      <member refid="class_reset_reason_1a99d8567bfb7e1d00e8acf5a25bad06a1" prot="public" virt="non-virtual"><scope>ResetReason</scope><name>~ResetReason</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

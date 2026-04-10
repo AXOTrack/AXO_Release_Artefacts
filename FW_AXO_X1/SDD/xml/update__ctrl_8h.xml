@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="update__ctrl_8h" kind="file" language="C++">
+    <compoundname>update_ctrl.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes refid="task_8h" local="yes">rtos/task.h</includes>
+    <includes refid="fsm_8h" local="yes">update/fsm.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="fsm_8cpp" local="yes">update/fsm.cpp</includedby>
+    <includedby refid="update__ctrl_8cpp" local="yes">update/update_ctrl.cpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/sys/__assert.h</label>
+      </node>
+      <node id="9">
+        <label>rtos/mempool.h</label>
+        <link refid="mempool_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>update/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="8">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="1">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_fw_upd_ctrl" prot="public">FwUpdCtrl</innerclass>
+    <briefdescription>
+<para>Header file of update controller module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="update__ctrl_8h_1update_ctrl"/> <simplesect kind="par"><title>Detailed Description </title><para>This header file defines the update controller module for managing firmware updates in the AXO X1 device. The update controller handles the logic for handling OTA commands, firmware update confirmation/rejection, and managing the retry mechanism for firmware downloads. It utilizes the Finite State Machine (FSM) for coordinating different stages of the update process. <linebreak/>
+An OTA_START command received via MQTT triggers the update mechanism. The update control task transitions to state triggered, subscribes to topic device/${device_id}/ota/update and waits for firmware information. On firmware info received (URL, filename, SHA1, etc.) it changes to state download and starts downloading the new image via HTTP to the secondary partition of internal flash. On successful download, the task changes to state ready and publishes a success message via MQTT. After a timeout to allow the MQTT message to be sent, the task triggers a reboot of the device. On reboot, the boot-loader MCUBoot (not part of the update container) performs the actual application firmware update by swapping the two images in slot #1 and slot #2 of internal flash. The application is always started from the image in slot #1. If the application does not mark the copied image as “confirmed” on first run, then on next reboot MCUBoot would revert the update by swapping the images a second time. <image type="html" name="FotaFlowChart.png" inline="yes"></image>
+ <linebreak/>
+ See also message sequence chart in section <ref refid="_m_s_c_1SectionFota" kindref="member">Firmware Update (FOTA)</ref> and statemachine described in class <ref refid="class_fw_fsm" kindref="compound">FwFsm</ref></para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_UPDATE_CTRL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_UPDATE_CTRL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fsm_8h" kindref="compound">update/fsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_fw_upd_ctrl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FwUpdCtrl();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1ac66a6643d3fb18dca57036e55153f313" kindref="member">FwUpdCtrl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a2fd2ce865c7ff9511af069bf9bef5231" kindref="member">~FwUpdCtrl</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a1f13c32a42f24d5e28b53fa9b3cd9b81" kindref="member">otaStartConfirm</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>to<sp/>/device/{device_id}/command/accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a950faa8460d442cc9048523876994131" kindref="member">otaStartReject</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>to<sp/>/device/{device_id}/command/rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1ad91120d26573451fb5eda5a3c735a698" kindref="member">otaFwConfirm</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>to<sp/>/device/{device_id}/ota/update/accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a8aa799fd7cf777ded1db827ba946b07a" kindref="member">otaFwReject</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>to<sp/>/device/{device_id}/ota/update/rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_fw_upd_ctrl_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="class_fw_upd_ctrl_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>*<sp/><ref refid="class_fw_upd_ctrl_1a34fc86b8ad267c2b4d564631fe5db1a5" kindref="member">s1</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*</highlight></codeline>
+<codeline lineno="91" refid="class_fw_upd_ctrl_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1acf548f75f0d8ee18592f9d641c69c2f7" kindref="member">startRebootTimer</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>delay<sp/>reboot<sp/>a<sp/>few<sp/>seconds<sp/>on<sp/>dl<sp/>ready</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a37177c6f6e9271bc6ed124518209357e" kindref="member">startRetryTimer</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>generate<sp/>timeout<sp/>to<sp/>next<sp/>dl<sp/>trial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a37a90858b1254def27b1a720965ca1d8" kindref="member">requestDownload</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>download<sp/>on<sp/>previous<sp/>failure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fw_upd_ctrl_1a6a1385149594b164e59fcfe124454c78" kindref="member">startTimeout</ref>(uint16_t);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_fw_upd_ctrl_1a4dbcd1e9d690db6ef1289651d756ef9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_fw_upd_ctrl_1a4dbcd1e9d690db6ef1289651d756ef9b" kindref="member">retryCnt</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="class_fw_upd_ctrl_1a9c5123d67416084c3cc1c2e5b612e2e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_fw_upd_ctrl_1a9c5123d67416084c3cc1c2e5b612e2e9" kindref="member">maxRetries</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102" refid="class_fw_upd_ctrl_1ac66a6643d3fb18dca57036e55153f313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fw_upd_ctrl_1ac66a6643d3fb18dca57036e55153f313" kindref="member">FwUpdCtrl</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>retry<sp/>intervals<sp/>on<sp/>donwload<sp/>failure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_fw_upd_ctrl_1afe8ceb56514e2284d3ebbc674894215e" kindref="member">retryTmoCur</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="class_fw_upd_ctrl_1aba698dc7ca746759b5d9811308e6fb55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_fw_upd_ctrl_1aba698dc7ca746759b5d9811308e6fb55" kindref="member">retryTmoInit</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="class_fw_upd_ctrl_1aeca2be633f69d370db8a2cfbc239c9e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_fw_upd_ctrl_1aeca2be633f69d370db8a2cfbc239c9e9" kindref="member">retryTmoMax</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UPDATE_UPDATE_CTRL_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="update/update_ctrl.h"/>
+  </compounddef>
+</doxygen>

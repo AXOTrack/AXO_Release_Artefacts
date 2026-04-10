@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="sema_8h" kind="file" language="C++">
+    <compoundname>sema.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="sema_8cpp" local="yes">rtos/sema.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="1">
+        <label>rtos/sema.h</label>
+        <link refid="sema_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>rtos/sema.cpp</label>
+        <link refid="sema_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/sema.h</label>
+        <link refid="sema_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sema" prot="public">Sema</innerclass>
+    <briefdescription>
+<para>Header file of RTOS wrapper class <ref refid="class_sema" kindref="compound">Sema</ref> for semaphore support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="sema_8h_1sema"/> <simplesect kind="par"><title>Detailed Description </title><para>A semaphore is simply a variable that is non-negative and is shared between threads. It is a signaling mechanism for low-level synchronization of threads and/or tasks. It uses the two atomic operations Wait and Signal for the process synchronization. <linebreak/>
+ Counting semaphores uses a count that helps tasks to be acquired or released numerous times. If the count is 0, the counting semaphore is in the unavailable state, If the count is greater 0, the semaphore is in the available state and the number of tokens it has is equal to its count.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_SEMA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_SEMA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_sema" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sema" kindref="compound">Sema</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_sema_1a71b9eadc3f91f61964d1873231861aee" kindref="member">Sema</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>initial_count<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="67" refid="class_sema_1af4fb1c9a9e3acb038fb9d714fbcde313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_sema_1af4fb1c9a9e3acb038fb9d714fbcde313" kindref="member">~Sema</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sema_1a95db92d0c2ab12b431e38f7642c918a2" kindref="member">wait</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sema_1a726ae117ac3cd26233206bf93d0e7f92" kindref="member">wait_timed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sema_1a2a0f4bfac2f24aa0a07de86141381aec" kindref="member">signal</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_sema_1a81dbffbc68e17ae5bfc34d4d1f451f17" kindref="member">count</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74" refid="class_sema_1a71b9eadc3f91f61964d1873231861aee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sema_1a71b9eadc3f91f61964d1873231861aee" kindref="member">Sema</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">k_sem<sp/><ref refid="class_sema_1a780dcae81f052631b246dff9ecf4a4c9" kindref="member">sema_handle</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_SEMA_H_&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/sema.h"/>
+  </compounddef>
+</doxygen>

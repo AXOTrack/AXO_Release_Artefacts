@@ -1,0 +1,1627 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_metrics_builder" kind="class" language="C++" prot="public">
+    <compoundname>MetricsBuilder</compoundname>
+    <includes refid="metric_8h" local="no">metric.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string reset_cause</definition>
+        <argsstring></argsstring>
+        <name>reset_cause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset cause string &quot;POR&quot;|&quot;PIN&quot;|&quot;WDT&quot;|&quot;SWR&quot;|&quot;LCK&quot;|&quot;OFF&quot;|&quot;DBG&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="91" column="17" bodyfile="data/metric.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="493" endline="497">addResetCause</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vbat1</definition>
+        <argsstring></argsstring>
+        <name>vbat1</name>
+        <briefdescription>
+<para>Battery Voltage 1 [mV] V = mV * (10 + 4.7) / 4.7. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="93" column="17" bodyfile="data/metric.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vbat2</definition>
+        <argsstring></argsstring>
+        <name>vbat2</name>
+        <briefdescription>
+<para>Battery Voltage 2 [mV] V = mV * (10 + 4.7) / 4.7. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="94" column="17" bodyfile="data/metric.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vdd_det</definition>
+        <argsstring></argsstring>
+        <name>vdd_det</name>
+        <briefdescription>
+<para>[mV] VDD dectection V = mV * (10 + 4.7) / 4.7 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="95" column="17" bodyfile="data/metric.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string vdd_int</definition>
+        <argsstring></argsstring>
+        <name>vdd_int</name>
+        <briefdescription>
+<para>[mV] internal ADC VDD </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="96" column="17" bodyfile="data/metric.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mdm_batv</definition>
+        <argsstring></argsstring>
+        <name>mdm_batv</name>
+        <briefdescription>
+<para>[mV] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="97" column="17" bodyfile="data/metric.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="126" endline="132">addModemBattV</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mdm_temp</definition>
+        <argsstring></argsstring>
+        <name>mdm_temp</name>
+        <briefdescription>
+<para>[degrees celsius] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="98" column="17" bodyfile="data/metric.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="370" endline="376">addModemTemp</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mdm_link</definition>
+        <argsstring></argsstring>
+        <name>mdm_link</name>
+        <briefdescription>
+<para>[dBm] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="99" column="17" bodyfile="data/metric.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="387" endline="391">addModemLinkQuality</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string psm_tau</definition>
+        <argsstring></argsstring>
+        <name>psm_tau</name>
+        <briefdescription>
+<para>[sec] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="100" column="17" bodyfile="data/metric.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string psm_active</definition>
+        <argsstring></argsstring>
+        <name>psm_active</name>
+        <briefdescription>
+<para>[sec] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="101" column="17" bodyfile="data/metric.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a1b3f11008193b93fd584723e71ce5af8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string edrx_time</definition>
+        <argsstring></argsstring>
+        <name>edrx_time</name>
+        <briefdescription>
+<para>[sec] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="102" column="17" bodyfile="data/metric.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a983798e8289b6a64bedda87b9b3eb7c2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string edrx_ptw</definition>
+        <argsstring></argsstring>
+        <name>edrx_ptw</name>
+        <briefdescription>
+<para>[sec] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="103" column="17" bodyfile="data/metric.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a29043e3c481c242bbe70ce42f34781d5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string uptime</definition>
+        <argsstring></argsstring>
+        <name>uptime</name>
+        <briefdescription>
+<para>[msec] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="104" column="17" bodyfile="data/metric.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a2e9ee8a201840e4535fed1ff394311c6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string heap_free</definition>
+        <argsstring></argsstring>
+        <name>heap_free</name>
+        <briefdescription>
+<para>[bytes] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="105" column="17" bodyfile="data/metric.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a768c83aa0b205c143d62d2107dfb289d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string heap_used</definition>
+        <argsstring></argsstring>
+        <name>heap_used</name>
+        <briefdescription>
+<para>[bytes] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="106" column="17" bodyfile="data/metric.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1aa3d2d96ef3b10e0d19d889f77cbde78b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string heap_max_used</definition>
+        <argsstring></argsstring>
+        <name>heap_max_used</name>
+        <briefdescription>
+<para>[bytes] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="107" column="17" bodyfile="data/metric.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1aa74c818d418e097e25db7ec7b9320470" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string payload</definition>
+        <argsstring></argsstring>
+        <name>payload</name>
+        <briefdescription>
+<para>the metrics JSON string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="108" column="17" bodyfile="data/metric.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" compoundref="metric_8cpp" startline="711" endline="714">getPayload</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+<para>external sensor [degrees celsius] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="109" column="17" bodyfile="data/metric.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="527" endline="538">addTemperature</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <briefdescription>
+<para>external sensor [RH] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="110" column="17" bodyfile="data/metric.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="552" endline="563">addHumidity</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string imsi</definition>
+        <argsstring></argsstring>
+        <name>imsi</name>
+        <briefdescription>
+<para>15-digit IMSI number </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="111" column="17" bodyfile="data/metric.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="478" endline="482">addIMSI</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string boot_cnt</definition>
+        <argsstring></argsstring>
+        <name>boot_cnt</name>
+        <briefdescription>
+<para>the boot count </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="112" column="17" bodyfile="data/metric.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="508" endline="513">addBootCnt</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string num_hw_errors</definition>
+        <argsstring></argsstring>
+        <name>num_hw_errors</name>
+        <briefdescription>
+<para>The counted HW errors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="113" column="17" bodyfile="data/metric.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string adxl_status</definition>
+        <argsstring></argsstring>
+        <name>adxl_status</name>
+        <briefdescription>
+<para>The error status of the acceleration sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="114" column="17" bodyfile="data/metric.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string config_version</definition>
+        <argsstring></argsstring>
+        <name>config_version</name>
+        <briefdescription>
+<para>Version of the configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="115" column="17" bodyfile="data/metric.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" compoundref="metric_8cpp" startline="159" endline="161">setConfigVersion</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string act_thres</definition>
+        <argsstring></argsstring>
+        <name>act_thres</name>
+        <briefdescription>
+<para>Activation threshold for ADXL37x sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="116" column="17" bodyfile="data/metric.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" compoundref="metric_8cpp" startline="171" endline="173">setActivationThres</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string deact_thres</definition>
+        <argsstring></argsstring>
+        <name>deact_thres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deactivation threshold for ADXL37x sensor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="117" column="17" bodyfile="data/metric.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" compoundref="metric_8cpp" startline="183" endline="185">setDeactivationThres</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string disp_mode_off</definition>
+        <argsstring></argsstring>
+        <name>disp_mode_off</name>
+        <briefdescription>
+<para>Flag indicating that displacement calculation is disabled (15 sec raw data storage) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="119" column="17" bodyfile="data/metric.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" compoundref="metric_8cpp" startline="195" endline="197">setDispModeOffFlag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string raw_transfer_on</definition>
+        <argsstring></argsstring>
+        <name>raw_transfer_on</name>
+        <briefdescription>
+<para>Flag indicating that raw data transfer to backend is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="121" column="17" bodyfile="data/metric.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" compoundref="metric_8cpp" startline="207" endline="209">setRawTransferOnFlag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string disp_transfer_on</definition>
+        <argsstring></argsstring>
+        <name>disp_transfer_on</name>
+        <briefdescription>
+<para>Flag indicating that displacement data transfer to backend is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="123" column="17" bodyfile="data/metric.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" compoundref="metric_8cpp" startline="219" endline="221">setDispTransferOnFlag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string pubkey</definition>
+        <argsstring></argsstring>
+        <name>pubkey</name>
+        <briefdescription>
+<para>Pulic key for raw and displacement data transfer to backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="125" column="17" bodyfile="data/metric.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" compoundref="metric_8cpp" startline="231" endline="233">setPublicKey</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string interval</definition>
+        <argsstring></argsstring>
+        <name>interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Metrics transmission interval </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="126" column="17" bodyfile="data/metric.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" compoundref="metric_8cpp" startline="243" endline="245">setMetricsInterval</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rms_thres</definition>
+        <argsstring></argsstring>
+        <name>rms_thres</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Activation threshold for displacement calculation and raw/displacement data transmission </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="129" column="17" bodyfile="data/metric.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" compoundref="metric_8cpp" startline="255" endline="257">set_Z_RmsThres</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string max_raw_per_day</definition>
+        <argsstring></argsstring>
+        <name>max_raw_per_day</name>
+        <briefdescription>
+<para>Maximum raw data transmissions per day. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="130" column="17" bodyfile="data/metric.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" compoundref="metric_8cpp" startline="267" endline="269">set_max_raw_per_day</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_metrics_builder_1ae838f7d41a1a4cee8306ddf06b324802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MetricsBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>MetricsBuilder</name>
+        <briefdescription>
+<para>Metric builder constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The constructor initiates the private variable payload, representing the metrics JSON string with opening curly bracket. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="51" column="5" bodyfile="data/metric.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1ada2a8350a330421d1a40f8937ef10c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MetricsBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>~MetricsBuilder</name>
+        <briefdescription>
+<para>Metric builder destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="52" column="5" bodyfile="data/metric.cpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addModemTemp</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addModemTemp</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append modem temeperature to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to 32 bit integer value, converted to a string and stored in private member variable mdm_temp. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="54" column="10" bodyfile="data/metric.cpp" bodystart="370" bodyend="376"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addModemBattV</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addModemBattV</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append modem battery voltage to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to 32 bit integer value, converted to a string and stored in private member variable mdm_batv. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="55" column="10" bodyfile="data/metric.cpp" bodystart="126" bodyend="132"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addModemLinkQuality</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addModemLinkQuality</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append modem link quality to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, converted to a string and stored in private member variable mdm_link. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="56" column="10" bodyfile="data/metric.cpp" bodystart="387" bodyend="391"/>
+        <references refid="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" compoundref="metric_8h" startline="99">mdm_link</references>
+        <references refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" compoundref="mpelem_8h" startline="223">PoolElem::p2</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addModemPsmAct</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addModemPsmAct</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append modem battery voltage to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure <ref refid="structpsm__timer" kindref="compound">psm_timer</ref> and stored in local varaible psm_act. The variable psm_act-&gt;tau will be converted to a string and stored in private member variable psm_tau. The variable psm_act-&gt;active_time will be converted to a string and stored in private member variable psm_active. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="57" column="10" bodyfile="data/metric.cpp" bodystart="405" bodyend="413"/>
+        <references refid="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" compoundref="lte__monitor_8h" startline="93">psm_timer::active_time</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" compoundref="metric_8h" startline="101">psm_active</references>
+        <references refid="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" compoundref="metric_8h" startline="100">psm_tau</references>
+        <references refid="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" compoundref="lte__monitor_8h" startline="90">psm_timer::tau</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addIMSI</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addIMSI</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append modem DRX to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure lte_lc_edrx_cfg and stored in local varaible eDRX. The variable eDRX-&gt;edrx will be converted to a string and stored in private member variable edrx_time. The variable eDRX-&gt;ptw will be converted to a string and stored in private member variable edrx_ptw. Writing the variable value into JSON string is part of member function finalize. <linebreak/>
+ NOT USED <hruler/>
+</para>
+<para>Add function to append IMSI to metrics JSON string</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, converted to a string and stored in private member variable imsi. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="59" column="10" bodyfile="data/metric.cpp" bodystart="478" bodyend="482"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" compoundref="metric_8h" startline="111">imsi</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addResetCause</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addResetCause</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append reset cause to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, converted to a string and stored in private member variable reset_cause. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="60" column="10" bodyfile="data/metric.cpp" bodystart="493" bodyend="497"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" compoundref="metric_8h" startline="91">reset_cause</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addBootCnt</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addBootCnt</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append boot counter to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to 32 bit integer value, converted to a string and stored in private member variable boot_cnt. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="61" column="10" bodyfile="data/metric.cpp" bodystart="508" bodyend="513"/>
+        <references refid="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" compoundref="metric_8h" startline="112">boot_cnt</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addBattV</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addBattV</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="62" column="10"/>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addTemperature</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addTemperature</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append temperature of external sensor to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure sensor_value and stored in local varaible val. The variable val will be converted to a float value by calling function sensor_value_to_double, converted to a string and stored in private member variable temperature. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="63" column="10" bodyfile="data/metric.cpp" bodystart="527" bodyend="538"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" compoundref="metric_8h" startline="109">temperature</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addHumidity</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addHumidity</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append humidity of external sensor to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure sensor_value and stored in local varaible val. The variable val will be converted to a float value by calling function sensor_value_to_double, converted to a string and stored in private member variable humidity. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="64" column="10" bodyfile="data/metric.cpp" bodystart="552" bodyend="563"/>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addHwMetrics</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>addHwMetrics</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append HW status information to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The message payload will be extracted, casted to structure <ref refid="structhw__metrics" kindref="compound">hw_metrics</ref> and stored in local varaible hw_m. The variable hw_m-&gt; num_errors will be converted to a string and stored in private member variable num_hw_errors. The variable hw_m-&gt;hw_status will be will be checked if the value is enumeration eHwOK. In this case the the string &quot;adxl37x_ok&quot; will be assigned to private member variable adxl_status. If the value is not eHwOK, the string &quot;adxl37x_fail&quot; will be assigned to private member variable adxl_status. Writing the variable value into JSON string is part of member function finalize. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="65" column="10" bodyfile="data/metric.cpp" bodystart="430" bodyend="444"/>
+        <references refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" compoundref="metric_8h" startline="114">adxl_status</references>
+        <references refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a77c49b7ddecca73845e2821c8688787e" compoundref="hw__metrics_8h" startline="42">eHwOK</references>
+        <references refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a47ddab85fd832aa8511a7cdff02413e4" compoundref="hw__metrics_8h" startline="44">eHwSelftestFailed</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" compoundref="hw__metrics_8h" startline="50">hw_metrics::hw_status</references>
+        <references refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" compoundref="hw__metrics_8h" startline="49">hw_metrics::num_errors</references>
+        <references refid="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" compoundref="metric_8h" startline="113">num_hw_errors</references>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void add</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Add function to append prepared metrics data to the metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message (pool element)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+According to the message type of the message one of the specific add functions of the class will be called. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="66" column="10" bodyfile="data/metric.cpp" bodystart="574" bodyend="629"/>
+        <references refid="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35">addBattV</references>
+        <references refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="508" endline="513">addBootCnt</references>
+        <references refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="552" endline="563">addHumidity</references>
+        <references refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">addHwMetrics</references>
+        <references refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="478" endline="482">addIMSI</references>
+        <references refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="126" endline="132">addModemBattV</references>
+        <references refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="387" endline="391">addModemLinkQuality</references>
+        <references refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">addModemPsmAct</references>
+        <references refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="370" endline="376">addModemTemp</references>
+        <references refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="493" endline="497">addResetCause</references>
+        <references refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="527" endline="538">addTemperature</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" compoundref="mpelem_8h" startline="86">eAdcData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" compoundref="mpelem_8h" startline="106">eBootCnt</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" compoundref="mpelem_8h" startline="85">eHwMetrics</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9b4ebe21df63da73fd88095d52108213" compoundref="mpelem_8h" startline="44">eLteBattVoltage</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafc94700321744cf389c08351f616eff9" compoundref="mpelem_8h" startline="51">eLteFwVersion</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4fdd614c2d67ec152bd599336e8b59a5" compoundref="mpelem_8h" startline="47">eLteIMSI</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" compoundref="mpelem_8h" startline="42">eLteLinkQuality</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf9d3717bc9984a4608b9de3054a64f33" compoundref="mpelem_8h" startline="45">eLtePsmAct</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2eed0a4913bbe04d264158625760ed70" compoundref="mpelem_8h" startline="43">eLteTemperature</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa9d7bd6e7db2ec4192ba05845f0a01c3" compoundref="mpelem_8h" startline="105">eResetCause</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba153fbb27bae81bd546a1bbde27a299e6" compoundref="mpelem_8h" startline="60">eShtcxHumidity</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" compoundref="mpelem_8h" startline="59">eShtcxTemperature</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setConfigVersion</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setConfigVersion</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable config_version. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable config_version to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="67" column="10" bodyfile="data/metric.cpp" bodystart="159" bodyend="161"/>
+        <references refid="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" compoundref="metric_8h" startline="115">config_version</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setActivationThres</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setActivationThres</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable act_thres. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable act_thres to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="68" column="10" bodyfile="data/metric.cpp" bodystart="171" bodyend="173"/>
+        <references refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" compoundref="metric_8h" startline="116">act_thres</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDeactivationThres</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setDeactivationThres</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable deact_thres. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable deact_thres to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="69" column="10" bodyfile="data/metric.cpp" bodystart="183" bodyend="185"/>
+        <references refid="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" compoundref="metric_8h" startline="117">deact_thres</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDispModeOffFlag</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setDispModeOffFlag</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable disp_mode_off. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable disp_mode_off to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="70" column="10" bodyfile="data/metric.cpp" bodystart="195" bodyend="197"/>
+        <references refid="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" compoundref="metric_8h" startline="119">disp_mode_off</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setRawTransferOnFlag</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setRawTransferOnFlag</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable raw_transfer_on. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable raw_transfer_on to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="71" column="10" bodyfile="data/metric.cpp" bodystart="207" bodyend="209"/>
+        <references refid="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" compoundref="metric_8h" startline="121">raw_transfer_on</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDispTransferOnFlag</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setDispTransferOnFlag</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable disp_transfer_on. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable disp_transfer_on to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="72" column="10" bodyfile="data/metric.cpp" bodystart="219" bodyend="221"/>
+        <references refid="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" compoundref="metric_8h" startline="123">disp_transfer_on</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPublicKey</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setPublicKey</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable pubkey. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable pubkey to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="73" column="10" bodyfile="data/metric.cpp" bodystart="231" bodyend="233"/>
+        <references refid="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" compoundref="metric_8h" startline="125">pubkey</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setMetricsInterval</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>setMetricsInterval</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set Metrics transmission interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable interval to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="74" column="10" bodyfile="data/metric.cpp" bodystart="243" bodyend="245"/>
+        <references refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="metric_8h" startline="126">interval</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_Z_RmsThres</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>set_Z_RmsThres</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable raw_thres. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable raw_thres to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="75" column="10" bodyfile="data/metric.cpp" bodystart="255" bodyend="257"/>
+        <references refid="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="metric_8h" startline="129">rms_thres</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void set_max_raw_per_day</definition>
+        <argsstring>(std::string &amp;s)</argsstring>
+        <name>set_max_raw_per_day</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set private string variable max_raw_per_day. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function set the private string variable max_raw_per_day to value of parameter s. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="76" column="10" bodyfile="data/metric.cpp" bodystart="267" bodyend="269"/>
+        <references refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" compoundref="metric_8h" startline="130">max_raw_per_day</references>
+        <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a3260d0318d001560fe429994039dcfa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int scaleBattIn</definition>
+        <argsstring>(int32_t ad_in)</argsstring>
+        <name>scaleBattIn</name>
+        <param>
+          <type>int32_t</type>
+          <declname>ad_in</declname>
+        </param>
+        <briefdescription>
+<para>Scaling of incoming battery voltage from AD converter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ad_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incoming battery voltage from AD converter</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the scaled battery voltage</para>
+</simplesect>
+The function scales the incoming battery voltage from AD converter with following formula: <linebreak/>
+ res = ad_in * VOLTAGE_DIVIDER_FACTOR <linebreak/>
+Result will be casted to 32 bit integer and returned </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="78" column="9" bodyfile="data/metric.cpp" bodystart="145" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void finalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>finalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to finalize the metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function retrieves the current system uptime by calling function k_uptime_get and convert it to seconds. Then the key value pairs will be appended to private string variable payload, which represents the metrics JSON string. Finally the metrics JSON string will be terminated with closing curly bracket. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="80" column="10" bodyfile="data/metric.cpp" bodystart="640" bodyend="701"/>
+        <references refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" compoundref="metric_8h" startline="116">act_thres</references>
+        <references refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" compoundref="metric_8h" startline="114">adxl_status</references>
+        <references refid="boost_8h_1adb78930007c481618718ea80667ddae1" compoundref="boost_8h" startline="53">BOOST_ENABLED_FILENAME</references>
+        <references refid="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" compoundref="metric_8h" startline="112">boot_cnt</references>
+        <references refid="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" compoundref="metric_8h" startline="115">config_version</references>
+        <references refid="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" compoundref="metric_8h" startline="117">deact_thres</references>
+        <references refid="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" compoundref="metric_8h" startline="119">disp_mode_off</references>
+        <references refid="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" compoundref="metric_8h" startline="123">disp_transfer_on</references>
+        <references refid="version_8cpp_1a4b00c0a09807f51f932d82cf52dd74f9" compoundref="version_8cpp" startline="37" endline="37">getFwVersion</references>
+        <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
+        <references refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" compoundref="metric_8h" startline="111">imsi</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="metric_8h" startline="126">interval</references>
+        <references refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" compoundref="metric_8h" startline="130">max_raw_per_day</references>
+        <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
+        <references refid="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" compoundref="metric_8h" startline="99">mdm_link</references>
+        <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
+        <references refid="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" compoundref="metric_8h" startline="113">num_hw_errors</references>
+        <references refid="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" compoundref="metric_8h" startline="101">psm_active</references>
+        <references refid="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" compoundref="metric_8h" startline="100">psm_tau</references>
+        <references refid="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" compoundref="metric_8h" startline="125">pubkey</references>
+        <references refid="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" compoundref="metric_8h" startline="121">raw_transfer_on</references>
+        <references refid="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" compoundref="metric_8h" startline="91">reset_cause</references>
+        <references refid="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="metric_8h" startline="129">rms_thres</references>
+        <references refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" compoundref="metric_8h" startline="109">temperature</references>
+        <references refid="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" compoundref="metric_8h" startline="93">vbat1</references>
+        <references refid="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" compoundref="metric_8h" startline="94">vbat2</references>
+        <references refid="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" compoundref="metric_8h" startline="95">vdd_det</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Function clear all private string variables related to metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function clear all private string variables related to metrics JSON string, except mdm_link and psm_tau, because there will be no update if the if values remains stable. Variable payload will be reinitializes with opening curly bracket. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="81" column="10" bodyfile="data/metric.cpp" bodystart="736" bodyend="752"/>
+        <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
+        <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
+        <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
+        <references refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" compoundref="metric_8h" startline="109">temperature</references>
+        <references refid="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" compoundref="metric_8h" startline="93">vbat1</references>
+        <references refid="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" compoundref="metric_8h" startline="94">vbat2</references>
+        <references refid="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" compoundref="metric_8h" startline="95">vdd_det</references>
+        <references refid="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" compoundref="metric_8h" startline="96">vdd_int</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool isComplete</definition>
+        <argsstring>()</argsstring>
+        <name>isComplete</name>
+        <briefdescription>
+<para>isComplete function to check if the metrics JSON string is completly filled </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>returns true if metrics JSON string is complete, false otherwise</para>
+</simplesect>
+The function checks if the metrics JSON string is completly filled and all metrics data is present. Therefor it checks if battery voltage, temperature and internal supply voltage is present by checking taht size is greater than 0. Firthermore it checks the size of LTE temperature and humidity. Other requested metrics will not be checked. Here the implcit knowledge that LTE temperature and humidity request are the last requests, so that every other requested data still must be received. <simplesect kind="attention"><para>Changing the order of requested metrics information can result in lost of metrics data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="83" column="10" bodyfile="data/metric.cpp" bodystart="108" bodyend="114"/>
+        <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
+        <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
+        <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
+        <references refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" compoundref="metric_8h" startline="109">temperature</references>
+        <references refid="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" compoundref="metric_8h" startline="96">vdd_int</references>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a7e8442e7139d840c15bdee83789f7ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print</definition>
+        <argsstring>(void)</argsstring>
+        <name>print</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print function to output the metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function prints the private string variable payload, using debug message with debug level INFO. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="84" column="10" bodyfile="data/metric.cpp" bodystart="722" bodyend="725"/>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; getPayload</definition>
+        <argsstring>(void)</argsstring>
+        <name>getPayload</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Getter function to retrieve the metrics JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>Returns the private string variable payload</para>
+</simplesect>
+The function returns the private string variable payload, which represents the metrics JSON string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="85" column="17" bodyfile="data/metric.cpp" bodystart="711" bodyend="714"/>
+        <references refid="class_metrics_builder_1aa74c818d418e097e25db7ec7b9320470" compoundref="metric_8h" startline="108">payload</references>
+        <referencedby refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">DataManager::publishMetrics</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_metrics_builder_1a30aa207d61060cd829f2420a1ab60c66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MetricsBuilder</definition>
+        <argsstring>(const MetricsBuilder &amp;)=delete</argsstring>
+        <name>MetricsBuilder</name>
+        <param>
+          <type>const <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="88" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_metrics_builder_1abfbcefc7922d69a1b46b11385a3c4d94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> &amp;</type>
+        <definition>MetricsBuilder&amp; operator=</definition>
+        <argsstring>(const MetricsBuilder &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/metric.h" line="89" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Metrics builder helper class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The metrics builder helper class provides methods to create the metrics JSON string, which will be send via LTE with topic /device/<emphasis>DEVICE_ID</emphasis>/metric/update to the MQTT broker. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>MetricsBuilder</label>
+        <link refid="class_metrics_builder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-act_thres</edgelabel>
+          <edgelabel>-adxl_status</edgelabel>
+          <edgelabel>-boot_cnt</edgelabel>
+          <edgelabel>-config_version</edgelabel>
+          <edgelabel>-deact_thres</edgelabel>
+          <edgelabel>-disp_mode_off</edgelabel>
+          <edgelabel>-disp_transfer_on</edgelabel>
+          <edgelabel>-edrx_ptw</edgelabel>
+          <edgelabel>-edrx_time</edgelabel>
+          <edgelabel>-heap_free</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="data/metric.h" line="49" column="1" bodyfile="data/metric.h" bodystart="49" bodyend="131"/>
+    <listofallmembers>
+      <member refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>act_thres</name></member>
+      <member refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>add</name></member>
+      <member refid="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addBattV</name></member>
+      <member refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addBootCnt</name></member>
+      <member refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addHumidity</name></member>
+      <member refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addHwMetrics</name></member>
+      <member refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addIMSI</name></member>
+      <member refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addModemBattV</name></member>
+      <member refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addModemLinkQuality</name></member>
+      <member refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addModemPsmAct</name></member>
+      <member refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addModemTemp</name></member>
+      <member refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addResetCause</name></member>
+      <member refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>addTemperature</name></member>
+      <member refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>adxl_status</name></member>
+      <member refid="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>boot_cnt</name></member>
+      <member refid="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>config_version</name></member>
+      <member refid="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>deact_thres</name></member>
+      <member refid="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>disp_mode_off</name></member>
+      <member refid="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>disp_transfer_on</name></member>
+      <member refid="class_metrics_builder_1a983798e8289b6a64bedda87b9b3eb7c2" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>edrx_ptw</name></member>
+      <member refid="class_metrics_builder_1a1b3f11008193b93fd584723e71ce5af8" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>edrx_time</name></member>
+      <member refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>finalize</name></member>
+      <member refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>getPayload</name></member>
+      <member refid="class_metrics_builder_1a2e9ee8a201840e4535fed1ff394311c6" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>heap_free</name></member>
+      <member refid="class_metrics_builder_1aa3d2d96ef3b10e0d19d889f77cbde78b" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>heap_max_used</name></member>
+      <member refid="class_metrics_builder_1a768c83aa0b205c143d62d2107dfb289d" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>heap_used</name></member>
+      <member refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>humidity</name></member>
+      <member refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>imsi</name></member>
+      <member refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>interval</name></member>
+      <member refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>isComplete</name></member>
+      <member refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>max_raw_per_day</name></member>
+      <member refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>mdm_batv</name></member>
+      <member refid="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>mdm_link</name></member>
+      <member refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>mdm_temp</name></member>
+      <member refid="class_metrics_builder_1ae838f7d41a1a4cee8306ddf06b324802" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>MetricsBuilder</name></member>
+      <member refid="class_metrics_builder_1a30aa207d61060cd829f2420a1ab60c66" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>MetricsBuilder</name></member>
+      <member refid="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>num_hw_errors</name></member>
+      <member refid="class_metrics_builder_1abfbcefc7922d69a1b46b11385a3c4d94" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>operator=</name></member>
+      <member refid="class_metrics_builder_1aa74c818d418e097e25db7ec7b9320470" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>payload</name></member>
+      <member refid="class_metrics_builder_1a7e8442e7139d840c15bdee83789f7ae8" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>print</name></member>
+      <member refid="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>psm_active</name></member>
+      <member refid="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>psm_tau</name></member>
+      <member refid="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>pubkey</name></member>
+      <member refid="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>raw_transfer_on</name></member>
+      <member refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>reset</name></member>
+      <member refid="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>reset_cause</name></member>
+      <member refid="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>rms_thres</name></member>
+      <member refid="class_metrics_builder_1a3260d0318d001560fe429994039dcfa1" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>scaleBattIn</name></member>
+      <member refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>set_max_raw_per_day</name></member>
+      <member refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>set_Z_RmsThres</name></member>
+      <member refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setActivationThres</name></member>
+      <member refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setConfigVersion</name></member>
+      <member refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setDeactivationThres</name></member>
+      <member refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setDispModeOffFlag</name></member>
+      <member refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setDispTransferOnFlag</name></member>
+      <member refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setMetricsInterval</name></member>
+      <member refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setPublicKey</name></member>
+      <member refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>setRawTransferOnFlag</name></member>
+      <member refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>temperature</name></member>
+      <member refid="class_metrics_builder_1a29043e3c481c242bbe70ce42f34781d5" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>uptime</name></member>
+      <member refid="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>vbat1</name></member>
+      <member refid="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>vbat2</name></member>
+      <member refid="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>vdd_det</name></member>
+      <member refid="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" prot="private" virt="non-virtual"><scope>MetricsBuilder</scope><name>vdd_int</name></member>
+      <member refid="class_metrics_builder_1ada2a8350a330421d1a40f8937ef10c96" prot="public" virt="non-virtual"><scope>MetricsBuilder</scope><name>~MetricsBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

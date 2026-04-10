@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="boot__cnt_8h" kind="file" language="C++">
+    <compoundname>boot_cnt.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="boot__cnt_8cpp" local="yes">pm/boot_cnt.cpp</includedby>
+    <includedby refid="power__mgr_8cpp" local="yes">pm/power_mgr.cpp</includedby>
+    <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>pm/boot_cnt.h</label>
+        <link refid="boot__cnt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>pm/boot_cnt.cpp</label>
+        <link refid="boot__cnt_8cpp"/>
+      </node>
+      <node id="1">
+        <label>pm/boot_cnt.h</label>
+        <link refid="boot__cnt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="3">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_boot_cnt" prot="public">BootCnt</innerclass>
+    <briefdescription>
+<para>Header file of boot count class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="boot__cnt_8h_1boot_cnt"/> <simplesect kind="par"><title>Detailed Description </title><para>The boot counter counts the number of boot events. The boot counter willl be stored persistently in FRAM flash file system. At startup boot count is read from flash file system and will be incremented by 1. Because boot count may be negative on an erased flash it is set to 0 in case of a negative value.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_BOOT_CNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_BOOT_CNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_boot_cnt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_boot_cnt" kindref="compound">BootCnt</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_boot_cnt_1aeed08e35cc4b842201788b36d45cc55f" kindref="member">~BootCnt</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_boot_cnt" kindref="compound">BootCnt</ref>*<sp/><ref refid="class_boot_cnt_1a2ae66bfeb6b4169777413ad10771501a" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_boot_cnt_1a778335fa79020bb947b8730d3cd6fa4b" kindref="member">get</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" kindref="member">BootCnt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/lfs/boot_count&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48" refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="class_boot_cnt_1aae68550ad38d9fd2a74d96a4f6efdc54" kindref="member">boot_count</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_BOOT_CNT_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="pm/boot_cnt.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,546 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_boost_converter" kind="class" language="C++" prot="public">
+    <compoundname>BoostConverter</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="boost_8h" local="no">boost.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the boost converter task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="80" column="10" bodyfile="drv/pm/boost.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+        <referencedby refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" compoundref="boost_8cpp" startline="77" endline="83">timer1_expired</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* myTimer</definition>
+        <argsstring></argsstring>
+        <name>myTimer</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> to control the maximum activation time period. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="81" column="11" bodyfile="drv/pm/boost.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isEnabled</definition>
+        <argsstring></argsstring>
+        <name>isEnabled</name>
+        <briefdescription>
+<para>Flag indicating that boost converter is en- or disbled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="86" column="10" bodyfile="drv/pm/boost.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isOn</definition>
+        <argsstring></argsstring>
+        <name>isOn</name>
+        <briefdescription>
+<para>Flag indicating that boost converter is activated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="87" column="10" bodyfile="drv/pm/boost.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="158" endline="165">off</referencedby>
+        <referencedby refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="142" endline="149">on</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_boost_converter_1aa1ea91323dfb0e89469a545299b82ff1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxTimeOn</definition>
+        <argsstring></argsstring>
+        <name>maxTimeOn</name>
+        <briefdescription>
+<para>The maximum activation time period. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="88" column="9" bodyfile="drv/pm/boost.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boost_converter_1afc0873ec70fe10be301b3ec811a1d6e5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+<para>Reserved for future use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="89" column="9" bodyfile="drv/pm/boost.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" prot="private" static="no" mutable="no">
+        <type>struct gpio_dt_spec</type>
+        <definition>struct gpio_dt_spec gpio</definition>
+        <argsstring></argsstring>
+        <name>gpio</name>
+        <briefdescription>
+<para>GPIO pin information structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="89" column="9" bodyfile="drv/pm/boost.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="158" endline="165">off</referencedby>
+        <referencedby refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="142" endline="149">on</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool device_good</definition>
+        <argsstring></argsstring>
+        <name>device_good</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating that hardware initialization was successful </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="91" column="10" bodyfile="drv/pm/boost.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoostConverter</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>BoostConverter</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Boost converter task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register a mailbox and allocate the timer to supervise the maximum activation time period. By calling macro GPIO_DT_SPEC_GET it retrieves the GPIO pin information structure gpio from devicetree and checks with call of function device_is_ready if the gpio is ready for use. The private flag device_good, indicating that hardware initialization was successful, will be set according to the return value of function device_is_ready. If initialization was not successful an error message will be printed. <linebreak/>
+Flag isEnabled will be set to false, in case file BOOST_ENABLED_FILENAME exists, flag will be set to true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="74" column="14" bodyfile="drv/pm/boost.cpp" bodystart="101" bodyend="133"/>
+        <references refid="boost_8h_1adb78930007c481618718ea80667ddae1" compoundref="boost_8h" startline="53">BOOST_ENABLED_FILENAME</references>
+        <references refid="boost_8cpp_1ae646dfd2e7bdb3123c8b5ffcbb3eb9b8" compoundref="boost_8cpp" startline="47">BOOST_NODE</references>
+        <references refid="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="boost_8h" startline="91">device_good</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501abe8cd9bda40f9a78f53bc3296970f7cc" compoundref="mbox_8h" startline="84">Mbox::eBoostConverter</references>
+        <references refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" compoundref="boost_8h" startline="90">gpio</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" compoundref="boost_8h" startline="86">isEnabled</references>
+        <references refid="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="boost_8h" startline="81">myTimer</references>
+        <references refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="boost_8h" startline="80">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_boost_converter_1aaa25421e04a507bcced8f9bb02af5213" compoundref="boost_8cpp" startline="61" endline="67">timer_cb</references>
+      </memberdef>
+      <memberdef kind="function" id="class_boost_converter_1ad1961b934b7ea5862bf0813ba42b9dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~BoostConverter</definition>
+        <argsstring>()</argsstring>
+        <name>~BoostConverter</name>
+        <briefdescription>
+<para>Boost converter task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="75" column="13" bodyfile="drv/pm/boost.cpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Boost converter task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: On timer expiry the pointer pElem will be set to 0, to prevent releasing the message because it is allocated static. Finally boost converter is switched off by calling function <ref refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" kindref="member">off()</ref>.</para>
+</listitem><listitem><para>eResume: On reciving the resume message from power manager the timeout value for the maximum activation time period will be extracted from message payload and the timer will be started with this timeout value. Afterwards boost converter is switched on by calling function <ref refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" kindref="member">on()</ref>.</para>
+</listitem><listitem><para>eSuspend: On reciving the suspend message from power manager, timer will be stopped and boost converter is switched off by calling function <ref refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" kindref="member">off()</ref>.</para>
+</listitem><listitem><para>eBoostOnReq: Boost converter will be enabled by setting flag isEnabled to true and file BOOST_ENABLED_FILENAME will be written to file system as persistent indication.</para>
+</listitem><listitem><para>eBoostOffReq: Boost converter will be enabled by setting flag isEnabled to false and file BOOST_ENABLED_FILENAME will be deleted. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="76" column="18" bodyfile="drv/pm/boost.cpp" bodystart="203" bodyend="283"/>
+        <references refid="boost_8h_1adb78930007c481618718ea80667ddae1" compoundref="boost_8h" startline="53">BOOST_ENABLED_FILENAME</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" compoundref="mpelem_8h" startline="141">eBoostOffReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" compoundref="mpelem_8h" startline="140">eBoostOnReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" compoundref="mpelem_8h" startline="89">eResume</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20" compoundref="mpelem_8h" startline="88">eSuspend</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" compoundref="flashfs_8cpp" startline="352" endline="357">FlashFS::file_seek</references>
+        <references refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" compoundref="flashfs_8cpp" startline="345" endline="350">FlashFS::file_sync</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" compoundref="boost_8h" startline="86">isEnabled</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="boost_8h" startline="81">myTimer</references>
+        <references refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="158" endline="165">off</references>
+        <references refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="142" endline="149">on</references>
+        <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">PoolElem::p1</references>
+        <references refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="boost_8h" startline="80">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" compoundref="flashfs_8cpp" startline="243" endline="248">FlashFS::remove</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="class_timer_1a8c528baf37154d347366083f0f816846" compoundref="timer_8cpp" startline="101" endline="104">Timer::stop</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>()</argsstring>
+        <name>timer1_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the timer to control the maximum activation time period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eTimerExpired, set reset control as sender and put message into own (boost converter&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="78" column="10" bodyfile="drv/pm/boost.cpp" bodystart="77" bodyend="83"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="boost_8h" startline="80">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_boost_converter_1aaa25421e04a507bcced8f9bb02af5213" compoundref="boost_8cpp" startline="61" endline="67">timer_cb</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_boost_converter_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the timer to control the maximum activation time period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call boost converter timer expired function timer1_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="77" column="17" bodyfile="drv/pm/boost.cpp" bodystart="61" bodyend="67"/>
+        <references refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" compoundref="boost_8cpp" startline="77" endline="83">timer1_expired</references>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void on</definition>
+        <argsstring>()</argsstring>
+        <name>on</name>
+        <briefdescription>
+<para>Function to switch on boost converter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function gpio_pin_configure_dt boost enable pin will be forced to active state to switch on the boost converter. Flag isOn indicating that boost converter is activated will be set to true. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="84" column="10" bodyfile="drv/pm/boost.cpp" bodystart="142" bodyend="149"/>
+        <references refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" compoundref="boost_8h" startline="90">gpio</references>
+        <references refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" compoundref="boost_8h" startline="87">isOn</references>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void off</definition>
+        <argsstring>()</argsstring>
+        <name>off</name>
+        <briefdescription>
+<para>Function to switch off boost converter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function gpio_pin_configure_dt boost enable pin will be forced to inactive state to switch off the boost converter. Flag isOn indicating that boost converter is activated will be set to false. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="85" column="10" bodyfile="drv/pm/boost.cpp" bodystart="158" bodyend="165"/>
+        <references refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" compoundref="boost_8h" startline="90">gpio</references>
+        <references refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" compoundref="boost_8h" startline="87">isOn</references>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_boost_converter_1a327de4628838031285a936d94ba1ae1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoostConverter</definition>
+        <argsstring>()=delete</argsstring>
+        <name>BoostConverter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/pm/boost.h" line="93" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Boost converter class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The boost converter class switches boost converter on and off. It provides methods to set GPIO pin P0.21 in active and inactive state to switch boost converter on and off and a timer to control the duration of boost controller activity. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>Boost converter task (self)</para>
+</listitem><listitem><para>Power manager task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Boost converter task (self) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>BoostConverter</label>
+        <link refid="class_boost_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="13">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="10">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>int</label>
+      </node>
+      <node id="15">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="11">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="1">
+        <label>BoostConverter</label>
+        <link refid="class_boost_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-gpio</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-maxTimeOn</edgelabel>
+          <edgelabel>-refcnt</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-device_good</edgelabel>
+          <edgelabel>-isEnabled</edgelabel>
+          <edgelabel>-isOn</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+myTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>struct gpio_dt_spec</label>
+      </node>
+      <node id="9">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="16">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/pm/boost.h" line="71" column="1" bodyfile="drv/pm/boost.h" bodystart="71" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>BoostConverter</name></member>
+      <member refid="class_boost_converter_1a327de4628838031285a936d94ba1ae1d" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>BoostConverter</name></member>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>BoostConverter</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>create</name></member>
+      <member refid="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>device_good</name></member>
+      <member refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>gpio</name></member>
+      <member refid="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>isEnabled</name></member>
+      <member refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>isOn</name></member>
+      <member refid="class_boost_converter_1aa1ea91323dfb0e89469a545299b82ff1" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>maxTimeOn</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>BoostConverter</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>BoostConverter</scope><name>myName</name></member>
+      <member refid="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>myTimer</name></member>
+      <member refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>off</name></member>
+      <member refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>on</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>operator=</name></member>
+      <member refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>pInMbox</name></member>
+      <member refid="class_boost_converter_1afc0873ec70fe10be301b3ec811a1d6e5" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>refcnt</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>start</name></member>
+      <member refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>BoostConverter</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>BoostConverter</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>BoostConverter</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>BoostConverter</scope><name>tid</name></member>
+      <member refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>timer1_expired</name></member>
+      <member refid="class_boost_converter_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>BoostConverter</scope><name>timer_cb</name></member>
+      <member refid="class_boost_converter_1ad1961b934b7ea5862bf0813ba42b9dd4" prot="public" virt="virtual"><scope>BoostConverter</scope><name>~BoostConverter</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>BoostConverter</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

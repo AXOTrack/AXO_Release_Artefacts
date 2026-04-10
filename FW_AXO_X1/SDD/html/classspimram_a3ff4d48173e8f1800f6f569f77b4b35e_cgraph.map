@@ -1,0 +1,7 @@
+<map id="erase" name="erase">
+<area shape="rect" id="node1" title="Function to erase content of the MRAM." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node2" href="$classspimram.html#ab9d179e656fc5552c392b174d03457f2" title="Function to write multiple bytes into MRAM." alt="" coords="108,31,191,57"/>
+<area shape="rect" id="node3" href="$classspimram.html#aaccd14e38a401a9979170c5addc43e29" title="Function to write multiple bytes to MRAM." alt="" coords="239,31,327,57"/>
+<area shape="rect" id="node4" href="$classspimram.html#a1795c2a9ad98232f829a8b7e64956ee2" title="Function to access MRAM for reading and writing." alt="" coords="380,5,484,32"/>
+<area shape="rect" id="node5" href="$classspimram.html#a2ca332a82cb3095dd7bda250ed303e8c" title="Function to send a command to MRAM." alt="" coords="375,56,489,83"/>
+</map>

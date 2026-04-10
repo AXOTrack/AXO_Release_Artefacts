@@ -1,0 +1,10 @@
+<map id="task" name="task">
+<area shape="rect" id="node1" title="Reset control task function." alt="" coords="5,81,52,108"/>
+<area shape="rect" id="node2" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="100,5,207,32"/>
+<area shape="rect" id="node5" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="110,56,197,83"/>
+<area shape="rect" id="node7" href="$class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="109,107,197,133"/>
+<area shape="rect" id="node8" href="$class_reset_ctrl.html#ab0554cb7241c0b72d34402f0bb419462" title="Function trigger initiates the power cycle reset (cold start)" alt="" coords="124,157,183,184"/>
+<area shape="rect" id="node3" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="255,5,387,32"/>
+<area shape="rect" id="node4" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="435,5,559,32"/>
+<area shape="rect" id="node6" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="272,56,369,83"/>
+</map>

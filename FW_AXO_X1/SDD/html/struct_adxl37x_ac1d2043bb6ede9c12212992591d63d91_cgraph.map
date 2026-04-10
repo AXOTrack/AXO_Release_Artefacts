@@ -1,0 +1,23 @@
+<map id="initDevice" name="initDevice">
+<area shape="rect" id="node1" title="Function to initialize the sensor device driver." alt="" coords="5,385,83,412"/>
+<area shape="rect" id="node2" href="$struct_adxl37x.html#a715341f6ab01b559c6fd46d649bdb947" title="The FIFO handler callback function." alt="" coords="159,107,246,133"/>
+<area shape="rect" id="node8" href="$class_pwm.html#aee502d2d4a23aa6bf075705012950c91" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="748,208,828,235"/>
+<area shape="rect" id="node14" href="$class_pwm.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The init function." alt="" coords="165,309,241,336"/>
+<area shape="rect" id="node15" href="$struct_adxl37x.html#ac3697632d1d1a52014c0f19d3454bcd8" title="Function to clears the FIFO data of the sensor device driver." alt="" coords="150,360,255,387"/>
+<area shape="rect" id="node17" href="$struct_adxl37x.html#a967716ed114888b1fbdbbe8061a85eaf" title="Function to activate FIFO of the sensor device driver." alt="" coords="163,411,242,437"/>
+<area shape="rect" id="node18" href="$struct_adxl37x.html#a7c09cf34e0f9c4d3a8e05896c4da7b1b" title="Function to set operation mode of the sensor device driver." alt="" coords="158,461,247,488"/>
+<area shape="rect" id="node20" href="$class_pwm.html#a171186473ecce8bc6ac516599ea3a81e" title="Setter function to set PWN period." alt="" coords="145,512,260,539"/>
+<area shape="rect" id="node21" href="$class_pwm.html#a2b1211a916e6ad0e6833d8a8512e0d4f" title="Setter function to set PWN pulse width." alt="" coords="131,563,275,589"/>
+<area shape="rect" id="node3" href="$adxl37x_8h.html#ac23e14111f8333a53037df128ebba6fc" title=" " alt="" coords="323,5,497,32"/>
+<area shape="rect" id="node4" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="341,56,479,83"/>
+<area shape="rect" id="node5" href="$struct_adxl37x.html#a53b39be4f224783448cee0a1a1cc8a13" title="Function to set synchronization mode of the sensor device driver." alt="" coords="365,107,455,133"/>
+<area shape="rect" id="node11" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="365,157,455,184"/>
+<area shape="rect" id="node6" href="$adxl37x_8h.html#a88ac7567f0d1464b2698eacc3a8796b2" title=" " alt="" coords="545,56,697,83"/>
+<area shape="rect" id="node7" href="$struct_adxl37x.html#aa40b55f092609cc5710dd1af8da9316b" title="Function to start or stop external synchronization clock." alt="" coords="567,107,676,133"/>
+<area shape="rect" id="node9" href="$class_pwm.html#a60de64d75454385b23995437f1d72669" title="Function to start PWM generation." alt="" coords="745,81,831,108"/>
+<area shape="rect" id="node10" href="$class_pwm.html#a8c528baf37154d347366083f0f816846" title="Function to stop PWM generation." alt="" coords="746,132,830,159"/>
+<area shape="rect" id="node12" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="561,157,681,184"/>
+<area shape="rect" id="node13" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="573,208,670,235"/>
+<area shape="rect" id="node16" href="$adxl37x_8h.html#a52de024122320d79ce41968acf571145" title=" " alt="" coords="335,385,485,412"/>
+<area shape="rect" id="node19" href="$adxl37x_8h.html#abb1414828e206ec4a518e630492246cd" title=" " alt="" coords="334,461,486,488"/>
+</map>

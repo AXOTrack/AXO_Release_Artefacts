@@ -1,0 +1,1866 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_http_connector" kind="class" language="C++" prot="public">
+    <compoundname>HttpConnector</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="http__connector_8h" local="no">http_connector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_http_connector_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the HTTP connector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="121" column="10" bodyfile="net/http_connector.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1af8d925a524b176e256196165d672fdec" compoundref="http__connector_8cpp" startline="880" endline="886">delayTimer_expired</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" compoundref="http__connector_8cpp" startline="912" endline="918">oneDayTimer_expired</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a8393b55b609aa24f63d8e3b78e413a9c" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* delayTimer</definition>
+        <argsstring></argsstring>
+        <name>delayTimer</name>
+        <briefdescription>
+<para>Raw data transfer delay timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="122" column="11" bodyfile="net/http_connector.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a50af6c432e07946bf62493607847dd55" prot="public" static="no" mutable="no">
+        <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
+        <definition>Timer* oneDayTimer</definition>
+        <argsstring></argsstring>
+        <name>oneDayTimer</name>
+        <briefdescription>
+<para>One day timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="123" column="11" bodyfile="net/http_connector.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_connector_1a537e9c121332468e83bca114d9691a76" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool http_connected</definition>
+        <argsstring></argsstring>
+        <name>http_connected</name>
+        <briefdescription>
+<para>Flag indicating that connection to HTTP server is established. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="139" column="10" bodyfile="net/http_connector.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" compoundref="http__connector_8cpp" startline="309" endline="347">http_connect</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+        <referencedby refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" compoundref="http__connector_8cpp" startline="491" endline="504">StartHttpRawDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool lte_connected</definition>
+        <argsstring></argsstring>
+        <name>lte_connected</name>
+        <briefdescription>
+<para>Flag indicating that connection to LTE modem is established. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="141" column="10" bodyfile="net/http_connector.h" bodystart="141" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bDispModeOff</definition>
+        <argsstring></argsstring>
+        <name>bDispModeOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating if displacement data calculation is disabled (15 sec FRAM space) or enabled (5 sec FRAM space) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="144" column="10" bodyfile="net/http_connector.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">configure</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" compoundref="http__connector_8cpp" startline="695" endline="714">HandleRcvdRawData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bRawTransferEnabled</definition>
+        <argsstring></argsstring>
+        <name>bRawTransferEnabled</name>
+        <briefdescription>
+<para>Flag indicating that raw data transmission is enabled or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="146" column="10" bodyfile="net/http_connector.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">configure</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a690bb9e91f2ef54c83770444b88aec60" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bDispTransferEnabled</definition>
+        <argsstring></argsstring>
+        <name>bDispTransferEnabled</name>
+        <briefdescription>
+<para>Flag indicating that displacement data transmission is enabled or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="148" column="10" bodyfile="net/http_connector.h" bodystart="148" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">configure</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int client_fd</definition>
+        <argsstring></argsstring>
+        <name>client_fd</name>
+        <briefdescription>
+<para>Socket file descriptor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="150" column="9" bodyfile="net/http_connector.h" bodystart="150" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" compoundref="http__connector_8cpp" startline="309" endline="347">http_connect</referencedby>
+        <referencedby refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</referencedby>
+        <referencedby refid="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" compoundref="http__connector_8cpp" startline="459" endline="476">SendSignatureFrame</referencedby>
+        <referencedby refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" compoundref="http__connector_8cpp" startline="434" endline="445">SendSingleDataFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a528b47c24242eff2fb245f9ed8eb0517" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t responsebuf[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>responsebuf</name>
+        <briefdescription>
+<para>Buffer to receive responses from webserver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="153" column="13" bodyfile="net/http_connector.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1aec704176000fef9623fdbd1afcd38313" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sendbuf[1025]</definition>
+        <argsstring>[1025]</argsstring>
+        <name>sendbuf</name>
+        <briefdescription>
+<para>Buffer to collect the data to be send to webserver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="155" column="13" bodyfile="net/http_connector.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</referencedby>
+        <referencedby refid="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" compoundref="http__connector_8cpp" startline="459" endline="476">SendSignatureFrame</referencedby>
+        <referencedby refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" compoundref="http__connector_8cpp" startline="434" endline="445">SendSingleDataFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double zMaxRms</definition>
+        <argsstring></argsstring>
+        <name>zMaxRms</name>
+        <briefdescription>
+<para>maximum RMS value in z direction per train </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="156" column="12" bodyfile="net/http_connector.h" bodystart="156" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double rms_z_Thres</definition>
+        <argsstring></argsstring>
+        <name>rms_z_Thres</name>
+        <briefdescription>
+<para>RMS z Threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="157" column="12" bodyfile="net/http_connector.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">configure</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t startReadPos</definition>
+        <argsstring></argsstring>
+        <name>startReadPos</name>
+        <briefdescription>
+<para>The starting raw data read position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="158" column="14" bodyfile="net/http_connector.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">reqData</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t totalNumEntries</definition>
+        <argsstring></argsstring>
+        <name>totalNumEntries</name>
+        <briefdescription>
+<para>Total number of raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="159" column="14" bodyfile="net/http_connector.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" compoundref="http__connector_8cpp" startline="400" endline="422">BuildDataHeader</referencedby>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">reqData</referencedby>
+        <referencedby refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a8750575eef016431632ec6f7aee5251f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t rcvdEntries</definition>
+        <argsstring></argsstring>
+        <name>rcvdEntries</name>
+        <briefdescription>
+<para>Number of received raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="160" column="14" bodyfile="net/http_connector.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">reqData</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a891bea661c0351fdb1c1aeba58cc02d3" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t requestedEntries</definition>
+        <argsstring></argsstring>
+        <name>requestedEntries</name>
+        <briefdescription>
+<para>Number of requested raw data entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="161" column="14" bodyfile="net/http_connector.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">reqData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t dailyRawSendCnt</definition>
+        <argsstring></argsstring>
+        <name>dailyRawSendCnt</name>
+        <briefdescription>
+<para>Flag indicating that number of raw data sendings has been exceeded. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Raw data send counter per day </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="162" column="14" bodyfile="net/http_connector.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1af354227ab77caedf5e1562704d2a1481" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool bDailyRawSendCntExceeded</definition>
+        <argsstring></argsstring>
+        <name>bDailyRawSendCntExceeded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="164" column="10" bodyfile="net/http_connector.h" bodystart="164" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a20a72443420b704488a56e1d2400bef1" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t maxRawPerDay</definition>
+        <argsstring></argsstring>
+        <name>maxRawPerDay</name>
+        <briefdescription>
+<para>Maximum raw data sendings per day from config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="165" column="14" bodyfile="net/http_connector.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">configure</referencedby>
+        <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string rawDataHeader</definition>
+        <argsstring></argsstring>
+        <name>rawDataHeader</name>
+        <briefdescription>
+<para>The data header to be send to webserver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="166" column="17" bodyfile="net/http_connector.h" bodystart="166" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" compoundref="http__connector_8cpp" startline="400" endline="422">BuildDataHeader</referencedby>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a7d4b84303980dcc2de636b75056f98b9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string imei</definition>
+        <argsstring></argsstring>
+        <name>imei</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The IMEI as part of the data header <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="167" column="17" bodyfile="net/http_connector.h" bodystart="167" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" compoundref="http__connector_8cpp" startline="400" endline="422">BuildDataHeader</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_connector_1a4695019b9f8d66ac44aaf8901a219259" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The timestamp as part of the data header. NOTE This timestamp is equal in RMS measurement, raw and displacement messages. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="170" column="17" bodyfile="net/http_connector.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" compoundref="http__connector_8cpp" startline="400" endline="422">BuildDataHeader</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HttpConnector</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>HttpConnector</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_http_connector" kindref="compound">HttpConnector</ref> task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register a mailbox and allocates and initialize the non cyclic timer with duration of 5 ms and the one day timer with duration and period on one day in seconds. Furthermore the member variables lte_connected, http_connected and bRawTransferEnabled will be initialized with false and member variables dailyRawSendCnt and zMaxRms with 0. Finally the one day timer will be started by callin function start provided by <ref refid="class_timer" kindref="compound">Timer</ref> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="113" column="14" bodyfile="net/http_connector.cpp" bodystart="72" bodyend="87"/>
+        <references refid="class_http_connector_1af354227ab77caedf5e1562704d2a1481" compoundref="http__connector_8h" startline="164">bDailyRawSendCntExceeded</references>
+        <references refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" compoundref="http__connector_8h" startline="146">bRawTransferEnabled</references>
+        <references refid="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" compoundref="http__connector_8h" startline="162">dailyRawSendCnt</references>
+        <references refid="class_http_connector_1a8393b55b609aa24f63d8e3b78e413a9c" compoundref="http__connector_8h" startline="122">delayTimer</references>
+        <references refid="class_http_connector_1a417dd99cf103bf8a86bdf502eb285a96" compoundref="http__connector_8cpp" startline="865" endline="871">delayTimer_cb</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a443263d6538ff17e0732f0cebe5a77d5" compoundref="mbox_8h" startline="70">Mbox::eHttpConnector</references>
+        <references refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" compoundref="http__connector_8h" startline="139">http_connected</references>
+        <references refid="class_http_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" compoundref="http__connector_8h" startline="141">lte_connected</references>
+        <references refid="http__connector_8cpp_1a197656b95ae9f3aadbe19fce54a817d2" compoundref="http__connector_8cpp" startline="57">ONE_DAY_IN_SEC</references>
+        <references refid="class_http_connector_1a50af6c432e07946bf62493607847dd55" compoundref="http__connector_8h" startline="123">oneDayTimer</references>
+        <references refid="class_http_connector_1ac69569fdb1bf3ed35022a1feb8805a6e" compoundref="http__connector_8cpp" startline="897" endline="903">oneDayTimer_cb</references>
+        <references refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="http__connector_8h" startline="121">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" compoundref="http__connector_8h" startline="156">zMaxRms</references>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ab4d0ff72c1c078c50d3c157d88393924" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HttpConnector</definition>
+        <argsstring>()=delete</argsstring>
+        <name>HttpConnector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="114" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ae4da1ab65bfe016474312f441526484e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~HttpConnector</definition>
+        <argsstring>()</argsstring>
+        <name>~HttpConnector</name>
+        <briefdescription>
+<para><ref refid="class_http_connector" kindref="compound">HttpConnector</ref> task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="115" column="13" bodyfile="net/http_connector.cpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void configure</definition>
+        <argsstring>()</argsstring>
+        <name>configure</name>
+        <reimplements refid="class_task_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplements>
+        <briefdescription>
+<para><ref refid="class_http_connector" kindref="compound">HttpConnector</ref> virtual task configure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The configure function overloads the configure function of the task base class. It retrieves the configuration related to datalog by call of the function getCfgDatalog provided by the <ref refid="class_config" kindref="compound">Config</ref> class and set the flags bDispModeOff, bRawTransferEnabled and bDispTransferEnabled according to the configuration values. Furthermore the activation threshold for raw / displacement data transmission and the displacement calculation is stored in private variable rms_z_Thres and the number of maximum raw data transfers per day in private member variable maxRawPerDay. Finally the private ECDSA key will be retrieved by calling function getPrivateKey provided by class <ref refid="class_key_gen" kindref="compound">KeyGen</ref>. In case the key is valid and do not contains the string &quot;-----INVALID KEY-----&quot; it will be stored in class <ref refid="class_e_c_d_s_a_signer" kindref="compound">ECDSASigner</ref> by call of setter function setPrivateKey. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="117" column="18" bodyfile="net/http_connector.cpp" bodystart="115" bodyend="140"/>
+        <references refid="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" compoundref="http__connector_8h" startline="144">bDispModeOff</references>
+        <references refid="class_http_connector_1a690bb9e91f2ef54c83770444b88aec60" compoundref="http__connector_8h" startline="148">bDispTransferEnabled</references>
+        <references refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" compoundref="http__connector_8h" startline="146">bRawTransferEnabled</references>
+        <references refid="struct__st_cfg_datalog_1a2aa0d0a7b2385762c7108a3ac170d2c9" compoundref="config_8h" startline="189">_stCfgDatalog::dispmodeoff</references>
+        <references refid="struct__st_cfg_datalog_1ac3901d1f678bcbfb72ade531d7ca0685" compoundref="config_8h" startline="194">_stCfgDatalog::disptransferon</references>
+        <references refid="class_config_1ae6395cad5f0583a45336e008ea4d05fe" compoundref="config_8cpp" startline="756" endline="758">Config::getCfgDatalog</references>
+        <references refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" compoundref="keygen_8cpp" startline="283" endline="303">KeyGen::getPrivateKey</references>
+        <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
+        <references refid="class_e_c_d_s_a_signer_1a51e26c47c395412d648054c040300163" compoundref="ecdsasign_8cpp" startline="81" endline="85">ECDSASigner::inst</references>
+        <references refid="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" compoundref="keygen_8cpp" startline="183" endline="187">KeyGen::inst</references>
+        <references refid="struct__st_cfg_datalog_1a49c91d4f081729f946cac935fbe5e26a" compoundref="config_8h" startline="198">_stCfgDatalog::max_raw_per_day</references>
+        <references refid="class_http_connector_1a20a72443420b704488a56e1d2400bef1" compoundref="http__connector_8h" startline="165">maxRawPerDay</references>
+        <references refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" compoundref="config_8h" startline="192">_stCfgDatalog::rawtransferon</references>
+        <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
+        <references refid="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" compoundref="http__connector_8h" startline="157">rms_z_Thres</references>
+        <references refid="class_e_c_d_s_a_signer_1ac6bf3c6917d0ae57fc81c4de5378492b" compoundref="ecdsasign_8cpp" startline="144" endline="153">ECDSASigner::setPrivateKey</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>HTTP connector task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function directly enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: On delay timer expiry the ADXL store idle status will be checked again by sending message of type eAdxlIdleReq to AdxlStore task by call of function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. Afterwards the pointer pElem will be set to 0, to prevent releasing the message because it is allocated static.</para>
+</listitem><listitem><para>eOneDayTimerExpired: The counter for raw data sendings per day dailyRawSendCnt will be reset to 0 and the pointer pElem will be set to 0, to prevent releasing the message because it is allocated static.</para>
+</listitem><listitem><para>eLteSleepEnter: Will be ignored, only debug message at info level will be printed.</para>
+</listitem><listitem><para>eLteSleepExit: Will be ignored, only debug message at info level will be printed.</para>
+</listitem><listitem><para>eLteConnected: If LTE is not connected, the flag lte_connected will be set to true. Furthermore <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be requested to enable measurement by call of function sendMsg with message type eAdxlResumeMeas.</para>
+</listitem><listitem><para>eLteDisconnected: The flag lte_connected will be set to false and the member function http_disconnect will be called.</para>
+</listitem><listitem><para>eLteIMEI: The IMEI will be extracted from message payload and stored in member variable imei.</para>
+</listitem><listitem><para>eTimestamp: Timestamp will be extracted from message payload and stored in member variable timestamp</para>
+</listitem><listitem><para>eRawDataStatus: Member function HandleRawDataStatus will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eRawData: Member function HandleRcvdRawData will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eAdxlIdleReq: The received message of type eAdxlIdleReq will be forwarded to AdxlStore task by calling function send provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class. Afterwards the pointer pElem will be set to 0, to prevent releasing the message. Releasing the message to the pool is task of the AdxlStore task.</para>
+</listitem><listitem><para>eAdxl37xRmsData: Structure <ref refid="struct_adxl__xyz__max__data" kindref="compound">Adxl_xyz_max_data</ref> will be extracted from message payload and the maximum value in Z direction will be calculated and stored in variable zMaxRms. Finally the received message will be forwarded to data manager task and the pointer pElem will be set to 0, to prevent releasing the message.</para>
+</listitem><listitem><para>eAdxl37xIdle: Member variable zMaxRms is set to 0.</para>
+</listitem><listitem><para>eAdxlIdleInd: Member function HandleAdxlIdleInd will be called with message pointer pElem as parameter.</para>
+</listitem><listitem><para>eHttpRawDataSend: If LTE is connected and raw data tranfer is enabled, provided by the dynamic configuration the raw data transmission will be started by call of member function StartHttpRawDataTransmission, otherwise a debug message at error level will be printed.</para>
+</listitem><listitem><para>eSendDispDataReq: If LTE is connected and raw data tranfer is enabled, provided by the dynamic configuration the displacement data transmission will be started by call of member function StartHttpDispDataTransmission, otherwise a debug message at error level will be printed and <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be requested to enable measurement by call of function sendMsg with message type eAdxlResumeMeas.</para>
+</listitem><listitem><para>eDispData: Handle the received displacement data (calculate SHA1 hash, send data to remote server, request next data) by calling member function HandleRcvdDispData. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="119" column="10" bodyfile="net/http_connector.cpp" bodystart="982" bodyend="1117"/>
+        <references refid="class_http_connector_1af354227ab77caedf5e1562704d2a1481" compoundref="http__connector_8h" startline="164">bDailyRawSendCntExceeded</references>
+        <references refid="class_http_connector_1a690bb9e91f2ef54c83770444b88aec60" compoundref="http__connector_8h" startline="148">bDispTransferEnabled</references>
+        <references refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" compoundref="http__connector_8h" startline="146">bRawTransferEnabled</references>
+        <references refid="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" compoundref="http__connector_8h" startline="162">dailyRawSendCnt</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" compoundref="mpelem_8h" startline="65">eAdxl37xIdle</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babfad04084144b87c9464b3e580c4a888" compoundref="mpelem_8h" startline="110">eAdxlIdleInd</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5b782a4f6d9db6713ed0ecda008b3ab1" compoundref="mpelem_8h" startline="109">eAdxlIdleReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" compoundref="mpelem_8h" startline="74">eAdxlResumeMeas</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ab4dc4e589837500613a7909deee1c737" compoundref="mbox_8h" startline="76">Mbox::eAdxlStore</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a1604ea24f3ab67583c553f871768e8e7" compoundref="mbox_8h" startline="82">Mbox::eDataManager</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf77177af3680b79b15f94ef3dd79e8d8" compoundref="mpelem_8h" startline="132">eDispData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae9e298a8b9c135b153848a881a955f" compoundref="mpelem_8h" startline="111">eHttpRawDataSend</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" compoundref="mpelem_8h" startline="40">eLteConnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" compoundref="mpelem_8h" startline="41">eLteDisconnected</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba609c475acb8ae87abecdcb90b64734dd" compoundref="mpelem_8h" startline="46">eLteIMEI</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" compoundref="mpelem_8h" startline="49">eLteSleepEnter</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" compoundref="mpelem_8h" startline="50">eLteSleepExit</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badd4210d46b388589e9ca03a864f6a415" compoundref="mpelem_8h" startline="155">eOneDayTimerExpired</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" compoundref="mpelem_8h" startline="113">eRawData</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" compoundref="mpelem_8h" startline="112">eRawDataStatus</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83f7d57b3b395aaa7b7acb538e944791" compoundref="mpelem_8h" startline="131">eSendDispDataReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa8417479d61dab4584c62a86300d1b36" compoundref="mpelem_8h" startline="136">eTimestamp</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HandleAdxlIdleInd</references>
+        <references refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</references>
+        <references refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" compoundref="http__connector_8cpp" startline="732" endline="743">HandleRcvdDispData</references>
+        <references refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" compoundref="http__connector_8cpp" startline="695" endline="714">HandleRcvdRawData</references>
+        <references refid="class_http_connector_1a0a6678e33ca76cacb933d0c359701b4b" compoundref="http__connector_8cpp" startline="852" endline="854">http_disconnect</references>
+        <references refid="class_http_connector_1a7d4b84303980dcc2de636b75056f98b9" compoundref="http__connector_8h" startline="167">imei</references>
+        <references refid="class_http_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" compoundref="http__connector_8h" startline="141">lte_connected</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="http__connector_8h" startline="121">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</references>
+        <references refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" compoundref="http__connector_8cpp" startline="491" endline="504">StartHttpRawDataTransmission</references>
+        <references refid="class_http_connector_1a4695019b9f8d66ac44aaf8901a219259" compoundref="http__connector_8h" startline="170">timestamp</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <references refid="structadxl__rms__data_1af73583b1e980b0aa03f9884812e9fd4d" compoundref="rms__store_8h" startline="45">adxl_rms_data::z</references>
+        <references refid="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" compoundref="http__connector_8h" startline="156">zMaxRms</references>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1af8d925a524b176e256196165d672fdec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void delayTimer_expired</definition>
+        <argsstring>()</argsstring>
+        <name>delayTimer_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the HTTP connector delay timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e1 with message type eTimerExpired, set HTTP connector as sender and put message into own (HTTP connector&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="125" column="10" bodyfile="net/http_connector.cpp" bodystart="880" bodyend="886"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="http__connector_8h" startline="121">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_http_connector_1a417dd99cf103bf8a86bdf502eb285a96" compoundref="http__connector_8cpp" startline="865" endline="871">delayTimer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oneDayTimer_expired</definition>
+        <argsstring>()</argsstring>
+        <name>oneDayTimer_expired</name>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the one day timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function initializes the static pool element e2 with message type eOneDayTimerExpired, set HTTP connector as sender and put message into own (HTTP connector&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="127" column="10" bodyfile="net/http_connector.cpp" bodystart="912" bodyend="918"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badd4210d46b388589e9ca03a864f6a415" compoundref="mpelem_8h" startline="155">eOneDayTimerExpired</references>
+        <references refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="http__connector_8h" startline="121">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="class_http_connector_1ac69569fdb1bf3ed35022a1feb8805a6e" compoundref="http__connector_8cpp" startline="897" endline="903">oneDayTimer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void http_connect</definition>
+        <argsstring>()</argsstring>
+        <name>http_connect</name>
+        <briefdescription>
+<para>Function to create a socket stream and send a HTTP connect request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function call the getaddrinfo function provided by Zephyr BSD socket API, which itself is a POSIX wrapper for zsock_getaddrinfo (see <ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/functions/getaddrinfo.html">details</ulink>) to retrieve a set of socket addresses and associated information to be used to create a socket. The socket will be created by call of the function socket provided by Zephyr BSD socket API, which itself is a POSIX wrapper for zsock_socket (see <ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/functions/socket.html">details</ulink>). The returned file descriptor client_fd is then used to setup Transport Layer Security (TLS) if requested protocol is of type IPPROTO_TLS_1_2. Finally member function blocking_connect is called to connect the device to the HTTP host. On success the flag http_connected will be set to true, otherwise function http_connect close the socket and returns immediately. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="129" column="10" bodyfile="net/http_connector.cpp" bodystart="309" bodyend="347"/>
+        <references refid="class_http_connector_1a1a1944c6c473b06aff8e74006553efb4" compoundref="http__connector_8cpp" startline="158" endline="167">blocking_connect</references>
+        <references refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" compoundref="http__connector_8h" startline="150">client_fd</references>
+        <references refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" compoundref="http__connector_8h" startline="139">http_connected</references>
+        <references refid="http__connector_8h_1abe01c1e58c3a3c6c5973ebedd53ad6a6" compoundref="http__connector_8h" startline="59">HTTP_HOST</references>
+        <references refid="http__connector_8h_1a0906dae4a42c1fef9ec0cd0a5212ed4a" compoundref="http__connector_8h" startline="64">HTTP_PORT</references>
+        <references refid="class_http_connector_1aba9d39b4688a9fe5b0ab1fd21b86d658" compoundref="http__connector_8cpp" startline="250" endline="289">tls_setup</references>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+        <referencedby refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" compoundref="http__connector_8cpp" startline="491" endline="504">StartHttpRawDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a0a6678e33ca76cacb933d0c359701b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void http_disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>http_disconnect</name>
+        <briefdescription>
+<para>Function to send a disconnect request. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>For future use, prints only a debug message at info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="130" column="10" bodyfile="net/http_connector.cpp" bodystart="852" bodyend="854"/>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_http_connector_1a417dd99cf103bf8a86bdf502eb285a96" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void delayTimer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>delayTimer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the HTTP connector delay timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call HTTP connector timer expired function delayTimer_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="124" column="17" bodyfile="net/http_connector.cpp" bodystart="865" bodyend="871"/>
+        <references refid="class_http_connector_1af8d925a524b176e256196165d672fdec" compoundref="http__connector_8cpp" startline="880" endline="886">delayTimer_expired</references>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ac69569fdb1bf3ed35022a1feb8805a6e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oneDayTimer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>oneDayTimer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the one day timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call HTTP connector timer expired function oneDayTimer_expired. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="126" column="17" bodyfile="net/http_connector.cpp" bodystart="897" bodyend="903"/>
+        <references refid="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" compoundref="http__connector_8cpp" startline="912" endline="918">oneDayTimer_expired</references>
+        <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ad9c03afbb6b3d34e26a01b1eea870638" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HttpRawDataSend</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>HttpRawDataSend</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;z&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message with message type eAdxlIdleReq, with sender ID eHttpConnector and receiver ID eHttpConnector by calling the method sendMsg provided by the <ref refid="class_mbox" kindref="compound">Mbox</ref> class. <simplesect kind="note"><para>For testing only: trigger raw data send via shell command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="132" column="16" bodyfile="net/http_connector.cpp" bodystart="1127" bodyend="1135"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5b782a4f6d9db6713ed0ecda008b3ab1" compoundref="mpelem_8h" startline="109">eAdxlIdleReq</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a45989dc8b33cb068db005100a2f11679" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HttpDispDataSend</definition>
+        <argsstring>(const struct shell *shell, size_t argc, char **argv)</argsstring>
+        <name>HttpDispDataSend</name>
+        <param>
+          <type>const struct shell *</type>
+          <declname>shell</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for console input command &apos;zd&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function send a message with message type eSendDispDataReq, with sender ID eHttpConnector and receiver ID eHttpConnector by calling the method sendMsg provided by the <ref refid="class_mbox" kindref="compound">Mbox</ref> class. <simplesect kind="note"><para>For testing only: trigger displacement data send via shell command </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="134" column="16" bodyfile="net/http_connector.cpp" bodystart="1145" bodyend="1153"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83f7d57b3b395aaa7b7acb538e944791" compoundref="mpelem_8h" startline="131">eSendDispDataReq</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_connector_1a1a1944c6c473b06aff8e74006553efb4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int blocking_connect</definition>
+        <argsstring>(int fd, struct sockaddr *local_addr, socklen_t len)</argsstring>
+        <name>blocking_connect</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>struct sockaddr *</type>
+          <declname>local_addr</declname>
+        </param>
+        <param>
+          <type>socklen_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_http_connector" kindref="compound">HttpConnector</ref> connect function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the file descriptor associated with the socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a sockaddr structure containing the peer address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the sockaddr structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success return 0, otherwise -1 and errno set to indicate the error.</para>
+</simplesect>
+The function call the connect function provided by Zephyr BSD socket API, which itself is a POSIX wrapper for zsock_connect (see <ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/functions/connect.html">details</ulink>). It is called in a loop which ends if function connect returns 0 indicating no error or if error number is EAGAIN (11, see <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__system__errno.html">details</ulink>). Finally function return 0 on success or -1 in case of an error. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="172" column="9" bodyfile="net/http_connector.cpp" bodystart="158" bodyend="167"/>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <referencedby refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" compoundref="http__connector_8cpp" startline="309" endline="347">http_connect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ab076f11428483c2ca9d2379be27f805a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int blocking_send</definition>
+        <argsstring>(int fd, uint8_t *buf, uint32_t size, uint32_t flags)</argsstring>
+        <name>blocking_send</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_http_connector" kindref="compound">HttpConnector</ref> send function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the file descriptor associated with the socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer containing the message to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the message in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The send flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success return the number of bytes sent, otherwise -1 and errno set to indicate the error.</para>
+</simplesect>
+The function call the send function provided by Zephyr BSD socket API, which itself is a POSIX wrapper for zsock_send (see <ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/functions/send.html">details</ulink>). It is called in a loop which ends if function connect returns 0 indicating no error or if error number is EAGAIN (11, see <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__system__errno.html">details</ulink>). Finally function return number of bytes sent on success or -1 in case of an error. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="173" column="9" bodyfile="net/http_connector.cpp" bodystart="188" bodyend="197"/>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <referencedby refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</referencedby>
+        <referencedby refid="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" compoundref="http__connector_8cpp" startline="459" endline="476">SendSignatureFrame</referencedby>
+        <referencedby refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" compoundref="http__connector_8cpp" startline="434" endline="445">SendSingleDataFrame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1aa79380b9d97bf61888a3b14ff5780ef2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int blocking_recv</definition>
+        <argsstring>(int fd, uint8_t *buf, uint32_t size, uint32_t flags)</argsstring>
+        <name>blocking_recv</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_http_connector" kindref="compound">HttpConnector</ref> receive function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the file descriptor associated with the socket. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the buffer containing the message to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the message in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The send flags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success return the number of bytes sent, otherwise -1 and errno set to indicate the error.</para>
+</simplesect>
+The function call the recv function provided by Zephyr BSD socket API, which itself is a POSIX wrapper for zsock_recv (see <ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/functions/recv.html">details</ulink>). It is called in a loop which ends if function connect returns 0 indicating no error, if error number is EAGAIN (11, see <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__system__errno.html">details</ulink>) or if number of bytes received is more then 300 byte. Finally function return number of bytes sent on success or -1 in case of an error. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="174" column="9" bodyfile="net/http_connector.cpp" bodystart="218" bodyend="232"/>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1aba9d39b4688a9fe5b0ab1fd21b86d658" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tls_setup</definition>
+        <argsstring>(int sock)</argsstring>
+        <name>tls_setup</name>
+        <param>
+          <type>int</type>
+          <declname>sock</declname>
+        </param>
+        <briefdescription>
+<para>Function to setup TLS peer verification. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the file descriptor associated with the socket. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success return 0, otherwise -1 and errno set to indicate the error.</para>
+</simplesect>
+The function call the setsockopt function provided by Zephyr BSD socket API, which itself is a POSIX wrapper for zsock_setsockopt (see <ulink url="https://pubs.opengroup.org/onlinepubs/9699919799/functions/setsockopt.html">details</ulink>). It is called first to setup the peer verification with option TLS_PEER_VERIFY and is called second to setup the TLS security tag with option TLS_SEC_TAG_LIST. Third call is to setup the TLS hostname with option TLS_HOSTNAME, If one of the calls fail the function returns immediatly with the error code returned by setsockopt. If all calls were successful function returns 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="175" column="9" bodyfile="net/http_connector.cpp" bodystart="250" bodyend="289"/>
+        <references refid="http__connector_8h_1abe01c1e58c3a3c6c5973ebedd53ad6a6" compoundref="http__connector_8h" startline="59">HTTP_HOST</references>
+        <references refid="update_8h_1a462e63b220ba3e16d1fa3e8c3048978f" compoundref="update_8h" startline="40">TLS_SEC_TAG</references>
+        <referencedby refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" compoundref="http__connector_8cpp" startline="309" endline="347">http_connect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a390438a2d81af59ae92261ea197165d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BuildDataHeader</definition>
+        <argsstring>(eDataType dataType)</argsstring>
+        <name>BuildDataHeader</name>
+        <param>
+          <type><ref refid="http__connector_8h_1aa1547bac005bf80c88b1488ebf2f97f4" kindref="member">eDataType</ref></type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+<para>Function to create the raw data header. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function build the raw data header. To get the same timestamp in RMS message, raw data message and displacement message, the timestamp is send from data manager task to HTTP connector task. This timestamp will than copied in all three messages. RMS message will be send to MQTT broker from data manager task. The header contains the following information: <linebreak/>
+ IMEI: <bold>IMEI-OF-DEVICE</bold> <linebreak/>
+ Timestamp: <bold>TIMESTAMP</bold> <linebreak/>
+ no_of_samples: <bold>NUM-SAMPLES</bold> <linebreak/>
+ Type: <bold>Raw or Displacement</bold> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="177" column="10" bodyfile="net/http_connector.cpp" bodystart="400" bodyend="422"/>
+        <references refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04aa6c2368a70ce01d9d011f766ce3bd8c6" compoundref="http__connector_8h" startline="76">eDATA_TYPE_DISP</references>
+        <references refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04a7da74fa0d3a52e3ac1363e713b39008a" compoundref="http__connector_8h" startline="75">eDATA_TYPE_RAW</references>
+        <references refid="class_http_connector_1a7d4b84303980dcc2de636b75056f98b9" compoundref="http__connector_8h" startline="167">imei</references>
+        <references refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" compoundref="http__connector_8h" startline="166">rawDataHeader</references>
+        <references refid="class_http_connector_1a4695019b9f8d66ac44aaf8901a219259" compoundref="http__connector_8h" startline="170">timestamp</references>
+        <references refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" compoundref="http__connector_8h" startline="159">totalNumEntries</references>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendHttpPostHeader</definition>
+        <argsstring>(eDataType dataType)</argsstring>
+        <name>SendHttpPostHeader</name>
+        <param>
+          <type><ref refid="http__connector_8h_1aa1547bac005bf80c88b1488ebf2f97f4" kindref="member">eDataType</ref></type>
+          <declname>dataType</declname>
+        </param>
+        <briefdescription>
+<para>Function to send HTTP POST header to the host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function copies the header information into the send buffer and enters a loop. In the loop member function blocking_send is called until all data in send buffer has been transmitted. The header contains the following information: <linebreak/>
+ POST / HTTP/1.1(CR)(LF) <linebreak/>
+ Host: <bold>HOSTNAME+HOSTPATH</bold>(CR)(LF) <linebreak/>
+ Content-Length: <bold>PAYLOAD-LEN</bold>(CR)(LF)&quot; \n
+Content-Type: application/octet-stream(CR)(LF)&quot; <linebreak/>
+(CR)(LF) Where PAYLOAD-LEN is the length of the data header + length of data bytes + length of SHA1 hash (20 bytes) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="179" column="10" bodyfile="net/http_connector.cpp" bodystart="363" bodyend="384"/>
+        <references refid="class_http_connector_1ab076f11428483c2ca9d2379be27f805a" compoundref="http__connector_8cpp" startline="188" endline="197">blocking_send</references>
+        <references refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" compoundref="http__connector_8h" startline="150">client_fd</references>
+        <references refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04aa6c2368a70ce01d9d011f766ce3bd8c6" compoundref="http__connector_8h" startline="76">eDATA_TYPE_DISP</references>
+        <references refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04a7da74fa0d3a52e3ac1363e713b39008a" compoundref="http__connector_8h" startline="75">eDATA_TYPE_RAW</references>
+        <references refid="http__connector_8h_1abe01c1e58c3a3c6c5973ebedd53ad6a6" compoundref="http__connector_8h" startline="59">HTTP_HOST</references>
+        <references refid="http__connector_8h_1a2cbce124853086ca94cf3d491d76c78b" compoundref="http__connector_8h" startline="62">HTTP_PATH</references>
+        <references refid="ecdsasign_8h_1a5aa2d0d5fbab5781b7d27d1d60e4fab2" compoundref="ecdsasign_8h" startline="46">MAX_SIGNATURE_LEN</references>
+        <references refid="http__connector_8h_1aaea96e3a56e216a9a0b55411d3cbbbd7" compoundref="http__connector_8h" startline="67">RAW_DATA_POST_REQ</references>
+        <references refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" compoundref="http__connector_8h" startline="166">rawDataHeader</references>
+        <references refid="class_http_connector_1aec704176000fef9623fdbd1afcd38313" compoundref="http__connector_8h" startline="155">sendbuf</references>
+        <references refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" compoundref="http__connector_8h" startline="159">totalNumEntries</references>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendSingleDataFrame</definition>
+        <argsstring>(uint8_t *data, uint32_t datalen)</argsstring>
+        <name>SendSingleDataFrame</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>datalen</declname>
+        </param>
+        <briefdescription>
+<para>Function to send a single data frame to the host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to be send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>datalen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function copies the data into the send buffer and enters a loop. In the loop member function blocking_send is called until all data in send buffer has been transmitted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="180" column="10" bodyfile="net/http_connector.cpp" bodystart="434" bodyend="445"/>
+        <references refid="class_http_connector_1ab076f11428483c2ca9d2379be27f805a" compoundref="http__connector_8cpp" startline="188" endline="197">blocking_send</references>
+        <references refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" compoundref="http__connector_8h" startline="150">client_fd</references>
+        <references refid="class_http_connector_1aec704176000fef9623fdbd1afcd38313" compoundref="http__connector_8h" startline="155">sendbuf</references>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendSignatureFrame</definition>
+        <argsstring>(std::string &amp;signature, uint8_t signatureLen)</argsstring>
+        <name>SendSignatureFrame</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>signatureLen</declname>
+        </param>
+        <briefdescription>
+<para>Function to send a single data frame to the host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signature to be send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the signature in bytes</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initializes the send buffer with zeros, copies the length of the signature into the first byte and the data of the signature string into the send buffer and enters a loop. In the loop member function blocking_send is called until all data in send buffer has been transmitted. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="181" column="10" bodyfile="net/http_connector.cpp" bodystart="459" bodyend="476"/>
+        <references refid="class_http_connector_1ab076f11428483c2ca9d2379be27f805a" compoundref="http__connector_8cpp" startline="188" endline="197">blocking_send</references>
+        <references refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" compoundref="http__connector_8h" startline="150">client_fd</references>
+        <references refid="ecdsasign_8h_1a5aa2d0d5fbab5781b7d27d1d60e4fab2" compoundref="ecdsasign_8h" startline="46">MAX_SIGNATURE_LEN</references>
+        <references refid="class_http_connector_1aec704176000fef9623fdbd1afcd38313" compoundref="http__connector_8h" startline="155">sendbuf</references>
+        <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1aa195aaead99156d934d498c01655d333" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqData</definition>
+        <argsstring>(msgType msgDataType)</argsstring>
+        <name>reqData</name>
+        <param>
+          <type><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref></type>
+          <declname>msgDataType</declname>
+        </param>
+        <briefdescription>
+<para>Function to request raw data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msgDataType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message type specifying the type of data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request data from AdxlStore task with message type of parateter msgDataType. In the payload of the message a structure of type struct <ref refid="struct_adxl_raw_data_progress" kindref="compound">AdxlRawDataProgress</ref> will be copied by function sendMsg. The structure contains the read position of the first raw data entry, the number of currently received raw data entries and the number of now requested raw data entries. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="183" column="10" bodyfile="net/http_connector.cpp" bodystart="569" bodyend="589"/>
+        <references refid="adxl__store_8h_1a97889e1c62d46e2c336fafc47f59b60a" compoundref="adxl__store_8h" startline="48">MAX_NUM_REQ_ENTRIES</references>
+        <references refid="struct_adxl_raw_data_progress_1a8750575eef016431632ec6f7aee5251f" compoundref="adxl__store_8h" startline="83">AdxlRawDataProgress::rcvdEntries</references>
+        <references refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" compoundref="http__connector_8h" startline="160">rcvdEntries</references>
+        <references refid="struct_adxl_raw_data_progress_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="adxl__store_8h" startline="84">AdxlRawDataProgress::requestedEntries</references>
+        <references refid="class_http_connector_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="http__connector_8h" startline="161">requestedEntries</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
+        <references refid="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="http__connector_8h" startline="158">startReadPos</references>
+        <references refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" compoundref="http__connector_8h" startline="159">totalNumEntries</references>
+        <referencedby refid="class_http_connector_1ae411b87edda7448c8bf4d4e2d4cdd474" compoundref="http__connector_8cpp" startline="608" endline="611">reqDispData</referencedby>
+        <referencedby refid="class_http_connector_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="http__connector_8cpp" startline="597" endline="600">reqRawData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HandleRcvdData</definition>
+        <argsstring>(PoolElem *pElem, uint16_t dataSize)</argsstring>
+        <name>HandleRcvdData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>dataSize</declname>
+        </param>
+        <briefdescription>
+<para>Function to handle received data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns boolean variable bLastFrame, indicating last frame has been send or not</para>
+</simplesect>
+The boolean variable bLastFrame will be initialized with false and the number of still received raw data entries in member variable rcvdEntries will be increased by the number of requested raw data entries. If the total number of entries in adxlStore instance is greater than 0, the SHA1 checksum will be updated with the received raw data by calling function update provided by class <ref refid="class_hash" kindref="compound">Hash</ref>, than the received raw data will be send to host in a data frame by calling member function SendSingleDataFrame with the raw data in the message payload and the size of the payload calculated by number of requested entries multiplied with number of bytes of a single raw data entry. <linebreak/>
+ If all raw data has been sent, when number of received entries is equal to total number of entries the SHA256 hash checksum will be finalized by calling function finalize provided by class <ref refid="class_hash" kindref="compound">Hash</ref> and the signature of the hash checksum will be calculated by call of function signHash provided by class <ref refid="class_e_c_d_s_a_signer" kindref="compound">ECDSASigner</ref>. The signature will then be send to remote host by calling member function SendSignatureFrame. With call of function blocking_recv the response from remote server will be received, the socket will be closed by calling function close provided by Zephyr BSD socket API and boolean variable bLastFrame will be set to true. Finally bLastFrame will be returned. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="184" column="10" bodyfile="net/http_connector.cpp" bodystart="641" bodyend="674"/>
+        <references refid="class_http_connector_1aa79380b9d97bf61888a3b14ff5780ef2" compoundref="http__connector_8cpp" startline="218" endline="232">blocking_recv</references>
+        <references refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" compoundref="http__connector_8h" startline="150">client_fd</references>
+        <references refid="class_hash_1a32d626626eee0bc4ade146973f6abb1c" compoundref="hash_8cpp" startline="105" endline="116">Hash::finalize</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_e_c_d_s_a_signer_1a51e26c47c395412d648054c040300163" compoundref="ecdsasign_8cpp" startline="81" endline="85">ECDSASigner::inst</references>
+        <references refid="class_hash_1ab692cd219fad2ef5a612e06aa4b32c1b" compoundref="hash_8cpp" startline="36" endline="40">Hash::inst</references>
+        <references refid="class_hash_1a388f572c62279f839ee138a9afbdeeb5" compoundref="hash_8cpp" startline="125" endline="131">Hash::print</references>
+        <references refid="class_e_c_d_s_a_signer_1a6f3747059314021b44be07498f4f7187" compoundref="ecdsasign_8cpp" startline="212" endline="215">ECDSASigner::printSignature</references>
+        <references refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" compoundref="http__connector_8h" startline="160">rcvdEntries</references>
+        <references refid="class_http_connector_1a891bea661c0351fdb1c1aeba58cc02d3" compoundref="http__connector_8h" startline="161">requestedEntries</references>
+        <references refid="class_http_connector_1a528b47c24242eff2fb245f9ed8eb0517" compoundref="http__connector_8h" startline="153">responsebuf</references>
+        <references refid="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" compoundref="http__connector_8cpp" startline="459" endline="476">SendSignatureFrame</references>
+        <references refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" compoundref="http__connector_8cpp" startline="434" endline="445">SendSingleDataFrame</references>
+        <references refid="class_e_c_d_s_a_signer_1a9b3c2dc9b287d66e779dc199c1bb9ba3" compoundref="ecdsasign_8cpp" startline="167" endline="181">ECDSASigner::signHash</references>
+        <references refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" compoundref="http__connector_8h" startline="159">totalNumEntries</references>
+        <references refid="class_hash_1aab35e0dc9a227b6e04900a79a0e61e4c" compoundref="hash_8cpp" startline="86" endline="94">Hash::update</references>
+        <referencedby refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" compoundref="http__connector_8cpp" startline="732" endline="743">HandleRcvdDispData</referencedby>
+        <referencedby refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" compoundref="http__connector_8cpp" startline="695" endline="714">HandleRcvdRawData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StartHttpRawDataTransmission</definition>
+        <argsstring>()</argsstring>
+        <name>StartHttpRawDataTransmission</name>
+        <briefdescription>
+<para>Function to initiate the raw data transmission to the host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about the start of raw data transmission before connecting device with host by call of member function http_connect. On success the flag http_connected is true and the method request the raw data status from AdxlStore task by the call of member function reqRawDataStatus. On failure <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed about the end of raw data transmission by call of function sendMsg with message type eRawDataTransferComplete and <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be requested to enable measurement by call of function sendMsg with message type eAdxlResumeMeas. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="186" column="10" bodyfile="net/http_connector.cpp" bodystart="491" bodyend="504"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" compoundref="mpelem_8h" startline="74">eAdxlResumeMeas</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bae87083b8fd43695fd38ea5b3aca4d36c" compoundref="mpelem_8h" startline="114">eRawDataTransferActive</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0c71a33223239f11e7358b21e47cd29b" compoundref="mpelem_8h" startline="115">eRawDataTransferComplete</references>
+        <references refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" compoundref="http__connector_8cpp" startline="309" endline="347">http_connect</references>
+        <references refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" compoundref="http__connector_8h" startline="139">http_connected</references>
+        <references refid="class_http_connector_1a8fb8ecc93c7595585ebf437ea82b631e" compoundref="http__connector_8cpp" startline="551" endline="555">reqRawDataStatus</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a8fb8ecc93c7595585ebf437ea82b631e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqRawDataStatus</definition>
+        <argsstring>()</argsstring>
+        <name>reqRawDataStatus</name>
+        <briefdescription>
+<para>Function to request the raw data status from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method request the raw data status from AdxlStore task with message type eRawDataStatus. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="187" column="10" bodyfile="net/http_connector.cpp" bodystart="551" bodyend="555"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" compoundref="mpelem_8h" startline="112">eRawDataStatus</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" compoundref="http__connector_8cpp" startline="491" endline="504">StartHttpRawDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a19cf3eae3207a4ee78a870f504edf3a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqRawData</definition>
+        <argsstring>()</argsstring>
+        <name>reqRawData</name>
+        <briefdescription>
+<para>Function to request raw data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling private member function reqData the function request raw data from AdxlStore task. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="188" column="10" bodyfile="net/http_connector.cpp" bodystart="597" bodyend="600"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" compoundref="mpelem_8h" startline="113">eRawData</references>
+        <references refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">reqData</references>
+        <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HandleRawDataStatus</referencedby>
+        <referencedby refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" compoundref="http__connector_8cpp" startline="695" endline="714">HandleRcvdRawData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleRcvdRawData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleRcvdRawData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to handle received raw data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+By calling private member function HandleRcvdData the received data from AdxlStore task will be handled by updating signature nad sending data frames to remote HTTP server. If the last frame has been sended, indicated by flag bLastFram, the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed about the end of raw data transmission by call of function sendMsg with message type eRawDataTransferComplete. Afterwards the function checks if displacement calculation is not disabled and in this case it send the message eCalcDisplacementReq to the disp task by calling function sendMsg to request the start of displacement calculation. <linebreak/>
+If not all raw data has been sent, the next raw data will be requested by calling function reqRawData. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="190" column="10" bodyfile="net/http_connector.cpp" bodystart="695" bodyend="714"/>
+        <references refid="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" compoundref="http__connector_8h" startline="144">bDispModeOff</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" compoundref="mpelem_8h" startline="74">eAdxlResumeMeas</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" compoundref="mpelem_8h" startline="117">eCalcDisplacementReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0c71a33223239f11e7358b21e47cd29b" compoundref="mpelem_8h" startline="115">eRawDataTransferComplete</references>
+        <references refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</references>
+        <references refid="class_http_connector_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="http__connector_8cpp" startline="597" endline="600">reqRawData</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleRawDataStatus</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleRawDataStatus</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to handle received raw data status from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+A structure of type struct <ref refid="struct_adxl_raw_data_status" kindref="compound">AdxlRawDataStatus</ref> will be extracted from message payload and the member varaibles startReadPos, totalNumEntries and rcvdEntries will be initialized with the received information respectively 0. Afterwards it starts the SHA1 checksum calculation with call of <linebreak/>
+ function init provided by class <ref refid="class_hash" kindref="compound">Hash</ref>, before requesting the raw data from AdxlStore task by the call of member function reqRawData. It build the data header by call of member function BuildDataHeader and send HTTP POST header and data header to the remote host with call of the member functions SendHttpPostHeader and SendSingleDataFrame. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="191" column="10" bodyfile="net/http_connector.cpp" bodystart="760" bodyend="774"/>
+        <references refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" compoundref="http__connector_8cpp" startline="400" endline="422">BuildDataHeader</references>
+        <references refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04a7da74fa0d3a52e3ac1363e713b39008a" compoundref="http__connector_8h" startline="75">eDATA_TYPE_RAW</references>
+        <references refid="struct_adxl_raw_data_status_1a38bad35c844ffd72b0c1132715d5f3a1" compoundref="adxl__store_8h" startline="78">AdxlRawDataStatus::entries</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="class_hash_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="hash_8cpp" startline="65" endline="75">Hash::init</references>
+        <references refid="class_hash_1ab692cd219fad2ef5a612e06aa4b32c1b" compoundref="hash_8cpp" startline="36" endline="40">Hash::inst</references>
+        <references refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" compoundref="http__connector_8h" startline="166">rawDataHeader</references>
+        <references refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" compoundref="http__connector_8h" startline="160">rcvdEntries</references>
+        <references refid="class_http_connector_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="http__connector_8cpp" startline="597" endline="600">reqRawData</references>
+        <references refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</references>
+        <references refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" compoundref="http__connector_8cpp" startline="434" endline="445">SendSingleDataFrame</references>
+        <references refid="struct_adxl_raw_data_status_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="77">AdxlRawDataStatus::startRd</references>
+        <references refid="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="http__connector_8h" startline="158">startReadPos</references>
+        <references refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" compoundref="http__connector_8h" startline="159">totalNumEntries</references>
+        <references refid="class_hash_1aab35e0dc9a227b6e04900a79a0e61e4c" compoundref="hash_8cpp" startline="86" endline="94">Hash::update</references>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1afe1ca149544e23e510e75d469628107a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleAdxlIdleInd</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleAdxlIdleInd</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to handle idle indication from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The method checks, if raw data transmission is enabled by configuration and in this case it extract the idle flag from message and start a delay timer if idle flag is false indicating that raw data recording is still in progress. Otherwise it checks if current maximum RMS z value is greater than RMS z threshold and maximum number of raw data sendings per day is not exceeded. Iin this case it starts the raw data transmission by sending message of type eHttpRawDataSend to own (<ref refid="class_http_connector" kindref="compound">HttpConnector</ref>&apos;s) mailbox by call of function sendMsg, provided by the <ref refid="class_mbox" kindref="compound">Mbox</ref> class, otherwise it send message eAdxlResumeMeas to eAdxl37x <ref refid="class_task" kindref="compound">Task</ref> to resume the measurement. If raw data transmission is not enabled, the function checks if displacement calculation is enabled and if current maximum RMS z value is greater than RMS z threshold. In this case it send the message eCalcDisplacementReq to the disp task by calling function sendMsg to request the start of displacement calculation, otherwise it send message eAdxlResumeMeas to eAdxl37x <ref refid="class_task" kindref="compound">Task</ref> to resume the measurement. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="192" column="10" bodyfile="net/http_connector.cpp" bodystart="797" bodyend="845"/>
+        <references refid="class_http_connector_1af354227ab77caedf5e1562704d2a1481" compoundref="http__connector_8h" startline="164">bDailyRawSendCntExceeded</references>
+        <references refid="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" compoundref="http__connector_8h" startline="144">bDispModeOff</references>
+        <references refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" compoundref="http__connector_8h" startline="146">bRawTransferEnabled</references>
+        <references refid="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" compoundref="http__connector_8h" startline="162">dailyRawSendCnt</references>
+        <references refid="class_http_connector_1a8393b55b609aa24f63d8e3b78e413a9c" compoundref="http__connector_8h" startline="122">delayTimer</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" compoundref="mpelem_8h" startline="74">eAdxlResumeMeas</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" compoundref="mpelem_8h" startline="117">eCalcDisplacementReq</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae9e298a8b9c135b153848a881a955f" compoundref="mpelem_8h" startline="111">eHttpRawDataSend</references>
+        <references refid="class_http_connector_1a20a72443420b704488a56e1d2400bef1" compoundref="http__connector_8h" startline="165">maxRawPerDay</references>
+        <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">PoolElem::p1</references>
+        <references refid="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" compoundref="http__connector_8h" startline="157">rms_z_Thres</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
+        <references refid="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" compoundref="http__connector_8h" startline="156">zMaxRms</references>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StartHttpDispDataTransmission</definition>
+        <argsstring>()</argsstring>
+        <name>StartHttpDispDataTransmission</name>
+        <briefdescription>
+<para>Function to initiate the displacement data transmission to the host. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling function sendMsg provided by <ref refid="class_mbox" kindref="compound">Mbox</ref> class the method inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about the start of displacement data transmission before connecting device with host by call of member function http_connect. On success the flag http_connected is true and the method initialize read start position with the FRAM address BW_D_START_ADDR and the variable rcvdEntries with 0. Afterwards it starts the SHA1 checksum calculation with call of <linebreak/>
+ function init provided by class <ref refid="class_hash" kindref="compound">Hash</ref>, before requesting the displacement data from AdxlStore task by the call of member function reqDispData. It build the data header by call of member function BuildDataHeader and send HTTP POST header and data header to the remote host with call of the member functions SendHttpPostHeader and SendSingleDataFrame. On failure <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed about the end of raw data transmission by call of function sendMsg with message type eDispDataTransferComplete. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="194" column="10" bodyfile="net/http_connector.cpp" bodystart="523" bodyend="543"/>
+        <references refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" compoundref="http__connector_8cpp" startline="400" endline="422">BuildDataHeader</references>
+        <references refid="adxl__store_8h_1a0892059d01223a25c8871a93acd71608" compoundref="adxl__store_8h" startline="52">BW_D_START_ADDR</references>
+        <references refid="http__connector_8h_1aa91a84345de74c82b34bc4a53b4f1b04aa6c2368a70ce01d9d011f766ce3bd8c6" compoundref="http__connector_8h" startline="76">eDATA_TYPE_DISP</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafd26510aa99099eef8fda8ffd83316ce" compoundref="mpelem_8h" startline="133">eDispDataTransferActive</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2479caa0e1adc5aa62cb054ec30b516a" compoundref="mpelem_8h" startline="134">eDispDataTransferComplete</references>
+        <references refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" compoundref="http__connector_8cpp" startline="309" endline="347">http_connect</references>
+        <references refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" compoundref="http__connector_8h" startline="139">http_connected</references>
+        <references refid="class_hash_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="hash_8cpp" startline="65" endline="75">Hash::init</references>
+        <references refid="class_hash_1ab692cd219fad2ef5a612e06aa4b32c1b" compoundref="hash_8cpp" startline="36" endline="40">Hash::inst</references>
+        <references refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" compoundref="http__connector_8h" startline="166">rawDataHeader</references>
+        <references refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" compoundref="http__connector_8h" startline="160">rcvdEntries</references>
+        <references refid="class_http_connector_1ae411b87edda7448c8bf4d4e2d4cdd474" compoundref="http__connector_8cpp" startline="608" endline="611">reqDispData</references>
+        <references refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" compoundref="http__connector_8cpp" startline="363" endline="384">SendHttpPostHeader</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" compoundref="http__connector_8cpp" startline="434" endline="445">SendSingleDataFrame</references>
+        <references refid="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" compoundref="http__connector_8h" startline="158">startReadPos</references>
+        <references refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" compoundref="http__connector_8h" startline="159">totalNumEntries</references>
+        <references refid="class_hash_1aab35e0dc9a227b6e04900a79a0e61e4c" compoundref="hash_8cpp" startline="86" endline="94">Hash::update</references>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1ae411b87edda7448c8bf4d4e2d4cdd474" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reqDispData</definition>
+        <argsstring>()</argsstring>
+        <name>reqDispData</name>
+        <briefdescription>
+<para>Function to request displacement data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>By calling private member function reqData the function request raw data from AdxlStore task. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="195" column="10" bodyfile="net/http_connector.cpp" bodystart="608" bodyend="611"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf77177af3680b79b15f94ef3dd79e8d8" compoundref="mpelem_8h" startline="132">eDispData</references>
+        <references refid="class_http_connector_1aa195aaead99156d934d498c01655d333" compoundref="http__connector_8cpp" startline="569" endline="589">reqData</references>
+        <referencedby refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" compoundref="http__connector_8cpp" startline="732" endline="743">HandleRcvdDispData</referencedby>
+        <referencedby refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" compoundref="http__connector_8cpp" startline="523" endline="543">StartHttpDispDataTransmission</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleRcvdDispData</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleRcvdDispData</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Function to handle received displacement data from AdxlStore task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the received message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+By calling private member function HandleRcvdData the received data from AdxlStore task will be handled by updating signature nad sending data frames to remote HTTP server. If the last frame has been sended, indicated by flag bLastFram, <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed about the end of displacement data transmission by call of function sendMsg with message type eDispDataTransferComplete and <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be requested to enable measurement by call of function sendMsg with message type eAdxlResumeMeas. <linebreak/>
+If not all displacement data has been sent, the next displacement data will be requested by calling function reqDispData. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="net/http_connector.h" line="196" column="10" bodyfile="net/http_connector.cpp" bodystart="732" bodyend="743"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" compoundref="mpelem_8h" startline="74">eAdxlResumeMeas</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2479caa0e1adc5aa62cb054ec30b516a" compoundref="mpelem_8h" startline="134">eDispDataTransferComplete</references>
+        <references refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HandleRcvdData</references>
+        <references refid="class_http_connector_1ae411b87edda7448c8bf4d4e2d4cdd474" compoundref="http__connector_8cpp" startline="608" endline="611">reqDispData</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>HTTP connector class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>HTTP connector task handle the HTTPS connection to send raw data to the remote JOVIA webserver. It uses the BSD socket API provided by Zephyr OS. <linebreak/>
+ See details of <ulink url="https://docs.zephyrproject.org/latest/connectivity/networking/api/sockets.html">BSD socket API</ulink> The <ref refid="class_http_connector" kindref="compound">HttpConnector</ref> class provides functions to request connection, to send raw data via HTTP POST and to receive the server responses. It provides suppport of Transport layer security (TLS) and furthermore provides functions to request and receive the raw data from ADXL Store task, to request the status of the ADXL Store data and to inform ADXL task about running or stopped raw data transmission. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback</para>
+</listitem><listitem><para>MQTT connector task (self)</para>
+</listitem><listitem><para>LTE connector task</para>
+</listitem><listitem><para>LTE monitor task</para>
+</listitem><listitem><para>ADXL store task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>ADXL store task</para>
+</listitem><listitem><para>ADXL task</para>
+</listitem><listitem><para>HTTP connector task (self, callback function for shell command &apos;z&apos;) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HttpConnector</label>
+        <link refid="class_http_connector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>HttpConnector</label>
+        <link refid="class_http_connector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-rms_z_Thres</edgelabel>
+          <edgelabel>-zMaxRms</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-dailyRawSendCnt</edgelabel>
+          <edgelabel>-maxRawPerDay</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-rcvdEntries</edgelabel>
+          <edgelabel>-requestedEntries</edgelabel>
+          <edgelabel>-startReadPos</edgelabel>
+          <edgelabel>-totalNumEntries</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-client_fd</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-imei</edgelabel>
+          <edgelabel>-rawDataHeader</edgelabel>
+          <edgelabel>-timestamp</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-responsebuf</edgelabel>
+          <edgelabel>-sendbuf</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-bDailyRawSendCntExceeded</edgelabel>
+          <edgelabel>-bDispModeOff</edgelabel>
+          <edgelabel>-bDispTransferEnabled</edgelabel>
+          <edgelabel>-bRawTransferEnabled</edgelabel>
+          <edgelabel>-http_connected</edgelabel>
+          <edgelabel>-lte_connected</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+delayTimer</edgelabel>
+          <edgelabel>+oneDayTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="13">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>uint16_t</label>
+      </node>
+      <node id="10">
+        <label>int</label>
+      </node>
+      <node id="17">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#duration</edgelabel>
+          <edgelabel>#period</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>#timer_handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>double</label>
+      </node>
+      <node id="9">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="14">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="15">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>bool</label>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+      <node id="18">
+        <label>struct k_timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="net/http_connector.h" line="111" column="1" bodyfile="net/http_connector.h" bodystart="111" bodyend="197"/>
+    <listofallmembers>
+      <member refid="class_http_connector_1af354227ab77caedf5e1562704d2a1481" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>bDailyRawSendCntExceeded</name></member>
+      <member refid="class_http_connector_1ac349e43c8a8d674c5e182720d5c1c579" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>bDispModeOff</name></member>
+      <member refid="class_http_connector_1a690bb9e91f2ef54c83770444b88aec60" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>bDispTransferEnabled</name></member>
+      <member refid="class_http_connector_1a1a1944c6c473b06aff8e74006553efb4" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>blocking_connect</name></member>
+      <member refid="class_http_connector_1aa79380b9d97bf61888a3b14ff5780ef2" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>blocking_recv</name></member>
+      <member refid="class_http_connector_1ab076f11428483c2ca9d2379be27f805a" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>blocking_send</name></member>
+      <member refid="class_http_connector_1a3021a6c7f5c091dce4f5c7666fa82514" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>bRawTransferEnabled</name></member>
+      <member refid="class_http_connector_1a390438a2d81af59ae92261ea197165d0" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>BuildDataHeader</name></member>
+      <member refid="class_http_connector_1ae4f1c36e2c0e305e54a0de1d107bf9ef" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>client_fd</name></member>
+      <member refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>HttpConnector</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>create</name></member>
+      <member refid="class_http_connector_1a2ffab7746e211a6fab13ffa39b393035" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>dailyRawSendCnt</name></member>
+      <member refid="class_http_connector_1a8393b55b609aa24f63d8e3b78e413a9c" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>delayTimer</name></member>
+      <member refid="class_http_connector_1a417dd99cf103bf8a86bdf502eb285a96" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>delayTimer_cb</name></member>
+      <member refid="class_http_connector_1af8d925a524b176e256196165d672fdec" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>delayTimer_expired</name></member>
+      <member refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>HandleAdxlIdleInd</name></member>
+      <member refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>HandleRawDataStatus</name></member>
+      <member refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>HandleRcvdData</name></member>
+      <member refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>HandleRcvdDispData</name></member>
+      <member refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>HandleRcvdRawData</name></member>
+      <member refid="class_http_connector_1a23051a4bd5a19f95e51c571c20c9c7c9" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>http_connect</name></member>
+      <member refid="class_http_connector_1a537e9c121332468e83bca114d9691a76" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>http_connected</name></member>
+      <member refid="class_http_connector_1a0a6678e33ca76cacb933d0c359701b4b" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>http_disconnect</name></member>
+      <member refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>HttpConnector</name></member>
+      <member refid="class_http_connector_1ab4d0ff72c1c078c50d3c157d88393924" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>HttpConnector</name></member>
+      <member refid="class_http_connector_1a45989dc8b33cb068db005100a2f11679" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>HttpDispDataSend</name></member>
+      <member refid="class_http_connector_1ad9c03afbb6b3d34e26a01b1eea870638" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>HttpRawDataSend</name></member>
+      <member refid="class_http_connector_1a7d4b84303980dcc2de636b75056f98b9" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>imei</name></member>
+      <member refid="class_http_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>lte_connected</name></member>
+      <member refid="class_http_connector_1a20a72443420b704488a56e1d2400bef1" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>maxRawPerDay</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>HttpConnector</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>HttpConnector</scope><name>myName</name></member>
+      <member refid="class_http_connector_1a50af6c432e07946bf62493607847dd55" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>oneDayTimer</name></member>
+      <member refid="class_http_connector_1ac69569fdb1bf3ed35022a1feb8805a6e" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>oneDayTimer_cb</name></member>
+      <member refid="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>oneDayTimer_expired</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>operator=</name></member>
+      <member refid="class_http_connector_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>pInMbox</name></member>
+      <member refid="class_http_connector_1a9347d700881ccc31cf219b5f5c72232e" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>rawDataHeader</name></member>
+      <member refid="class_http_connector_1a8750575eef016431632ec6f7aee5251f" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>rcvdEntries</name></member>
+      <member refid="class_http_connector_1aa195aaead99156d934d498c01655d333" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>reqData</name></member>
+      <member refid="class_http_connector_1ae411b87edda7448c8bf4d4e2d4cdd474" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>reqDispData</name></member>
+      <member refid="class_http_connector_1a19cf3eae3207a4ee78a870f504edf3a4" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>reqRawData</name></member>
+      <member refid="class_http_connector_1a8fb8ecc93c7595585ebf437ea82b631e" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>reqRawDataStatus</name></member>
+      <member refid="class_http_connector_1a891bea661c0351fdb1c1aeba58cc02d3" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>requestedEntries</name></member>
+      <member refid="class_http_connector_1a528b47c24242eff2fb245f9ed8eb0517" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>responsebuf</name></member>
+      <member refid="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>rms_z_Thres</name></member>
+      <member refid="class_http_connector_1aec704176000fef9623fdbd1afcd38313" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>sendbuf</name></member>
+      <member refid="class_http_connector_1aac0c5230931182e816576cfe3be2c5a3" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>SendHttpPostHeader</name></member>
+      <member refid="class_http_connector_1adf68aa053d518cdf3d69934c3b4aaaee" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>SendSignatureFrame</name></member>
+      <member refid="class_http_connector_1ae49d9549f0e6c082dd23eae06492bd6b" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>SendSingleDataFrame</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>start</name></member>
+      <member refid="class_http_connector_1a29908d64354956f5a5f4dbe67041e92c" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>StartHttpDispDataTransmission</name></member>
+      <member refid="class_http_connector_1ac2afd18be5d01c5b8183757e7843beca" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>StartHttpRawDataTransmission</name></member>
+      <member refid="class_http_connector_1a9cd803b29cf1a2a564dba9f9dc3642ac" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>startReadPos</name></member>
+      <member refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>HttpConnector</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>HttpConnector</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>HttpConnector</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>HttpConnector</scope><name>tid</name></member>
+      <member refid="class_http_connector_1a4695019b9f8d66ac44aaf8901a219259" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>timestamp</name></member>
+      <member refid="class_http_connector_1aba9d39b4688a9fe5b0ab1fd21b86d658" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>tls_setup</name></member>
+      <member refid="class_http_connector_1acb6282902db731f3f61662f6f8fb8960" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>totalNumEntries</name></member>
+      <member refid="class_http_connector_1a16f5527853cb90fbc6fd84b5a55dfc40" prot="private" virt="non-virtual"><scope>HttpConnector</scope><name>zMaxRms</name></member>
+      <member refid="class_http_connector_1ae4da1ab65bfe016474312f441526484e" prot="public" virt="virtual"><scope>HttpConnector</scope><name>~HttpConnector</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>HttpConnector</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

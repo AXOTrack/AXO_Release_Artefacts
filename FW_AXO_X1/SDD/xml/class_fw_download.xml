@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_fw_download" kind="class" language="C++" prot="public">
+    <compoundname>FwDownload</compoundname>
+    <basecompoundref refid="class_fw_state" prot="public" virt="non-virtual">FwState</basecompoundref>
+    <includes refid="fsm_8h" local="no">fsm.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_fw_download_1a0d74b7c03b656d8ccdec101401fb48fb" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FwDownload</definition>
+        <argsstring>(void *pd)</argsstring>
+        <name>FwDownload</name>
+        <param>
+          <type>void *</type>
+          <declname>pd</declname>
+          <defname>pData</defname>
+        </param>
+        <briefdescription>
+<para>Constructor of firmware download state class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ponter to a data object</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor simply triggers a debug message on info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="181" column="14" bodyfile="update/fsm.cpp" bodystart="484" bodyend="486"/>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_download_1aa5f1653475d4f81b9a8a8f7da3e39536" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~FwDownload</definition>
+        <argsstring>()</argsstring>
+        <name>~FwDownload</name>
+        <briefdescription>
+<para>Destructor of firmware download state class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor simply triggers a debug message on info level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="182" column="13" bodyfile="update/fsm.cpp" bodystart="493" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_download_1a949503c431c3db37ae1a46e138b2ce24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref></type>
+        <definition>FwFsm::StateId handle_DlComplete</definition>
+        <argsstring>(PoolElem **pElem)</argsstring>
+        <name>handle_DlComplete</name>
+        <reimplements refid="class_fw_state_1a949503c431c3db37ae1a46e138b2ce24">handle_DlComplete</reimplements>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> **</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Firmware download state handler function for DlComplete events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to pointer to message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the state ID of the ready state</para>
+</simplesect>
+The function forward the download complete message to MQTT connector task. Finally function returns the state ID eReady. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="183" column="20" bodyfile="update/fsm.cpp" bodystart="505" bodyend="518"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" compoundref="mbox_8h" startline="69">Mbox::eMqttConnector</references>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea8570b65f331057b2cf92c504f0a2bc83" compoundref="fsm_8h" startline="64">FwFsm::eReady</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_download_1a9bb661eb7e96c9043e0960d3a01af6a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref></type>
+        <definition>FwFsm::StateId handle_DlFailed</definition>
+        <argsstring>(PoolElem **pElem)</argsstring>
+        <name>handle_DlFailed</name>
+        <reimplements refid="class_fw_state_1a9bb661eb7e96c9043e0960d3a01af6a8">handle_DlFailed</reimplements>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> **</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Firmware download state handler function for DlFailed events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to pointer to message of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the state ID of the idle state or eNoChange</para>
+</simplesect>
+The function checks if the maximum number of retries has not been reached. In this case the function start the retry timer by calling function startRetryTimer of the <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance to schedule a firmware download retry and returns the state ID eNoChange. If the maximum number of retries has been reached the retry counter will be set to 0 and the DlFailed message will be forwarded to MQTT connector task. Afterwards the function performes a delay of 2 seconds to let other tasks take over process, before it performes a reset. Returning to the state ID eIdle will never be reached. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="184" column="20" bodyfile="update/fsm.cpp" bodystart="536" bodyend="572"/>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffeaa022984e5d643ccf1aaee42688e01d65" compoundref="fsm_8h" startline="61">FwFsm::eIdle</references>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" compoundref="mbox_8h" startline="69">Mbox::eMqttConnector</references>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" compoundref="fsm_8h" startline="60">FwFsm::eNoChange</references>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_fw_download_1a22de52c28e140efcdb90423ce29714eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffe" kindref="member">FwFsm::StateId</ref></type>
+        <definition>FwFsm::StateId handle_timer_exp</definition>
+        <argsstring>()</argsstring>
+        <name>handle_timer_exp</name>
+        <reimplements refid="class_fw_state_1a22de52c28e140efcdb90423ce29714eb">handle_timer_exp</reimplements>
+        <briefdescription>
+<para>Firmware download state handler function for timer expired events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="return"><para>The state ID eNoChange</para>
+</simplesect>
+The function calculated the time difference from the download start time to the current time. If the time difference is more than maxDownloadDelay or if the maximum number of retries has been reached the download will be expected as failed and message eFwDlFailed will be send to MQTT connector task with error CODE3 and after a delay of 2 seconds a reset will be performed. <linebreak/>
+Otherwise a new download attempt will be started by calling the method requestDownload of the <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. Pointer variable pd is assigned to <ref refid="class_fw_upd_ctrl" kindref="compound">FwUpdCtrl</ref> class instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="update/fsm.h" line="185" column="20" bodyfile="update/fsm.cpp" bodystart="589" bodyend="613"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" compoundref="mpelem_8h" startline="96">eFwDlFailed</references>
+        <references refid="class_fw_fsm_1a281f4c9dd77f0f9e7b08c7609dcbfffea3a755fd6dc243a41c5e6fb69a3c1f09d" compoundref="fsm_8h" startline="60">FwFsm::eNoChange</references>
+        <references refid="class_fw_state_1a27c1291a625f9f943fb24a647ac60448" compoundref="fsm_8h" startline="136">FwState::maxDownloadDelay</references>
+        <references refid="class_fw_upd_ctrl_1a9c5123d67416084c3cc1c2e5b612e2e9" compoundref="update__ctrl_8h" startline="99">FwUpdCtrl::maxRetries</references>
+        <references refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" compoundref="fsm_8h" startline="132">FwState::pd</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <references refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" compoundref="fsm_8h" startline="134">FwState::startDownloadTimestamp</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Firmware download state class derived from base class <ref refid="class_fw_state" kindref="compound">FwState</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The firmware download state class overrides the handler function of DlComplete, DlFailed and timer expired events. In this state the download of the firmware binary file is ongoing. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FwDownload</label>
+        <link refid="class_fw_download"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FwState</label>
+        <link refid="class_fw_state"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>void *</label>
+      </node>
+      <node id="1">
+        <label>FwDownload</label>
+        <link refid="class_fw_download"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FwState</label>
+        <link refid="class_fw_state"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+maxDownloadDelay</edgelabel>
+          <edgelabel>+startDownloadTimestamp</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+pd</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uint32_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="update/fsm.h" line="179" column="1" bodyfile="update/fsm.h" bodystart="179" bodyend="186"/>
+    <listofallmembers>
+      <member refid="class_fw_download_1a0d74b7c03b656d8ccdec101401fb48fb" prot="public" virt="non-virtual"><scope>FwDownload</scope><name>FwDownload</name></member>
+      <member refid="class_fw_state_1ad39a248d77bc9ced7021430a0710247b" prot="public" virt="non-virtual"><scope>FwDownload</scope><name>FwState</name></member>
+      <member refid="class_fw_download_1a949503c431c3db37ae1a46e138b2ce24" prot="public" virt="virtual"><scope>FwDownload</scope><name>handle_DlComplete</name></member>
+      <member refid="class_fw_download_1a9bb661eb7e96c9043e0960d3a01af6a8" prot="public" virt="virtual"><scope>FwDownload</scope><name>handle_DlFailed</name></member>
+      <member refid="class_fw_state_1a7e95001afaeb737eb109dafdc1425b1d" prot="public" virt="virtual"><scope>FwDownload</scope><name>handle_FwInfo</name></member>
+      <member refid="class_fw_state_1a4ab8ab28eb13e8e31b6084f058ca9220" prot="public" virt="virtual"><scope>FwDownload</scope><name>handle_OtaStart</name></member>
+      <member refid="class_fw_download_1a22de52c28e140efcdb90423ce29714eb" prot="public" virt="virtual"><scope>FwDownload</scope><name>handle_timer_exp</name></member>
+      <member refid="class_fw_state_1a27c1291a625f9f943fb24a647ac60448" prot="public" virt="non-virtual"><scope>FwDownload</scope><name>maxDownloadDelay</name></member>
+      <member refid="class_fw_state_1a75bb2d2d40cdd00158ea9fccfbecb679" prot="public" virt="non-virtual"><scope>FwDownload</scope><name>pd</name></member>
+      <member refid="class_fw_state_1a73643f28c949eb3ef81770f9e8c422e8" prot="public" virt="non-virtual"><scope>FwDownload</scope><name>startDownloadTimestamp</name></member>
+      <member refid="class_fw_download_1aa5f1653475d4f81b9a8a8f7da3e39536" prot="public" virt="virtual"><scope>FwDownload</scope><name>~FwDownload</name></member>
+      <member refid="class_fw_state_1a2c016110456db682987bb5dcaf30da31" prot="public" virt="virtual"><scope>FwDownload</scope><name>~FwState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

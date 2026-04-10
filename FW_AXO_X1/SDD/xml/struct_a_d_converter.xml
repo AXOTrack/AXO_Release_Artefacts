@@ -1,0 +1,673 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_a_d_converter" kind="class" language="C++" prot="public">
+    <compoundname>ADConverter</compoundname>
+    <basecompoundref refid="classadc__channels" prot="public" virt="non-virtual">adc_channels</basecompoundref>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="adconverter_8h" local="no">adconverter.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_a_d_converter_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the <ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="100" column="10" bodyfile="drv/adc/adconverter.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1adf17391456f6e7aa288440dd96357b52" compoundref="adconverter_8cpp" startline="254" endline="260">ADConverter</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">task</referencedby>
+        <referencedby refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" compoundref="adconverter_8cpp" startline="124" endline="131">timer1_expired</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_a_d_converter_1a849dd3b387ff84332a99d5123b924e97" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_timer" kindref="compound">Timer</ref> * &gt;</type>
+        <definition>std::vector&lt;Timer*&gt; timers</definition>
+        <argsstring></argsstring>
+        <name>timers</name>
+        <briefdescription>
+<para>auto sampling timers (only for testing purposes) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="104" column="9" bodyfile="drv/adc/adconverter.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" compoundref="adconverter_8cpp" startline="292" endline="306">autoSample</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_d_converter_1a73cbe076bf37958ecf34560afe3484ad" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* adc_listeners[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>adc_listeners</name>
+        <briefdescription>
+<para>pointer to the listeners mailboxes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="106" column="10" bodyfile="drv/adc/adconverter.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">notifyListener</referencedby>
+        <referencedby refid="struct_a_d_converter_1a43e27f320417d5e460c0b79097cb20e6" compoundref="adconverter_8cpp" startline="322" endline="333">registerListener</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="struct_a_d_converter_1a197e7cad54835faf08b50c84d40c870f" prot="private" static="yes" mutable="no">
+        <type>struct adc_dt_spec</type>
+        <definition>struct adc_dt_spec adc_channels[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>adc_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Array of containers for ADC channel information specified in devicetree </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="106" column="10" bodyfile="drv/adc/adconverter.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_a_d_converter_1a73e44a97d117d2ec0b6f40817cdce169" prot="private" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t adc_total_channels</definition>
+        <argsstring></argsstring>
+        <name>adc_total_channels</name>
+        <initializer>= DT_PROP_LEN(DT_PATH(zephyr_user), io_channels)</initializer>
+        <briefdescription>
+<para>Structure for an user-specific timer data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="113" column="19" bodyfile="drv/adc/adconverter.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="struct_a_d_converter_1ac1d2043bb6ede9c12212992591d63d91" compoundref="adconverter_8cpp" startline="79" endline="90">initDevice</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_a_d_converter_1adf17391456f6e7aa288440dd96357b52" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ADConverter</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>ADConverter</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>AD converter task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register the mailbox of the AD converter task. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="90" column="14" bodyfile="drv/adc/adconverter.cpp" bodystart="254" bodyend="260"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7c62e8460701d99d6495f8d125d1bc93" compoundref="mbox_8h" startline="79">Mbox::eADConverter</references>
+        <references refid="struct_a_d_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="adconverter_8h" startline="100">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1a2b374a806d362b9c451f78bbc528ef69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ADConverter</definition>
+        <argsstring>()=delete</argsstring>
+        <name>ADConverter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="91" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1a2c35539777895b88f8ae3ed5bb7ad6b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~ADConverter</definition>
+        <argsstring>()</argsstring>
+        <name>~ADConverter</name>
+        <briefdescription>
+<para>AD converter task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="92" column="13" bodyfile="drv/adc/adconverter.cpp" bodystart="269" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>Initially the AD converters will be initialized by calling member function initDevice. Then the timers for cyclic automatic sampling are started. Note, that these timer are only created for testing purposes. In productive software the vector of timers is empty. <ref refid="class_i2c_bus" kindref="compound">I2cBus</ref> instance. sensor device will be initialized by call of member function initDevice. For testing purposes a cyclic timer can be activated by commenting in the start method of the timer to initiate a cyclic sampling of the sensor data. <linebreak/>
+ Afterwards the function enters the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eTimerExpired: On sample timer expiry sensor data will be sampled and reported to registered listeners by calling function sample. The pointer pElem will be set to 0, to prevent releasing the message because it is allocated static.</para>
+</listitem><listitem><para>eAdcReport: On ADC report request sensor data will be sampled and reported to registered listeners by calling function sample. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="93" column="18" bodyfile="drv/adc/adconverter.cpp" bodystart="361" bodyend="407"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab83cc43ee844556d517f438a56f05c75" compoundref="mpelem_8h" startline="87">eAdcReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_mux_controller_1a05848de25ac2dbec233935058a1d24b4" compoundref="mux__controller_8cpp" startline="63" endline="84">MuxController::init</references>
+        <references refid="struct_a_d_converter_1ac1d2043bb6ede9c12212992591d63d91" compoundref="adconverter_8cpp" startline="79" endline="90">initDevice</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="mux__controller_8h_1a9873af23f3a718b389d1fbc169f0cfc0">mux</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">PoolElem::p1</references>
+        <references refid="struct_a_d_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="adconverter_8h" startline="100">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="struct_a_d_converter_1a9dc1243f3e218fb3511b33b0fae8bac8" compoundref="adconverter_8cpp" startline="192" endline="244">sample</references>
+        <references refid="struct_a_d_converter_1a849dd3b387ff84332a99d5123b924e97" compoundref="adconverter_8h" startline="104">timers</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer1_expired</definition>
+        <argsstring>(uint8_t chmask)</argsstring>
+        <name>timer1_expired</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chmask</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> expired function for the cyclic sample timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chmask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel bitmask</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function initializes the static pool element e1 with message type eTimerExpired, set AD converter task as sender, copy channel bitmask chmask in the payload of the message and put message into own (AD converter&apos;s) mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="95" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="124" bodyend="131"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
+        <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">PoolElem::p1</references>
+        <references refid="struct_a_d_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="adconverter_8h" startline="100">pInMbox</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="struct_a_d_converter_1aaa25421e04a507bcced8f9bb02af5213" compoundref="adconverter_8cpp" startline="103" endline="111">timer_cb</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void autoSample</definition>
+        <argsstring>(uint8_t chmask, uint32_t interval, Mbox *listener)</argsstring>
+        <name>autoSample</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chmask</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>interval</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Function to start cyclic automatic sampling if specified ADC channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chmask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmask specifying which channels shall be reported to listener </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sample intervall in millliseconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional listener, can be NULL if not required</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function allocates a structure of type <ref refid="struct_adc_timer_info" kindref="compound">AdcTimerInfo</ref> and assign the this pointer of the class instance and the specified channel bitmask to it. Afterwards it allocates a cyclic timer with duration and period specified by parameter interval and copy the pointer to the timer in vector timers by calling the vector class method push_back. Finally it checks if spezified mailbox pointer listener is not NULL and in this case it registers the listener for the channels specified in channel bitmask chmask by calling member function registerListener. <simplesect kind="note"><para>This function is only implemented for testing purposes, in productive software this function is not called. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="96" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="292" bodyend="306"/>
+        <references refid="struct_adc_timer_info_1a7c78ba1afcd2fa12e37cfca796438ae8" compoundref="adconverter_8cpp" startline="66">AdcTimerInfo::ch_mask</references>
+        <references refid="struct_a_d_converter_1a43e27f320417d5e460c0b79097cb20e6" compoundref="adconverter_8cpp" startline="322" endline="333">registerListener</references>
+        <references refid="struct_adc_timer_info_1a496dc4ed941761748f0be464e9e1e71c" compoundref="adconverter_8cpp" startline="65">AdcTimerInfo::self</references>
+        <references refid="struct_a_d_converter_1aaa25421e04a507bcced8f9bb02af5213" compoundref="adconverter_8cpp" startline="103" endline="111">timer_cb</references>
+        <references refid="struct_a_d_converter_1a849dd3b387ff84332a99d5123b924e97" compoundref="adconverter_8h" startline="104">timers</references>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notifyListener</definition>
+        <argsstring>(uint8_t channel, int16_t raw, int32_t mv)</argsstring>
+        <name>notifyListener</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>mv</declname>
+        </param>
+        <briefdescription>
+<para>Send ADC data to optional registered listener for specified channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specified ADC channel </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measured ADC raw data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measured ADC data converted to millivolt</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function checks if there is a listener registered for the specified channel and if the pointer to listener mailbox in array adc_listeners is not NULL, it requests a message from message pool, set message type to eAdcData, set eADConverter as sender and send message to the listener&apos;s mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="97" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="146" bodyend="169"/>
+        <references refid="struct_a_d_converter_1a73cbe076bf37958ecf34560afe3484ad" compoundref="adconverter_8h" startline="106">adc_listeners</references>
+        <references refid="struct_a_d_input_1a715f5cb061d11eb75981741eda4dafcd" compoundref="adconverter_8h" startline="51">ADInput::channel</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" compoundref="mpelem_8h" startline="86">eAdcData</references>
+        <references refid="class_msg_pool_1a77fddc9b40dd7a275687cbd514ae48a8" compoundref="mpool_8cpp" startline="78" endline="123">MsgPool::getNewElem</references>
+        <references refid="class_msg_pool_1a435c2d96024ea826359b1bc4c9675e6a" compoundref="mpool_8cpp" startline="199" endline="203">MsgPool::inst</references>
+        <references refid="struct_a_d_input_1afbc95c0607b0a49ba22ad34793ec35f9" compoundref="adconverter_8h" startline="53">ADInput::mv</references>
+        <references refid="struct_a_d_input_1a0fa73e362a2e5c784d67168ff308225d" compoundref="adconverter_8h" startline="52">ADInput::raw</references>
+        <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
+        <referencedby refid="struct_a_d_converter_1a9dc1243f3e218fb3511b33b0fae8bac8" compoundref="adconverter_8cpp" startline="192" endline="244">sample</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1a43e27f320417d5e460c0b79097cb20e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerListener</definition>
+        <argsstring>(uint8_t chmask, Mbox *listener)</argsstring>
+        <name>registerListener</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chmask</declname>
+        </param>
+        <param>
+          <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Function to register a listener for a specific ADC channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chmask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmask specifying which channels shall be reported to listener </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the mailbox of the listener</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function enter a loop over the maximum number of ADC channels and if channel at index ch of array adc_listeners is specified by channel bitmask chmask, it register the listener by copy the pointer to the mailbox in array listeners at index ch, before leaving the function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="98" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="322" bodyend="333"/>
+        <references refid="struct_a_d_converter_1a73cbe076bf37958ecf34560afe3484ad" compoundref="adconverter_8h" startline="106">adc_listeners</references>
+        <referencedby refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" compoundref="adconverter_8cpp" startline="292" endline="306">autoSample</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_a_d_converter_1aaa25421e04a507bcced8f9bb02af5213" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void timer_cb</definition>
+        <argsstring>(k_timer *timer)</argsstring>
+        <name>timer_cb</name>
+        <param>
+          <type>k_timer *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_timer" kindref="compound">Timer</ref> callback function for the cyclic sample timers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to timer of type k_timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call timer expired member function timer1_expired with the channel bitmask as parameter extracted from the user-specific data of type <ref refid="struct_adc_timer_info" kindref="compound">AdcTimerInfo</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="94" column="17" bodyfile="drv/adc/adconverter.cpp" bodystart="103" bodyend="111"/>
+        <references refid="struct_adc_timer_info_1a7c78ba1afcd2fa12e37cfca796438ae8" compoundref="adconverter_8cpp" startline="66">AdcTimerInfo::ch_mask</references>
+        <references refid="struct_adc_timer_info_1a496dc4ed941761748f0be464e9e1e71c" compoundref="adconverter_8cpp" startline="65">AdcTimerInfo::self</references>
+        <references refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" compoundref="adconverter_8cpp" startline="124" endline="131">timer1_expired</references>
+        <referencedby refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" compoundref="adconverter_8cpp" startline="292" endline="306">autoSample</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="struct_a_d_converter_1ac1d2043bb6ede9c12212992591d63d91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initDevice</definition>
+        <argsstring>()</argsstring>
+        <name>initDevice</name>
+        <briefdescription>
+<para>The init function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function enters a loop over the array of containers with the ADC channel information specified in devicetree and checks if the device at index i is ready for usage with call of function device_is_ready. Afterwards the ADC channel of device at index i will be configured by calling function adc_channel_setup_dt provided by the Zephyr ADC API. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="111" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="79" bodyend="90"/>
+        <references refid="struct_a_d_converter_1a73e44a97d117d2ec0b6f40817cdce169" compoundref="adconverter_8h" startline="113">adc_total_channels</references>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_a_d_converter_1a9dc1243f3e218fb3511b33b0fae8bac8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sample</definition>
+        <argsstring>(uint8_t chmask)</argsstring>
+        <name>sample</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>chmask</declname>
+        </param>
+        <briefdescription>
+<para>Function to sample ADC data for specified channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chmask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The channel bitmask, specifying the channels which shall be sampled</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The function allocates a structure of type struct adc_sequence which defines an ADC sampling sequence with an 16 bit unsigned integer type. Than it enters a loop over the ADC channels and check if bit at position i is set in channel bitmask chmask. If bit is set, it initialize the struct sequence of type adc_sequence with the information provided array <ref refid="classadc__channels" kindref="compound">adc_channels</ref> of type struct adc_dt_spec at index i by calling function adc_sequence_init_dt provided by Zephyr ADC API. With call of function adc_read also provided by Zephyr ADC API it reads the raw value into structure sequence. Afterwards the raw value will be assigned to to local varible val_mv and converted to millivolt by call of function adc_raw_to_millivolts_dt also provided by Zephyr ADC API, which uses the ADC specification from device tree from structure struct adc_dt_spec provided by array <ref refid="classadc__channels" kindref="compound">adc_channels</ref> at position i. Finally the listeners will be informed by calling member function notifyListener. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="drv/adc/adconverter.h" line="112" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="192" bodyend="244"/>
+        <references refid="mux__controller_8h_1a9873af23f3a718b389d1fbc169f0cfc0">mux</references>
+        <references refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" compoundref="adconverter_8cpp" startline="146" endline="169">notifyListener</references>
+        <references refid="class_mux_controller_1a81f974f12568b91f15c2957c186ccd45" compoundref="mux__controller_8cpp" startline="98" endline="111">MuxController::selectChannel</references>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>AD converter driver class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The AD converter driver class handle the reception of the analog values, convert them into digital values and report them to the registered listener task on request. For testing purposes cyclic timer handling is implemented and can be used for automatic cyclic sampling. The timers are organized in a vector and will be allocated in the autoSample method, which is only called by inactive testing scenarios. <linebreak/>
+The AD converter class provides methods to sample the data of the provided AD channels, to initialize the AD devices and to report the data to the registered listener tasks. It uses the public zephyr API for the sensor driver. See details in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__adc__interface.html">Zephyr ADC API documentation</ulink> and for details of the <ulink url="https://docs.zephyrproject.org/latest/hardware/peripherals/adc.html">ADC channel configuration in the devicetree</ulink> <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Timer interrupt callback (only for testing purposes)</para>
+</listitem><listitem><para>AD converter task (self, only for testing purposes)</para>
+</listitem><listitem><para>Battery manager task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Battery manager task</para>
+</listitem><listitem><para>AD converter task (self, transmission in timer callback, only for testing purposes) </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ADConverter</label>
+        <link refid="struct_a_d_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="2">
+        <label>adc_channels</label>
+        <link refid="classadc__channels"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>static size_t</label>
+      </node>
+      <node id="13">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="10">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ADConverter</label>
+        <link refid="struct_a_d_converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-timers</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-adc_channels</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+          <edgelabel>-adc_listeners</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-adc_total_channels</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>vector&lt; Timer * &gt;</label>
+      </node>
+      <node id="9">
+        <label>static struct adc_dt_spec</label>
+      </node>
+      <node id="14">
+        <label>uint32_t</label>
+      </node>
+      <node id="7">
+        <label>uint8_t</label>
+      </node>
+      <node id="11">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>struct k_thread</label>
+      </node>
+      <node id="12">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>adc_channels</label>
+        <link refid="classadc__channels"/>
+      </node>
+      <node id="4">
+        <label>k_tid_t</label>
+      </node>
+      <node id="5">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="drv/adc/adconverter.cpp" line="55" column="5" bodyfile="drv/adc/adconverter.cpp" bodystart="55" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct_a_d_converter_1a197e7cad54835faf08b50c84d40c870f" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>adc_channels</name></member>
+      <member refid="struct_a_d_converter_1a73cbe076bf37958ecf34560afe3484ad" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>adc_listeners</name></member>
+      <member refid="struct_a_d_converter_1a73e44a97d117d2ec0b6f40817cdce169" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>adc_total_channels</name></member>
+      <member refid="struct_a_d_converter_1adf17391456f6e7aa288440dd96357b52" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>ADConverter</name></member>
+      <member refid="struct_a_d_converter_1a2b374a806d362b9c451f78bbc528ef69" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>ADConverter</name></member>
+      <member refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>autoSample</name></member>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>ADConverter</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>create</name></member>
+      <member refid="struct_a_d_converter_1ac1d2043bb6ede9c12212992591d63d91" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>initDevice</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>ADConverter</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>ADConverter</scope><name>myName</name></member>
+      <member refid="struct_a_d_converter_1a162280fb65e21ae0bfa0e3781cd6f188" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>notifyListener</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>operator=</name></member>
+      <member refid="struct_a_d_converter_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>pInMbox</name></member>
+      <member refid="struct_a_d_converter_1a43e27f320417d5e460c0b79097cb20e6" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>registerListener</name></member>
+      <member refid="struct_a_d_converter_1a9dc1243f3e218fb3511b33b0fae8bac8" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>sample</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>start</name></member>
+      <member refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>ADConverter</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>ADConverter</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>ADConverter</scope><name>tid</name></member>
+      <member refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>timer1_expired</name></member>
+      <member refid="struct_a_d_converter_1aaa25421e04a507bcced8f9bb02af5213" prot="public" virt="non-virtual"><scope>ADConverter</scope><name>timer_cb</name></member>
+      <member refid="struct_a_d_converter_1a849dd3b387ff84332a99d5123b924e97" prot="private" virt="non-virtual"><scope>ADConverter</scope><name>timers</name></member>
+      <member refid="struct_a_d_converter_1a2c35539777895b88f8ae3ed5bb7ad6b3" prot="public" virt="virtual"><scope>ADConverter</scope><name>~ADConverter</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>ADConverter</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

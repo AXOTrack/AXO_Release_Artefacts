@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mutex_8h" kind="file" language="C++">
+    <compoundname>mutex.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="mpool_8cpp" local="yes">rtos/mpool.cpp</includedby>
+    <includedby refid="mpool_8h" local="yes">rtos/mpool.h</includedby>
+    <includedby refid="mutex_8cpp" local="yes">rtos/mutex.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="27">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/mutex.h</label>
+        <link refid="mutex_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="28">
+        <label>update/update_ctrl.h</label>
+        <link refid="update__ctrl_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="30">
+        <label>rtos/mutex.cpp</label>
+        <link refid="mutex_8cpp"/>
+      </node>
+      <node id="22">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="7">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="10">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="25">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="29">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="9">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="23">
+        <label>rtos/mbox.cpp</label>
+        <link refid="mbox_8cpp"/>
+      </node>
+      <node id="21">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="17">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="20">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="19">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="2">
+        <label>rtos/mpool.cpp</label>
+        <link refid="mpool_8cpp"/>
+      </node>
+      <node id="16">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="15">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="26">
+        <label>update/fsm.h</label>
+        <link refid="fsm_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rtos/mpool.h</label>
+        <link refid="mpool_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="24">
+        <label>rtos/mpelem.cpp</label>
+        <link refid="mpelem_8cpp"/>
+      </node>
+      <node id="18">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="8">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="12">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mutex" prot="public">Mutex</innerclass>
+    <innerclass refid="classscoped__lock" prot="public">scoped_lock</innerclass>
+    <briefdescription>
+<para>Header file of RTOS wrapper class <ref refid="class_mutex" kindref="compound">Mutex</ref> for mutex support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mutex_8h_1mutex"/> <simplesect kind="par"><title>Detailed Description </title><para>A mutex is simply a variable that is non-negative and is shared between threads. It is a signaling mechanism for low-level synchronization of threads and/or tasks. It uses the two atomic operations Wait and Signal for the process synchronization. <linebreak/>
+ The binary semaphores or mutexes are quite similar to counting semaphores, but their value is restricted to 0 and 1. In this type of semaphore, the wait operation works only if semaphore = 1, and the signal operation succeeds when semaphore= 0.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MUTEX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MUTEX_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_mutex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mutex" kindref="compound">Mutex</ref><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mutex_1a4b5dfbd24f5bc4c03b24b2da362f66d5" kindref="member">Mutex</ref>();</highlight></codeline>
+<codeline lineno="65" refid="class_mutex_1a87e8b974837ceba57ed06cc60f7ac9cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_mutex_1a87e8b974837ceba57ed06cc60f7ac9cd" kindref="member">~Mutex</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mutex_1af7d6e125437961b268e97fba0f72248f" kindref="member">lock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mutex_1aefff5998db65a5d91d5ad83737ce9d5c" kindref="member">lock_timed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout);</highlight></codeline>
+<codeline lineno="68" refid="class_mutex_1a60be41048a60657b202591050eff18fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mutex_1a987ce601d6d4c8eedd68b58db3b7811a" kindref="member">unlock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">k_mutex<sp/><ref refid="class_mutex_1a60be41048a60657b202591050eff18fa" kindref="member">mutex_handle</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classscoped__lock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classscoped__lock" kindref="compound">scoped_lock</ref><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80" refid="classscoped__lock_1af4d49476246e608333026bcc04150e80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classscoped__lock_1af4d49476246e608333026bcc04150e80" kindref="member">scoped_lock</ref>(<ref refid="class_mutex" kindref="compound">Mutex</ref>*<sp/>m)<sp/>:<sp/><ref refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" kindref="member">mtx</ref>(m)<sp/>{<sp/><ref refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" kindref="member">mtx</ref>-&gt;<ref refid="class_mutex_1af7d6e125437961b268e97fba0f72248f" kindref="member">lock</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="81" refid="classscoped__lock_1a1de056a5a94a54519eeb59dddd9fdc3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscoped__lock_1a1de056a5a94a54519eeb59dddd9fdc3e" kindref="member">scoped_lock</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82" refid="classscoped__lock_1a7dfc5e11e9f6342bd9ef5ea59e890af1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classscoped__lock_1a7dfc5e11e9f6342bd9ef5ea59e890af1" kindref="member">~scoped_lock</ref>()<sp/>{<sp/><ref refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" kindref="member">mtx</ref>-&gt;<ref refid="class_mutex_1a987ce601d6d4c8eedd68b58db3b7811a" kindref="member">unlock</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85" refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mutex" kindref="compound">Mutex</ref>*<sp/><ref refid="classscoped__lock_1a07cd2052356a7982f6439972e8e6d5db" kindref="member">mtx</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MUTEX_H_&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/mutex.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_1788f8309b1a812dcb800a185471cf6c" kind="dir">
+    <compoundname>ui</compoundname>
+    <innerfile refid="leds_8cpp">leds.cpp</innerfile>
+    <innerfile refid="leds_8h">leds.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ui/"/>
+  </compounddef>
+</doxygen>

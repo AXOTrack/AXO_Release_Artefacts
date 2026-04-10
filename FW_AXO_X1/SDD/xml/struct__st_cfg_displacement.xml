@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct__st_cfg_displacement" kind="struct" language="C++" prot="public">
+    <compoundname>_stCfgDisplacement</compoundname>
+    <includes refid="config_8h" local="no">config.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__st_cfg_displacement_1a5667be314bbfb5cd43a7932e3327a556" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string b1</definition>
+        <argsstring></argsstring>
+        <name>b1</name>
+        <briefdescription>
+<para>Beautification factor 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="conf/config.h" line="184" column="13" bodyfile="conf/config.h" bodystart="184" bodyend="-1"/>
+        <referencedby refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" compoundref="disptask_8cpp" startline="97" endline="108">DispTask::configure</referencedby>
+        <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure for displacement related dynamic configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>_stCfgDisplacement</label>
+        <link refid="struct__st_cfg_displacement"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+b1</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="conf/config.h" line="183" column="1" bodyfile="conf/config.h" bodystart="183" bodyend="185"/>
+    <listofallmembers>
+      <member refid="struct__st_cfg_displacement_1a5667be314bbfb5cd43a7932e3327a556" prot="public" virt="non-virtual"><scope>_stCfgDisplacement</scope><name>b1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

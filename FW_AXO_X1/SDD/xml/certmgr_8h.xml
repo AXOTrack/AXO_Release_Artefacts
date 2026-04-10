@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="certmgr_8h" kind="file" language="C++">
+    <compoundname>certmgr.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">modem/modem_key_mgmt.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8h" local="yes">net/mqtt_connector.h</includedby>
+    <includedby refid="certmgr_8cpp" local="yes">util/certmgr.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>modem/modem_key_mgmt.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>util/certmgr.h</label>
+        <link refid="certmgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>util/certmgr.h</label>
+        <link refid="certmgr_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="6">
+        <label>util/certmgr.cpp</label>
+        <link refid="certmgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__st_broker_cfg" prot="public">_stBrokerCfg</innerclass>
+    <innerclass refid="classcertmgr" prot="public">certmgr</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="certmgr_8h_1afccf8ab32901bd0e829b027a744e9d94" prot="public" static="no">
+        <name>USE_BROKER_SWITCHING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="33" column="9" bodyfile="util/certmgr.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="certmgr_8h_1abf6b23acb5168bc7dc60873006ab04b9" prot="public" static="no">
+        <name>BROKER_CFG_FILENAME</name>
+        <initializer>&quot;/lfs/BrokerCfg.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File name of the broker configuration file, which held the information about current and desired broker </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="47" column="9" bodyfile="util/certmgr.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="certmgr_8h_1a74719e6d41d533e4d3918f5499ed9027" prot="public" static="no">
+        <name>JOVIA_CERT_FILENAME</name>
+        <initializer>&quot;/lfs/JoviaCert.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File name of the certification file to held the Jovia certificated and key </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="50" column="9" bodyfile="util/certmgr.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="certmgr_8h_1a8652fefb5a339f5850347c3815b2778e" prot="public" static="no">
+        <name>THINGSBOARD_CERT_FILENAME</name>
+        <initializer>&quot;/lfs/TbCert.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File name of the certification file to held the Thingsboard certificated and key </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="53" column="9" bodyfile="util/certmgr.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16" prot="public" static="no" strong="no">
+        <type></type>
+        <name>_enBroker</name>
+        <enumvalue id="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee" prot="public">
+          <name>eBroker_JOVIA</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e" prot="public">
+          <name>eBroker_THINGSBOARD</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16ae48d016362f86aca81ecd7266a0b5712" prot="public">
+          <name>eBroker_NONE</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration defining the IDs of the broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="56" column="1" bodyfile="util/certmgr.h" bodystart="56" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" prot="public" static="no">
+        <type>enum <ref refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16" kindref="member">_enBroker</ref></type>
+        <definition>typedef enum _enBroker enBroker</definition>
+        <argsstring></argsstring>
+        <name>enBroker</name>
+        <briefdescription>
+<para>Enumeration defining the IDs of the broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="60" column="10"/>
+      </memberdef>
+      <memberdef kind="typedef" id="certmgr_8h_1a3788edea90d62a780803a815880b258f" prot="public" static="no">
+        <type>struct <ref refid="struct__st_broker_cfg" kindref="compound">_stBrokerCfg</ref></type>
+        <definition>typedef struct _stBrokerCfg stBrokerCfg</definition>
+        <argsstring></argsstring>
+        <name>stBrokerCfg</name>
+        <briefdescription>
+<para>Structure to define current and desired broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="util/certmgr.h" line="66" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of certification management class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="certmgr_8h_1CertMgr"/> <simplesect kind="par"><title>Detailed Description </title><para>Certification manager handles the broker switching. It uses the <ulink url="https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/libraries/modem/modem_key_mgmt.html">Modem key management library</ulink> provided by nordic semicondutor with its <ulink url="https://docs.nordicsemi.com/bundle/nrf-apis-latest/page/group_modem_key_mgmt.html">API</ulink> to write the certificates to the modem. And it uses the <ulink url="https://github.com/littlefs-project/littlefs">littlefs library</ulink> provided by <ulink url="https://docs.zephyrproject.org/latest/samples/subsys/fs/littlefs/README.html#littlefs">Zephyr</ulink> to support file operations.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_CERT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_CERT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="certmgr_8h_1afccf8ab32901bd0e829b027a744e9d94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//#undef<sp/>USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_UTIL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;modem/modem_key_mgmt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&quot;../../tests/util/src/stubs.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="certmgr_8h_1abf6b23acb5168bc7dc60873006ab04b9" refkind="member"><highlight class="preprocessor">#define<sp/>BROKER_CFG_FILENAME<sp/>&quot;/lfs/BrokerCfg.txt&quot;</highlight></codeline>
+<codeline lineno="50" refid="certmgr_8h_1a74719e6d41d533e4d3918f5499ed9027" refkind="member"><highlight class="preprocessor">#define<sp/>JOVIA_CERT_FILENAME<sp/>&quot;/lfs/JoviaCert.txt&quot;</highlight></codeline>
+<codeline lineno="53" refid="certmgr_8h_1a8652fefb5a339f5850347c3815b2778e" refkind="member"><highlight class="preprocessor">#define<sp/>THINGSBOARD_CERT_FILENAME<sp/>&quot;/lfs/TbCert.txt&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16" kindref="member">_enBroker</ref><sp/>{</highlight></codeline>
+<codeline lineno="57" refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee" kindref="member">eBroker_JOVIA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="58" refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e" kindref="member">eBroker_THINGSBOARD</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16ae48d016362f86aca81ecd7266a0b5712" kindref="member">eBroker_NONE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>255</highlight></codeline>
+<codeline lineno="60" refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16ae48d016362f86aca81ecd7266a0b5712" refkind="member"><highlight class="normal">}<sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="struct__st_broker_cfg" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__st_broker_cfg" kindref="compound">_stBrokerCfg</ref><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64" refid="struct__st_broker_cfg_1ade73530586b29046a939e89470c480fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/><ref refid="struct__st_broker_cfg_1ade73530586b29046a939e89470c480fc" kindref="member">currentBroker</ref>;</highlight></codeline>
+<codeline lineno="65" refid="struct__st_broker_cfg_1a14fa1a5bdb8f9ec47093819d2538763d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/><ref refid="struct__st_broker_cfg_1a14fa1a5bdb8f9ec47093819d2538763d" kindref="member">desiredBroker</ref>;</highlight></codeline>
+<codeline lineno="66" refid="certmgr_8h_1a3788edea90d62a780803a815880b258f" refkind="member"><highlight class="normal">}<sp/><ref refid="certmgr_8h_1a3788edea90d62a780803a815880b258f" kindref="member">stBrokerCfg</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classcertmgr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcertmgr" kindref="compound">certmgr</ref><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82" refid="classcertmgr_1aef7cda25c0d6516daa8a26bad5037665" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcertmgr_1aef7cda25c0d6516daa8a26bad5037665" kindref="member">~certmgr</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classcertmgr_1acc45f4d4d5957998c083aac888aa8050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classcertmgr" kindref="compound">certmgr</ref>*<sp/><ref refid="classcertmgr_1acc45f4d4d5957998c083aac888aa8050" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="85" refid="classcertmgr_1a02fd73d861ef2e4aabb38c0c9ff82947" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classcertmgr_1a3e4cabc7036c6e38d45566eae9b0f5ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a3e4cabc7036c6e38d45566eae9b0f5ea" kindref="member">WriteJoviaRootCert2Modem</ref>();</highlight></codeline>
+<codeline lineno="88" refid="classcertmgr_1adb43734e3a6e734e698f7ba5420abd9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1adb43734e3a6e734e698f7ba5420abd9b" kindref="member">WriteThingsboardRootCert2Modem</ref>();</highlight></codeline>
+<codeline lineno="89" refid="classcertmgr_1ab47df076da51a869f33f936f1af4f94c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1ab47df076da51a869f33f936f1af4f94c" kindref="member">WriteDeviceCert2Modem</ref>();</highlight></codeline>
+<codeline lineno="90" refid="classcertmgr_1a3c7b2cce28c5128ee2c09cb24bdd8eda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a3c7b2cce28c5128ee2c09cb24bdd8eda" kindref="member">WriteDeviceKey2Modem</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classcertmgr_1acaa47cb858edbe466a2e1821b932e0d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1acaa47cb858edbe466a2e1821b932e0d2" kindref="member">CheckCertExistInModem</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>modem_key_mgmt_cred_type<sp/>credType);</highlight></codeline>
+<codeline lineno="93" refid="classcertmgr_1aca6cf1d7dfb970e03316691f3c73eac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1aca6cf1d7dfb970e03316691f3c73eac7" kindref="member">CompareRootCertInModem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pCert,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="94" refid="classcertmgr_1ad1478b5b41dbe6a6f5ffce5997a96000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/><ref refid="classcertmgr_1ad1478b5b41dbe6a6f5ffce5997a96000" kindref="member">GetConfiguredBrokerInModem</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classcertmgr_1a5cb82b27d240fbc954e0050df3e861f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_broker_cfg" kindref="compound">stBrokerCfg</ref><sp/><ref refid="classcertmgr_1a5cb82b27d240fbc954e0050df3e861f7" kindref="member">readBrokerCfg</ref>();</highlight></codeline>
+<codeline lineno="97" refid="classcertmgr_1af0654790e06b5ac06e0f356de34ed4e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1af0654790e06b5ac06e0f356de34ed4e6" kindref="member">writeBrokerCfg</ref>(<ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>current,<sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>desired);</highlight></codeline>
+<codeline lineno="98" refid="classcertmgr_1af5293bd514ca5d83c32a243953e61b1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/><ref refid="classcertmgr_1af5293bd514ca5d83c32a243953e61b1a" kindref="member">getCurrentBroker</ref>();</highlight></codeline>
+<codeline lineno="99" refid="classcertmgr_1aa75f5002ea3a14893cd6b74e532da203" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/><ref refid="classcertmgr_1aa75f5002ea3a14893cd6b74e532da203" kindref="member">getDesiredBroker</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classcertmgr_1a91b38311ca74af5235bb56d7bd90c5ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a91b38311ca74af5235bb56d7bd90c5ff" kindref="member">writeDeviceCert</ref>(<ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>broker,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pCert);<sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>fs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classcertmgr_1a6a6ed762b6f58ba3798538243bf57ba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a6a6ed762b6f58ba3798538243bf57ba3" kindref="member">appendDeviceCert</ref>(<ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>broker,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pCert);<sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>fs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classcertmgr_1aae8ce4a89afc75a5183ab9f5a89cc228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1aae8ce4a89afc75a5183ab9f5a89cc228" kindref="member">appendDeviceKey</ref>(<ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>broker,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pCert);<sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>fs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classcertmgr_1a5d9d14f76663146e1c2f1c33242d5968" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a5d9d14f76663146e1c2f1c33242d5968" kindref="member">readDeviceCertAndKey</ref>(<ref refid="certmgr_8h_1ac9a7cf8e011af87f41e87f5eeb2e183a" kindref="member">enBroker</ref><sp/>broker);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classcertmgr_1af54618982714450a2ef1e1a67df2cf8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classcertmgr_1af54618982714450a2ef1e1a67df2cf8e" kindref="member">parseCert</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pJsonBuf,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cmd);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="classcertmgr_1a03e1e03938ee182860000094ae625913" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a03e1e03938ee182860000094ae625913" kindref="member">storeJoviaCert1</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf);</highlight></codeline>
+<codeline lineno="109" refid="classcertmgr_1aa818420262a6d726a50f2123fc7a0fc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1aa818420262a6d726a50f2123fc7a0fc1" kindref="member">storeJoviaCert2</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf);</highlight></codeline>
+<codeline lineno="110" refid="classcertmgr_1a09decb14b305fcddbb4443b25fc69b81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a09decb14b305fcddbb4443b25fc69b81" kindref="member">storeJoviaKey</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classcertmgr_1a002c4a662311bf3504e9faebb6dadcd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a002c4a662311bf3504e9faebb6dadcd9" kindref="member">storeThingsboardCert1</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf);</highlight></codeline>
+<codeline lineno="113" refid="classcertmgr_1adac4083d0c314e17ba9364c8b6bf8bdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1adac4083d0c314e17ba9364c8b6bf8bdf" kindref="member">storeThingsboardCert2</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf);</highlight></codeline>
+<codeline lineno="114" refid="classcertmgr_1a96e78d5e925e8967498bcfc15077752c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a96e78d5e925e8967498bcfc15077752c" kindref="member">storeThingsboardKey</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pBuf);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classcertmgr_1a3a4721db9a187b4f8967f8879842766d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a3a4721db9a187b4f8967f8879842766d" kindref="member">AllPrecondFullFilled</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classcertmgr_1ac8130054a623ef8f4c2a356369dab5c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1ac8130054a623ef8f4c2a356369dab5c7" kindref="member">GetFsStat</ref>();</highlight></codeline>
+<codeline lineno="119" refid="classcertmgr_1a741f584cf7fb2eab9930bd83c56942a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a741f584cf7fb2eab9930bd83c56942a9" kindref="member">EraseFs</ref>();</highlight></codeline>
+<codeline lineno="120" refid="classcertmgr_1adecf32de9b53b1475261f40d37c674d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1adecf32de9b53b1475261f40d37c674d7" kindref="member">ListFs</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>writeTestFile(std::string<sp/>filename);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classcertmgr_1ac03319f16f9c414a1dc9fd98d740dfdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1ac03319f16f9c414a1dc9fd98d740dfdf" kindref="member">BrokerSwitchRequested</ref>();</highlight></codeline>
+<codeline lineno="124" refid="classcertmgr_1a119aab00792ccace8235e70745c29498" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a119aab00792ccace8235e70745c29498" kindref="member">ClearBrokerSwitchRequested</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classcertmgr_1a1cb1bf8f3d38c020dd8a746f1d22cac2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a1cb1bf8f3d38c020dd8a746f1d22cac2" kindref="member">printCert</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pCert);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classcertmgr_1a631d4dc9ec32bdc5f7c41448ed57e5a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a631d4dc9ec32bdc5f7c41448ed57e5a8" kindref="member">shell_switch2jovia</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="131" refid="classcertmgr_1a2f17ee0617cd64756e71d9322036169f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcertmgr_1a2f17ee0617cd64756e71d9322036169f" kindref="member">certmgr</ref>();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="classcertmgr_1a615bad6a4e1bc9bf1a95a261ae5f1bf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a615bad6a4e1bc9bf1a95a261ae5f1bf0" kindref="member">certBuf</ref>[2048];<sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="classcertmgr_1aa606aad2497e77899771c4194c976aca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1aa606aad2497e77899771c4194c976aca" kindref="member">keyBuf</ref>[512];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classcertmgr_1a0432e69b1f1ae879b9e5670d05509b4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">cJSON*<sp/><ref refid="classcertmgr_1a0432e69b1f1ae879b9e5670d05509b4d" kindref="member">root_obj</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="classcertmgr_1af3da6753e4916f328721d324d62af50d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">cJSON*<sp/><ref refid="classcertmgr_1af3da6753e4916f328721d324d62af50d" kindref="member">child</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classcertmgr_1a06e2b34096fd017bc1fece1edb448583" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__st_broker_cfg" kindref="compound">stBrokerCfg</ref><sp/><ref refid="classcertmgr_1a06e2b34096fd017bc1fece1edb448583" kindref="member">brokerCfg</ref>;<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classcertmgr_1a8be16a6a4a8ecfa40776a4c5c1107003" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcertmgr_1a8be16a6a4a8ecfa40776a4c5c1107003" kindref="member">bBrokerSwitchRequested</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//USE_BROKER_SWITCHING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UTIL_CERT_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="util/certmgr.h"/>
+  </compounddef>
+</doxygen>

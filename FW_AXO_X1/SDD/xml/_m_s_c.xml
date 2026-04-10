@@ -1,0 +1,802 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_m_s_c" kind="page">
+    <compoundname>MSC</compoundname>
+    <title>Message Sequence Charts</title>
+    <tableofcontents>
+      <tocsect>
+        <name>Startup Sequence</name>
+        <reference>_m_s_c_1SectionStartup</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Message Sequence Chart Startup Sequence</name>
+        <reference>_m_s_c_1SubSectionStartup</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>Metrics</name>
+        <reference>_m_s_c_1SectionMetrics</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Message Sequence Chart LTE Metrics Collect</name>
+        <reference>_m_s_c_1SubSectionLteMetrics</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Chart Cyclic Metrics</name>
+        <reference>_m_s_c_1SubSectionMetricsTx</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>Measurement</name>
+        <reference>_m_s_c_1SectionMeasurement</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Message Sequence Chart Measurement Wakeup</name>
+        <reference>_m_s_c_1SubSectionMeasWakeup</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Chart Further Measurement</name>
+        <reference>_m_s_c_1SubSectionMeasurement</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>Raw Data Transmission</name>
+        <reference>_m_s_c_1SectionRawData</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Message Sequence Raw Data Transmission</name>
+        <reference>_m_s_c_1SubSectionRawDataTrans</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Raw Data Transmission delayed</name>
+        <reference>_m_s_c_1SubSectionTransDelayed</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Raw Data Transmission, No Entries</name>
+        <reference>_m_s_c_1SubSectionTransNoData</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>Displacement Calculation</name>
+        <reference>_m_s_c_1SectionDisplacement</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Message Sequence Displacement Calculation</name>
+        <reference>_m_s_c_1SubSectionDisplacement</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+      <tocsect>
+        <name>Firmware Update (FOTA)</name>
+        <reference>_m_s_c_1SectionFota</reference>
+    <tableofcontents>
+      <tocsect>
+        <name>Message Sequence Chart Firmware Update</name>
+        <reference>_m_s_c_1SubSectionFotaSuccess</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Chart Firmware Update (FOTA)</name>
+        <reference>_m_s_c_1SubSectionFotaAbort</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Chart Firmware Update (FOTA)</name>
+        <reference>_m_s_c_1SubSectionFotaRetry</reference>
+    </tocsect>
+      <tocsect>
+        <name>Message Sequence Chart Firmware Update</name>
+        <reference>_m_s_c_1SubSectionFotaFailure</reference>
+    </tocsect>
+    </tableofcontents>
+    </tocsect>
+    </tableofcontents>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>In this chapter the interaction between the tasks shall be described. To describe these interaction some typical sequences shall be exemplarily described with the use of message sequence charts, generated with mscgen (see <ulink url="https://www.mcternan.me.uk/mscgen/">https://www.mcternan.me.uk/mscgen/</ulink>).</para>
+<sect1 id="_m_s_c_1SectionStartup">
+<title>Startup Sequence</title>
+<para>On startup boost converter and power manager task are the first tasks started from main function. Initially power manager task send a resume message to boost converter to start battery loading and start the inital LTE start delay timer. On timer expiry power manager send a resume message to LTE connector task and these try to connect to PDN. On success LTE connector task receives PDN_EVENT_ACTIVATED from PDN and inform MQTT Connector task and power manager task that LTE is connected. On receiving the eLteConnected message the MQTT Connector try to connect to MQTT Broker. On success the broker send ConnAck to MQTT Connector which inform power manager by sending eMqttConnected. On receiving the eMqttConnected message the power manager send reset cause and boot count to data manager. The data manager collect all received data in metrics JSON string by calling function metrics.add of the <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> helper class. <linebreak/>
+ Furthermore the power manager request sensor temperature and humidity by sending request message eShtcxReport to <ref refid="class_shtcx" kindref="compound">Shtcx</ref> task, which read the information b calling the functions readTemperature and readHumidity and send it directly to data manager task with the messages eShtcxTemperature and eShtcxHumidity, where both will be added to metrics JSON string by calling function metrics.add of the <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> helper class. <linebreak/>
+ Battery metrics are requested by sending the message eBattReport from power manager task to battery manager task, which send message eAdcReport to <ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task. <ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task retrieve the information by calling function sample() and send it directly to data manager task with massage eAdcData, where it is added to metrics JSON string by calling function metrics.add(). <linebreak/>
+ With message eLteReport from power manager task to data manager task the LTE metrics data will be requested, added to metrics JSON string and send to MQTT broker (see Message Sequence Chart LTE Metrics Collect). After sending message eLteReport the power manager task starts metrics TX intervall timer for the next metrics wakeup / sleep cycle (see Message Sequence Chart Cyclic Metrics Transmission). <simplesect kind="note"><para>For better readability the order of request/response message pairs are described a litte different to reality. In life system, the request messages eShtcxReport, eBattReport and eLteReport will be send directly in series one after the other without waiting for response. In the message sequence chart it is represented as request/response pairs only for a clearer overview.</para>
+</simplesect>
+</para>
+<sect2 id="_m_s_c_1SubSectionStartup">
+<title>Message Sequence Chart Startup Sequence</title>
+<para><msc>
+ SHT [label = &quot;Shtcx&quot;],
+ ADC [label = &quot;ADConverter&quot;],
+ BAT [label = &quot;BattMgr&quot;],
+ TI  [label = &quot;TimerInterrupt&quot;],
+ PM  [label = &quot;PowerMgr&quot;],
+ BO  [label = &quot;BoostConverter&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ PDN [label = &quot;PDN&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ MB  [label = &quot;MqttBroker&quot;],
+ DM  [label = &quot;DataMgr&quot;];
+
+ PM  -&gt;  BO      [label=&quot;eResume&quot;];
+ PM  =&gt;  PM      [label=&quot;Start LTE delay timer&quot;];
+ TI  =&gt;&gt; PM      [label=&quot;LteDelayTimerExpired&quot;];
+ PM  -&gt;  LC      [label=&quot;eResume&quot;];
+ LC  =&gt;  PDN     [label=&quot;Connect&quot;];
+ LC  &lt;=  PDN     [label=&quot;PDN_EVENT_ACTIVATED&quot;];
+ LC  -&gt;  MC      [label=&quot;eLteConnected&quot;];
+ PM  &lt;-  LC      [label=&quot;eLteConnected&quot;];
+ MC  =&gt;  MB      [label=&quot;Connect&quot;];
+ MC  &lt;=  MB      [label=&quot;ConnAck&quot;];
+ PM  &lt;-  MC      [label=&quot;eMqttConnected&quot;];
+ PM  -&gt;  DM      [label=&quot;eResetCause&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ PM  -&gt;  DM      [label=&quot;eBootCnt&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ SHT &lt;-  PM      [label=&quot;eShtcxReport&quot;];
+ SHT =&gt; SHT      [label=&quot;readTemperature()&quot;];
+ SHT =&gt; SHT      [label=&quot;readHumidity()&quot;];
+ SHT -&gt;  DM      [label=&quot;eShtcxTemperature&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ SHT -&gt;  DM      [label=&quot;eShtcxHumidity&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ BAT &lt;-  PM      [label=&quot;eBattReport&quot;];
+ ADC &lt;- BAT      [label=&quot;eAdcReport&quot;];
+ ADC -&gt;  DM      [label=&quot;eAdcData&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ PM  -&gt;  DM      [label=&quot;eLteReport&quot;];
+ PM  =&gt;  PM      [label=&quot;Start Metrics TX Interval timer&quot;];
+ ...;
+ ---             [label = &quot;see Message Sequence Chart LTE Metrics Collect&quot;];
+ ...;
+</msc>
+ <linebreak/>
+ <linebreak/>
+ <hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="_m_s_c_1SectionMetrics">
+<title>Metrics</title>
+<para>The data manager is the responsible task to collect all metrics data. Some data of the metrics must be explicitly requested by the data manager, while others will be send spontaneously by the LTE Monitor class. The following table gives an overview od metrics data. <table rows="12" cols="3"><row>
+<entry thead="yes"><para>Metric </para>
+</entry><entry thead="yes"><para>Description </para>
+</entry><entry thead="yes"><para>Trigger  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eLteLinkQuality  </para>
+</entry><entry thead="no"><para>Message from LTE Monitor task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eLteBattVoltage  </para>
+</entry><entry thead="no"><para>Message from LTE Monitor task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eLteTemperature  </para>
+</entry><entry thead="no"><para>Message from LTE Monitor task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eLtePsmAct  </para>
+</entry><entry thead="no"><para>Message from LTE Monitor task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eResetCause  </para>
+</entry><entry thead="no"><para>Message from power manager task, once per startup  </para>
+</entry><entry thead="no"><para>MQTT connected  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eBootCnt  </para>
+</entry><entry thead="no"><para>Message from power manager task, once per startup  </para>
+</entry><entry thead="no"><para>MQTT connected  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eAdcData  </para>
+</entry><entry thead="no"><para>Message from <ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eShtcxTemperature </para>
+</entry><entry thead="no"><para>Message from shtcx task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eShtcxHumidity  </para>
+</entry><entry thead="no"><para>Message from shtcx task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eLteIMSI  </para>
+</entry><entry thead="no"><para>Message from LTE Monitor task </para>
+</entry><entry thead="no"><para>On Request  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eLteFwVersion  </para>
+</entry><entry thead="no"><para>Function call getFwVersion in <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> finalize function  </para>
+</entry><entry thead="no"><para>At Startup (Fixed value)  </para>
+</entry></row>
+</table>
+</para>
+<sect2 id="_m_s_c_1SubSectionLteMetrics">
+<title>Message Sequence Chart LTE Metrics Collect</title>
+<para>Start of LTE data collection is initiated by power manager task, which requests a LTE report, by sending eLteReport message to data manager task. Data manager forward the message to LTE monitor task, which collect the LTE data by calling the functions psm_read, getIMSI, getBattVoltage and getTemperature. After retrieving all data, it will be copied into messages eLteLinkQuality, eLteIMSI, eLtePsmAct, eLteBattVoltage and eLteTemperature and these messages will be send to data manager task, where the information will be added to metrics JSON string by calling function metrics.add of the <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> helper class. Data Manager task checks if metrics data are complete (see note), finalize the metrics JSON string and send it to MQTT connector task. Afterwards data manager clear the metrics data by calling function reset() of helper class <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref>. MQTT connector task call its publish method, which send the received metrics JSON string with topic /device/<emphasis>DEVICE_ID</emphasis>/metric/update to the MQTT broker. <linebreak/>
+With publish request the LTE modem wake up from sleep mode, PDN send event LTE_LC_EVT_MODEM_SLEEP_EXIT and LTE connector task informs itself, the power manager task and the MQTT connector task with message eLteSleepExit. The power manager send message eResume to boost converter task. It calls function on(), which starts battery loading process by switching pin P0.21 into active state. <simplesect kind="note"><para>The check if metrics data are complete uses the information that LTE temperature is the last requested information. Therefore the function metrics.isComplete() do not check if all metrics information is present, but checks if last requested information is present. </para>
+</simplesect>
+<simplesect kind="attention"><para>Changing the order of requested metrics information can result in lost of metrics data.</para>
+</simplesect>
+<msc>
+ PM  [label = &quot;PowerMgr&quot;],
+ BO  [label = &quot;BoostConverter&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ LM  [label = &quot;LteMonitor&quot;],
+ PDN [label = &quot;PDN&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ MB  [label = &quot;MqttBroker&quot;],
+ DM  [label = &quot;DataMgr&quot;];
+
+ PM  -&gt;  DM      [label=&quot;eLteReport&quot;];
+ LM  &lt;-  DM      [label=&quot;eLteReport&quot;];
+ LM  =&gt;  LM      [label=&quot;psm_read()&quot;];
+ LM  =&gt;  LM      [label=&quot;getIMSI()&quot;];
+ LM  =&gt;  LM      [label=&quot;getBattVoltage()&quot;];
+ LM  =&gt;  LM      [label=&quot;getTemperature()&quot;];
+ LM  -&gt;  DM      [label=&quot;eLteLinkQuality&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ LM  -&gt;  DM      [label=&quot;eLteIMSI&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ LM  -&gt;  DM      [label=&quot;eLtePsmAct&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ LM  -&gt;  DM      [label=&quot;eLteBattVoltage&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ LM  -&gt;  DM      [label=&quot;eLteTemperature&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.finalize()&quot;];
+ MC  &lt;-  DM      [label=&quot;eMetrics&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.reset()&quot;];
+ MC  -&gt;  MB      [label=&quot;publish()&quot;];
+ LC  &lt;=  PDN     [label=&quot;LTE_LC_EVT_MODEM_SLEEP_EXIT&quot;];
+ LC  -&gt;  LC      [label=&quot;eLteSleepExit&quot;];
+ LC  -&gt;  PM      [label=&quot;eLteSleepExit&quot;];
+ LC  -&gt;  MC      [label=&quot;eLteSleepExit&quot;];
+ PM  -&gt;  BO      [label=&quot;eResume&quot;];
+ BO  =&gt;  BO      [label=&quot;on()&quot;];
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionMetricsTx">
+<title>Message Sequence Chart Cyclic Metrics</title>
+<para>Transmission If the metrics TX intervall timer expires, the timer interrupt will wake up the nRF9160 and a timer expired messege will be send to power manager task, which send an eResume message to the boost converter task and starts the boot on timer. The boost converter task calls function on(), which starts battery loading process by switching pin P0.21 into active state. <linebreak/>
+ If boot on timer is expired, timer interrupt send a timer expired message to power manager task, which requests temperature and humidity informations from shtcx task by sending message eShtcxReport. <ref refid="class_shtcx" kindref="compound">Shtcx</ref> task retrieves the information by calling the functions readTemeperature and readHumidity and send it directly to data manager with the messages eShtcxTemeprature and eShtcxHumidity, where this informations are added to metrics JSON string by calling function metrics.add()of the <ref refid="class_metrics_builder" kindref="compound">MetricsBuilder</ref> helper class. <linebreak/>
+Battery metrics are requested by sending the message eBattReport from power manager task to battery manager task, which send message eAdcReport to <ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task. <ref refid="struct_a_d_converter" kindref="compound">ADConverter</ref> task retrieve the information by calling function sample() and send it directly to data manager task with massage eAdcData, where it is added to metrics JSON string by calling function metrics.add(). <linebreak/>
+ With message eLteReport from power manager task to data manager task the LTE metrics data will be requested, added to metrics JSON string and send to MQTT broker (see Message Sequence Chart LTE Metrics Collect). <linebreak/>
+ After sending message eLteReport the power manager task re-starts metrics TX intervall timer for the next metrics wakeup / sleep cycle. <linebreak/>
+ After publishing the metrics, PDN send event LTE_LC_EVT_MODEM_SLEEP_ENTER after a period of inactivity (because requested active time CONFIG_LTE_PSM_REQ_RAT is configured to 1 minute). The LTE connector task informs itself by sending the message eLteSleepEnter from callback function to own mailbox and inform the power manager task and the MQTT connector task also by sending the message eLteSleepEnter. Afterwards the power manager send message eSuspend to boost converter task, which calls the function off() that stops battery loading process by switching pin P0.21 into inactive state. Afterwards LTE is in low power mode and MCU also enters low power mode (if UART is disabled). <simplesect kind="note"><para>For better readability the order of request/response message pairs are described a litte different to reality. In life system, the request messages eShtcxReport, eBattReport and eLteReport will be send directly in series one after the other without waiting for response. In the message sequence chart it is represented as request/response pairs only for a clearer overview.</para>
+</simplesect>
+<msc>
+ ADX [label = &quot;adxl37x&quot;],
+ HWM [label = &quot;HwMetrics&quot;],
+ SHT [label = &quot;Shtcx&quot;],
+ ADC [label = &quot;ADConverter&quot;],
+ BAT [label = &quot;BattMgr&quot;],
+ TI  [label = &quot;TimerInterrupt&quot;],
+ PM  [label = &quot;PowerMgr&quot;],
+ BO  [label = &quot;BoostConverter&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ LM  [label = &quot;LteMonitor&quot;],
+ PDN [label = &quot;PDN&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ MB  [label = &quot;MqttBroker&quot;],
+ DM  [label = &quot;DataMgr&quot;];
+
+ TI  =&gt;&gt; PM      [label=&quot;MetricTxIntervallTimerExpired&quot;];
+ PM  -&gt;  BO      [label=&quot;eResume&quot;];
+ BO  =&gt;  BO      [label=&quot;on()&quot;];
+ PM  =&gt;  PM      [label=&quot;Start Boost On timer&quot;];
+ TI  =&gt;&gt; PM      [label=&quot;BoostOnTimerExpired&quot;];
+ HWM &lt;-  PM      [label=&quot;eHwReport&quot;];
+ ADX &lt;- HWM      [label=&quot;eHwReport&quot;];
+ ADX -&gt; HWM      [label=&quot;eHwStatusAdxl37x&quot;];
+ HWM -&gt;  DM      [label=&quot;eHwMetrics&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ SHT &lt;-  PM      [label=&quot;eShtcxReport&quot;];
+ SHT =&gt; SHT      [label=&quot;readTemperature()&quot;];
+ SHT =&gt; SHT      [label=&quot;readHumidity()&quot;];
+ SHT -&gt;  DM      [label=&quot;eShtcxTemperature&quot;];
+ SHT -&gt;  DM      [label=&quot;eShtcxHumidity&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ BAT &lt;-  PM      [label=&quot;eBattReport&quot;];
+ ADC &lt;- BAT      [label=&quot;eAdcReport&quot;];
+ BAT =&gt; BAT      [label=&quot;sample()&quot;];
+ ADC -&gt;  DM      [label=&quot;eAdcData&quot;];
+ DM  =&gt;  DM      [label=&quot;metrics.add()&quot;];
+ PM  -&gt;  DM      [label=&quot;eLteReport&quot;];
+ PM  =&gt;  PM      [label=&quot;Start Metrics TX Interval timer&quot;];
+ ...;
+ ---             [label = &quot;see Message Sequence Chart LTE Metrics Collect&quot;];
+ ...;
+ LC  &lt;=  PDN     [label=&quot;LTE_LC_EVT_MODEM_SLEEP_ENTER&quot;];
+ LC  -&gt;  LC      [label=&quot;eLteSleepEnter&quot;];
+ LC  -&gt;  PM      [label=&quot;eLteSleepEnter&quot;];
+ LC  -&gt;  MC      [label=&quot;eLteSleepEnter&quot;];
+ PM  -&gt;  BO      [label=&quot;eSuspend&quot;];
+ BO  =&gt;  BO      [label=&quot;off()&quot;];
+</msc>
+ <linebreak/>
+ <linebreak/>
+ <hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="_m_s_c_1SectionMeasurement">
+<title>Measurement</title>
+<sect2 id="_m_s_c_1SubSectionMeasWakeup">
+<title>Message Sequence Chart Measurement Wakeup</title>
+<para>If MCU is in low power mode and trigger activity threshold of accelerometer <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> is exceeded, the MCU wakes up and static sensor trigger callback fifo_handler of class <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> is called, which send message eAdxl37xFifo to its own mailbox. On receiving this message <ref refid="class_adxl_data_store" kindref="compound">AdxlDataStore</ref> task reset the data queue by calling function reset(), so that all older data can be overwritten, wake up FRAM by calling function <ref refid="classspifram_1a551f8dab86180b322717e3cd04b93126" kindref="member">spifram::inst()</ref>-&gt;wakeup(), store raw data in FRAM by calling function store and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task with message eAdxlStorageDone that storage was done and forward message eAdxl37xSensorData to RMS task. <linebreak/>
+ RMS task calculate with the received raw data the RMS x,y and z values, calculate medium and critical hit values and send these values together with a timestamp to RMS store task with message eAdxl37xRmsData by calling function update_rms. RMS store task forward message eAdxl37xRmsData to data manager task, where the x, y and z RMS values will be added to measurement JSON string and hit values will be stored in vectors by calling function measurements.add of the <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> helper class. Power manager task will be informed about MCU wake up with message eAdxl37xWake and the flag idle will be set to false. Furthermore the receive counter rx_cnt will be incremented by one. <linebreak/>
+ On receiving the message eAdxl37xWake the power manger task send a resume message to boost converter to start battery loading and start adxl wakeup to measurement timer. While adxl wakeup to measurement timer is running further measurements can occur, see Message Sequence Chart Further Measurement for details. On adxl wakeup to measurement timer expiry, timer callback function send message eAdxlWakeupTimerExpired to power manager task, which request RMS report by sending message eRmsReport to RMS store task. RMS store task forward the message than to data manager task. <linebreak/>
+ Data Manager task checks if measurement data are complete, finalize the measurement JSON string and send it to MQTT connector task. Afterwards data manager clear the measurement data by calling function reset() of helper class <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref>. MQTT connector task call its publish method, which send the received <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> JSON string with topic /device/DEVICE_ID/measurement/update to the MQTT broker. <linebreak/>
+With publish request the LTE modem wake up from sleep mode, PDN send event LTE_LC_EVT_MODEM_SLEEP_EXIT and LTE connector task informs itself, the power manager task and the MQTT connector task with message eLteSleepExit. The power manager send message eResume to boost converter task. It calls function on(), which starts battery loading process by switching pin P0.21 into active state. <linebreak/>
+ After publishing the measurement, PDN send event LTE_LC_EVT_MODEM_SLEEP_ENTER after a period of inactivity (because requested active time CONFIG_LTE_PSM_REQ_RAT is configured to 1 minute). The LTE connector task informs itself by sending the message eLteSleepEnter from callback function to own mailbox and inform the power manager task and the MQTT connector task also by sending the message eLteSleepEnter. Afterwards the power manager send message eSuspend to boost converter task, which calls the function off() that stops battery loading process by switching pin P0.21 into inactive state. Afterwards LTE is in low power mode and MCU also enters low power mode (if UART is disabled).</para>
+<para><msc>
+ TI  [label = &quot;TimerInterrupt&quot;],
+ ADX [label = &quot;Adxl37x&quot;],
+ ADS [label = &quot;AdxlDataStore&quot;],
+ RMS [label = &quot;RMS&quot;],
+ RS  [label = &quot;RmsStore&quot;],
+ PM  [label = &quot;PowerMgr&quot;],
+ BO  [label = &quot;BoostConverter&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ PDN [label = &quot;PDN&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ MB  [label = &quot;MqttBroker&quot;],
+ DM  [label = &quot;DataMgr&quot;];
+
+ ADX -&gt; ADX      [label=&quot;eAdxl37xFifo&quot;];
+ ADX -&gt; ADS      [label=&quot;eAdxl37xSensorData&quot;];
+ ADS =&gt; ADS      [label=&quot;reset()&quot;];
+ ADS =&gt; ADS      [label=&quot;spifram::inst()-&gt;wakeup()&quot;];
+ ADS =&gt; ADS      [label=&quot;store()&quot;];
+ ADX -&gt; ADS      [label=&quot;eAdxlStorageDone&quot;];
+ ADS -&gt; RMS      [label=&quot;eAdxl37xSensorData&quot;];
+ RMS =&gt; RMS      [label=&quot;update_rms()&quot;];
+ RMS -&gt;  RS      [label=&quot;eAdxl37xRmsData&quot;];
+ RS  -&gt;  DM      [label=&quot;eAdxl37xRmsData&quot;];
+ DM  =&gt;  DM      [label=&quot;measurements.add()&quot;];
+ RMS -&gt;  PM      [label=&quot;eAdxl37xWake&quot;];
+ RMS =&gt; RMS      [label=&quot;idle = false&quot;];
+ RMS =&gt; RMS      [label=&quot;rx_cnt++&quot;];
+ PM  -&gt;  BO      [label=&quot;eResume&quot;];
+ PM  =&gt;  PM      [label=&quot;Start adxl wakeup to measurement timer&quot;];
+ ...;
+ ---             [label = &quot;see Message Sequence Chart Further Measurement&quot;];
+ ...;
+ TI  =&gt;&gt; PM      [label=&quot;AdxlWakeupTimerExpired&quot;];
+ RS  &lt;-  PM      [label=&quot;eRmsReport&quot;];
+ RS  -&gt;  DM      [label=&quot;eRmsReport&quot;];
+ DM  =&gt;  DM      [label=&quot;measurements.finalize()&quot;];
+ MC  &lt;-  DM      [label=&quot;eMeasurements&quot;];
+ DM  =&gt;  DM      [label=&quot;measurements.reset()&quot;];
+ MC  -&gt;  MB      [label=&quot;publish()&quot;];
+ LC  &lt;=  PDN     [label=&quot;LTE_LC_EVT_MODEM_SLEEP_EXIT&quot;];
+ LC  -&gt;  LC      [label=&quot;eLteSleepExit&quot;];
+ LC  -&gt;  PM      [label=&quot;eLteSleepExit&quot;];
+ LC  -&gt;  MC      [label=&quot;eLteSleepExit&quot;];
+ PM  -&gt;  BO      [label=&quot;eResume&quot;];
+ BO  =&gt;  BO      [label=&quot;on()&quot;];
+ ...;
+ ...;
+ ...;
+ LC  &lt;=  PDN     [label=&quot;LTE_LC_EVT_MODEM_SLEEP_ENTER&quot;];
+ LC  -&gt;  LC      [label=&quot;eLteSleepEnter&quot;];
+ LC  -&gt;  PM      [label=&quot;eLteSleepEnter&quot;];
+ LC  -&gt;  MC      [label=&quot;eLteSleepEnter&quot;];
+ PM  -&gt;  BO      [label=&quot;eSuspend&quot;];
+ BO  =&gt;  BO      [label=&quot;off()&quot;];
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionMeasurement">
+<title>Message Sequence Chart Further Measurement</title>
+<para>If trigger activity threshold of accelerometer <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> is exceeded again, static sensor trigger callback fifo_handler of class <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> is called, which send message eAdxl37xFifo to its own mailbox. On receiving this message <ref refid="class_adxl_data_store" kindref="compound">AdxlDataStore</ref> task store the raw data in FRAM by calling function store and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task with message eAdxlStorageDone that storage was done and forward message eAdxl37xSensorData to RMS task. <linebreak/>
+ RMS task calculate with the received raw data the RMS x,y and z values, calculate medium and critical hit values and send these values together with a timestamp to RMS store task with message eAdxl37xRmsData by calling function update_rms. RMS store task forward message eAdxl37xRmsData to data manager task, where the x, y and z RMS values will be added to measurement JSON string and hit values will be stored in vectors by calling function measurements.add of the <ref refid="class_measurement_builder" kindref="compound">MeasurementBuilder</ref> helper class. Power manager task furthermore increments the receive counter rx_cnt by one. <linebreak/>
+ <msc>
+ ADX [label = &quot;Adxl37x&quot;],
+ ADS [label = &quot;AdxlDataStore&quot;],
+ RMS [label = &quot;RMS&quot;],
+ RS  [label = &quot;RmsStore&quot;],
+ DM  [label = &quot;DataMgr&quot;];
+
+ ADX -&gt; ADX      [label=&quot;eAdxl37xFifo&quot;];
+ ADX -&gt; ADS      [label=&quot;eAdxl37xSensorData&quot;];
+ ADS =&gt; ADS      [label=&quot;store()&quot;];
+ ADX -&gt; ADS      [label=&quot;eAdxlStorageDone&quot;];
+ ADS -&gt; RMS      [label=&quot;eAdxl37xSensorData&quot;];
+ RMS =&gt; RMS      [label=&quot;update_rms()&quot;];
+ RMS -&gt;  RS      [label=&quot;eAdxl37xRmsData&quot;];
+ RS  -&gt;  DM      [label=&quot;eAdxl37xRmsData&quot;];
+ DM  =&gt;  DM      [label=&quot;measurements.add()&quot;];
+ RMS =&gt; RMS      [label=&quot;rx_cnt++&quot;];
+</msc>
+ <linebreak/>
+ <linebreak/>
+ <hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="_m_s_c_1SectionRawData">
+<title>Raw Data Transmission</title>
+<para>The raw acceleration data will be transmitted via HTTPS protocol. Transmission uses HTTP POST. See <ref refid="http__connector_8h_1http_connector" kindref="member">http_connector</ref>.</para>
+<sect2 id="_m_s_c_1SubSectionRawDataTrans">
+<title>Message Sequence Raw Data Transmission</title>
+<para>At startup the LTE connection will be established and indicated and the IMEI is read from LTE Monitor task and reported to HTTP connector task. If raw data transfer is enabled in configuration (see <ref refid="config_8h_1Config" kindref="member">Config</ref> header file) and after a train has passed the device the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task indicates with message eAdxlIdleInd that it is in idle state, HTTP connector task starts data transmission by sending eHttpRawDataSend message to its own mailbox and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about active data transfer by sending eRawDataTransferActive. Afterwards HTTP connector task opens a POSIX conform socket stream and establish the HTTPS connection. If connection is established, the HTTP POST Header will be send to remote webserver and the raw data status will be requested from ADXL store task. The received response eRawDataStatus indicating the total number of raw data entries which will be stored internally in HTTP connector task and the Raw Data Header will be constructed with IMEI, timestamp and number of raw data entries and send to webserver in the first frame. Afterwards raw data will be requested from ADXL store task and send to HTTP connector task, which put the raw data into a frame and send it to webserver. This will be continued until all raw data has been transmitted to webserver. After the last frame the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed that data transmission has been completed with message eRawDataTransferComplete. Finally the socket stream will be closed.</para>
+<para><msc>
+ TI  [label = &quot;TimerInterrupt&quot;],
+ ADX [label = &quot;Adxl37x&quot;],
+ ADS [label = &quot;AdxlDataStore&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ LM  [label = &quot;LteMonitor&quot;],
+ HC  [label = &quot;HttpConnector&quot;],
+ JOV [label = &quot;Webserver&quot;];
+
+ LC  -&gt; HC       [label=&quot;eLteConnected&quot;];
+ LM  -&gt; HC       [label=&quot;eLteIMEI&quot;];
+ HC  -&gt; HC       [label=&quot;TRAIN PASSED&quot;];
+ ADS -&gt; HC       [label=&quot;eAdxlIdleInd: Idle=true&quot;];
+ HC  -&gt; HC       [label=&quot;eHttpRawDataSend&quot;];
+ ADX -&gt; HC       [label=&quot;eRawDataTransferActive&quot;];
+ HC  -&gt; HC       [label=&quot;Open Socket&quot;];
+ HC  -&gt; JOV      [label=&quot;HTTP connect&quot;];
+ HC  &lt;- JOV      [label=&quot;http_connected&quot;];
+ HC  -&gt; JOV      [label=&quot;HTTP POST Header&quot;];
+ ADS &lt;- HC       [label=&quot;eRawDataStatus&quot;];
+ ADS -&gt; HC       [label=&quot;eRawDataStatus: entries &gt; 0&quot;];
+ HC -&gt; HC        [label=&quot;Build Raw Data Header&quot;];
+ HC  -&gt; JOV      [label=&quot;1. Frame: Raw Data Header&quot;];
+ ADS &lt;- HC       [label=&quot;eRawData&quot;];
+ ADS -&gt; HC       [label=&quot;eRawData&quot;];
+ HC  -&gt; JOV      [label=&quot;2. Frame: Raw Data&quot;];
+ ...;
+ ADS &lt;- HC       [label=&quot;eRawData&quot;];
+ ADS -&gt; HC       [label=&quot;eRawData&quot;];
+ HC  -&gt; JOV      [label=&quot;Nth. Frame: Raw Data&quot;];
+ HC  -&gt; JOV      [label=&quot;Last Frame: SHA1 checksum&quot;];
+ HC  &lt;- JOV      [label=&quot;HTTP Response&quot;];
+ ADX &lt;- HC       [label=&quot;eRawDataTransferComplete&quot;];
+ HC -&gt; HC        [label=&quot;Close Socket&quot;];
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionTransDelayed">
+<title>Message Sequence Raw Data Transmission delayed</title>
+<para>At startup the LTE connection will be established and indicated and the IMEI is read from LTE Monitor task and reported to HTTP connector task. After receiving the <xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>enable raw data transmission trigger from configuration HTTP connector task send eAdxlIdleReq to the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task. If the returned indication signals Idle = false, the delay timer will be started. After delay timer expiry the idlse status of <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be requested again until the response indicated Idle = true. Thean HTTP connector task starts data transmission by sending eHttpRawDataSend message to its own mailbox and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about active data transfer by sending eRawDataTransferActive. Afterwards HTTP connector task opens a POSSIX conform socket stream and establish the HTTPS connection. See <ref refid="_m_s_c_1SubSectionRawDataTrans" kindref="member">Message Sequence Raw Data Transmission</ref> for further processing.</para>
+</xrefdescription></xrefsect></para>
+<para><msc>
+ TI  [label = &quot;TimerInterrupt&quot;],
+ ADX [label = &quot;Adxl37x&quot;],
+ ADS [label = &quot;AdxlDataStore&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ LM  [label = &quot;LteMonitor&quot;],
+ HC  [label = &quot;HttpConnector&quot;],
+ JOV [label = &quot;Webserver&quot;];
+
+ LC  -&gt; HC       [label=&quot;eLteConnected&quot;];
+ LM  -&gt; HC       [label=&quot;eLteIMEI&quot;];
+ HC  -&gt; HC       [label=&quot;TRAIN PASSED&quot;];
+ HC  -&gt; HC       [label=&quot;eAdxlIdleReq&quot;];
+ ADS &lt;- HC       [label=&quot;eAdxlIdleReq&quot;];
+ ADS -&gt; HC       [label=&quot;eAdxlIdleInd: Idle=false&quot;];
+ HC  -&gt; HC       [label=&quot;Start delay timer&quot;];
+ TI  -&gt; HC       [label=&quot;DelayTimerExpired&quot;];
+ ADS &lt;- HC       [label=&quot;eAdxlIdleReq&quot;];
+ ADS -&gt; HC       [label=&quot;eAdxlIdleInd: Idle=false&quot;];
+ HC  -&gt; HC       [label=&quot;Start delay timer&quot;];
+ TI  -&gt; HC       [label=&quot;DelayTimerExpired&quot;];
+ ...;
+ ADS &lt;- HC       [label=&quot;eAdxlIdleReq&quot;];
+ ADS -&gt; HC       [label=&quot;eAdxlIdleInd: Idle=true&quot;];
+ HC  -&gt; HC       [label=&quot;eHttpRawDataSend&quot;];
+ ADX  -&gt; HC      [label=&quot;eRawDataTransferActive&quot;];
+ HC -&gt; HC        [label=&quot;Open Socket&quot;];
+ HC  -&gt; JOV      [label=&quot;HTTP connect&quot;];
+ ...;
+ ---             [label = &quot;see Message Sequence Chart Raw Data Transmission&quot;];
+ ...;
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionTransNoData">
+<title>Message Sequence Raw Data Transmission, No Entries</title>
+<para>At startup the LTE connection will be established and indicated and the IMEI is read from LTE Monitor task and reported to HTTP connector task. After receiving the <xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>enable raw data transmission trigger from configuration HTTP connector task send eAdxlIdleReq to the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task. If the returned indication signals Idle = true, HTTP connector task starts data transmission by sending eHttpRawDataSend message to its own mailbox and inform <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task about active data transfer by sending eRawDataTransferActive. Afterwards HTTP connector task opens a POSSIX conform socket stream and establish the HTTPS connection. If connection is established, the HTTP POST Header will be send to remote JOVIA webserver and the raw data status will be requested from ADXL store task. The received response eRawDataStatus indicating that total number of raw data entries is 0 and the Raw Data Header will be constructed with IMEI, timestamp and number of raw data entries = 0 and send to JOVIA webserver in the first chunk frame. Afterwards the end of chunk frame will be send and the <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task will be informed that data transmission has been completed with message eRawDataTransferComplete. Finally the socket stream will be closed.</para>
+</xrefdescription></xrefsect></para>
+<para><msc>
+ TI  [label = &quot;TimerInterrupt&quot;],
+ ADX [label = &quot;Adxl37x&quot;],
+ ADS [label = &quot;AdxlDataStore&quot;],
+ LC  [label = &quot;LteConnector&quot;],
+ LM  [label = &quot;LteMonitor&quot;],
+ HC  [label = &quot;HttpConnector&quot;],
+ JOV [label = &quot;Web-Server&quot;];
+
+ LC  -&gt; HC       [label=&quot;eLteConnected&quot;];
+ LM  -&gt; HC       [label=&quot;eLteIMEI&quot;];
+ HC  -&gt; HC       [label=&quot;TRAIN PASSED&quot;];
+ HC  -&gt; HC       [label=&quot;eAdxlIdleReq&quot;];
+ ADS &lt;- HC       [label=&quot;eAdxlIdleReq&quot;];
+ ADS -&gt; HC       [label=&quot;eAdxlIdleInd: Idle=true&quot;];
+ HC  -&gt; HC       [label=&quot;eHttpRawDataSend&quot;];
+ ADX -&gt; HC       [label=&quot;eRawDataTransferActive&quot;];
+ HC  -&gt; HC       [label=&quot;Open Socket&quot;];
+ HC  -&gt; JOV      [label=&quot;HTTP connect&quot;];
+ HC  &lt;- JOV      [label=&quot;http_connected&quot;];
+ HC  -&gt; JOV      [label=&quot;HTTP POST Header&quot;];
+ ADS &lt;- HC       [label=&quot;eRawDataStatus&quot;];
+ ADS -&gt; HC       [label=&quot;eRawDataStatus: entries == 0&quot;];
+ HC -&gt; HC        [label=&quot;Build Raw Data Header&quot;];
+ HC  -&gt; JOV      [label=&quot;1. Frame: Raw Data Header&quot;];
+ HC  &lt;- JOV      [label=&quot;HTTP Response&quot;];
+ ADX &lt;- HC       [label=&quot;eRawDataTransferComplete&quot;];
+ HC -&gt; HC        [label=&quot;Close Socket&quot;];
+</msc>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="_m_s_c_1SectionDisplacement">
+<title>Displacement Calculation</title>
+<para>Calculation of displacement data will be done in separate steps:<itemizedlist>
+<listitem><para>Forward filtering the raw data (FW, FiltFilt Step 1)</para>
+</listitem><listitem><para>Backward filtering the forward filtered data (BW, FiltFilt Step 2)</para>
+</listitem><listitem><para>Integration of backward filtered data to velocity V</para>
+</listitem><listitem><para>Integration of velocity V to displacement data S</para>
+</listitem><listitem><para>Remove linaer trend from displacement data S to displacement data D <linebreak/>
+ <linebreak/>
+ Displacement data D is than the final result of the displacement calculation. To avoid the influence of transient response of the filtering the first and last NUM_FILT_REMOVE (500) entries of velocity V and displacement data S and D will be deleted by setting them to 0. <linebreak/>
+ <linebreak/>
+ <xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>Adapt to MRAM !!!!!! At each step the input data needs to read from FRAM in data packets with less than 1024 bytes. These data packets must be requested by the Displacement <ref refid="class_task" kindref="compound">Task</ref> (<ref refid="class_disp_task" kindref="compound">DispTask</ref>) from ADXL Store <ref refid="class_task" kindref="compound">Task</ref>. The Displacement <ref refid="class_task" kindref="compound">Task</ref> calculates the output data for every data packet and send the calculated output values to the ADXL Store <ref refid="class_task" kindref="compound">Task</ref>, which store it in FRAM. The FRAM is separated into three data blocks, First block is reserved for raw data (x, y, z), the second block is used for forward filtered data and S result values and the last block is used for backward filtered data and final D result values. See section <ref refid="fram_8h_1fram" kindref="member">fram</ref> for details of the FRAM memory layout. <linebreak/>
+ <linebreak/>
+ The calculated displacement data will be transmitted via HTTPS protocol. Transmission uses HTTP POST. See <ref refid="http__connector_8h_1http_connector" kindref="member">http_connector</ref>.</para>
+</xrefdescription></xrefsect></para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="_m_s_c_1SubSectionDisplacement">
+<title>Message Sequence Displacement Calculation</title>
+<para><msc>
+ hscale = &quot;2&quot;;
+
+ ADX [label = &quot;Adxl37x&quot;],
+ ADS [label = &quot;AdxlDataStore&quot;],
+ DP  [label = &quot;DispTask&quot;],
+ HC  [label = &quot;HttpConnector&quot;],
+ JOV [label = &quot;Web-Server&quot;];
+
+ ADX &lt;- HC       [label=&quot;eRawDataTransferComplete&quot;];
+ DP  &lt;- HC       [label=&quot;eCalcDisplacementReq&quot;];
+ HC  -&gt; HC       [label=&quot;Close Socket&quot;];
+ ADS &lt;- DP       [label=&quot;eRawDataStatus&quot;];
+ ADS -&gt; DP       [label=&quot;eRawDataStatus&quot;];
+ ADS &lt;- DP       [label=&quot;eDispFirstEntries&quot;];
+ ADS -&gt; DP       [label=&quot;eDispFirstEntries&quot;];
+ DP  -&gt; DP       [label=&quot;Calc left initial conditions&quot;];
+ DP  -&gt; DP       [label=&quot;FW-Filter left initial conditions (1. Iteration)&quot;];
+ ADS &lt;- DP       [label=&quot;eDispLastEntries&quot;];
+ ADS -&gt; DP       [label=&quot;eDispLastEntries&quot;];
+ DP  -&gt; DP       [label=&quot;Calc right initial conditions&quot;];
+ ADS &lt;- DP       [label=&quot;eRawData&quot;];
+ ADS -&gt; DP       [label=&quot;eRawData&quot;];
+ DP  -&gt; DP       [label=&quot;FW-Filter raw data (2. Iteration)&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreFwFiltResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store FW filtered values in FRAM&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredFwFiltVals&quot;];
+ ...;
+ ADS &lt;- DP       [label=&quot;eRawData&quot;];
+ ADS -&gt; DP       [label=&quot;eRawData&quot;];
+ DP  -&gt; DP       [label=&quot;FW-Filter raw data (N. Iteration)&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreFwFiltResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store FW filtered values reverse in FRAM&quot;];
+ DP  -&gt; DP       [label=&quot;FW-Filter right initial conditions (Last Iteration)&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredFwFiltVals&quot;];
+ DP  -&gt; DP       [label=&quot;Reverse initial conditions left and right&quot;];
+ DP  -&gt; DP       [label=&quot;BW-Filter right initial conditions (1. Iteration)&quot;];
+ ADS &lt;- DP       [label=&quot;eFwFiltData&quot;];
+ ADS -&gt; DP       [label=&quot;eFwFiltData&quot;];
+ DP  -&gt; DP       [label=&quot;BW-Filter FW data (2. Iteration)&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreBwFiltResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store BW filtered values in FRAM&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredBwFiltVals&quot;];
+ ...;
+ ADS &lt;- DP       [label=&quot;eFwFiltData&quot;];
+ ADS -&gt; DP       [label=&quot;eFwFiltData&quot;];
+ DP  -&gt; DP       [label=&quot;BW-Filter FW data (N. Iteration)&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreBwFiltResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store BW filtered values reverse in FRAM&quot;];
+ DP  -&gt; DP       [label=&quot;BW-Filter left initial conditions (Last Iteration)&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredBwFiltVals&quot;];
+ DP  -&gt; DP       [label=&quot;Init displacement calculation&quot;];
+ ADS &lt;- DP       [label=&quot;eBwFiltData&quot;];
+ ADS -&gt; DP       [label=&quot;eBwFiltData&quot;];
+ DP  -&gt; DP       [label=&quot;Integration of BW data to velocity V&quot;];
+ DP  -&gt; DP       [label=&quot;Integration of velocity to displacement S&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreSResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store displacement S values in FRAM&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredSResultVals&quot;];
+ ...;
+ ADS &lt;- DP       [label=&quot;eBwFiltData&quot;];
+ ADS -&gt; DP       [label=&quot;eBwFiltData&quot;];
+ DP  -&gt; DP       [label=&quot;Integration of BW data to velocity V&quot;];
+ DP  -&gt; DP       [label=&quot;Integration of velocity to displacement S&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreSResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store displacement S values in FRAM&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredSResultVals&quot;];
+ DP  -&gt; DP       [label=&quot;Init detrending calculation&quot;];
+ ADS &lt;- DP       [label=&quot;eSResultData&quot;];
+ ADS -&gt; DP       [label=&quot;eSResultData&quot;];
+ DP  -&gt; DP       [label=&quot;Detrending to displacement D&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreDResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store displacement D values in FRAM&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredDResultVals&quot;];
+ ...;
+ ADS &lt;- DP       [label=&quot;eSResultData&quot;];
+ ADS -&gt; DP       [label=&quot;eSResultData&quot;];
+ DP  -&gt; DP       [label=&quot;Detrending to displacement D&quot;];
+ ADS &lt;- DP       [label=&quot;eStoreDResult&quot;];
+ ADS -&gt; ADS      [label=&quot;Store displacement D values in FRAM&quot;];
+ ADS -&gt; DP       [label=&quot;eStoredDResultVals&quot;];
+ DP  -&gt; HC       [label=&quot;eSendDispDataReq&quot;];
+ HC  =&gt; JOV      [label=&quot;HTTP Displacement data transmission&quot;];
+ ...;
+ ---             [label = &quot;analog to raw data transmission, see Message Sequence Chart Raw Data Transmission&quot;];
+ ...;
+</msc>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="_m_s_c_1SectionFota">
+<title>Firmware Update (FOTA)</title>
+<para>For the firmware update process the <ulink url="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/libraries/networking/fota_download.html">firmware over-the-air (FOTA) download library</ulink> is used, which provides functions for downloading a firmware file as an upgrade candidate to the target. The firmware update task implements the interface to the FOTA download library. <linebreak/>
+ The firmware update control task implements the interface to the MQTT connector task and the firmware update task. It provides the state machine to control the different states of the update process (see <ref refid="class_fw_fsm" kindref="compound">FwFsm</ref>). The major part of the update process, like downloading the binary firmware content and storage at desired memory location for later reboot is handled by the FOTA library. The NBT implementation triggers only the start of the update process and react on the responses from the library like success or failure events. Futhermore it triggers the reset in case of update success or retry in case of update failure.</para>
+<sect2 id="_m_s_c_1SubSectionFotaSuccess">
+<title>Message Sequence Chart Firmware Update</title>
+<para>(FOTA) Success On update success CODE2 will be transmitted to MQTT broker, which indicates the success case. Afterwards a reset of the system will be triggered. Swapping the image is part of the boot-loader MCUBoot (see <ref refid="update__ctrl_8h_1update_ctrl" kindref="member">update_ctrl</ref>).</para>
+<para><msc>
+ MB  [label = &quot;MqttBroker&quot;],
+ MBC [label = &quot;MqttBrokerCallback&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ UCT [label = &quot;UpdateControl&quot;],
+ UT  [label = &quot;Update&quot;],
+ OTA [label = &quot;FOTA-DL-Library&quot;];
+
+ UCT -&gt; UCT      [label=&quot;FSM.state=eIdle&quot;];
+ MB  -&gt; MBC      [label=&quot;OTA_START&quot;];
+ MBC -&gt; MC       [label=&quot;eOtaStart&quot;];
+ MC  -&gt; UCT      [label=&quot;eOtaStart&quot;];
+ MC  &lt;- UCT      [label=&quot;eOtaStart&quot;];
+ UCT -&gt; UCT      [label=&quot;Start Trigger Timer&quot;];
+ UCT -&gt; UCT      [label=&quot;FSM.state=eTriggered&quot;];
+ MB  &lt;- MBC      [label=&quot;confirm == OTA_START&quot;];
+ MB  -&gt; MBC      [label=&quot;fw_version&quot;];
+ MBC -&gt; MC       [label=&quot;eFwInfo&quot;];
+ MC  -&gt; UCT      [label=&quot;eFwInfo&quot;];
+ MC  &lt;- UCT      [label=&quot;eFwAccept&quot;];
+ UCT -&gt; UT       [label=&quot;eFwInfo&quot;];
+ UCT -&gt; UCT      [label=&quot;FSM.state=eDownload&quot;];
+ MB  &lt;- MBC      [label=&quot;confirm == EmptyMsg&quot;];
+ UT  -&gt; OTA      [label=&quot;fota_download_set_expected(Size, Checksum)&quot;];
+ UT  -&gt; OTA      [label=&quot;fota_download_start()&quot;];
+ OTA box OTA     [label=&quot;Download and store binary FW data&quot;];
+ UT  &lt;- OTA      [label=&quot;FOTA_DOWNLOAD_EVT_FINISHED&quot;];
+ UCT &lt;- UT       [label=&quot;eFwDlSuccess&quot;];
+ MC  &lt;- UCT      [label=&quot;eFwDlSuccess&quot;];
+ MB  &lt;- MBC      [label=&quot;success == CODE2&quot;];
+ UCT -&gt; UCT      [label=&quot;FSM.state=eReady&quot;];
+ UCT -&gt; UCT      [label=&quot;Start Reboot Timer&quot;];
+ UCT -&gt; UCT      [label=&quot;eTimerExpired&quot;];
+ MB abox OTA     [label=&quot;Reset&quot;];
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionFotaAbort">
+<title>Message Sequence Chart Firmware Update (FOTA)</title>
+<para>Abort In case state machine is in state eTriggered after reception of OTA_START message form MQTT broker and trigger timer expires because of absence of message <ref refid="class_fw_info" kindref="compound">FwInfo</ref>, firmware update process will be aborted and state will be reset to eIdle.</para>
+<para><msc>
+ MB  [label = &quot;MqttBroker&quot;],
+ MBC [label = &quot;MqttBrokerCallback&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ UCT [label = &quot;UpdateControl&quot;],
+ UT  [label = &quot;Update&quot;],
+ OTA [label = &quot;FOTA-DL-Library&quot;];
+
+ UCT -&gt; UCT      [label=&quot;FSM.state=eIdle&quot;];
+ MB  -&gt; MBC      [label=&quot;OTA_START&quot;];
+ MBC -&gt; MC       [label=&quot;eOtaStart&quot;];
+ MC  -&gt; UCT      [label=&quot;eOtaStart&quot;];
+ MC  &lt;- UCT      [label=&quot;eOtaStart&quot;];
+ UCT -&gt; UCT      [label=&quot;Start Trigger Timer&quot;];
+ UCT -&gt; UCT      [label=&quot;eTimerExpired&quot;];
+ UCT -&gt; UCT      [label=&quot;FSM.state=eIdle&quot;];
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionFotaRetry">
+<title>Message Sequence Chart Firmware Update (FOTA)</title>
+<para>Retry In case the firmware update fails, indicated by response FOTA_DOWNLOAD_EVT_ERROR or FOTA_DOWNLOAD_EVT_CANCELLED from FOTA library, the retry counter will be incremented by 1 and the update process will be repeated by calling function fota_download_start of the FOTA library again. In this example the update succeeds after the retry.</para>
+<para><msc>
+ MB  [label = &quot;MqttBroker&quot;],
+ MBC [label = &quot;MqttBrokerCallback&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ UCT [label = &quot;UpdateControl&quot;],
+ UT  [label = &quot;Update&quot;],
+ OTA [label = &quot;FOTA-DL-Library&quot;];
+
+ ...;
+ ---             [label = &quot;see Message Sequence Chart Firmware Update (FOTA)
+Success&quot;];
+ ...;
+ UCT note UCT    [label=&quot;FSM.state = eDownload&quot;];
+ UCT note UCT    [label=&quot;RetryCount &lt; MaxRetries&quot;];
+ UT  -&gt; OTA      [label=&quot;fota_download_start()&quot;];
+ UT  &lt;- OTA      [label=&quot;FOTA_DOWNLOAD_EVT_ERROR&quot;];
+ UCT &lt;- UT       [label=&quot;eFwDlFailed&quot;];
+ UCT -&gt; UCT      [label=&quot;Start Retry Timer&quot;];
+ UCT -&gt; UCT      [label=&quot;RetryCount++&quot;];
+ UCT -&gt; UCT      [label=&quot;eTimerExpired&quot;];
+ UCT -&gt; UT       [label=&quot;eFwDownload&quot;];
+ UT  -&gt; OTA      [label=&quot;fota_download_start()&quot;];
+ OTA box OTA     [label=&quot;Download and store binary FW data&quot;];
+ UT  &lt;- OTA      [label=&quot;FOTA_DOWNLOAD_EVT_FINISHED&quot;];
+ UCT &lt;- UT       [label=&quot;eFwDlSuccess&quot;];
+ MC  &lt;- UCT      [label=&quot;eFwDlSuccess&quot;];
+ MB  &lt;- MBC      [label=&quot;success == CODE2&quot;];
+ UCT -&gt; UCT      [label=&quot;FSM.state=eReady&quot;];
+ UCT -&gt; UCT      [label=&quot;Start Reboot Timer&quot;];
+ UCT -&gt; UCT      [label=&quot;eTimerExpired&quot;];
+ MB abox OTA     [label=&quot;Reset&quot;];
+</msc>
+</para>
+</sect2>
+<sect2 id="_m_s_c_1SubSectionFotaFailure">
+<title>Message Sequence Chart Firmware Update</title>
+<para>(FOTA) Failure On failure and if retry counter has reached the maximun number of retries, the error code will be transmitted to MQTT broker. Possible error codes are:<itemizedlist>
+<listitem><para>CODE3 after receiving FOTA_DOWNLOAD_EVT_ERROR from FOTA library</para>
+</listitem><listitem><para>CODE4 after receiving FOTA_DOWNLOAD_EVT_CANCELLED from FOTA library (wrong size or checksum)</para>
+</listitem></itemizedlist>
+</para>
+<para><msc>
+ MB  [label = &quot;MqttBroker&quot;],
+ MBC [label = &quot;MqttBrokerCallback&quot;],
+ MC  [label = &quot;MqttConnector&quot;],
+ UCT [label = &quot;UpdateControl&quot;],
+ UT  [label = &quot;Update&quot;],
+ OTA [label = &quot;FOTA-DL-Library&quot;];
+
+ ...;
+ ---             [label = &quot;see Message Sequence Chart Firmware Update (FOTA)
+Success&quot;];
+ ...;
+ UCT note UCT    [label=&quot;FSM.state = eDownload&quot;];
+ UCT note UCT    [label=&quot;RetryCount = MaxRetries&quot;];
+ UT  -&gt; OTA      [label=&quot;fota_download_start()&quot;];
+ UT  &lt;- OTA      [label=&quot;FOTA_DOWNLOAD_EVT_ERROR&quot;];
+ UCT &lt;- UT       [label=&quot;eFwDlFailed&quot;];
+ UCT -&gt; UCT      [label=&quot;RetryCount = 0&quot;];
+ MC  &lt;- UCT      [label=&quot;eFwDlFailed&quot;];
+ MB  &lt;- MBC      [label=&quot;error == CODE3&quot;];
+ UCT -&gt; UCT      [label=&quot;FSM.state=eIdle&quot;];
+</msc>
+</para>
+<para><linebreak/>
+ <linebreak/>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="main.h"/>
+  </compounddef>
+</doxygen>

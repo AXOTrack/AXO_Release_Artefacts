@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_hw_metrics" kind="class" language="C++" prot="public">
+    <compoundname>HwMetrics</compoundname>
+    <basecompoundref refid="class_task" prot="public" virt="non-virtual">Task</basecompoundref>
+    <includes refid="hw__metrics_8h" local="no">hw_metrics.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mbox" kindref="compound">Mbox</ref> *</type>
+        <definition>Mbox* pInMbox</definition>
+        <argsstring></argsstring>
+        <name>pInMbox</name>
+        <briefdescription>
+<para>Mailbox of the HW metrics task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="78" column="10" bodyfile="data/hw_metrics.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" compoundref="hw__metrics_8cpp" startline="84" endline="89">HwMetrics</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structhw__metrics" kindref="compound">hw_metrics</ref></type>
+        <definition>struct hw_metrics metrics</definition>
+        <argsstring></argsstring>
+        <name>metrics</name>
+        <briefdescription>
+<para>Structure containing the HW Metrics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="78" column="10" bodyfile="data/hw_metrics.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HandleHwStatusAdxl37x</referencedby>
+        <referencedby refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" compoundref="hw__metrics_8cpp" startline="44" endline="52">report</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">task</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HwMetrics</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>HwMetrics</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para>HW metrics task constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor allocate and register the tasks mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="75" column="14" bodyfile="data/hw_metrics.cpp" bodystart="84" bodyend="89"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501aa843b3f2ac3a19d86c6458d34f9dde8b" compoundref="mbox_8h" startline="90">Mbox::eHwMetrics</references>
+        <references refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" compoundref="hw__metrics_8h" startline="78">pInMbox</references>
+        <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_hw_metrics_1ae61ab46a96f1567e2d70afc4d2f0b36f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~HwMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>~HwMetrics</name>
+        <briefdescription>
+<para>HW metrics task destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="76" column="13" bodyfile="data/hw_metrics.cpp" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void task</definition>
+        <argsstring>(void)</argsstring>
+        <name>task</name>
+        <reimplements refid="class_task_1a1951102653a5e603f2131b33d7636232">task</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The task function directly enter the endless loop and wait for messages. Task wakes up when a message is in the mailbox and read the message by calling mailbox read method which returns the pointer pElem to the message. All expected messages will be handled, in case of an unexpected message an error debug message will be triggered. Finally the message will be released by calling class <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> method free, if the pointer pElem is not explicitly set to 0. <linebreak/>
+ <linebreak/>
+<bold>Message Handling:</bold> <linebreak/>
+<itemizedlist>
+<listitem><para>eHwReport: Request a HW status report. The message will be forwarded to <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task. Pointer to the pool element will be set to 0 to prevent the releasing of the message back to the pool.</para>
+</listitem><listitem><para>eHwStatusAdxl37x: Status indication from <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task. Error counter will be reset to 0, message payload will be translated in HW metrics structure by calling function HandleHwStatusAdxl37x and this structure will be send to data manager task by call of funtion report. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="77" column="18" bodyfile="data/hw_metrics.cpp" bodystart="120" bodyend="152"/>
+        <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501adf216f84add395cce5f0564ed8beda08" compoundref="mbox_8h" startline="75">Mbox::eAdxl37xTask</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf000aa89d3688b0800056b25d85aa1c" compoundref="mpelem_8h" startline="83">eHwReport</references>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7574a17690f3fe5b7db8ff3ad15daea3" compoundref="mpelem_8h" startline="84">eHwStatusAdxl37x</references>
+        <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
+        <references refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HandleHwStatusAdxl37x</references>
+        <references refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" compoundref="hw__metrics_8h" startline="79">metrics</references>
+        <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
+        <references refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" compoundref="hw__metrics_8h" startline="49">hw_metrics::num_errors</references>
+        <references refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" compoundref="hw__metrics_8h" startline="78">pInMbox</references>
+        <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
+        <references refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" compoundref="hw__metrics_8cpp" startline="44" endline="52">report</references>
+        <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
+        <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleHwStatusAdxl37x</definition>
+        <argsstring>(PoolElem *pElem)</argsstring>
+        <name>HandleHwStatusAdxl37x</name>
+        <param>
+          <type><ref refid="class_pool_elem" kindref="compound">PoolElem</ref> *</type>
+          <declname>pElem</declname>
+        </param>
+        <briefdescription>
+<para>Handler function for incoming message eHwStatusAdxl37x. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pElem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer incoming to the message</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Message payload will be extracted and translated in HW metrics structure. In case of an error the error counter within the structure will be incremented by 1,in case of self test ot no error the error counter remains as is. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="82" column="10" bodyfile="data/hw_metrics.cpp" bodystart="64" bodyend="74"/>
+        <references refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8af215c6ea9d04fafde73b2673b72e0f49" compoundref="hw__metrics_8h" startline="43">eHwFailure</references>
+        <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
+        <references refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" compoundref="hw__metrics_8h" startline="50">hw_metrics::hw_status</references>
+        <references refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" compoundref="hw__metrics_8h" startline="79">metrics</references>
+        <references refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" compoundref="hw__metrics_8h" startline="49">hw_metrics::num_errors</references>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void report</definition>
+        <argsstring>()</argsstring>
+        <name>report</name>
+        <briefdescription>
+<para>Function to send a HW metrics message to data manager task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The function request a pointer to the mailbox of data manager task and a message from message pool, set message type to eHwStatusAdxl37x, set <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task as sender, copy the HW metrics structure into payload of the message and send it to data manager&apos;s mailbox. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data/hw_metrics.h" line="83" column="10" bodyfile="data/hw_metrics.cpp" bodystart="44" bodyend="52"/>
+        <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" compoundref="mpelem_8h" startline="85">eHwMetrics</references>
+        <references refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" compoundref="hw__metrics_8h" startline="79">metrics</references>
+        <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">task</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_hw_metrics" kindref="compound">HwMetrics</ref> class derived from task base class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The <ref refid="class_hw_metrics" kindref="compound">HwMetrics</ref> class is responsible to collect status informations from HW modules and to provide them to data manager. It provides a report method to send HW metrics data to data manager task and a method to translate incomming status information from <ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task into HW metrics structure. <bold>Message Interaction:</bold><itemizedlist>
+<listitem><para>Receive<itemizedlist>
+<listitem><para>Power manager task</para>
+</listitem><listitem><para><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Transmit<itemizedlist>
+<listitem><para>Data manager task</para>
+</listitem><listitem><para><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref> task </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="1">
+        <label>HwMetrics</label>
+        <link refid="class_hw_metrics"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12">
+        <label>struct k_msgq</label>
+      </node>
+      <node id="9">
+        <label>Mbox</label>
+        <link refid="class_mbox"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-pQueue</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-myName</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-max_slots</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-mBoxAll</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>uint32_t</label>
+      </node>
+      <node id="6">
+        <label>uint8_t</label>
+      </node>
+      <node id="10">
+        <label>MQueue&lt; PoolElem, max_slots &gt;</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; PoolElem, max_slots &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HwMetrics</label>
+        <link refid="class_hw_metrics"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+metrics</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+pInMbox</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>struct k_thread</label>
+      </node>
+      <node id="8">
+        <label>enum hw_stat</label>
+      </node>
+      <node id="11">
+        <label>MQueue</label>
+        <link refid="class_m_queue"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-my_msgq</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>hw_metrics</label>
+        <link refid="structhw__metrics"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+hw_status</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+num_errors</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>k_tid_t</label>
+      </node>
+      <node id="4">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="data/hw_metrics.h" line="73" column="1" bodyfile="data/hw_metrics.h" bodystart="73" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>HwMetrics</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>create</name></member>
+      <member refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" prot="private" virt="non-virtual"><scope>HwMetrics</scope><name>HandleHwStatusAdxl37x</name></member>
+      <member refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>HwMetrics</name></member>
+      <member refid="class_hw_metrics_1a31b2cd5fcc8ada0626aa10db7d2f14e1" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>metrics</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>HwMetrics</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>HwMetrics</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>HwMetrics</scope><name>operator=</name></member>
+      <member refid="class_hw_metrics_1af2570dd7bace0312470d962f29359fb3" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>pInMbox</name></member>
+      <member refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" prot="private" virt="non-virtual"><scope>HwMetrics</scope><name>report</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>start</name></member>
+      <member refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" virt="virtual"><scope>HwMetrics</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>HwMetrics</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>HwMetrics</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>HwMetrics</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>HwMetrics</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>HwMetrics</scope><name>tid</name></member>
+      <member refid="class_hw_metrics_1ae61ab46a96f1567e2d70afc4d2f0b36f" prot="public" virt="virtual"><scope>HwMetrics</scope><name>~HwMetrics</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>HwMetrics</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<map id="storeSampleData" name="storeSampleData">
+<area shape="rect" id="node1" title="Helper function to store known defined acceleration data in FRAM." alt="" coords="5,56,128,83"/>
+<area shape="rect" id="node2" href="$classspifram.html#a551f8dab86180b322717e3cd04b93126" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="187,5,281,32"/>
+<area shape="rect" id="node3" href="$classspifram.html#a2cadaffd8a4f13814213a48e5b20cc4d" title="Function to wake up FRAM from deep power down mode." alt="" coords="176,56,292,83"/>
+<area shape="rect" id="node8" href="$classspifram.html#a1bd30127afd8f18cff8a7eebbbac532c" title="Function to write multiple bytes into FRAM." alt="" coords="340,107,473,133"/>
+<area shape="rect" id="node4" href="$classspifram.html#a7b6017c27f8b34a91104422c88c4954f" title="Function to wake up FRAM from deep power down mode." alt="" coords="346,56,467,83"/>
+<area shape="rect" id="node5" href="$classspifram.html#a012fd03b5c4e8fb72719e55317c6b1b9" title="Function to read multiple bytes from FRAM." alt="" coords="525,56,656,83"/>
+<area shape="rect" id="node6" href="$classspifram.html#a3f8be5a2578127c3fc0e74e3532f284b" title="Function to write multiple bytes to FRAM." alt="" coords="708,56,844,83"/>
+<area shape="rect" id="node7" href="$classspifram.html#a2b5d6c97c3b1b81c410898f8b4d88dba" title="Function to access FRAM for reading and writing." alt="" coords="892,81,1039,108"/>
+<area shape="rect" id="node9" href="$classspifram.html#a3b8249f30cb998de07e43307c96667f8" title="Function to write multiple bytes to FRAM." alt="" coords="521,107,660,133"/>
+</map>

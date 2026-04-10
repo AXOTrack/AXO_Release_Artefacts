@@ -1,0 +1,1444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mpelem_8h" kind="file" language="C++">
+    <compoundname>mpelem.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">zephyr/arch/cpu.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="hw__metrics_8cpp" local="yes">data/hw_metrics.cpp</includedby>
+    <includedby refid="hw__metrics_8h" local="yes">data/hw_metrics.h</includedby>
+    <includedby refid="measurement_8h" local="yes">data/measurement.h</includedby>
+    <includedby refid="metric_8h" local="yes">data/metric.h</includedby>
+    <includedby refid="rms_8h" local="yes">data/rms.h</includedby>
+    <includedby refid="disptask_8cpp" local="yes">disp/disptask.cpp</includedby>
+    <includedby refid="disptask_8h" local="yes">disp/disptask.h</includedby>
+    <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="power__mgr_8h" local="yes">pm/power_mgr.h</includedby>
+    <includedby refid="power__mgr__x1_8h" local="yes">pm/power_mgr_x1.h</includedby>
+    <includedby refid="mbox_8cpp" local="yes">rtos/mbox.cpp</includedby>
+    <includedby refid="mbox_8h" local="yes">rtos/mbox.h</includedby>
+    <includedby refid="mpelem_8cpp" local="yes">rtos/mpelem.cpp</includedby>
+    <includedby refid="mpool_8cpp" local="yes">rtos/mpool.cpp</includedby>
+    <includedby refid="fsm_8cpp" local="yes">update/fsm.cpp</includedby>
+    <includedby refid="fwinfo_8cpp" local="yes">update/fwinfo.cpp</includedby>
+    <includedby refid="fwinfo_8h" local="yes">update/fwinfo.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>zephyr/kernel.h</label>
+      </node>
+      <node id="3">
+        <label>zephyr/arch/cpu.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="23">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="43">
+        <label>update/update_ctrl.cpp</label>
+        <link refid="update__ctrl_8cpp"/>
+      </node>
+      <node id="34">
+        <label>modem/lte_monitor.h</label>
+        <link refid="lte__monitor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>data/measurement.h</label>
+        <link refid="measurement_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>data/adxl_store.cpp</label>
+        <link refid="adxl__store_8cpp"/>
+      </node>
+      <node id="1">
+        <label>rtos/mpelem.h</label>
+        <link refid="mpelem_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>data/rms.h</label>
+        <link refid="rms_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>drv/spi/adxl37x.h</label>
+        <link refid="adxl37x_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>pm/power_mgr.h</label>
+        <link refid="power__mgr_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>drv/i2c/shtcx.cpp</label>
+        <link refid="shtcx_8cpp"/>
+      </node>
+      <node id="22">
+        <label>drv/pm/boost.h</label>
+        <link refid="boost_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>pm/reset_ctrl.cpp</label>
+        <link refid="reset__ctrl_8cpp"/>
+      </node>
+      <node id="36">
+        <label>net/http_connector.h</label>
+        <link refid="http__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>data/pdata.cpp</label>
+        <link refid="pdata_8cpp"/>
+      </node>
+      <node id="9">
+        <label>data/measurement.cpp</label>
+        <link refid="measurement_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="16">
+        <label>data/pdata.h</label>
+        <link refid="pdata_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>data/hw_metrics.cpp</label>
+        <link refid="hw__metrics_8cpp"/>
+      </node>
+      <node id="37">
+        <label>net/lte_connector.h</label>
+        <link refid="lte__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>update/fwinfo.cpp</label>
+        <link refid="fwinfo_8cpp"/>
+      </node>
+      <node id="11">
+        <label>disp/disptask.cpp</label>
+        <link refid="disptask_8cpp"/>
+      </node>
+      <node id="40">
+        <label>update/fsm.cpp</label>
+        <link refid="fsm_8cpp"/>
+      </node>
+      <node id="17">
+        <label>data/metric.h</label>
+        <link refid="metric_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>net/mqtt_connector.h</label>
+        <link refid="mqtt__connector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>disp/disptask.h</label>
+        <link refid="disptask_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>update/update.cpp</label>
+        <link refid="update_8cpp"/>
+      </node>
+      <node id="29">
+        <label>data/rms_store.cpp</label>
+        <link refid="rms__store_8cpp"/>
+      </node>
+      <node id="27">
+        <label>rtos/mbox.cpp</label>
+        <link refid="mbox_8cpp"/>
+      </node>
+      <node id="26">
+        <label>pm/power_mgr_x1.cpp</label>
+        <link refid="power__mgr__x1_8cpp"/>
+      </node>
+      <node id="28">
+        <label>rtos/mbox.h</label>
+        <link refid="mbox_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>net/http_connector.cpp</label>
+        <link refid="http__connector_8cpp"/>
+      </node>
+      <node id="24">
+        <label>pm/power_mgr.cpp</label>
+        <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="47">
+        <label>update/fwinfo.h</label>
+        <link refid="fwinfo_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="20">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="45">
+        <label>rtos/mpool.cpp</label>
+        <link refid="mpool_8cpp"/>
+      </node>
+      <node id="33">
+        <label>modem/lte_monitor.cpp</label>
+        <link refid="lte__monitor_8cpp"/>
+      </node>
+      <node id="14">
+        <label>drv/spi/adxl37x.cpp</label>
+        <link refid="adxl37x_8cpp"/>
+      </node>
+      <node id="25">
+        <label>pm/power_mgr_x1.h</label>
+        <link refid="power__mgr__x1_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>data/hw_metrics.h</label>
+        <link refid="hw__metrics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>drv/adc/adconverter.cpp</label>
+        <link refid="adconverter_8cpp"/>
+      </node>
+      <node id="8">
+        <label>data/adxl_store.h</label>
+        <link refid="adxl__store_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>rtos/mpelem.cpp</label>
+        <link refid="mpelem_8cpp"/>
+      </node>
+      <node id="42">
+        <label>update/update.h</label>
+        <link refid="update_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>net/lte_connector.cpp</label>
+        <link refid="lte__connector_8cpp"/>
+      </node>
+      <node id="13">
+        <label>data/rms.cpp</label>
+        <link refid="rms_8cpp"/>
+      </node>
+      <node id="31">
+        <label>drv/adc/batt_mgr.cpp</label>
+        <link refid="batt__mgr_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_pool_elem" prot="public">PoolElem</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>msgType</name>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" prot="public">
+          <name>eTimerExpired</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" prot="public">
+          <name>eLteConnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" prot="public">
+          <name>eLteDisconnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" prot="public">
+          <name>eLteLinkQuality</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2eed0a4913bbe04d264158625760ed70" prot="public">
+          <name>eLteTemperature</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9b4ebe21df63da73fd88095d52108213" prot="public">
+          <name>eLteBattVoltage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf9d3717bc9984a4608b9de3054a64f33" prot="public">
+          <name>eLtePsmAct</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba609c475acb8ae87abecdcb90b64734dd" prot="public">
+          <name>eLteIMEI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4fdd614c2d67ec152bd599336e8b59a5" prot="public">
+          <name>eLteIMSI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba952b403a2dbb1541de1754b39dca5a04" prot="public">
+          <name>eLteReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" prot="public">
+          <name>eLteSleepEnter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" prot="public">
+          <name>eLteSleepExit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafc94700321744cf389c08351f616eff9" prot="public">
+          <name>eLteFwVersion</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7e687f39e23a633f7a561c1c2ff124b0" prot="public">
+          <name>eMqttConnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab482e7fc87de88820e0200a98567c9ee" prot="public">
+          <name>eMqttDisconnected</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaaf3f9875b3cd0e9395ec2554a74a11b" prot="public">
+          <name>eIp6Down</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba192b04fdf953dabead21493a648b972b" prot="public">
+          <name>eIp6Up</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad6e9f2d231aae9820c265b75a1608e5c" prot="public">
+          <name>eShtcxReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" prot="public">
+          <name>eShtcxTemperature</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba153fbb27bae81bd546a1bbde27a299e6" prot="public">
+          <name>eShtcxHumidity</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6c96e50e0d4c7d15c8ca7bca261619f9" prot="public">
+          <name>eAdxl37xSensorData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" prot="public">
+          <name>eAdxl37xRmsData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baad8b6a0baa8706bbf7a3b8f3c9894c07" prot="public">
+          <name>eAdxl37xFifo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75f6477e8cb8aa5c80928dced69e2604" prot="public">
+          <name>eAdxl37xWake</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" prot="public">
+          <name>eAdxl37xIdle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae890e8709ff152ee0e8a42ffa05fb3" prot="public">
+          <name>eAdxlStorageDone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba15e5da10533457b4ca2dc1b2b7657558" prot="public">
+          <name>eAdxlStorageFull</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" prot="public">
+          <name>eAdxlStorageDumpAll</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badb934a664e2ca788aa0f543f074d0405" prot="public">
+          <name>eAdxlStorageDumpBytes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac2303c98875f80b712d76f5e237376a5" prot="public">
+          <name>eAdxlStorageDumpFilt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba37283fdecbb08dd5ec95b153ec9a44e8" prot="public">
+          <name>eAdxlStorageDumpDisp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2247935a30918f21b3f38a4492ead331" prot="public">
+          <name>eAdxlStorageDumpActive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba238e60a970da50cfd36bc03c400b3136" prot="public">
+          <name>eAdxlStorageDumpComplete</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" prot="public">
+          <name>eAdxlResumeMeas</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" prot="public">
+          <name>eMaxXYZ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac7777da7eda4a8153f23a66a4b84e862" prot="public">
+          <name>eMeasurements</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba32261b0fb4efd2d532c0bb01118bc55c" prot="public">
+          <name>eMetrics</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad4ef29e7a0860842e82f4a3fdf7374f3" prot="public">
+          <name>eKernelMetrics</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf000aa89d3688b0800056b25d85aa1c" prot="public">
+          <name>eHwReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7574a17690f3fe5b7db8ff3ad15daea3" prot="public">
+          <name>eHwStatusAdxl37x</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" prot="public">
+          <name>eHwMetrics</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" prot="public">
+          <name>eAdcData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab83cc43ee844556d517f438a56f05c75" prot="public">
+          <name>eAdcReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20" prot="public">
+          <name>eSuspend</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" prot="public">
+          <name>eResume</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad9783fee6aee682fa2420ffc814e5a85" prot="public">
+          <name>eOtaStart</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba610ec2ca9795e5eea96a9ffff8a2d380" prot="public">
+          <name>eCmdAccept</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0697f52c0c0caddf771b3593f549d5ff" prot="public">
+          <name>eCmdReject</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9aa86bbca6ce7edca5e556bb270a4956" prot="public">
+          <name>eFwAccept</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba949bec31dc8aea08998db4d55faaebcf" prot="public">
+          <name>eFwReject</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf0f41fc324f07c49083014e0df2ad9c1" prot="public">
+          <name>eFwDlSuccess</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" prot="public">
+          <name>eFwDlFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba82c20ffc9867aa5fced24331aa471d69" prot="public">
+          <name>eFwInfo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2403b4f87e6b8309416a7fee507c3980" prot="public">
+          <name>eFwDownload</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8de8fcdbbc04723219977f9db4e7b148" prot="public">
+          <name>eFwUpdateActive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac5e5587e5c6d28d06a40c2879f93b5b3" prot="public">
+          <name>eMetricsTxTimerExpired</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5d2c6bce1214af92e814a4aeb69d2637" prot="public">
+          <name>eBoostCtrlTimerExpired</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83962a046b00d58c93be14eb54df546e" prot="public">
+          <name>eLteStartDelayTimerExpired</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba386949f0f8e4c5a5002c759f42cf7bff" prot="public">
+          <name>eAdxlWakeupTimerExpired</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa9d7bd6e7db2ec4192ba05845f0a01c3" prot="public">
+          <name>eResetCause</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" prot="public">
+          <name>eBootCnt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf4a52d9583b230adc681e4c4ff67afc" prot="public">
+          <name>eBattReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f2350e47b38b05b74e3b66e4ba1353d" prot="public">
+          <name>eRmsReport</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5b782a4f6d9db6713ed0ecda008b3ab1" prot="public">
+          <name>eAdxlIdleReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babfad04084144b87c9464b3e580c4a888" prot="public">
+          <name>eAdxlIdleInd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae9e298a8b9c135b153848a881a955f" prot="public">
+          <name>eHttpRawDataSend</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" prot="public">
+          <name>eRawDataStatus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" prot="public">
+          <name>eRawData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bae87083b8fd43695fd38ea5b3aca4d36c" prot="public">
+          <name>eRawDataTransferActive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0c71a33223239f11e7358b21e47cd29b" prot="public">
+          <name>eRawDataTransferComplete</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba23e4f4cebb6fa13b5b0a6cbf09a47fd3" prot="public">
+          <name>eJsonConfig</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" prot="public">
+          <name>eCalcDisplacementReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d878bf9348bb885285cd00125e1ca74" prot="public">
+          <name>eDispFirstEntries</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" prot="public">
+          <name>eDispLastEntries</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" prot="public">
+          <name>eStoreFwFiltResult</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaa84aa9145613b6efdbf2139143f4213" prot="public">
+          <name>eStoreBwFiltResult</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baccdc9c832cc181c083b566337e394790" prot="public">
+          <name>eStoreSResult</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba69e4a9e9ae9e9bb4b6980eb4c648b2c2" prot="public">
+          <name>eStoreDResult</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf1ea70db78d653be0b303037e01fc4a7" prot="public">
+          <name>eStoredFwFiltVals</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba52bba38ceb62448a4983f35eb873a57a" prot="public">
+          <name>eStoredBwFiltVals</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8840b77f10e3e2dbd4f66ffa80c1d213" prot="public">
+          <name>eStoredSResultVals</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba00dcdef23c04769526c3e0af0763624d" prot="public">
+          <name>eStoredDResultVals</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba74b82d96e16916581d8ad268537d8f17" prot="public">
+          <name>eFwFiltData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab4bb21bd52e29672e189c8db71bee8b5" prot="public">
+          <name>eBwFiltData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babe6992742a3e82d908ff3a3c9ece320b" prot="public">
+          <name>eSResultData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83f7d57b3b395aaa7b7acb538e944791" prot="public">
+          <name>eSendDispDataReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf77177af3680b79b15f94ef3dd79e8d8" prot="public">
+          <name>eDispData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafd26510aa99099eef8fda8ffd83316ce" prot="public">
+          <name>eDispDataTransferActive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2479caa0e1adc5aa62cb054ec30b516a" prot="public">
+          <name>eDispDataTransferComplete</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" prot="public">
+          <name>eDispStatistics</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa8417479d61dab4584c62a86300d1b36" prot="public">
+          <name>eTimestamp</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1a234154bcc7f8fa2baa38586e61fa8e" prot="public">
+          <name>eKeyTransferReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba73a2b25cd72904b1c8eb2f4422b36e2c" prot="public">
+          <name>eFactoryDefault</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72163c826ae1faf0fa1b791ed5bffe27" prot="public">
+          <name>eColdStartReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" prot="public">
+          <name>eBoostOnReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" prot="public">
+          <name>eBoostOffReq</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f29a8e4f2831359d035f6c7b2ffc86a" prot="public">
+          <name>eConnectJovia</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba669b57bf8c5270aab522f5a533c4cb33" prot="public">
+          <name>eConnectThingsboard</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5ee4ee822dd89d4325d82f5746e3f8cd" prot="public">
+          <name>eCertJovia1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba41e2d37c9020f8b6cf7884c31629c089" prot="public">
+          <name>eCertJovia2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba02fcf108a94193302a69c82f30a00da9" prot="public">
+          <name>eCertJoviaKey</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad168db78cef45d3df5127589cf7b7685" prot="public">
+          <name>eCertThingsboard1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1774afaa0ef44e596feeb749ec98ba7d" prot="public">
+          <name>eCertThingsboard2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab76d9533db3ea1a7794c10db2133a766" prot="public">
+          <name>eCertThingsboardKey</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f8bb1a27759f0bcf30cade44829fab8" prot="public">
+          <name>eFsErase</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba043d2500ec9e418151a7e04907c38fef" prot="public">
+          <name>eFsStatus</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba3c78cce2e74b855cd1b47e7d50e6f583" prot="public">
+          <name>eDisableADXL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba28584cc9837accc43a9a9e41490a6326" prot="public">
+          <name>eEnableADXL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba314199f829f2c275a49f84950ddd16ba" prot="public">
+          <name>eGetConfig</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badd4210d46b388589e9ca03a864f6a415" prot="public">
+          <name>eOneDayTimerExpired</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba265b3a989264b978d44a0263823b119a" prot="public">
+          <name>eMsgMax</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of all message types used in the system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/mpelem.h" line="38" column="1" bodyfile="rtos/mpelem.h" bodystart="38" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> class for message support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="mpelem_8h_1mpelem"/> <simplesect kind="par"><title>Detailed Description </title><para>Messages handled by <ref refid="class_mbox" kindref="compound">Mbox</ref> objects are of type <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>. The <ref refid="class_pool_elem" kindref="compound">PoolElem</ref> has the following properties:<itemizedlist>
+<listitem><para>The ID of the sending task</para>
+</listitem><listitem><para>The message type</para>
+</listitem><listitem><para>A pointer to an optional message content/buffer</para>
+</listitem><listitem><para>A pointer to the message pool that allocated the message object For messages indicating a simple event (e.g. &quot;LTE connected&quot;) the message type itself may be sufficient to convey this information. Some messages may have larger content, e.g. strings or structs. These are copied into the buffer member of the <ref refid="class_pool_elem" kindref="compound">PoolElem</ref>.</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MPELEM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MPELEM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/arch/cpu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" kindref="member">eTimerExpired</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="40" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf99a804e92e4132564114db9c18e02aa" kindref="member">eLteConnected</ref>,</highlight></codeline>
+<codeline lineno="41" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baacc999ef6624f93e5d1f40ae84751c97" kindref="member">eLteDisconnected</ref>,</highlight></codeline>
+<codeline lineno="42" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf60b357ec5a55dd2d1a2006ffefcbf2a" kindref="member">eLteLinkQuality</ref>,</highlight></codeline>
+<codeline lineno="43" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2eed0a4913bbe04d264158625760ed70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2eed0a4913bbe04d264158625760ed70" kindref="member">eLteTemperature</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9b4ebe21df63da73fd88095d52108213" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9b4ebe21df63da73fd88095d52108213" kindref="member">eLteBattVoltage</ref>,</highlight></codeline>
+<codeline lineno="45" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf9d3717bc9984a4608b9de3054a64f33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf9d3717bc9984a4608b9de3054a64f33" kindref="member">eLtePsmAct</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>PSM<sp/>tau<sp/>period<sp/>+<sp/>active<sp/>time<sp/>granted<sp/>by<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba609c475acb8ae87abecdcb90b64734dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba609c475acb8ae87abecdcb90b64734dd" kindref="member">eLteIMEI</ref>,</highlight></codeline>
+<codeline lineno="47" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4fdd614c2d67ec152bd599336e8b59a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4fdd614c2d67ec152bd599336e8b59a5" kindref="member">eLteIMSI</ref>,</highlight></codeline>
+<codeline lineno="48" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba952b403a2dbb1541de1754b39dca5a04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba952b403a2dbb1541de1754b39dca5a04" kindref="member">eLteReport</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6b4bbee6e33864c3c73bc02d06065fee" kindref="member">eLteSleepEnter</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>modem<sp/>entered<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baae7fe106d4c59bdac50a79c7c3e7c7ca" kindref="member">eLteSleepExit</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>modem<sp/>exited<sp/>sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafc94700321744cf389c08351f616eff9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafc94700321744cf389c08351f616eff9" kindref="member">eLteFwVersion</ref>,</highlight></codeline>
+<codeline lineno="52" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7e687f39e23a633f7a561c1c2ff124b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7e687f39e23a633f7a561c1c2ff124b0" kindref="member">eMqttConnected</ref>,</highlight></codeline>
+<codeline lineno="53" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab482e7fc87de88820e0200a98567c9ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab482e7fc87de88820e0200a98567c9ee" kindref="member">eMqttDisconnected</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaaf3f9875b3cd0e9395ec2554a74a11b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaaf3f9875b3cd0e9395ec2554a74a11b" kindref="member">eIp6Down</ref>,</highlight></codeline>
+<codeline lineno="55" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba192b04fdf953dabead21493a648b972b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba192b04fdf953dabead21493a648b972b" kindref="member">eIp6Up</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//eSi75xSensorData,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//eShtcxSensorData,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad6e9f2d231aae9820c265b75a1608e5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad6e9f2d231aae9820c265b75a1608e5c" kindref="member">eShtcxReport</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>temperature<sp/>+<sp/>humidity<sp/>report</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" kindref="member">eShtcxTemperature</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>message<sp/>contains<sp/>temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba153fbb27bae81bd546a1bbde27a299e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba153fbb27bae81bd546a1bbde27a299e6" kindref="member">eShtcxHumidity</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>20<sp/><sp/>message<sp/>contains<sp/>humidity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6c96e50e0d4c7d15c8ca7bca261619f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6c96e50e0d4c7d15c8ca7bca261619f9" kindref="member">eAdxl37xSensorData</ref>,</highlight></codeline>
+<codeline lineno="62" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" kindref="member">eAdxl37xRmsData</ref>,</highlight></codeline>
+<codeline lineno="63" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baad8b6a0baa8706bbf7a3b8f3c9894c07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baad8b6a0baa8706bbf7a3b8f3c9894c07" kindref="member">eAdxl37xFifo</ref>,</highlight></codeline>
+<codeline lineno="64" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75f6477e8cb8aa5c80928dced69e2604" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75f6477e8cb8aa5c80928dced69e2604" kindref="member">eAdxl37xWake</ref>,</highlight></codeline>
+<codeline lineno="65" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba6405b3288ce87f44350f5c986b74f53f" kindref="member">eAdxl37xIdle</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae890e8709ff152ee0e8a42ffa05fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae890e8709ff152ee0e8a42ffa05fb3" kindref="member">eAdxlStorageDone</ref>,</highlight></codeline>
+<codeline lineno="67" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba15e5da10533457b4ca2dc1b2b7657558" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba15e5da10533457b4ca2dc1b2b7657558" kindref="member">eAdxlStorageFull</ref>,</highlight></codeline>
+<codeline lineno="68" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba87f230a6d6c74d11c982e468c0b23356" kindref="member">eAdxlStorageDumpAll</ref>,</highlight></codeline>
+<codeline lineno="69" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badb934a664e2ca788aa0f543f074d0405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badb934a664e2ca788aa0f543f074d0405" kindref="member">eAdxlStorageDumpBytes</ref>,</highlight></codeline>
+<codeline lineno="70" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac2303c98875f80b712d76f5e237376a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac2303c98875f80b712d76f5e237376a5" kindref="member">eAdxlStorageDumpFilt</ref>,<sp/><sp/></highlight><highlight class="comment">//30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba37283fdecbb08dd5ec95b153ec9a44e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba37283fdecbb08dd5ec95b153ec9a44e8" kindref="member">eAdxlStorageDumpDisp</ref>,</highlight></codeline>
+<codeline lineno="72" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2247935a30918f21b3f38a4492ead331" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2247935a30918f21b3f38a4492ead331" kindref="member">eAdxlStorageDumpActive</ref>,</highlight></codeline>
+<codeline lineno="73" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba238e60a970da50cfd36bc03c400b3136" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba238e60a970da50cfd36bc03c400b3136" kindref="member">eAdxlStorageDumpComplete</ref>,</highlight></codeline>
+<codeline lineno="74" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba390ae2204e5e6f1d1d1bf8deefa91b9f" kindref="member">eAdxlResumeMeas</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//eBme68xSensorTemperature,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//eBme68xSensorHumidity,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//eBme68xSensorPressure,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//eBme68xSensorGasRes,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac97fbd11bfa7e3424d9c3ce98f918bf5" kindref="member">eMaxXYZ</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac7777da7eda4a8153f23a66a4b84e862" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac7777da7eda4a8153f23a66a4b84e862" kindref="member">eMeasurements</ref>,</highlight></codeline>
+<codeline lineno="81" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba32261b0fb4efd2d532c0bb01118bc55c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba32261b0fb4efd2d532c0bb01118bc55c" kindref="member">eMetrics</ref>,</highlight></codeline>
+<codeline lineno="82" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad4ef29e7a0860842e82f4a3fdf7374f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad4ef29e7a0860842e82f4a3fdf7374f3" kindref="member">eKernelMetrics</ref>,</highlight></codeline>
+<codeline lineno="83" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf000aa89d3688b0800056b25d85aa1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf000aa89d3688b0800056b25d85aa1c" kindref="member">eHwReport</ref>,</highlight></codeline>
+<codeline lineno="84" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7574a17690f3fe5b7db8ff3ad15daea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7574a17690f3fe5b7db8ff3ad15daea3" kindref="member">eHwStatusAdxl37x</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" kindref="member">eHwMetrics</ref>,</highlight></codeline>
+<codeline lineno="86" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" kindref="member">eAdcData</ref>,</highlight></codeline>
+<codeline lineno="87" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab83cc43ee844556d517f438a56f05c75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab83cc43ee844556d517f438a56f05c75" kindref="member">eAdcReport</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>sample<sp/>of<sp/>channels<sp/>in<sp/>parameter<sp/>p1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20" kindref="member">eSuspend</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>a<sp/>task<sp/>to<sp/>enter<sp/>low<sp/>power/sleep<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f" kindref="member">eResume</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>45<sp/><sp/>notify<sp/>a<sp/>task<sp/>to<sp/>wakeup<sp/>and<sp/>resume<sp/>it&apos;s<sp/>work</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad9783fee6aee682fa2420ffc814e5a85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad9783fee6aee682fa2420ffc814e5a85" kindref="member">eOtaStart</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>platform<sp/>sent<sp/>{&quot;cmd&quot;:<sp/>&quot;OTA_START&quot;}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba610ec2ca9795e5eea96a9ffff8a2d380" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba610ec2ca9795e5eea96a9ffff8a2d380" kindref="member">eCmdAccept</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>command<sp/>accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0697f52c0c0caddf771b3593f549d5ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0697f52c0c0caddf771b3593f549d5ff" kindref="member">eCmdReject</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>command<sp/>rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9aa86bbca6ce7edca5e556bb270a4956" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba9aa86bbca6ce7edca5e556bb270a4956" kindref="member">eFwAccept</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>new<sp/>firmware<sp/>accepted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba949bec31dc8aea08998db4d55faaebcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba949bec31dc8aea08998db4d55faaebcf" kindref="member">eFwReject</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>50<sp/><sp/><sp/>notify<sp/>platform<sp/>on<sp/>new<sp/>firmware<sp/>rejected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf0f41fc324f07c49083014e0df2ad9c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf0f41fc324f07c49083014e0df2ad9c1" kindref="member">eFwDlSuccess</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>firmware<sp/>download<sp/>succeded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf4856a09877313ab1f09e055f3b4472e" kindref="member">eFwDlFailed</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>notify<sp/>platform<sp/>on<sp/>firmware<sp/>download<sp/>failed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba82c20ffc9867aa5fced24331aa471d69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba82c20ffc9867aa5fced24331aa471d69" kindref="member">eFwInfo</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>JSON:<sp/>url,<sp/>version,<sp/>size,<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2403b4f87e6b8309416a7fee507c3980" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2403b4f87e6b8309416a7fee507c3980" kindref="member">eFwDownload</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>retry<sp/>firmware<sp/>download<sp/>on<sp/>previous<sp/>failure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8de8fcdbbc04723219977f9db4e7b148" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8de8fcdbbc04723219977f9db4e7b148" kindref="member">eFwUpdateActive</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>55<sp/><sp/><sp/>indicates,<sp/>that<sp/>OTA<sp/>update<sp/>is<sp/>active<sp/>to<sp/>disable<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac5e5587e5c6d28d06a40c2879f93b5b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bac5e5587e5c6d28d06a40c2879f93b5b3" kindref="member">eMetricsTxTimerExpired</ref>,</highlight></codeline>
+<codeline lineno="102" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5d2c6bce1214af92e814a4aeb69d2637" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5d2c6bce1214af92e814a4aeb69d2637" kindref="member">eBoostCtrlTimerExpired</ref>,</highlight></codeline>
+<codeline lineno="103" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83962a046b00d58c93be14eb54df546e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83962a046b00d58c93be14eb54df546e" kindref="member">eLteStartDelayTimerExpired</ref>,</highlight></codeline>
+<codeline lineno="104" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba386949f0f8e4c5a5002c759f42cf7bff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba386949f0f8e4c5a5002c759f42cf7bff" kindref="member">eAdxlWakeupTimerExpired</ref>,</highlight></codeline>
+<codeline lineno="105" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa9d7bd6e7db2ec4192ba05845f0a01c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa9d7bd6e7db2ec4192ba05845f0a01c3" kindref="member">eResetCause</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>60<sp/><sp/><sp/><sp/><sp/>reset<sp/>cause</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" kindref="member">eBootCnt</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>boot<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf4a52d9583b230adc681e4c4ff67afc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badf4a52d9583b230adc681e4c4ff67afc" kindref="member">eBattReport</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>battery<sp/>report</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f2350e47b38b05b74e3b66e4ba1353d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f2350e47b38b05b74e3b66e4ba1353d" kindref="member">eRmsReport</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>request<sp/>rms<sp/>+<sp/>hit<sp/>count<sp/>report</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5b782a4f6d9db6713ed0ecda008b3ab1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5b782a4f6d9db6713ed0ecda008b3ab1" kindref="member">eAdxlIdleReq</ref>,</highlight></codeline>
+<codeline lineno="110" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babfad04084144b87c9464b3e580c4a888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babfad04084144b87c9464b3e580c4a888" kindref="member">eAdxlIdleInd</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>65</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae9e298a8b9c135b153848a881a955f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babae9e298a8b9c135b153848a881a955f" kindref="member">eHttpRawDataSend</ref>,</highlight></codeline>
+<codeline lineno="112" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0e4d44172f8a752e078a0f381876ccdf" kindref="member">eRawDataStatus</ref>,</highlight></codeline>
+<codeline lineno="113" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0ef14e9d4bc00c9571d5b558b831455d" kindref="member">eRawData</ref>,</highlight></codeline>
+<codeline lineno="114" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bae87083b8fd43695fd38ea5b3aca4d36c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bae87083b8fd43695fd38ea5b3aca4d36c" kindref="member">eRawDataTransferActive</ref>,</highlight></codeline>
+<codeline lineno="115" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0c71a33223239f11e7358b21e47cd29b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba0c71a33223239f11e7358b21e47cd29b" kindref="member">eRawDataTransferComplete</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>70</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba23e4f4cebb6fa13b5b0a6cbf09a47fd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba23e4f4cebb6fa13b5b0a6cbf09a47fd3" kindref="member">eJsonConfig</ref>,</highlight></codeline>
+<codeline lineno="117" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba75b4fad581a164c0a4afe25f2b182d6e" kindref="member">eCalcDisplacementReq</ref>,</highlight></codeline>
+<codeline lineno="118" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d878bf9348bb885285cd00125e1ca74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d878bf9348bb885285cd00125e1ca74" kindref="member">eDispFirstEntries</ref>,</highlight></codeline>
+<codeline lineno="119" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" kindref="member">eDispLastEntries</ref>,</highlight></codeline>
+<codeline lineno="120" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" kindref="member">eStoreFwFiltResult</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>75</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaa84aa9145613b6efdbf2139143f4213" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baaa84aa9145613b6efdbf2139143f4213" kindref="member">eStoreBwFiltResult</ref>,</highlight></codeline>
+<codeline lineno="122" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baccdc9c832cc181c083b566337e394790" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baccdc9c832cc181c083b566337e394790" kindref="member">eStoreSResult</ref>,</highlight></codeline>
+<codeline lineno="123" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba69e4a9e9ae9e9bb4b6980eb4c648b2c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba69e4a9e9ae9e9bb4b6980eb4c648b2c2" kindref="member">eStoreDResult</ref>,</highlight></codeline>
+<codeline lineno="124" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf1ea70db78d653be0b303037e01fc4a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf1ea70db78d653be0b303037e01fc4a7" kindref="member">eStoredFwFiltVals</ref>,</highlight></codeline>
+<codeline lineno="125" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba52bba38ceb62448a4983f35eb873a57a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba52bba38ceb62448a4983f35eb873a57a" kindref="member">eStoredBwFiltVals</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8840b77f10e3e2dbd4f66ffa80c1d213" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba8840b77f10e3e2dbd4f66ffa80c1d213" kindref="member">eStoredSResultVals</ref>,</highlight></codeline>
+<codeline lineno="127" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba00dcdef23c04769526c3e0af0763624d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba00dcdef23c04769526c3e0af0763624d" kindref="member">eStoredDResultVals</ref>,</highlight></codeline>
+<codeline lineno="128" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba74b82d96e16916581d8ad268537d8f17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba74b82d96e16916581d8ad268537d8f17" kindref="member">eFwFiltData</ref>,</highlight></codeline>
+<codeline lineno="129" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab4bb21bd52e29672e189c8db71bee8b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab4bb21bd52e29672e189c8db71bee8b5" kindref="member">eBwFiltData</ref>,</highlight></codeline>
+<codeline lineno="130" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babe6992742a3e82d908ff3a3c9ece320b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0babe6992742a3e82d908ff3a3c9ece320b" kindref="member">eSResultData</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>85</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83f7d57b3b395aaa7b7acb538e944791" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba83f7d57b3b395aaa7b7acb538e944791" kindref="member">eSendDispDataReq</ref>,</highlight></codeline>
+<codeline lineno="132" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf77177af3680b79b15f94ef3dd79e8d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baf77177af3680b79b15f94ef3dd79e8d8" kindref="member">eDispData</ref>,</highlight></codeline>
+<codeline lineno="133" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafd26510aa99099eef8fda8ffd83316ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafd26510aa99099eef8fda8ffd83316ce" kindref="member">eDispDataTransferActive</ref>,</highlight></codeline>
+<codeline lineno="134" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2479caa0e1adc5aa62cb054ec30b516a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba2479caa0e1adc5aa62cb054ec30b516a" kindref="member">eDispDataTransferComplete</ref>,</highlight></codeline>
+<codeline lineno="135" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba98f4dfbf6a6dc404a091d5af0cd0fd69" kindref="member">eDispStatistics</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>90</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa8417479d61dab4584c62a86300d1b36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa8417479d61dab4584c62a86300d1b36" kindref="member">eTimestamp</ref>,</highlight></codeline>
+<codeline lineno="137" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1a234154bcc7f8fa2baa38586e61fa8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1a234154bcc7f8fa2baa38586e61fa8e" kindref="member">eKeyTransferReq</ref>,</highlight></codeline>
+<codeline lineno="138" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba73a2b25cd72904b1c8eb2f4422b36e2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba73a2b25cd72904b1c8eb2f4422b36e2c" kindref="member">eFactoryDefault</ref>,</highlight></codeline>
+<codeline lineno="139" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72163c826ae1faf0fa1b791ed5bffe27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72163c826ae1faf0fa1b791ed5bffe27" kindref="member">eColdStartReq</ref>,</highlight></codeline>
+<codeline lineno="140" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" kindref="member">eBoostOnReq</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>95</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" kindref="member">eBoostOffReq</ref>,</highlight></codeline>
+<codeline lineno="142" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f29a8e4f2831359d035f6c7b2ffc86a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f29a8e4f2831359d035f6c7b2ffc86a" kindref="member">eConnectJovia</ref>,</highlight></codeline>
+<codeline lineno="143" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba669b57bf8c5270aab522f5a533c4cb33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba669b57bf8c5270aab522f5a533c4cb33" kindref="member">eConnectThingsboard</ref>,</highlight></codeline>
+<codeline lineno="144" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5ee4ee822dd89d4325d82f5746e3f8cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5ee4ee822dd89d4325d82f5746e3f8cd" kindref="member">eCertJovia1</ref>,</highlight></codeline>
+<codeline lineno="145" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba41e2d37c9020f8b6cf7884c31629c089" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba41e2d37c9020f8b6cf7884c31629c089" kindref="member">eCertJovia2</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba02fcf108a94193302a69c82f30a00da9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba02fcf108a94193302a69c82f30a00da9" kindref="member">eCertJoviaKey</ref>,</highlight></codeline>
+<codeline lineno="147" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad168db78cef45d3df5127589cf7b7685" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad168db78cef45d3df5127589cf7b7685" kindref="member">eCertThingsboard1</ref>,</highlight></codeline>
+<codeline lineno="148" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1774afaa0ef44e596feeb749ec98ba7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1774afaa0ef44e596feeb749ec98ba7d" kindref="member">eCertThingsboard2</ref>,</highlight></codeline>
+<codeline lineno="149" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab76d9533db3ea1a7794c10db2133a766" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab76d9533db3ea1a7794c10db2133a766" kindref="member">eCertThingsboardKey</ref>,</highlight></codeline>
+<codeline lineno="150" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f8bb1a27759f0bcf30cade44829fab8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5f8bb1a27759f0bcf30cade44829fab8" kindref="member">eFsErase</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>105</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba043d2500ec9e418151a7e04907c38fef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba043d2500ec9e418151a7e04907c38fef" kindref="member">eFsStatus</ref>,</highlight></codeline>
+<codeline lineno="152" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba3c78cce2e74b855cd1b47e7d50e6f583" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba3c78cce2e74b855cd1b47e7d50e6f583" kindref="member">eDisableADXL</ref>,</highlight></codeline>
+<codeline lineno="153" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba28584cc9837accc43a9a9e41490a6326" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba28584cc9837accc43a9a9e41490a6326" kindref="member">eEnableADXL</ref>,</highlight></codeline>
+<codeline lineno="154" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba314199f829f2c275a49f84950ddd16ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba314199f829f2c275a49f84950ddd16ba" kindref="member">eGetConfig</ref>,</highlight></codeline>
+<codeline lineno="155" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badd4210d46b388589e9ca03a864f6a415" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badd4210d46b388589e9ca03a864f6a415" kindref="member">eOneDayTimerExpired</ref>,<sp/></highlight><highlight class="comment">//<sp/>110</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba265b3a989264b978d44a0263823b119a" kindref="member">eMsgMax</ref></highlight></codeline>
+<codeline lineno="157" refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba265b3a989264b978d44a0263823b119a" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_msg_pool" kindref="compound">MsgPool</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="class_pool_elem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_pool_elem" kindref="compound">PoolElem</ref><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" kindref="member">free</ref>();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/><ref refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" kindref="member">getBuffer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>pointer<sp/>to<sp/>optional<sp/>message<sp/>content</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_pool_elem_1aec1895e5aee815d55df87f27184794e3" kindref="member">getBufferSize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>max<sp/>buffer<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1a20bbd4d45e3f01305dd709f5a9cc9952" kindref="member">clearBuffer</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1aa039fb81c6a1c30752d71c77fd08e99c" kindref="member">putString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>s);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1a91ff086f98095e558772871c6f948f4d" kindref="member">putData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>pdata,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">maxAlloc</ref><sp/>=<sp/>2048<sp/>};</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="class_pool_elem_1af2500125f6cec4adb1857ae2786d7455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem_1af2500125f6cec4adb1857ae2786d7455" kindref="member">PoolElem</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;PoolElem::PoolElem\n&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="class_pool_elem_1a062d2e378491f5dc361fdf0641bfa8f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem_1a062d2e378491f5dc361fdf0641bfa8f7" kindref="member">PoolElem</ref>(<ref refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0b" kindref="member">msgType</ref><sp/>type,<sp/>uint8_t<sp/>sender,<sp/>uint8_t<sp/>para1<sp/>=<sp/>0,<sp/>int8_t<sp/>para2<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>(type),<sp/><ref refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" kindref="member">from</ref>(sender),<sp/><ref refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" kindref="member">p1</ref>(para1),<sp/><ref refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" kindref="member">p2</ref>(para2)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>printk(&quot;PoolElem::PoolElem<sp/>mtype:<sp/>%d<sp/>from:<sp/>%d\n&quot;,<sp/>mtype,<sp/>from);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="class_pool_elem_1a6ba5573b9da5522a391ce1eba38b4d2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_pool_elem_1a6ba5573b9da5522a391ce1eba38b4d2b" kindref="member">~PoolElem</ref>()<sp/>{<sp/>printk(</highlight><highlight class="stringliteral">&quot;PoolElem::~PoolElem\n&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>debugging<sp/>utils</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" kindref="member">Dump</ref>();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1a25b10cc578d67b8a897b3248e74ad04b" kindref="member">DumpAsString</ref>();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1ae133e27cdb6a4873d2223e0d78768b87" kindref="member">DumpAsStringHex</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>min_len<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" kindref="member">mtype</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="221" refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" kindref="member">from</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222" refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" kindref="member">p1</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="223" refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" kindref="member">p2</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>struct<sp/>sensor_value?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="228" refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1a4f959fa124892bc0e22eae1445429855" kindref="member">inPool</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229" refid="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_msg_pool" kindref="compound">MsgPool</ref>*<sp/><ref refid="class_pool_elem_1a1400a5e1ccff05a12c067d29e7ac958b" kindref="member">pool</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>uint8_t<sp/>(*buf)[];<sp/><sp/>//!&lt;<sp/>optional<sp/>message<sp/>content</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>(*<ref refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" kindref="member">buf</ref>)[<ref refid="class_pool_elem_1a726ca809ffd3d67ab4b8476646f26635a35b8164af0ef6c0869a7eba962f4ce5f" kindref="member">maxAlloc</ref>];</highlight></codeline>
+<codeline lineno="232" refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_pool_elem_1ab325e42b7c2a85c47405651cbae510ce" kindref="member">bufLen</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233" refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_pool_elem_1ae058dd8f2f1a0c16b3947d6bfdbd51c2" kindref="member">dataLen</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="class_pool_elem_1ad5f1dc91df43f757f242fe445c96b973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="class_pool_elem_1ad5f1dc91df43f757f242fe445c96b973" kindref="member">MsgPool</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_RTOS_MPELEM_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="rtos/mpelem.h"/>
+  </compounddef>
+</doxygen>

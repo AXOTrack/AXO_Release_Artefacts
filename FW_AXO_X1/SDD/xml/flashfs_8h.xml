@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="flashfs_8h" kind="file" language="C++">
+    <compoundname>flashfs.h</compoundname>
+    <includes local="no">zephyr/fs/fs.h</includes>
+    <includes local="no">zephyr/fs/littlefs.h</includes>
+    <includes local="no">zephyr/storage/flash_map.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="config_8cpp" local="yes">conf/config.cpp</includedby>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <includedby refid="boost_8cpp" local="yes">drv/pm/boost.cpp</includedby>
+    <includedby refid="flashfs_8cpp" local="yes">fs/flashfs.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="boot__cnt_8cpp" local="yes">pm/boot_cnt.cpp</includedby>
+    <includedby refid="keygen_8cpp" local="yes">util/keygen.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>zephyr/fs/fs.h</label>
+      </node>
+      <node id="4">
+        <label>zephyr/storage/flash_map.h</label>
+      </node>
+      <node id="1">
+        <label>fs/flashfs.h</label>
+        <link refid="flashfs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/fs/littlefs.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>drv/pm/boost.cpp</label>
+        <link refid="boost_8cpp"/>
+      </node>
+      <node id="8">
+        <label>pm/boot_cnt.cpp</label>
+        <link refid="boot__cnt_8cpp"/>
+      </node>
+      <node id="3">
+        <label>conf/config.cpp</label>
+        <link refid="config_8cpp"/>
+      </node>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>fs/flashfs.h</label>
+        <link refid="flashfs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>util/keygen.cpp</label>
+        <link refid="keygen_8cpp"/>
+      </node>
+      <node id="4">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="7">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="6">
+        <label>fs/flashfs.cpp</label>
+        <link refid="flashfs_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_flash_f_s" prot="public">FlashFS</innerclass>
+    <briefdescription>
+<para>Header file of flash file system controller module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="flashfs_8h_1flashfs"/> <simplesect kind="par"><title>Detailed Description </title><para>Wrapper class for file system access. The class uses the littlefs implementation provided by Zephyr File System library. See <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__flash__area__api.html">for Flash Area Interface details</ulink> and <ulink url="https://docs.zephyrproject.org/latest/services/file_system/index.html">for File System API details</ulink>..</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_FS_FLASHFS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_FS_FLASHFS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_FS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/fs/fs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/fs/littlefs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#include<sp/>&lt;zephyr/storage/flash_map.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/fs/src/stubs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_flash_f_s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_flash_f_s" kindref="compound">FlashFS</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a1210511137a7cdc4c4fa00eebb75bfcf" kindref="member">FlashFS</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_mount_t*<sp/><ref refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" kindref="member">mp</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s" kindref="compound">FlashFS</ref>&amp;<sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_flash_f_s_1a1210511137a7cdc4c4fa00eebb75bfcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a1210511137a7cdc4c4fa00eebb75bfcf" kindref="member">FlashFS</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a43c889836af2b96a42df3dc3c114565f" kindref="member">~FlashFS</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***<sp/>Functions<sp/>for<sp/>Debugging<sp/>&amp;<sp/>Resetting<sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a6a2c6064f720f8084d3c8202c98b9660" kindref="member">lfs_toerror</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1af4e67fd0e66b799a025531d100e0cbc1" kindref="member">erase</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_mount_t*<sp/><ref refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" kindref="member">mp</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1ac1fe59dfffb46bf7a6b6e931356631aa" kindref="member">eraseFs</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a8e02ff54c59a0fad2ae4850d14e5d147" kindref="member">format</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_mount_t*<sp/><ref refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" kindref="member">mp</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a8ba41966192838cee245b58db87b8672" kindref="member">mount</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_mount_t*<sp/><ref refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" kindref="member">mp</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a1db7f084483fe1bc09d688e3d3a69eb4" kindref="member">unmount</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" kindref="member">remove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a385ae3970c3575caf3a7213df1ddca27" kindref="member">rename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>newpath);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1ac33e7e64de8c0a5b6f8f60559a480928" kindref="member">mkdir</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/>mode_t<sp/>mode<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1aa8fba9a281fa6db12eb193bae8aa5b8c" kindref="member">stat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_dirent*<sp/>st);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a3c944d3ce468da33703772c73d3fa6a2" kindref="member">statvfs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_statvfs*<sp/>buf);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/***<sp/>Function<sp/>Related<sp/>to<sp/>Files<sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>fs_file_t*<sp/><ref refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" kindref="member">file_open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" kindref="member">file_close</ref>(fs_file_t*<sp/>file);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>ssize_t<sp/><ref refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" kindref="member">file_read</ref>(fs_file_t*<sp/>file,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>ssize_t<sp/><ref refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" kindref="member">file_write</ref>(fs_file_t*<sp/>file,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" kindref="member">file_sync</ref>(fs_file_t*<sp/>file);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>off_t<sp/><ref refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" kindref="member">file_seek</ref>(fs_file_t*<sp/>file,<sp/>off_t<sp/>offset,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>whence);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>off_t<sp/><ref refid="class_flash_f_s_1a240785d4c32b9b0fe12dfd4b77083c21" kindref="member">file_tell</ref>(fs_file_t*<sp/>file);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>off_t<sp/><ref refid="class_flash_f_s_1afb93d622b9ae2ad8cdad48e596b93fac" kindref="member">file_size</ref>(fs_file_t*<sp/>file);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1ac46de9628021dee3b8da06f28fb9d336" kindref="member">file_truncate</ref>(fs_file_t*<sp/>file,<sp/>off_t<sp/>length);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1aba2db2f17a82cb9f949de86a2f783ce6" kindref="member">file_exists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>fs_dir_t*<sp/><ref refid="class_flash_f_s_1a3354558fae1545905cef1888b4a92c76" kindref="member">dir_open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a161cd4be16f218a606b4a0e1050c8b72" kindref="member">dir_close</ref>(fs_dir_t*<sp/>dir);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>ssize_t<sp/><ref refid="class_flash_f_s_1aacdb56e1d9acc99194dc547994653773" kindref="member">dir_read</ref>(fs_dir_t*<sp/>dir,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>fs_dirent*<sp/>ent);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1aaa68c0ac89ef201bcc42c3dd7321c165" kindref="member">dir_seek</ref>(fs_dir_t*<sp/>dir,<sp/>off_t<sp/>offset);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>off_t<sp/><ref refid="class_flash_f_s_1a5c07546d0eedd719ae91d2733849c485" kindref="member">dir_tell</ref>(fs_dir_t*<sp/>dir);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1abeb0cdd5e30a3c2205b6efb5e10a7ce9" kindref="member">dir_rewind</ref>(fs_dir_t*<sp/>dir);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1aa5dfa20907806cd412d5ee32f864a9ad" kindref="member">dir_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1acce742985aefdf84d4d8d24248571043" kindref="member">file_tree</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_flash_f_s_1ae3ec98d5ce0f5d2c3ae88ff4f5d75f83" kindref="member">GetFsStat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a786ec25c34eab2518e86648f4482ab22" kindref="member">CheckAvailableSpace</ref>();</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>source<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1a911899d9dc11ee830ff2731e57067ee2" kindref="member">shell_file_tree</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>source<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1aa4c622a4ff7fdde9e5cf80508294fd3a" kindref="member">shell_fs_stat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>documented<sp/>in<sp/>source<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s_1ab2021306727b099bd7329f3f8e97ee39" kindref="member">clear_fs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>shell*<sp/>shell,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>argc,</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="375" refid="class_flash_f_s_1ac66040f0beb44ae01a0a044689eb94a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>lfs_t*<sp/><ref refid="class_flash_f_s_1ac66040f0beb44ae01a0a044689eb94a9" kindref="member">lfs</ref>;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379" refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fs_mount_t*<sp/><ref refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" kindref="member">mp</ref>;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383" refid="class_flash_f_s_1a10d3eb8d3c4c6cc71b046b505e54a87d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">lfs_config*<sp/><ref refid="class_flash_f_s_1a10d3eb8d3c4c6cc71b046b505e54a87d" kindref="member">config</ref>;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_FS_FLASHFS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="fs/flashfs.h"/>
+  </compounddef>
+</doxygen>

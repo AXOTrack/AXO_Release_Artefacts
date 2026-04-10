@@ -1,0 +1,13 @@
+<map id="fram_access" name="fram_access">
+<area shape="rect" id="node1" title="Function to access FRAM for reading and writing." alt="" coords="704,107,800,133"/>
+<area shape="rect" id="node2" href="$classspifram.html#a3f8be5a2578127c3fc0e74e3532f284b" title="Function to read multiple bytes to FRAM." alt="" coords="569,81,655,108"/>
+<area shape="rect" id="node9" href="$classspifram.html#a3b8249f30cb998de07e43307c96667f8" title="Function to write multiple bytes to FRAM." alt="" coords="568,132,656,159"/>
+<area shape="rect" id="node3" href="$classspifram.html#a012fd03b5c4e8fb72719e55317c6b1b9" title="Function to read multiple bytes from FRAM." alt="" coords="438,81,519,108"/>
+<area shape="rect" id="node4" href="$classspifram.html#a7b6017c27f8b34a91104422c88c4954f" title="Function to wake up FRAM from deep power down mode." alt="" coords="319,5,389,32"/>
+<area shape="rect" id="node6" href="$classspifram.html#a9d8f65ef2d9b6593e836282a55a11222" title=" " alt="" coords="92,56,156,83"/>
+<area shape="rect" id="node8" href="$classspifram.html#aaf1e695ade80d0f8ede8c830ef743999" title="Function to print the content of the FRAM in a terminal." alt="" coords="327,107,381,133"/>
+<area shape="rect" id="node5" href="$classspifram.html#a2cadaffd8a4f13814213a48e5b20cc4d" title="Function to wake up FRAM from deep power down mode." alt="" coords="204,5,271,32"/>
+<area shape="rect" id="node7" href="$classspifram.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The initialization function of the SPI FRAM class." alt="" coords="5,56,44,83"/>
+<area shape="rect" id="node10" href="$classspifram.html#a1bd30127afd8f18cff8a7eebbbac532c" title="Function to write multiple bytes into FRAM." alt="" coords="437,157,520,184"/>
+<area shape="rect" id="node11" href="$classspifram.html#af139f30d28b7dc61f5051c0d595af368" title="Function to erase the content of the FRAM." alt="" coords="327,208,381,235"/>
+</map>

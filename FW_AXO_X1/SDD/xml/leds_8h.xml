@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="leds_8h" kind="file" language="C++">
+    <compoundname>leds.h</compoundname>
+    <includedby refid="leds_8cpp" local="yes">ui/leds.cpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>ui/leds.h</label>
+        <link refid="leds_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ui/leds.cpp</label>
+        <link refid="leds_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_leds" prot="public">Leds</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ledId</name>
+        <enumvalue id="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a6f279b5bf1323619c0037eaf95cd8b44" prot="public">
+          <name>ledRed</name>
+          <briefdescription>
+<para>LED0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a96859d57cbe39e0235d304b8b256ddce" prot="public">
+          <name>ledGreen</name>
+          <briefdescription>
+<para>LED1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a063fe4bb288272db12f066992138a212" prot="public">
+          <name>ledMax</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>LED identifier definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.h" line="26" column="1" bodyfile="ui/leds.h" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="enum" id="leds_8h_1a7905b144d652036a3fa8c53030a51657" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ledState</name>
+        <enumvalue id="leds_8h_1a7905b144d652036a3fa8c53030a51657aa94ac32c61d7d2e130f1a83aebc110cd" prot="public">
+          <name>ledOff</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>LED state OFF. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="leds_8h_1a7905b144d652036a3fa8c53030a51657ade19f4bb9841de706e572f2951c4df63" prot="public">
+          <name>ledOn</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>LED state ON. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>LED state definition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui/leds.h" line="34" column="1" bodyfile="ui/leds.h" bodystart="34" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of user interface class leds. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="leds_8h_1leds"/> <simplesect kind="par"><title>Detailed Description </title><para>LED&apos;s are used as user interface to signal activities like alive indication, error indication and so on.</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UI_LEDS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UI_LEDS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" kindref="member">ledId</ref><sp/>{</highlight></codeline>
+<codeline lineno="27" refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a6f279b5bf1323619c0037eaf95cd8b44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a6f279b5bf1323619c0037eaf95cd8b44" kindref="member">ledRed</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a96859d57cbe39e0235d304b8b256ddce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a96859d57cbe39e0235d304b8b256ddce" kindref="member">ledGreen</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ledBlue,<sp/><sp/><sp/><sp/>//!&lt;<sp/>LED2,<sp/>not<sp/>used<sp/>at<sp/>the<sp/>moment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a063fe4bb288272db12f066992138a212" kindref="member">ledMax</ref></highlight></codeline>
+<codeline lineno="31" refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792a063fe4bb288272db12f066992138a212" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="leds_8h_1a7905b144d652036a3fa8c53030a51657" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657" kindref="member">ledState</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="leds_8h_1a7905b144d652036a3fa8c53030a51657aa94ac32c61d7d2e130f1a83aebc110cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657aa94ac32c61d7d2e130f1a83aebc110cd" kindref="member">ledOff</ref><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657ade19f4bb9841de706e572f2951c4df63" kindref="member">ledOn</ref><sp/>=<sp/>1<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="leds_8h_1a7905b144d652036a3fa8c53030a51657ade19f4bb9841de706e572f2951c4df63" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_leds" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_leds" kindref="compound">Leds</ref><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_leds" kindref="compound">Leds</ref>*<sp/><ref refid="class_leds_1a1d64907656992d7d2e2ae7354c656f30" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_leds_1ace613a1b3cd2799b2749c8a42d67a445" kindref="member">~Leds</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_leds_1ab89393ba8bda03305e4bb24e48e46d58" kindref="member">setLed</ref>(<ref refid="leds_8h_1a01ca97980342fd92d7e72fc0f2242792" kindref="member">ledId</ref><sp/><ref refid="structled" kindref="compound">led</ref>,<sp/><ref refid="leds_8h_1a7905b144d652036a3fa8c53030a51657" kindref="member">ledState</ref><sp/>s);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_leds_1acf331be1c73e40a9c050f88e6305b606" kindref="member">Leds</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_UI_LEDS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ui/leds.h"/>
+  </compounddef>
+</doxygen>

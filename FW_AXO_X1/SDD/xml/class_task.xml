@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_task" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Task</compoundname>
+    <derivedcompoundref refid="struct_a_d_converter" prot="public" virt="non-virtual">ADConverter</derivedcompoundref>
+    <derivedcompoundref refid="struct_adxl37x" prot="public" virt="non-virtual">Adxl37x</derivedcompoundref>
+    <derivedcompoundref refid="class_adxl_data_store" prot="public" virt="non-virtual">AdxlDataStore</derivedcompoundref>
+    <derivedcompoundref refid="class_battery_mgr" prot="public" virt="non-virtual">BatteryMgr</derivedcompoundref>
+    <derivedcompoundref refid="class_boost_converter" prot="public" virt="non-virtual">BoostConverter</derivedcompoundref>
+    <derivedcompoundref refid="class_data_manager" prot="public" virt="non-virtual">DataManager</derivedcompoundref>
+    <derivedcompoundref refid="class_disp_task" prot="public" virt="non-virtual">DispTask</derivedcompoundref>
+    <derivedcompoundref refid="class_fw_upd" prot="public" virt="non-virtual">FwUpd</derivedcompoundref>
+    <derivedcompoundref refid="class_fw_upd_ctrl" prot="public" virt="non-virtual">FwUpdCtrl</derivedcompoundref>
+    <derivedcompoundref refid="class_http_connector" prot="public" virt="non-virtual">HttpConnector</derivedcompoundref>
+    <derivedcompoundref refid="class_hw_metrics" prot="public" virt="non-virtual">HwMetrics</derivedcompoundref>
+    <derivedcompoundref refid="class_lte_connector" prot="public" virt="non-virtual">LteConnector</derivedcompoundref>
+    <derivedcompoundref refid="class_lte_monitor" prot="public" virt="non-virtual">LteMonitor</derivedcompoundref>
+    <derivedcompoundref refid="class_mqtt_connector" prot="public" virt="non-virtual">MqttConnector</derivedcompoundref>
+    <derivedcompoundref refid="class_power_mgr" prot="public" virt="non-virtual">PowerMgr</derivedcompoundref>
+    <derivedcompoundref refid="class_reset_ctrl" prot="public" virt="non-virtual">ResetCtrl</derivedcompoundref>
+    <derivedcompoundref refid="class_rms_store" prot="public" virt="non-virtual">RmsStore</derivedcompoundref>
+    <derivedcompoundref refid="class_rms_task" prot="public" virt="non-virtual">RmsTask</derivedcompoundref>
+    <derivedcompoundref refid="class_shtcx" prot="public" virt="non-virtual">Shtcx</derivedcompoundref>
+    <includes refid="task_8h" local="no">task.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" static="no" mutable="no">
+        <type>struct k_thread</type>
+        <definition>struct k_thread thread_handle</definition>
+        <argsstring></argsstring>
+        <name>thread_handle</name>
+        <briefdescription>
+<para>Thread administration structure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="81" column="18" bodyfile="rtos/task.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" compoundref="task_8cpp" startline="73" endline="82">create</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" static="no" mutable="no">
+        <type>k_tid_t</type>
+        <definition>k_tid_t tid</definition>
+        <argsstring></argsstring>
+        <name>tid</name>
+        <briefdescription>
+<para>The unique ID of the task provided by the OS. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="85" column="13" bodyfile="rtos/task.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" compoundref="task_8cpp" startline="73" endline="82">create</referencedby>
+        <referencedby refid="class_task_1a60de64d75454385b23995437f1d72669" compoundref="task_8cpp" startline="90" endline="93">start</referencedby>
+        <referencedby refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" compoundref="task_8cpp" startline="125" endline="130">~Task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" static="no" mutable="no">
+        <type>char</type>
+        <definition>char myName[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>myName</name>
+        <briefdescription>
+<para>The unique name of the task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="86" column="10" bodyfile="rtos/task.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" compoundref="task_8cpp" startline="73" endline="82">create</referencedby>
+        <referencedby refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" compoundref="task_8cpp" startline="100" endline="103">setId</referencedby>
+        <referencedby refid="class_task_1a60de64d75454385b23995437f1d72669" compoundref="task_8cpp" startline="90" endline="93">start</referencedby>
+        <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
+        <referencedby refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" compoundref="task_8cpp" startline="113" endline="117">Task</referencedby>
+        <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
+        <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
+        <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
+        <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
+        <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
+        <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
+        <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
+        <referencedby refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update__ctrl_8cpp" startline="316" endline="362">FwUpdCtrl::task</referencedby>
+        <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
+        <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
+        <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
+        <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
+        <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">LteConnector::task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t myId</definition>
+        <argsstring></argsstring>
+        <name>myId</name>
+        <briefdescription>
+<para>The unique ID of the task. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="87" column="13" bodyfile="rtos/task.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" compoundref="task_8cpp" startline="100" endline="103">setId</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_task_1a1951102653a5e603f2131b33d7636232" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void task</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>task</name>
+        <reimplementedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19">task</reimplementedby>
+        <reimplementedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e">task</reimplementedby>
+        <reimplementedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71">task</reimplementedby>
+        <reimplementedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71">task</reimplementedby>
+        <reimplementedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71">task</reimplementedby>
+        <reimplementedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71">task</reimplementedby>
+        <reimplementedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71">task</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="69" column="18"/>
+        <referencedby refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" compoundref="task_8cpp" startline="52" endline="56">taskCode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Task</definition>
+        <argsstring>(const char *name=&quot;??&quot;)</argsstring>
+        <name>Task</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>&quot;??&quot;</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_task" kindref="compound">Task</ref> class constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the task</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The constructor set the name of the task in the protected member variable myName. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="74" column="14" bodyfile="rtos/task.cpp" bodystart="113" bodyend="117"/>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">myName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>~Task</definition>
+        <argsstring>()</argsstring>
+        <name>~Task</name>
+        <briefdescription>
+<para><ref refid="class_task" kindref="compound">Task</ref> class destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="75" column="13" bodyfile="rtos/task.cpp" bodystart="125" bodyend="130"/>
+        <references refid="class_task_1a31a7c928ad7e979f387432933c8044f4" compoundref="task_8h" startline="85">tid</references>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create</definition>
+        <argsstring>(k_thread_stack_t *stack, size_t stack_size, int prio)</argsstring>
+        <name>create</name>
+        <param>
+          <type>k_thread_stack_t *</type>
+          <declname>stack</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>stack_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prio</declname>
+        </param>
+        <briefdescription>
+<para>Function to create a task and to assign the name of the task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to stack object of type k_thread_stack_t </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stack_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the stack in bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the task</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function create a task, assign the stack and the priority and return the unique ID of the task provided by the OS of type k_tid_t and the thread administration structure thread_handle of type struct k_thread by calling the function k_thread_create provided by the operating system. Afterwars the task&apos;s name will be assigned by calling function k_thread_name_set also provided by the operating system. <linebreak/>
+Priority: The smaller the value, the higher the priority </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="77" column="10" bodyfile="rtos/task.cpp" bodystart="73" bodyend="82"/>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">myName</references>
+        <references refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" compoundref="task_8cpp" startline="52" endline="56">taskCode</references>
+        <references refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" compoundref="task_8h" startline="84">thread_handle</references>
+        <references refid="class_task_1a31a7c928ad7e979f387432933c8044f4" compoundref="task_8h" startline="85">tid</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setId</definition>
+        <argsstring>(uint8_t id)</argsstring>
+        <name>setId</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Setter function to set the ID of the task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function set the protected member variable myId. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="78" column="10" bodyfile="rtos/task.cpp" bodystart="100" bodyend="103"/>
+        <references refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" compoundref="task_8h" startline="87">myId</references>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">myName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a60de64d75454385b23995437f1d72669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para>Function to start a task. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>This function starts a task, referenced by unique ID of the task, by calling function k_thread_start provided by the operating system. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="79" column="10" bodyfile="rtos/task.cpp" bodystart="90" bodyend="93"/>
+        <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">myName</references>
+        <references refid="class_task_1a31a7c928ad7e979f387432933c8044f4" compoundref="task_8h" startline="85">tid</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void configure</definition>
+        <argsstring>()</argsstring>
+        <name>configure</name>
+        <reimplementedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <reimplementedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <reimplementedby refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <reimplementedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <reimplementedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <reimplementedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <reimplementedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f">configure</reimplementedby>
+        <briefdescription>
+<para>Virtual task configure function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para>The configure function shall be overload from derived classes to take over the configuration from JSON config file (see class <ref refid="class_config" kindref="compound">Config</ref>) if required. The base class implementation only print a debug message at warning level. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="81" column="18" bodyfile="rtos/task.cpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void taskCode</definition>
+        <argsstring>(void *p1, void *p2, void *p3)</argsstring>
+        <name>taskCode</name>
+        <param>
+          <type>void *</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p3</declname>
+        </param>
+        <briefdescription>
+<para>Entry point for the operating system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First argument </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second argument </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third argument</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function realize the entry point for the Zephyr operating system of type k_thread_entry_t. A thread&apos;s entry point function is invoked when the thread starts executing. Up to 3 argument values can be passed to the function. The thread terminates execution permanently if the entry point function returns. The thread is responsible for releasing any shared resources it may own (such as mutexes and dynamically allocated memory), prior to returning. See detail in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__thread__apis.html">API documentation</ulink> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="72" column="17" bodyfile="rtos/task.cpp" bodystart="52" bodyend="56"/>
+        <references refid="class_task_1a1951102653a5e603f2131b33d7636232">task</references>
+        <referencedby refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" compoundref="task_8cpp" startline="73" endline="82">create</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Task</definition>
+        <argsstring>()</argsstring>
+        <name>Task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="90" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Task</definition>
+        <argsstring>(const Task &amp;)=delete</argsstring>
+        <name>Task</name>
+        <param>
+          <type>const <ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="91" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        <definition>Task&amp; operator=</definition>
+        <argsstring>(const Task &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_task" kindref="compound">Task</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="rtos/task.h" line="92" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RTOS wrapper for multithreading support. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+</para>
+<para><simplesect kind="par"><title>Detailed Description </title><para>The task class implements a C++ wrapper of the thread API provided by the Zephyr operating system. See details in Zephyr <ulink url="https://docs.zephyrproject.org/latest/kernel/services/threads/index.html">thread documentation</ulink> or in <ulink url="https://docs.zephyrproject.org/apidoc/latest/group__thread__apis.html">API documentation</ulink>. The task class is the base class of all task in the AXO track system. All tasks shall be derived from this base class. Every task has it&apos;s own stack, which needs to be created outside of the task and an assigned priority. The task class provides a method to create and to start the task and to assign an unique ID. It provides a virtual task function, which needs to be implemented in the derived classes and shall implements the endless loop. Furthermore it provides the entry point for the operating system, which simply calls the task function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="19">
+        <label>RmsStore</label>
+        <link refid="class_rms_store"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>LteConnector</label>
+        <link refid="class_lte_connector"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>FwUpd</label>
+        <link refid="class_fw_upd"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ResetCtrl</label>
+        <link refid="class_reset_ctrl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>LteMonitor</label>
+        <link refid="class_lte_monitor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>FwUpdCtrl</label>
+        <link refid="class_fw_upd_ctrl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Shtcx</label>
+        <link refid="class_shtcx"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>HttpConnector</label>
+        <link refid="class_http_connector"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Adxl37x</label>
+        <link refid="struct_adxl37x"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ADConverter</label>
+        <link refid="struct_a_d_converter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>RmsTask</label>
+        <link refid="class_rms_task"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Task</label>
+        <link refid="class_task"/>
+      </node>
+      <node id="12">
+        <label>HwMetrics</label>
+        <link refid="class_hw_metrics"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DispTask</label>
+        <link refid="class_disp_task"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>MqttConnector</label>
+        <link refid="class_mqtt_connector"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>BoostConverter</label>
+        <link refid="class_boost_converter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DataManager</label>
+        <link refid="class_data_manager"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AdxlDataStore</label>
+        <link refid="class_adxl_data_store"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>PowerMgr</label>
+        <link refid="class_power_mgr"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BatteryMgr</label>
+        <link refid="class_battery_mgr"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>PowerMgrX1</label>
+        <link refid="class_power_mgr_x1"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Task</label>
+        <link refid="class_task"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#tid</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#myName</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#thread_handle</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#myId</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uint8_t</label>
+      </node>
+      <node id="4">
+        <label>struct k_thread</label>
+      </node>
+      <node id="2">
+        <label>k_tid_t</label>
+      </node>
+      <node id="3">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="rtos/task.h" line="66" column="1" bodyfile="rtos/task.h" bodystart="66" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_task_1ae369b3765489ee8bd0ea791c1843630f" prot="public" virt="virtual"><scope>Task</scope><name>configure</name></member>
+      <member refid="class_task_1ae16435f5e0d15e4e569eec7da8de5f65" prot="public" virt="non-virtual"><scope>Task</scope><name>create</name></member>
+      <member refid="class_task_1a617f5e855a5a909b984a4c3a42498e38" prot="protected" virt="non-virtual"><scope>Task</scope><name>myId</name></member>
+      <member refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" prot="protected" virt="non-virtual"><scope>Task</scope><name>myName</name></member>
+      <member refid="class_task_1a694ccec29e39b4acb6d8f5933d5caa81" prot="private" virt="non-virtual"><scope>Task</scope><name>operator=</name></member>
+      <member refid="class_task_1ac8ff438b726f89f8536c24b0d187d9cd" prot="public" virt="non-virtual"><scope>Task</scope><name>setId</name></member>
+      <member refid="class_task_1a60de64d75454385b23995437f1d72669" prot="public" virt="non-virtual"><scope>Task</scope><name>start</name></member>
+      <member refid="class_task_1a1951102653a5e603f2131b33d7636232" prot="public" virt="pure-virtual"><scope>Task</scope><name>task</name></member>
+      <member refid="class_task_1a9d9622b085e49fca3f8cfb2bf8d64ac9" prot="public" virt="non-virtual"><scope>Task</scope><name>Task</name></member>
+      <member refid="class_task_1ac35df3116dbe12d965a403dd946d530a" prot="private" virt="non-virtual"><scope>Task</scope><name>Task</name></member>
+      <member refid="class_task_1aca70cff7de24b10f973399a4c9644c2f" prot="private" virt="non-virtual"><scope>Task</scope><name>Task</name></member>
+      <member refid="class_task_1aabf2ea1033ccd9adb12c908e24f77ff6" prot="public" virt="non-virtual"><scope>Task</scope><name>taskCode</name></member>
+      <member refid="class_task_1aae312856e76b2af27d7e0bda38ce0b16" prot="protected" virt="non-virtual"><scope>Task</scope><name>thread_handle</name></member>
+      <member refid="class_task_1a31a7c928ad7e979f387432933c8044f4" prot="protected" virt="non-virtual"><scope>Task</scope><name>tid</name></member>
+      <member refid="class_task_1a1eb733e1621bbf8c6939e1bd2978ddd8" prot="public" virt="virtual"><scope>Task</scope><name>~Task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

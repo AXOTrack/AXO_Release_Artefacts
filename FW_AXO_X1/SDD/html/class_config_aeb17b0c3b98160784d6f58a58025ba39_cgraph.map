@@ -1,0 +1,10 @@
+<map id="isValid" name="isValid">
+<area shape="rect" id="node1" title="Function to check if a received configuration is valid." alt="" coords="5,157,67,184"/>
+<area shape="rect" id="node2" href="$class_config.html#a4e1044ab996356d6bd82d2b8b2807a40" title="Function to check if the values in a group are strings." alt="" coords="115,5,236,32"/>
+<area shape="rect" id="node3" href="$class_config.html#abbed406bd7169794eed499057c17142e" title="Function to retrieve a single value from a JSON group object." alt="" coords="139,56,212,83"/>
+<area shape="rect" id="node4" href="$class_config.html#a903c205c1da997fe1d8e98c035e2849e" title="Function to check if a group with given name exist in JSON object." alt="" coords="130,107,221,133"/>
+<area shape="rect" id="node5" href="$class_config.html#af2f473fab5c40aea9a21e89011c959d6" title="Function to parse a JSON configuration string." alt="" coords="148,157,203,184"/>
+<area shape="rect" id="node6" href="$class_config.html#a35ee662621cdcc9aadce8a5ad8963c51" title="Function to check if a string contains a valid boolean string." alt="" coords="139,208,212,235"/>
+<area shape="rect" id="node7" href="$class_config.html#aee4afa7ec317587fc74e0fb88fb4bd3b" title="Function to check if a string contains a valid floating point number string." alt="" coords="137,259,213,285"/>
+<area shape="rect" id="node8" href="$class_config.html#aadb926eb277206bb5233c44ca10803fa" title="Function to check if a string contains a valid integer string." alt="" coords="145,309,206,336"/>
+</map>
