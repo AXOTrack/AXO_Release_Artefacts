@@ -86,7 +86,7 @@ With call of the functions mbedtls_pk_init and mbedtls_pk_setup provided by the 
         <references refid="keygen_8h_1a031777abf525fc89df9f249e0e604936" compoundref="keygen_8h" startline="42">PRIVATE_KEY_FILENAME</references>
         <references refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" compoundref="keygen_8h" startline="44">PUBLIC_KEY_FILENAME</references>
         <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_key_gen_1a034b50f5527541d0a731c70ed03e7519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -130,7 +130,7 @@ Function to check if the public key is still transfered to backend. </para>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
         <references refid="keygen_8h_1ab6697b69019c0100c3a2ebf9c7f3e3d6" compoundref="keygen_8h" startline="47">KEY_TRANSFERED_FILENAME</references>
         <references refid="class_key_gen_1ae478b3a8bd1b25b3fd32fb94e610d384" compoundref="keygen_8h" startline="86">transfer_done</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_key_gen_1af604e6567f39709f20a2b949bf34b9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@ The function read the public key from file PUBLIC_KEY_FILENAME in file system an
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
         <references refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" compoundref="keygen_8h" startline="44">PUBLIC_KEY_FILENAME</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_key_gen_1ac3cd9437903afea95036a7720881218d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -250,7 +250,7 @@ The function checks if file KEY_TRANSFERED_FILENAME exist and in this case the f
         <references refid="keygen_8h_1a031777abf525fc89df9f249e0e604936" compoundref="keygen_8h" startline="42">PRIVATE_KEY_FILENAME</references>
         <references refid="keygen_8h_1a454dac5abbfad7ae13c96db4a5ff3bcb" compoundref="keygen_8h" startline="44">PUBLIC_KEY_FILENAME</references>
         <references refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" compoundref="flashfs_8cpp" startline="243" endline="248">FlashFS::remove</references>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">MqttConnector::HandleFactoryDefault</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_key_gen_1a1b66535fadf3a11fef6115b676e27a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -304,9 +304,9 @@ In case there is no instance created, the constructor will be called to create t
         <location file="util/keygen.h" line="71" column="19" bodyfile="util/keygen.cpp" bodystart="183" bodyend="187"/>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
         <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

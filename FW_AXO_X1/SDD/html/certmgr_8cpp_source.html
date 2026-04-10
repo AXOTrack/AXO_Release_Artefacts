@@ -242,7 +242,7 @@ $(document).ready(function(){initNavTree('certmgr_8cpp_source.html',''); initRes
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                                <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                LOG_WRN(<span class="stringliteral">&quot;Wrote THINGSBOARD certificates in Modem-SW&quot;</span>);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <a class="code" href="classcertmgr.html#a06e2b34096fd017bc1fece1edb448583">brokerCfg</a>.<a class="code" href="struct__st_broker_cfg.html#ade73530586b29046a939e89470c480fc">currentBroker</a> = <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <a class="code" href="classcertmgr.html#a8be16a6a4a8ecfa40776a4c5c1107003">bBrokerSwitchRequested</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <a class="code" href="classcertmgr.html#a8be16a6a4a8ecfa40776a4c5c1107003">bBrokerSwitchRequested</a> = <span class="keyword">false</span>; <span class="comment">//true; Disable Jovia Fallback Feature (AXFW23-623)</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="comment">// ensure, that key will be send after each broker switch</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <a class="code" href="class_key_gen.html#aa82987fa60c88c4380a157e4b0f178b6">KeyGen::inst</a>()-&gt;<a class="code" href="class_key_gen.html#af604e6567f39709f20a2b949bf34b9fa">resetKeyTransfered</a>();</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
@@ -425,7 +425,7 @@ $(document).ready(function(){initNavTree('certmgr_8cpp_source.html',''); initRes
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    ssize_t ret;</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keywordtype">int</span> ret2;</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordtype">char</span> inbuf[8];</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> defaultBroker = <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> defaultBroker = <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>;</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> modemBroker = <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16ae48d016362f86aca81ecd7266a0b5712">eBroker_NONE</a>;</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160; </div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    <span class="comment">// remove this, only for testing purposes</span></div>
@@ -526,425 +526,427 @@ $(document).ready(function(){initNavTree('certmgr_8cpp_source.html',''); initRes
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;}</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160; </div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classcertmgr.html#ac03319f16f9c414a1dc9fd98d740dfdf">certmgr::BrokerSwitchRequested</a>() {</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcertmgr.html#a8be16a6a4a8ecfa40776a4c5c1107003">bBrokerSwitchRequested</a>;</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;}</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160; </div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a119aab00792ccace8235e70745c29498">certmgr::ClearBrokerSwitchRequested</a>() {</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <a class="code" href="classcertmgr.html#a8be16a6a4a8ecfa40776a4c5c1107003">bBrokerSwitchRequested</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;}</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160; </div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">certmgr::writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker, <span class="keyword">const</span> <span class="keywordtype">char</span>* pCert) {</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    LOG_INF(<span class="stringliteral">&quot;writeDeviceCert&quot;</span>);</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    std::string filename;</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordflow">switch</span> (broker) {</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>:       filename = <a class="code" href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a>;       <span class="keywordflow">break</span>;        </div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>: filename = <a class="code" href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a>; <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keywordflow">default</span>:                  __ASSERT_NO_MSG(<span class="keyword">false</span>);               <span class="keywordflow">break</span>;                                    </div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    }</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276">remove</a>(filename.c_str());</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_UTIL</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        k_sleep(K_MSEC(30));</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    }</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        off_t ret2;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        ssize_t ret3;</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keyword">struct </span>fs_file_t* f;</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(filename.c_str(), FS_O_CREATE | FS_O_RDWR);</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        <span class="comment">// save to file</span></div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_SET);</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        __ASSERT_NO_MSG(ret2 != -1);</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, pCert, strlen(pCert));</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="comment">//return bBrokerSwitchRequested;</span></div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;    <span class="comment">//Disable Jovia Fallback Feature (AXFW23-623)</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;}</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a119aab00792ccace8235e70745c29498">certmgr::ClearBrokerSwitchRequested</a>() {</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <a class="code" href="classcertmgr.html#a8be16a6a4a8ecfa40776a4c5c1107003">bBrokerSwitchRequested</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;}</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160; </div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160; </div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">certmgr::writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker, <span class="keyword">const</span> <span class="keywordtype">char</span>* pCert) {</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    LOG_INF(<span class="stringliteral">&quot;writeDeviceCert&quot;</span>);</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    std::string filename;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keywordflow">switch</span> (broker) {</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>:       filename = <a class="code" href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a>;       <span class="keywordflow">break</span>;        </div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>: filename = <a class="code" href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        <span class="keywordflow">default</span>:                  __ASSERT_NO_MSG(<span class="keyword">false</span>);               <span class="keywordflow">break</span>;                                    </div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    }</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160; </div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276">remove</a>(filename.c_str());</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_UTIL</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        k_sleep(K_MSEC(30));</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    }</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        off_t ret2;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;        ssize_t ret3;</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="keyword">struct </span>fs_file_t* f;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(filename.c_str(), FS_O_CREATE | FS_O_RDWR);</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="comment">// save to file</span></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_SET);</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        __ASSERT_NO_MSG(ret2 != -1);</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, pCert, strlen(pCert));</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_UTIL</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        k_sleep(K_MSEC(30));</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    }</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;}</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160; </div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">certmgr::appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker, <span class="keyword">const</span> <span class="keywordtype">char</span>* pCert) {</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    LOG_INF(<span class="stringliteral">&quot;appendDeviceCert&quot;</span>);</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    std::string filename;</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordflow">switch</span> (broker) {</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>:       filename = <a class="code" href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a>;       <span class="keywordflow">break</span>;        </div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>: filename = <a class="code" href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a>; <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        <span class="keywordflow">default</span>:                  __ASSERT_NO_MSG(<span class="keyword">false</span>);               <span class="keywordflow">break</span>;                                    </div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    }</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        off_t ret2;</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        ssize_t ret3;</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <span class="keyword">struct </span>fs_file_t* f;</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(filename.c_str(), FS_O_RDWR | FS_O_APPEND);</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        <span class="comment">// save to file</span></div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_END);</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        __ASSERT_NO_MSG(ret2 != -1);</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, pCert, strlen(pCert));</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_UTIL</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        k_sleep(K_MSEC(30));</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;}</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">certmgr::appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker, <span class="keyword">const</span> <span class="keywordtype">char</span>* pCert) {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    LOG_INF(<span class="stringliteral">&quot;appendDeviceCert&quot;</span>);</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    std::string filename;</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    <span class="keywordflow">switch</span> (broker) {</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>:       filename = <a class="code" href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a>;       <span class="keywordflow">break</span>;        </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>: filename = <a class="code" href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keywordflow">default</span>:                  __ASSERT_NO_MSG(<span class="keyword">false</span>);               <span class="keywordflow">break</span>;                                    </div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    }</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        off_t ret2;</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        ssize_t ret3;</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <span class="keyword">struct </span>fs_file_t* f;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160; </div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(filename.c_str(), FS_O_RDWR | FS_O_APPEND);</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <span class="comment">// save to file</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_END);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;        __ASSERT_NO_MSG(ret2 != -1);</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, pCert, strlen(pCert));</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_UTIL</span></div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        k_sleep(K_MSEC(30));</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    }</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;        __ASSERT_NO_MSG(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    }</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;}</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">certmgr::appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker, <span class="keyword">const</span> <span class="keywordtype">char</span>* pCert) {</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    LOG_INF(<span class="stringliteral">&quot;appendDeviceKey&quot;</span>);</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(broker, pCert);</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;}</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160; </div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a1cb1bf8f3d38c020dd8a746f1d22cac2">certmgr::printCert</a>(<span class="keywordtype">char</span>* pCert) {</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    std::string certStr = pCert;</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    std::string partStr;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    std::size_t last_pos = 0;</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    std::size_t pos = 0;</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    </div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    <span class="keywordflow">while</span> (pos &lt; certStr.length()) {        </div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;        pos = certStr.find(<span class="stringliteral">&quot;\n&quot;</span>, last_pos);</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        partStr.assign(certStr, last_pos, pos - last_pos + 1);</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        LOG_PRINTK(<span class="stringliteral">&quot;%s&quot;</span>, partStr.c_str());</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        last_pos = pos + 1;</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    }</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;}</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a5d9d14f76663146e1c2f1c33242d5968">certmgr::readDeviceCertAndKey</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker) {</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;    LOG_INF(<span class="stringliteral">&quot;readDeviceCertAndKey&quot;</span>);</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    <span class="keyword">struct </span>fs_file_t* f;</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    ssize_t ret;</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keywordtype">int</span> ret2;</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    std::string filename;</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <span class="keywordflow">switch</span> (broker) {</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>:       filename = <a class="code" href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a>;       <span class="keywordflow">break</span>;        </div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>: filename = <a class="code" href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a>; <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        <span class="keywordflow">default</span>:                  __ASSERT_NO_MSG(<span class="keyword">false</span>);               <span class="keywordflow">break</span>;                                    </div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;    }</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(filename.c_str(), FS_O_READ);</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#ab40ac03c5347c00a05c803e41d6c735c">file_read</a>(f, <a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>, <span class="keyword">sizeof</span>(<a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>));</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        __ASSERT_NO_MSG(ret &gt; 0);</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        __ASSERT_NO_MSG(ret2 == 0);</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        <span class="comment">// Extract certificate and key</span></div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        std::string certStr = <a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>;</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        std::size_t pos = certStr.find(<span class="stringliteral">&quot;-----BEGIN PRIVATE KEY-----&quot;</span>);</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        <span class="keywordflow">if</span> (pos != std::string::npos) {</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            strcpy(&amp;<a class="code" href="classcertmgr.html#aa606aad2497e77899771c4194c976aca">keyBuf</a>[0], &amp;<a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>[pos]);</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;            <a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>[pos] = 0;</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            <span class="comment">//LOG_INF(&quot;key = &quot;);</span></div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            <span class="comment">//printCert(keyBuf);</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            <span class="comment">//LOG_INF(&quot;cert = &quot;);</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="comment">//printCert(certBuf);</span></div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        }</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            LOG_ERR(<span class="stringliteral">&quot;Device Key not found in Certificate File!&quot;</span>);</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        }</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    }</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        LOG_ERR(<span class="stringliteral">&quot;Device Certificate File not existing!&quot;</span>);</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    }</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;}</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160; </div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;std::string <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">certmgr::parseCert</a>(<span class="keywordtype">char</span>* pJsonBuf, <span class="keywordtype">char</span>* cmd) {</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;    LOG_INF(<span class="stringliteral">&quot;parseCert&quot;</span>);</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    std::string cert; </div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    std::string command;</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160; </div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>) cJSON_Delete(<a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>);</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_UTIL</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        k_sleep(K_MSEC(30));</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        __ASSERT_NO_MSG(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    }</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;}</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">certmgr::appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker, <span class="keyword">const</span> <span class="keywordtype">char</span>* pCert) {</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    LOG_INF(<span class="stringliteral">&quot;appendDeviceKey&quot;</span>);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(broker, pCert);</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;}</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a1cb1bf8f3d38c020dd8a746f1d22cac2">certmgr::printCert</a>(<span class="keywordtype">char</span>* pCert) {</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    std::string certStr = pCert;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    std::string partStr;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    std::size_t last_pos = 0;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    std::size_t pos = 0;</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    <span class="keywordflow">while</span> (pos &lt; certStr.length()) {        </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        pos = certStr.find(<span class="stringliteral">&quot;\n&quot;</span>, last_pos);</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        partStr.assign(certStr, last_pos, pos - last_pos + 1);</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        LOG_PRINTK(<span class="stringliteral">&quot;%s&quot;</span>, partStr.c_str());</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        last_pos = pos + 1;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    }</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;}</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160; </div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a5d9d14f76663146e1c2f1c33242d5968">certmgr::readDeviceCertAndKey</a>(<a class="code" href="certmgr_8h.html#ac9a7cf8e011af87f41e87f5eeb2e183a">enBroker</a> broker) {</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    LOG_INF(<span class="stringliteral">&quot;readDeviceCertAndKey&quot;</span>);</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;    <span class="keyword">struct </span>fs_file_t* f;</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    ssize_t ret;</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <span class="keywordtype">int</span> ret2;</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;    std::string filename;</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    <span class="keywordflow">switch</span> (broker) {</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>:       filename = <a class="code" href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a>;       <span class="keywordflow">break</span>;        </div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>: filename = <a class="code" href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        <span class="keywordflow">default</span>:                  __ASSERT_NO_MSG(<span class="keyword">false</span>);               <span class="keywordflow">break</span>;                                    </div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;    }</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160; </div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(filename.c_str())) {</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(filename.c_str(), FS_O_READ);</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#ab40ac03c5347c00a05c803e41d6c735c">file_read</a>(f, <a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>, <span class="keyword">sizeof</span>(<a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>));</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        __ASSERT_NO_MSG(ret &gt; 0);</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        __ASSERT_NO_MSG(ret2 == 0);</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        <span class="comment">// Extract certificate and key</span></div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;        std::string certStr = <a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>;</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        std::size_t pos = certStr.find(<span class="stringliteral">&quot;-----BEGIN PRIVATE KEY-----&quot;</span>);</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="keywordflow">if</span> (pos != std::string::npos) {</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            strcpy(&amp;<a class="code" href="classcertmgr.html#aa606aad2497e77899771c4194c976aca">keyBuf</a>[0], &amp;<a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>[pos]);</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;            <a class="code" href="classcertmgr.html#a615bad6a4e1bc9bf1a95a261ae5f1bf0">certBuf</a>[pos] = 0;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            <span class="comment">//LOG_INF(&quot;key = &quot;);</span></div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="comment">//printCert(keyBuf);</span></div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            <span class="comment">//LOG_INF(&quot;cert = &quot;);</span></div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="comment">//printCert(certBuf);</span></div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        }</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            LOG_ERR(<span class="stringliteral">&quot;Device Key not found in Certificate File!&quot;</span>);</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        }</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    }</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        LOG_ERR(<span class="stringliteral">&quot;Device Certificate File not existing!&quot;</span>);</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    }</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;}</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160; </div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;std::string <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">certmgr::parseCert</a>(<span class="keywordtype">char</span>* pJsonBuf, <span class="keywordtype">char</span>* cmd) {</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;    LOG_INF(<span class="stringliteral">&quot;parseCert&quot;</span>);</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;    std::string cert; </div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;    std::string command;</div>
 <div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160; </div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a> = cJSON_Parse((<span class="keyword">const</span> <span class="keywordtype">char</span>*)pJsonBuf);</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    __ASSERT_NO_MSG(cJSON_IsObject(<a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>));</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160; </div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    <span class="comment">// command node</span></div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;    <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a> = <a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>-&gt;child;</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    command = <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a>-&gt;valuestring;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    __ASSERT_NO_MSG(strcmp(command.c_str(), cmd) == 0);</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160; </div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a> = <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a>-&gt;next;</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    cert = <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a>-&gt;valuestring;</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    LOG_INF(<span class="stringliteral">&quot;cert = %s&quot;</span>, cert.c_str());</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;    <span class="keywordflow">return</span> cert;</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;}</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160; </div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a03e1e03938ee182860000094ae625913">certmgr::storeJoviaCert1</a>(<span class="keywordtype">char</span>* pBuf) {</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeJoviaCert1&quot;</span>);</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;    </div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_JOVIA1&quot;</span>);</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    <a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert.c_str());</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;}</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160; </div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#aa818420262a6d726a50f2123fc7a0fc1">certmgr::storeJoviaCert2</a>(<span class="keywordtype">char</span>* pBuf) {</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeJoviaCert2&quot;</span>);</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;    </div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_JOVIA2&quot;</span>);</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert.c_str());</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;}</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160; </div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a09decb14b305fcddbb4443b25fc69b81">certmgr::storeJoviaKey</a>(<span class="keywordtype">char</span>* pBuf) {</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeJoviaKey&quot;</span>);</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    </div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;KEY_JOVIA&quot;</span>);</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    <a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert.c_str());</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;}</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160; </div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a002c4a662311bf3504e9faebb6dadcd9">certmgr::storeThingsboardCert1</a>(<span class="keywordtype">char</span>* pBuf) {</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeThingsboardCert1&quot;</span>);</div>
-<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;    </div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_TB1&quot;</span>);</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    <a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert.c_str());</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;}</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160; </div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#adac4083d0c314e17ba9364c8b6bf8bdf">certmgr::storeThingsboardCert2</a>(<span class="keywordtype">char</span>* pBuf) {</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeThingsboardCert2&quot;</span>);</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    </div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_TB2&quot;</span>);</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert.c_str());</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;}</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160; </div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a96e78d5e925e8967498bcfc15077752c">certmgr::storeThingsboardKey</a>(<span class="keywordtype">char</span>* pBuf) {</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeThingsboardKey&quot;</span>);</div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    </div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;KEY_TB&quot;</span>);</div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    <a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert.c_str());</div>
-<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;}</div>
-<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160; </div>
-<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#ac8130054a623ef8f4c2a356369dab5c7">certmgr::GetFsStat</a>() {</div>
-<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;    <span class="keyword">struct </span>fs_statvfs stats;</div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a3c944d3ce468da33703772c73d3fa6a2">statvfs</a>(<span class="stringliteral">&quot;??&quot;</span>, &amp;stats);</div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    LOG_ERR(<span class="stringliteral">&quot;f_bsize: %lu f_frsize: %lu f_blocks: %lu f_bfree: %lu&quot;</span>,</div>
-<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;            stats.f_bsize, stats.f_frsize, stats.f_blocks, stats.f_bfree);</div>
-<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160; </div>
-<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;}</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>) cJSON_Delete(<a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>);</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a> = cJSON_Parse((<span class="keyword">const</span> <span class="keywordtype">char</span>*)pJsonBuf);</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    __ASSERT_NO_MSG(cJSON_IsObject(<a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>));</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160; </div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;    <span class="comment">// command node</span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a> = <a class="code" href="classcertmgr.html#a0432e69b1f1ae879b9e5670d05509b4d">root_obj</a>-&gt;child;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    command = <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a>-&gt;valuestring;</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    __ASSERT_NO_MSG(strcmp(command.c_str(), cmd) == 0);</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160; </div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a> = <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a>-&gt;next;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;    cert = <a class="code" href="classcertmgr.html#af3da6753e4916f328721d324d62af50d">child</a>-&gt;valuestring;</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;    LOG_INF(<span class="stringliteral">&quot;cert = %s&quot;</span>, cert.c_str());</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;    <span class="keywordflow">return</span> cert;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;}</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160; </div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a03e1e03938ee182860000094ae625913">certmgr::storeJoviaCert1</a>(<span class="keywordtype">char</span>* pBuf) {</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeJoviaCert1&quot;</span>);</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;    </div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_JOVIA1&quot;</span>);</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;    <a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert.c_str());</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;}</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160; </div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#aa818420262a6d726a50f2123fc7a0fc1">certmgr::storeJoviaCert2</a>(<span class="keywordtype">char</span>* pBuf) {</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeJoviaCert2&quot;</span>);</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    </div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_JOVIA2&quot;</span>);</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert.c_str());</div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;}</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160; </div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a09decb14b305fcddbb4443b25fc69b81">certmgr::storeJoviaKey</a>(<span class="keywordtype">char</span>* pBuf) {</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeJoviaKey&quot;</span>);</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;    </div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;KEY_JOVIA&quot;</span>);</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;    <a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert.c_str());</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;}</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160; </div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a002c4a662311bf3504e9faebb6dadcd9">certmgr::storeThingsboardCert1</a>(<span class="keywordtype">char</span>* pBuf) {</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeThingsboardCert1&quot;</span>);</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    </div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_TB1&quot;</span>);</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;    <a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert.c_str());</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;}</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160; </div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#adac4083d0c314e17ba9364c8b6bf8bdf">certmgr::storeThingsboardCert2</a>(<span class="keywordtype">char</span>* pBuf) {</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeThingsboardCert2&quot;</span>);</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;    </div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;CERT_TB2&quot;</span>);</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    <a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert.c_str());</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;}</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160; </div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a96e78d5e925e8967498bcfc15077752c">certmgr::storeThingsboardKey</a>(<span class="keywordtype">char</span>* pBuf) {</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    LOG_INF(<span class="stringliteral">&quot;storeThingsboardKey&quot;</span>);</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    </div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    std::string cert = <a class="code" href="classcertmgr.html#af54618982714450a2ef1e1a67df2cf8e">parseCert</a>(pBuf, (<span class="keywordtype">char</span>*)<span class="stringliteral">&quot;KEY_TB&quot;</span>);</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    <a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert.c_str());</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;}</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160; </div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#ac8130054a623ef8f4c2a356369dab5c7">certmgr::GetFsStat</a>() {</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;    <span class="keyword">struct </span>fs_statvfs stats;</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a3c944d3ce468da33703772c73d3fa6a2">statvfs</a>(<span class="stringliteral">&quot;??&quot;</span>, &amp;stats);</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;    LOG_ERR(<span class="stringliteral">&quot;f_bsize: %lu f_frsize: %lu f_blocks: %lu f_bfree: %lu&quot;</span>,</div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;            stats.f_bsize, stats.f_frsize, stats.f_blocks, stats.f_bfree);</div>
 <div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160; </div>
-<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a741f584cf7fb2eab9930bd83c56942a9">certmgr::EraseFs</a>() {</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1db7f084483fe1bc09d688e3d3a69eb4">unmount</a>();</div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#ac1fe59dfffb46bf7a6b6e931356631aa">eraseFs</a>();</div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;}</div>
-<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160; </div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">certmgr::ListFs</a>() {</div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#acce742985aefdf84d4d8d24248571043">file_tree</a>(<span class="stringliteral">&quot;/lfs&quot;</span>);</div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;}</div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160; </div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//USE_BROKER_SWITCHING</span></div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;}</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160; </div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#a741f584cf7fb2eab9930bd83c56942a9">certmgr::EraseFs</a>() {</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1db7f084483fe1bc09d688e3d3a69eb4">unmount</a>();</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#ac1fe59dfffb46bf7a6b6e931356631aa">eraseFs</a>();</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;}</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160; </div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">certmgr::ListFs</a>() {</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;    <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#acce742985aefdf84d4d8d24248571043">file_tree</a>(<span class="stringliteral">&quot;/lfs&quot;</span>);</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;}</div>
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160; </div>
-<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160; </div>
-<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_CA_CHAIN</span></div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceCert[] = {</div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;<span class="stringliteral">&quot;MIICPzCCAeagAwIBAgIQIW5FM0VZXTGsqziTNvxaNDAKBggqhkjOPQQDAjAoMSYw\n&quot;</span></div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;<span class="stringliteral">&quot;JAYDVQQDEx1Kb3ZpYSBDbG91ZCBJbnRlcm1lZGlhdGUgQ0EgMTAeFw0yNDEyMDIw\n&quot;</span></div>
-<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;<span class="stringliteral">&quot;NzI2NDBaFw0zNDExMzAwNzI3NDBaMBoxGDAWBgNVBAMTDzM1MDkxNjA2NjgzMjEw\n&quot;</span></div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;<span class="stringliteral">&quot;OTB2MBAGByqGSM49AgEGBSuBBAAiA2IABItvCm6Jt7pFQTl+G9Rw2d+BRzZkBJ1R\n&quot;</span></div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;<span class="stringliteral">&quot;F8B6iZN+9u4NUDGEa0QVm9CfHGWdRgdsRab84EphBcqT7nYxnUoS40utTZGWJpJK\n&quot;</span></div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;<span class="stringliteral">&quot;Zn6lgXiXO6hr49MScrGGjnHE+fI/IvroHaOB4jCB3zAOBgNVHQ8BAf8EBAMCB4Aw\n&quot;</span></div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="stringliteral">&quot;HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB0GA1UdDgQWBBQ7E1N3S/Bd\n&quot;</span></div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;<span class="stringliteral">&quot;r4DwL6QcmM4zM5kbpTAfBgNVHSMEGDAWgBSYCpcS6Ih4S+C+j1/oP5ddA+NLYTAa\n&quot;</span></div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;<span class="stringliteral">&quot;BgNVHREEEzARgg8zNTA5MTYwNjY4MzIxMDkwUgYMKwYBBAGCpGTGKEABBEIwQAIB\n&quot;</span></div>
-<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;<span class="stringliteral">&quot;AQQObWVwLWRldkBuYnQuYWcEK3Zham9weVcxMnV6SGZWbGlOWGh2TlpCR251N3hW\n&quot;</span></div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;<span class="stringliteral">&quot;M2NOM3FMbHBsYmtsSjgwCgYIKoZIzj0EAwIDRwAwRAIgEtp9FtILetv0+Lq1BXul\n&quot;</span></div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="stringliteral">&quot;Lgw0V3Hw4yCmOPEoPQpzv/YCIBMqNNeGs/jn4ghVCKOGNVxvXcTggJDjUSxKG2bh\n&quot;</span></div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="stringliteral">&quot;I21L\n&quot;</span></div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="stringliteral">&quot;MIIBqzCCAVCgAwIBAgIQJfHMU50U/NMgTpFYuEs8ZzAKBggqhkjOPQQDAjAeMRww\n&quot;</span></div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;<span class="stringliteral">&quot;GgYDVQQDExNKb3ZpYSBDbG91ZCBSb290IENBMB4XDTI0MDEyMTAyMzc0M1oXDTM0\n&quot;</span></div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;<span class="stringliteral">&quot;MDExODAyMzc0M1owKDEmMCQGA1UEAxMdSm92aWEgQ2xvdWQgSW50ZXJtZWRpYXRl\n&quot;</span></div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;<span class="stringliteral">&quot;IENBIDEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR2W4ZU1wnvMZAdrcFzpciJ\n&quot;</span></div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;<span class="stringliteral">&quot;toNobANHQvt34w5auEozV8qtC284yDBC3hQEOg0VwRHRwT6Tyq1UbQO+amzEuVbM\n&quot;</span></div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="stringliteral">&quot;o2YwZDAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4E\n&quot;</span></div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;<span class="stringliteral">&quot;FgQUmAqXEuiIeEvgvo9f6D+XXQPjS2EwHwYDVR0jBBgwFoAUFEM2ZQbYBuFOlcFl\n&quot;</span></div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="stringliteral">&quot;wzJUYFBFozwwCgYIKoZIzj0EAwIDSQAwRgIhANESFU4rxn2JOdx/EWqPspDrD1AY\n&quot;</span></div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="stringliteral">&quot;4yA/wBiBi+kbiollAiEAmHMgRIs1A7WWo2yFENuJ3FZqAVszKxMcKgGaRH7DXeA=\n&quot;</span></div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;};</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160; </div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceCert1[] = {</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;<span class="stringliteral">&quot;MIICPzCCAeagAwIBAgIQIW5FM0VZXTGsqziTNvxaNDAKBggqhkjOPQQDAjAoMSYw\n&quot;</span></div>
-<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;<span class="stringliteral">&quot;JAYDVQQDEx1Kb3ZpYSBDbG91ZCBJbnRlcm1lZGlhdGUgQ0EgMTAeFw0yNDEyMDIw\n&quot;</span></div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;<span class="stringliteral">&quot;NzI2NDBaFw0zNDExMzAwNzI3NDBaMBoxGDAWBgNVBAMTDzM1MDkxNjA2NjgzMjEw\n&quot;</span></div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;<span class="stringliteral">&quot;OTB2MBAGByqGSM49AgEGBSuBBAAiA2IABItvCm6Jt7pFQTl+G9Rw2d+BRzZkBJ1R\n&quot;</span></div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;<span class="stringliteral">&quot;F8B6iZN+9u4NUDGEa0QVm9CfHGWdRgdsRab84EphBcqT7nYxnUoS40utTZGWJpJK\n&quot;</span></div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;<span class="stringliteral">&quot;Zn6lgXiXO6hr49MScrGGjnHE+fI/IvroHaOB4jCB3zAOBgNVHQ8BAf8EBAMCB4Aw\n&quot;</span></div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;<span class="stringliteral">&quot;HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB0GA1UdDgQWBBQ7E1N3S/Bd\n&quot;</span></div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;<span class="stringliteral">&quot;r4DwL6QcmM4zM5kbpTAfBgNVHSMEGDAWgBSYCpcS6Ih4S+C+j1/oP5ddA+NLYTAa\n&quot;</span></div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="stringliteral">&quot;BgNVHREEEzARgg8zNTA5MTYwNjY4MzIxMDkwUgYMKwYBBAGCpGTGKEABBEIwQAIB\n&quot;</span></div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<span class="stringliteral">&quot;AQQObWVwLWRldkBuYnQuYWcEK3Zham9weVcxMnV6SGZWbGlOWGh2TlpCR251N3hW\n&quot;</span></div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="stringliteral">&quot;M2NOM3FMbHBsYmtsSjgwCgYIKoZIzj0EAwIDRwAwRAIgEtp9FtILetv0+Lq1BXul\n&quot;</span></div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="stringliteral">&quot;Lgw0V3Hw4yCmOPEoPQpzv/YCIBMqNNeGs/jn4ghVCKOGNVxvXcTggJDjUSxKG2bh\n&quot;</span></div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="stringliteral">&quot;I21L\n&quot;</span></div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;};</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceCert2[] = {</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="stringliteral">&quot;MIIBqzCCAVCgAwIBAgIQJfHMU50U/NMgTpFYuEs8ZzAKBggqhkjOPQQDAjAeMRww\n&quot;</span></div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="stringliteral">&quot;GgYDVQQDExNKb3ZpYSBDbG91ZCBSb290IENBMB4XDTI0MDEyMTAyMzc0M1oXDTM0\n&quot;</span></div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="stringliteral">&quot;MDExODAyMzc0M1owKDEmMCQGA1UEAxMdSm92aWEgQ2xvdWQgSW50ZXJtZWRpYXRl\n&quot;</span></div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;<span class="stringliteral">&quot;IENBIDEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR2W4ZU1wnvMZAdrcFzpciJ\n&quot;</span></div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;<span class="stringliteral">&quot;toNobANHQvt34w5auEozV8qtC284yDBC3hQEOg0VwRHRwT6Tyq1UbQO+amzEuVbM\n&quot;</span></div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;<span class="stringliteral">&quot;o2YwZDAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4E\n&quot;</span></div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;<span class="stringliteral">&quot;FgQUmAqXEuiIeEvgvo9f6D+XXQPjS2EwHwYDVR0jBBgwFoAUFEM2ZQbYBuFOlcFl\n&quot;</span></div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;<span class="stringliteral">&quot;wzJUYFBFozwwCgYIKoZIzj0EAwIDSQAwRgIhANESFU4rxn2JOdx/EWqPspDrD1AY\n&quot;</span></div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;<span class="stringliteral">&quot;4yA/wBiBi+kbiollAiEAmHMgRIs1A7WWo2yFENuJ3FZqAVszKxMcKgGaRH7DXeA=\n&quot;</span></div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;};</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160; </div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_PRIVATE_CERT</span></div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceKey[] = {</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;<span class="stringliteral">&quot;-----BEGIN PRIVATE KEY-----\n&quot;</span></div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;<span class="stringliteral">&quot;MIG2AgEAMBAGByqGSM49AgEGBSuBBAAiBIGeMIGbAgEBBDDYSMuSDUTp0Z3ul9tm\n&quot;</span></div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="stringliteral">&quot;BbgsTYU4opg1+H5aB1sooz/zVsCufd5wfVL3vyzrly8vXcOhZANiAASLbwpuibe6\n&quot;</span></div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="stringliteral">&quot;RUE5fhvUcNnfgUc2ZASdURfAeomTfvbuDVAxhGtEFZvQnxxlnUYHbEWm/OBKYQXK\n&quot;</span></div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="stringliteral">&quot;k+52MZ1KEuNLrU2RliaSSmZ+pYF4lzuoa+PTEnKxho5xxPnyPyL66B0=\n&quot;</span></div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;<span class="stringliteral">&quot;-----END PRIVATE KEY-----\n&quot;</span></div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;};</div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160; </div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160; </div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_CA_CHAIN</span></div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceCert[] = {</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="stringliteral">&quot;MIICRDCCAesCFE9Ma9vYPkP/ShqykKzccwBFXUZrMAoGCCqGSM49BAMCMIGbMQsw\n&quot;</span></div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2\n&quot;</span></div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="stringliteral">&quot;cG9vbC5uZXQwIBcNMjQwNjE0MTUzNTExWhgPMjEyNDA1MjExNTM1MTFaMIGrMQsw\n&quot;</span></div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEwMC4GA1UEAwwnMzUwOTE2MDY2ODMyMTA5\n&quot;</span></div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="stringliteral">&quot;LngxLmF4by1tcXR0LmRldnBvb2wubmV0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcD\n&quot;</span></div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;<span class="stringliteral">&quot;QgAEYLcXIeFlNEYBEivoh2sInvN/5VIw8ekYkAZCezxVMCeguKlSdKdCXfGaPT1V\n&quot;</span></div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;<span class="stringliteral">&quot;SP0t07EtR0Bdx+X/Lk+X7cY74jAKBggqhkjOPQQDAgNHADBEAiAOO7zkBa/T4WM2\n&quot;</span></div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;<span class="stringliteral">&quot;31epoLbMsbMGWJwEwVd0rhNLvO41agIgIF3MhjOlO5xouGGPxVBr7z+AD+wGHX1X\n&quot;</span></div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;<span class="stringliteral">&quot;pKk+o8Vppes=\n&quot;</span></div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;<span class="stringliteral">&quot;MIICMjCCAdgCFG3OcBCwnORfw9Tz8U/jv3ewTRbxMAoGCCqGSM49BAMCMIGYMQsw\n&quot;</span></div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
-<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEdMBsGA1UEAwwUYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;<span class="stringliteral">&quot;bC5uZXQwIBcNMjQwNjEzMTIzNjA3WhgPMjEyNDA1MjAxMjM2MDdaMIGbMQswCQYD\n&quot;</span></div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;<span class="stringliteral">&quot;VQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTATBgNV\n&quot;</span></div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="stringliteral">&quot;BAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkBFhR2\n&quot;</span></div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;<span class="stringliteral">&quot;b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;<span class="stringliteral">&quot;bC5uZXQwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR4zBICvwP0breI62XczosW\n&quot;</span></div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="stringliteral">&quot;cchs40LHvC0adoUsHXp1htps6KCZHm1Bf2cMVdJIqQeHV3Qn8plxyE9HTIFbA9be\n&quot;</span></div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;<span class="stringliteral">&quot;MAoGCCqGSM49BAMCA0gAMEUCIC7yMATh/USYZXp4J5n3AVPRUjgl0cnO3gFqSm4P\n&quot;</span></div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;<span class="stringliteral">&quot;185QAiEArvQj6rgEcZwVz0VeEZx4P7Cjr87TpbMBNa2quLSgxK0=\n&quot;</span></div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----&quot;</span></div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;};</div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceCert1[] = {</div>
-<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;<span class="stringliteral">&quot;MIICRDCCAesCFE9Ma9vYPkP/ShqykKzccwBFXUZrMAoGCCqGSM49BAMCMIGbMQsw\n&quot;</span></div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2\n&quot;</span></div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;<span class="stringliteral">&quot;cG9vbC5uZXQwIBcNMjQwNjE0MTUzNTExWhgPMjEyNDA1MjExNTM1MTFaMIGrMQsw\n&quot;</span></div>
-<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEwMC4GA1UEAwwnMzUwOTE2MDY2ODMyMTA5\n&quot;</span></div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;<span class="stringliteral">&quot;LngxLmF4by1tcXR0LmRldnBvb2wubmV0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcD\n&quot;</span></div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;<span class="stringliteral">&quot;QgAEYLcXIeFlNEYBEivoh2sInvN/5VIw8ekYkAZCezxVMCeguKlSdKdCXfGaPT1V\n&quot;</span></div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;<span class="stringliteral">&quot;SP0t07EtR0Bdx+X/Lk+X7cY74jAKBggqhkjOPQQDAgNHADBEAiAOO7zkBa/T4WM2\n&quot;</span></div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;<span class="stringliteral">&quot;31epoLbMsbMGWJwEwVd0rhNLvO41agIgIF3MhjOlO5xouGGPxVBr7z+AD+wGHX1X\n&quot;</span></div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;<span class="stringliteral">&quot;pKk+o8Vppes=\n&quot;</span></div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;};</div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceCert2[] = {</div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;<span class="stringliteral">&quot;MIICMjCCAdgCFG3OcBCwnORfw9Tz8U/jv3ewTRbxMAoGCCqGSM49BAMCMIGYMQsw\n&quot;</span></div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEdMBsGA1UEAwwUYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;<span class="stringliteral">&quot;bC5uZXQwIBcNMjQwNjEzMTIzNjA3WhgPMjEyNDA1MjAxMjM2MDdaMIGbMQswCQYD\n&quot;</span></div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;<span class="stringliteral">&quot;VQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTATBgNV\n&quot;</span></div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;<span class="stringliteral">&quot;BAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkBFhR2\n&quot;</span></div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="stringliteral">&quot;b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="stringliteral">&quot;bC5uZXQwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR4zBICvwP0breI62XczosW\n&quot;</span></div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;<span class="stringliteral">&quot;cchs40LHvC0adoUsHXp1htps6KCZHm1Bf2cMVdJIqQeHV3Qn8plxyE9HTIFbA9be\n&quot;</span></div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="stringliteral">&quot;MAoGCCqGSM49BAMCA0gAMEUCIC7yMATh/USYZXp4J5n3AVPRUjgl0cnO3gFqSm4P\n&quot;</span></div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;<span class="stringliteral">&quot;185QAiEArvQj6rgEcZwVz0VeEZx4P7Cjr87TpbMBNa2quLSgxK0=\n&quot;</span></div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;};</div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160; </div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_PRIVATE_CERT</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceKey[] = {</div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="stringliteral">&quot;-----BEGIN PRIVATE KEY-----\n&quot;</span></div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;<span class="stringliteral">&quot;MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg/43Lpwv7Pdnni9h0\n&quot;</span></div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;<span class="stringliteral">&quot;w+o7UdlT5n5nBr0k86QLxSS/oXmhRANCAARgtxch4WU0RgESK+iHawie83/lUjDx\n&quot;</span></div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="stringliteral">&quot;6RiQBkJ7PFUwJ6C4qVJ0p0Jd8Zo9PVVI/S3TsS1HQF3H5f8uT5ftxjvi\n&quot;</span></div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;<span class="stringliteral">&quot;-----END PRIVATE KEY-----\n&quot;</span></div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;};</div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160; </div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;hello from main&quot;</span>);</div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    <span class="keywordtype">bool</span> b1;</div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160; </div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//USE_BROKER_SWITCHING</span></div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160; </div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160; </div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_CA_CHAIN</span></div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceCert[] = {</div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;<span class="stringliteral">&quot;MIICPzCCAeagAwIBAgIQIW5FM0VZXTGsqziTNvxaNDAKBggqhkjOPQQDAjAoMSYw\n&quot;</span></div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;<span class="stringliteral">&quot;JAYDVQQDEx1Kb3ZpYSBDbG91ZCBJbnRlcm1lZGlhdGUgQ0EgMTAeFw0yNDEyMDIw\n&quot;</span></div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;<span class="stringliteral">&quot;NzI2NDBaFw0zNDExMzAwNzI3NDBaMBoxGDAWBgNVBAMTDzM1MDkxNjA2NjgzMjEw\n&quot;</span></div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;<span class="stringliteral">&quot;OTB2MBAGByqGSM49AgEGBSuBBAAiA2IABItvCm6Jt7pFQTl+G9Rw2d+BRzZkBJ1R\n&quot;</span></div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="stringliteral">&quot;F8B6iZN+9u4NUDGEa0QVm9CfHGWdRgdsRab84EphBcqT7nYxnUoS40utTZGWJpJK\n&quot;</span></div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;<span class="stringliteral">&quot;Zn6lgXiXO6hr49MScrGGjnHE+fI/IvroHaOB4jCB3zAOBgNVHQ8BAf8EBAMCB4Aw\n&quot;</span></div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;<span class="stringliteral">&quot;HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB0GA1UdDgQWBBQ7E1N3S/Bd\n&quot;</span></div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;<span class="stringliteral">&quot;r4DwL6QcmM4zM5kbpTAfBgNVHSMEGDAWgBSYCpcS6Ih4S+C+j1/oP5ddA+NLYTAa\n&quot;</span></div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;<span class="stringliteral">&quot;BgNVHREEEzARgg8zNTA5MTYwNjY4MzIxMDkwUgYMKwYBBAGCpGTGKEABBEIwQAIB\n&quot;</span></div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="stringliteral">&quot;AQQObWVwLWRldkBuYnQuYWcEK3Zham9weVcxMnV6SGZWbGlOWGh2TlpCR251N3hW\n&quot;</span></div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;<span class="stringliteral">&quot;M2NOM3FMbHBsYmtsSjgwCgYIKoZIzj0EAwIDRwAwRAIgEtp9FtILetv0+Lq1BXul\n&quot;</span></div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;<span class="stringliteral">&quot;Lgw0V3Hw4yCmOPEoPQpzv/YCIBMqNNeGs/jn4ghVCKOGNVxvXcTggJDjUSxKG2bh\n&quot;</span></div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;<span class="stringliteral">&quot;I21L\n&quot;</span></div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;<span class="stringliteral">&quot;MIIBqzCCAVCgAwIBAgIQJfHMU50U/NMgTpFYuEs8ZzAKBggqhkjOPQQDAjAeMRww\n&quot;</span></div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;<span class="stringliteral">&quot;GgYDVQQDExNKb3ZpYSBDbG91ZCBSb290IENBMB4XDTI0MDEyMTAyMzc0M1oXDTM0\n&quot;</span></div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;<span class="stringliteral">&quot;MDExODAyMzc0M1owKDEmMCQGA1UEAxMdSm92aWEgQ2xvdWQgSW50ZXJtZWRpYXRl\n&quot;</span></div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;<span class="stringliteral">&quot;IENBIDEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR2W4ZU1wnvMZAdrcFzpciJ\n&quot;</span></div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;<span class="stringliteral">&quot;toNobANHQvt34w5auEozV8qtC284yDBC3hQEOg0VwRHRwT6Tyq1UbQO+amzEuVbM\n&quot;</span></div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;<span class="stringliteral">&quot;o2YwZDAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4E\n&quot;</span></div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;<span class="stringliteral">&quot;FgQUmAqXEuiIeEvgvo9f6D+XXQPjS2EwHwYDVR0jBBgwFoAUFEM2ZQbYBuFOlcFl\n&quot;</span></div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="stringliteral">&quot;wzJUYFBFozwwCgYIKoZIzj0EAwIDSQAwRgIhANESFU4rxn2JOdx/EWqPspDrD1AY\n&quot;</span></div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;<span class="stringliteral">&quot;4yA/wBiBi+kbiollAiEAmHMgRIs1A7WWo2yFENuJ3FZqAVszKxMcKgGaRH7DXeA=\n&quot;</span></div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;};</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160; </div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceCert1[] = {</div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;<span class="stringliteral">&quot;MIICPzCCAeagAwIBAgIQIW5FM0VZXTGsqziTNvxaNDAKBggqhkjOPQQDAjAoMSYw\n&quot;</span></div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;<span class="stringliteral">&quot;JAYDVQQDEx1Kb3ZpYSBDbG91ZCBJbnRlcm1lZGlhdGUgQ0EgMTAeFw0yNDEyMDIw\n&quot;</span></div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;<span class="stringliteral">&quot;NzI2NDBaFw0zNDExMzAwNzI3NDBaMBoxGDAWBgNVBAMTDzM1MDkxNjA2NjgzMjEw\n&quot;</span></div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;<span class="stringliteral">&quot;OTB2MBAGByqGSM49AgEGBSuBBAAiA2IABItvCm6Jt7pFQTl+G9Rw2d+BRzZkBJ1R\n&quot;</span></div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;<span class="stringliteral">&quot;F8B6iZN+9u4NUDGEa0QVm9CfHGWdRgdsRab84EphBcqT7nYxnUoS40utTZGWJpJK\n&quot;</span></div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;<span class="stringliteral">&quot;Zn6lgXiXO6hr49MScrGGjnHE+fI/IvroHaOB4jCB3zAOBgNVHQ8BAf8EBAMCB4Aw\n&quot;</span></div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;<span class="stringliteral">&quot;HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMB0GA1UdDgQWBBQ7E1N3S/Bd\n&quot;</span></div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;<span class="stringliteral">&quot;r4DwL6QcmM4zM5kbpTAfBgNVHSMEGDAWgBSYCpcS6Ih4S+C+j1/oP5ddA+NLYTAa\n&quot;</span></div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;<span class="stringliteral">&quot;BgNVHREEEzARgg8zNTA5MTYwNjY4MzIxMDkwUgYMKwYBBAGCpGTGKEABBEIwQAIB\n&quot;</span></div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;<span class="stringliteral">&quot;AQQObWVwLWRldkBuYnQuYWcEK3Zham9weVcxMnV6SGZWbGlOWGh2TlpCR251N3hW\n&quot;</span></div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;<span class="stringliteral">&quot;M2NOM3FMbHBsYmtsSjgwCgYIKoZIzj0EAwIDRwAwRAIgEtp9FtILetv0+Lq1BXul\n&quot;</span></div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;<span class="stringliteral">&quot;Lgw0V3Hw4yCmOPEoPQpzv/YCIBMqNNeGs/jn4ghVCKOGNVxvXcTggJDjUSxKG2bh\n&quot;</span></div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;<span class="stringliteral">&quot;I21L\n&quot;</span></div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;};</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceCert2[] = {</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;<span class="stringliteral">&quot;MIIBqzCCAVCgAwIBAgIQJfHMU50U/NMgTpFYuEs8ZzAKBggqhkjOPQQDAjAeMRww\n&quot;</span></div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;<span class="stringliteral">&quot;GgYDVQQDExNKb3ZpYSBDbG91ZCBSb290IENBMB4XDTI0MDEyMTAyMzc0M1oXDTM0\n&quot;</span></div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;<span class="stringliteral">&quot;MDExODAyMzc0M1owKDEmMCQGA1UEAxMdSm92aWEgQ2xvdWQgSW50ZXJtZWRpYXRl\n&quot;</span></div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;<span class="stringliteral">&quot;IENBIDEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR2W4ZU1wnvMZAdrcFzpciJ\n&quot;</span></div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;<span class="stringliteral">&quot;toNobANHQvt34w5auEozV8qtC284yDBC3hQEOg0VwRHRwT6Tyq1UbQO+amzEuVbM\n&quot;</span></div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;<span class="stringliteral">&quot;o2YwZDAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBADAdBgNVHQ4E\n&quot;</span></div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;<span class="stringliteral">&quot;FgQUmAqXEuiIeEvgvo9f6D+XXQPjS2EwHwYDVR0jBBgwFoAUFEM2ZQbYBuFOlcFl\n&quot;</span></div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="stringliteral">&quot;wzJUYFBFozwwCgYIKoZIzj0EAwIDSQAwRgIhANESFU4rxn2JOdx/EWqPspDrD1AY\n&quot;</span></div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;<span class="stringliteral">&quot;4yA/wBiBi+kbiollAiEAmHMgRIs1A7WWo2yFENuJ3FZqAVszKxMcKgGaRH7DXeA=\n&quot;</span></div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;};</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160; </div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_PRIVATE_CERT</span></div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> JoviaDeviceKey[] = {</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;<span class="stringliteral">&quot;-----BEGIN PRIVATE KEY-----\n&quot;</span></div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;<span class="stringliteral">&quot;MIG2AgEAMBAGByqGSM49AgEGBSuBBAAiBIGeMIGbAgEBBDDYSMuSDUTp0Z3ul9tm\n&quot;</span></div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;<span class="stringliteral">&quot;BbgsTYU4opg1+H5aB1sooz/zVsCufd5wfVL3vyzrly8vXcOhZANiAASLbwpuibe6\n&quot;</span></div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;<span class="stringliteral">&quot;RUE5fhvUcNnfgUc2ZASdURfAeomTfvbuDVAxhGtEFZvQnxxlnUYHbEWm/OBKYQXK\n&quot;</span></div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;<span class="stringliteral">&quot;k+52MZ1KEuNLrU2RliaSSmZ+pYF4lzuoa+PTEnKxho5xxPnyPyL66B0=\n&quot;</span></div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;<span class="stringliteral">&quot;-----END PRIVATE KEY-----\n&quot;</span></div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;};</div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160; </div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160; </div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_CA_CHAIN</span></div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceCert[] = {</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;<span class="stringliteral">&quot;MIICRDCCAesCFE9Ma9vYPkP/ShqykKzccwBFXUZrMAoGCCqGSM49BAMCMIGbMQsw\n&quot;</span></div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2\n&quot;</span></div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="stringliteral">&quot;cG9vbC5uZXQwIBcNMjQwNjE0MTUzNTExWhgPMjEyNDA1MjExNTM1MTFaMIGrMQsw\n&quot;</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEwMC4GA1UEAwwnMzUwOTE2MDY2ODMyMTA5\n&quot;</span></div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;<span class="stringliteral">&quot;LngxLmF4by1tcXR0LmRldnBvb2wubmV0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcD\n&quot;</span></div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;<span class="stringliteral">&quot;QgAEYLcXIeFlNEYBEivoh2sInvN/5VIw8ekYkAZCezxVMCeguKlSdKdCXfGaPT1V\n&quot;</span></div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;<span class="stringliteral">&quot;SP0t07EtR0Bdx+X/Lk+X7cY74jAKBggqhkjOPQQDAgNHADBEAiAOO7zkBa/T4WM2\n&quot;</span></div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;<span class="stringliteral">&quot;31epoLbMsbMGWJwEwVd0rhNLvO41agIgIF3MhjOlO5xouGGPxVBr7z+AD+wGHX1X\n&quot;</span></div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;<span class="stringliteral">&quot;pKk+o8Vppes=\n&quot;</span></div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;<span class="stringliteral">&quot;MIICMjCCAdgCFG3OcBCwnORfw9Tz8U/jv3ewTRbxMAoGCCqGSM49BAMCMIGYMQsw\n&quot;</span></div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEdMBsGA1UEAwwUYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="stringliteral">&quot;bC5uZXQwIBcNMjQwNjEzMTIzNjA3WhgPMjEyNDA1MjAxMjM2MDdaMIGbMQswCQYD\n&quot;</span></div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;<span class="stringliteral">&quot;VQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTATBgNV\n&quot;</span></div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;<span class="stringliteral">&quot;BAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkBFhR2\n&quot;</span></div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;<span class="stringliteral">&quot;b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;<span class="stringliteral">&quot;bC5uZXQwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR4zBICvwP0breI62XczosW\n&quot;</span></div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;<span class="stringliteral">&quot;cchs40LHvC0adoUsHXp1htps6KCZHm1Bf2cMVdJIqQeHV3Qn8plxyE9HTIFbA9be\n&quot;</span></div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;<span class="stringliteral">&quot;MAoGCCqGSM49BAMCA0gAMEUCIC7yMATh/USYZXp4J5n3AVPRUjgl0cnO3gFqSm4P\n&quot;</span></div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;<span class="stringliteral">&quot;185QAiEArvQj6rgEcZwVz0VeEZx4P7Cjr87TpbMBNa2quLSgxK0=\n&quot;</span></div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----&quot;</span></div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;};</div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceCert1[] = {</div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;<span class="stringliteral">&quot;MIICRDCCAesCFE9Ma9vYPkP/ShqykKzccwBFXUZrMAoGCCqGSM49BAMCMIGbMQsw\n&quot;</span></div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2\n&quot;</span></div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;<span class="stringliteral">&quot;cG9vbC5uZXQwIBcNMjQwNjE0MTUzNTExWhgPMjEyNDA1MjExNTM1MTFaMIGrMQsw\n&quot;</span></div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEwMC4GA1UEAwwnMzUwOTE2MDY2ODMyMTA5\n&quot;</span></div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;<span class="stringliteral">&quot;LngxLmF4by1tcXR0LmRldnBvb2wubmV0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcD\n&quot;</span></div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;<span class="stringliteral">&quot;QgAEYLcXIeFlNEYBEivoh2sInvN/5VIw8ekYkAZCezxVMCeguKlSdKdCXfGaPT1V\n&quot;</span></div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;<span class="stringliteral">&quot;SP0t07EtR0Bdx+X/Lk+X7cY74jAKBggqhkjOPQQDAgNHADBEAiAOO7zkBa/T4WM2\n&quot;</span></div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;<span class="stringliteral">&quot;31epoLbMsbMGWJwEwVd0rhNLvO41agIgIF3MhjOlO5xouGGPxVBr7z+AD+wGHX1X\n&quot;</span></div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;<span class="stringliteral">&quot;pKk+o8Vppes=\n&quot;</span></div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;};</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceCert2[] = {</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;<span class="stringliteral">&quot;-----BEGIN CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;<span class="stringliteral">&quot;MIICMjCCAdgCFG3OcBCwnORfw9Tz8U/jv3ewTRbxMAoGCCqGSM49BAMCMIGYMQsw\n&quot;</span></div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;<span class="stringliteral">&quot;CQYDVQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTAT\n&quot;</span></div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;<span class="stringliteral">&quot;BgNVBAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkB\n&quot;</span></div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;<span class="stringliteral">&quot;FhR2b2xrbWFubkBkZXZwb29sLm5ldDEdMBsGA1UEAwwUYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;<span class="stringliteral">&quot;bC5uZXQwIBcNMjQwNjEzMTIzNjA3WhgPMjEyNDA1MjAxMjM2MDdaMIGbMQswCQYD\n&quot;</span></div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="stringliteral">&quot;VQQGEwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTATBgNV\n&quot;</span></div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="stringliteral">&quot;BAoMDERldnBvb2wgR21iSDEMMAoGA1UECwwDUnVEMSMwIQYJKoZIhvcNAQkBFhR2\n&quot;</span></div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;<span class="stringliteral">&quot;b2xrbWFubkBkZXZwb29sLm5ldDEgMB4GA1UEAwwXeDEuYXhvLW1xdHQuZGV2cG9v\n&quot;</span></div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="stringliteral">&quot;bC5uZXQwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR4zBICvwP0breI62XczosW\n&quot;</span></div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;<span class="stringliteral">&quot;cchs40LHvC0adoUsHXp1htps6KCZHm1Bf2cMVdJIqQeHV3Qn8plxyE9HTIFbA9be\n&quot;</span></div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;<span class="stringliteral">&quot;MAoGCCqGSM49BAMCA0gAMEUCIC7yMATh/USYZXp4J5n3AVPRUjgl0cnO3gFqSm4P\n&quot;</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;<span class="stringliteral">&quot;185QAiEArvQj6rgEcZwVz0VeEZx4P7Cjr87TpbMBNa2quLSgxK0=\n&quot;</span></div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;<span class="stringliteral">&quot;-----END CERTIFICATE-----\n&quot;</span></div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;};</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160; </div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="comment">// type = MODEM_KEY_MGMT_CRED_TYPE_PRIVATE_CERT</span></div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> ThingsboardDeviceKey[] = {</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;<span class="stringliteral">&quot;-----BEGIN PRIVATE KEY-----\n&quot;</span></div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="stringliteral">&quot;MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg/43Lpwv7Pdnni9h0\n&quot;</span></div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;<span class="stringliteral">&quot;w+o7UdlT5n5nBr0k86QLxSS/oXmhRANCAARgtxch4WU0RgESK+iHawie83/lUjDx\n&quot;</span></div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;<span class="stringliteral">&quot;6RiQBkJ7PFUwJ6C4qVJ0p0Jd8Zo9PVVI/S3TsS1HQF3H5f8uT5ftxjvi\n&quot;</span></div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;<span class="stringliteral">&quot;-----END PRIVATE KEY-----\n&quot;</span></div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;};</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160; </div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;hello from main&quot;</span>);</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    <span class="keywordtype">bool</span> b1;</div>
 <div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160; </div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;    b1 = <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#acaa47cb858edbe466a2e1821b932e0d2">CheckCertExistInModem</a>(MODEM_KEY_MGMT_CRED_TYPE_CA_CHAIN);</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    LOG_INF(<span class="stringliteral">&quot;ROOT, CheckCertExistInModem = %d&quot;</span>, (<span class="keywordtype">int</span>)b1);</div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    b1 = <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#acaa47cb858edbe466a2e1821b932e0d2">CheckCertExistInModem</a>(MODEM_KEY_MGMT_CRED_TYPE_PUBLIC_CERT);</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;    LOG_INF(<span class="stringliteral">&quot;DEVICE CERT, CheckCertExistInModem = %d&quot;</span>, (<span class="keywordtype">int</span>)b1);</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    b1 = <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#acaa47cb858edbe466a2e1821b932e0d2">CheckCertExistInModem</a>(MODEM_KEY_MGMT_CRED_TYPE_PRIVATE_CERT);</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;    LOG_INF(<span class="stringliteral">&quot;DEVICE KEY, CheckCertExistInModem = %d&quot;</span>, (<span class="keywordtype">int</span>)b1);</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160; </div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;    <span class="comment">/*b1 = certmgr::inst()-&gt;WriteJoviaRootCert2Modem();</span></div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteJoviaDeviceCert2Modem();</span></div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteJoviaDeviceKey2Modem();*/</span></div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160; </div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;    <span class="comment">/*b1 = certmgr::inst()-&gt;WriteThingsboardRootCert2Modem();</span></div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteThingsboardDeviceCert2Modem();</span></div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteThingsboardDeviceKey2Modem();*/</span></div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160; </div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;    std::string cert1 = JoviaDeviceCert1;</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;    std::string cert2 = JoviaDeviceCert2;</div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;    std::string key = JoviaDeviceKey;</div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert1.c_str());</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert2.c_str());</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160; </div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    b1 = <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#acaa47cb858edbe466a2e1821b932e0d2">CheckCertExistInModem</a>(MODEM_KEY_MGMT_CRED_TYPE_CA_CHAIN);</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;    LOG_INF(<span class="stringliteral">&quot;ROOT, CheckCertExistInModem = %d&quot;</span>, (<span class="keywordtype">int</span>)b1);</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    b1 = <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#acaa47cb858edbe466a2e1821b932e0d2">CheckCertExistInModem</a>(MODEM_KEY_MGMT_CRED_TYPE_PUBLIC_CERT);</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;    LOG_INF(<span class="stringliteral">&quot;DEVICE CERT, CheckCertExistInModem = %d&quot;</span>, (<span class="keywordtype">int</span>)b1);</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;    b1 = <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#acaa47cb858edbe466a2e1821b932e0d2">CheckCertExistInModem</a>(MODEM_KEY_MGMT_CRED_TYPE_PRIVATE_CERT);</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;    LOG_INF(<span class="stringliteral">&quot;DEVICE KEY, CheckCertExistInModem = %d&quot;</span>, (<span class="keywordtype">int</span>)b1);</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160; </div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;    <span class="comment">/*b1 = certmgr::inst()-&gt;WriteJoviaRootCert2Modem();</span></div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteJoviaDeviceCert2Modem();</span></div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteJoviaDeviceKey2Modem();*/</span></div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160; </div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;    <span class="comment">/*b1 = certmgr::inst()-&gt;WriteThingsboardRootCert2Modem();</span></div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteThingsboardDeviceCert2Modem();</span></div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;<span class="comment">    b1 = certmgr::inst()-&gt;WriteThingsboardDeviceKey2Modem();*/</span></div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160; </div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;    std::string cert1 = JoviaDeviceCert1;</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;    std::string cert2 = JoviaDeviceCert2;</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;    std::string key = JoviaDeviceKey;</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert1.c_str());</div>
 <div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, key.c_str());</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, cert2.c_str());</div>
 <div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160; </div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a5d9d14f76663146e1c2f1c33242d5968">readDeviceCertAndKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>);</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>, key.c_str());</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160; </div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;    std::string cert3 = ThingsboardDeviceCert1;</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;    std::string cert4 = ThingsboardDeviceCert2;</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;    std::string key2 = ThingsboardDeviceKey;</div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert3.c_str());</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert4.c_str());</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a5d9d14f76663146e1c2f1c33242d5968">readDeviceCertAndKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee">eBroker_JOVIA</a>);</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160; </div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;    std::string cert3 = ThingsboardDeviceCert1;</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    std::string cert4 = ThingsboardDeviceCert2;</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;    std::string key2 = ThingsboardDeviceKey;</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a91b38311ca74af5235bb56d7bd90c5ff">writeDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert3.c_str());</div>
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, key2.c_str());</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a6a6ed762b6f58ba3798538243bf57ba3">appendDeviceCert</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, cert4.c_str());</div>
 <div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160; </div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a5d9d14f76663146e1c2f1c33242d5968">readDeviceCertAndKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>);</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#aae8ce4a89afc75a5183ab9f5a89cc228">appendDeviceKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>, key2.c_str());</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#adecf32de9b53b1475261f40d37c674d7">ListFs</a>();</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160; </div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;}</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160; </div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    <a class="code" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst</a>()-&gt;<a class="code" href="classcertmgr.html#a5d9d14f76663146e1c2f1c33242d5968">readDeviceCertAndKey</a>(<a class="code" href="certmgr_8h.html#a9c19b5a0c4d3587a17f0ae1c82911c16a3f4affb3ce44bc1fc9696f869473e45e">eBroker_THINGSBOARD</a>);</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160; </div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;}</div>
 <div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160; </div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160; </div>
 <div class="ttc" id="acertmgr_8h_html"><div class="ttname"><a href="certmgr_8h.html">certmgr.h</a></div><div class="ttdoc">Header file of certification management class.</div></div>
 <div class="ttc" id="acertmgr_8h_html_a74719e6d41d533e4d3918f5499ed9027"><div class="ttname"><a href="certmgr_8h.html#a74719e6d41d533e4d3918f5499ed9027">JOVIA_CERT_FILENAME</a></div><div class="ttdeci">#define JOVIA_CERT_FILENAME</div><div class="ttdef"><b>Definition:</b> <a href="certmgr_8h_source.html#l00050">certmgr.h:50</a></div></div>
 <div class="ttc" id="acertmgr_8h_html_a8652fefb5a339f5850347c3815b2778e"><div class="ttname"><a href="certmgr_8h.html#a8652fefb5a339f5850347c3815b2778e">THINGSBOARD_CERT_FILENAME</a></div><div class="ttdeci">#define THINGSBOARD_CERT_FILENAME</div><div class="ttdef"><b>Definition:</b> <a href="certmgr_8h_source.html#l00053">certmgr.h:53</a></div></div>
@@ -1014,7 +1016,7 @@ $(document).ready(function(){initNavTree('certmgr_8cpp_source.html',''); initRes
 <div class="ttc" id="aflashfs_8h_html"><div class="ttname"><a href="flashfs_8h.html">flashfs.h</a></div><div class="ttdoc">Header file of flash file system controller module.</div></div>
 <div class="ttc" id="akeygen_8h_html"><div class="ttname"><a href="keygen_8h.html">keygen.h</a></div><div class="ttdoc">Header file of TLS key generation class.</div></div>
 <div class="ttc" id="amain_8cpp_html_a31b67dd87441fa0c977b57c884b3e40a"><div class="ttname"><a href="main_8cpp.html#a31b67dd87441fa0c977b57c884b3e40a">LOG_MODULE_REGISTER</a></div><div class="ttdeci">LOG_MODULE_REGISTER(main, AXO_DEFAULT_DEBUG_LEVEL)</div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">main function of AXO Track firmware</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00207">main.cpp:207</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">main function of AXO Track firmware</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00214">main.cpp:214</a></div></div>
 <div class="ttc" id="amqtt__connector_8h_html"><div class="ttname"><a href="mqtt__connector_8h.html">mqtt_connector.h</a></div><div class="ttdoc">Header file of MQTT connector class.</div></div>
 <div class="ttc" id="astruct__st_broker_cfg_html"><div class="ttname"><a href="struct__st_broker_cfg.html">_stBrokerCfg</a></div><div class="ttdoc">Structure to define current and desired broker.</div><div class="ttdef"><b>Definition:</b> <a href="certmgr_8h_source.html#l00063">certmgr.h:63</a></div></div>
 <div class="ttc" id="astruct__st_broker_cfg_html_a14fa1a5bdb8f9ec47093819d2538763d"><div class="ttname"><a href="struct__st_broker_cfg.html#a14fa1a5bdb8f9ec47093819d2538763d">_stBrokerCfg::desiredBroker</a></div><div class="ttdeci">enBroker desiredBroker</div><div class="ttdef"><b>Definition:</b> <a href="certmgr_8h_source.html#l00065">certmgr.h:65</a></div></div>

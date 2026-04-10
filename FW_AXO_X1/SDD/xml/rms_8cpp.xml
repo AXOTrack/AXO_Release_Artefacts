@@ -22,7 +22,7 @@
     <includes refid="mpool_8h" local="yes">rtos/mpool.h</includes>
     <includes refid="timer_8h" local="yes">rtos/timer.h</includes>
     <incdepgraph>
-      <node id="33">
+      <node id="35">
         <label>rtos/mutex.h</label>
         <link refid="mutex_8h"/>
         <childnode refid="3" relation="include">
@@ -55,7 +55,7 @@
       <node id="10">
         <label>float.h</label>
       </node>
-      <node id="34">
+      <node id="36">
         <label>rtos/timer.h</label>
         <link refid="timer_8h"/>
         <childnode refid="3" relation="include">
@@ -96,15 +96,19 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="24">
         <label>date_time.h</label>
       </node>
-      <node id="32">
+      <node id="34">
         <label>rtos/mempool.h</label>
         <link refid="mempool_8h"/>
         <childnode refid="5" relation="include">
@@ -116,11 +120,14 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="31">
         <label>string</label>
       </node>
       <node id="15">
         <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="26">
+        <label>zephyr/drivers/clock_control.h</label>
       </node>
       <node id="18">
         <label>./debug.h</label>
@@ -132,25 +139,28 @@
       <node id="21">
         <label>ctime</label>
       </node>
+      <node id="27">
+        <label>zephyr/drivers/clock_control/nrf_clock_control.h</label>
+      </node>
       <node id="25">
         <label>zephyr/drivers/sensor.h</label>
       </node>
       <node id="22">
         <label>vector</label>
       </node>
-      <node id="28">
+      <node id="30">
         <label>rtos/mbox.h</label>
         <link refid="mbox_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="32">
         <label>rtos/mqueue.h</label>
         <link refid="mqueue_8h"/>
         <childnode refid="5" relation="include">
@@ -163,18 +173,18 @@
       <node id="11">
         <label>math.h</label>
       </node>
-      <node id="27">
+      <node id="29">
         <label>zephyr/sys/ring_buffer.h</label>
       </node>
       <node id="17">
         <label>chrono</label>
       </node>
-      <node id="26">
+      <node id="28">
         <label>data/hw_metrics.h</label>
         <link refid="hw__metrics_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -196,14 +206,14 @@
       <node id="3">
         <label>zephyr/kernel.h</label>
       </node>
-      <node id="31">
+      <node id="33">
         <label>rtos/mpool.h</label>
         <link refid="mpool_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="8">
@@ -250,11 +260,11 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
       </node>
     </incdepgraph>

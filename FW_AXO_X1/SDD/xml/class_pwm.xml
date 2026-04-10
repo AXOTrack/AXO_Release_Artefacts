@@ -145,7 +145,7 @@
         <references refid="class_pwm_1ac28675e9f599e4310cf860d8cd396cea" compoundref="pwm_8h" startline="81">init_done</references>
         <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
         <references refid="pwm_8cpp_1a5e3de318130b6ba0e4d5afec125d8720" compoundref="pwm_8cpp" startline="36">PWM_DEVICE_NAME</references>
-        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="194" endline="218">Adxl37x::getHwStatus</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_pwm_1a171186473ecce8bc6ac516599ea3a81e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -178,7 +178,7 @@ The function assigns the value of parameter period to member variable period. </
         </inbodydescription>
         <location file="drv/pwm/pwm.h" line="72" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="79" bodyend="82"/>
         <references refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" compoundref="pwm_8h" startline="85">period</references>
-        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="194" endline="218">Adxl37x::getHwStatus</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_pwm_1a2b1211a916e6ad0e6833d8a8512e0d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -211,7 +211,7 @@ The function assigns the value of parameter width to member variable pulse. </pa
         </inbodydescription>
         <location file="drv/pwm/pwm.h" line="73" column="10" bodyfile="drv/pwm/pwm.cpp" bodystart="93" bodyend="96"/>
         <references refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" compoundref="pwm_8h" startline="86">pulse</references>
-        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="194" endline="218">Adxl37x::getHwStatus</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_pwm_1ad55f80ed3cd8b6c4f247763b747016af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -254,7 +254,7 @@ The function assigns the value of parameter width to member variable pulse. </pa
         <references refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" compoundref="pwm_8h" startline="84">polarity_inverted</references>
         <references refid="class_pwm_1a8c3654387c1e970a4c60b809d74e344d" compoundref="pwm_8h" startline="86">pulse</references>
         <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
-        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="280" endline="287">Adxl37x::setExtSyncClk</referencedby>
+        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="317" endline="363">Adxl37x::setExtSyncClk</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_pwm_1a8c528baf37154d347366083f0f816846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -275,7 +275,7 @@ The function assigns the value of parameter width to member variable pulse. </pa
         <references refid="class_pwm_1a81b43df06332b4fef558297592bb7ff1" compoundref="pwm_8h" startline="85">period</references>
         <references refid="class_pwm_1aa6e97fd36b86d48ba534acf3ac46e89a" compoundref="pwm_8h" startline="84">polarity_inverted</references>
         <references refid="class_pwm_1ac212383c1b07ea1ff4c31f59689cdf41" compoundref="pwm_8h" startline="77">pwm_dev</references>
-        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="280" endline="287">Adxl37x::setExtSyncClk</referencedby>
+        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="317" endline="363">Adxl37x::setExtSyncClk</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -297,8 +297,8 @@ In case there is no instance created, the constructor will be called to create t
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pwm/pwm.h" line="71" column="16" bodyfile="drv/pwm/pwm.cpp" bodystart="148" bodyend="152"/>
-        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
-        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="280" endline="287">Adxl37x::setExtSyncClk</referencedby>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="194" endline="218">Adxl37x::getHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" compoundref="adxl37x_8cpp" startline="317" endline="363">Adxl37x::setExtSyncClk</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

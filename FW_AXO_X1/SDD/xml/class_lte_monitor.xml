@@ -807,7 +807,7 @@ The function only prints a debug message al information level. <simplesect kind=
         <inbodydescription>
         </inbodydescription>
         <location file="modem/lte_monitor.h" line="146" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="269" bodyend="274"/>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_lte_monitor_1ab00a3c465f5fbef791a7e11d321b92ae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -826,7 +826,7 @@ The function only prints a debug message al information level. <simplesect kind=
         </inbodydescription>
         <location file="modem/lte_monitor.h" line="147" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="310" bodyend="313"/>
         <references refid="class_lte_monitor_1a8857a4451e4bcf53175c836918ae26bc" compoundref="lte__monitor_8h" startline="159">link_quality</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_lte_monitor_1a1517efba6a658177615905efaeed0d21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -876,7 +876,7 @@ The function transforms the notification into an integer dBm value. If the dBm v
         <inbodydescription>
         </inbodydescription>
         <location file="modem/lte_monitor.h" line="150" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="326" bodyend="331"/>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_lte_monitor_1ae2159a6ddb5b42946e17fd3d88b0e456" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -895,7 +895,7 @@ The function transforms the notification into an integer dBm value. If the dBm v
         </inbodydescription>
         <location file="modem/lte_monitor.h" line="151" column="17" bodyfile="modem/lte_monitor.cpp" bodystart="353" bodyend="356"/>
         <references refid="class_lte_monitor_1aa1e5bc8ab252459de6e70e9a06c0da68" compoundref="lte__monitor_8h" startline="161">network</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_lte_monitor_1a729b6b8693d1fe82adb1955367911431" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1088,7 +1088,7 @@ The method retrieves the IMSI by calling function modem_info_string_get provided
 </para>
 <para><simplesect kind="par"><title>Detailed Description </title><para></para>
 </simplesect>
-<xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para>RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
+<xrefsect id="todo_1_todo000016"><xreftitle>Todo</xreftitle><xrefdescription><para>RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
 <listitem><para>Receive<itemizedlist>
 <listitem><para>Timer interrupt callback</para>
 </listitem><listitem><para>RMS task (self)</para>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="60" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="60" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="62" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="62" bodyend="-1"/>
         <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">AdxlDataStore::calcMaxXYZ</referencedby>
         <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">AdxlDataStore::dump</referencedby>
         <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">AdxlDataStore::dumpAll</referencedby>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="61" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="61" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="63" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="63" bodyend="-1"/>
         <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">AdxlDataStore::calcMaxXYZ</referencedby>
         <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">AdxlDataStore::dump</referencedby>
         <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">AdxlDataStore::dumpAll</referencedby>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="62" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="62" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="64" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="64" bodyend="-1"/>
         <referencedby refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">AdxlDataStore::calcMaxXYZ</referencedby>
         <referencedby refid="class_adxl_data_store_1accd2600060dbaee3a3b41aed4034c63c" compoundref="adxl__store_8cpp" startline="442" endline="472">AdxlDataStore::dump</referencedby>
         <referencedby refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">AdxlDataStore::dumpAll</referencedby>
@@ -81,7 +81,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="drv/spi/adxl37x.h" line="59" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="59" bodyend="63"/>
+    <location file="drv/spi/adxl37x.h" line="61" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="61" bodyend="65"/>
     <listofallmembers>
       <member refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" prot="public" virt="non-virtual"><scope>adxl372_xyz_accel_data</scope><name>x</name></member>
       <member refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" prot="public" virt="non-virtual"><scope>adxl372_xyz_accel_data</scope><name>y</name></member>

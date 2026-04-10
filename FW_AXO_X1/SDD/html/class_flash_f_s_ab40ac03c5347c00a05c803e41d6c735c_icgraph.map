@@ -1,12 +1,13 @@
 <map id="file_read" name="file_read">
-<area shape="rect" id="node1" title=" " alt="" coords="523,81,593,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="523,107,593,133"/>
 <area shape="rect" id="node2" href="$class_boot_cnt.html#acf77f1606daf53b04879960d5e53d233" title="Boot Count constructor." alt="" coords="334,5,458,32"/>
 <area shape="rect" id="node3" href="$class_key_gen.html#ac3cd9437903afea95036a7720881218d" title="Function to retrieve the private key from file system." alt="" coords="317,56,475,83"/>
 <area shape="rect" id="node6" href="$class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="319,107,473,133"/>
-<area shape="rect" id="node9" href="$class_config.html#a0dbf501f1647b6da5f7ce06af2db6bcc" title="Function to read JSON file into input string." alt="" coords="325,169,467,196"/>
-<area shape="rect" id="node4" href="$class_http_connector.html#ae369b3765489ee8bd0ea791c1843630f" title="HttpConnector virtual task configure function." alt="" coords="104,43,269,69"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function of AXO Track firmware" alt="" coords="5,93,56,120"/>
-<area shape="rect" id="node7" href="$class_data_manager.html#ae369b3765489ee8bd0ea791c1843630f" title="Data manager virtual task configure function." alt="" coords="107,93,266,120"/>
-<area shape="rect" id="node8" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="117,144,257,171"/>
-<area shape="rect" id="node10" href="$class_config.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function of the Config class." alt="" coords="145,195,228,221"/>
+<area shape="rect" id="node9" href="$class_wakeup_cnt.html#a02fd73d861ef2e4aabb38c0c9ff82947" title=" " alt="" coords="129,157,244,184"/>
+<area shape="rect" id="node10" href="$class_config.html#a0dbf501f1647b6da5f7ce06af2db6bcc" title="Function to read JSON file into input string." alt="" coords="325,208,467,235"/>
+<area shape="rect" id="node4" href="$class_http_connector.html#ae369b3765489ee8bd0ea791c1843630f" title="HttpConnector virtual task configure function." alt="" coords="104,5,269,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function of AXO Track firmware" alt="" coords="5,107,56,133"/>
+<area shape="rect" id="node7" href="$class_data_manager.html#ae369b3765489ee8bd0ea791c1843630f" title="Data manager virtual task configure function." alt="" coords="107,56,266,83"/>
+<area shape="rect" id="node8" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="117,107,257,133"/>
+<area shape="rect" id="node11" href="$class_config.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function of the Config class." alt="" coords="145,208,228,235"/>
 </map>

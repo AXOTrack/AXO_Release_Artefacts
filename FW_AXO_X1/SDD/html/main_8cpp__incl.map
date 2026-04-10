@@ -1,71 +1,74 @@
 <map id="main.cpp" name="main.cpp">
-<area shape="rect" id="node1" title="Implementation of AXO Track main function." alt="" coords="3264,5,3339,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="2343,408,2454,435"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5715,80,5853,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5202,408,5353,435"/>
-<area shape="rect" id="node5" href="$prj__config_8h.html" title="Header file for debug/release configuration adjustment." alt="" coords="2085,162,2181,189"/>
-<area shape="rect" id="node6" href="$version_8h.html" title="Header file of software version management." alt="" coords="5878,80,5959,107"/>
-<area shape="rect" id="node7" href="$config_8h.html" title="Header file of Config class." alt="" coords="2899,80,2994,107"/>
-<area shape="rect" id="node9" href="$adxl__store_8h.html" title="Header file of AdxlDataStore class." alt="" coords="2116,80,2239,107"/>
-<area shape="rect" id="node12" href="$adxl37x_8h.html" title="Header file of Adxl37x class." alt="" coords="547,162,666,189"/>
-<area shape="rect" id="node15" href="$task_8h.html" title="Header file of RTOS wrapper class Task for multithreading support." alt="" coords="4345,326,4429,353"/>
-<area shape="rect" id="node18" href="$hw__metrics_8h.html" title="Header file of HwMetrics class." alt="" coords="1571,244,1699,271"/>
-<area shape="rect" id="node20" href="$mpelem_8h.html" title="Header file of PoolElem class for message support." alt="" coords="2057,326,2162,353"/>
-<area shape="rect" id="node24" href="$mbox_8h.html" title="Header file of RTOS wrapper class MBox for mailbox support." alt="" coords="3539,244,3629,271"/>
-<area shape="rect" id="node25" href="$mqueue_8h.html" title="Header file of RTOS wrapper class MQueue for mailbox support." alt="" coords="5199,326,5305,353"/>
-<area shape="rect" id="node27" href="$pdata_8h.html" title="Header file of data manager class." alt="" coords="2543,80,2638,107"/>
-<area shape="rect" id="node30" href="$rms__store_8h.html" title="Header file of RMS storage class." alt="" coords="1205,244,1325,271"/>
-<area shape="rect" id="node32" href="$rms_8h.html" title="Header file of RMS task." alt="" coords="2523,244,2607,271"/>
-<area shape="rect" id="node33" href="$disptask_8h.html" title="Header file of DispTask class." alt="" coords="986,162,1097,189"/>
-<area shape="rect" id="node36" href="$adconverter_8h.html" title="Header file of AD converter driver class." alt="" coords="180,244,324,271"/>
-<area shape="rect" id="node39" href="$batt__mgr_8h.html" title="Header file of battery manager class." alt="" coords="4723,244,4853,271"/>
-<area shape="rect" id="node40" href="$shtcx_8h.html" title="Header file of Shtcx sensor driver class." alt="" coords="457,244,564,271"/>
-<area shape="rect" id="node41" href="$boost_8h.html" title="Header file of BoostConverter class." alt="" coords="3248,80,3355,107"/>
-<area shape="rect" id="node43" href="$flashfs_8h.html" title="Header file of flash file system controller module." alt="" coords="5983,80,6067,107"/>
-<area shape="rect" id="node47" href="$lte__monitor_8h.html" title="Header file of LTE monitor class." alt="" coords="3007,162,3151,189"/>
-<area shape="rect" id="node49" href="$http__connector_8h.html" title="Header file of HTTP connector class." alt="" coords="3957,162,4099,189"/>
-<area shape="rect" id="node52" href="$lte__connector_8h.html" title="Header file of LTE modem connector class." alt="" coords="5052,162,5185,189"/>
-<area shape="rect" id="node55" href="$mqtt__connector_8h.html" title="Header file of MQTT connector class." alt="" coords="3645,162,3790,189"/>
-<area shape="rect" id="node57" href="$certmgr_8h.html" title="Header file of certification management class." alt="" coords="3264,244,3363,271"/>
-<area shape="rect" id="node59" href="$power__mgr__x1_8h.html" title="Header file of power manager X1 class." alt="" coords="2344,80,2483,107"/>
-<area shape="rect" id="node60" href="$reset__ctrl_8h.html" title="Header file of reset control task." alt="" coords="3427,80,3536,107"/>
-<area shape="rect" id="node61" href="$mempool_8h.html" title="Header file of RTOS wrapper class mempool for message allocation support." alt="" coords="5380,326,5492,353"/>
-<area shape="rect" id="node63" href="$mpool_8h.html" title="Header file of MsgPool class for message allocation support." alt="" coords="5494,244,5589,271"/>
-<area shape="rect" id="node65" href="$sema_8h.html" title="Header file of RTOS wrapper class Sema for semaphore support." alt="" coords="339,80,429,107"/>
-<area shape="rect" id="node66" href="$update_8h.html" title="Header file of the firmware update task." alt="" coords="4253,162,4368,189"/>
-<area shape="rect" id="node67" href="$update__ctrl_8h.html" title="Header file of update controller module." alt="" coords="4941,80,5081,107"/>
-<area shape="rect" id="node69" href="$keygen_8h.html" title="Header file of TLS key generation class." alt="" coords="1451,244,1547,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="2897,326,2951,353"/>
-<area shape="rect" id="node10" href="$spibus_8h.html" title="Header file of SPI bus driver class." alt="" coords="1884,162,2001,189"/>
-<area shape="rect" id="node22" href="$power__mgr_8h.html" title="Header file of power manager base class." alt="" coords="2257,162,2375,189"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1875,244,2010,271"/>
-<area shape="rect" id="node13" title=" " alt="" coords="395,326,485,353"/>
-<area shape="rect" id="node14" title=" " alt="" coords="611,326,767,353"/>
-<area shape="rect" id="node16" title=" " alt="" coords="4356,408,4417,435"/>
-<area shape="rect" id="node17" title=" " alt="" coords="4791,408,4855,435"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1539,326,1699,353"/>
-<area shape="rect" id="node21" title=" " alt="" coords="2046,408,2173,435"/>
-<area shape="rect" id="node23" title=" " alt="" coords="1043,326,1099,353"/>
-<area shape="rect" id="node26" href="$timer_8h.html" title="Header file of RTOS wrapper class Timer for software timer support." alt="" coords="2237,244,2325,271"/>
-<area shape="rect" id="node28" href="$measurement_8h.html" title="Header file of measurement builder helper class." alt="" coords="1324,162,1465,189"/>
-<area shape="rect" id="node31" href="$metric_8h.html" title="Header file of metrics builder helper class." alt="" coords="2349,244,2448,271"/>
-<area shape="rect" id="node29" title=" " alt="" coords="1315,326,1370,353"/>
-<area shape="rect" id="node34" href="$filter_8h.html" title="Header file of digital filter class." alt="" coords="893,244,979,271"/>
-<area shape="rect" id="node35" title=" " alt="" coords="944,326,1019,353"/>
-<area shape="rect" id="node37" title=" " alt="" coords="5,326,117,353"/>
-<area shape="rect" id="node38" title=" " alt="" coords="141,319,269,360"/>
-<area shape="rect" id="node42" title=" " alt="" coords="3377,162,3519,189"/>
-<area shape="rect" id="node44" title=" " alt="" coords="5839,162,5939,189"/>
-<area shape="rect" id="node45" title=" " alt="" coords="5963,162,6087,189"/>
-<area shape="rect" id="node46" title=" " alt="" coords="6112,155,6251,196"/>
-<area shape="rect" id="node48" title=" " alt="" coords="3089,244,3239,271"/>
-<area shape="rect" id="node50" title=" " alt="" coords="4155,244,4293,271"/>
-<area shape="rect" id="node51" href="$debug_8h.html" title="Header file of debug configuration for files in common folder." alt="" coords="3953,244,4029,271"/>
-<area shape="rect" id="node53" title=" " alt="" coords="5081,244,5191,271"/>
-<area shape="rect" id="node54" title=" " alt="" coords="5216,244,5317,271"/>
-<area shape="rect" id="node56" title=" " alt="" coords="3755,244,3877,271"/>
-<area shape="rect" id="node58" title=" " alt="" coords="3218,326,3409,353"/>
-<area shape="rect" id="node62" title=" " alt="" coords="5403,408,5469,435"/>
-<area shape="rect" id="node64" href="$mutex_8h.html" title="Header file of RTOS wrapper class Mutex for mutex support." alt="" coords="5081,326,5175,353"/>
-<area shape="rect" id="node68" href="$fsm_8h.html" title="Header file of Finite State Machine (FSM) for firmware updates." alt="" coords="5441,162,5538,189"/>
+<area shape="rect" id="node1" title="Implementation of AXO Track main function." alt="" coords="3698,5,3773,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="2683,423,2793,449"/>
+<area shape="rect" id="node3" title=" " alt="" coords="6093,80,6231,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5627,423,5777,449"/>
+<area shape="rect" id="node5" href="$prj__config_8h.html" title="Header file for debug/release configuration adjustment." alt="" coords="2269,162,2365,189"/>
+<area shape="rect" id="node6" href="$version_8h.html" title="Header file of software version management." alt="" coords="6256,80,6337,107"/>
+<area shape="rect" id="node7" href="$config_8h.html" title="Header file of Config class." alt="" coords="2241,80,2336,107"/>
+<area shape="rect" id="node9" href="$adxl__store_8h.html" title="Header file of AdxlDataStore class." alt="" coords="2555,80,2678,107"/>
+<area shape="rect" id="node12" href="$adxl37x_8h.html" title="Header file of Adxl37x class." alt="" coords="1073,162,1192,189"/>
+<area shape="rect" id="node17" href="$task_8h.html" title="Header file of RTOS wrapper class Task for multithreading support." alt="" coords="3740,341,3824,367"/>
+<area shape="rect" id="node20" href="$hw__metrics_8h.html" title="Header file of HwMetrics class." alt="" coords="2015,251,2143,278"/>
+<area shape="rect" id="node22" href="$mpelem_8h.html" title="Header file of PoolElem class for message support." alt="" coords="2988,341,3093,367"/>
+<area shape="rect" id="node26" href="$mbox_8h.html" title="Header file of RTOS wrapper class MBox for mailbox support." alt="" coords="4421,251,4511,278"/>
+<area shape="rect" id="node27" href="$mqueue_8h.html" title="Header file of RTOS wrapper class MQueue for mailbox support." alt="" coords="5564,341,5669,367"/>
+<area shape="rect" id="node29" href="$pdata_8h.html" title="Header file of data manager class." alt="" coords="1683,80,1777,107"/>
+<area shape="rect" id="node32" href="$rms__store_8h.html" title="Header file of RMS storage class." alt="" coords="1343,251,1463,278"/>
+<area shape="rect" id="node34" href="$rms_8h.html" title="Header file of RMS task." alt="" coords="3533,251,3617,278"/>
+<area shape="rect" id="node35" href="$disptask_8h.html" title="Header file of DispTask class." alt="" coords="3447,162,3557,189"/>
+<area shape="rect" id="node38" href="$adconverter_8h.html" title="Header file of AD converter driver class." alt="" coords="199,251,343,278"/>
+<area shape="rect" id="node41" href="$batt__mgr_8h.html" title="Header file of battery manager class." alt="" coords="1741,251,1871,278"/>
+<area shape="rect" id="node42" href="$shtcx_8h.html" title="Header file of Shtcx sensor driver class." alt="" coords="469,251,575,278"/>
+<area shape="rect" id="node43" href="$boost_8h.html" title="Header file of BoostConverter class." alt="" coords="4898,80,5005,107"/>
+<area shape="rect" id="node45" href="$flashfs_8h.html" title="Header file of flash file system controller module." alt="" coords="6361,80,6445,107"/>
+<area shape="rect" id="node49" href="$lte__monitor_8h.html" title="Header file of LTE monitor class." alt="" coords="3847,162,3991,189"/>
+<area shape="rect" id="node51" href="$http__connector_8h.html" title="Header file of HTTP connector class." alt="" coords="4541,162,4682,189"/>
+<area shape="rect" id="node54" href="$lte__connector_8h.html" title="Header file of LTE modem connector class." alt="" coords="5306,162,5439,189"/>
+<area shape="rect" id="node57" href="$mqtt__connector_8h.html" title="Header file of MQTT connector class." alt="" coords="4123,162,4268,189"/>
+<area shape="rect" id="node59" href="$certmgr_8h.html" title="Header file of certification management class." alt="" coords="3359,251,3458,278"/>
+<area shape="rect" id="node61" href="$power__mgr__x1_8h.html" title="Header file of power manager X1 class." alt="" coords="2894,80,3033,107"/>
+<area shape="rect" id="node62" href="$reset__ctrl_8h.html" title="Header file of reset control task." alt="" coords="5110,80,5219,107"/>
+<area shape="rect" id="node63" href="$wakeup__cnt_8h.html" title="Header file of wakeup count class." alt="" coords="41,80,165,107"/>
+<area shape="rect" id="node64" href="$mempool_8h.html" title="Header file of RTOS wrapper class mempool for message allocation support." alt="" coords="5863,341,5975,367"/>
+<area shape="rect" id="node66" href="$mpool_8h.html" title="Header file of MsgPool class for message allocation support." alt="" coords="5872,251,5967,278"/>
+<area shape="rect" id="node68" href="$sema_8h.html" title="Header file of RTOS wrapper class Sema for semaphore support." alt="" coords="782,80,873,107"/>
+<area shape="rect" id="node69" href="$update_8h.html" title="Header file of the firmware update task." alt="" coords="4753,162,4867,189"/>
+<area shape="rect" id="node70" href="$update__ctrl_8h.html" title="Header file of update controller module." alt="" coords="5667,80,5807,107"/>
+<area shape="rect" id="node72" href="$keygen_8h.html" title="Header file of TLS key generation class." alt="" coords="1895,251,1991,278"/>
+<area shape="rect" id="node8" title=" " alt="" coords="3217,341,3272,367"/>
+<area shape="rect" id="node10" href="$spibus_8h.html" title="Header file of SPI bus driver class." alt="" coords="2389,162,2506,189"/>
+<area shape="rect" id="node24" href="$power__mgr_8h.html" title="Header file of power manager base class." alt="" coords="2904,162,3023,189"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2320,251,2455,278"/>
+<area shape="rect" id="node13" title=" " alt="" coords="434,341,525,367"/>
+<area shape="rect" id="node14" title=" " alt="" coords="651,341,807,367"/>
+<area shape="rect" id="node15" title=" " alt="" coords="701,244,839,285"/>
+<area shape="rect" id="node16" title=" " alt="" coords="863,244,1045,285"/>
+<area shape="rect" id="node18" title=" " alt="" coords="3751,423,3813,449"/>
+<area shape="rect" id="node19" title=" " alt="" coords="5362,423,5426,449"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1999,341,2159,367"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2977,423,3104,449"/>
+<area shape="rect" id="node25" title=" " alt="" coords="2581,341,2637,367"/>
+<area shape="rect" id="node28" href="$timer_8h.html" title="Header file of RTOS wrapper class Timer for software timer support." alt="" coords="2834,251,2922,278"/>
+<area shape="rect" id="node30" href="$measurement_8h.html" title="Header file of measurement builder helper class." alt="" coords="1486,162,1627,189"/>
+<area shape="rect" id="node33" href="$metric_8h.html" title="Header file of metrics builder helper class." alt="" coords="1170,251,1269,278"/>
+<area shape="rect" id="node31" title=" " alt="" coords="1299,341,1353,367"/>
+<area shape="rect" id="node36" href="$filter_8h.html" title="Header file of digital filter class." alt="" coords="3199,251,3285,278"/>
+<area shape="rect" id="node37" title=" " alt="" coords="3118,341,3193,367"/>
+<area shape="rect" id="node39" title=" " alt="" coords="45,341,157,367"/>
+<area shape="rect" id="node40" title=" " alt="" coords="181,333,309,375"/>
+<area shape="rect" id="node44" title=" " alt="" coords="5039,162,5181,189"/>
+<area shape="rect" id="node46" title=" " alt="" coords="6353,162,6453,189"/>
+<area shape="rect" id="node47" title=" " alt="" coords="6477,162,6601,189"/>
+<area shape="rect" id="node48" title=" " alt="" coords="6190,155,6329,196"/>
+<area shape="rect" id="node50" title=" " alt="" coords="3845,251,3996,278"/>
+<area shape="rect" id="node52" title=" " alt="" coords="4739,251,4876,278"/>
+<area shape="rect" id="node53" href="$debug_8h.html" title="Header file of debug configuration for files in common folder." alt="" coords="4536,251,4612,278"/>
+<area shape="rect" id="node55" title=" " alt="" coords="5533,251,5644,278"/>
+<area shape="rect" id="node56" title=" " alt="" coords="5407,251,5509,278"/>
+<area shape="rect" id="node58" title=" " alt="" coords="4223,251,4346,278"/>
+<area shape="rect" id="node60" title=" " alt="" coords="3296,341,3487,367"/>
+<area shape="rect" id="node65" title=" " alt="" coords="5887,423,5952,449"/>
+<area shape="rect" id="node67" href="$mutex_8h.html" title="Header file of RTOS wrapper class Mutex for mutex support." alt="" coords="5693,341,5788,367"/>
+<area shape="rect" id="node71" href="$fsm_8h.html" title="Header file of Finite State Machine (FSM) for firmware updates." alt="" coords="5768,162,5865,189"/>
 </map>

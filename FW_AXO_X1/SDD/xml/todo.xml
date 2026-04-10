@@ -7,6 +7,9 @@
     </briefdescription>
     <detaileddescription>
 <para><variablelist>
+<varlistentry><term>Global <ref refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" kindref="member">Adxl37x::setExtSyncClk</ref>  (bool state)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000007"/>ADAPT this function description !!!! </para>
+</listitem>
 <varlistentry><term>Global <ref refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" kindref="member">BatteryMgr::task</ref>  (void) override</term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000006"/>should be deleted: Battery manager not uses timers  </para>
 </listitem>
@@ -17,10 +20,10 @@
 <listitem><para><anchor id="todo_1_todo000005"/>remove unused timer ?  </para>
 </listitem>
 <varlistentry><term>Global <ref refid="class_fw_upd_1aba0088d95e1422df36bf6d8049ecf220" kindref="member">FwUpd::sha1_expected</ref>  [41]</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000016"/>no magic numbers  </para>
+<listitem><para><anchor id="todo_1_todo000020"/>no magic numbers  </para>
 </listitem>
 <varlistentry><term>Class <ref refid="class_lte_monitor" kindref="compound">LteMonitor</ref>  </term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000015"/> RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
+<listitem><para><anchor id="todo_1_todo000016"/> RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <ref refid="class_hit_detector" kindref="compound">HitDetector</ref>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<itemizedlist>
 <listitem><para>Receive<itemizedlist>
 <listitem><para>Timer interrupt callback</para>
 </listitem><listitem><para>RMS task (self)</para>
@@ -43,23 +46,32 @@
  The calculated displacement data will be transmitted via HTTPS protocol. Transmission uses HTTP POST. See <ref refid="http__connector_8h_1http_connector" kindref="member">http_connector</ref>. </para>
 </listitem>
 <varlistentry><term>File <ref refid="mram_8h" kindref="compound">mram.h</ref>  </term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000013"/>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
+<listitem><para><anchor id="todo_1_todo000014"/>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
  To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <ref refid="_m_s_c_1SectionDisplacement" kindref="member">Displacement Calculation</ref> for further details).  </para>
 </listitem>
 <varlistentry><term>Class <ref refid="classspimram" kindref="compound">spimram</ref>  </term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000014"/>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system. </para>
+<listitem><para><anchor id="todo_1_todo000015"/>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system. </para>
 </listitem>
 <varlistentry><term>Global <ref refid="classspimram_1aba64ac0204d2a452ff17bab78ba5ed95" kindref="member">spimram::read_config1_reg</ref>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000011"/>remove </para>
-<para><anchor id="todo_1_todo000012"/>remove </para>
+<listitem><para><anchor id="todo_1_todo000012"/>remove </para>
+<para><anchor id="todo_1_todo000013"/>remove </para>
 </listitem>
 <varlistentry><term>Global <ref refid="classspimram_1a29e1fba759049f2506cd3dce4606ea30" kindref="member">spimram::read_device_id</ref>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000007"/>remove </para>
-<para><anchor id="todo_1_todo000008"/>remove </para>
+<listitem><para><anchor id="todo_1_todo000008"/>remove </para>
+<para><anchor id="todo_1_todo000009"/>remove </para>
 </listitem>
 <varlistentry><term>Global <ref refid="classspimram_1a181ae46b639fd08007a4349fba1b853d" kindref="member">spimram::read_status_reg</ref>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000009"/>remove </para>
-<para><anchor id="todo_1_todo000010"/>remove</para>
+<listitem><para><anchor id="todo_1_todo000010"/>remove </para>
+<para><anchor id="todo_1_todo000011"/>remove </para>
+</listitem>
+<varlistentry><term>File <ref refid="wakeup__cnt_8h" kindref="compound">wakeup_cnt.h</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000018"/>boot events. The boot counter willl be stored persistently in FRAM flash file system. At startup boot count is read from flash file system and will be incremented by 1. Because boot count may be negative on an erased flash it is set to 0 in case of a negative value. </para>
+</listitem>
+<varlistentry><term>Class <ref refid="class_wakeup_cnt" kindref="compound">WakeupCnt</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000019"/>is stored in private variable boot_count. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="class_wakeup_cnt_1a3576c0de8015d0063cce0ae347b63299" kindref="member">WakeupCnt::WakeupCnt</ref>  ()</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000017"/>Boot Count constructor</para>
 </listitem>
 </variablelist>
 </para>

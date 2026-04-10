@@ -1,73 +1,79 @@
 <map id="task" name="task">
-<area shape="rect" id="node1" title="MQTT connector task function." alt="" coords="5,1128,52,1155"/>
-<area shape="rect" id="node2" href="$class_mqtt_connector.html#ac54f53dc342019e8db34f4aa581a5792" title="Function to send a abort request to the MQTT broker." alt="" coords="393,14,444,40"/>
-<area shape="rect" id="node3" href="$classcertmgr.html#a119aab00792ccace8235e70745c29498" title=" " alt="" coords="100,77,281,118"/>
-<area shape="rect" id="node4" href="$class_mqtt_connector.html#a1396bf9b5defe9fa844a63b5cd40ac0e" title="Function to send a connect request to the MQTT broker." alt="" coords="157,194,225,220"/>
-<area shape="rect" id="node6" href="$classcertmgr.html#acc45f4d4d5957998c083aac888aa8050" title=" " alt="" coords="371,64,466,91"/>
-<area shape="rect" id="node8" href="$class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="375,216,463,243"/>
-<area shape="rect" id="node10" href="$class_mqtt_connector.html#a960705de531a20389fb29928d43258c3" title="Function to send a disconnect request to the MQTT broker." alt="" coords="148,343,233,370"/>
-<area shape="rect" id="node11" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="137,394,244,420"/>
-<area shape="rect" id="node14" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="350,1686,487,1712"/>
-<area shape="rect" id="node15" href="$class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="113,444,268,471"/>
-<area shape="rect" id="node20" href="$class_mqtt_connector.html#ae07a10cc3041ea092699387b0fdb3257" title="Handler function for handling of boost converter off request." alt="" coords="123,1331,258,1358"/>
-<area shape="rect" id="node21" href="$class_mqtt_connector.html#ab5d3e83997c930e0ea258cccbee98063" title="Function to publish a accepted response to the MQTT broker." alt="" coords="329,1280,508,1307"/>
-<area shape="rect" id="node24" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="361,1331,476,1358"/>
-<area shape="rect" id="node28" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="588,1128,679,1155"/>
-<area shape="rect" id="node33" href="$class_mqtt_connector.html#af768b2a6ec57840d0ee687f9b25e7b4c" title="Handler function for handling of boost converter on request." alt="" coords="123,1382,259,1408"/>
-<area shape="rect" id="node34" href="$class_mqtt_connector.html#a7b73774ea55d0112571cf49e98558e37" title="Handler function for handling of cold start request." alt="" coords="121,1280,260,1307"/>
-<area shape="rect" id="node35" href="$class_mqtt_connector.html#a4ba8232123283b7363cf319d3603b9ac" title="Handler function for handling disable ADXL request." alt="" coords="122,1179,259,1206"/>
-<area shape="rect" id="node36" href="$class_mqtt_connector.html#a163abf5e1860042a8d2fe54398ee0c53" title="Handler function for handling enable ADXL request." alt="" coords="123,1230,258,1256"/>
-<area shape="rect" id="node37" href="$class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="117,774,264,800"/>
-<area shape="rect" id="node42" href="$class_key_gen.html#aa82987fa60c88c4380a157e4b0f178b6" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="369,622,468,648"/>
-<area shape="rect" id="node43" href="$class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="135,824,246,851"/>
-<area shape="rect" id="node47" href="$class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="133,976,248,1003"/>
-<area shape="rect" id="node48" href="$class_mqtt_connector.html#ab09a2b3c65e60b502efe51bfaaa6095f" title="Handler function for handling get configuration request." alt="" coords="131,1078,250,1104"/>
-<area shape="rect" id="node49" href="$class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="109,1027,272,1054"/>
-<area shape="rect" id="node55" href="$class_mqtt_connector.html#a86374deb5f3ee32fb220efbaf0743b0f" title="Callback handlers from MQTT helper library for connack from broker." alt="" coords="145,1888,237,1915"/>
-<area shape="rect" id="node59" href="$class_mqtt_connector.html#aef147f2b63e45447753b327e4d85079e" title="Callback handlers from MQTT helper library for disconnect indication from broker." alt="" coords="137,1432,244,1459"/>
-<area shape="rect" id="node60" href="$class_mqtt_connector.html#aed0e2bc67364b25cbf96f7eff79b437d" title="Callback handlers from MQTT helper library for puback from broker." alt="" coords="148,1534,233,1560"/>
-<area shape="rect" id="node61" href="$class_mqtt_connector.html#a8758bc421d3292a0f4431a017446bd24" title="Callback handlers from MQTT helper library for a subscribed topic from broker." alt="" coords="149,875,233,902"/>
-<area shape="rect" id="node62" href="$class_mqtt_connector.html#a86e2fd6577ee6e2f7e8feaa35c4f18a6" title="Callback handlers from MQTT helper library for suback from broker." alt="" coords="148,1635,233,1662"/>
-<area shape="rect" id="node63" href="$class_mqtt_connector.html#ae00794e6ab250c0807e70f42b0aee29f" title="Function to send a subscribe request for the OTA topic to the MQTT broker." alt="" coords="139,1838,242,1864"/>
-<area shape="rect" id="node64" href="$class_mqtt_connector.html#a902f83037dc5ee6772caad03b74e7326" title="Function to publish data to the MQTT broker." alt="" coords="373,1736,465,1763"/>
-<area shape="rect" id="node65" href="$class_mqtt_connector.html#a468c248c7d18e226ea56f9c1a8e07be4" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="133,1736,248,1763"/>
-<area shape="rect" id="node66" href="$class_mqtt_connector.html#aa89c1f584a412e02c6138435a71a4ecc" title="Function to publish a rejected response to the MQTT broker." alt="" coords="103,1584,278,1611"/>
-<area shape="rect" id="node67" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="147,1939,234,1966"/>
-<area shape="rect" id="node69" href="$class_key_gen.html#a2ea5b52157e7110397fe476c61fcfd91" title="Function to mark that public key is still done." alt="" coords="101,520,280,547"/>
-<area shape="rect" id="node71" href="$class_timer.html#a8c528baf37154d347366083f0f816846" title="Timer stop function." alt="" coords="147,1990,234,2016"/>
-<area shape="rect" id="node5" href="$classcertmgr.html#af5293bd514ca5d83c32a243953e61b1a" title=" " alt="" coords="333,115,505,142"/>
-<area shape="rect" id="node7" href="$class_reset_ctrl.html#a6c639dcc49b79a7610d1925749cc2359" title="Convenience function to perform a SW reset." alt="" coords="329,824,508,851"/>
-<area shape="rect" id="node9" href="$classcertmgr.html#af0654790e06b5ac06e0f356de34ed4e6" title=" " alt="" coords="339,166,498,192"/>
-<area shape="rect" id="node12" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="353,267,485,294"/>
-<area shape="rect" id="node13" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="571,267,695,294"/>
-<area shape="rect" id="node16" href="$class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916" title=" " alt="" coords="352,419,485,446"/>
-<area shape="rect" id="node17" href="$class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8" title=" " alt="" coords="353,470,484,496"/>
-<area shape="rect" id="node18" href="$class_flash_f_s.html#ab40ac03c5347c00a05c803e41d6c735c" title=" " alt="" coords="355,318,482,344"/>
-<area shape="rect" id="node19" href="$class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="583,698,683,724"/>
-<area shape="rect" id="node22" href="$class_mqtt_connector.html#a959e4c8768e9fd37a1411a350d04f446" title="Function to publish a response to the MQTT broker." alt="" coords="572,1280,695,1307"/>
-<area shape="rect" id="node23" href="$class_mqtt_connector.html#afd64f589c503525f02261a850b822527" title="The publish method of MQTT connector class." alt="" coords="797,1280,859,1307"/>
-<area shape="rect" id="node25" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="556,1179,711,1206"/>
-<area shape="rect" id="node27" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="582,1331,685,1358"/>
-<area shape="rect" id="node26" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="763,1179,893,1206"/>
-<area shape="rect" id="node29" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="759,1078,897,1104"/>
-<area shape="rect" id="node30" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="783,1128,873,1155"/>
-<area shape="rect" id="node31" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="945,1103,1065,1130"/>
-<area shape="rect" id="node32" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="957,1154,1054,1180"/>
-<area shape="rect" id="node38" href="$class_config.html#a6e68de84123711b6e53a49c3279606ea" title="Function to delete configuration file." alt="" coords="339,672,498,699"/>
-<area shape="rect" id="node40" href="$class_key_gen.html#a290303ddeb22987037be90caca412f85" title="Function to delete all key related files." alt="" coords="337,774,500,800"/>
-<area shape="rect" id="node41" href="$class_config.html#a9b3a6fc9e2b45eac27ab8bc00231bd87" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="375,1128,462,1155"/>
-<area shape="rect" id="node39" href="$class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276" title=" " alt="" coords="573,762,693,788"/>
-<area shape="rect" id="node44" href="$class_flash_f_s.html#ac1fe59dfffb46bf7a6b6e931356631aa" title=" " alt="" coords="355,926,482,952"/>
-<area shape="rect" id="node46" href="$class_flash_f_s.html#a1db7f084483fe1bc09d688e3d3a69eb4" title=" " alt="" coords="354,875,483,902"/>
-<area shape="rect" id="node45" href="$class_flash_f_s.html#af4e67fd0e66b799a025531d100e0cbc1" title="Erase function for file system. This function erases the file system on the specified mount point." alt="" coords="578,926,689,952"/>
-<area shape="rect" id="node50" href="$class_config.html#a4530f1c50511acfe103d8788a85d3500" title="Function to automatically correct invalid configuration values." alt="" coords="343,1027,494,1054"/>
-<area shape="rect" id="node54" href="$class_config.html#a7b0b73b517a5c380220f46d722f4481b" title="Function to store JSON configuration string in file system." alt="" coords="355,1179,482,1206"/>
-<area shape="rect" id="node51" href="$class_config.html#abbed406bd7169794eed499057c17142e" title="Function to retrieve a single value from a JSON group object." alt="" coords="575,1027,692,1054"/>
-<area shape="rect" id="node52" href="$class_config.html#a774b533b0a7a6ba5dbe9214642f04245" title="Function to write object representation from memory to input string." alt="" coords="587,1078,679,1104"/>
-<area shape="rect" id="node53" href="$class_config.html#ae06cb6427fcd926b24a5def4fb459e3f" title="Function to store a single value in a JSON group object." alt="" coords="575,976,692,1003"/>
-<area shape="rect" id="node56" href="$class_mqtt_connector.html#a1c2bd902abdaf7c8a608d8cd9b7403b5" title="Function to send a subscribe request for the command topic to the MQTT broker." alt="" coords="363,1914,474,1940"/>
-<area shape="rect" id="node58" href="$class_mqtt_connector.html#aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" title="Function to send a subscribe request for the config topic to the &#160;&#160;MQTT broker." alt="" coords="359,1863,478,1890"/>
-<area shape="rect" id="node57" href="$class_mqtt_connector.html#a0fc7bb8f849d8634227e7e2d4a1ac9f0" title="Function to send a subscribe request to the MQTT broker." alt="" coords="594,1863,673,1890"/>
-<area shape="rect" id="node68" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="370,1964,467,1991"/>
-<area shape="rect" id="node70" href="$class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d" title=" " alt="" coords="354,520,483,547"/>
+<area shape="rect" id="node1" title="MQTT connector task function." alt="" coords="5,967,52,994"/>
+<area shape="rect" id="node2" href="$class_mqtt_connector.html#ac54f53dc342019e8db34f4aa581a5792" title="Function to send a abort request to the MQTT broker." alt="" coords="417,35,468,62"/>
+<area shape="rect" id="node3" href="$classcertmgr.html#a119aab00792ccace8235e70745c29498" title=" " alt="" coords="112,65,293,107"/>
+<area shape="rect" id="node4" href="$class_mqtt_connector.html#a1396bf9b5defe9fa844a63b5cd40ac0e" title="Function to send a connect request to the MQTT broker." alt="" coords="169,182,237,209"/>
+<area shape="rect" id="node6" href="$classcertmgr.html#acc45f4d4d5957998c083aac888aa8050" title=" " alt="" coords="395,106,490,133"/>
+<area shape="rect" id="node8" href="$class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="399,258,487,285"/>
+<area shape="rect" id="node10" href="$class_mqtt_connector.html#a960705de531a20389fb29928d43258c3" title="Function to send a disconnect request to the MQTT broker." alt="" coords="160,283,245,310"/>
+<area shape="rect" id="node11" href="$class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="149,334,256,361"/>
+<area shape="rect" id="node14" href="$class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="374,1347,511,1374"/>
+<area shape="rect" id="node15" href="$class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="365,1499,520,1526"/>
+<area shape="rect" id="node20" href="$class_mqtt_connector.html#ae07a10cc3041ea092699387b0fdb3257" title="Handler function for handling of boost converter off request." alt="" coords="135,689,270,715"/>
+<area shape="rect" id="node21" href="$class_mqtt_connector.html#ab5d3e83997c930e0ea258cccbee98063" title="Function to publish a accepted response to the MQTT broker." alt="" coords="353,841,532,867"/>
+<area shape="rect" id="node24" href="$class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="385,663,500,690"/>
+<area shape="rect" id="node28" href="$class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="612,562,703,589"/>
+<area shape="rect" id="node33" href="$class_mqtt_connector.html#af768b2a6ec57840d0ee687f9b25e7b4c" title="Handler function for handling of boost converter on request." alt="" coords="135,739,271,766"/>
+<area shape="rect" id="node34" href="$class_mqtt_connector.html#a7b73774ea55d0112571cf49e98558e37" title="Handler function for handling of cold start request." alt="" coords="133,790,272,817"/>
+<area shape="rect" id="node35" href="$class_mqtt_connector.html#a4ba8232123283b7363cf319d3603b9ac" title="Handler function for handling disable ADXL request." alt="" coords="134,841,271,867"/>
+<area shape="rect" id="node36" href="$class_mqtt_connector.html#a163abf5e1860042a8d2fe54398ee0c53" title="Handler function for handling enable ADXL request." alt="" coords="135,638,270,665"/>
+<area shape="rect" id="node37" href="$class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="129,993,276,1019"/>
+<area shape="rect" id="node42" href="$class_key_gen.html#aa82987fa60c88c4380a157e4b0f178b6" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="393,891,492,918"/>
+<area shape="rect" id="node43" href="$class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="147,435,258,462"/>
+<area shape="rect" id="node47" href="$class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="145,1094,260,1121"/>
+<area shape="rect" id="node48" href="$class_mqtt_connector.html#ab09a2b3c65e60b502efe51bfaaa6095f" title="Handler function for handling get configuration request." alt="" coords="143,1043,262,1070"/>
+<area shape="rect" id="node49" href="$class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="121,1195,284,1222"/>
+<area shape="rect" id="node55" href="$class_wakeup_cnt.html#a82b7e4c71c77f5941dd5e861dbb7e952" title=" " alt="" coords="107,1703,298,1744"/>
+<area shape="rect" id="node60" href="$class_wakeup_cnt.html#a383f4683ccd5950b0c6f17760c1a9879" title=" " alt="" coords="100,1651,305,1678"/>
+<area shape="rect" id="node61" href="$class_wakeup_cnt.html#a77a0dd2597120892760e075169cb5fd3" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="143,1297,262,1323"/>
+<area shape="rect" id="node62" href="$class_mqtt_connector.html#a86374deb5f3ee32fb220efbaf0743b0f" title="Callback handlers from MQTT helper library for connack from broker." alt="" coords="157,1769,249,1795"/>
+<area shape="rect" id="node66" href="$class_mqtt_connector.html#aef147f2b63e45447753b327e4d85079e" title="Callback handlers from MQTT helper library for disconnect indication from broker." alt="" coords="149,587,256,614"/>
+<area shape="rect" id="node67" href="$class_mqtt_connector.html#aed0e2bc67364b25cbf96f7eff79b437d" title="Callback handlers from MQTT helper library for puback from broker." alt="" coords="160,1449,245,1475"/>
+<area shape="rect" id="node68" href="$class_mqtt_connector.html#a8758bc421d3292a0f4431a017446bd24" title="Callback handlers from MQTT helper library for a subscribed topic from broker." alt="" coords="161,486,245,513"/>
+<area shape="rect" id="node69" href="$class_mqtt_connector.html#a86e2fd6577ee6e2f7e8feaa35c4f18a6" title="Callback handlers from MQTT helper library for suback from broker." alt="" coords="160,1550,245,1577"/>
+<area shape="rect" id="node70" href="$class_mqtt_connector.html#ae00794e6ab250c0807e70f42b0aee29f" title="Function to send a subscribe request for the OTA topic to the MQTT broker." alt="" coords="151,1819,254,1846"/>
+<area shape="rect" id="node71" href="$class_mqtt_connector.html#a902f83037dc5ee6772caad03b74e7326" title="Function to publish data to the MQTT broker." alt="" coords="397,1398,489,1425"/>
+<area shape="rect" id="node72" href="$class_mqtt_connector.html#a468c248c7d18e226ea56f9c1a8e07be4" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="145,1347,260,1374"/>
+<area shape="rect" id="node73" href="$class_mqtt_connector.html#aa89c1f584a412e02c6138435a71a4ecc" title="Function to publish a rejected response to the MQTT broker." alt="" coords="355,1145,530,1171"/>
+<area shape="rect" id="node74" href="$class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="159,1870,246,1897"/>
+<area shape="rect" id="node76" href="$class_key_gen.html#a2ea5b52157e7110397fe476c61fcfd91" title="Function to mark that public key is still done." alt="" coords="353,1558,532,1585"/>
+<area shape="rect" id="node77" href="$class_timer.html#a8c528baf37154d347366083f0f816846" title="Timer stop function." alt="" coords="159,1921,246,1947"/>
+<area shape="rect" id="node5" href="$classcertmgr.html#af5293bd514ca5d83c32a243953e61b1a" title=" " alt="" coords="357,157,529,183"/>
+<area shape="rect" id="node7" href="$class_reset_ctrl.html#a6c639dcc49b79a7610d1925749cc2359" title="Convenience function to perform a SW reset." alt="" coords="353,587,532,614"/>
+<area shape="rect" id="node9" href="$classcertmgr.html#af0654790e06b5ac06e0f356de34ed4e6" title=" " alt="" coords="363,207,522,234"/>
+<area shape="rect" id="node12" href="$class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="377,334,509,361"/>
+<area shape="rect" id="node13" href="$class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="595,334,719,361"/>
+<area shape="rect" id="node16" href="$class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916" title=" " alt="" coords="591,1507,724,1534"/>
+<area shape="rect" id="node17" href="$class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8" title=" " alt="" coords="592,1558,723,1585"/>
+<area shape="rect" id="node18" href="$class_flash_f_s.html#ab40ac03c5347c00a05c803e41d6c735c" title=" " alt="" coords="594,1457,721,1483"/>
+<area shape="rect" id="node19" href="$class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="607,1043,707,1070"/>
+<area shape="rect" id="node22" href="$class_mqtt_connector.html#a959e4c8768e9fd37a1411a350d04f446" title="Function to publish a response to the MQTT broker." alt="" coords="596,993,719,1019"/>
+<area shape="rect" id="node23" href="$class_mqtt_connector.html#afd64f589c503525f02261a850b822527" title="The publish method of MQTT connector class." alt="" coords="821,1246,883,1273"/>
+<area shape="rect" id="node25" href="$class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="580,689,735,715"/>
+<area shape="rect" id="node27" href="$class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="606,638,709,665"/>
+<area shape="rect" id="node26" href="$class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="787,689,917,715"/>
+<area shape="rect" id="node29" href="$class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="783,537,921,563"/>
+<area shape="rect" id="node30" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="807,587,897,614"/>
+<area shape="rect" id="node31" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="969,562,1089,589"/>
+<area shape="rect" id="node32" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="981,613,1078,639"/>
+<area shape="rect" id="node38" href="$class_config.html#a6e68de84123711b6e53a49c3279606ea" title="Function to delete configuration file." alt="" coords="363,942,522,969"/>
+<area shape="rect" id="node40" href="$class_key_gen.html#a290303ddeb22987037be90caca412f85" title="Function to delete all key related files." alt="" coords="361,993,524,1019"/>
+<area shape="rect" id="node41" href="$class_config.html#a9b3a6fc9e2b45eac27ab8bc00231bd87" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="399,1043,486,1070"/>
+<area shape="rect" id="node39" href="$class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276" title=" " alt="" coords="597,942,717,969"/>
+<area shape="rect" id="node44" href="$class_flash_f_s.html#ac1fe59dfffb46bf7a6b6e931356631aa" title=" " alt="" coords="379,435,506,462"/>
+<area shape="rect" id="node46" href="$class_flash_f_s.html#a1db7f084483fe1bc09d688e3d3a69eb4" title=" " alt="" coords="378,537,507,563"/>
+<area shape="rect" id="node45" href="$class_flash_f_s.html#af4e67fd0e66b799a025531d100e0cbc1" title="Erase function for file system. This function erases the file system on the specified mount point." alt="" coords="602,435,713,462"/>
+<area shape="rect" id="node50" href="$class_config.html#a4530f1c50511acfe103d8788a85d3500" title="Function to automatically correct invalid configuration values." alt="" coords="367,1195,518,1222"/>
+<area shape="rect" id="node54" href="$class_config.html#a7b0b73b517a5c380220f46d722f4481b" title="Function to store JSON configuration string in file system." alt="" coords="379,1297,506,1323"/>
+<area shape="rect" id="node51" href="$class_config.html#abbed406bd7169794eed499057c17142e" title="Function to retrieve a single value from a JSON group object." alt="" coords="599,1094,716,1121"/>
+<area shape="rect" id="node52" href="$class_config.html#a774b533b0a7a6ba5dbe9214642f04245" title="Function to write object representation from memory to input string." alt="" coords="611,1145,703,1171"/>
+<area shape="rect" id="node53" href="$class_config.html#ae06cb6427fcd926b24a5def4fb459e3f" title="Function to store a single value in a JSON group object." alt="" coords="599,1195,716,1222"/>
+<area shape="rect" id="node56" href="$class_wakeup_cnt.html#ac5c54df7ed3b930268c8d7752c101725" title="Getter function to retrieve the boot count." alt="" coords="374,1630,511,1657"/>
+<area shape="rect" id="node57" href="$class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae" title=" " alt="" coords="592,1659,723,1686"/>
+<area shape="rect" id="node58" href="$class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0" title=" " alt="" coords="592,1710,723,1737"/>
+<area shape="rect" id="node59" href="$class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d" title=" " alt="" coords="593,1609,722,1635"/>
+<area shape="rect" id="node63" href="$class_mqtt_connector.html#a1c2bd902abdaf7c8a608d8cd9b7403b5" title="Function to send a subscribe request for the command topic to the MQTT broker." alt="" coords="387,1718,498,1745"/>
+<area shape="rect" id="node65" href="$class_mqtt_connector.html#aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" title="Function to send a subscribe request for the config topic to the &#160;&#160;MQTT broker." alt="" coords="383,1769,502,1795"/>
+<area shape="rect" id="node64" href="$class_mqtt_connector.html#a0fc7bb8f849d8634227e7e2d4a1ac9f0" title="Function to send a subscribe request to the MQTT broker." alt="" coords="618,1769,697,1795"/>
+<area shape="rect" id="node75" href="$class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="394,1870,491,1897"/>
 </map>

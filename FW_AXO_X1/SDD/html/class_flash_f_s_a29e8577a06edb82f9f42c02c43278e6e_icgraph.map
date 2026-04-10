@@ -1,29 +1,33 @@
 <map id="inst" name="inst">
-<area shape="rect" id="node1" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="704,487,747,513"/>
+<area shape="rect" id="node1" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="704,577,747,604"/>
 <area shape="rect" id="node2" href="$class_boost_converter.html#a88773507fbf105e4141ed56ca8ebd3b0" title="Boost converter task constructor." alt="" coords="449,5,656,32"/>
 <area shape="rect" id="node3" href="$class_boot_cnt.html#acf77f1606daf53b04879960d5e53d233" title="Boot Count constructor." alt="" coords="491,56,615,83"/>
-<area shape="rect" id="node4" href="$class_flash_f_s.html#a786ec25c34eab2518e86648f4482ab22" title=" " alt="" coords="224,107,371,133"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function of AXO Track firmware" alt="" coords="50,309,101,336"/>
-<area shape="rect" id="node6" href="$class_flash_f_s.html#ab2021306727b099bd7329f3f8e97ee39" title="Callback function for console input command &#39;del&#39;." alt="" coords="519,208,586,235"/>
-<area shape="rect" id="node7" href="$class_config.html#a6e68de84123711b6e53a49c3279606ea" title="Function to delete configuration file." alt="" coords="473,715,632,741"/>
-<area shape="rect" id="node10" href="$class_key_gen.html#a290303ddeb22987037be90caca412f85" title="Function to delete all key related files." alt="" coords="471,664,634,691"/>
-<area shape="rect" id="node11" href="$class_metrics_builder.html#a061eb4d725222504949f9eb49c619fd5" title="Function to finalize the metrics JSON string." alt="" coords="476,309,629,336"/>
-<area shape="rect" id="node13" href="$class_flash_f_s.html#ae3ec98d5ce0f5d2c3ae88ff4f5d75f83" title=" " alt="" coords="511,411,594,437"/>
-<area shape="rect" id="node14" href="$class_key_gen.html#ac3cd9437903afea95036a7720881218d" title="Function to retrieve the private key from file system." alt="" coords="474,259,631,285"/>
-<area shape="rect" id="node16" href="$class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="475,512,630,539"/>
-<area shape="rect" id="node18" href="$class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="195,613,399,640"/>
-<area shape="rect" id="node19" href="$class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="193,773,401,800"/>
-<area shape="rect" id="node20" href="$class_key_gen.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The init function." alt="" coords="250,360,345,387"/>
-<area shape="rect" id="node21" href="$class_config.html#a0dbf501f1647b6da5f7ce06af2db6bcc" title="Function to read JSON file into input string." alt="" coords="482,461,623,488"/>
-<area shape="rect" id="node23" href="$class_config.html#aaa33760cac1d5a80b4686c3015d0f23d" title="Function to store JSON configuration string in file system." alt="" coords="489,765,616,792"/>
-<area shape="rect" id="node24" href="$class_key_gen.html#a2ea5b52157e7110397fe476c61fcfd91" title="Function to mark that public key is still done." alt="" coords="208,563,387,589"/>
-<area shape="rect" id="node25" href="$class_flash_f_s.html#a911899d9dc11ee830ff2731e57067ee2" title="Callback function for console input command &#39;ls&#39;." alt="" coords="502,867,603,893"/>
-<area shape="rect" id="node26" href="$class_flash_f_s.html#aa4c622a4ff7fdde9e5cf80508294fd3a" title="Callback function for console input command &#39;fs&#39;." alt="" coords="505,917,600,944"/>
-<area shape="rect" id="node27" href="$class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Boost converter task function." alt="" coords="481,968,624,995"/>
-<area shape="rect" id="node8" href="$class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="198,665,397,706"/>
+<area shape="rect" id="node4" href="$class_flash_f_s.html#a786ec25c34eab2518e86648f4482ab22" title=" " alt="" coords="224,157,371,184"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main function of AXO Track firmware" alt="" coords="50,259,101,285"/>
+<area shape="rect" id="node6" href="$class_flash_f_s.html#ab2021306727b099bd7329f3f8e97ee39" title="Callback function for console input command &#39;del&#39;." alt="" coords="519,805,586,832"/>
+<area shape="rect" id="node7" href="$class_config.html#a6e68de84123711b6e53a49c3279606ea" title="Function to delete configuration file." alt="" coords="473,653,632,680"/>
+<area shape="rect" id="node10" href="$class_key_gen.html#a290303ddeb22987037be90caca412f85" title="Function to delete all key related files." alt="" coords="471,704,634,731"/>
+<area shape="rect" id="node11" href="$class_metrics_builder.html#a061eb4d725222504949f9eb49c619fd5" title="Function to finalize the metrics JSON string." alt="" coords="476,856,629,883"/>
+<area shape="rect" id="node13" href="$class_flash_f_s.html#ae3ec98d5ce0f5d2c3ae88ff4f5d75f83" title=" " alt="" coords="511,907,594,933"/>
+<area shape="rect" id="node14" href="$class_key_gen.html#ac3cd9437903afea95036a7720881218d" title="Function to retrieve the private key from file system." alt="" coords="474,216,631,243"/>
+<area shape="rect" id="node16" href="$class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="475,400,630,427"/>
+<area shape="rect" id="node18" href="$class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="195,796,399,823"/>
+<area shape="rect" id="node19" href="$class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="193,512,401,539"/>
+<area shape="rect" id="node20" href="$class_wakeup_cnt.html#a02fd73d861ef2e4aabb38c0c9ff82947" title=" " alt="" coords="240,461,355,488"/>
+<area shape="rect" id="node21" href="$class_key_gen.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="The init function." alt="" coords="250,259,345,285"/>
+<area shape="rect" id="node22" href="$class_config.html#a0dbf501f1647b6da5f7ce06af2db6bcc" title="Function to read JSON file into input string." alt="" coords="482,347,623,373"/>
+<area shape="rect" id="node24" href="$class_config.html#aaa33760cac1d5a80b4686c3015d0f23d" title="Function to store JSON configuration string in file system." alt="" coords="489,957,616,984"/>
+<area shape="rect" id="node25" href="$class_key_gen.html#a2ea5b52157e7110397fe476c61fcfd91" title="Function to mark that public key is still done." alt="" coords="208,563,387,589"/>
+<area shape="rect" id="node26" href="$class_flash_f_s.html#a911899d9dc11ee830ff2731e57067ee2" title="Callback function for console input command &#39;ls&#39;." alt="" coords="502,1008,603,1035"/>
+<area shape="rect" id="node27" href="$class_flash_f_s.html#aa4c622a4ff7fdde9e5cf80508294fd3a" title="Callback function for console input command &#39;fs&#39;." alt="" coords="505,1059,600,1085"/>
+<area shape="rect" id="node28" href="$class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="Boost converter task function." alt="" coords="481,1109,624,1136"/>
+<area shape="rect" id="node29" href="$class_wakeup_cnt.html#ac5c54df7ed3b930268c8d7752c101725" title="Getter function to retrieve the boot count." alt="" coords="484,603,621,629"/>
+<area shape="rect" id="node8" href="$class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="198,730,397,771"/>
 <area shape="rect" id="node9" href="$class_mqtt_connector.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e" title="MQTT connector task function." alt="" coords="5,613,145,640"/>
-<area shape="rect" id="node12" href="$class_data_manager.html#a557b206172fbde7a204eb0d2376b7f71" title="Data manager task function." alt="" coords="231,309,363,336"/>
-<area shape="rect" id="node15" href="$class_http_connector.html#ae369b3765489ee8bd0ea791c1843630f" title="HttpConnector virtual task configure function." alt="" coords="215,259,380,285"/>
-<area shape="rect" id="node17" href="$class_data_manager.html#ae369b3765489ee8bd0ea791c1843630f" title="Data manager virtual task configure function." alt="" coords="218,461,377,488"/>
-<area shape="rect" id="node22" href="$class_config.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function of the Config class." alt="" coords="256,411,339,437"/>
+<area shape="rect" id="node12" href="$class_data_manager.html#a557b206172fbde7a204eb0d2376b7f71" title="Data manager task function." alt="" coords="231,856,363,883"/>
+<area shape="rect" id="node15" href="$class_http_connector.html#ae369b3765489ee8bd0ea791c1843630f" title="HttpConnector virtual task configure function." alt="" coords="215,208,380,235"/>
+<area shape="rect" id="node17" href="$class_data_manager.html#ae369b3765489ee8bd0ea791c1843630f" title="Data manager virtual task configure function." alt="" coords="218,360,377,387"/>
+<area shape="rect" id="node23" href="$class_config.html#a02fd73d861ef2e4aabb38c0c9ff82947" title="Initialization function of the Config class." alt="" coords="256,309,339,336"/>
+<area shape="rect" id="node30" href="$class_wakeup_cnt.html#a82b7e4c71c77f5941dd5e861dbb7e952" title=" " alt="" coords="202,665,393,706"/>
+<area shape="rect" id="node31" href="$class_wakeup_cnt.html#a383f4683ccd5950b0c6f17760c1a9879" title=" " alt="" coords="195,613,400,640"/>
 </map>

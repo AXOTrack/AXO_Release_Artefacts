@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Global <a class="el" href="struct_adxl37x.html#aa40b55f092609cc5710dd1af8da9316b">Adxl37x::setExtSyncClk</a>  (bool state)</dt>
+<dd><a class="anchor" id="_todo000007"></a>ADAPT this function description !!!! </dd>
 <dt>Global <a class="el" href="class_battery_mgr.html#a557b206172fbde7a204eb0d2376b7f71">BatteryMgr::task</a>  (void) override</dt>
 <dd><a class="anchor" id="_todo000006"></a>should be deleted: Battery manager not uses timers  </dd>
 <dt>Global <a class="el" href="class_data_manager.html#af88c046ebc43d084f223a0f735428663">DataManager::DataManager</a>  (const char *name="??", bool have_mqtt_connector=true)</dt>
@@ -94,9 +96,9 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Global <a class="el" href="class_data_manager.html#a557b206172fbde7a204eb0d2376b7f71">DataManager::task</a>  (void) override</dt>
 <dd><a class="anchor" id="_todo000005"></a>remove unused timer ?  </dd>
 <dt>Global <a class="el" href="class_fw_upd.html#aba0088d95e1422df36bf6d8049ecf220">FwUpd::sha1_expected</a>  [41]</dt>
-<dd><a class="anchor" id="_todo000016"></a>no magic numbers  </dd>
+<dd><a class="anchor" id="_todo000020"></a>no magic numbers  </dd>
 <dt>Class <a class="el" href="class_lte_monitor.html">LteMonitor</a>  </dt>
-<dd><a class="anchor" id="_todo000015"></a> RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <a class="el" href="class_hit_detector.html" title="Hit detector helper class.">HitDetector</a> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <a class="el" href="class_hit_detector.html" title="Hit detector helper class.">HitDetector</a>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<ul>
+<dd><a class="anchor" id="_todo000016"></a> RMS task receives the acceleration raw data from ADXL data store task, calculate RMS and with the help of class <a class="el" href="class_hit_detector.html" title="Hit detector helper class.">HitDetector</a> hit values. RMS, medium and critical hit values will be send to RMS store task together with a timestamp. The class provides an idle detection timer, and for medium and critical hit detection an instance of class <a class="el" href="class_hit_detector.html" title="Hit detector helper class.">HitDetector</a>. It provides the function update_rms to calculate RMS and hit values and to send them to the RMS store task.<ul>
 <li>Receive<ul>
 <li>Timer interrupt callback</li>
 <li>RMS task (self)</li>
@@ -118,22 +120,28 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
  The calculated displacement data will be transmitted via HTTPS protocol. Transmission uses HTTP POST. See <a class="el" href="http__connector_8h.html#http_connector">http_connector</a>. </p>
 </dd>
 <dt>File <a class="el" href="mram_8h.html">mram.h</a>  </dt>
-<dd><a class="anchor" id="_todo000013"></a>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <br  />
+<dd><a class="anchor" id="_todo000014"></a>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <br  />
  To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <a class="el" href="_m_s_c.html#SectionDisplacement">Displacement Calculation</a> for further details).  </dd>
 <dt>Class <a class="el" href="classspimram.html">spimram</a>  </dt>
-<dd><a class="anchor" id="_todo000014"></a>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system. </dd>
+<dd><a class="anchor" id="_todo000015"></a>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system. </dd>
 <dt>Global <a class="el" href="classspimram.html#aba64ac0204d2a452ff17bab78ba5ed95">spimram::read_config1_reg</a>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000011"></a>remove </p>
-<p class="enddd"><a class="anchor" id="_todo000012"></a>remove </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000012"></a>remove </p>
+<p class="enddd"><a class="anchor" id="_todo000013"></a>remove </p>
 </dd>
 <dt>Global <a class="el" href="classspimram.html#a29e1fba759049f2506cd3dce4606ea30">spimram::read_device_id</a>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000007"></a>remove </p>
-<p class="enddd"><a class="anchor" id="_todo000008"></a>remove </p>
+<dd><p class="startdd"><a class="anchor" id="_todo000008"></a>remove </p>
+<p class="enddd"><a class="anchor" id="_todo000009"></a>remove </p>
 </dd>
 <dt>Global <a class="el" href="classspimram.html#a181ae46b639fd08007a4349fba1b853d">spimram::read_status_reg</a>  (const struct device *spi, struct spi_config *spi_cfg, uint8_t *id_buf, size_t len)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000009"></a>remove </p>
-<p class="enddd"><a class="anchor" id="_todo000010"></a>remove</p>
+<dd><p class="startdd"><a class="anchor" id="_todo000010"></a>remove </p>
+<p class="enddd"><a class="anchor" id="_todo000011"></a>remove </p>
 </dd>
+<dt>File <a class="el" href="wakeup__cnt_8h.html">wakeup_cnt.h</a>  </dt>
+<dd><a class="anchor" id="_todo000018"></a>boot events. The boot counter willl be stored persistently in FRAM flash file system. At startup boot count is read from flash file system and will be incremented by 1. Because boot count may be negative on an erased flash it is set to 0 in case of a negative value. </dd>
+<dt>Class <a class="el" href="class_wakeup_cnt.html">WakeupCnt</a>  </dt>
+<dd><a class="anchor" id="_todo000019"></a>is stored in private variable boot_count. </dd>
+<dt>Global <a class="el" href="class_wakeup_cnt.html#a3576c0de8015d0063cce0ae347b63299">WakeupCnt::WakeupCnt</a>  ()</dt>
+<dd><a class="anchor" id="_todo000017"></a>Boot Count constructor</dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

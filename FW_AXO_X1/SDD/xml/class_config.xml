@@ -151,14 +151,14 @@ In case there is no instance created, the constructor will be called to create t
         <referencedby refid="class_adxl_data_store_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl__store_8cpp" startline="1335" endline="1352">AdxlDataStore::configure</referencedby>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
         <referencedby refid="class_disp_task_1ae369b3765489ee8bd0ea791c1843630f" compoundref="disptask_8cpp" startline="97" endline="108">DispTask::configure</referencedby>
-        <referencedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl37x_8cpp" startline="524" endline="560">Adxl37x::configure</referencedby>
+        <referencedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl37x_8cpp" startline="600" endline="636">Adxl37x::configure</referencedby>
         <referencedby refid="class_http_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="http__connector_8cpp" startline="115" endline="140">HttpConnector::configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="603" endline="609">MqttConnector::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="604" endline="610">MqttConnector::configure</referencedby>
         <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">PowerMgr::configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
-        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="975" endline="979">MqttConnector::HandleGetConfig</referencedby>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="976" endline="980">MqttConnector::HandleGetConfig</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -193,7 +193,7 @@ In case there is no instance created, the constructor will be called to create t
         <references refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">parseAllValues</references>
         <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
         <references refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" compoundref="config_8cpp" startline="236" endline="246">saveToFile</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -344,7 +344,7 @@ By calling Zephyr function cJSON_PrintUnformatted the JSON configuration string 
         <location file="conf/config.h" line="239" column="9" bodyfile="conf/config.cpp" bodystart="236" bodyend="246"/>
         <references refid="class_config_1a84703f07f323f416cd4b531c1bbd59af" compoundref="config_8h" startline="305">input</references>
         <references refid="class_config_1a0432e69b1f1ae879b9e5670d05509b4d" compoundref="config_8h" startline="306">root_obj</references>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">MqttConnector::HandleNewConfiguration</referencedby>
         <referencedby refid="class_config_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="config_8cpp" startline="1362" endline="1431">init</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -959,7 +959,7 @@ The function assign parameter buf to member variable input of type std:string, c
         <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
         <references refid="class_config_1a774b533b0a7a6ba5dbe9214642f04245" compoundref="config_8cpp" startline="275" endline="284">save</references>
         <references refid="class_config_1ae06cb6427fcd926b24a5def4fb459e3f" compoundref="config_8cpp" startline="652" endline="655">setValue</references>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">MqttConnector::HandleNewConfiguration</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_config_1a54dfba499c9d9e1003d4c9bcbe6ad1c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -1051,7 +1051,7 @@ The function returns a pointer to the configuration structure of the metrics gro
         <location file="conf/config.h" line="291" column="18" bodyfile="conf/config.cpp" bodystart="728" bodyend="730"/>
         <references refid="class_config_1a5ea632fc10c6c6b5122db4633361876e" compoundref="config_8h" startline="309">cfgMetrics</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="603" endline="609">MqttConnector::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="604" endline="610">MqttConnector::configure</referencedby>
         <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">PowerMgr::configure</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_config_1ae6395cad5f0583a45336e008ea4d05fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1132,7 +1132,7 @@ The function returns a pointer to the configuration structure of a single sensor
         <references refid="class_config_1a76bed1aa3e568f829c50a7b4a964b178" compoundref="config_8h" startline="314">cfgSensor</references>
         <references refid="config_8h_1ae0844591b2474dfebc9992bba67c617cafada96a1159c3171c1d10fafb70530c1" compoundref="config_8h" startline="159">eSensor_MAX</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
-        <referencedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl37x_8cpp" startline="524" endline="560">Adxl37x::configure</referencedby>
+        <referencedby refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" compoundref="adxl37x_8cpp" startline="600" endline="636">Adxl37x::configure</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_config_1af1e95a316d50179890c000585e59971f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char *</type>
@@ -1173,7 +1173,7 @@ By calling Zephyr function cJSON_PrintUnformatted the JSON configuration string 
         <references refid="config_8h_1af3a37ddad69a98c185798e80a58dcbdb" compoundref="config_8h" startline="122">CONFIG_FILENAME</references>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
         <references refid="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" compoundref="flashfs_8cpp" startline="243" endline="248">FlashFS::remove</references>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">MqttConnector::HandleFactoryDefault</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

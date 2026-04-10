@@ -39,7 +39,7 @@
         </inbodydescription>
         <location file="rtos/mpelem.h" line="220" column="13" bodyfile="rtos/mpelem.h" bodystart="220" bodyend="-1"/>
         <referencedby refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">MeasurementBuilder::add</referencedby>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">MetricsBuilder::add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">MetricsBuilder::add</referencedby>
         <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
         <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
         <referencedby refid="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" compoundref="lte__connector_8cpp" startline="312" endline="328">LteConnector::notify</referencedby>
@@ -55,10 +55,10 @@
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
         <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
         <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
-        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="679" endline="788">Adxl37x::task</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
         <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
         <referencedby refid="class_fw_upd_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update__ctrl_8cpp" startline="316" endline="362">FwUpdCtrl::task</referencedby>
@@ -110,7 +110,7 @@
         <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HttpConnector::HandleAdxlIdleInd</referencedby>
         <referencedby refid="class_mbox_1af67bd3264b53e5e891c6700879482957" compoundref="mbox_8cpp" startline="176" endline="185">Mbox::sendMsg</referencedby>
         <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
         <referencedby refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" compoundref="adconverter_8cpp" startline="124" endline="131">ADConverter::timer1_expired</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" prot="public" static="no" mutable="no">
@@ -126,7 +126,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="rtos/mpelem.h" line="223" column="12" bodyfile="rtos/mpelem.h" bodystart="223" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="387" endline="391">MetricsBuilder::addModemLinkQuality</referencedby>
+        <referencedby refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="388" endline="392">MetricsBuilder::addModemLinkQuality</referencedby>
         <referencedby refid="class_pool_elem_1a793169e06e9183e678805ce0663b6000" compoundref="mpelem_8cpp" startline="116" endline="125">Dump</referencedby>
         <referencedby refid="class_mbox_1a162de1b36e7d12961295ce50e1e65fd8" compoundref="mbox_8cpp" startline="200" endline="209">Mbox::sendMsg</referencedby>
         <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
@@ -267,10 +267,10 @@
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
         <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
         <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
-        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="679" endline="788">Adxl37x::task</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
         <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
         <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
@@ -303,33 +303,33 @@ The function return the pointer to message buffer content in private member vari
         </inbodydescription>
         <location file="rtos/mpelem.h" line="177" column="13" bodyfile="rtos/mpelem.cpp" bodystart="43" bodyend="43"/>
         <references refid="class_pool_elem_1a0e2229ffe6debf2f27126b0d02dfd3a0" compoundref="mpelem_8h" startline="231">buf</references>
-        <referencedby refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="508" endline="513">MetricsBuilder::addBootCnt</referencedby>
+        <referencedby refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="509" endline="514">MetricsBuilder::addBootCnt</referencedby>
         <referencedby refid="class_measurement_builder_1a4e5fd8a3677a589e1a2c3c17e5fd5381" compoundref="measurement_8cpp" startline="260" endline="270">MeasurementBuilder::addDispStatistics</referencedby>
-        <referencedby refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="552" endline="563">MetricsBuilder::addHumidity</referencedby>
-        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">MetricsBuilder::addHwMetrics</referencedby>
-        <referencedby refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="478" endline="482">MetricsBuilder::addIMSI</referencedby>
+        <referencedby refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="553" endline="564">MetricsBuilder::addHumidity</referencedby>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="431" endline="445">MetricsBuilder::addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="479" endline="483">MetricsBuilder::addIMSI</referencedby>
         <referencedby refid="class_measurement_builder_1a0d94000f43699989a2a5c80a6d72213f" compoundref="measurement_8cpp" startline="283" endline="294">MeasurementBuilder::addMaxXYZ</referencedby>
-        <referencedby refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="126" endline="132">MetricsBuilder::addModemBattV</referencedby>
-        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">MetricsBuilder::addModemPsmAct</referencedby>
-        <referencedby refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="370" endline="376">MetricsBuilder::addModemTemp</referencedby>
-        <referencedby refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="493" endline="497">MetricsBuilder::addResetCause</referencedby>
+        <referencedby refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="127" endline="133">MetricsBuilder::addModemBattV</referencedby>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="406" endline="414">MetricsBuilder::addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="371" endline="377">MetricsBuilder::addModemTemp</referencedby>
+        <referencedby refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="494" endline="498">MetricsBuilder::addResetCause</referencedby>
         <referencedby refid="class_measurement_builder_1ac97be061f59019f39f973a1ac28a68b9" compoundref="measurement_8cpp" startline="177" endline="219">MeasurementBuilder::addRmsData</referencedby>
-        <referencedby refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="527" endline="538">MetricsBuilder::addTemperature</referencedby>
+        <referencedby refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="528" endline="539">MetricsBuilder::addTemperature</referencedby>
         <referencedby refid="class_fw_info_1a52cad5018211f7c297fd558cb96768c2" compoundref="fwinfo_8cpp" startline="54" endline="58">FwInfo::FwInfo</referencedby>
         <referencedby refid="class_disp_task_1a8cb8f29f9f9216b026099a7e9c916acf" compoundref="disptask_8cpp" startline="911" endline="949">DispTask::HandleBwFiltData</referencedby>
         <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">DispTask::HandleDispFirstEntries</referencedby>
         <referencedby refid="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" compoundref="disptask_8cpp" startline="446" endline="462">DispTask::HandleDispLastEntries</referencedby>
         <referencedby refid="class_disp_task_1af7fbbdc38b04ca5ee0f945c2cf54ea80" compoundref="disptask_8cpp" startline="760" endline="795">DispTask::HandleFwFiltData</referencedby>
         <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HwMetrics::HandleHwStatusAdxl37x</referencedby>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">MqttConnector::HandleNewConfiguration</referencedby>
         <referencedby refid="class_disp_task_1a62980b31ea3fb727feb6613268798b13" compoundref="disptask_8cpp" startline="665" endline="702">DispTask::HandleRawData</referencedby>
         <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">DispTask::HandleRawDataStatus</referencedby>
         <referencedby refid="class_http_connector_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="http__connector_8cpp" startline="760" endline="774">HttpConnector::HandleRawDataStatus</referencedby>
         <referencedby refid="class_http_connector_1aeaf0505dd1e05287635672b027c55d6f" compoundref="http__connector_8cpp" startline="641" endline="674">HttpConnector::HandleRcvdData</referencedby>
         <referencedby refid="class_disp_task_1aa1b33da4a44539cdb25533038f079003" compoundref="disptask_8cpp" startline="1005" endline="1070">DispTask::HandleSResultData</referencedby>
-        <referencedby refid="class_mqtt_connector_1ab0b0c6d681f4d9ee936edfc17542f632" compoundref="mqtt__connector_8cpp" startline="778" endline="782">MqttConnector::PublishAcceptedResponse</referencedby>
-        <referencedby refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="810" endline="814">MqttConnector::PublishDlResult</referencedby>
-        <referencedby refid="class_mqtt_connector_1a0520f0e181a94a9bf2298654692a914e" compoundref="mqtt__connector_8cpp" startline="794" endline="798">MqttConnector::PublishRejectedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab0b0c6d681f4d9ee936edfc17542f632" compoundref="mqtt__connector_8cpp" startline="779" endline="783">MqttConnector::PublishAcceptedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="811" endline="815">MqttConnector::PublishDlResult</referencedby>
+        <referencedby refid="class_mqtt_connector_1a0520f0e181a94a9bf2298654692a914e" compoundref="mqtt__connector_8cpp" startline="795" endline="799">MqttConnector::PublishRejectedResponse</referencedby>
         <referencedby refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">AdxlDataStore::sendBwFiltData</referencedby>
         <referencedby refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">AdxlDataStore::sendDispData</referencedby>
         <referencedby refid="class_adxl_data_store_1af827585056c20cb0bf6b2c4855319b3a" compoundref="adxl__store_8cpp" startline="899" endline="927">AdxlDataStore::sendFwFiltData</referencedby>
@@ -341,7 +341,7 @@ The function return the pointer to message buffer content in private member vari
         <referencedby refid="class_adxl_data_store_1acbcf08a573dd3531e1bbd4e254a44adb" compoundref="adxl__store_8cpp" startline="304" endline="340">AdxlDataStore::storeSResult</referencedby>
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
         <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
         <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>

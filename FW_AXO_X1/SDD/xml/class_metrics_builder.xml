@@ -17,8 +17,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="91" column="17" bodyfile="data/metric.h" bodystart="91" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="493" endline="497">addResetCause</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="494" endline="498">addResetCause</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a5f93a2e5368c30773cb80f81ffbce87c" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -33,8 +33,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="93" column="17" bodyfile="data/metric.h" bodystart="93" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a4343d2bc7616b3965fa6fecb5e744a99" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -49,8 +49,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="94" column="17" bodyfile="data/metric.h" bodystart="94" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a700fa7a3d2b81583d0d05ec2f86674ff" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -65,8 +65,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="95" column="17" bodyfile="data/metric.h" bodystart="95" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a9e9c3861140aedde537de99a20f254dc" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -81,8 +81,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="96" column="17" bodyfile="data/metric.h" bodystart="96" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="109" endline="115">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -97,10 +97,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="97" column="17" bodyfile="data/metric.h" bodystart="97" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="126" endline="132">addModemBattV</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="127" endline="133">addModemBattV</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="109" endline="115">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -115,10 +115,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="98" column="17" bodyfile="data/metric.h" bodystart="98" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="370" endline="376">addModemTemp</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="371" endline="377">addModemTemp</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="109" endline="115">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -133,8 +133,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="99" column="17" bodyfile="data/metric.h" bodystart="99" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="387" endline="391">addModemLinkQuality</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="388" endline="392">addModemLinkQuality</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -149,8 +149,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="100" column="17" bodyfile="data/metric.h" bodystart="100" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">addModemPsmAct</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="406" endline="414">addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -165,8 +165,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="101" column="17" bodyfile="data/metric.h" bodystart="101" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">addModemPsmAct</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="406" endline="414">addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a1b3f11008193b93fd584723e71ce5af8" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -265,7 +265,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="108" column="17" bodyfile="data/metric.h" bodystart="108" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" compoundref="metric_8cpp" startline="711" endline="714">getPayload</referencedby>
+        <referencedby refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" compoundref="metric_8cpp" startline="720" endline="723">getPayload</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -280,10 +280,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="109" column="17" bodyfile="data/metric.h" bodystart="109" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="527" endline="538">addTemperature</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="528" endline="539">addTemperature</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="109" endline="115">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -298,10 +298,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="110" column="17" bodyfile="data/metric.h" bodystart="110" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="552" endline="563">addHumidity</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">isComplete</referencedby>
-        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">reset</referencedby>
+        <referencedby refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="553" endline="564">addHumidity</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="109" endline="115">isComplete</referencedby>
+        <referencedby refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">reset</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -316,8 +316,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="111" column="17" bodyfile="data/metric.h" bodystart="111" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="478" endline="482">addIMSI</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="479" endline="483">addIMSI</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -332,8 +332,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="112" column="17" bodyfile="data/metric.h" bodystart="112" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="508" endline="513">addBootCnt</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="509" endline="514">addBootCnt</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -348,8 +348,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="113" column="17" bodyfile="data/metric.h" bodystart="113" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">addHwMetrics</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="431" endline="445">addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -364,8 +364,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="114" column="17" bodyfile="data/metric.h" bodystart="114" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">addHwMetrics</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="431" endline="445">addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -380,8 +380,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="115" column="17" bodyfile="data/metric.h" bodystart="115" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" compoundref="metric_8cpp" startline="159" endline="161">setConfigVersion</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" compoundref="metric_8cpp" startline="160" endline="162">setConfigVersion</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -396,8 +396,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="116" column="17" bodyfile="data/metric.h" bodystart="116" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" compoundref="metric_8cpp" startline="171" endline="173">setActivationThres</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" compoundref="metric_8cpp" startline="172" endline="174">setActivationThres</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -412,8 +412,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="117" column="17" bodyfile="data/metric.h" bodystart="117" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" compoundref="metric_8cpp" startline="183" endline="185">setDeactivationThres</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" compoundref="metric_8cpp" startline="184" endline="186">setDeactivationThres</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -428,8 +428,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="119" column="17" bodyfile="data/metric.h" bodystart="119" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" compoundref="metric_8cpp" startline="195" endline="197">setDispModeOffFlag</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" compoundref="metric_8cpp" startline="196" endline="198">setDispModeOffFlag</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -444,8 +444,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="121" column="17" bodyfile="data/metric.h" bodystart="121" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" compoundref="metric_8cpp" startline="207" endline="209">setRawTransferOnFlag</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" compoundref="metric_8cpp" startline="208" endline="210">setRawTransferOnFlag</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -460,8 +460,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="123" column="17" bodyfile="data/metric.h" bodystart="123" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" compoundref="metric_8cpp" startline="219" endline="221">setDispTransferOnFlag</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" compoundref="metric_8cpp" startline="220" endline="222">setDispTransferOnFlag</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -476,8 +476,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="125" column="17" bodyfile="data/metric.h" bodystart="125" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" compoundref="metric_8cpp" startline="231" endline="233">setPublicKey</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" compoundref="metric_8cpp" startline="232" endline="234">setPublicKey</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -492,8 +492,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="126" column="17" bodyfile="data/metric.h" bodystart="126" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" compoundref="metric_8cpp" startline="243" endline="245">setMetricsInterval</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" compoundref="metric_8cpp" startline="244" endline="246">setMetricsInterval</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -508,8 +508,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="129" column="17" bodyfile="data/metric.h" bodystart="129" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" compoundref="metric_8cpp" startline="255" endline="257">set_Z_RmsThres</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" compoundref="metric_8cpp" startline="256" endline="258">set_Z_RmsThres</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -524,8 +524,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="130" column="17" bodyfile="data/metric.h" bodystart="130" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">finalize</referencedby>
-        <referencedby refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" compoundref="metric_8cpp" startline="267" endline="269">set_max_raw_per_day</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" compoundref="metric_8cpp" startline="268" endline="270">set_max_raw_per_day</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -544,7 +544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="51" column="5" bodyfile="data/metric.cpp" bodystart="79" bodyend="82"/>
+        <location file="data/metric.h" line="51" column="5" bodyfile="data/metric.cpp" bodystart="80" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1ada2a8350a330421d1a40f8937ef10c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -561,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="52" column="5" bodyfile="data/metric.cpp" bodystart="90" bodyend="90"/>
+        <location file="data/metric.h" line="52" column="5" bodyfile="data/metric.cpp" bodystart="91" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -591,10 +591,10 @@ The message payload will be extracted, casted to 32 bit integer value, converted
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="54" column="10" bodyfile="data/metric.cpp" bodystart="370" bodyend="376"/>
+        <location file="data/metric.h" line="54" column="10" bodyfile="data/metric.cpp" bodystart="371" bodyend="377"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -624,10 +624,10 @@ The message payload will be extracted, casted to 32 bit integer value, converted
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="55" column="10" bodyfile="data/metric.cpp" bodystart="126" bodyend="132"/>
+        <location file="data/metric.h" line="55" column="10" bodyfile="data/metric.cpp" bodystart="127" bodyend="133"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -657,10 +657,10 @@ The message payload will be extracted, converted to a string and stored in priva
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="56" column="10" bodyfile="data/metric.cpp" bodystart="387" bodyend="391"/>
+        <location file="data/metric.h" line="56" column="10" bodyfile="data/metric.cpp" bodystart="388" bodyend="392"/>
         <references refid="class_metrics_builder_1ab0fc1a15b157a94c5ac402ad52612d0d" compoundref="metric_8h" startline="99">mdm_link</references>
         <references refid="class_pool_elem_1a9c18e3776ccbed458747dc5324c2cbf4" compoundref="mpelem_8h" startline="223">PoolElem::p2</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -690,13 +690,13 @@ The message payload will be extracted, casted to structure <ref refid="structpsm
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="57" column="10" bodyfile="data/metric.cpp" bodystart="405" bodyend="413"/>
+        <location file="data/metric.h" line="57" column="10" bodyfile="data/metric.cpp" bodystart="406" bodyend="414"/>
         <references refid="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" compoundref="lte__monitor_8h" startline="93">psm_timer::active_time</references>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1a4463884b36daccd66706dea6fe921a02" compoundref="metric_8h" startline="101">psm_active</references>
         <references refid="class_metrics_builder_1adc3819bc11a6252cf44edae7941c6c8a" compoundref="metric_8h" startline="100">psm_tau</references>
         <references refid="structpsm__timer_1a804b12410e1c873e15396bc61153ecc7" compoundref="lte__monitor_8h" startline="90">psm_timer::tau</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -739,10 +739,10 @@ The message payload will be extracted, converted to a string and stored in priva
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="59" column="10" bodyfile="data/metric.cpp" bodystart="478" bodyend="482"/>
+        <location file="data/metric.h" line="59" column="10" bodyfile="data/metric.cpp" bodystart="479" bodyend="483"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" compoundref="metric_8h" startline="111">imsi</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -772,10 +772,10 @@ The message payload will be extracted, converted to a string and stored in priva
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="60" column="10" bodyfile="data/metric.cpp" bodystart="493" bodyend="497"/>
+        <location file="data/metric.h" line="60" column="10" bodyfile="data/metric.cpp" bodystart="494" bodyend="498"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1ad824d6869c84d9f084b94edccd25c814" compoundref="metric_8h" startline="91">reset_cause</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -805,10 +805,10 @@ The message payload will be extracted, casted to 32 bit integer value, converted
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="61" column="10" bodyfile="data/metric.cpp" bodystart="508" bodyend="513"/>
+        <location file="data/metric.h" line="61" column="10" bodyfile="data/metric.cpp" bodystart="509" bodyend="514"/>
         <references refid="class_metrics_builder_1a7a76bf910b6490f33db28dae798fd313" compoundref="metric_8h" startline="112">boot_cnt</references>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -826,7 +826,7 @@ The message payload will be extracted, casted to 32 bit integer value, converted
         <inbodydescription>
         </inbodydescription>
         <location file="data/metric.h" line="62" column="10"/>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -856,10 +856,10 @@ The message payload will be extracted, casted to structure sensor_value and stor
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="63" column="10" bodyfile="data/metric.cpp" bodystart="527" bodyend="538"/>
+        <location file="data/metric.h" line="63" column="10" bodyfile="data/metric.cpp" bodystart="528" bodyend="539"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1abf6dd746ff03d994f824e856a90caed5" compoundref="metric_8h" startline="109">temperature</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -889,10 +889,10 @@ The message payload will be extracted, casted to structure sensor_value and stor
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="64" column="10" bodyfile="data/metric.cpp" bodystart="552" bodyend="563"/>
+        <location file="data/metric.h" line="64" column="10" bodyfile="data/metric.cpp" bodystart="553" bodyend="564"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -922,7 +922,7 @@ The message payload will be extracted, casted to structure <ref refid="structhw_
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="65" column="10" bodyfile="data/metric.cpp" bodystart="430" bodyend="444"/>
+        <location file="data/metric.h" line="65" column="10" bodyfile="data/metric.cpp" bodystart="431" bodyend="445"/>
         <references refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" compoundref="metric_8h" startline="114">adxl_status</references>
         <references refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a77c49b7ddecca73845e2821c8688787e" compoundref="hw__metrics_8h" startline="42">eHwOK</references>
         <references refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8a47ddab85fd832aa8511a7cdff02413e4" compoundref="hw__metrics_8h" startline="44">eHwSelftestFailed</references>
@@ -930,7 +930,7 @@ The message payload will be extracted, casted to structure <ref refid="structhw_
         <references refid="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" compoundref="hw__metrics_8h" startline="50">hw_metrics::hw_status</references>
         <references refid="structhw__metrics_1aefba0da21d5c979252ddefe3691a7da3" compoundref="hw__metrics_8h" startline="49">hw_metrics::num_errors</references>
         <references refid="class_metrics_builder_1a710bf5694edf9fb2c90031380aa61468" compoundref="metric_8h" startline="113">num_hw_errors</references>
-        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">add</referencedby>
+        <referencedby refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">add</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -960,18 +960,18 @@ According to the message type of the message one of the specific add functions o
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="66" column="10" bodyfile="data/metric.cpp" bodystart="574" bodyend="629"/>
+        <location file="data/metric.h" line="66" column="10" bodyfile="data/metric.cpp" bodystart="575" bodyend="630"/>
         <references refid="class_metrics_builder_1a3f3d20bd02e547368f78d3c7b3197b35">addBattV</references>
-        <references refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="508" endline="513">addBootCnt</references>
-        <references refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="552" endline="563">addHumidity</references>
-        <references refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">addHwMetrics</references>
-        <references refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="478" endline="482">addIMSI</references>
-        <references refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="126" endline="132">addModemBattV</references>
-        <references refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="387" endline="391">addModemLinkQuality</references>
-        <references refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">addModemPsmAct</references>
-        <references refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="370" endline="376">addModemTemp</references>
-        <references refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="493" endline="497">addResetCause</references>
-        <references refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="527" endline="538">addTemperature</references>
+        <references refid="class_metrics_builder_1a19401fc2be9d03fe089817c79ff1c684" compoundref="metric_8cpp" startline="509" endline="514">addBootCnt</references>
+        <references refid="class_metrics_builder_1a166f87b32d2bfd72b0fa9bc171fdaef3" compoundref="metric_8cpp" startline="553" endline="564">addHumidity</references>
+        <references refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="431" endline="445">addHwMetrics</references>
+        <references refid="class_metrics_builder_1a4aa8d2f7dd366f1343d057cccdffdb11" compoundref="metric_8cpp" startline="479" endline="483">addIMSI</references>
+        <references refid="class_metrics_builder_1a2cfdd07b0705abdbe2691f27f90185d2" compoundref="metric_8cpp" startline="127" endline="133">addModemBattV</references>
+        <references refid="class_metrics_builder_1a41dfc306f6095e88ce290f8923c76a1f" compoundref="metric_8cpp" startline="388" endline="392">addModemLinkQuality</references>
+        <references refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="406" endline="414">addModemPsmAct</references>
+        <references refid="class_metrics_builder_1a9dfda63be345c99947e053cdc32f48c5" compoundref="metric_8cpp" startline="371" endline="377">addModemTemp</references>
+        <references refid="class_metrics_builder_1a24803a7c934bf6b9d47cdd47420aa92c" compoundref="metric_8cpp" startline="494" endline="498">addResetCause</references>
+        <references refid="class_metrics_builder_1a84e8a4a79512fab4189812987975ce35" compoundref="metric_8cpp" startline="528" endline="539">addTemperature</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" compoundref="mpelem_8h" startline="86">eAdcData</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0badfd456a99188733ddb1f0200db360c46" compoundref="mpelem_8h" startline="106">eBootCnt</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa843b3f2ac3a19d86c6458d34f9dde8b" compoundref="mpelem_8h" startline="85">eHwMetrics</references>
@@ -1015,7 +1015,7 @@ The function set the private string variable config_version to value of paramete
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="67" column="10" bodyfile="data/metric.cpp" bodystart="159" bodyend="161"/>
+        <location file="data/metric.h" line="67" column="10" bodyfile="data/metric.cpp" bodystart="160" bodyend="162"/>
         <references refid="class_metrics_builder_1a25ef124cf885c1b3d0708568596b55d2" compoundref="metric_8h" startline="115">config_version</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1047,7 +1047,7 @@ The function set the private string variable act_thres to value of parameter s. 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="68" column="10" bodyfile="data/metric.cpp" bodystart="171" bodyend="173"/>
+        <location file="data/metric.h" line="68" column="10" bodyfile="data/metric.cpp" bodystart="172" bodyend="174"/>
         <references refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" compoundref="metric_8h" startline="116">act_thres</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1079,7 +1079,7 @@ The function set the private string variable deact_thres to value of parameter s
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="69" column="10" bodyfile="data/metric.cpp" bodystart="183" bodyend="185"/>
+        <location file="data/metric.h" line="69" column="10" bodyfile="data/metric.cpp" bodystart="184" bodyend="186"/>
         <references refid="class_metrics_builder_1a2bf39bb5ef62b43ded6825bd85fe2acc" compoundref="metric_8h" startline="117">deact_thres</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1111,7 +1111,7 @@ The function set the private string variable disp_mode_off to value of parameter
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="70" column="10" bodyfile="data/metric.cpp" bodystart="195" bodyend="197"/>
+        <location file="data/metric.h" line="70" column="10" bodyfile="data/metric.cpp" bodystart="196" bodyend="198"/>
         <references refid="class_metrics_builder_1a2042731a8aa731a217bd1f3becce46fc" compoundref="metric_8h" startline="119">disp_mode_off</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1143,7 +1143,7 @@ The function set the private string variable raw_transfer_on to value of paramet
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="71" column="10" bodyfile="data/metric.cpp" bodystart="207" bodyend="209"/>
+        <location file="data/metric.h" line="71" column="10" bodyfile="data/metric.cpp" bodystart="208" bodyend="210"/>
         <references refid="class_metrics_builder_1a32bd5a93a63068b750fcc328cd6151f2" compoundref="metric_8h" startline="121">raw_transfer_on</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1175,7 +1175,7 @@ The function set the private string variable disp_transfer_on to value of parame
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="72" column="10" bodyfile="data/metric.cpp" bodystart="219" bodyend="221"/>
+        <location file="data/metric.h" line="72" column="10" bodyfile="data/metric.cpp" bodystart="220" bodyend="222"/>
         <references refid="class_metrics_builder_1aca97e0fdb2cbd3c660336bfea27a69b3" compoundref="metric_8h" startline="123">disp_transfer_on</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1207,7 +1207,7 @@ The function set the private string variable pubkey to value of parameter s. </p
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="73" column="10" bodyfile="data/metric.cpp" bodystart="231" bodyend="233"/>
+        <location file="data/metric.h" line="73" column="10" bodyfile="data/metric.cpp" bodystart="232" bodyend="234"/>
         <references refid="class_metrics_builder_1a3884dd96f69fc9d7110f2664a30ee366" compoundref="metric_8h" startline="125">pubkey</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1239,7 +1239,7 @@ The function set the private string variable interval to value of parameter s. <
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="74" column="10" bodyfile="data/metric.cpp" bodystart="243" bodyend="245"/>
+        <location file="data/metric.h" line="74" column="10" bodyfile="data/metric.cpp" bodystart="244" bodyend="246"/>
         <references refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="metric_8h" startline="126">interval</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1271,7 +1271,7 @@ The function set the private string variable raw_thres to value of parameter s. 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="75" column="10" bodyfile="data/metric.cpp" bodystart="255" bodyend="257"/>
+        <location file="data/metric.h" line="75" column="10" bodyfile="data/metric.cpp" bodystart="256" bodyend="258"/>
         <references refid="class_metrics_builder_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="metric_8h" startline="129">rms_thres</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1303,7 +1303,7 @@ The function set the private string variable max_raw_per_day to value of paramet
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="76" column="10" bodyfile="data/metric.cpp" bodystart="267" bodyend="269"/>
+        <location file="data/metric.h" line="76" column="10" bodyfile="data/metric.cpp" bodystart="268" bodyend="270"/>
         <references refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" compoundref="metric_8h" startline="130">max_raw_per_day</references>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
       </memberdef>
@@ -1339,7 +1339,7 @@ Result will be casted to 32 bit integer and returned </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="78" column="9" bodyfile="data/metric.cpp" bodystart="145" bodyend="149"/>
+        <location file="data/metric.h" line="78" column="9" bodyfile="data/metric.cpp" bodystart="146" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1359,7 +1359,7 @@ Result will be casted to 32 bit integer and returned </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="80" column="10" bodyfile="data/metric.cpp" bodystart="640" bodyend="701"/>
+        <location file="data/metric.h" line="80" column="10" bodyfile="data/metric.cpp" bodystart="641" bodyend="710"/>
         <references refid="class_metrics_builder_1a9849cd42322eb55764ee4e4f08c1cebb" compoundref="metric_8h" startline="116">act_thres</references>
         <references refid="class_metrics_builder_1a21658e2c2658a01697a4220dca340bce" compoundref="metric_8h" startline="114">adxl_status</references>
         <references refid="boost_8h_1adb78930007c481618718ea80667ddae1" compoundref="boost_8h" startline="53">BOOST_ENABLED_FILENAME</references>
@@ -1372,6 +1372,7 @@ Result will be casted to 32 bit integer and returned </para>
         <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
         <references refid="class_metrics_builder_1aaf6aea13a1ceb318d7f9584b6b94661d" compoundref="metric_8h" startline="111">imsi</references>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
+        <references refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" compoundref="wakeup__cnt_8cpp" startline="43" endline="47">WakeupCnt::inst</references>
         <references refid="class_metrics_builder_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="metric_8h" startline="126">interval</references>
         <references refid="class_metrics_builder_1a49c91d4f081729f946cac935fbe5e26a" compoundref="metric_8h" startline="130">max_raw_per_day</references>
         <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
@@ -1405,7 +1406,7 @@ Result will be casted to 32 bit integer and returned </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="81" column="10" bodyfile="data/metric.cpp" bodystart="736" bodyend="752"/>
+        <location file="data/metric.h" line="81" column="10" bodyfile="data/metric.cpp" bodystart="745" bodyend="761"/>
         <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
         <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
         <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
@@ -1435,7 +1436,7 @@ The function checks if the metrics JSON string is completly filled and all metri
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="83" column="10" bodyfile="data/metric.cpp" bodystart="108" bodyend="114"/>
+        <location file="data/metric.h" line="83" column="10" bodyfile="data/metric.cpp" bodystart="109" bodyend="115"/>
         <references refid="class_metrics_builder_1a81b33ea9e25e5dae429c2032d40371ca" compoundref="metric_8h" startline="110">humidity</references>
         <references refid="class_metrics_builder_1a69f3162ab439c79a8c83e080a6d58c1d" compoundref="metric_8h" startline="97">mdm_batv</references>
         <references refid="class_metrics_builder_1abbad2b1fdb8c66c9eaeea99cf6d81944" compoundref="metric_8h" startline="98">mdm_temp</references>
@@ -1461,7 +1462,7 @@ The function checks if the metrics JSON string is completly filled and all metri
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="84" column="10" bodyfile="data/metric.cpp" bodystart="722" bodyend="725"/>
+        <location file="data/metric.h" line="84" column="10" bodyfile="data/metric.cpp" bodystart="731" bodyend="734"/>
         <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1484,7 +1485,7 @@ The function returns the private string variable payload, which represents the m
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="data/metric.h" line="85" column="17" bodyfile="data/metric.cpp" bodystart="711" bodyend="714"/>
+        <location file="data/metric.h" line="85" column="17" bodyfile="data/metric.cpp" bodystart="720" bodyend="723"/>
         <references refid="class_metrics_builder_1aa74c818d418e097e25db7ec7b9320470" compoundref="metric_8h" startline="108">payload</references>
         <referencedby refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">DataManager::publishMetrics</referencedby>
       </memberdef>

@@ -7,6 +7,7 @@ FILE(GLOB app_sources src/test_i2c.cpp
                       #src/test_mb_client.cpp
                       #src/test_mb_server.cpp
                       src/stubs.cpp
+                      src/test_zz_exit.cpp
 )
 target_sources(app PRIVATE ${app_sources}
 	../../common/src/bus/i2c/i2cbus.cpp

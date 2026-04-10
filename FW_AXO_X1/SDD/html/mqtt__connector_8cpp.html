@@ -125,7 +125,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00051">51</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00052">52</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 </div>
 </div>
@@ -181,44 +181,46 @@ Functions</h2></td></tr>
 <code>#include &quot;<a class="el" href="certmgr_8h_source.html">util/certmgr.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="flashfs_8h_source.html">fs/flashfs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="reset__ctrl_8h_source.html">pm/reset_ctrl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="wakeup__cnt_8h_source.html">pm/wakeup_cnt.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mqtt_connector.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="mqtt__connector_8cpp__incl.png" border="0" usemap="#anet_2mqtt__connector_8cpp" alt=""/></div>
 <map name="anet_2mqtt__connector_8cpp" id="anet_2mqtt__connector_8cpp">
-<area shape="rect" title="Implementation of MQTT connector class." alt="" coords="1100,5,1258,32"/>
-<area shape="rect" href="mqtt__connector_8h.html" title="Header file of MQTT connector class." alt="" coords="908,80,1053,107"/>
-<area shape="rect" title=" " alt="" coords="719,162,842,189"/>
-<area shape="rect" title=" " alt="" coords="714,319,825,345"/>
-<area shape="rect" title=" " alt="" coords="1318,244,1373,271"/>
-<area shape="rect" href="mbox_8h.html" title="Header file of RTOS wrapper class MBox for mailbox support." alt="" coords="420,162,511,189"/>
-<area shape="rect" href="mpelem_8h.html" title="Header file of PoolElem class for message support." alt="" coords="161,244,266,271"/>
-<area shape="rect" href="mqueue_8h.html" title="Header file of RTOS wrapper class MQueue for mailbox support." alt="" coords="461,244,566,271"/>
-<area shape="rect" href="task_8h.html" title="Header file of RTOS wrapper class Task for multithreading support." alt="" coords="808,244,892,271"/>
-<area shape="rect" href="timer_8h.html" title="Header file of RTOS wrapper class Timer for software timer support." alt="" coords="1018,162,1106,189"/>
-<area shape="rect" href="certmgr_8h.html" title="Header file of certification management class." alt="" coords="1130,162,1228,189"/>
-<area shape="rect" href="debug_8h.html" title="Header file of debug configuration for files in common folder." alt="" coords="1253,162,1329,189"/>
-<area shape="rect" title=" " alt="" coords="1591,80,1658,107"/>
-<area shape="rect" title=" " alt="" coords="1682,80,1838,107"/>
-<area shape="rect" title=" " alt="" coords="1863,80,2002,107"/>
-<area shape="rect" title=" " alt="" coords="2026,80,2164,107"/>
-<area shape="rect" href="mempool_8h.html" title="Header file of RTOS wrapper class mempool for message allocation support." alt="" coords="24,244,136,271"/>
-<area shape="rect" href="mpool_8h.html" title="Header file of MsgPool class for message allocation support." alt="" coords="45,162,140,189"/>
-<area shape="rect" href="config_8h.html" title="Header file of Config class." alt="" coords="1370,80,1465,107"/>
-<area shape="rect" href="keygen_8h.html" title="Header file of TLS key generation class." alt="" coords="1455,162,1551,189"/>
-<area shape="rect" href="flashfs_8h.html" title="Header file of flash file system controller module." alt="" coords="2188,80,2272,107"/>
-<area shape="rect" href="reset__ctrl_8h.html" title="Header file of reset control task." alt="" coords="535,162,644,189"/>
-<area shape="rect" title=" " alt="" coords="326,319,390,345"/>
-<area shape="rect" title=" " alt="" coords="150,319,277,345"/>
-<area shape="rect" title=" " alt="" coords="438,319,589,345"/>
-<area shape="rect" title=" " alt="" coords="850,319,911,345"/>
-<area shape="rect" title=" " alt="" coords="1084,244,1274,271"/>
-<area shape="rect" title=" " alt="" coords="48,319,113,345"/>
-<area shape="rect" href="mutex_8h.html" title="Header file of RTOS wrapper class Mutex for mutex support." alt="" coords="290,244,385,271"/>
-<area shape="rect" title=" " alt="" coords="2044,162,2144,189"/>
-<area shape="rect" title=" " alt="" coords="2168,162,2292,189"/>
-<area shape="rect" title=" " alt="" coords="2316,155,2455,196"/>
-<area shape="rect" title=" " alt="" coords="591,244,732,271"/>
+<area shape="rect" title="Implementation of MQTT connector class." alt="" coords="1007,5,1165,32"/>
+<area shape="rect" href="mqtt__connector_8h.html" title="Header file of MQTT connector class." alt="" coords="749,80,895,107"/>
+<area shape="rect" title=" " alt="" coords="499,162,622,189"/>
+<area shape="rect" title=" " alt="" coords="715,319,825,345"/>
+<area shape="rect" title=" " alt="" coords="1275,244,1329,271"/>
+<area shape="rect" href="mbox_8h.html" title="Header file of RTOS wrapper class MBox for mailbox support." alt="" coords="113,162,203,189"/>
+<area shape="rect" href="mpelem_8h.html" title="Header file of PoolElem class for message support." alt="" coords="16,244,121,271"/>
+<area shape="rect" href="mqueue_8h.html" title="Header file of RTOS wrapper class MQueue for mailbox support." alt="" coords="197,244,303,271"/>
+<area shape="rect" href="task_8h.html" title="Header file of RTOS wrapper class Task for multithreading support." alt="" coords="633,244,717,271"/>
+<area shape="rect" href="timer_8h.html" title="Header file of RTOS wrapper class Timer for software timer support." alt="" coords="646,162,734,189"/>
+<area shape="rect" href="certmgr_8h.html" title="Header file of certification management class." alt="" coords="1043,162,1142,189"/>
+<area shape="rect" href="debug_8h.html" title="Header file of debug configuration for files in common folder." alt="" coords="1167,162,1243,189"/>
+<area shape="rect" title=" " alt="" coords="1570,80,1637,107"/>
+<area shape="rect" title=" " alt="" coords="1661,80,1817,107"/>
+<area shape="rect" title=" " alt="" coords="1842,80,1981,107"/>
+<area shape="rect" title=" " alt="" coords="2005,80,2143,107"/>
+<area shape="rect" href="mempool_8h.html" title="Header file of RTOS wrapper class mempool for message allocation support." alt="" coords="378,244,490,271"/>
+<area shape="rect" href="mpool_8h.html" title="Header file of MsgPool class for message allocation support." alt="" coords="329,162,424,189"/>
+<area shape="rect" href="config_8h.html" title="Header file of Config class." alt="" coords="1149,80,1244,107"/>
+<area shape="rect" href="keygen_8h.html" title="Header file of TLS key generation class." alt="" coords="1419,162,1515,189"/>
+<area shape="rect" href="flashfs_8h.html" title="Header file of flash file system controller module." alt="" coords="2167,80,2251,107"/>
+<area shape="rect" href="reset__ctrl_8h.html" title="Header file of reset control task." alt="" coords="859,162,969,189"/>
+<area shape="rect" href="wakeup__cnt_8h.html" title="Header file of wakeup count class." alt="" coords="1320,80,1444,107"/>
+<area shape="rect" title=" " alt="" coords="235,319,299,345"/>
+<area shape="rect" title=" " alt="" coords="5,319,132,345"/>
+<area shape="rect" title=" " alt="" coords="432,319,583,345"/>
+<area shape="rect" title=" " alt="" coords="629,319,690,345"/>
+<area shape="rect" title=" " alt="" coords="1060,244,1251,271"/>
+<area shape="rect" title=" " alt="" coords="343,319,408,345"/>
+<area shape="rect" href="mutex_8h.html" title="Header file of RTOS wrapper class Mutex for mutex support." alt="" coords="515,244,609,271"/>
+<area shape="rect" title=" " alt="" coords="2303,162,2403,189"/>
+<area shape="rect" title=" " alt="" coords="1991,162,2115,189"/>
+<area shape="rect" title=" " alt="" coords="2139,155,2278,196"/>
+<area shape="rect" title=" " alt="" coords="843,244,985,271"/>
 </map>
 </div>
 </div></div><!-- contents -->

@@ -453,7 +453,7 @@ Task of the constructor is to reserve capacity for samples within n seconds at e
         </inbodydescription>
         <location file="data/adxl_store.h" line="132" column="18" bodyfile="data/adxl_store.cpp" bodystart="1126" bodyend="1322"/>
         <references refid="class_adxl_data_store_1ab479177930ce312636360098dbd0bf96" compoundref="adxl__store_8cpp" startline="1031" endline="1050">calcMaxXYZ</references>
-        <references refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" compoundref="adxl37x_8h" startline="54">adxl37x_sensor_value::cnt</references>
+        <references refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" compoundref="adxl37x_8h" startline="56">adxl37x_sensor_value::cnt</references>
         <references refid="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" compoundref="adxl__store_8cpp" startline="493" endline="548">dumpAll</references>
         <references refid="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" compoundref="adxl__store_8cpp" startline="569" endline="616">dumpAllBytes</references>
         <references refid="class_adxl_data_store_1acfb919df3d5bf5d40783f10f91ea0909" compoundref="adxl__store_8cpp" startline="688" endline="733">dumpAllDisp</references>
@@ -498,7 +498,7 @@ Task of the constructor is to reserve capacity for samples within n seconds at e
         <references refid="class_adxl_data_store_1abd3d6bbfa4ad60b3c82066225fee1cd0" compoundref="adxl__store_8h" startline="170">pm_state</references>
         <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
         <references refid="class_adxl_data_store_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="adxl__store_8cpp" startline="740" endline="747">reset</references>
-        <references refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" compoundref="adxl37x_8h" startline="52">adxl37x_sensor_value::samples</references>
+        <references refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" compoundref="adxl37x_8h" startline="54">adxl37x_sensor_value::samples</references>
         <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
         <references refid="class_adxl_data_store_1af0008c5962b253accee045558363163b" compoundref="adxl__store_8cpp" startline="942" endline="970">sendBwFiltData</references>
         <references refid="class_adxl_data_store_1a3dd1d967afcd8a9649677f9c875fc89e" compoundref="adxl__store_8cpp" startline="858" endline="886">sendDispData</references>
@@ -589,9 +589,9 @@ If number of bytes to be written in variable len is greater 0 and FRAM is not fu
         <location file="data/adxl_store.h" line="138" column="10" bodyfile="data/adxl_store.cpp" bodystart="442" bodyend="472"/>
         <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
         <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
-        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
-        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::x</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="63">adxl372_xyz_accel_data::y</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
       </memberdef>
       <memberdef kind="function" id="class_adxl_data_store_1a8cb66fc5f158a5d28cb9e5d73ecd26cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -611,12 +611,12 @@ If number of bytes to be written in variable len is greater 0 and FRAM is not fu
         <location file="data/adxl_store.h" line="139" column="10" bodyfile="data/adxl_store.cpp" bodystart="493" bodyend="548"/>
         <references refid="class_adxl_data_store_1a87c83b0bc79e27bdb22243c56761c9a8" compoundref="adxl__store_8h" startline="169">allow_wrap_around</references>
         <references refid="class_adxl_data_store_1a02c33cc9da989c2e0201fddfcc1ed6db" compoundref="adxl__store_8h" startline="158">capa</references>
-        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="75" endline="79">Adxl37x::convert</references>
         <references refid="class_adxl_data_store_1a19f31d9744c12503a9cbdaa1fd3a9848" compoundref="adxl__store_8h" startline="167">full</references>
         <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
-        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
-        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::x</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="63">adxl372_xyz_accel_data::y</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_adxl_data_store_1a5eb361cf612ffd861dd409c27ad6b2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -775,7 +775,7 @@ If number of bytes to be written in variable len is greater 0 and FRAM is not fu
         <references refid="class_adxl_data_store_1a19489e1c9f99ec6b22a85c6237344d1c" compoundref="adxl__store_8h" startline="161">rd</references>
         <references refid="class_adxl_data_store_1ab65df7a1efcbcbc1b38a951e1f1b3b95" compoundref="adxl__store_8h" startline="160">samples_per_sec</references>
         <references refid="class_adxl_data_store_1a1bed49154703de16e1d8d08e28f3b390" compoundref="adxl__store_8h" startline="162">wr</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1399,11 +1399,11 @@ The function enter a loop over the number of raw data samples. In the loop the x
         <inbodydescription>
         </inbodydescription>
         <location file="data/adxl_store.h" line="191" column="10" bodyfile="data/adxl_store.cpp" bodystart="1031" bodyend="1050"/>
-        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::x</references>
         <references refid="class_adxl_data_store_1a73fc13d83638687d92d5ccf9e4fe1722" compoundref="adxl__store_8h" startline="173">x_max</references>
-        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="63">adxl372_xyz_accel_data::y</references>
         <references refid="class_adxl_data_store_1af518e87d5d4659e5d34c34c39253be31" compoundref="adxl__store_8h" startline="174">y_max</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
         <references refid="class_adxl_data_store_1aff08dd48e7d75394795f798133985c94" compoundref="adxl__store_8h" startline="175">z_max</references>
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">task</referencedby>
       </memberdef>

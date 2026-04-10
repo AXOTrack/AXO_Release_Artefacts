@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('mram_8h.html',''); initResizable(); })
 <dl class="section copyright"><dt>Copyright</dt><dd>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</dd></dl>
 <dl class="section author"><dt>Author</dt><dd>AXO Track GmbH, Berlin (Germany)</dd></dl>
 <p><a class="anchor" id="mram"></a> </p><dl class="section user"><dt>Detailed Description </dt><dd>MRAM chip is connected to nRF9160 via SPI bus. MRAM is used to store the acceleration raw data. MRAM has 16 MByte storage capacity. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <br  />
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <br  />
  To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <a class="el" href="_m_s_c.html#SectionDisplacement">Displacement Calculation</a> for further details). </dd></dl>
 <div style="image"></div><p><img src="FramLayout.png" alt="" align="left" class="inline"/></p><div style="clear: both"></div><p> <br  />
  See MB85RS4MTY data sheet, page 5 for SPI connection.</p>

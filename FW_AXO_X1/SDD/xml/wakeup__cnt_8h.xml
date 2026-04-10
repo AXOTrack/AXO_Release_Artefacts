@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wakeup__cnt_8h" kind="file" language="C++">
+    <compoundname>wakeup_cnt.h</compoundname>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="metric_8cpp" local="yes">data/metric.cpp</includedby>
+    <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
+    <includedby refid="wakeup__cnt_8cpp" local="yes">pm/wakeup_cnt.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>pm/wakeup_cnt.h</label>
+        <link refid="wakeup__cnt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="5">
+        <label>pm/wakeup_cnt.cpp</label>
+        <link refid="wakeup__cnt_8cpp"/>
+      </node>
+      <node id="3">
+        <label>data/metric.cpp</label>
+        <link refid="metric_8cpp"/>
+      </node>
+      <node id="4">
+        <label>net/mqtt_connector.cpp</label>
+        <link refid="mqtt__connector_8cpp"/>
+      </node>
+      <node id="1">
+        <label>pm/wakeup_cnt.h</label>
+        <link refid="wakeup__cnt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_wakeup_cnt" prot="public">WakeupCnt</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="wakeup__cnt_8h_1a70b7e90b21f831378f9167a8cd6ee432" prot="public" static="no">
+        <name>WAKEUP_CNT_FILENAME</name>
+        <initializer>&quot;/lfs/wakeup_cnt.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File name of the broker configuration file, which held the information about current and desired broker </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/wakeup_cnt.h" line="32" column="9" bodyfile="pm/wakeup_cnt.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file of wakeup count class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<anchor id="wakeup__cnt_8h_1wakeup_cnt"/> <simplesect kind="par"><title>Detailed Description </title><para>The wakeup counter counts the number of </para>
+</simplesect>
+<xrefsect id="todo_1_todo000018"><xreftitle>Todo</xreftitle><xrefdescription><para>boot events. The boot counter willl be stored persistently in FRAM flash file system. At startup boot count is read from flash file system and will be incremented by 1. Because boot count may be negative on an erased flash it is set to 0 in case of a negative value.</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_WAKEUP_CNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_WAKEUP_CNT_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="wakeup__cnt_8h_1a70b7e90b21f831378f9167a8cd6ee432" refkind="member"><highlight class="preprocessor">#define<sp/>WAKEUP_CNT_FILENAME<sp/>&quot;/lfs/wakeup_cnt.txt&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_wakeup_cnt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_wakeup_cnt" kindref="compound">WakeupCnt</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1aa064564f9ed7e20fae3600511b1d9008" kindref="member">~WakeupCnt</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt" kindref="compound">WakeupCnt</ref>*<sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">inst</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" kindref="member">incSleepExitCount</ref>();</highlight></codeline>
+<codeline lineno="53" refid="class_wakeup_cnt_1ac36964c4a855f321301fb2eabe0989b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1ac36964c4a855f321301fb2eabe0989b3" kindref="member">incPublishMetricsCount</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a82b7e4c71c77f5941dd5e861dbb7e952" kindref="member">incPublishMeasCount</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_wakeup_cnt_1a197c0e9173d599ab4114f097f5b04d63" kindref="member">getSleepExitCount</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_wakeup_cnt_1acf479b57f511506da78f20d8c8ab9079" kindref="member">getPublishMeasCount</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_wakeup_cnt_1a2171e227f463bfba0229b1a9f8bb0bdc" kindref="member">getLteMeasWakeupCnt</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_wakeup_cnt_1a2bcb344222793bdeca2e5289a3bfe2a6" kindref="member">getLteWakeupCnt</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a3576c0de8015d0063cce0ae347b63299" kindref="member">WakeupCnt</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>;</highlight></codeline>
+<codeline lineno="65" refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_PM_WAKEUP_CNT_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="pm/wakeup_cnt.h"/>
+  </compounddef>
+</doxygen>

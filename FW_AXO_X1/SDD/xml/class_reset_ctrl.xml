@@ -275,11 +275,11 @@ The function retrieve the user-specific data from the timer by calling kernel fu
         </inbodydescription>
         <location file="pm/reset_ctrl.h" line="81" column="17" bodyfile="pm/reset_ctrl.cpp" bodystart="169" bodyend="189"/>
         <referencedby refid="class_flash_f_s_1ab2021306727b099bd7329f3f8e97ee39" compoundref="flashfs_8cpp" startline="645" endline="657">FlashFS::clear_fs</referencedby>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">MqttConnector::connect</referencedby>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">MqttConnector::HandleFactoryDefault</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">MqttConnector::HandleFsErase</referencedby>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
-        <referencedby refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="163" endline="287">MqttConnector::on_publish</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">MqttConnector::connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">MqttConnector::HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">MqttConnector::HandleFsErase</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="164" endline="288">MqttConnector::on_publish</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

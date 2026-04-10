@@ -1,10 +1,15 @@
 <map id="BoostConverter" name="BoostConverter">
-<area shape="rect" id="node1" title="Boost converter task constructor." alt="" coords="5,56,116,83"/>
-<area shape="rect" id="node2" href="$class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="183,5,283,32"/>
-<area shape="rect" id="node3" href="$class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="164,56,301,83"/>
-<area shape="rect" id="node4" href="$class_boost_converter.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the timer to control the maximum activation time period." alt="" coords="197,107,269,133"/>
-<area shape="rect" id="node5" href="$class_boost_converter.html#adc25c829b13636794219a3f61f31f34d" title="Timer expired function for the timer to control the maximum activation time period." alt="" coords="349,107,456,133"/>
-<area shape="rect" id="node6" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="504,107,593,133"/>
-<area shape="rect" id="node7" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="641,81,761,108"/>
-<area shape="rect" id="node8" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="653,132,750,159"/>
+<area shape="rect" id="node1" title="Boost converter task constructor." alt="" coords="5,183,116,209"/>
+<area shape="rect" id="node2" href="$class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916" title=" " alt="" coords="166,5,299,32"/>
+<area shape="rect" id="node3" href="$class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8" title=" " alt="" coords="167,56,298,83"/>
+<area shape="rect" id="node4" href="$class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae" title=" " alt="" coords="167,107,298,133"/>
+<area shape="rect" id="node5" href="$class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0" title=" " alt="" coords="167,157,298,184"/>
+<area shape="rect" id="node6" href="$class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d" title=" " alt="" coords="168,208,297,235"/>
+<area shape="rect" id="node7" href="$class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="183,259,283,285"/>
+<area shape="rect" id="node8" href="$class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="164,309,301,336"/>
+<area shape="rect" id="node9" href="$class_boost_converter.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the timer to control the maximum activation time period." alt="" coords="197,360,269,387"/>
+<area shape="rect" id="node10" href="$class_boost_converter.html#adc25c829b13636794219a3f61f31f34d" title="Timer expired function for the timer to control the maximum activation time period." alt="" coords="349,360,456,387"/>
+<area shape="rect" id="node11" href="$class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="504,360,593,387"/>
+<area shape="rect" id="node12" href="$class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="641,335,761,361"/>
+<area shape="rect" id="node13" href="$class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="653,385,750,412"/>
 </map>

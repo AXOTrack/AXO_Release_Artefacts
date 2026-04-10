@@ -156,169 +156,189 @@ $(document).ready(function(){initNavTree('boost_8cpp_source.html',''); initResiz
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        LOG_DBG(<span class="stringliteral">&quot;Found device \&quot;%s\&quot;&quot;</span>, <a class="code" href="class_boost_converter.html#a59efc8a257eec260b74e8e4c7369be06">gpio</a>.port-&gt;name);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        LOG_WRN(<span class="stringliteral">&quot;BoostConverter = ENABLED&quot;</span>);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">false</span>; <span class="comment">// default: boost converter is disabled</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        LOG_WRN(<span class="stringliteral">&quot;BoostConverter = DISABLED&quot;</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">  142</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">BoostConverter::on</a>() {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    LOG_WRN(<span class="stringliteral">&quot;BoostConverter::on&quot;</span>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">auto</span> rc = gpio_pin_configure_dt(&amp;<a class="code" href="class_boost_converter.html#a59efc8a257eec260b74e8e4c7369be06">gpio</a>, GPIO_OUTPUT_ACTIVE);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (!rc == 0) {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        LOG_ERR(<span class="stringliteral">&quot;%s failed: %d&quot;</span>, __func__, rc);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="class_boost_converter.html#ae530c5af75c42fc2bd1fb588c38aa332">isOn</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">  158</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">BoostConverter::off</a>() {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    LOG_WRN(<span class="stringliteral">&quot;BoostConverter::off&quot;</span>);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">auto</span> rc = gpio_pin_configure_dt(&amp;<a class="code" href="class_boost_converter.html#a59efc8a257eec260b74e8e4c7369be06">gpio</a>, GPIO_OUTPUT_INACTIVE);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (!rc == 0) {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        LOG_ERR(<span class="stringliteral">&quot;%s failed: %d&quot;</span>, __func__, rc);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="class_boost_converter.html#ae530c5af75c42fc2bd1fb588c38aa332">isOn</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="class_boost_converter.html#ad1961b934b7ea5862bf0813ba42b9dd4">  173</a></span>&#160;<a class="code" href="class_boost_converter.html#ad1961b934b7ea5862bf0813ba42b9dd4">BoostConverter::~BoostConverter</a>() {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    LOG_INF(<span class="stringliteral">&quot;BoostConverter::~BoostConverter this: %p&quot;</span>, <span class="keyword">this</span>);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e">  203</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e">BoostConverter::task</a>(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    LOG_INF(<span class="stringliteral">&quot;BoostConverter::task this: %p myName: %s&quot;</span>, <span class="keyword">this</span>, <a class="code" href="class_task.html#a4cb3fadb6462e3c51946ca46eb196132">myName</a>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        LOG_DBG(<span class="stringliteral">&quot;%s waiting for messages&quot;</span>, <a class="code" href="class_task.html#a4cb3fadb6462e3c51946ca46eb196132">myName</a>);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="class_pool_elem.html">PoolElem</a>* pElem = <a class="code" href="class_boost_converter.html#af2570dd7bace0312470d962f29359fb3">pInMbox</a>-&gt;<a class="code" href="class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b">read</a>();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">if</span> (pElem) {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordflow">switch</span> (pElem-&gt;<a class="code" href="class_pool_elem.html#a2ebd5074e18be4336af45918f2aa76dd">mtype</a>) {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6">eTimerExpired</a>:</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eTimerExpired&quot;</span>);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    pElem = 0;  <span class="comment">// prevent free()</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                    <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">off</a>();</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f">eResume</a>: {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    LOG_INF(<span class="stringliteral">&quot;eResume p1: %d&quot;</span>, pElem-&gt;<a class="code" href="class_pool_elem.html#a31550e6b3b1c0c189d567ced47d50f09">p1</a>);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a>) {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                        uint32_t tmo = pElem-&gt;<a class="code" href="class_pool_elem.html#a31550e6b3b1c0c189d567ced47d50f09">p1</a>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                        <span class="keywordflow">if</span> (tmo &gt; 0) {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                            <a class="code" href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">myTimer</a>-&gt;<a class="code" href="class_timer.html#a60de64d75454385b23995437f1d72669">start</a>(tmo, 0);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                        }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                        <a class="code" href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">on</a>();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;Boost Converter is disabled!&quot;</span>);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                } <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20">eSuspend</a>:</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eSuspend&quot;</span>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    <a class="code" href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">myTimer</a>-&gt;<a class="code" href="class_timer.html#a8c528baf37154d347366083f0f816846">stop</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// Set BOOST_ON to default (AXFW23-622)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        off_t ret2;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        ssize_t ret3;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keyword">struct </span>fs_file_t* f;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>, FS_O_CREATE | FS_O_RDWR);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">// save to file</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_SET);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        __ASSERT_NO_MSG(ret2 != -1);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, <span class="stringliteral">&quot;ON&quot;</span>, strlen(<span class="stringliteral">&quot;ON&quot;</span>));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        __ASSERT_NO_MSG(ret == 0);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">        #ifndef CONFIG_UNIT_TEST_DRV</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        k_sleep(K_MSEC(30));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        LOG_WRN(<span class="stringliteral">&quot;BoostConverter = ENABLED&quot;</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">false</span>; <span class="comment">// default: boost converter is disabled</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        LOG_WRN(<span class="stringliteral">&quot;BoostConverter = DISABLED&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">  162</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">BoostConverter::on</a>() {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    LOG_WRN(<span class="stringliteral">&quot;BoostConverter::on&quot;</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">auto</span> rc = gpio_pin_configure_dt(&amp;<a class="code" href="class_boost_converter.html#a59efc8a257eec260b74e8e4c7369be06">gpio</a>, GPIO_OUTPUT_ACTIVE);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span> (!rc == 0) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        LOG_ERR(<span class="stringliteral">&quot;%s failed: %d&quot;</span>, __func__, rc);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="code" href="class_boost_converter.html#ae530c5af75c42fc2bd1fb588c38aa332">isOn</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">  178</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">BoostConverter::off</a>() {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    LOG_WRN(<span class="stringliteral">&quot;BoostConverter::off&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">auto</span> rc = gpio_pin_configure_dt(&amp;<a class="code" href="class_boost_converter.html#a59efc8a257eec260b74e8e4c7369be06">gpio</a>, GPIO_OUTPUT_INACTIVE);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (!rc == 0) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        LOG_ERR(<span class="stringliteral">&quot;%s failed: %d&quot;</span>, __func__, rc);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="class_boost_converter.html#ae530c5af75c42fc2bd1fb588c38aa332">isOn</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="class_boost_converter.html#ad1961b934b7ea5862bf0813ba42b9dd4">  193</a></span>&#160;<a class="code" href="class_boost_converter.html#ad1961b934b7ea5862bf0813ba42b9dd4">BoostConverter::~BoostConverter</a>() {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    LOG_INF(<span class="stringliteral">&quot;BoostConverter::~BoostConverter this: %p&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e">  223</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e">BoostConverter::task</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    LOG_INF(<span class="stringliteral">&quot;BoostConverter::task this: %p myName: %s&quot;</span>, <span class="keyword">this</span>, <a class="code" href="class_task.html#a4cb3fadb6462e3c51946ca46eb196132">myName</a>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        LOG_DBG(<span class="stringliteral">&quot;%s waiting for messages&quot;</span>, <a class="code" href="class_task.html#a4cb3fadb6462e3c51946ca46eb196132">myName</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="class_pool_elem.html">PoolElem</a>* pElem = <a class="code" href="class_boost_converter.html#af2570dd7bace0312470d962f29359fb3">pInMbox</a>-&gt;<a class="code" href="class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b">read</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordflow">if</span> (pElem) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <span class="keywordflow">switch</span> (pElem-&gt;<a class="code" href="class_pool_elem.html#a2ebd5074e18be4336af45918f2aa76dd">mtype</a>) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6">eTimerExpired</a>:</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eTimerExpired&quot;</span>);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    pElem = 0;  <span class="comment">// prevent free()</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">off</a>();</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9">eBoostOnReq</a>:</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    LOG_WRN(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eBoostOnReq&quot;</span>);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                        <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        off_t ret2;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                        ssize_t ret3;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                        <span class="keyword">struct </span>fs_file_t* f;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>, FS_O_CREATE | FS_O_RDWR);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                        <span class="comment">// save to file</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_SET);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        __ASSERT_NO_MSG(ret2 != -1);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, <span class="stringliteral">&quot;ON&quot;</span>, strlen(<span class="stringliteral">&quot;ON&quot;</span>));</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                        __ASSERT_NO_MSG(ret == 0);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        __ASSERT_NO_MSG(ret == 0);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">                        #ifndef CONFIG_UNIT_TEST_DRV</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                        k_sleep(K_MSEC(30));</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">                        #endif</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea">eBoostOffReq</a>:</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    LOG_WRN(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eBoostOffReq&quot;</span>);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <a class="code" href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">myTimer</a>-&gt;<a class="code" href="class_timer.html#a8c528baf37154d347366083f0f816846">stop</a>();</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">off</a>();</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276">remove</a>(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">                        #ifndef CONFIG_UNIT_TEST_DRV</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        k_sleep(K_MSEC(30));</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">                        #endif</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                    }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    LOG_ERR(<span class="stringliteral">&quot;unexpected message (%d)&quot;</span>, pElem-&gt;<a class="code" href="class_pool_elem.html#a2ebd5074e18be4336af45918f2aa76dd">mtype</a>);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">if</span> (pElem) {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                pElem-&gt;<a class="code" href="class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d">free</a>();</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <a class="code" href="task_8h.html#a2f412bc60f09f0fd22210f04082c988b">UNIT_TEST_STOP_LOOP</a>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;}</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">static</span> <a class="code" href="main_8cpp.html#add3d4ca77ac2528e931f2c5debe2b9ba">K_THREAD_STACK_DEFINE</a>(my_stack_area, 1024);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;hello from boost main&quot;</span>);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="class_boost_converter.html">BoostConverter</a> t1(<span class="stringliteral">&quot;dcdc&quot;</span>);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    t1.create(my_stack_area, K_THREAD_STACK_SIZEOF(my_stack_area), 7);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    t1.start();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="comment">// send resume message</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">// send requested auto suspend timeout in p1</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <a class="code" href="class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e">Mbox::sendMsg</a>(<a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f">msgType::eResume</a>, Mbox::MboxId::eMain, </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                  Mbox::MboxId::eBoostConverter, 10);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">// k_sleep(K_SECONDS(1));</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">// // send suspend message</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// PoolElem* e2 = MsgPool::inst()-&gt;getNewElem();</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">// __ASSERT_NO_MSG(e2);</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">// e2-&gt;mtype = msgType::eSuspend;</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">// e2-&gt;from = Mbox::MboxId::eMain;</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">// Mbox::send(e2, Mbox::eBoostConverter);</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f">eResume</a>: {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    LOG_INF(<span class="stringliteral">&quot;eResume p1: %d&quot;</span>, pElem-&gt;<a class="code" href="class_pool_elem.html#a31550e6b3b1c0c189d567ced47d50f09">p1</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a>) {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        uint32_t tmo = pElem-&gt;<a class="code" href="class_pool_elem.html#a31550e6b3b1c0c189d567ced47d50f09">p1</a>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                        <span class="keywordflow">if</span> (tmo &gt; 0) {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                            <a class="code" href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">myTimer</a>-&gt;<a class="code" href="class_timer.html#a60de64d75454385b23995437f1d72669">start</a>(tmo, 0);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                        <a class="code" href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">on</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;Boost Converter is disabled!&quot;</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                } <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20">eSuspend</a>:</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eSuspend&quot;</span>);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <a class="code" href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">myTimer</a>-&gt;<a class="code" href="class_timer.html#a8c528baf37154d347366083f0f816846">stop</a>();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">off</a>();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9">eBoostOnReq</a>:</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    LOG_WRN(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eBoostOnReq&quot;</span>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    <span class="keywordflow">if</span> (!<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                        off_t ret2;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        ssize_t ret3;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        <span class="keyword">struct </span>fs_file_t* f;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        f = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8">file_open</a>(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>, FS_O_CREATE | FS_O_RDWR);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <span class="comment">// save to file</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        ret2 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae">file_seek</a>(f, 0, FS_SEEK_SET);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                        __ASSERT_NO_MSG(ret2 != -1);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        ret3 = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d">file_write</a>(f, <span class="stringliteral">&quot;ON&quot;</span>, strlen(<span class="stringliteral">&quot;ON&quot;</span>));</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        __ASSERT_NO_MSG(ret3 &gt; 0);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">file_sync</a>(f);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                        __ASSERT_NO_MSG(ret == 0);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                        ret = <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916">file_close</a>(f);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                        __ASSERT_NO_MSG(ret == 0);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">                        #ifndef CONFIG_UNIT_TEST_DRV</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                        k_sleep(K_MSEC(30));</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">                        #endif</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                <span class="keywordflow">case</span> <a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea">eBoostOffReq</a>:</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    LOG_WRN(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;eBoostOffReq&quot;</span>);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                    <a class="code" href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">isEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    <a class="code" href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">myTimer</a>-&gt;<a class="code" href="class_timer.html#a8c528baf37154d347366083f0f816846">stop</a>();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    <a class="code" href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">off</a>();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().file_exists(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>)) {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                        <a class="code" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">fs::inst</a>().<a class="code" href="class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276">remove</a>(<a class="code" href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="preprocessor">                        #ifndef CONFIG_UNIT_TEST_DRV</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                        k_sleep(K_MSEC(30));</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">                        #endif</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    LOG_ERR(<span class="stringliteral">&quot;unexpected message (%d)&quot;</span>, pElem-&gt;<a class="code" href="class_pool_elem.html#a2ebd5074e18be4336af45918f2aa76dd">mtype</a>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">if</span> (pElem) {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                pElem-&gt;<a class="code" href="class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d">free</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <a class="code" href="task_8h.html#a2f412bc60f09f0fd22210f04082c988b">UNIT_TEST_STOP_LOOP</a>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="keyword">static</span> <a class="code" href="main_8cpp.html#add3d4ca77ac2528e931f2c5debe2b9ba">K_THREAD_STACK_DEFINE</a>(my_stack_area, 1024);</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        LOG_DBG(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;main: sleeping&quot;</span>);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        k_sleep(K_SECONDS(20));</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    LOG_INF(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;hello from boost main&quot;</span>);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <a class="code" href="class_boost_converter.html">BoostConverter</a> t1(<span class="stringliteral">&quot;dcdc&quot;</span>);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    t1.create(my_stack_area, K_THREAD_STACK_SIZEOF(my_stack_area), 7);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    t1.start();</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">// send resume message</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">// send requested auto suspend timeout in p1</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <a class="code" href="class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e">Mbox::sendMsg</a>(<a class="code" href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba81b0f61a6ca6c5c0a4d48adbce2c657f">msgType::eResume</a>, Mbox::MboxId::eMain, </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                  Mbox::MboxId::eBoostConverter, 10);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">// k_sleep(K_SECONDS(1));</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="comment">// // send suspend message</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="comment">// PoolElem* e2 = MsgPool::inst()-&gt;getNewElem();</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">// __ASSERT_NO_MSG(e2);</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">// e2-&gt;mtype = msgType::eSuspend;</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="comment">// e2-&gt;from = Mbox::MboxId::eMain;</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="comment">// Mbox::send(e2, Mbox::eBoostConverter);</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        LOG_DBG(<span class="stringliteral">&quot;%s&quot;</span>, <span class="stringliteral">&quot;main: sleeping&quot;</span>);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        k_sleep(K_SECONDS(20));</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aboost_8cpp_html_a57c7b29d506ac9e4d69a2954cce0955d"><div class="ttname"><a href="boost_8cpp.html#a57c7b29d506ac9e4d69a2954cce0955d">LOG_MODULE_REGISTER</a></div><div class="ttdeci">LOG_MODULE_REGISTER(boost, COMMON_DEFAULT_DEBUG_LEVEL)</div></div>
 <div class="ttc" id="aboost_8cpp_html_ae646dfd2e7bdb3123c8b5ffcbb3eb9b8"><div class="ttname"><a href="boost_8cpp.html#ae646dfd2e7bdb3123c8b5ffcbb3eb9b8">BOOST_NODE</a></div><div class="ttdeci">#define BOOST_NODE</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00047">boost.cpp:47</a></div></div>
 <div class="ttc" id="aboost_8h_html"><div class="ttname"><a href="boost_8h.html">boost.h</a></div><div class="ttdoc">Header file of BoostConverter class.</div></div>
 <div class="ttc" id="aboost_8h_html_adb78930007c481618718ea80667ddae1"><div class="ttname"><a href="boost_8h.html#adb78930007c481618718ea80667ddae1">BOOST_ENABLED_FILENAME</a></div><div class="ttdeci">#define BOOST_ENABLED_FILENAME</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00053">boost.h:53</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html"><div class="ttname"><a href="class_boost_converter.html">BoostConverter</a></div><div class="ttdoc">Boost converter class derived from task base class.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00071">boost.h:71</a></div></div>
-<div class="ttc" id="aclass_boost_converter_html_a2f241b422ebdbd7a570178ceaebdd2fa"><div class="ttname"><a href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">BoostConverter::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Function to switch off boost converter.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00158">boost.cpp:158</a></div></div>
+<div class="ttc" id="aclass_boost_converter_html_a2f241b422ebdbd7a570178ceaebdd2fa"><div class="ttname"><a href="class_boost_converter.html#a2f241b422ebdbd7a570178ceaebdd2fa">BoostConverter::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Function to switch off boost converter.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00178">boost.cpp:178</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_a327de4628838031285a936d94ba1ae1d"><div class="ttname"><a href="class_boost_converter.html#a327de4628838031285a936d94ba1ae1d">BoostConverter::BoostConverter</a></div><div class="ttdeci">BoostConverter()=delete</div></div>
 <div class="ttc" id="aclass_boost_converter_html_a59efc8a257eec260b74e8e4c7369be06"><div class="ttname"><a href="class_boost_converter.html#a59efc8a257eec260b74e8e4c7369be06">BoostConverter::gpio</a></div><div class="ttdeci">struct gpio_dt_spec gpio</div><div class="ttdoc">GPIO pin information structure.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00089">boost.h:90</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_a64024edd0c45f1deb9a9bf67b746a8e1"><div class="ttname"><a href="class_boost_converter.html#a64024edd0c45f1deb9a9bf67b746a8e1">BoostConverter::myTimer</a></div><div class="ttdeci">Timer * myTimer</div><div class="ttdoc">Timer to control the maximum activation time period.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00081">boost.h:81</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_aaa25421e04a507bcced8f9bb02af5213"><div class="ttname"><a href="class_boost_converter.html#aaa25421e04a507bcced8f9bb02af5213">BoostConverter::timer_cb</a></div><div class="ttdeci">static void timer_cb(k_timer *timer)</div><div class="ttdoc">Timer callback function for the timer to control the maximum activation time period.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00061">boost.cpp:61</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_aaa521633aa149ccf8d2eab52b4a2abe0"><div class="ttname"><a href="class_boost_converter.html#aaa521633aa149ccf8d2eab52b4a2abe0">BoostConverter::isEnabled</a></div><div class="ttdeci">bool isEnabled</div><div class="ttdoc">Flag indicating that boost converter is en- or disbled.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00086">boost.h:86</a></div></div>
-<div class="ttc" id="aclass_boost_converter_html_acbfb668d7b4cfa39aa1a5a5dac3c0e7e"><div class="ttname"><a href="class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e">BoostConverter::task</a></div><div class="ttdeci">virtual void task(void)</div><div class="ttdoc">Boost converter task function.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00203">boost.cpp:203</a></div></div>
-<div class="ttc" id="aclass_boost_converter_html_ad1961b934b7ea5862bf0813ba42b9dd4"><div class="ttname"><a href="class_boost_converter.html#ad1961b934b7ea5862bf0813ba42b9dd4">BoostConverter::~BoostConverter</a></div><div class="ttdeci">virtual ~BoostConverter()</div><div class="ttdoc">Boost converter task destructor.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00173">boost.cpp:173</a></div></div>
+<div class="ttc" id="aclass_boost_converter_html_acbfb668d7b4cfa39aa1a5a5dac3c0e7e"><div class="ttname"><a href="class_boost_converter.html#acbfb668d7b4cfa39aa1a5a5dac3c0e7e">BoostConverter::task</a></div><div class="ttdeci">virtual void task(void)</div><div class="ttdoc">Boost converter task function.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00223">boost.cpp:223</a></div></div>
+<div class="ttc" id="aclass_boost_converter_html_ad1961b934b7ea5862bf0813ba42b9dd4"><div class="ttname"><a href="class_boost_converter.html#ad1961b934b7ea5862bf0813ba42b9dd4">BoostConverter::~BoostConverter</a></div><div class="ttdeci">virtual ~BoostConverter()</div><div class="ttdoc">Boost converter task destructor.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00193">boost.cpp:193</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_adc25c829b13636794219a3f61f31f34d"><div class="ttname"><a href="class_boost_converter.html#adc25c829b13636794219a3f61f31f34d">BoostConverter::timer1_expired</a></div><div class="ttdeci">void timer1_expired()</div><div class="ttdoc">Timer expired function for the timer to control the maximum activation time period.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00077">boost.cpp:77</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_ae530c5af75c42fc2bd1fb588c38aa332"><div class="ttname"><a href="class_boost_converter.html#ae530c5af75c42fc2bd1fb588c38aa332">BoostConverter::isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdoc">Flag indicating that boost converter is activated.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00087">boost.h:87</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_ae7065952827f83f9d9ce4a42e8dba281"><div class="ttname"><a href="class_boost_converter.html#ae7065952827f83f9d9ce4a42e8dba281">BoostConverter::device_good</a></div><div class="ttdeci">bool device_good</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00091">boost.h:91</a></div></div>
 <div class="ttc" id="aclass_boost_converter_html_af2570dd7bace0312470d962f29359fb3"><div class="ttname"><a href="class_boost_converter.html#af2570dd7bace0312470d962f29359fb3">BoostConverter::pInMbox</a></div><div class="ttdeci">Mbox * pInMbox</div><div class="ttdoc">Mailbox of the boost converter task.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8h_source.html#l00080">boost.h:80</a></div></div>
-<div class="ttc" id="aclass_boost_converter_html_af5a2f93105e0a24634af5793d2c5c5b8"><div class="ttname"><a href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">BoostConverter::on</a></div><div class="ttdeci">void on()</div><div class="ttdoc">Function to switch on boost converter.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00142">boost.cpp:142</a></div></div>
+<div class="ttc" id="aclass_boost_converter_html_af5a2f93105e0a24634af5793d2c5c5b8"><div class="ttname"><a href="class_boost_converter.html#af5a2f93105e0a24634af5793d2c5c5b8">BoostConverter::on</a></div><div class="ttdeci">void on()</div><div class="ttdoc">Function to switch on boost converter.</div><div class="ttdef"><b>Definition:</b> <a href="boost_8cpp_source.html#l00162">boost.cpp:162</a></div></div>
 <div class="ttc" id="aclass_flash_f_s_html"><div class="ttname"><a href="class_flash_f_s.html">FlashFS</a></div><div class="ttdoc">Represents the FlashFS file system for embedded systems with limited resources.</div><div class="ttdef"><b>Definition:</b> <a href="flashfs_8h_source.html#l00050">flashfs.h:50</a></div></div>
 <div class="ttc" id="aclass_flash_f_s_html_a1339e7982350417e8d1ea764889e5fa0"><div class="ttname"><a href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0">FlashFS::file_sync</a></div><div class="ttdeci">int file_sync(fs_file_t *file)</div><div class="ttdef"><b>Definition:</b> <a href="flashfs_8cpp_source.html#l00345">flashfs.cpp:345</a></div></div>
 <div class="ttc" id="aclass_flash_f_s_html_a29e8577a06edb82f9f42c02c43278e6e"><div class="ttname"><a href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e">FlashFS::inst</a></div><div class="ttdeci">static FlashFS &amp; inst()</div><div class="ttdoc">The inst function to retrieve the exclusiv only instance of the class.</div><div class="ttdef"><b>Definition:</b> <a href="flashfs_8cpp_source.html#l00110">flashfs.cpp:110</a></div></div>
@@ -347,7 +367,7 @@ $(document).ready(function(){initNavTree('boost_8cpp_source.html',''); initResiz
 <div class="ttc" id="aflashfs_8h_html"><div class="ttname"><a href="flashfs_8h.html">flashfs.h</a></div><div class="ttdoc">Header file of flash file system controller module.</div></div>
 <div class="ttc" id="amain_8cpp_html_a3835367ddd5c06917af15900c7b14b49"><div class="ttname"><a href="main_8cpp.html#a3835367ddd5c06917af15900c7b14b49">boost</a></div><div class="ttdeci">static BoostConverter boost(&quot;boost&quot;)</div></div>
 <div class="ttc" id="amain_8cpp_html_add3d4ca77ac2528e931f2c5debe2b9ba"><div class="ttname"><a href="main_8cpp.html#add3d4ca77ac2528e931f2c5debe2b9ba">K_THREAD_STACK_DEFINE</a></div><div class="ttdeci">K_THREAD_STACK_DEFINE(PWR_MGR_STACK, PWR_MGR_STACK_SIZE)</div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">main function of AXO Track firmware</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00207">main.cpp:207</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">main function of AXO Track firmware</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00214">main.cpp:214</a></div></div>
 <div class="ttc" id="ambox_8h_html"><div class="ttname"><a href="mbox_8h.html">mbox.h</a></div><div class="ttdoc">Header file of RTOS wrapper class MBox for mailbox support.</div></div>
 <div class="ttc" id="ampelem_8h_html_a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6"><div class="ttname"><a href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6">eTimerExpired</a></div><div class="ttdeci">@ eTimerExpired</div><div class="ttdef"><b>Definition:</b> <a href="mpelem_8h_source.html#l00039">mpelem.h:39</a></div></div>
 <div class="ttc" id="ampelem_8h_html_a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20"><div class="ttname"><a href="mpelem_8h.html#a2f8f709ab25bdeef171ca2d415682e0ba38608e13fd296b693000571050e70d20">eSuspend</a></div><div class="ttdeci">@ eSuspend</div><div class="ttdef"><b>Definition:</b> <a href="mpelem_8h_source.html#l00088">mpelem.h:88</a></div></div>

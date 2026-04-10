@@ -32,6 +32,8 @@ var struct_adxl37x =
     [ "cur_buf", "struct_adxl37x.html#aae3b484e9add246d68429194a42883ba", null ],
     [ "sample_cnt", "struct_adxl37x.html#a37ee504fe3165e7e2ffa8a620f72c62c", null ],
     [ "extSync", "struct_adxl37x.html#a653f891fe8518bdf32a0fd42a3bf6e4c", null ],
+    [ "clk_mgr", "struct_adxl37x.html#a54d12145a8d42ea2e17ff1f010517bda", null ],
+    [ "clk_cli", "struct_adxl37x.html#a2d398bc123895803e13b7c5755892820", null ],
     [ "suspendTimeout", "struct_adxl37x.html#aa64d040441163a1126fda0f612addd2f", null ],
     [ "device_good", "struct_adxl37x.html#ae7065952827f83f9d9ce4a42e8dba281", null ],
     [ "bSelftestPassed", "struct_adxl37x.html#ab14775f244c3ad1f75afe91f55fdbba3", null ]

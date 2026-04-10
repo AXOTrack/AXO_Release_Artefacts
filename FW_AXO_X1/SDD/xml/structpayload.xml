@@ -16,10 +16,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="167" column="10" bodyfile="net/mqtt_connector.h" bodystart="167" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">MqttConnector::HandleNewConfiguration</referencedby>
-        <referencedby refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="336" endline="357">MqttConnector::publish</referencedby>
-        <referencedby refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="697" endline="707">MqttConnector::PublishData</referencedby>
-        <referencedby refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="722" endline="736">MqttConnector::PublishResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">MqttConnector::HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="337" endline="358">MqttConnector::publish</referencedby>
+        <referencedby refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="698" endline="708">MqttConnector::PublishData</referencedby>
+        <referencedby refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="723" endline="737">MqttConnector::PublishResponse</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

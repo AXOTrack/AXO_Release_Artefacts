@@ -328,7 +328,7 @@ The function enter a loop over the maximum number of listeners and if there is n
         <location file="net/lte_connector.h" line="124" column="10" bodyfile="net/lte_connector.cpp" bodystart="340" bodyend="354"/>
         <references refid="class_lte_connector_1a57e0d12afdc19f1ae7b34c9ce1572f55" compoundref="lte__connector_8h" startline="151">listeners</references>
         <references refid="class_lte_connector_1a7ee579b462bc96b33dea1ec3a47a7ce7" compoundref="lte__connector_8h" startline="149">max_listeners</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_lte_connector_1a21cd2d44b6460e6dcbb672534f151e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

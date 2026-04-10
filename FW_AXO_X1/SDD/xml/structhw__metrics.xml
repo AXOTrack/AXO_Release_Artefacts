@@ -17,9 +17,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/hw_metrics.h" line="49" column="13" bodyfile="data/hw_metrics.h" bodystart="49" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">MetricsBuilder::addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="431" endline="445">MetricsBuilder::addHwMetrics</referencedby>
         <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HwMetrics::HandleHwStatusAdxl37x</referencedby>
-        <referencedby refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" compoundref="adxl37x_8cpp" startline="437" endline="451">Adxl37x::reportHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" compoundref="adxl37x_8cpp" startline="513" endline="527">Adxl37x::reportHwStatus</referencedby>
         <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structhw__metrics_1af68f0b982a4fd81b22fcdbf41d525619" prot="public" static="no" mutable="no">
@@ -35,7 +35,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="data/hw_metrics.h" line="49" column="13" bodyfile="data/hw_metrics.h" bodystart="50" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="430" endline="444">MetricsBuilder::addHwMetrics</referencedby>
+        <referencedby refid="class_metrics_builder_1ada2af421e31f157ba6069d86842afe26" compoundref="metric_8cpp" startline="431" endline="445">MetricsBuilder::addHwMetrics</referencedby>
         <referencedby refid="class_hw_metrics_1a331eee3755eac4cc05f7bd2a23870020" compoundref="hw__metrics_8cpp" startline="64" endline="74">HwMetrics::HandleHwStatusAdxl37x</referencedby>
       </memberdef>
       </sectiondef>

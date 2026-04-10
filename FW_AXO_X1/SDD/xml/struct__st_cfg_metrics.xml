@@ -18,7 +18,7 @@
         </inbodydescription>
         <location file="conf/config.h" line="179" column="13" bodyfile="conf/config.h" bodystart="179" bodyend="-1"/>
         <referencedby refid="class_data_manager_1ae369b3765489ee8bd0ea791c1843630f" compoundref="pdata_8cpp" startline="134" endline="173">DataManager::configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="603" endline="609">MqttConnector::configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="604" endline="610">MqttConnector::configure</referencedby>
         <referencedby refid="class_power_mgr_1ae369b3765489ee8bd0ea791c1843630f" compoundref="power__mgr_8cpp" startline="268" endline="277">PowerMgr::configure</referencedby>
         <referencedby refid="class_config_1a5a3e7d69fb9bdc39a21bbb6f40887b77" compoundref="config_8cpp" startline="414" endline="528">Config::parseAllValues</referencedby>
       </memberdef>

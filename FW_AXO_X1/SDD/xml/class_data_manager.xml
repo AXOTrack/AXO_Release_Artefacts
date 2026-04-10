@@ -247,7 +247,7 @@ The constructor allocate and register the mailbox of the AD converter task and a
         </inbodydescription>
         <location file="data/pdata.h" line="68" column="10" bodyfile="data/pdata.cpp" bodystart="267" bodyend="352"/>
         <references refid="class_measurement_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="measurement_8cpp" startline="305" endline="326">MeasurementBuilder::add</references>
-        <references refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="574" endline="629">MetricsBuilder::add</references>
+        <references refid="class_metrics_builder_1aeb63a44cb675e1a837046cbf4373f040" compoundref="metric_8cpp" startline="575" endline="630">MetricsBuilder::add</references>
         <references refid="class_data_manager_1ac349e43c8a8d674c5e182720d5c1c579" compoundref="pdata_8h" startline="86">bDispModeOff</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bafeea5d3222d7ff930fb6f9624390545d" compoundref="mpelem_8h" startline="86">eAdcData</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
@@ -270,22 +270,22 @@ The constructor allocate and register the mailbox of the AD converter task and a
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bacd2f468b1fbcb24780c40a12eefc686a" compoundref="mpelem_8h" startline="59">eShtcxTemperature</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
         <references refid="class_measurement_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="measurement_8cpp" startline="341" endline="371">MeasurementBuilder::finalize</references>
-        <references refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">MetricsBuilder::finalize</references>
+        <references refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">MetricsBuilder::finalize</references>
         <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
         <references refid="class_pool_elem_1a6f6a10932f5d7518f4ba0d3d2ed2a296" compoundref="mpelem_8h" startline="221">PoolElem::from</references>
-        <references refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="108" endline="114">MetricsBuilder::isComplete</references>
+        <references refid="class_metrics_builder_1a2114e6aa36f7534a3e7157dffb4c96cb" compoundref="metric_8cpp" startline="109" endline="115">MetricsBuilder::isComplete</references>
         <references refid="class_measurement_builder_1a3de71782ab104c8a96e5567164467dc0" compoundref="measurement_8cpp" startline="127" endline="160">MeasurementBuilder::isComplete</references>
         <references refid="class_data_manager_1ac9be60944cf5fc3ea291ea9bfc2556db" compoundref="pdata_8h" startline="81">measurements</references>
         <references refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" compoundref="pdata_8h" startline="79">metrics</references>
         <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
         <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
         <references refid="class_data_manager_1af2570dd7bace0312470d962f29359fb3" compoundref="pdata_8h" startline="76">pInMbox</references>
-        <references refid="class_metrics_builder_1a7e8442e7139d840c15bdee83789f7ae8" compoundref="metric_8cpp" startline="722" endline="725">MetricsBuilder::print</references>
+        <references refid="class_metrics_builder_1a7e8442e7139d840c15bdee83789f7ae8" compoundref="metric_8cpp" startline="731" endline="734">MetricsBuilder::print</references>
         <references refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">publishMeasurements</references>
         <references refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">publishMetrics</references>
         <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
         <references refid="class_measurement_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="measurement_8cpp" startline="422" endline="436">MeasurementBuilder::reset</references>
-        <references refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="736" endline="752">MetricsBuilder::reset</references>
+        <references refid="class_metrics_builder_1ad20897c5c8bd47f5d4005989bead0e55" compoundref="metric_8cpp" startline="745" endline="761">MetricsBuilder::reset</references>
         <references refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" compoundref="pdata_8h" startline="89">rms_z_thres</references>
         <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
         <references refid="task_8h_1a2f412bc60f09f0fd22210f04082c988b" compoundref="task_8h" startline="43">UNIT_TEST_STOP_LOOP</references>
@@ -357,18 +357,18 @@ Private variable bDispModeOff will be set according to configuration string disp
         <references refid="struct__st_cfg_datalog_1a3e765af1492b9ea5df65cf5bbc93d203" compoundref="config_8h" startline="192">_stCfgDatalog::rawtransferon</references>
         <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
         <references refid="class_data_manager_1a04d4ba74ac426afd8e7f2e9688d71733" compoundref="pdata_8h" startline="89">rms_z_thres</references>
-        <references refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" compoundref="metric_8cpp" startline="267" endline="269">MetricsBuilder::set_max_raw_per_day</references>
-        <references refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" compoundref="metric_8cpp" startline="255" endline="257">MetricsBuilder::set_Z_RmsThres</references>
-        <references refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" compoundref="metric_8cpp" startline="171" endline="173">MetricsBuilder::setActivationThres</references>
-        <references refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" compoundref="metric_8cpp" startline="159" endline="161">MetricsBuilder::setConfigVersion</references>
-        <references refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" compoundref="metric_8cpp" startline="183" endline="185">MetricsBuilder::setDeactivationThres</references>
-        <references refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" compoundref="metric_8cpp" startline="195" endline="197">MetricsBuilder::setDispModeOffFlag</references>
-        <references refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" compoundref="metric_8cpp" startline="219" endline="221">MetricsBuilder::setDispTransferOnFlag</references>
-        <references refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" compoundref="metric_8cpp" startline="243" endline="245">MetricsBuilder::setMetricsInterval</references>
-        <references refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" compoundref="metric_8cpp" startline="231" endline="233">MetricsBuilder::setPublicKey</references>
-        <references refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" compoundref="metric_8cpp" startline="207" endline="209">MetricsBuilder::setRawTransferOnFlag</references>
+        <references refid="class_metrics_builder_1a1d5ef8620ec3584e27f631fe2994bb2b" compoundref="metric_8cpp" startline="268" endline="270">MetricsBuilder::set_max_raw_per_day</references>
+        <references refid="class_metrics_builder_1a48fd0799201f0af3bb30507c378ad361" compoundref="metric_8cpp" startline="256" endline="258">MetricsBuilder::set_Z_RmsThres</references>
+        <references refid="class_metrics_builder_1af359a2f98b6a41800f27fbd006d03357" compoundref="metric_8cpp" startline="172" endline="174">MetricsBuilder::setActivationThres</references>
+        <references refid="class_metrics_builder_1aff2fa5ad0711d0657cb4430cf624e022" compoundref="metric_8cpp" startline="160" endline="162">MetricsBuilder::setConfigVersion</references>
+        <references refid="class_metrics_builder_1a57e2e066e36444be136df9ef876d681b" compoundref="metric_8cpp" startline="184" endline="186">MetricsBuilder::setDeactivationThres</references>
+        <references refid="class_metrics_builder_1ac5211d5eebab78c131870b415409b2e6" compoundref="metric_8cpp" startline="196" endline="198">MetricsBuilder::setDispModeOffFlag</references>
+        <references refid="class_metrics_builder_1a7b86eb4152caf6e691942b94ccc25b0a" compoundref="metric_8cpp" startline="220" endline="222">MetricsBuilder::setDispTransferOnFlag</references>
+        <references refid="class_metrics_builder_1a434a7437167dc87d5aa3a5c0d23d5856" compoundref="metric_8cpp" startline="244" endline="246">MetricsBuilder::setMetricsInterval</references>
+        <references refid="class_metrics_builder_1a4b3cd7266aa261cde2633e1d8c683c6a" compoundref="metric_8cpp" startline="232" endline="234">MetricsBuilder::setPublicKey</references>
+        <references refid="class_metrics_builder_1a76fb54fb96f539903dc38a347e7d34f6" compoundref="metric_8cpp" startline="208" endline="210">MetricsBuilder::setRawTransferOnFlag</references>
         <references refid="struct__st_cfg_general_1a728b969e374aba4020e39aea7e02e64f" compoundref="config_8h" startline="166">_stCfgGeneral::version</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -446,7 +446,7 @@ The function retrieve the user-specific data from the timer by calling kernel fu
         </inbodydescription>
         <location file="data/pdata.h" line="93" column="10" bodyfile="data/pdata.cpp" bodystart="184" bodyend="195"/>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba32261b0fb4efd2d532c0bb01118bc55c" compoundref="mpelem_8h" startline="81">eMetrics</references>
-        <references refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" compoundref="metric_8cpp" startline="711" endline="714">MetricsBuilder::getPayload</references>
+        <references refid="class_metrics_builder_1a3b2eba105e91d484ae1c79b03230468d" compoundref="metric_8cpp" startline="720" endline="723">MetricsBuilder::getPayload</references>
         <references refid="class_data_manager_1af658e0915c0dec17efdb14db0f055a15" compoundref="pdata_8h" startline="79">metrics</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
         <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">task</referencedby>

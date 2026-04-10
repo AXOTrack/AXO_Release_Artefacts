@@ -673,7 +673,7 @@ The constructor initialize variable bIdle and filter coefficents vectors. Filter
         <references refid="class_disp_task_1a84e4813f421c80250583ae23e3f4f100" compoundref="disptask_8h" startline="166">b1</references>
         <references refid="class_config_1a02b9c58f87dbf3269338120d45fbe187" compoundref="config_8cpp" startline="742" endline="744">Config::getCfgDisplacement</references>
         <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -800,7 +800,7 @@ The function extracts a structure of type <ref refid="structadxl372__xyz__accel_
         <inbodydescription>
         </inbodydescription>
         <location file="disp/disptask.h" line="169" column="10" bodyfile="disp/disptask.cpp" bodystart="254" bodyend="283"/>
-        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="75" endline="79">Adxl37x::convert</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72b130d1f6a32a742cb202e5ed898b14" compoundref="mpelem_8h" startline="119">eDispLastEntries</references>
         <references refid="class_c_filter_1a2af0fcf40944ac051dc8a31a4da06dd0" compoundref="filter_8cpp" startline="322" endline="365">CFilter::filterFirstIter</references>
         <references refid="class_c_filter_1a72e7df4bd2a6a5ee7611b1841b2c60d3" compoundref="filter_8cpp" startline="244" endline="249">CFilter::fwfilter_init</references>
@@ -815,7 +815,7 @@ The function extracts a structure of type <ref refid="structadxl372__xyz__accel_
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
         <references refid="struct_adxl_raw_data_progress_1a0531b0c7d4eab17ee58c56cccc22fcf4" compoundref="adxl__store_8h" startline="82">AdxlRawDataProgress::startRd</references>
         <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_disp_task_1a372a1a239b4683a1d40b7dc40efdb0ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -847,7 +847,7 @@ The function extracts a structure of type <ref refid="structadxl372__xyz__accel_
         <inbodydescription>
         </inbodydescription>
         <location file="disp/disptask.h" line="170" column="10" bodyfile="disp/disptask.cpp" bodystart="446" bodyend="462"/>
-        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="75" endline="79">Adxl37x::convert</references>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_c_filter_1addab61485dd5a3f79436415f9e5b24bb" compoundref="filter_8cpp" startline="61" endline="65">CFilter::inst</references>
         <references refid="class_disp_task_1a8f1d2f0688a5fab7fc710fb308da0729" compoundref="disptask_8h" startline="116">nfact</references>
@@ -855,7 +855,7 @@ The function extracts a structure of type <ref refid="structadxl372__xyz__accel_
         <references refid="class_disp_task_1a19cf3eae3207a4ee78a870f504edf3a4" compoundref="disptask_8cpp" startline="295" endline="312">reqRawData</references>
         <references refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" compoundref="disptask_8h" startline="134">rightpad</references>
         <references refid="class_disp_task_1aff5b0df4fa9b1dcd13c19eeb16d9b8b9" compoundref="disptask_8h" startline="123">sentEntries</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -937,7 +937,7 @@ The function increases received entries in member variable rcvdEntries by the nu
         <inbodydescription>
         </inbodydescription>
         <location file="disp/disptask.h" line="172" column="10" bodyfile="disp/disptask.cpp" bodystart="665" bodyend="702"/>
-        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="70" endline="74">Adxl37x::convert</references>
+        <references refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" compoundref="adxl37x_8cpp" startline="75" endline="79">Adxl37x::convert</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba993488035d2d4ff381af662bfda9c878" compoundref="mpelem_8h" startline="120">eStoreFwFiltResult</references>
         <references refid="class_c_filter_1a5afb651eb8bb19b0f16d4f5094611757" compoundref="filter_8cpp" startline="441" endline="474">CFilter::filterLastIter</references>
         <references refid="class_c_filter_1ab90d6ce05e8b04993a6fde401a609590" compoundref="filter_8cpp" startline="381" endline="426">CFilter::filterNthIter</references>
@@ -950,7 +950,7 @@ The function increases received entries in member variable rcvdEntries by the nu
         <references refid="class_disp_task_1aa87992ccc2c1c0d2786c133e5fd61f1a" compoundref="disptask_8h" startline="134">rightpad</references>
         <references refid="class_disp_task_1adc64f9fc514f9d643444fda968136c42" compoundref="disptask_8h" startline="138">rightpadFilt</references>
         <references refid="class_disp_task_1acb6282902db731f3f61662f6f8fb8960" compoundref="disptask_8h" startline="117">totalNumEntries</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_disp_task_1a4bba3d222a6552352e4a8ca64796c32f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">

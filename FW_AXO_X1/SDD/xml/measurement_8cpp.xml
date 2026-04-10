@@ -45,7 +45,7 @@
         <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="29">
         <label>rtos/timer.h</label>
         <link refid="timer_8h"/>
         <childnode refid="4" relation="include">
@@ -80,12 +80,16 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
         <childnode refid="22" relation="include">
         </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
       </node>
-      <node id="24">
+      <node id="26">
         <label>pm/power_mgr.h</label>
         <link refid="power__mgr_8h"/>
         <childnode refid="4" relation="include">
@@ -94,13 +98,13 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="21">
@@ -131,13 +135,13 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="33" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="34" relation="include">
         </childnode>
       </node>
       <node id="18">
@@ -151,11 +155,14 @@
       <node id="15">
         <label>zephyr/logging/log.h</label>
       </node>
-      <node id="32">
+      <node id="22">
+        <label>zephyr/drivers/clock_control.h</label>
+      </node>
+      <node id="34">
         <label>./debug.h</label>
         <link refid="debug_8h"/>
       </node>
-      <node id="28">
+      <node id="30">
         <label>disp/disptask.h</label>
         <link refid="disptask_8h"/>
         <childnode refid="4" relation="include">
@@ -164,17 +171,20 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
       </node>
       <node id="5">
         <label>ctime</label>
       </node>
-      <node id="31">
+      <node id="33">
         <label>conf/config.h</label>
         <link refid="config_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
+      </node>
+      <node id="23">
+        <label>zephyr/drivers/clock_control/nrf_clock_control.h</label>
       </node>
       <node id="3">
         <label>zephyr/drivers/sensor.h</label>
@@ -182,7 +192,7 @@
       <node id="7">
         <label>vector</label>
       </node>
-      <node id="25">
+      <node id="27">
         <label>rtos/mbox.h</label>
         <link refid="mbox_8h"/>
         <childnode refid="11" relation="include">
@@ -191,18 +201,18 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="29">
+      <node id="31">
         <label>disp/filter.h</label>
         <link refid="filter_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="30" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="28">
         <label>rtos/mqueue.h</label>
         <link refid="mqueue_8h"/>
         <childnode refid="11" relation="include">
@@ -212,15 +222,15 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="25">
         <label>zephyr/sys/ring_buffer.h</label>
       </node>
-      <node id="22">
+      <node id="24">
         <label>data/hw_metrics.h</label>
         <link refid="hw__metrics_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -253,14 +263,14 @@
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="32">
         <label>algorithm</label>
       </node>
       <node id="10">

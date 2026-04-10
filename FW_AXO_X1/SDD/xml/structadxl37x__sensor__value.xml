@@ -16,8 +16,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="53" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="52" bodyend="-1"/>
-        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <location file="drv/spi/adxl37x.h" line="55" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="488" endline="502">Adxl37x::report</referencedby>
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
         <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
       </memberdef>
@@ -33,8 +33,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="54" column="14" bodyfile="drv/spi/adxl37x.h" bodystart="54" bodyend="-1"/>
-        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <location file="drv/spi/adxl37x.h" line="56" column="14" bodyfile="drv/spi/adxl37x.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="488" endline="502">Adxl37x::report</referencedby>
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
         <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
       </memberdef>
@@ -50,8 +50,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="55" column="12" bodyfile="drv/spi/adxl37x.h" bodystart="55" bodyend="-1"/>
-        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <location file="drv/spi/adxl37x.h" line="57" column="12" bodyfile="drv/spi/adxl37x.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="488" endline="502">Adxl37x::report</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -92,7 +92,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="drv/spi/adxl37x.h" line="51" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="51" bodyend="56"/>
+    <location file="drv/spi/adxl37x.h" line="53" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="53" bodyend="58"/>
     <listofallmembers>
       <member refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" prot="public" virt="non-virtual"><scope>adxl37x_sensor_value</scope><name>cnt</name></member>
       <member refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" prot="public" virt="non-virtual"><scope>adxl37x_sensor_value</scope><name>samples</name></member>

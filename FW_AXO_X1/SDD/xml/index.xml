@@ -104,6 +104,8 @@
     <member refid="struct_adxl37x_1aae3b484e9add246d68429194a42883ba" kind="variable"><name>cur_buf</name></member>
     <member refid="struct_adxl37x_1a37ee504fe3165e7e2ffa8a620f72c62c" kind="variable"><name>sample_cnt</name></member>
     <member refid="struct_adxl37x_1a653f891fe8518bdf32a0fd42a3bf6e4c" kind="variable"><name>extSync</name></member>
+    <member refid="struct_adxl37x_1a54d12145a8d42ea2e17ff1f010517bda" kind="variable"><name>clk_mgr</name></member>
+    <member refid="struct_adxl37x_1a2d398bc123895803e13b7c5755892820" kind="variable"><name>clk_cli</name></member>
     <member refid="struct_adxl37x_1aa64d040441163a1126fda0f612addd2f" kind="variable"><name>suspendTimeout</name></member>
     <member refid="struct_adxl37x_1ae7065952827f83f9d9ce4a42e8dba281" kind="variable"><name>device_good</name></member>
     <member refid="struct_adxl37x_1ab14775f244c3ad1f75afe91f55fdbba3" kind="variable"><name>bSelftestPassed</name></member>
@@ -325,6 +327,8 @@
     <member refid="class_c_filter_1ac541fb874726cff28c1b179968a7a027" kind="function"><name>subvector_reverse</name></member>
     <member refid="class_c_filter_1a71433efc1784b0ab0af0bd94ad52c080" kind="function"><name>max_val</name></member>
     <member refid="class_c_filter_1ae46fa30dfd1ce09430daa2bcabf85f4c" kind="function"><name>filter_initialize</name></member>
+  </compound>
+  <compound refid="classclk__cli" kind="class"><name>clk_cli</name>
   </compound>
   <compound refid="class_c_matrix" kind="class"><name>CMatrix</name>
     <member refid="class_c_matrix_1a4b535c5936329d2d580b56ccff5980a4" kind="function"><name>getInverse</name></member>
@@ -1483,6 +1487,22 @@
   <compound refid="structtopic" kind="struct"><name>topic</name>
     <member refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" kind="variable"><name>string</name></member>
   </compound>
+  <compound refid="class_wakeup_cnt" kind="class"><name>WakeupCnt</name>
+    <member refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kind="variable"><name>sleepExitCount</name></member>
+    <member refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kind="variable"><name>publishMeasCount</name></member>
+    <member refid="class_wakeup_cnt_1aa064564f9ed7e20fae3600511b1d9008" kind="function"><name>~WakeupCnt</name></member>
+    <member refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" kind="function"><name>init</name></member>
+    <member refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" kind="function"><name>update</name></member>
+    <member refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" kind="function"><name>incSleepExitCount</name></member>
+    <member refid="class_wakeup_cnt_1ac36964c4a855f321301fb2eabe0989b3" kind="function"><name>incPublishMetricsCount</name></member>
+    <member refid="class_wakeup_cnt_1a82b7e4c71c77f5941dd5e861dbb7e952" kind="function"><name>incPublishMeasCount</name></member>
+    <member refid="class_wakeup_cnt_1a197c0e9173d599ab4114f097f5b04d63" kind="function"><name>getSleepExitCount</name></member>
+    <member refid="class_wakeup_cnt_1acf479b57f511506da78f20d8c8ab9079" kind="function"><name>getPublishMeasCount</name></member>
+    <member refid="class_wakeup_cnt_1a2171e227f463bfba0229b1a9f8bb0bdc" kind="function"><name>getLteMeasWakeupCnt</name></member>
+    <member refid="class_wakeup_cnt_1a2bcb344222793bdeca2e5289a3bfe2a6" kind="function"><name>getLteWakeupCnt</name></member>
+    <member refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kind="function"><name>inst</name></member>
+    <member refid="class_wakeup_cnt_1a3576c0de8015d0063cce0ae347b63299" kind="function"><name>WakeupCnt</name></member>
+  </compound>
   <compound refid="input__accel__bin_8h" kind="file"><name>input_accel_bin.h</name>
     <member refid="input__accel__bin_8h_1afa787e2d63fe82d6adbe8397fcd5e42c" kind="variable"><name>input_bytes</name></member>
   </compound>
@@ -1927,6 +1947,13 @@
     <member refid="reset__reason_8cpp_1a43f71a13d66cdc85a1d3d5fc483a0ba0" kind="function"><name>LOG_MODULE_REGISTER</name></member>
   </compound>
   <compound refid="reset__reason_8h" kind="file"><name>reset_reason.h</name>
+  </compound>
+  <compound refid="wakeup__cnt_8cpp" kind="file"><name>wakeup_cnt.cpp</name>
+    <member refid="wakeup__cnt_8cpp_1a5981d35238f477c73ef469462cee9c64" kind="typedef"><name>fs</name></member>
+    <member refid="wakeup__cnt_8cpp_1a30f3dd2b395087fa32c2d046a7a9bb64" kind="function"><name>LOG_MODULE_REGISTER</name></member>
+  </compound>
+  <compound refid="wakeup__cnt_8h" kind="file"><name>wakeup_cnt.h</name>
+    <member refid="wakeup__cnt_8h_1a70b7e90b21f831378f9167a8cd6ee432" kind="define"><name>WAKEUP_CNT_FILENAME</name></member>
   </compound>
   <compound refid="mbox_8cpp" kind="file"><name>mbox.cpp</name>
     <member refid="mbox_8cpp_1ad840932d0221c6b42f6de66dba4febf4" kind="function"><name>LOG_MODULE_REGISTER</name></member>

@@ -401,9 +401,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <p>The constructor allocate and register a mailbox and allocates and initialize the cyclic reconnect timer with duration of 60 ms and period of 300 ms. It read the IMEI of the modem by calling member function getDeviceId and complete the topic strings with the IMEI. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00535">535</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00536">536</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00271">config_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00160">CONNECT_RETRY_DURATION</a>, <a class="el" href="mqtt__connector_8h_source.html#l00236">device_id</a>, <a class="el" href="mbox_8h_source.html#l00069">Mbox::eMqttConnector</a>, <a class="el" href="mqtt__connector_8h_source.html#l00267">event_topic</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00429">getDeviceId()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00242">measurement_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00130">MEP_COMMAND_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00139">MEP_CONFIG_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00136">MEP_EVENT_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00121">MEP_MEASUREMENT_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00124">MEP_METRICS_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00133">MEP_OTA_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00127">MEP_PUBKEY_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00246">metrics_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00218">myTimer</a>, <a class="el" href="mqtt__connector_8h_source.html#l00283">numConnectRetries</a>, <a class="el" href="mqtt__connector_8h_source.html#l00261">ota_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00217">pInMbox</a>, <a class="el" href="mqtt__connector_8h_source.html#l00250">pubkey_topic</a>, <a class="el" href="mbox_8cpp_source.html#l00115">Mbox::registerMbox()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00621">timer_cb()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00271">config_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00160">CONNECT_RETRY_DURATION</a>, <a class="el" href="mqtt__connector_8h_source.html#l00236">device_id</a>, <a class="el" href="mbox_8h_source.html#l00069">Mbox::eMqttConnector</a>, <a class="el" href="mqtt__connector_8h_source.html#l00267">event_topic</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00430">getDeviceId()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00242">measurement_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00130">MEP_COMMAND_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00139">MEP_CONFIG_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00136">MEP_EVENT_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00121">MEP_MEASUREMENT_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00124">MEP_METRICS_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00133">MEP_OTA_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00127">MEP_PUBKEY_TOPIC</a>, <a class="el" href="mqtt__connector_8h_source.html#l00246">metrics_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00218">myTimer</a>, <a class="el" href="mqtt__connector_8h_source.html#l00283">numConnectRetries</a>, <a class="el" href="mqtt__connector_8h_source.html#l00261">ota_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00217">pInMbox</a>, <a class="el" href="mqtt__connector_8h_source.html#l00250">pubkey_topic</a>, <a class="el" href="mbox_8cpp_source.html#l00115">Mbox::registerMbox()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00622">timer_cb()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -474,7 +474,7 @@ Here is the call graph for this function:</div>
 <hr  />
 <p>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00590">590</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00591">591</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 </div>
 </div>
@@ -508,11 +508,11 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="class_task.html#ae369b3765489ee8bd0ea791c1843630f">Task</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00603">603</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00604">604</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="config_8cpp_source.html#l00728">Config::getCfgMetrics()</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, <a class="el" href="config_8h_source.html#l00179">_stCfgMetrics::interval</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00284">metricsInterval</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00207">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00214">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -597,85 +597,91 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_task.html#a1951102653a5e603f2131b33d7636232">Task</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l01368">1368</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l01369">1369</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00519">abort()</a>, <a class="el" href="classcertmgr.html#a119aab00792ccace8235e70745c29498">certmgr::ClearBrokerSwitchRequested()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00276">connected</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00506">disconnect()</a>, <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mpelem_8h_source.html#l00144">eCertJovia1</a>, <a class="el" href="mpelem_8h_source.html#l00145">eCertJovia2</a>, <a class="el" href="mpelem_8h_source.html#l00146">eCertJoviaKey</a>, <a class="el" href="mpelem_8h_source.html#l00147">eCertThingsboard1</a>, <a class="el" href="mpelem_8h_source.html#l00148">eCertThingsboard2</a>, <a class="el" href="mpelem_8h_source.html#l00149">eCertThingsboardKey</a>, <a class="el" href="mpelem_8h_source.html#l00091">eCmdAccept</a>, <a class="el" href="mpelem_8h_source.html#l00092">eCmdReject</a>, <a class="el" href="mpelem_8h_source.html#l00139">eColdStartReq</a>, <a class="el" href="mpelem_8h_source.html#l00142">eConnectJovia</a>, <a class="el" href="mpelem_8h_source.html#l00143">eConnectThingsboard</a>, <a class="el" href="mpelem_8h_source.html#l00152">eDisableADXL</a>, <a class="el" href="mpelem_8h_source.html#l00153">eEnableADXL</a>, <a class="el" href="mpelem_8h_source.html#l00138">eFactoryDefault</a>, <a class="el" href="mpelem_8h_source.html#l00150">eFsErase</a>, <a class="el" href="mpelem_8h_source.html#l00151">eFsStatus</a>, <a class="el" href="mpelem_8h_source.html#l00093">eFwAccept</a>, <a class="el" href="mpelem_8h_source.html#l00096">eFwDlFailed</a>, <a class="el" href="mpelem_8h_source.html#l00095">eFwDlSuccess</a>, <a class="el" href="mpelem_8h_source.html#l00094">eFwReject</a>, <a class="el" href="mpelem_8h_source.html#l00154">eGetConfig</a>, <a class="el" href="mpelem_8h_source.html#l00116">eJsonConfig</a>, <a class="el" href="mpelem_8h_source.html#l00137">eKeyTransferReq</a>, <a class="el" href="mpelem_8h_source.html#l00040">eLteConnected</a>, <a class="el" href="mpelem_8h_source.html#l00041">eLteDisconnected</a>, <a class="el" href="mpelem_8h_source.html#l00049">eLteSleepEnter</a>, <a class="el" href="mpelem_8h_source.html#l00050">eLteSleepExit</a>, <a class="el" href="mpelem_8h_source.html#l00080">eMeasurements</a>, <a class="el" href="mpelem_8h_source.html#l00081">eMetrics</a>, <a class="el" href="mpelem_8h_source.html#l00052">eMqttConnected</a>, <a class="el" href="mpelem_8h_source.html#l00053">eMqttDisconnected</a>, <a class="el" href="mpelem_8h_source.html#l00090">eOtaStart</a>, <a class="el" href="mbox_8h_source.html#l00083">Mbox::ePowerManager</a>, <a class="el" href="mpelem_8h_source.html#l00039">eTimerExpired</a>, <a class="el" href="mqtt__connector_8h_source.html#l00267">event_topic</a>, <a class="el" href="mpelem_8cpp_source.html#l00165">PoolElem::free()</a>, <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, <a class="el" href="keygen_8cpp_source.html#l00261">KeyGen::getPublicKey()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00890">HandleBoostOffReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00870">HandleBoostOnReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00850">HandleColdStartReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00933">HandleDisableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00954">HandleEnableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00828">HandleFactoryDefault()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00912">HandleFsErase()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00992">HandleFsStatus()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00975">HandleGetConfig()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00662">HandleNewConfiguration()</a>, <a class="el" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst()</a>, <a class="el" href="keygen_8cpp_source.html#l00183">KeyGen::inst()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00278">lte_connected</a>, <a class="el" href="mqtt__connector_8h_source.html#l00242">measurement_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00246">metrics_topic</a>, <a class="el" href="mpelem_8h_source.html#l00220">PoolElem::mtype</a>, <a class="el" href="task_8h_source.html#l00086">Task::myName</a>, <a class="el" href="mqtt__connector_8h_source.html#l00218">myTimer</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00087">on_connack()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00112">on_disconnect()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00296">on_puback()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00163">on_publish()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00312">on_suback()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00405">ota_subscribe()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00261">ota_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00217">pInMbox</a>, <a class="el" href="mqtt__connector_8h_source.html#l00250">pubkey_topic</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00697">PublishData()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00810">PublishDlResult()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00762">PublishRejectedResponse()</a>, <a class="el" href="mbox_8cpp_source.html#l00098">Mbox::read()</a>, <a class="el" href="mbox_8cpp_source.html#l00076">Mbox::send()</a>, <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>, <a class="el" href="keygen_8cpp_source.html#l00237">KeyGen::setKeyTransfered()</a>, <a class="el" href="timer_8cpp_source.html#l00069">Timer::start()</a>, <a class="el" href="timer_8cpp_source.html#l00101">Timer::stop()</a>, and <a class="el" href="task_8h_source.html#l00043">UNIT_TEST_STOP_LOOP</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00520">abort()</a>, <a class="el" href="classcertmgr.html#a119aab00792ccace8235e70745c29498">certmgr::ClearBrokerSwitchRequested()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00276">connected</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00507">disconnect()</a>, <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mpelem_8h_source.html#l00144">eCertJovia1</a>, <a class="el" href="mpelem_8h_source.html#l00145">eCertJovia2</a>, <a class="el" href="mpelem_8h_source.html#l00146">eCertJoviaKey</a>, <a class="el" href="mpelem_8h_source.html#l00147">eCertThingsboard1</a>, <a class="el" href="mpelem_8h_source.html#l00148">eCertThingsboard2</a>, <a class="el" href="mpelem_8h_source.html#l00149">eCertThingsboardKey</a>, <a class="el" href="mpelem_8h_source.html#l00091">eCmdAccept</a>, <a class="el" href="mpelem_8h_source.html#l00092">eCmdReject</a>, <a class="el" href="mpelem_8h_source.html#l00139">eColdStartReq</a>, <a class="el" href="mpelem_8h_source.html#l00142">eConnectJovia</a>, <a class="el" href="mpelem_8h_source.html#l00143">eConnectThingsboard</a>, <a class="el" href="mpelem_8h_source.html#l00152">eDisableADXL</a>, <a class="el" href="mpelem_8h_source.html#l00153">eEnableADXL</a>, <a class="el" href="mpelem_8h_source.html#l00138">eFactoryDefault</a>, <a class="el" href="mpelem_8h_source.html#l00150">eFsErase</a>, <a class="el" href="mpelem_8h_source.html#l00151">eFsStatus</a>, <a class="el" href="mpelem_8h_source.html#l00093">eFwAccept</a>, <a class="el" href="mpelem_8h_source.html#l00096">eFwDlFailed</a>, <a class="el" href="mpelem_8h_source.html#l00095">eFwDlSuccess</a>, <a class="el" href="mpelem_8h_source.html#l00094">eFwReject</a>, <a class="el" href="mpelem_8h_source.html#l00154">eGetConfig</a>, <a class="el" href="mpelem_8h_source.html#l00116">eJsonConfig</a>, <a class="el" href="mpelem_8h_source.html#l00137">eKeyTransferReq</a>, <a class="el" href="mpelem_8h_source.html#l00040">eLteConnected</a>, <a class="el" href="mpelem_8h_source.html#l00041">eLteDisconnected</a>, <a class="el" href="mpelem_8h_source.html#l00049">eLteSleepEnter</a>, <a class="el" href="mpelem_8h_source.html#l00050">eLteSleepExit</a>, <a class="el" href="mpelem_8h_source.html#l00080">eMeasurements</a>, <a class="el" href="mpelem_8h_source.html#l00081">eMetrics</a>, <a class="el" href="mpelem_8h_source.html#l00052">eMqttConnected</a>, <a class="el" href="mpelem_8h_source.html#l00053">eMqttDisconnected</a>, <a class="el" href="mpelem_8h_source.html#l00090">eOtaStart</a>, <a class="el" href="mbox_8h_source.html#l00083">Mbox::ePowerManager</a>, <a class="el" href="mpelem_8h_source.html#l00039">eTimerExpired</a>, <a class="el" href="mqtt__connector_8h_source.html#l00267">event_topic</a>, <a class="el" href="mpelem_8cpp_source.html#l00165">PoolElem::free()</a>, <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, <a class="el" href="keygen_8cpp_source.html#l00261">KeyGen::getPublicKey()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00891">HandleBoostOffReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00871">HandleBoostOnReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00851">HandleColdStartReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00934">HandleDisableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00955">HandleEnableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00829">HandleFactoryDefault()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00913">HandleFsErase()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00993">HandleFsStatus()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00976">HandleGetConfig()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00663">HandleNewConfiguration()</a>, <a class="el" href="wakeup__cnt_8cpp_source.html#l00131">WakeupCnt::incPublishMeasCount()</a>, <a class="el" href="wakeup__cnt_8cpp_source.html#l00125">WakeupCnt::incSleepExitCount()</a>, <a class="el" href="wakeup__cnt_8cpp_source.html#l00043">WakeupCnt::inst()</a>, <a class="el" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst()</a>, <a class="el" href="keygen_8cpp_source.html#l00183">KeyGen::inst()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00278">lte_connected</a>, <a class="el" href="mqtt__connector_8h_source.html#l00242">measurement_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00246">metrics_topic</a>, <a class="el" href="mpelem_8h_source.html#l00220">PoolElem::mtype</a>, <a class="el" href="task_8h_source.html#l00086">Task::myName</a>, <a class="el" href="mqtt__connector_8h_source.html#l00218">myTimer</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00088">on_connack()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00113">on_disconnect()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00297">on_puback()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00164">on_publish()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00313">on_suback()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00406">ota_subscribe()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00261">ota_topic</a>, <a class="el" href="mqtt__connector_8h_source.html#l00217">pInMbox</a>, <a class="el" href="mqtt__connector_8h_source.html#l00250">pubkey_topic</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00698">PublishData()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00811">PublishDlResult()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00763">PublishRejectedResponse()</a>, <a class="el" href="mbox_8cpp_source.html#l00098">Mbox::read()</a>, <a class="el" href="mbox_8cpp_source.html#l00076">Mbox::send()</a>, <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>, <a class="el" href="keygen_8cpp_source.html#l00237">KeyGen::setKeyTransfered()</a>, <a class="el" href="timer_8cpp_source.html#l00069">Timer::start()</a>, <a class="el" href="timer_8cpp_source.html#l00101">Timer::stop()</a>, and <a class="el" href="task_8h_source.html#l00043">UNIT_TEST_STOP_LOOP</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_mqtt_connector_acbfb668d7b4cfa39aa1a5a5dac3c0e7e_cgraph.png" border="0" usemap="#aclass_mqtt_connector_acbfb668d7b4cfa39aa1a5a5dac3c0e7e_cgraph" alt=""/></div>
 <map name="aclass_mqtt_connector_acbfb668d7b4cfa39aa1a5a5dac3c0e7e_cgraph" id="aclass_mqtt_connector_acbfb668d7b4cfa39aa1a5a5dac3c0e7e_cgraph">
-<area shape="rect" title="MQTT connector task function." alt="" coords="5,1128,52,1155"/>
-<area shape="rect" href="class_mqtt_connector.html#ac54f53dc342019e8db34f4aa581a5792" title="Function to send a abort request to the MQTT broker." alt="" coords="393,14,444,40"/>
-<area shape="rect" href="classcertmgr.html#a119aab00792ccace8235e70745c29498" title=" " alt="" coords="100,77,281,118"/>
-<area shape="rect" href="class_mqtt_connector.html#a1396bf9b5defe9fa844a63b5cd40ac0e" title="Function to send a connect request to the MQTT broker." alt="" coords="157,194,225,220"/>
-<area shape="rect" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050" title=" " alt="" coords="371,64,466,91"/>
-<area shape="rect" href="class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="375,216,463,243"/>
-<area shape="rect" href="class_mqtt_connector.html#a960705de531a20389fb29928d43258c3" title="Function to send a disconnect request to the MQTT broker." alt="" coords="148,343,233,370"/>
-<area shape="rect" href="class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="137,394,244,420"/>
-<area shape="rect" href="class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="350,1686,487,1712"/>
-<area shape="rect" href="class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="113,444,268,471"/>
-<area shape="rect" href="class_mqtt_connector.html#ae07a10cc3041ea092699387b0fdb3257" title="Handler function for handling of boost converter off request." alt="" coords="123,1331,258,1358"/>
-<area shape="rect" href="class_mqtt_connector.html#ab5d3e83997c930e0ea258cccbee98063" title="Function to publish a accepted response to the MQTT broker." alt="" coords="329,1280,508,1307"/>
-<area shape="rect" href="class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="361,1331,476,1358"/>
-<area shape="rect" href="class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="588,1128,679,1155"/>
-<area shape="rect" href="class_mqtt_connector.html#af768b2a6ec57840d0ee687f9b25e7b4c" title="Handler function for handling of boost converter on request." alt="" coords="123,1382,259,1408"/>
-<area shape="rect" href="class_mqtt_connector.html#a7b73774ea55d0112571cf49e98558e37" title="Handler function for handling of cold start request." alt="" coords="121,1280,260,1307"/>
-<area shape="rect" href="class_mqtt_connector.html#a4ba8232123283b7363cf319d3603b9ac" title="Handler function for handling disable ADXL request." alt="" coords="122,1179,259,1206"/>
-<area shape="rect" href="class_mqtt_connector.html#a163abf5e1860042a8d2fe54398ee0c53" title="Handler function for handling enable ADXL request." alt="" coords="123,1230,258,1256"/>
-<area shape="rect" href="class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="117,774,264,800"/>
-<area shape="rect" href="class_key_gen.html#aa82987fa60c88c4380a157e4b0f178b6" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="369,622,468,648"/>
-<area shape="rect" href="class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="135,824,246,851"/>
-<area shape="rect" href="class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="133,976,248,1003"/>
-<area shape="rect" href="class_mqtt_connector.html#ab09a2b3c65e60b502efe51bfaaa6095f" title="Handler function for handling get configuration request." alt="" coords="131,1078,250,1104"/>
-<area shape="rect" href="class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="109,1027,272,1054"/>
-<area shape="rect" href="class_mqtt_connector.html#a86374deb5f3ee32fb220efbaf0743b0f" title="Callback handlers from MQTT helper library for connack from broker." alt="" coords="145,1888,237,1915"/>
-<area shape="rect" href="class_mqtt_connector.html#aef147f2b63e45447753b327e4d85079e" title="Callback handlers from MQTT helper library for disconnect indication from broker." alt="" coords="137,1432,244,1459"/>
-<area shape="rect" href="class_mqtt_connector.html#aed0e2bc67364b25cbf96f7eff79b437d" title="Callback handlers from MQTT helper library for puback from broker." alt="" coords="148,1534,233,1560"/>
-<area shape="rect" href="class_mqtt_connector.html#a8758bc421d3292a0f4431a017446bd24" title="Callback handlers from MQTT helper library for a subscribed topic from broker." alt="" coords="149,875,233,902"/>
-<area shape="rect" href="class_mqtt_connector.html#a86e2fd6577ee6e2f7e8feaa35c4f18a6" title="Callback handlers from MQTT helper library for suback from broker." alt="" coords="148,1635,233,1662"/>
-<area shape="rect" href="class_mqtt_connector.html#ae00794e6ab250c0807e70f42b0aee29f" title="Function to send a subscribe request for the OTA topic to the MQTT broker." alt="" coords="139,1838,242,1864"/>
-<area shape="rect" href="class_mqtt_connector.html#a902f83037dc5ee6772caad03b74e7326" title="Function to publish data to the MQTT broker." alt="" coords="373,1736,465,1763"/>
-<area shape="rect" href="class_mqtt_connector.html#a468c248c7d18e226ea56f9c1a8e07be4" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="133,1736,248,1763"/>
-<area shape="rect" href="class_mqtt_connector.html#aa89c1f584a412e02c6138435a71a4ecc" title="Function to publish a rejected response to the MQTT broker." alt="" coords="103,1584,278,1611"/>
-<area shape="rect" href="class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="147,1939,234,1966"/>
-<area shape="rect" href="class_key_gen.html#a2ea5b52157e7110397fe476c61fcfd91" title="Function to mark that public key is still done." alt="" coords="101,520,280,547"/>
-<area shape="rect" href="class_timer.html#a8c528baf37154d347366083f0f816846" title="Timer stop function." alt="" coords="147,1990,234,2016"/>
-<area shape="rect" href="classcertmgr.html#af5293bd514ca5d83c32a243953e61b1a" title=" " alt="" coords="333,115,505,142"/>
-<area shape="rect" href="class_reset_ctrl.html#a6c639dcc49b79a7610d1925749cc2359" title="Convenience function to perform a SW reset." alt="" coords="329,824,508,851"/>
-<area shape="rect" href="classcertmgr.html#af0654790e06b5ac06e0f356de34ed4e6" title=" " alt="" coords="339,166,498,192"/>
-<area shape="rect" href="class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="353,267,485,294"/>
-<area shape="rect" href="class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="571,267,695,294"/>
-<area shape="rect" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916" title=" " alt="" coords="352,419,485,446"/>
-<area shape="rect" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8" title=" " alt="" coords="353,470,484,496"/>
-<area shape="rect" href="class_flash_f_s.html#ab40ac03c5347c00a05c803e41d6c735c" title=" " alt="" coords="355,318,482,344"/>
-<area shape="rect" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="583,698,683,724"/>
-<area shape="rect" href="class_mqtt_connector.html#a959e4c8768e9fd37a1411a350d04f446" title="Function to publish a response to the MQTT broker." alt="" coords="572,1280,695,1307"/>
-<area shape="rect" href="class_mqtt_connector.html#afd64f589c503525f02261a850b822527" title="The publish method of MQTT connector class." alt="" coords="797,1280,859,1307"/>
-<area shape="rect" href="class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="556,1179,711,1206"/>
-<area shape="rect" href="class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="582,1331,685,1358"/>
-<area shape="rect" href="class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="763,1179,893,1206"/>
-<area shape="rect" href="class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="759,1078,897,1104"/>
-<area shape="rect" href="class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="783,1128,873,1155"/>
-<area shape="rect" href="class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="945,1103,1065,1130"/>
-<area shape="rect" href="class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="957,1154,1054,1180"/>
-<area shape="rect" href="class_config.html#a6e68de84123711b6e53a49c3279606ea" title="Function to delete configuration file." alt="" coords="339,672,498,699"/>
-<area shape="rect" href="class_key_gen.html#a290303ddeb22987037be90caca412f85" title="Function to delete all key related files." alt="" coords="337,774,500,800"/>
-<area shape="rect" href="class_config.html#a9b3a6fc9e2b45eac27ab8bc00231bd87" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="375,1128,462,1155"/>
-<area shape="rect" href="class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276" title=" " alt="" coords="573,762,693,788"/>
-<area shape="rect" href="class_flash_f_s.html#ac1fe59dfffb46bf7a6b6e931356631aa" title=" " alt="" coords="355,926,482,952"/>
-<area shape="rect" href="class_flash_f_s.html#a1db7f084483fe1bc09d688e3d3a69eb4" title=" " alt="" coords="354,875,483,902"/>
-<area shape="rect" href="class_flash_f_s.html#af4e67fd0e66b799a025531d100e0cbc1" title="Erase function for file system. This function erases the file system on the specified mount point." alt="" coords="578,926,689,952"/>
-<area shape="rect" href="class_config.html#a4530f1c50511acfe103d8788a85d3500" title="Function to automatically correct invalid configuration values." alt="" coords="343,1027,494,1054"/>
-<area shape="rect" href="class_config.html#a7b0b73b517a5c380220f46d722f4481b" title="Function to store JSON configuration string in file system." alt="" coords="355,1179,482,1206"/>
-<area shape="rect" href="class_config.html#abbed406bd7169794eed499057c17142e" title="Function to retrieve a single value from a JSON group object." alt="" coords="575,1027,692,1054"/>
-<area shape="rect" href="class_config.html#a774b533b0a7a6ba5dbe9214642f04245" title="Function to write object representation from memory to input string." alt="" coords="587,1078,679,1104"/>
-<area shape="rect" href="class_config.html#ae06cb6427fcd926b24a5def4fb459e3f" title="Function to store a single value in a JSON group object." alt="" coords="575,976,692,1003"/>
-<area shape="rect" href="class_mqtt_connector.html#a1c2bd902abdaf7c8a608d8cd9b7403b5" title="Function to send a subscribe request for the command topic to the MQTT broker." alt="" coords="363,1914,474,1940"/>
-<area shape="rect" href="class_mqtt_connector.html#aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" title="Function to send a subscribe request for the config topic to the &#160;&#160;MQTT broker." alt="" coords="359,1863,478,1890"/>
-<area shape="rect" href="class_mqtt_connector.html#a0fc7bb8f849d8634227e7e2d4a1ac9f0" title="Function to send a subscribe request to the MQTT broker." alt="" coords="594,1863,673,1890"/>
-<area shape="rect" href="class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="370,1964,467,1991"/>
-<area shape="rect" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d" title=" " alt="" coords="354,520,483,547"/>
+<area shape="rect" title="MQTT connector task function." alt="" coords="5,967,52,994"/>
+<area shape="rect" href="class_mqtt_connector.html#ac54f53dc342019e8db34f4aa581a5792" title="Function to send a abort request to the MQTT broker." alt="" coords="417,35,468,62"/>
+<area shape="rect" href="classcertmgr.html#a119aab00792ccace8235e70745c29498" title=" " alt="" coords="112,65,293,107"/>
+<area shape="rect" href="class_mqtt_connector.html#a1396bf9b5defe9fa844a63b5cd40ac0e" title="Function to send a connect request to the MQTT broker." alt="" coords="169,182,237,209"/>
+<area shape="rect" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050" title=" " alt="" coords="395,106,490,133"/>
+<area shape="rect" href="class_timer.html#a60de64d75454385b23995437f1d72669" title="Timer start function." alt="" coords="399,258,487,285"/>
+<area shape="rect" href="class_mqtt_connector.html#a960705de531a20389fb29928d43258c3" title="Function to send a disconnect request to the MQTT broker." alt="" coords="160,283,245,310"/>
+<area shape="rect" href="class_pool_elem.html#aafde19f7d36ca163a143579c1b125b6d" title="The pool element free function." alt="" coords="149,334,256,361"/>
+<area shape="rect" href="class_pool_elem.html#a837327a6d1d94f9622b97c4912bddfec" title="Getter function to retrieve the pointer to message buffer content." alt="" coords="374,1347,511,1374"/>
+<area shape="rect" href="class_key_gen.html#a7ad5dbc329a2310e05b76fa92d003e65" title="Function to retrieve the public key from file system." alt="" coords="365,1499,520,1526"/>
+<area shape="rect" href="class_mqtt_connector.html#ae07a10cc3041ea092699387b0fdb3257" title="Handler function for handling of boost converter off request." alt="" coords="135,689,270,715"/>
+<area shape="rect" href="class_mqtt_connector.html#ab5d3e83997c930e0ea258cccbee98063" title="Function to publish a accepted response to the MQTT broker." alt="" coords="353,841,532,867"/>
+<area shape="rect" href="class_mbox.html#a9b8ecdc068f1eb3f8ef3b9eadbd2598e" title="Message send convinience function." alt="" coords="385,663,500,690"/>
+<area shape="rect" href="class_mbox.html#a01032c119d55a350bf3c773e8c83cc74" title="Mbox send function." alt="" coords="612,562,703,589"/>
+<area shape="rect" href="class_mqtt_connector.html#af768b2a6ec57840d0ee687f9b25e7b4c" title="Handler function for handling of boost converter on request." alt="" coords="135,739,271,766"/>
+<area shape="rect" href="class_mqtt_connector.html#a7b73774ea55d0112571cf49e98558e37" title="Handler function for handling of cold start request." alt="" coords="133,790,272,817"/>
+<area shape="rect" href="class_mqtt_connector.html#a4ba8232123283b7363cf319d3603b9ac" title="Handler function for handling disable ADXL request." alt="" coords="134,841,271,867"/>
+<area shape="rect" href="class_mqtt_connector.html#a163abf5e1860042a8d2fe54398ee0c53" title="Handler function for handling enable ADXL request." alt="" coords="135,638,270,665"/>
+<area shape="rect" href="class_mqtt_connector.html#aed4c6be100e6248e7f02e59ab1893f08" title="Handler function for handling of a factory default request." alt="" coords="129,993,276,1019"/>
+<area shape="rect" href="class_key_gen.html#aa82987fa60c88c4380a157e4b0f178b6" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="393,891,492,918"/>
+<area shape="rect" href="class_mqtt_connector.html#a4b7e8e7205da8f1aeb2be36f84bada73" title="Handler function for handling of file system erase request." alt="" coords="147,435,258,462"/>
+<area shape="rect" href="class_mqtt_connector.html#afc78bd59f52502209d77871b282352a6" title="Handler function for handling of file system status request." alt="" coords="145,1094,260,1121"/>
+<area shape="rect" href="class_mqtt_connector.html#ab09a2b3c65e60b502efe51bfaaa6095f" title="Handler function for handling get configuration request." alt="" coords="143,1043,262,1070"/>
+<area shape="rect" href="class_mqtt_connector.html#a28b80fede4e4f7e30a3414fb348a10f9" title="Handler function for new incoming JSON configuration." alt="" coords="121,1195,284,1222"/>
+<area shape="rect" href="class_wakeup_cnt.html#a82b7e4c71c77f5941dd5e861dbb7e952" title=" " alt="" coords="107,1703,298,1744"/>
+<area shape="rect" href="class_wakeup_cnt.html#a383f4683ccd5950b0c6f17760c1a9879" title=" " alt="" coords="100,1651,305,1678"/>
+<area shape="rect" href="class_wakeup_cnt.html#a77a0dd2597120892760e075169cb5fd3" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="143,1297,262,1323"/>
+<area shape="rect" href="class_mqtt_connector.html#a86374deb5f3ee32fb220efbaf0743b0f" title="Callback handlers from MQTT helper library for connack from broker." alt="" coords="157,1769,249,1795"/>
+<area shape="rect" href="class_mqtt_connector.html#aef147f2b63e45447753b327e4d85079e" title="Callback handlers from MQTT helper library for disconnect indication from broker." alt="" coords="149,587,256,614"/>
+<area shape="rect" href="class_mqtt_connector.html#aed0e2bc67364b25cbf96f7eff79b437d" title="Callback handlers from MQTT helper library for puback from broker." alt="" coords="160,1449,245,1475"/>
+<area shape="rect" href="class_mqtt_connector.html#a8758bc421d3292a0f4431a017446bd24" title="Callback handlers from MQTT helper library for a subscribed topic from broker." alt="" coords="161,486,245,513"/>
+<area shape="rect" href="class_mqtt_connector.html#a86e2fd6577ee6e2f7e8feaa35c4f18a6" title="Callback handlers from MQTT helper library for suback from broker." alt="" coords="160,1550,245,1577"/>
+<area shape="rect" href="class_mqtt_connector.html#ae00794e6ab250c0807e70f42b0aee29f" title="Function to send a subscribe request for the OTA topic to the MQTT broker." alt="" coords="151,1819,254,1846"/>
+<area shape="rect" href="class_mqtt_connector.html#a902f83037dc5ee6772caad03b74e7326" title="Function to publish data to the MQTT broker." alt="" coords="397,1398,489,1425"/>
+<area shape="rect" href="class_mqtt_connector.html#a468c248c7d18e226ea56f9c1a8e07be4" title="Function to publish a download finished indication to the MQTT broker." alt="" coords="145,1347,260,1374"/>
+<area shape="rect" href="class_mqtt_connector.html#aa89c1f584a412e02c6138435a71a4ecc" title="Function to publish a rejected response to the MQTT broker." alt="" coords="355,1145,530,1171"/>
+<area shape="rect" href="class_mbox.html#a6278f3ed7f9800ede27ccc25cf140b3b" title="Mbox read function." alt="" coords="159,1870,246,1897"/>
+<area shape="rect" href="class_key_gen.html#a2ea5b52157e7110397fe476c61fcfd91" title="Function to mark that public key is still done." alt="" coords="353,1558,532,1585"/>
+<area shape="rect" href="class_timer.html#a8c528baf37154d347366083f0f816846" title="Timer stop function." alt="" coords="159,1921,246,1947"/>
+<area shape="rect" href="classcertmgr.html#af5293bd514ca5d83c32a243953e61b1a" title=" " alt="" coords="357,157,529,183"/>
+<area shape="rect" href="class_reset_ctrl.html#a6c639dcc49b79a7610d1925749cc2359" title="Convenience function to perform a SW reset." alt="" coords="353,587,532,614"/>
+<area shape="rect" href="classcertmgr.html#af0654790e06b5ac06e0f356de34ed4e6" title=" " alt="" coords="363,207,522,234"/>
+<area shape="rect" href="class_msg_pool.html#a48a68603785b01760fc79ca0a9b1a65b" title="Function to free (release) a message of type PoolElem to the message pool." alt="" coords="377,334,509,361"/>
+<area shape="rect" href="class_memory_pool.html#a8e844ae7b745f7bedf3f132e8c1916d4" title="MemoryPool free function." alt="" coords="595,334,719,361"/>
+<area shape="rect" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916" title=" " alt="" coords="591,1507,724,1534"/>
+<area shape="rect" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8" title=" " alt="" coords="592,1558,723,1585"/>
+<area shape="rect" href="class_flash_f_s.html#ab40ac03c5347c00a05c803e41d6c735c" title=" " alt="" coords="594,1457,721,1483"/>
+<area shape="rect" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="607,1043,707,1070"/>
+<area shape="rect" href="class_mqtt_connector.html#a959e4c8768e9fd37a1411a350d04f446" title="Function to publish a response to the MQTT broker." alt="" coords="596,993,719,1019"/>
+<area shape="rect" href="class_mqtt_connector.html#afd64f589c503525f02261a850b822527" title="The publish method of MQTT connector class." alt="" coords="821,1246,883,1273"/>
+<area shape="rect" href="class_msg_pool.html#a77fddc9b40dd7a275687cbd514ae48a8" title="Function to allocate a message of type PoolElem from message pool." alt="" coords="580,689,735,715"/>
+<area shape="rect" href="class_msg_pool.html#a435c2d96024ea826359b1bc4c9675e6a" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="606,638,709,665"/>
+<area shape="rect" href="class_memory_pool.html#a2d6190969d0a0bec2e1202690c1523ce" title="MemoryPool allocation function." alt="" coords="787,689,917,715"/>
+<area shape="rect" href="class_mbox.html#aa4f60789a8ab9bb2e04b37a2e04a4d71" title="Getter function to retrieve the mailbox pointer by given ID." alt="" coords="783,537,921,563"/>
+<area shape="rect" href="class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="807,587,897,614"/>
+<area shape="rect" href="class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="969,562,1089,589"/>
+<area shape="rect" href="class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="981,613,1078,639"/>
+<area shape="rect" href="class_config.html#a6e68de84123711b6e53a49c3279606ea" title="Function to delete configuration file." alt="" coords="363,942,522,969"/>
+<area shape="rect" href="class_key_gen.html#a290303ddeb22987037be90caca412f85" title="Function to delete all key related files." alt="" coords="361,993,524,1019"/>
+<area shape="rect" href="class_config.html#a9b3a6fc9e2b45eac27ab8bc00231bd87" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="399,1043,486,1070"/>
+<area shape="rect" href="class_flash_f_s.html#a32e4cef9beb0262cea4bdafb5b998276" title=" " alt="" coords="597,942,717,969"/>
+<area shape="rect" href="class_flash_f_s.html#ac1fe59dfffb46bf7a6b6e931356631aa" title=" " alt="" coords="379,435,506,462"/>
+<area shape="rect" href="class_flash_f_s.html#a1db7f084483fe1bc09d688e3d3a69eb4" title=" " alt="" coords="378,537,507,563"/>
+<area shape="rect" href="class_flash_f_s.html#af4e67fd0e66b799a025531d100e0cbc1" title="Erase function for file system. This function erases the file system on the specified mount point." alt="" coords="602,435,713,462"/>
+<area shape="rect" href="class_config.html#a4530f1c50511acfe103d8788a85d3500" title="Function to automatically correct invalid configuration values." alt="" coords="367,1195,518,1222"/>
+<area shape="rect" href="class_config.html#a7b0b73b517a5c380220f46d722f4481b" title="Function to store JSON configuration string in file system." alt="" coords="379,1297,506,1323"/>
+<area shape="rect" href="class_config.html#abbed406bd7169794eed499057c17142e" title="Function to retrieve a single value from a JSON group object." alt="" coords="599,1094,716,1121"/>
+<area shape="rect" href="class_config.html#a774b533b0a7a6ba5dbe9214642f04245" title="Function to write object representation from memory to input string." alt="" coords="611,1145,703,1171"/>
+<area shape="rect" href="class_config.html#ae06cb6427fcd926b24a5def4fb459e3f" title="Function to store a single value in a JSON group object." alt="" coords="599,1195,716,1222"/>
+<area shape="rect" href="class_wakeup_cnt.html#ac5c54df7ed3b930268c8d7752c101725" title="Getter function to retrieve the boot count." alt="" coords="374,1630,511,1657"/>
+<area shape="rect" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae" title=" " alt="" coords="592,1659,723,1686"/>
+<area shape="rect" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0" title=" " alt="" coords="592,1710,723,1737"/>
+<area shape="rect" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d" title=" " alt="" coords="593,1609,722,1635"/>
+<area shape="rect" href="class_mqtt_connector.html#a1c2bd902abdaf7c8a608d8cd9b7403b5" title="Function to send a subscribe request for the command topic to the MQTT broker." alt="" coords="387,1718,498,1745"/>
+<area shape="rect" href="class_mqtt_connector.html#aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" title="Function to send a subscribe request for the config topic to the &#160;&#160;MQTT broker." alt="" coords="383,1769,502,1795"/>
+<area shape="rect" href="class_mqtt_connector.html#a0fc7bb8f849d8634227e7e2d4a1ac9f0" title="Function to send a subscribe request to the MQTT broker." alt="" coords="618,1769,697,1795"/>
+<area shape="rect" href="class_m_queue.html#ac051b2568208e363ae2dffb23c0ad9ba" title="MQueue get function." alt="" coords="394,1870,491,1897"/>
 </map>
 </div>
 
@@ -715,11 +721,11 @@ Here is the call graph for this function:</div>
 </dl>
 <p>The function retrieve the user-specific data from the timer by calling kernel function k_timer_user_data_get and call MQTT connector timer expired function timer1_expired. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00621">621</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00622">622</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00636">timer1_expired()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00637">timer1_expired()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -763,11 +769,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function initializes the static pool element e1 with message type eTimerExpired, set LTE connector as sender and put message into own (LTE connector's) mailbox. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00636">636</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00637">637</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mpelem_8h_source.html#l00039">eTimerExpired</a>, <a class="el" href="mqtt__connector_8h_source.html#l00217">pInMbox</a>, and <a class="el" href="mbox_8cpp_source.html#l00054">Mbox::write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00621">timer_cb()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00622">timer_cb()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -811,11 +817,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function copy host name and device ID in structure of type mqtt_helper_conn_params provided by nRF IoT library and send this structure with a connect request to the broker by calling function mqtt_helper_connect also provided by nRF IoT library. To prevent inconsistent library states the member function abort will be called in case of an error. Finally the reconnect timer will be started to schedule reconnection attempts. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00449">449</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00450">450</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00519">abort()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00160">CONNECT_RETRY_DURATION</a>, <a class="el" href="mqtt__connector_8h_source.html#l00236">device_id</a>, <a class="el" href="certmgr_8h_source.html#l00057">eBroker_JOVIA</a>, <a class="el" href="certmgr_8h_source.html#l00058">eBroker_THINGSBOARD</a>, <a class="el" href="classcertmgr.html#af5293bd514ca5d83c32a243953e61b1a">certmgr::getCurrentBroker()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00238">host_name</a>, <a class="el" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00142">JOVIA_MQTT_HOSTNAME</a>, <a class="el" href="mqtt__connector_8h_source.html#l00157">MAX_NUM_CONNECT_RETRIES</a>, <a class="el" href="mqtt__connector_8h_source.html#l00284">metricsInterval</a>, <a class="el" href="mqtt__connector_8h_source.html#l00218">myTimer</a>, <a class="el" href="mqtt__connector_8h_source.html#l00283">numConnectRetries</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, <a class="el" href="timer_8cpp_source.html#l00069">Timer::start()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00148">THINGSBOARD_MQTT_HOSTNAME</a>, and <a class="el" href="classcertmgr.html#af0654790e06b5ac06e0f356de34ed4e6">certmgr::writeBrokerCfg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00520">abort()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00160">CONNECT_RETRY_DURATION</a>, <a class="el" href="mqtt__connector_8h_source.html#l00236">device_id</a>, <a class="el" href="certmgr_8h_source.html#l00057">eBroker_JOVIA</a>, <a class="el" href="certmgr_8h_source.html#l00058">eBroker_THINGSBOARD</a>, <a class="el" href="classcertmgr.html#af5293bd514ca5d83c32a243953e61b1a">certmgr::getCurrentBroker()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00238">host_name</a>, <a class="el" href="classcertmgr.html#acc45f4d4d5957998c083aac888aa8050">certmgr::inst()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00142">JOVIA_MQTT_HOSTNAME</a>, <a class="el" href="mqtt__connector_8h_source.html#l00157">MAX_NUM_CONNECT_RETRIES</a>, <a class="el" href="mqtt__connector_8h_source.html#l00284">metricsInterval</a>, <a class="el" href="mqtt__connector_8h_source.html#l00218">myTimer</a>, <a class="el" href="mqtt__connector_8h_source.html#l00283">numConnectRetries</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, <a class="el" href="timer_8cpp_source.html#l00069">Timer::start()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00148">THINGSBOARD_MQTT_HOSTNAME</a>, and <a class="el" href="classcertmgr.html#af0654790e06b5ac06e0f356de34ed4e6">certmgr::writeBrokerCfg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -861,9 +867,9 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function send a disconnect request to the broker by calling function mqtt_helper_disconnect provided by nRF IoT library. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00506">506</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00507">507</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -895,9 +901,9 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>To abort the MQTT connection the function send a disconnect request to the broker by calling function mqtt_helper_disconnect provided by nRF IoT library. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00519">519</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00520">520</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -949,11 +955,11 @@ Here is the caller graph for this function:</div>
 <p>The function copy topic, payload and status information in a MQTT message of type struct mqtt_publish_param, which is provided by Zephyr MQTT Client library API. Afterwards it publish the topic by calling function mqtt_helper_publish provided by nRF IoT library. In case of an error a debug message at warning level will be printed. <br  />
  The MQTT helper functions are implemented on top of the Zephyr library API. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00336">336</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00337">337</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00281">last_msg_id</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00662">HandleNewConfiguration()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00697">PublishData()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00722">PublishResponse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00663">HandleNewConfiguration()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00698">PublishData()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00723">PublishResponse()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1002,11 +1008,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function read the device id (the modem's IMEI) in a buffer by calling function hw_id_get provided by nRF library API and store it in private member variable device_id. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00429">429</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00430">430</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00119">DEV_ID_LEN</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00236">device_id</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1053,11 +1059,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>The function is called when MQTT connection ackknowledge packet has been received from the broker. In case of an connection error the return_code is unequal to 0 and the function returns immediately. In case connection is established the MQTT connector request a subscription of command topic by calling member function cmd_subscribe and of configuration topic by calling member function config_subscribe. Finally a message type to eMqttConnected will be send to its own (MQTT connector's) mailbox by call of function SendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00087">87</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00088">88</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00393">cmd_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00417">config_subscribe()</a>, <a class="el" href="mpelem_8h_source.html#l00052">eMqttConnected</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00394">cmd_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00418">config_subscribe()</a>, <a class="el" href="mpelem_8h_source.html#l00052">eMqttConnected</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1118,11 +1124,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function is called when MQTT disconnect indication packet has been received from the broker. It send a message of type eMqttDisconnected to its own (MQTT connector's) mailbox by call of function SendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00112">112</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00113">113</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mpelem_8h_source.html#l00053">eMqttDisconnected</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1201,11 +1207,11 @@ In case the string fw_version is found in the payload of topic /device/{device_i
  In case command is RESET a reset will be performed by calling function performSwReset provided by class <a class="el" href="class_reset_ctrl.html" title="Reset Control class derived from task base class.">ResetCtrl</a>. <br  />
  In case command is CFG_FACTORY_DEFAULT a message of type eFactoryDefault will be send to the MQTT Connector mailbox. In case command is COLDSTART a message of type eColdStartReq will be send to the MQTT Connector mailbox. In case command is BOOST_ON a message of type eBoostOnReq will be send to the MQTT Connector mailbox. In case command is BOOST_OFF a message of type eBoostOffReq will be send to the MQTT Connector mailbox. In case command is FS_ERASE a message of type eFsErase will be send to the MQTT Connector mailbox. In case command is FS_STAT a message of type eFsStatus will be send to the MQTT Connector mailbox. In case command is DISABLE_ADXL a message of type eDisableADXL will be send to the MQTT Connector mailbox. In case command is ENABLE_ADXL a message of type eEnableADXL will be send to the MQTT Connector mailbox. In case command is GET_CONFIG a message of type eGetConfig will be send to the MQTT Connector mailbox. In case command is SEND_PUBLIC_KEY a message of type eKeyTransferReq will be send to the MQTT Connector mailbox. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00163">163</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00164">164</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mpelem_8h_source.html#l00144">eCertJovia1</a>, <a class="el" href="mpelem_8h_source.html#l00145">eCertJovia2</a>, <a class="el" href="mpelem_8h_source.html#l00146">eCertJoviaKey</a>, <a class="el" href="mpelem_8h_source.html#l00147">eCertThingsboard1</a>, <a class="el" href="mpelem_8h_source.html#l00148">eCertThingsboard2</a>, <a class="el" href="mpelem_8h_source.html#l00149">eCertThingsboardKey</a>, <a class="el" href="mpelem_8h_source.html#l00139">eColdStartReq</a>, <a class="el" href="mpelem_8h_source.html#l00142">eConnectJovia</a>, <a class="el" href="mpelem_8h_source.html#l00143">eConnectThingsboard</a>, <a class="el" href="mpelem_8h_source.html#l00152">eDisableADXL</a>, <a class="el" href="mpelem_8h_source.html#l00153">eEnableADXL</a>, <a class="el" href="mpelem_8h_source.html#l00138">eFactoryDefault</a>, <a class="el" href="mpelem_8h_source.html#l00150">eFsErase</a>, <a class="el" href="mpelem_8h_source.html#l00151">eFsStatus</a>, <a class="el" href="mpelem_8h_source.html#l00097">eFwInfo</a>, <a class="el" href="mpelem_8h_source.html#l00154">eGetConfig</a>, <a class="el" href="mpelem_8h_source.html#l00116">eJsonConfig</a>, <a class="el" href="mpelem_8h_source.html#l00137">eKeyTransferReq</a>, <a class="el" href="mpelem_8h_source.html#l00090">eOtaStart</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1281,11 +1287,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>The function is called when MQTT subscribe ackknowledge packet has been received from the broker. This message will be ignored, only a debug message at info level will be printed in case result signal success, a debug message at error level will be printed in case result signal failure and a debug message at warning level will be printed in case of unknown topic. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00312">312</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00313">313</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00164">SUBSCRIBE_TOPIC_ID</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1336,9 +1342,9 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function is called when MQTT publish ackknowledge packet has been received from the broker. This message will be ignored, only a debug message at info level will be printed. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00296">296</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00297">297</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1385,11 +1391,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>The function copy topic and length in structure of type mqtt_topic, and put these in a structure of type mqtt_subscription_list together with the topic ID. Both structures are provided by Zephyr MQTT Client library API. Afterwards it send the subscribe request with the subscription list to the broker by calling function mqtt_helper_subscribe provided by nRF IoT library. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00370">370</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00371">371</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00164">SUBSCRIBE_TOPIC_ID</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00393">cmd_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00417">config_subscribe()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00405">ota_subscribe()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00394">cmd_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00418">config_subscribe()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00406">ota_subscribe()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1433,11 +1439,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function call private member function subscribe to subscribe to the command topic. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00393">393</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00394">394</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00370">subscribe()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00371">subscribe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00087">on_connack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00088">on_connack()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1487,11 +1493,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function call private member function subscribe to subscribe to the over the air update (OTA) topic. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00405">405</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00406">406</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00261">ota_topic</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00370">subscribe()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00261">ota_topic</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00371">subscribe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1541,11 +1547,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>The function call private member function subscribe to subscribe to the configuration topic. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00417">417</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00418">418</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00271">config_topic</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00370">subscribe()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00271">config_topic</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00371">subscribe()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00087">on_connack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00088">on_connack()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1613,11 +1619,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>The function copy the data in parameter pPayload to topic payload structure in variable msg, initialize the topic t with the topic of parameter pTopic and publish the topic by call of member function publish. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00697">697</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00698">698</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00336">publish()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00337">publish()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00810">PublishDlResult()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00811">PublishDlResult()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1692,11 +1698,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>The function copy the data in parameter pPayload to topic payload structure in variable msg, initialize the string target with the topic of parameter pTopic, append the response string "/accepted" or "/rejected" and copy the final string target in topic structure t. Finally it publish the topic by call of member function publish. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00722">722</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00723">723</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00336">publish()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00337">publish()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00762">PublishRejectedResponse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00763">PublishRejectedResponse()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1776,11 +1782,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishResponse the function publishs a accepted response to the MQTT broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00747">747</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00748">748</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00722">PublishResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00723">PublishResponse()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00890">HandleBoostOffReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00870">HandleBoostOnReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00850">HandleColdStartReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00933">HandleDisableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00954">HandleEnableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00828">HandleFactoryDefault()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00912">HandleFsErase()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00992">HandleFsStatus()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00975">HandleGetConfig()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00778">PublishAcceptedResponse()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00891">HandleBoostOffReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00871">HandleBoostOnReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00851">HandleColdStartReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00934">HandleDisableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00955">HandleEnableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00829">HandleFactoryDefault()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00913">HandleFsErase()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00993">HandleFsStatus()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00976">HandleGetConfig()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00779">PublishAcceptedResponse()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1858,9 +1864,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response to the MQTT broker with the data of the received message pElem in the payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00778">778</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00779">779</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1921,11 +1927,11 @@ Here is the call graph for this function:</div>
 </dl>
 <p>By call of private member function PublishResponse the function publishs a rejected response to the MQTT broker. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00762">762</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00763">763</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00722">PublishResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8cpp_source.html#l00723">PublishResponse()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00794">PublishRejectedResponse()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00795">PublishRejectedResponse()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1994,9 +2000,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishRejectedResponse the function publishs a rejected response to the MQTT broker with the data of the received message pElem in the payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00794">794</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00795">795</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00762">PublishRejectedResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00763">PublishRejectedResponse()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2057,11 +2063,11 @@ Here is the call graph for this function:</div>
 </dl>
 <p>By call of private member function PublishData the function publishs a download finished indication to the MQTT broker with the data of the received message pElem in the payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00810">810</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00811">811</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00697">PublishData()</a>.</p>
+<p class="reference">References <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00698">PublishData()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2119,11 +2125,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>The function copy the message payload of pElem to topic payload structure, initialize the topic with the config topic and extract the JSON configuration string in variable rx. Afterwards the function checks if the configuration is valid by calling method isValid provided by the <a class="el" href="class_config.html" title="Configuration class implemented according to C++ singleton design pattern.">Config</a> class. If configuration is valid, the topic will be enhanced with string "/accepted" and published by call of the member function publish. Afterwards configuration will be stored in file system by calling function saveToFile also provided by <a class="el" href="class_config.html" title="Configuration class implemented according to C++ singleton design pattern.">Config</a> class, before a reset is performed by calling calling function performSwReset provided by class <a class="el" href="class_reset_ctrl.html" title="Reset Control class derived from task base class.">ResetCtrl</a>. If configuration is invalid, the topic will be enhanced with string "/rejected" and published by call of the member function publish. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00662">662</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00663">663</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="config_8cpp_source.html#l01111">Config::Autocorrection()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00271">config_topic</a>, <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00336">publish()</a>, <a class="el" href="config_8cpp_source.html#l00236">Config::saveToFile()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
+<p class="reference">References <a class="el" href="config_8cpp_source.html#l01111">Config::Autocorrection()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00271">config_topic</a>, <a class="el" href="mpelem_8cpp_source.html#l00043">PoolElem::getBuffer()</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00337">publish()</a>, <a class="el" href="config_8cpp_source.html#l00236">Config::saveToFile()</a>, <a class="el" href="mqtt__connector_8h_source.html#l00167">payload::string</a>, and <a class="el" href="mqtt__connector_8h_source.html#l00171">topic::string</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2187,11 +2193,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it deletes all files from flash file system by calling the functions deleteConfigFile and deleteKeyFiles. Finally performs a reset by calling function performSwReset provided by class <a class="el" href="class_reset_ctrl.html" title="Reset Control class derived from task base class.">ResetCtrl</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00828">828</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00829">829</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="config_8cpp_source.html#l00255">Config::deleteConfigFile()</a>, <a class="el" href="keygen_8cpp_source.html#l00350">KeyGen::deleteKeyFiles()</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, <a class="el" href="keygen_8cpp_source.html#l00183">KeyGen::inst()</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="config_8cpp_source.html#l00255">Config::deleteConfigFile()</a>, <a class="el" href="keygen_8cpp_source.html#l00350">KeyGen::deleteKeyFiles()</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, <a class="el" href="keygen_8cpp_source.html#l00183">KeyGen::inst()</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2256,11 +2262,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it send a message of type eColdStartReq to the reset control task by calling function sendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00850">850</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00851">851</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00139">eColdStartReq</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00139">eColdStartReq</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2327,11 +2333,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it send a message of type eBoostOnReq to the boost converter task by calling function sendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00870">870</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00871">871</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2398,11 +2404,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it send a message of type eBoostOffReq to the boost converter task by calling function sendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00890">890</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00891">891</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2469,11 +2475,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it unmount the files system and delete the complete content by calling the functions unmount and eraseFs provided by class <a class="el" href="class_flash_f_s.html" title="Represents the FlashFS file system for embedded systems with limited resources.">FlashFS</a>. Finally it performs a reset by calling function performSwReset provided by class <a class="el" href="class_reset_ctrl.html" title="Reset Control class derived from task base class.">ResetCtrl</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00912">912</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00913">913</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="flashfs_8cpp_source.html#l00144">FlashFS::eraseFs()</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="flashfs_8cpp_source.html#l00179">FlashFS::unmount()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="flashfs_8cpp_source.html#l00144">FlashFS::eraseFs()</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, <a class="el" href="reset__ctrl_8cpp_source.html#l00169">ResetCtrl::performSwReset()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="flashfs_8cpp_source.html#l00179">FlashFS::unmount()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2535,11 +2541,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the file system status data in JSON format in the payload. File system status data will be retrieved by call of function getConfigJson provided by class <a class="el" href="class_flash_f_s.html" title="Represents the FlashFS file system for embedded systems with limited resources.">FlashFS</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00992">992</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00993">993</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2598,11 +2604,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it send a message of type eDisableADXL to the ADXL37x task by calling function sendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00933">933</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00934">934</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00152">eDisableADXL</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00152">eDisableADXL</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2669,11 +2675,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the data of the received message pElem in the payload. Afterwards it send a message of type eEnableADXL to the ADXL37x task by calling function sendMsg provided by class <a class="el" href="class_mbox.html" title="RTOS wrapper for mailbox support.">Mbox</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00954">954</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00955">955</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00153">eEnableADXL</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="mpelem_8h_source.html#l00153">eEnableADXL</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>, and <a class="el" href="mbox_8cpp_source.html#l00154">Mbox::sendMsg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2739,11 +2745,11 @@ Here is the caller graph for this function:</div>
 </dl>
 <p>By call of private member function PublishAcceptedResponse the function publishs a accepted response for the commad topic to the MQTT broker with the configuration data in JSON format in the payload. Configuration data will be retrieved by call of function getConfigJson provided by class <a class="el" href="class_config.html" title="Configuration class implemented according to C++ singleton design pattern.">Config</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00975">975</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mqtt__connector_8cpp_source.html#l00976">976</a> of file <a class="el" href="mqtt__connector_8cpp_source.html">mqtt_connector.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00747">PublishAcceptedResponse()</a>.</p>
+<p class="reference">References <a class="el" href="mqtt__connector_8h_source.html#l00255">command_topic</a>, <a class="el" href="config_8cpp_source.html#l00074">Config::inst()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00748">PublishAcceptedResponse()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2785,7 +2791,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00217">217</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00207">main()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00636">timer1_expired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00214">main()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00637">timer1_expired()</a>.</p>
 
 </div>
 </div>
@@ -2805,7 +2811,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00218">218</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -2832,7 +2838,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00236">236</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00429">getDeviceId()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00430">getDeviceId()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>.</p>
 
 </div>
 </div>
@@ -2860,7 +2866,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00238">238</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>.</p>
 
 </div>
 </div>
@@ -2888,7 +2894,7 @@ Device publishes measurement data to platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00242">242</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -2916,7 +2922,7 @@ Device publishes internal metric information to the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00246">246</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -2944,7 +2950,7 @@ Device publishes public TLS key to the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00250">250</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -2972,7 +2978,7 @@ Device publishes public TLS key to the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00255">255</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00393">cmd_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00890">HandleBoostOffReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00870">HandleBoostOnReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00850">HandleColdStartReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00933">HandleDisableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00954">HandleEnableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00828">HandleFactoryDefault()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00912">HandleFsErase()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00992">HandleFsStatus()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00975">HandleGetConfig()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00394">cmd_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00891">HandleBoostOffReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00871">HandleBoostOnReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00851">HandleColdStartReq()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00934">HandleDisableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00955">HandleEnableADXL()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00829">HandleFactoryDefault()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00913">HandleFsErase()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00993">HandleFsStatus()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00976">HandleGetConfig()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -3000,7 +3006,7 @@ Device receives OTA update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00261">261</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00405">ota_subscribe()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00406">ota_subscribe()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -3028,7 +3034,7 @@ Device receives OTA update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00267">267</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -3056,7 +3062,7 @@ Device receives configuration update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00271">271</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00417">config_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00662">HandleNewConfiguration()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00418">config_subscribe()</a>, <a class="el" href="mqtt__connector_8cpp_source.html#l00663">HandleNewConfiguration()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>.</p>
 
 </div>
 </div>
@@ -3083,7 +3089,7 @@ Device receives configuration update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00276">276</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -3110,7 +3116,7 @@ Device receives configuration update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00278">278</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01368">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l01369">task()</a>.</p>
 
 </div>
 </div>
@@ -3138,7 +3144,7 @@ Device receives configuration update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00281">281</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00336">publish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00337">publish()</a>.</p>
 
 </div>
 </div>
@@ -3166,7 +3172,7 @@ Device receives configuration update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00283">283</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00535">MqttConnector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00536">MqttConnector()</a>.</p>
 
 </div>
 </div>
@@ -3194,7 +3200,7 @@ Device receives configuration update information from the platform. </p>
 
 <p class="definition">Definition at line <a class="el" href="mqtt__connector_8h_source.html#l00284">284</a> of file <a class="el" href="mqtt__connector_8h_source.html">mqtt_connector.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00603">configure()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00449">connect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mqtt__connector_8cpp_source.html#l00604">configure()</a>, and <a class="el" href="mqtt__connector_8cpp_source.html#l00450">connect()</a>.</p>
 
 </div>
 </div>

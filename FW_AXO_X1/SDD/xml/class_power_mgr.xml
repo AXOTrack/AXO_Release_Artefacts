@@ -90,7 +90,7 @@
         <referencedby refid="class_power_mgr_x1_1a280773fc9201606b6ad92dd6c2ca3b46" compoundref="power__mgr__x1_8cpp" startline="149" endline="154">PowerMgrX1::AdxlWakeupTimer_expired</referencedby>
         <referencedby refid="class_power_mgr_x1_1afaa90604923c6189d35207509fb4900f" compoundref="power__mgr__x1_8cpp" startline="86" endline="91">PowerMgrX1::BoostCtrlTimer_expired</referencedby>
         <referencedby refid="class_power_mgr_x1_1ab00563fad1160d3df8c36aec60f9852a" compoundref="power__mgr__x1_8cpp" startline="117" endline="123">PowerMgrX1::LteStartDelayTimer_expired</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
         <referencedby refid="class_power_mgr_1a37a00b048c70c95ead012eb228161763" compoundref="power__mgr_8cpp" startline="133" endline="138">MetricsTxTimer_expired</referencedby>
         <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr</referencedby>
         <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">task</referencedby>
@@ -353,7 +353,7 @@ The constructor updates boot count by calling the getter function of class <ref 
         <references refid="class_power_mgr_1abb9b201b4ef3672203b0161c7f257234" compoundref="power__mgr_8h" startline="97">metricsTmo</references>
         <references refid="class_power_mgr_1adaa1c51d754e93c051c8d22075bee232" compoundref="power__mgr_8h" startline="96">MetricsTxTimer</references>
         <references refid="class_timer_1a0c4565c97488da56e47736f7b693407b" compoundref="timer_8cpp" startline="126" endline="129">Timer::reconfigure</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_power_mgr_1a37a00b048c70c95ead012eb228161763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

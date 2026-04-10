@@ -400,7 +400,7 @@ The function enter a loop over the maximum number of ADC channels and if channel
         <location file="drv/adc/adconverter.h" line="98" column="10" bodyfile="drv/adc/adconverter.cpp" bodystart="322" bodyend="333"/>
         <references refid="struct_a_d_converter_1a73cbe076bf37958ecf34560afe3484ad" compoundref="adconverter_8h" startline="106">adc_listeners</references>
         <referencedby refid="struct_a_d_converter_1aef4f85575fc282314951dc75e1d4debd" compoundref="adconverter_8cpp" startline="292" endline="306">autoSample</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">

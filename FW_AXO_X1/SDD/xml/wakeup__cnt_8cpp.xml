@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wakeup__cnt_8cpp" kind="file" language="C++">
+    <compoundname>wakeup_cnt.cpp</compoundname>
+    <includes refid="wakeup__cnt_8h" local="yes">pm/wakeup_cnt.h</includes>
+    <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/logging/log.h</includes>
+    <includes refid="debug_8h" local="yes">./debug.h</includes>
+    <includes refid="flashfs_8h" local="yes">fs/flashfs.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>zephyr/fs/fs.h</label>
+      </node>
+      <node id="4">
+        <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="5">
+        <label>./debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="9">
+        <label>zephyr/storage/flash_map.h</label>
+      </node>
+      <node id="6">
+        <label>fs/flashfs.h</label>
+        <link refid="flashfs_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pm/wakeup_cnt.cpp</label>
+        <link refid="wakeup__cnt_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>zephyr/fs/littlefs.h</label>
+      </node>
+      <node id="2">
+        <label>pm/wakeup_cnt.h</label>
+        <link refid="wakeup__cnt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>zephyr/kernel.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="wakeup__cnt_8cpp_1a5981d35238f477c73ef469462cee9c64" prot="public" static="no">
+        <type><ref refid="class_flash_f_s" kindref="compound">FlashFS</ref></type>
+        <definition>using fs =  FlashFS</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/wakeup_cnt.cpp" line="33" column="1" bodyfile="pm/wakeup_cnt.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wakeup__cnt_8cpp_1a30f3dd2b395087fa32c2d046a7a9bb64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LOG_MODULE_REGISTER</definition>
+        <argsstring>(wakeupcnt, COMMON_DEBUG_LEVEL_INF)</argsstring>
+        <name>LOG_MODULE_REGISTER</name>
+        <param>
+          <type>wakeupcnt</type>
+        </param>
+        <param>
+          <type><ref refid="debug_8h_1aaf66514b611872cdbfa582f14c9002d2" kindref="member">COMMON_DEBUG_LEVEL_INF</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="pm/wakeup_cnt.cpp" line="31" column="1" declfile="pm/wakeup_cnt.cpp" declline="31" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Implementation of wakeup count class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Project </title><para>AXO Track Firmware 2023</para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2023 AXO Track GmbH, Berlin. All rights reserved.</para>
+</simplesect>
+<simplesect kind="author"><para>AXO Track GmbH, Berlin (Germany)</para>
+</simplesect>
+<simplesect kind="par"><title>Detailed Description </title><para>See description in <ref refid="wakeup__cnt_8h_1wakeup_cnt" kindref="member">wakeup_cnt</ref> header file</para>
+</simplesect>
+<simplesect kind="remark"><para>This source code is confidential and proprietary information of AXO Track GmbH, Berlin. You may not disclose, copy, or distribute this source code or any part thereof without the explicit permission of AXO Track GmbH, Berlin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wakeup__cnt_8h" kindref="compound">pm/wakeup_cnt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/logging/log.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="debug_8h" kindref="compound">./debug.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from<sp/>common<sp/>folder</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIG_UNIT_TEST_PM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="flashfs_8h" kindref="compound">fs/flashfs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;../../tests/pm/src/stubs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="wakeup__cnt_8cpp_1a30f3dd2b395087fa32c2d046a7a9bb64" refkind="member"><highlight class="normal"><ref refid="wakeup__cnt_8cpp_1a30f3dd2b395087fa32c2d046a7a9bb64" kindref="member">LOG_MODULE_REGISTER</ref>(wakeupcnt,<sp/><ref refid="debug_8h_1aaf66514b611872cdbfa582f14c9002d2" kindref="member">COMMON_DEBUG_LEVEL_INF</ref>);<sp/></highlight><highlight class="comment">//COMMON_DEFAULT_DEBUG_LEVEL);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="wakeup__cnt_8cpp_1a5981d35238f477c73ef469462cee9c64" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="class_flash_f_s" kindref="compound">fs</ref><sp/>=<sp/><ref refid="class_flash_f_s" kindref="compound">FlashFS</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" refkind="member"><highlight class="normal"><ref refid="class_wakeup_cnt" kindref="compound">WakeupCnt</ref>*<sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;WakeupCnt::inst&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt" kindref="compound">WakeupCnt</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;myInstance;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_wakeup_cnt_1a3576c0de8015d0063cce0ae347b63299" refkind="member"><highlight class="normal"><ref refid="class_wakeup_cnt_1a3576c0de8015d0063cce0ae347b63299" kindref="member">WakeupCnt::WakeupCnt</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;WakeupCnt::WakeupCnt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">WakeupCnt::init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;WakeupCnt::init&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fs_file_t*<sp/>f;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>ssize_t<sp/>ret;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret2;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>inbuf[32];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().file_exists(<ref refid="wakeup__cnt_8h_1a70b7e90b21f831378f9167a8cd6ee432" kindref="member">WAKEUP_CNT_FILENAME</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f<sp/>=<sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" kindref="member">file_open</ref>(<ref refid="wakeup__cnt_8h_1a70b7e90b21f831378f9167a8cd6ee432" kindref="member">WAKEUP_CNT_FILENAME</ref>,<sp/>FS_O_READ);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" kindref="member">file_read</ref>(f,<sp/>inbuf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(inbuf));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(ret<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sscanf(inbuf,<sp/></highlight><highlight class="stringliteral">&quot;%d,%d&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>,<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret2<sp/>=<sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" kindref="member">file_close</ref>(f);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__ASSERT_NO_MSG(ret2<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_WRN(</highlight><highlight class="stringliteral">&quot;sleepExitCount<sp/>=<sp/>%d,publishMeasCount<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>,<ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;Wakeup<sp/>Cnt<sp/>File<sp/>not<sp/>existent,<sp/>set<sp/>counter<sp/>=<sp/>0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_wakeup_cnt_1aa064564f9ed7e20fae3600511b1d9008" refkind="member"><highlight class="normal"><ref refid="class_wakeup_cnt_1aa064564f9ed7e20fae3600511b1d9008" kindref="member">WakeupCnt::~WakeupCnt</ref>()<sp/>{<sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;WakeupCnt::~WakeupCnt<sp/>this:<sp/>%p&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*int32_t<sp/>WakeupCnt::get()<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>LOG_INF(&quot;%s&quot;,<sp/>&quot;WakeupCnt::get&quot;);</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>boot_count;</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" kindref="member">WakeupCnt::update</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;WakeupCnt::update&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>inbuf[32];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fs_file_t*<sp/>f<sp/>=<sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" kindref="member">file_open</ref>(<ref refid="wakeup__cnt_8h_1a70b7e90b21f831378f9167a8cd6ee432" kindref="member">WAKEUP_CNT_FILENAME</ref>,<sp/>FS_O_CREATE<sp/>|<sp/>FS_O_RDWR);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(inbuf,<sp/></highlight><highlight class="stringliteral">&quot;%d,%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>,<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>save<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" kindref="member">file_seek</ref>(f,<sp/>0,<sp/>FS_SEEK_SET);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" kindref="member">file_write</ref>(f,<sp/>inbuf,<sp/>strlen(inbuf));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" kindref="member">file_sync</ref>(f);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" kindref="member">fs::inst</ref>().<ref refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" kindref="member">file_close</ref>(f);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" kindref="member">WakeupCnt::incSleepExitCount</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>++;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;incSleepExitCount<sp/>cnt<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_wakeup_cnt_1a82b7e4c71c77f5941dd5e861dbb7e952" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a82b7e4c71c77f5941dd5e861dbb7e952" kindref="member">WakeupCnt::incPublishMeasCount</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>++;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;incPublishMeasCount<sp/>cnt<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="class_wakeup_cnt_1a197c0e9173d599ab4114f097f5b04d63" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="class_wakeup_cnt_1a197c0e9173d599ab4114f097f5b04d63" kindref="member">WakeupCnt::getSleepExitCount</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="class_wakeup_cnt_1acf479b57f511506da78f20d8c8ab9079" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="class_wakeup_cnt_1acf479b57f511506da78f20d8c8ab9079" kindref="member">WakeupCnt::getPublishMeasCount</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_wakeup_cnt_1a2171e227f463bfba0229b1a9f8bb0bdc" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="class_wakeup_cnt_1a2171e227f463bfba0229b1a9f8bb0bdc" kindref="member">WakeupCnt::getLteMeasWakeupCnt</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_wakeup_cnt_1a2bcb344222793bdeca2e5289a3bfe2a6" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="class_wakeup_cnt_1a2bcb344222793bdeca2e5289a3bfe2a6" kindref="member">WakeupCnt::getLteWakeupCnt</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_wakeup_cnt_1a2364d73972ad6e47fbad0d1d64ad5ab4" kindref="member">sleepExitCount</ref><sp/>-<sp/><ref refid="class_wakeup_cnt_1a8eb69efdb808b522be56211d8dfc55d9" kindref="member">publishMeasCount</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_INF(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;hello<sp/>from<sp/>main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;<ref refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG_ERR(</highlight><highlight class="stringliteral">&quot;sleepExitCount<sp/>=<sp/>%d,<sp/>publishMeasCount<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;getSleepExitCount(),</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;getPublishMeasCount());</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;<ref refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" kindref="member">incSleepExitCount</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;<ref refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" kindref="member">incSleepExitCount</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;<ref refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" kindref="member">incSleepExitCount</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" kindref="member">WakeupCnt::inst</ref>()-&gt;<ref refid="class_wakeup_cnt_1a82b7e4c71c77f5941dd5e861dbb7e952" kindref="member">incPublishMeasCount</ref>();<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_DBG(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;main:<sp/>sleeping\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_sleep(K_SECONDS(10));</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="pm/wakeup_cnt.cpp"/>
+  </compounddef>
+</doxygen>

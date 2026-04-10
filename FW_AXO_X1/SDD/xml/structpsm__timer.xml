@@ -17,7 +17,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="modem/lte_monitor.h" line="90" column="13" bodyfile="modem/lte_monitor.h" bodystart="90" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">MetricsBuilder::addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="406" endline="414">MetricsBuilder::addModemPsmAct</referencedby>
         <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">LteMonitor::psm_read</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structpsm__timer_1a26e88e45e41b26bf432fd5fa944ee572" prot="public" static="no" mutable="no">
@@ -33,7 +33,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="modem/lte_monitor.h" line="93" column="13" bodyfile="modem/lte_monitor.h" bodystart="93" bodyend="-1"/>
-        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="405" endline="413">MetricsBuilder::addModemPsmAct</referencedby>
+        <referencedby refid="class_metrics_builder_1a6357149b49be40b47a0d24b5f7971fd3" compoundref="metric_8cpp" startline="406" endline="414">MetricsBuilder::addModemPsmAct</referencedby>
         <referencedby refid="class_lte_monitor_1a1ba7ffcf69f99731b387ae23c6a14b33" compoundref="lte__monitor_8cpp" startline="427" endline="464">LteMonitor::psm_read</referencedby>
       </memberdef>
       </sectiondef>

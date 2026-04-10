@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('classspimram.html',''); initResizable(
 <div class="textblock"><p>SPI MRAM class implemented according to C++ singleton design pattern. </p>
 <hr  />
 <dl class="section user"><dt>Detailed Description </dt><dd>The SPI MRAM class handle the storage of the acceleration raw data in MRAM. It provides methods to initialize and erase MRAM, to read and write the data, to push MRAM into power saving mode or release from it, to dump the data and to read and ship the devcie ID. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system.</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mram_8h_source.html#l00053">53</a> of file <a class="el" href="mram_8h_source.html">mram.h</a>.</p>
 </div><div class="dynheader">
@@ -1290,14 +1290,14 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>remove </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>remove </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td>unused </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>remove</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>remove</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>returns return value of method spi_transceive (0 no error, otherwise error code)</dd></dl>
 <p>Function initializes transmit and receive buffer, set the read Device ID OP code command CMD_RDID and read the device ID by calling function spi_transceive. See MRAM data sheet, page 12ff for OP code commands and page 22 for device ID. </p>
 
@@ -1873,14 +1873,14 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>remove </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>remove </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td>UNUSED </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>remove</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>remove</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>returns return 0 on success, otherwise error code</dd></dl>
 <p>Function initializes transmit and receive buffer, set the read read status register ID OP code command CMD_RDSR and read the status register by calling function spi_transceive. See MRAM data sheet, page 12ff for OP code commands and page 15 for status register. </p>
 
@@ -1958,14 +1958,14 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>remove </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>remove </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">len</td><td>UNUSED </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>remove</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>remove</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>returns return 0 on success, otherwise error code</dd></dl>
 <p>Function initializes transmit and receive buffer, set the read read configuration register 1 ID OP code command CMD_RDC1 and read the configuration register 1 by calling function spi_transceive. See MRAM data sheet, page 12ff for OP code commands and page 17 for configuration register 1. </p>
 

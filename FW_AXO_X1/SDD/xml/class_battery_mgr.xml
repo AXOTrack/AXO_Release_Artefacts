@@ -19,7 +19,7 @@
         </inbodydescription>
         <location file="drv/adc/batt_mgr.h" line="70" column="10" bodyfile="drv/adc/batt_mgr.h" bodystart="70" bodyend="-1"/>
         <referencedby refid="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" compoundref="batt__mgr_8cpp" startline="46" endline="70">BatteryMgr</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
         <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">task</referencedby>
       </memberdef>
       </sectiondef>
@@ -170,7 +170,7 @@ The constructor allocate and register the mailbox of the battery manager task. F
         </inbodydescription>
         <location file="drv/adc/batt_mgr.h" line="71" column="13" bodyfile="drv/adc/batt_mgr.h" bodystart="71" bodyend="71"/>
         <references refid="class_battery_mgr_1ab50eaa2fd38151dec01ba21814e28d6a" compoundref="batt__mgr_8h" startline="76">adcChannels</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_battery_mgr_1a116f43968e6eaf11a0da1792b44a589c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

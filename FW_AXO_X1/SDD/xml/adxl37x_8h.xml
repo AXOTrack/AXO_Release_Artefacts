@@ -5,6 +5,8 @@
     <includes local="no">date_time.h</includes>
     <includes local="no">zephyr/drivers/sensor.h</includes>
     <includes local="no">zephyr/kernel.h</includes>
+    <includes local="no">zephyr/drivers/clock_control.h</includes>
+    <includes local="no">zephyr/drivers/clock_control/nrf_clock_control.h</includes>
     <includes refid="task_8h" local="yes">rtos/task.h</includes>
     <includes refid="hw__metrics_8h" local="yes">data/hw_metrics.h</includes>
     <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
@@ -15,20 +17,20 @@
     <includedby refid="adxl37x_8cpp" local="yes">drv/spi/adxl37x.cpp</includedby>
     <includedby refid="http__connector_8cpp" local="yes">net/http_connector.cpp</includedby>
     <incdepgraph>
-      <node id="11">
+      <node id="13">
         <label>rtos/mpelem.h</label>
         <link refid="mpelem_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="9">
         <label>stdlib.h</label>
       </node>
-      <node id="8">
+      <node id="10">
         <label>zephyr/sys/__assert.h</label>
       </node>
       <node id="1">
@@ -42,49 +44,59 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>date_time.h</label>
       </node>
+      <node id="5">
+        <label>zephyr/drivers/clock_control.h</label>
+      </node>
+      <node id="6">
+        <label>zephyr/drivers/clock_control/nrf_clock_control.h</label>
+      </node>
       <node id="3">
         <label>zephyr/drivers/sensor.h</label>
       </node>
-      <node id="10">
+      <node id="12">
         <label>zephyr/sys/ring_buffer.h</label>
       </node>
-      <node id="9">
+      <node id="11">
         <label>data/hw_metrics.h</label>
         <link refid="hw__metrics_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>rtos/task.h</label>
-        <link refid="task_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="7">
+        <label>rtos/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>zephyr/kernel.h</label>
       </node>
-      <node id="6">
+      <node id="8">
         <label>stdio.h</label>
       </node>
-      <node id="12">
+      <node id="14">
         <label>zephyr/arch/cpu.h</label>
       </node>
     </incdepgraph>
@@ -170,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="78" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="78" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="80" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1a67f53a310a1a01c8ae261196215b866e" prot="public" static="no">
         <name>ADXL372_Z_DATA_L</name>
@@ -181,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="79" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="79" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="81" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1af2cb1e64760e8e3a500def60b0da8c04" prot="public" static="no">
         <name>ADXL372_POWER_CTL</name>
@@ -192,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="80" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="80" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="82" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1af8180c0320437a0ede6716405d2ecb51" prot="public" static="no">
         <name>ADXL372_SELF_TEST</name>
@@ -203,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="81" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="81" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="83" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1a1cb97fbedad30087698b64d9753bb953" prot="public" static="no">
         <name>ADXL372_RESET</name>
@@ -214,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="82" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="82" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="84" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1a44bb215b609902b3a3e7d973feb96e17" prot="public" static="no">
         <name>ADXL372_RESET_CODE</name>
@@ -225,7 +237,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="85" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="85" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="87" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1af1eced4fc4e4015fe91a9a9456f2bb41" prot="public" static="no">
         <name>ADXL372_POWER_CTL_LPF_DIS_MODE</name>
@@ -237,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="86" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="86" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="88" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="adxl37x_8h_1ac34eaefa5dd180e851a409c757878396" prot="public" static="no">
         <name>ADXL372_POWER_CTL_MODE</name>
@@ -249,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="87" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="87" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="89" column="9" bodyfile="drv/spi/adxl37x.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -291,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="93" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="93" bodyend="98"/>
+        <location file="drv/spi/adxl37x.h" line="95" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="95" bodyend="100"/>
       </memberdef>
       <memberdef kind="enum" id="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" prot="public" static="no" strong="no">
         <type></type>
@@ -331,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="112" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="112" bodyend="117"/>
+        <location file="drv/spi/adxl37x.h" line="114" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="114" bodyend="119"/>
       </memberdef>
       <memberdef kind="enum" id="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" prot="public" static="no" strong="no">
         <type></type>
@@ -399,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="121" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="121" bodyend="130"/>
+        <location file="drv/spi/adxl37x.h" line="123" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="123" bodyend="132"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -427,8 +439,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="102" column="5" declfile="drv/spi/adxl37x.h" declline="102" declcolumn="5"/>
-        <referencedby refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" compoundref="adxl37x_8cpp" startline="363" endline="401">Adxl37x::fifo_handler</referencedby>
+        <location file="drv/spi/adxl37x.h" line="104" column="5" declfile="drv/spi/adxl37x.h" declline="104" declcolumn="5"/>
+        <referencedby refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" compoundref="adxl37x_8cpp" startline="439" endline="477">Adxl37x::fifo_handler</referencedby>
       </memberdef>
       <memberdef kind="function" id="adxl37x_8h_1abb1414828e206ec4a518e630492246cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -450,8 +462,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="108" column="5" declfile="drv/spi/adxl37x.h" declline="108" declcolumn="5"/>
-        <referencedby refid="struct_adxl37x_1a7c09cf34e0f9c4d3a8e05896c4da7b1b" compoundref="adxl37x_8cpp" startline="243" endline="247">Adxl37x::setOpMode</referencedby>
+        <location file="drv/spi/adxl37x.h" line="110" column="5" declfile="drv/spi/adxl37x.h" declline="110" declcolumn="5"/>
+        <referencedby refid="struct_adxl37x_1a7c09cf34e0f9c4d3a8e05896c4da7b1b" compoundref="adxl37x_8cpp" startline="258" endline="262">Adxl37x::setOpMode</referencedby>
       </memberdef>
       <memberdef kind="function" id="adxl37x_8h_1a52de024122320d79ce41968acf571145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -481,9 +493,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="134" column="5" declfile="drv/spi/adxl37x.h" declline="134" declcolumn="5"/>
-        <referencedby refid="struct_adxl37x_1ac3697632d1d1a52014c0f19d3454bcd8" compoundref="adxl37x_8cpp" startline="213" endline="219">Adxl37x::setFifoBypass</referencedby>
-        <referencedby refid="struct_adxl37x_1a967716ed114888b1fbdbbe8061a85eaf" compoundref="adxl37x_8cpp" startline="229" endline="235">Adxl37x::setFifoOn</referencedby>
+        <location file="drv/spi/adxl37x.h" line="136" column="5" declfile="drv/spi/adxl37x.h" declline="136" declcolumn="5"/>
+        <referencedby refid="struct_adxl37x_1ac3697632d1d1a52014c0f19d3454bcd8" compoundref="adxl37x_8cpp" startline="228" endline="234">Adxl37x::setFifoBypass</referencedby>
+        <referencedby refid="struct_adxl37x_1a967716ed114888b1fbdbbe8061a85eaf" compoundref="adxl37x_8cpp" startline="244" endline="250">Adxl37x::setFifoOn</referencedby>
       </memberdef>
       <memberdef kind="function" id="adxl37x_8h_1a88ac7567f0d1464b2698eacc3a8796b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -505,8 +517,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="141" column="5" declfile="drv/spi/adxl37x.h" declline="141" declcolumn="5"/>
-        <referencedby refid="struct_adxl37x_1a53b39be4f224783448cee0a1a1cc8a13" compoundref="adxl37x_8cpp" startline="262" endline="270">Adxl37x::setExtSync</referencedby>
+        <location file="drv/spi/adxl37x.h" line="143" column="5" declfile="drv/spi/adxl37x.h" declline="143" declcolumn="5"/>
+        <referencedby refid="struct_adxl37x_1a53b39be4f224783448cee0a1a1cc8a13" compoundref="adxl37x_8cpp" startline="277" endline="285">Adxl37x::setExtSync</referencedby>
       </memberdef>
       <memberdef kind="function" id="adxl37x_8h_1a7e14ff6130a46f3997606be09e647c26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -536,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="145" column="5" declfile="drv/spi/adxl37x.h" declline="145" declcolumn="5"/>
+        <location file="drv/spi/adxl37x.h" line="147" column="5" declfile="drv/spi/adxl37x.h" declline="147" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="adxl37x_8h_1adb0737e590103789e8322ffc5a9d2d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -552,8 +564,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="148" column="6" declfile="drv/spi/adxl37x.h" declline="148" declcolumn="6"/>
-        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="179" endline="203">Adxl37x::getHwStatus</referencedby>
+        <location file="drv/spi/adxl37x.h" line="150" column="6" declfile="drv/spi/adxl37x.h" declline="150" declcolumn="6"/>
+        <referencedby refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" compoundref="adxl37x_8cpp" startline="194" endline="218">Adxl37x::getHwStatus</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -584,165 +596,170 @@
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;zephyr/drivers/sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/kernel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hw__metrics_8h" kindref="compound">data/hw_metrics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="structadxl37x__sensor__value" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl37x__sensor__value" kindref="compound">adxl37x_sensor_value</ref><sp/>{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref>*</highlight></codeline>
-<codeline lineno="53" refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" kindref="member">samples</ref>;<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="54" refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" kindref="member">cnt</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="55" refid="structadxl37x__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="structadxl37x__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" kindref="member">ts</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="structadxl372__xyz__accel__data" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref><sp/>{</highlight></codeline>
-<codeline lineno="60" refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" kindref="member">x</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="61" refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" kindref="member">y</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="62" refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" kindref="member">z</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="structadxl372__status" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__status" kindref="compound">adxl372_status</ref><sp/>{</highlight></codeline>
-<codeline lineno="67" refid="structadxl372__status_1ac9164d3f909d46687ebb4d77c92a84ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadxl372__status_1ac9164d3f909d46687ebb4d77c92a84ab" kindref="member">status1</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="68" refid="structadxl372__status_1a6e379589c894af331416b240998e78f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadxl372__status_1a6e379589c894af331416b240998e78f7" kindref="member">status2</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="69" refid="structadxl372__status_1a0e4b98ed4850ac7fb1ed7afb6df8dc0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadxl372__status_1a0e4b98ed4850ac7fb1ed7afb6df8dc0e" kindref="member">fifo_entries</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ADXL372<sp/>registers<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="adxl37x_8h_1a584904d926de1e008e27ca7b92305929" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_Z_DATA_H<sp/><sp/><sp/><sp/>0x0Cu<sp/><sp/></highlight><highlight class="comment">/*<sp/>Z-axis<sp/>acceleration<sp/>data<sp/>[11:4]<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79" refid="adxl37x_8h_1a67f53a310a1a01c8ae261196215b866e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_Z_DATA_L<sp/><sp/><sp/><sp/>0x0Du<sp/><sp/></highlight><highlight class="comment">/*<sp/>Z-axis<sp/>acceleration<sp/>data<sp/>[3:0]<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="80" refid="adxl37x_8h_1af2cb1e64760e8e3a500def60b0da8c04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_POWER_CTL<sp/><sp/><sp/>0x3Fu<sp/><sp/></highlight><highlight class="comment">/*<sp/>Power<sp/>control<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81" refid="adxl37x_8h_1af8180c0320437a0ede6716405d2ecb51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_SELF_TEST<sp/><sp/><sp/>0x40u<sp/><sp/></highlight><highlight class="comment">/*<sp/>Self<sp/>Test<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82" refid="adxl37x_8h_1a1cb97fbedad30087698b64d9753bb953" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x41u<sp/><sp/></highlight><highlight class="comment">/*<sp/>Reset<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85" refid="adxl37x_8h_1a44bb215b609902b3a3e7d973feb96e17" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_RESET_CODE<sp/><sp/>0x52u<sp/><sp/></highlight><highlight class="comment">/*<sp/>Writing<sp/>code<sp/>0x52<sp/>resets<sp/>the<sp/>device<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86" refid="adxl37x_8h_1af1eced4fc4e4015fe91a9a9456f2bb41" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_POWER_CTL_LPF_DIS_MODE(x)<sp/><sp/><sp/>(((x)<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="adxl37x_8h_1ac34eaefa5dd180e851a409c757878396" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_POWER_CTL_MODE(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((x)<sp/>&amp;<sp/>0x3)<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/clock_control.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;zephyr/drivers/clock_control/nrf_clock_control.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="task_8h" kindref="compound">rtos/task.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_UNIT_TEST_DRV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="mbox_8h" kindref="compound">rtos/mbox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">rtos/timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hw__metrics_8h" kindref="compound">data/hw_metrics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structadxl37x__sensor__value" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl37x__sensor__value" kindref="compound">adxl37x_sensor_value</ref><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref>*</highlight></codeline>
+<codeline lineno="55" refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" kindref="member">samples</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" kindref="member">cnt</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="structadxl37x__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="structadxl37x__sensor__value_1ab4cc827edc84c4ada3dc11da02f3d128" kindref="member">ts</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="structadxl372__xyz__accel__data" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref><sp/>{</highlight></codeline>
+<codeline lineno="62" refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" kindref="member">x</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" kindref="member">y</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" kindref="member">z</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structadxl372__status" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__status" kindref="compound">adxl372_status</ref><sp/>{</highlight></codeline>
+<codeline lineno="69" refid="structadxl372__status_1ac9164d3f909d46687ebb4d77c92a84ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadxl372__status_1ac9164d3f909d46687ebb4d77c92a84ab" kindref="member">status1</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structadxl372__status_1a6e379589c894af331416b240998e78f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structadxl372__status_1a6e379589c894af331416b240998e78f7" kindref="member">status2</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structadxl372__status_1a0e4b98ed4850ac7fb1ed7afb6df8dc0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structadxl372__status_1a0e4b98ed4850ac7fb1ed7afb6df8dc0e" kindref="member">fifo_entries</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ADXL372<sp/>registers<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="adxl37x_8h_1a584904d926de1e008e27ca7b92305929" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_Z_DATA_H<sp/><sp/><sp/><sp/>0x0Cu<sp/><sp/></highlight><highlight class="comment">/*<sp/>Z-axis<sp/>acceleration<sp/>data<sp/>[11:4]<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="adxl37x_8h_1a67f53a310a1a01c8ae261196215b866e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_Z_DATA_L<sp/><sp/><sp/><sp/>0x0Du<sp/><sp/></highlight><highlight class="comment">/*<sp/>Z-axis<sp/>acceleration<sp/>data<sp/>[3:0]<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="adxl37x_8h_1af2cb1e64760e8e3a500def60b0da8c04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_POWER_CTL<sp/><sp/><sp/>0x3Fu<sp/><sp/></highlight><highlight class="comment">/*<sp/>Power<sp/>control<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="adxl37x_8h_1af8180c0320437a0ede6716405d2ecb51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_SELF_TEST<sp/><sp/><sp/>0x40u<sp/><sp/></highlight><highlight class="comment">/*<sp/>Self<sp/>Test<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="adxl37x_8h_1a1cb97fbedad30087698b64d9753bb953" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x41u<sp/><sp/></highlight><highlight class="comment">/*<sp/>Reset<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="adxl37x_8h_1a44bb215b609902b3a3e7d973feb96e17" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_RESET_CODE<sp/><sp/>0x52u<sp/><sp/></highlight><highlight class="comment">/*<sp/>Writing<sp/>code<sp/>0x52<sp/>resets<sp/>the<sp/>device<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="adxl37x_8h_1af1eced4fc4e4015fe91a9a9456f2bb41" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_POWER_CTL_LPF_DIS_MODE(x)<sp/><sp/><sp/>(((x)<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="adxl37x_8h_1ac34eaefa5dd180e851a409c757878396" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL372_POWER_CTL_MODE(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((x)<sp/>&amp;<sp/>0x3)<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" kindref="member">adxl372_op_mode</ref><sp/>{</highlight></codeline>
-<codeline lineno="94" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ac563def46d13b235285f4d1034e2243c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ac563def46d13b235285f4d1034e2243c" kindref="member">ADXL372_STANDBY</ref>,</highlight></codeline>
-<codeline lineno="95" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58aea2fecdd5292324def26011b8400b57a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58aea2fecdd5292324def26011b8400b57a" kindref="member">ADXL372_WAKE_UP</ref>,</highlight></codeline>
-<codeline lineno="96" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58a62a6d78e0f184d40bc09acef92eae011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58a62a6d78e0f184d40bc09acef92eae011" kindref="member">ADXL372_INSTANT_ON</ref>,</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ab5c7dc7c896f83609fc8dc5c869be56d" kindref="member">ADXL372_FULL_BW_MEASUREMENT</ref></highlight></codeline>
-<codeline lineno="98" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ab5c7dc7c896f83609fc8dc5c869be56d" refkind="member"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="adxl37x_8h_1ac23e14111f8333a53037df128ebba6fc" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1ac23e14111f8333a53037df128ebba6fc" kindref="member">adxl372_get_fifo_xyz_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref>*<sp/>samples,</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t*<sp/>cnt);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108" refid="adxl37x_8h_1abb1414828e206ec4a518e630492246cd" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1abb1414828e206ec4a518e630492246cd" kindref="member">adxl372_set_op_mode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" kindref="member">adxl372_op_mode</ref><sp/>op_mode);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" kindref="member">adxl372_fifo_mode</ref><sp/>{</highlight></codeline>
-<codeline lineno="113" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea7534e5c50bbc8a35debf9bff43941ad1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea7534e5c50bbc8a35debf9bff43941ad1" kindref="member">ADXL372_FIFO_BYPASSED</ref>,</highlight></codeline>
-<codeline lineno="114" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31eaa8698ee4256927f22ea52f0aae8556d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31eaa8698ee4256927f22ea52f0aae8556d4" kindref="member">ADXL372_FIFO_STREAMED</ref>,</highlight></codeline>
-<codeline lineno="115" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea0464bb47eca4285457a345651d1c676f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea0464bb47eca4285457a345651d1c676f" kindref="member">ADXL372_FIFO_TRIGGERED</ref>,</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ead53049eedc590b9ae470768aa62a8c1b" kindref="member">ADXL372_FIFO_OLD_SAVED</ref></highlight></codeline>
-<codeline lineno="117" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ead53049eedc590b9ae470768aa62a8c1b" refkind="member"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" kindref="member">adxl372_fifo_format</ref><sp/>{</highlight></codeline>
-<codeline lineno="122" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da85cbc7b00987cb08839a8dd5a0a9a40b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da85cbc7b00987cb08839a8dd5a0a9a40b" kindref="member">ADXL372_XYZ_FIFO</ref>,</highlight></codeline>
-<codeline lineno="123" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da4a6b2e0914a1872168149b5d9890309f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da4a6b2e0914a1872168149b5d9890309f" kindref="member">ADXL372_X_FIFO</ref>,</highlight></codeline>
-<codeline lineno="124" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da79dcefee8436e06aa599848417b9ab48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da79dcefee8436e06aa599848417b9ab48" kindref="member">ADXL372_Y_FIFO</ref>,</highlight></codeline>
-<codeline lineno="125" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daef6c771d9c7de8296333aa7237752987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daef6c771d9c7de8296333aa7237752987" kindref="member">ADXL372_XY_FIFO</ref>,</highlight></codeline>
-<codeline lineno="126" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daa708c02692ce1db4da4ac073070c3000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daa708c02692ce1db4da4ac073070c3000" kindref="member">ADXL372_Z_FIFO</ref>,</highlight></codeline>
-<codeline lineno="127" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da629423198ea3090c8fbf924f0f81c026" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da629423198ea3090c8fbf924f0f81c026" kindref="member">ADXL372_XZ_FIFO</ref>,</highlight></codeline>
-<codeline lineno="128" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dacd96253649ce82c01623d7dc88772748" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dacd96253649ce82c01623d7dc88772748" kindref="member">ADXL372_YZ_FIFO</ref>,</highlight></codeline>
-<codeline lineno="129" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dab7b486bd3b551f56019ce2c1269fcdb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dab7b486bd3b551f56019ce2c1269fcdb0" kindref="member">ADXL372_XYZ_PEAK_FIFO</ref>,</highlight></codeline>
-<codeline lineno="130"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134" refid="adxl37x_8h_1a52de024122320d79ce41968acf571145" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a52de024122320d79ce41968acf571145" kindref="member">adxl372_configure_fifo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" kindref="member">adxl372_fifo_mode</ref><sp/>mode,</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" kindref="member">adxl372_fifo_format</ref><sp/>format,</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>fifo_samples);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141" refid="adxl37x_8h_1a88ac7567f0d1464b2698eacc3a8796b2" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a88ac7567f0d1464b2698eacc3a8796b2" kindref="member">adxl372_set_ext_sync</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145" refid="adxl37x_8h_1a7e14ff6130a46f3997606be09e647c26" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a7e14ff6130a46f3997606be09e647c26" kindref="member">adxl372_get_status</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t*<sp/>status1,</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/>status2,<sp/>uint16_t*<sp/>fifo_entries);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148" refid="adxl37x_8h_1adb0737e590103789e8322ffc5a9d2d11" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1adb0737e590103789e8322ffc5a9d2d11" kindref="member">getSelftestSuccess</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" kindref="member">adxl372_op_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="96" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ac563def46d13b235285f4d1034e2243c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ac563def46d13b235285f4d1034e2243c" kindref="member">ADXL372_STANDBY</ref>,</highlight></codeline>
+<codeline lineno="97" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58aea2fecdd5292324def26011b8400b57a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58aea2fecdd5292324def26011b8400b57a" kindref="member">ADXL372_WAKE_UP</ref>,</highlight></codeline>
+<codeline lineno="98" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58a62a6d78e0f184d40bc09acef92eae011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58a62a6d78e0f184d40bc09acef92eae011" kindref="member">ADXL372_INSTANT_ON</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ab5c7dc7c896f83609fc8dc5c869be56d" kindref="member">ADXL372_FULL_BW_MEASUREMENT</ref></highlight></codeline>
+<codeline lineno="100" refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58ab5c7dc7c896f83609fc8dc5c869be56d" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="adxl37x_8h_1ac23e14111f8333a53037df128ebba6fc" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1ac23e14111f8333a53037df128ebba6fc" kindref="member">adxl372_get_fifo_xyz_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref>*<sp/>samples,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t*<sp/>cnt);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="adxl37x_8h_1abb1414828e206ec4a518e630492246cd" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1abb1414828e206ec4a518e630492246cd" kindref="member">adxl372_set_op_mode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" kindref="member">adxl372_op_mode</ref><sp/>op_mode);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" kindref="member">adxl372_fifo_mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="115" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea7534e5c50bbc8a35debf9bff43941ad1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea7534e5c50bbc8a35debf9bff43941ad1" kindref="member">ADXL372_FIFO_BYPASSED</ref>,</highlight></codeline>
+<codeline lineno="116" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31eaa8698ee4256927f22ea52f0aae8556d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31eaa8698ee4256927f22ea52f0aae8556d4" kindref="member">ADXL372_FIFO_STREAMED</ref>,</highlight></codeline>
+<codeline lineno="117" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea0464bb47eca4285457a345651d1c676f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ea0464bb47eca4285457a345651d1c676f" kindref="member">ADXL372_FIFO_TRIGGERED</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ead53049eedc590b9ae470768aa62a8c1b" kindref="member">ADXL372_FIFO_OLD_SAVED</ref></highlight></codeline>
+<codeline lineno="119" refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31ead53049eedc590b9ae470768aa62a8c1b" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" kindref="member">adxl372_fifo_format</ref><sp/>{</highlight></codeline>
+<codeline lineno="124" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da85cbc7b00987cb08839a8dd5a0a9a40b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da85cbc7b00987cb08839a8dd5a0a9a40b" kindref="member">ADXL372_XYZ_FIFO</ref>,</highlight></codeline>
+<codeline lineno="125" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da4a6b2e0914a1872168149b5d9890309f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da4a6b2e0914a1872168149b5d9890309f" kindref="member">ADXL372_X_FIFO</ref>,</highlight></codeline>
+<codeline lineno="126" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da79dcefee8436e06aa599848417b9ab48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da79dcefee8436e06aa599848417b9ab48" kindref="member">ADXL372_Y_FIFO</ref>,</highlight></codeline>
+<codeline lineno="127" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daef6c771d9c7de8296333aa7237752987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daef6c771d9c7de8296333aa7237752987" kindref="member">ADXL372_XY_FIFO</ref>,</highlight></codeline>
+<codeline lineno="128" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daa708c02692ce1db4da4ac073070c3000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18daa708c02692ce1db4da4ac073070c3000" kindref="member">ADXL372_Z_FIFO</ref>,</highlight></codeline>
+<codeline lineno="129" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da629423198ea3090c8fbf924f0f81c026" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18da629423198ea3090c8fbf924f0f81c026" kindref="member">ADXL372_XZ_FIFO</ref>,</highlight></codeline>
+<codeline lineno="130" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dacd96253649ce82c01623d7dc88772748" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dacd96253649ce82c01623d7dc88772748" kindref="member">ADXL372_YZ_FIFO</ref>,</highlight></codeline>
+<codeline lineno="131" refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dab7b486bd3b551f56019ce2c1269fcdb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18dab7b486bd3b551f56019ce2c1269fcdb0" kindref="member">ADXL372_XYZ_PEAK_FIFO</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="adxl37x_8h_1a52de024122320d79ce41968acf571145" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a52de024122320d79ce41968acf571145" kindref="member">adxl372_configure_fifo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a17443fff08ee353278c3d072c461a31e" kindref="member">adxl372_fifo_mode</ref><sp/>mode,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a8d9170a94134e002b2213c312136f18d" kindref="member">adxl372_fifo_format</ref><sp/>format,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>fifo_samples);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="adxl37x_8h_1a88ac7567f0d1464b2698eacc3a8796b2" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a88ac7567f0d1464b2698eacc3a8796b2" kindref="member">adxl372_set_ext_sync</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="adxl37x_8h_1a7e14ff6130a46f3997606be09e647c26" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1a7e14ff6130a46f3997606be09e647c26" kindref="member">adxl372_get_status</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,<sp/>uint8_t*<sp/>status1,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/>status2,<sp/>uint16_t*<sp/>fifo_entries);</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="183" refid="struct_adxl37x_1a06fc87d81c62e9abb8790b6e5713c55ba564be60d89054ac9444700928852f642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1a06fc87d81c62e9abb8790b6e5713c55ba564be60d89054ac9444700928852f642" kindref="member">odr</ref><sp/>=<sp/>4400<sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="184" refid="struct_adxl37x_1adf764cbdea00d65edcd07bb9953ad2b7a6ceb1732de89402c9625c4df22744df0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1adf764cbdea00d65edcd07bb9953ad2b7a6ceb1732de89402c9625c4df22744df0" kindref="member">odr_max</ref><sp/>=<sp/>6400<sp/>};<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="185" refid="struct_adxl37x_1a99fb83031ce9923c84392b4e92f956b5a92d464d572d62220cd93b57886fd71e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1a99fb83031ce9923c84392b4e92f956b5a92d464d572d62220cd93b57886fd71e2" kindref="member">max_samples</ref><sp/>=<sp/>170<sp/>};<sp/><sp/></highlight></codeline>
-<codeline lineno="186" refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" kindref="member">num_buffers</ref><sp/>=<sp/>2<sp/>};<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae739fdb9b85277f23f78205123bc937f" kindref="member">Adxl37x</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="188" refid="struct_adxl37x_1ae739fdb9b85277f23f78205123bc937f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_adxl37x_1ae739fdb9b85277f23f78205123bc937f" kindref="member">Adxl37x</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1aae0079b9872e9cadaf0d3d8e45a1dd36" kindref="member">~Adxl37x</ref>();</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" kindref="member">fifo_handler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sensor_trigger*<sp/>trigger);</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"></highlight></codeline>
-<codeline lineno="200" refid="struct_adxl37x_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="struct_adxl37x_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="202" refid="struct_adxl37x_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="struct_adxl37x_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205" refid="struct_adxl37x_1af9c0556ee76701451d8af549b2c74cde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="struct_adxl37x_1a8cfbe2170337eb5a45150ced9faa22af" kindref="member">sensorDev</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__status" kindref="compound">adxl372_status</ref><sp/><ref refid="classadxl372_status" kindref="compound">adxl372Status</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211" refid="struct_adxl37x_1a655f179ae81ee40f45286641e2edae14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref><sp/><ref refid="struct_adxl37x_1a655f179ae81ee40f45286641e2edae14" kindref="member">samples</ref>[<ref refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" kindref="member">num_buffers</ref>][<ref refid="struct_adxl37x_1a99fb83031ce9923c84392b4e92f956b5a92d464d572d62220cd93b57886fd71e2" kindref="member">max_samples</ref>];<sp/><sp/></highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="214" refid="struct_adxl37x_1a8b5f54ee0fa1a3d2d33869c0dbcf9e88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a8b5f54ee0fa1a3d2d33869c0dbcf9e88" kindref="member">dirty</ref>[<ref refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" kindref="member">num_buffers</ref>];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="215"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216" refid="struct_adxl37x_1aae3b484e9add246d68429194a42883ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="struct_adxl37x_1aae3b484e9add246d68429194a42883ba" kindref="member">cur_buf</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="217" refid="struct_adxl37x_1a37ee504fe3165e7e2ffa8a620f72c62c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="struct_adxl37x_1a37ee504fe3165e7e2ffa8a620f72c62c" kindref="member">sample_cnt</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>static<sp/>time_t<sp/>sample_ts;<sp/><sp/>//<sp/>time<sp/>at<sp/>calling<sp/>sample()</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a7c09cf34e0f9c4d3a8e05896c4da7b1b" kindref="member">setOpMode</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" kindref="member">adxl372_op_mode</ref><sp/>mode);</highlight></codeline>
+<codeline lineno="150" refid="adxl37x_8h_1adb0737e590103789e8322ffc5a9d2d11" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1adb0737e590103789e8322ffc5a9d2d11" kindref="member">getSelftestSuccess</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mbox" kindref="compound">Mbox</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_timer" kindref="compound">Timer</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="struct_adxl37x" kindref="compound">Adxl37x</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_task" kindref="compound">Task</ref><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="185" refid="struct_adxl37x_1a06fc87d81c62e9abb8790b6e5713c55ba564be60d89054ac9444700928852f642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1a06fc87d81c62e9abb8790b6e5713c55ba564be60d89054ac9444700928852f642" kindref="member">odr</ref><sp/>=<sp/>4400<sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="struct_adxl37x_1adf764cbdea00d65edcd07bb9953ad2b7a6ceb1732de89402c9625c4df22744df0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1adf764cbdea00d65edcd07bb9953ad2b7a6ceb1732de89402c9625c4df22744df0" kindref="member">odr_max</ref><sp/>=<sp/>6400<sp/>};<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="struct_adxl37x_1a99fb83031ce9923c84392b4e92f956b5a92d464d572d62220cd93b57886fd71e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1a99fb83031ce9923c84392b4e92f956b5a92d464d572d62220cd93b57886fd71e2" kindref="member">max_samples</ref><sp/>=<sp/>170<sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="188" refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" kindref="member">num_buffers</ref><sp/>=<sp/>2<sp/>};<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae739fdb9b85277f23f78205123bc937f" kindref="member">Adxl37x</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;??&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190" refid="struct_adxl37x_1ae739fdb9b85277f23f78205123bc937f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_adxl37x_1ae739fdb9b85277f23f78205123bc937f" kindref="member">Adxl37x</ref>()<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1aae0079b9872e9cadaf0d3d8e45a1dd36" kindref="member">~Adxl37x</ref>();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" kindref="member">task</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1aaa25421e04a507bcced8f9bb02af5213" kindref="member">timer_cb</ref>(k_timer*<sp/>timer);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1adc25c829b13636794219a3f61f31f34d" kindref="member">timer1_expired</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae369b3765489ee8bd0ea791c1843630f" kindref="member">configure</ref>();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" kindref="member">fifo_handler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>device*<sp/>dev,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sensor_trigger*<sp/>trigger);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="struct_adxl37x_1af2570dd7bace0312470d962f29359fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mbox" kindref="compound">Mbox</ref>*<sp/><ref refid="struct_adxl37x_1af2570dd7bace0312470d962f29359fb3" kindref="member">pInMbox</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="204" refid="struct_adxl37x_1a64024edd0c45f1deb9a9bf67b746a8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_timer" kindref="compound">Timer</ref>*<sp/><ref refid="struct_adxl37x_1a64024edd0c45f1deb9a9bf67b746a8e1" kindref="member">myTimer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="struct_adxl37x_1af9c0556ee76701451d8af549b2c74cde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">device*<sp/><ref refid="struct_adxl37x_1a8cfbe2170337eb5a45150ced9faa22af" kindref="member">sensorDev</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structadxl372__status" kindref="compound">adxl372_status</ref><sp/><ref refid="classadxl372_status" kindref="compound">adxl372Status</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="struct_adxl37x_1a655f179ae81ee40f45286641e2edae14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref><sp/><ref refid="struct_adxl37x_1a655f179ae81ee40f45286641e2edae14" kindref="member">samples</ref>[<ref refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" kindref="member">num_buffers</ref>][<ref refid="struct_adxl37x_1a99fb83031ce9923c84392b4e92f956b5a92d464d572d62220cd93b57886fd71e2" kindref="member">max_samples</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="struct_adxl37x_1a8b5f54ee0fa1a3d2d33869c0dbcf9e88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a8b5f54ee0fa1a3d2d33869c0dbcf9e88" kindref="member">dirty</ref>[<ref refid="struct_adxl37x_1abc6126af1d45847bc59afa0aa3216b04aa74987e28774bc3a14ae1b8ef7578fec" kindref="member">num_buffers</ref>];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="struct_adxl37x_1aae3b484e9add246d68429194a42883ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="struct_adxl37x_1aae3b484e9add246d68429194a42883ba" kindref="member">cur_buf</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="219" refid="struct_adxl37x_1a37ee504fe3165e7e2ffa8a620f72c62c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="struct_adxl37x_1a37ee504fe3165e7e2ffa8a620f72c62c" kindref="member">sample_cnt</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>static<sp/>time_t<sp/>sample_ts;<sp/><sp/>//<sp/>time<sp/>at<sp/>calling<sp/>sample()</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222" refid="struct_adxl37x_1a653f891fe8518bdf32a0fd42a3bf6e4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a653f891fe8518bdf32a0fd42a3bf6e4c" kindref="member">extSync</ref>;<sp/><sp/></highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a53b39be4f224783448cee0a1a1cc8a13" kindref="member">setExtSync</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" kindref="member">setExtSyncClk</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ac3697632d1d1a52014c0f19d3454bcd8" kindref="member">setFifoBypass</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>clears<sp/>fifo<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a967716ed114888b1fbdbbe8061a85eaf" kindref="member">setFifoOn</ref>();</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a3605b58fb45d69d498721bc2f2a14b1c" kindref="member">suspend</ref>();</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a41de8150eff044a237990c271d57ea27" kindref="member">resume</ref>();</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" kindref="member">convert</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sensor_value*<sp/>val,<sp/>int16_t<sp/>value);</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1afe69bfcd4e792a1bc47074600c1a4115" kindref="member">dump</ref>(<ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref>*<sp/>s);<sp/><sp/></highlight><highlight class="comment">//<sp/>dump<sp/>received<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"></highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" kindref="member">hw_stat</ref><sp/><ref refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" kindref="member">getHwStatus</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a7c09cf34e0f9c4d3a8e05896c4da7b1b" kindref="member">setOpMode</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="adxl37x_8h_1aa734bb77c1cb644e60b9241746e10a58" kindref="member">adxl372_op_mode</ref><sp/>mode);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="struct_adxl37x_1a653f891fe8518bdf32a0fd42a3bf6e4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a653f891fe8518bdf32a0fd42a3bf6e4c" kindref="member">extSync</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a53b39be4f224783448cee0a1a1cc8a13" kindref="member">setExtSync</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1aa40b55f092609cc5710dd1af8da9316b" kindref="member">setExtSyncClk</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ac3697632d1d1a52014c0f19d3454bcd8" kindref="member">setFifoBypass</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>clears<sp/>fifo<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a967716ed114888b1fbdbbe8061a85eaf" kindref="member">setFifoOn</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a3605b58fb45d69d498721bc2f2a14b1c" kindref="member">suspend</ref>();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a41de8150eff044a237990c271d57ea27" kindref="member">resume</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a17c8ff5a47f5a81a4153da1ccde7f03e" kindref="member">convert</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sensor_value*<sp/>val,<sp/>int16_t<sp/>value);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1afe69bfcd4e792a1bc47074600c1a4115" kindref="member">dump</ref>(<ref refid="structadxl372__xyz__accel__data" kindref="compound">adxl372_xyz_accel_data</ref>*<sp/>s);<sp/><sp/></highlight><highlight class="comment">//<sp/>dump<sp/>received<sp/>data</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="235"><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="238" refid="struct_adxl37x_1aa64d040441163a1126fda0f612addd2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="struct_adxl37x_1aa64d040441163a1126fda0f612addd2f" kindref="member">suspendTimeout</ref><sp/>=<sp/>5*60;<sp/></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ac1d2043bb6ede9c12212992591d63d91" kindref="member">initDevice</ref>();</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" kindref="member">report</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>to<sp/>store</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" kindref="member">reportHwStatus</ref>();</highlight></codeline>
-<codeline lineno="243" refid="struct_adxl37x_1a9d8f65ef2d9b6593e836282a55a11222" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a9d8f65ef2d9b6593e836282a55a11222" kindref="member">selftest</ref>();</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a388f572c62279f839ee138a9afbdeeb5" kindref="member">print</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>vector<sp/>magnitude<sp/>for<sp/>debugging</highlight></codeline>
-<codeline lineno="246" refid="struct_adxl37x_1ae7065952827f83f9d9ce4a42e8dba281" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>;</highlight></codeline>
-<codeline lineno="248" refid="struct_adxl37x_1ab14775f244c3ad1f75afe91f55fdbba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ab14775f244c3ad1f75afe91f55fdbba3" kindref="member">bSelftestPassed</ref>;<sp/></highlight></codeline>
-<codeline lineno="249"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_SPI_ADXL37X_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="hw__metrics_8h_1af13bdbea21a54472a89f97ccf51da8b8" kindref="member">hw_stat</ref><sp/><ref refid="struct_adxl37x_1a303839680fa319517f4fed6d5455b52e" kindref="member">getHwStatus</ref>();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="239" refid="struct_adxl37x_1a2d398bc123895803e13b7c5755892820" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">onoff_manager<sp/>*<ref refid="struct_adxl37x_1a54d12145a8d42ea2e17ff1f010517bda" kindref="member">clk_mgr</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">onoff_client<sp/><ref refid="classclk__cli" kindref="compound">clk_cli</ref>;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="struct_adxl37x_1aa64d040441163a1126fda0f612addd2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="struct_adxl37x_1aa64d040441163a1126fda0f612addd2f" kindref="member">suspendTimeout</ref><sp/>=<sp/>5*60;<sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ac1d2043bb6ede9c12212992591d63d91" kindref="member">initDevice</ref>();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" kindref="member">report</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>to<sp/>store</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" kindref="member">reportHwStatus</ref>();</highlight></codeline>
+<codeline lineno="248" refid="struct_adxl37x_1a9d8f65ef2d9b6593e836282a55a11222" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a9d8f65ef2d9b6593e836282a55a11222" kindref="member">selftest</ref>();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1a388f572c62279f839ee138a9afbdeeb5" kindref="member">print</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>vector<sp/>magnitude<sp/>for<sp/>debugging</highlight></codeline>
+<codeline lineno="251" refid="struct_adxl37x_1ae7065952827f83f9d9ce4a42e8dba281" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ae7065952827f83f9d9ce4a42e8dba281" kindref="member">device_good</ref>;</highlight></codeline>
+<codeline lineno="253" refid="struct_adxl37x_1ab14775f244c3ad1f75afe91f55fdbba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_adxl37x_1ab14775f244c3ad1f75afe91f55fdbba3" kindref="member">bSelftestPassed</ref>;<sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>PROMETHEUS_XL_FIRMWARE_COMMON_SRC_DRV_SPI_ADXL37X_H_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="drv/spi/adxl37x.h"/>
   </compounddef>

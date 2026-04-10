@@ -34,7 +34,7 @@
         <definition>const char* fwVersion</definition>
         <argsstring></argsstring>
         <name>fwVersion</name>
-        <initializer>= &quot;2.34&quot;</initializer>
+        <initializer>= &quot;2.38&quot;</initializer>
         <briefdescription>
 <para>The firmware version string. </para>
         </briefdescription>
@@ -86,7 +86,7 @@ Getter function to retrieve the software version. </para>
         <location file="version.cpp" line="37" column="12" bodyfile="version.cpp" bodystart="37" bodyend="37"/>
         <references refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" compoundref="version_8cpp" startline="27">fwVersion</references>
         <referencedby refid="version_8cpp_1a9d51f4546518b310ff52a88fc3da7ba8" compoundref="version_8cpp" startline="45" endline="47">displayFwVersion</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">MetricsBuilder::finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">MetricsBuilder::finalize</referencedby>
       </memberdef>
       <memberdef kind="function" id="version_8cpp_1a9d51f4546518b310ff52a88fc3da7ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void</type>
@@ -105,7 +105,7 @@ Getter function to retrieve the software version. </para>
         </inbodydescription>
         <location file="version.cpp" line="45" column="12" bodyfile="version.cpp" bodystart="45" bodyend="47"/>
         <references refid="version_8cpp_1a4b00c0a09807f51f932d82cf52dd74f9" compoundref="version_8cpp" startline="37" endline="37">getFwVersion</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -134,7 +134,7 @@ Getter function to retrieve the software version. </para>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25" refid="version_8cpp_1a2864f848a95aac5a08eb0d1973477d87" refkind="member"><highlight class="normal"><ref refid="version_8cpp_1a2864f848a95aac5a08eb0d1973477d87" kindref="member">LOG_MODULE_REGISTER</ref>(version,<sp/><ref refid="prj__config_8h_1a0ebf9a619ab4bbe8b552f05e0b437c5d" kindref="member">AXO_DEFAULT_DEBUG_LEVEL</ref>);</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" kindref="member">fwVersion</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;2.34&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" kindref="member">fwVersion</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;2.38&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37" refid="version_8cpp_1a4b00c0a09807f51f932d82cf52dd74f9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="version_8cpp_1a4b00c0a09807f51f932d82cf52dd74f9" kindref="member">getFwVersion</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" kindref="member">fwVersion</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>

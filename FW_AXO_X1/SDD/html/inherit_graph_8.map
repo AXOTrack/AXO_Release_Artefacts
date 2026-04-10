@@ -3,23 +3,24 @@
 <area shape="rect" id="node2" href="$struct_a_d_converter.html" title="AD converter driver class derived from task base class." alt="" coords="167,5,261,32"/>
 <area shape="rect" id="node3" href="$classadxl372_status.html" title=" " alt="" coords="5,56,111,83"/>
 <area shape="rect" id="node4" href="$struct_adxl37x.html" title="Adxl37x acceleration sensor class derived from task base class." alt="" coords="179,56,249,83"/>
-<area shape="rect" id="node5" href="$class_task.html" title="RTOS wrapper for multithreading support." alt="" coords="33,461,83,488"/>
-<area shape="rect" id="node6" href="$class_adxl_data_store.html" title="Adxl data store class derived from task base class." alt="" coords="161,411,267,437"/>
-<area shape="rect" id="node7" href="$class_battery_mgr.html" title="Battery manager class derived from task base class." alt="" coords="171,461,257,488"/>
-<area shape="rect" id="node8" href="$class_boost_converter.html" title="Boost converter class derived from task base class." alt="" coords="159,512,269,539"/>
-<area shape="rect" id="node9" href="$class_data_manager.html" title="DataManager class derived from task base class." alt="" coords="165,563,263,589"/>
-<area shape="rect" id="node10" href="$class_disp_task.html" title="Disp class derived from task base class." alt="" coords="176,613,252,640"/>
-<area shape="rect" id="node11" href="$class_fw_upd.html" title="Firmware update task class derived from task base class." alt="" coords="183,664,245,691"/>
-<area shape="rect" id="node12" href="$class_fw_upd_ctrl.html" title="Firmware update control task class derived from task base class." alt="" coords="173,715,255,741"/>
-<area shape="rect" id="node13" href="$class_http_connector.html" title="HTTP connector class derived from task base class." alt="" coords="161,765,267,792"/>
-<area shape="rect" id="node14" href="$class_hw_metrics.html" title="HwMetrics class derived from task base class." alt="" coords="173,816,255,843"/>
-<area shape="rect" id="node15" href="$class_lte_connector.html" title="LTE connector class derived from task base class." alt="" coords="165,867,263,893"/>
-<area shape="rect" id="node16" href="$class_lte_monitor.html" title="LTE monitor class derived from task base class." alt="" coords="173,917,255,944"/>
-<area shape="rect" id="node17" href="$class_mqtt_connector.html" title="MQTT connector class derived from task base class." alt="" coords="161,107,267,133"/>
-<area shape="rect" id="node18" href="$class_power_mgr.html" title="Power Manager base class derived from task base class." alt="" coords="174,157,254,184"/>
-<area shape="rect" id="node20" href="$class_reset_ctrl.html" title="Reset Control class derived from task base class." alt="" coords="176,208,252,235"/>
-<area shape="rect" id="node21" href="$class_rms_store.html" title="RmsStore class derived from task base class." alt="" coords="174,259,254,285"/>
-<area shape="rect" id="node22" href="$class_rms_task.html" title="RMS task class derived from task base class." alt="" coords="175,309,253,336"/>
-<area shape="rect" id="node23" href="$class_shtcx.html" title="Shtcx temperature sensor class derived from task base class." alt="" coords="186,360,242,387"/>
-<area shape="rect" id="node19" href="$class_power_mgr_x1.html" title="Power Manager class for AXO X1 devices derived from Power Manager base class." alt="" coords="317,157,412,184"/>
+<area shape="rect" id="node5" href="$classclk__cli.html" title=" " alt="" coords="29,107,87,133"/>
+<area shape="rect" id="node6" href="$class_task.html" title="RTOS wrapper for multithreading support." alt="" coords="33,461,83,488"/>
+<area shape="rect" id="node7" href="$class_adxl_data_store.html" title="Adxl data store class derived from task base class." alt="" coords="161,411,267,437"/>
+<area shape="rect" id="node8" href="$class_battery_mgr.html" title="Battery manager class derived from task base class." alt="" coords="171,461,257,488"/>
+<area shape="rect" id="node9" href="$class_boost_converter.html" title="Boost converter class derived from task base class." alt="" coords="159,512,269,539"/>
+<area shape="rect" id="node10" href="$class_data_manager.html" title="DataManager class derived from task base class." alt="" coords="165,563,263,589"/>
+<area shape="rect" id="node11" href="$class_disp_task.html" title="Disp class derived from task base class." alt="" coords="176,613,252,640"/>
+<area shape="rect" id="node12" href="$class_fw_upd.html" title="Firmware update task class derived from task base class." alt="" coords="183,664,245,691"/>
+<area shape="rect" id="node13" href="$class_fw_upd_ctrl.html" title="Firmware update control task class derived from task base class." alt="" coords="173,715,255,741"/>
+<area shape="rect" id="node14" href="$class_http_connector.html" title="HTTP connector class derived from task base class." alt="" coords="161,765,267,792"/>
+<area shape="rect" id="node15" href="$class_hw_metrics.html" title="HwMetrics class derived from task base class." alt="" coords="173,816,255,843"/>
+<area shape="rect" id="node16" href="$class_lte_connector.html" title="LTE connector class derived from task base class." alt="" coords="165,867,263,893"/>
+<area shape="rect" id="node17" href="$class_lte_monitor.html" title="LTE monitor class derived from task base class." alt="" coords="173,917,255,944"/>
+<area shape="rect" id="node18" href="$class_mqtt_connector.html" title="MQTT connector class derived from task base class." alt="" coords="161,107,267,133"/>
+<area shape="rect" id="node19" href="$class_power_mgr.html" title="Power Manager base class derived from task base class." alt="" coords="174,157,254,184"/>
+<area shape="rect" id="node21" href="$class_reset_ctrl.html" title="Reset Control class derived from task base class." alt="" coords="176,208,252,235"/>
+<area shape="rect" id="node22" href="$class_rms_store.html" title="RmsStore class derived from task base class." alt="" coords="174,259,254,285"/>
+<area shape="rect" id="node23" href="$class_rms_task.html" title="RMS task class derived from task base class." alt="" coords="175,309,253,336"/>
+<area shape="rect" id="node24" href="$class_shtcx.html" title="Shtcx temperature sensor class derived from task base class." alt="" coords="186,360,242,387"/>
+<area shape="rect" id="node20" href="$class_power_mgr_x1.html" title="Power Manager class for AXO X1 devices derived from Power Manager base class." alt="" coords="317,157,412,184"/>
 </map>

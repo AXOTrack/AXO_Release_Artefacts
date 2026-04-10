@@ -286,20 +286,25 @@ Flag isEnabled will be set to false, in case file BOOST_ENABLED_FILENAME exists,
 
 <p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00101">101</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="boost_8h_source.html#l00053">BOOST_ENABLED_FILENAME</a>, <a class="el" href="boost_8cpp_source.html#l00047">BOOST_NODE</a>, <a class="el" href="boost_8h_source.html#l00091">device_good</a>, <a class="el" href="mbox_8h_source.html#l00084">Mbox::eBoostConverter</a>, <a class="el" href="boost_8h_source.html#l00090">gpio</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, <a class="el" href="boost_8h_source.html#l00086">isEnabled</a>, <a class="el" href="boost_8h_source.html#l00081">myTimer</a>, <a class="el" href="boost_8h_source.html#l00080">pInMbox</a>, <a class="el" href="mbox_8cpp_source.html#l00115">Mbox::registerMbox()</a>, and <a class="el" href="boost_8cpp_source.html#l00061">timer_cb()</a>.</p>
+<p class="reference">References <a class="el" href="boost_8h_source.html#l00053">BOOST_ENABLED_FILENAME</a>, <a class="el" href="boost_8cpp_source.html#l00047">BOOST_NODE</a>, <a class="el" href="boost_8h_source.html#l00091">device_good</a>, <a class="el" href="mbox_8h_source.html#l00084">Mbox::eBoostConverter</a>, <a class="el" href="flashfs_8cpp_source.html#l00322">FlashFS::file_close()</a>, <a class="el" href="flashfs_8cpp_source.html#l00306">FlashFS::file_open()</a>, <a class="el" href="flashfs_8cpp_source.html#l00352">FlashFS::file_seek()</a>, <a class="el" href="flashfs_8cpp_source.html#l00345">FlashFS::file_sync()</a>, <a class="el" href="flashfs_8cpp_source.html#l00338">FlashFS::file_write()</a>, <a class="el" href="boost_8h_source.html#l00090">gpio</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, <a class="el" href="boost_8h_source.html#l00086">isEnabled</a>, <a class="el" href="boost_8h_source.html#l00081">myTimer</a>, <a class="el" href="boost_8h_source.html#l00080">pInMbox</a>, <a class="el" href="mbox_8cpp_source.html#l00115">Mbox::registerMbox()</a>, and <a class="el" href="boost_8cpp_source.html#l00061">timer_cb()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_boost_converter_a88773507fbf105e4141ed56ca8ebd3b0_cgraph.png" border="0" usemap="#aclass_boost_converter_a88773507fbf105e4141ed56ca8ebd3b0_cgraph" alt=""/></div>
 <map name="aclass_boost_converter_a88773507fbf105e4141ed56ca8ebd3b0_cgraph" id="aclass_boost_converter_a88773507fbf105e4141ed56ca8ebd3b0_cgraph">
-<area shape="rect" title="Boost converter task constructor." alt="" coords="5,56,116,83"/>
-<area shape="rect" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="183,5,283,32"/>
-<area shape="rect" href="class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="164,56,301,83"/>
-<area shape="rect" href="class_boost_converter.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the timer to control the maximum activation time period." alt="" coords="197,107,269,133"/>
-<area shape="rect" href="class_boost_converter.html#adc25c829b13636794219a3f61f31f34d" title="Timer expired function for the timer to control the maximum activation time period." alt="" coords="349,107,456,133"/>
-<area shape="rect" href="class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="504,107,593,133"/>
-<area shape="rect" href="class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="641,81,761,108"/>
-<area shape="rect" href="class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="653,132,750,159"/>
+<area shape="rect" title="Boost converter task constructor." alt="" coords="5,183,116,209"/>
+<area shape="rect" href="class_flash_f_s.html#aa7b20931f6a6e3bdae605c32f7392916" title=" " alt="" coords="166,5,299,32"/>
+<area shape="rect" href="class_flash_f_s.html#a5694e02ad571b7cbe7faf11f7a10e6a8" title=" " alt="" coords="167,56,298,83"/>
+<area shape="rect" href="class_flash_f_s.html#aa62db77a172f205375af7f1be890cdae" title=" " alt="" coords="167,107,298,133"/>
+<area shape="rect" href="class_flash_f_s.html#a1339e7982350417e8d1ea764889e5fa0" title=" " alt="" coords="167,157,298,184"/>
+<area shape="rect" href="class_flash_f_s.html#a7a26572740b10b6df99e368feb0f4e7d" title=" " alt="" coords="168,208,297,235"/>
+<area shape="rect" href="class_flash_f_s.html#a29e8577a06edb82f9f42c02c43278e6e" title="The inst function to retrieve the exclusiv only instance of the class." alt="" coords="183,259,283,285"/>
+<area shape="rect" href="class_mbox.html#a7cc9ae29f29d5e1a0399ade0983118d8" title="Mbox register function." alt="" coords="164,309,301,336"/>
+<area shape="rect" href="class_boost_converter.html#aaa25421e04a507bcced8f9bb02af5213" title="Timer callback function for the timer to control the maximum activation time period." alt="" coords="197,360,269,387"/>
+<area shape="rect" href="class_boost_converter.html#adc25c829b13636794219a3f61f31f34d" title="Timer expired function for the timer to control the maximum activation time period." alt="" coords="349,360,456,387"/>
+<area shape="rect" href="class_mbox.html#aec0858a23fe789ef1782caab906baf2b" title=" " alt="" coords="504,360,593,387"/>
+<area shape="rect" href="class_pool_elem.html#a793169e06e9183e678805ce0663b6000" title="Dump function for debug purposes." alt="" coords="641,335,761,361"/>
+<area shape="rect" href="class_m_queue.html#a28a1c1e86bbe9d32c6a239e657cedc2e" title="MQueue put function." alt="" coords="653,385,750,412"/>
 </map>
 </div>
 
@@ -332,7 +337,7 @@ Here is the call graph for this function:</div>
 <hr  />
 <p>The destructor is never called and is implemented only for completion reasons. It simply triggers a debug message on info debug level. </p>
 
-<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00173">173</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00193">193</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
 
 </div>
 </div>
@@ -401,9 +406,9 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_task.html#a1951102653a5e603f2131b33d7636232">Task</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00203">203</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00223">223</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="boost_8h_source.html#l00053">BOOST_ENABLED_FILENAME</a>, <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mpelem_8h_source.html#l00089">eResume</a>, <a class="el" href="mpelem_8h_source.html#l00088">eSuspend</a>, <a class="el" href="mpelem_8h_source.html#l00039">eTimerExpired</a>, <a class="el" href="flashfs_8cpp_source.html#l00322">FlashFS::file_close()</a>, <a class="el" href="flashfs_8cpp_source.html#l00306">FlashFS::file_open()</a>, <a class="el" href="flashfs_8cpp_source.html#l00352">FlashFS::file_seek()</a>, <a class="el" href="flashfs_8cpp_source.html#l00345">FlashFS::file_sync()</a>, <a class="el" href="flashfs_8cpp_source.html#l00338">FlashFS::file_write()</a>, <a class="el" href="mpelem_8cpp_source.html#l00165">PoolElem::free()</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, <a class="el" href="boost_8h_source.html#l00086">isEnabled</a>, <a class="el" href="mpelem_8h_source.html#l00220">PoolElem::mtype</a>, <a class="el" href="task_8h_source.html#l00086">Task::myName</a>, <a class="el" href="boost_8h_source.html#l00081">myTimer</a>, <a class="el" href="boost_8cpp_source.html#l00158">off()</a>, <a class="el" href="boost_8cpp_source.html#l00142">on()</a>, <a class="el" href="mpelem_8h_source.html#l00222">PoolElem::p1</a>, <a class="el" href="boost_8h_source.html#l00080">pInMbox</a>, <a class="el" href="mbox_8cpp_source.html#l00098">Mbox::read()</a>, <a class="el" href="flashfs_8cpp_source.html#l00243">FlashFS::remove()</a>, <a class="el" href="timer_8cpp_source.html#l00069">Timer::start()</a>, <a class="el" href="timer_8cpp_source.html#l00101">Timer::stop()</a>, and <a class="el" href="task_8h_source.html#l00043">UNIT_TEST_STOP_LOOP</a>.</p>
+<p class="reference">References <a class="el" href="boost_8h_source.html#l00053">BOOST_ENABLED_FILENAME</a>, <a class="el" href="mpelem_8h_source.html#l00141">eBoostOffReq</a>, <a class="el" href="mpelem_8h_source.html#l00140">eBoostOnReq</a>, <a class="el" href="mpelem_8h_source.html#l00089">eResume</a>, <a class="el" href="mpelem_8h_source.html#l00088">eSuspend</a>, <a class="el" href="mpelem_8h_source.html#l00039">eTimerExpired</a>, <a class="el" href="flashfs_8cpp_source.html#l00322">FlashFS::file_close()</a>, <a class="el" href="flashfs_8cpp_source.html#l00306">FlashFS::file_open()</a>, <a class="el" href="flashfs_8cpp_source.html#l00352">FlashFS::file_seek()</a>, <a class="el" href="flashfs_8cpp_source.html#l00345">FlashFS::file_sync()</a>, <a class="el" href="flashfs_8cpp_source.html#l00338">FlashFS::file_write()</a>, <a class="el" href="mpelem_8cpp_source.html#l00165">PoolElem::free()</a>, <a class="el" href="flashfs_8cpp_source.html#l00110">FlashFS::inst()</a>, <a class="el" href="boost_8h_source.html#l00086">isEnabled</a>, <a class="el" href="mpelem_8h_source.html#l00220">PoolElem::mtype</a>, <a class="el" href="task_8h_source.html#l00086">Task::myName</a>, <a class="el" href="boost_8h_source.html#l00081">myTimer</a>, <a class="el" href="boost_8cpp_source.html#l00178">off()</a>, <a class="el" href="boost_8cpp_source.html#l00162">on()</a>, <a class="el" href="mpelem_8h_source.html#l00222">PoolElem::p1</a>, <a class="el" href="boost_8h_source.html#l00080">pInMbox</a>, <a class="el" href="mbox_8cpp_source.html#l00098">Mbox::read()</a>, <a class="el" href="flashfs_8cpp_source.html#l00243">FlashFS::remove()</a>, <a class="el" href="timer_8cpp_source.html#l00069">Timer::start()</a>, <a class="el" href="timer_8cpp_source.html#l00101">Timer::stop()</a>, and <a class="el" href="task_8h_source.html#l00043">UNIT_TEST_STOP_LOOP</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -569,11 +574,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>By calling function gpio_pin_configure_dt boost enable pin will be forced to active state to switch on the boost converter. Flag isOn indicating that boost converter is activated will be set to true. </p>
 
-<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00142">142</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00162">162</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="boost_8h_source.html#l00090">gpio</a>, and <a class="el" href="boost_8h_source.html#l00087">isOn</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00203">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00223">task()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -613,11 +618,11 @@ Here is the caller graph for this function:</div>
 <hr  />
 <p>By calling function gpio_pin_configure_dt boost enable pin will be forced to inactive state to switch off the boost converter. Flag isOn indicating that boost converter is activated will be set to false. </p>
 
-<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00158">158</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="boost_8cpp_source.html#l00178">178</a> of file <a class="el" href="boost_8cpp_source.html">boost.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="boost_8h_source.html#l00090">gpio</a>, and <a class="el" href="boost_8h_source.html#l00087">isOn</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00203">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00223">task()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -647,7 +652,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="boost_8h_source.html#l00080">80</a> of file <a class="el" href="boost_8h_source.html">boost.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, <a class="el" href="boost_8cpp_source.html#l00203">task()</a>, and <a class="el" href="boost_8cpp_source.html#l00077">timer1_expired()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, <a class="el" href="boost_8cpp_source.html#l00223">task()</a>, and <a class="el" href="boost_8cpp_source.html#l00077">timer1_expired()</a>.</p>
 
 </div>
 </div>
@@ -667,7 +672,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="boost_8h_source.html#l00081">81</a> of file <a class="el" href="boost_8h_source.html">boost.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, and <a class="el" href="boost_8cpp_source.html#l00203">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, and <a class="el" href="boost_8cpp_source.html#l00223">task()</a>.</p>
 
 </div>
 </div>
@@ -695,7 +700,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="boost_8h_source.html#l00086">86</a> of file <a class="el" href="boost_8h_source.html">boost.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, and <a class="el" href="boost_8cpp_source.html#l00203">task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, and <a class="el" href="boost_8cpp_source.html#l00223">task()</a>.</p>
 
 </div>
 </div>
@@ -723,7 +728,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="boost_8h_source.html#l00087">87</a> of file <a class="el" href="boost_8h_source.html">boost.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00158">off()</a>, and <a class="el" href="boost_8cpp_source.html#l00142">on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00178">off()</a>, and <a class="el" href="boost_8cpp_source.html#l00162">on()</a>.</p>
 
 </div>
 </div>
@@ -803,7 +808,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="boost_8h_source.html#l00089">89</a> of file <a class="el" href="boost_8h_source.html">boost.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, <a class="el" href="boost_8cpp_source.html#l00158">off()</a>, and <a class="el" href="boost_8cpp_source.html#l00142">on()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="boost_8cpp_source.html#l00101">BoostConverter()</a>, <a class="el" href="boost_8cpp_source.html#l00178">off()</a>, and <a class="el" href="boost_8cpp_source.html#l00162">on()</a>.</p>
 
 </div>
 </div>

@@ -12,6 +12,7 @@
     <includedby refid="flashfs_8cpp" local="yes">fs/flashfs.cpp</includedby>
     <includedby refid="mqtt__connector_8cpp" local="yes">net/mqtt_connector.cpp</includedby>
     <includedby refid="boot__cnt_8cpp" local="yes">pm/boot_cnt.cpp</includedby>
+    <includedby refid="wakeup__cnt_8cpp" local="yes">pm/wakeup_cnt.cpp</includedby>
     <includedby refid="keygen_8cpp" local="yes">util/keygen.cpp</includedby>
     <incdepgraph>
       <node id="2">
@@ -70,10 +71,16 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="9">
+      <node id="10">
         <label>util/keygen.cpp</label>
         <link refid="keygen_8cpp"/>
+      </node>
+      <node id="9">
+        <label>pm/wakeup_cnt.cpp</label>
+        <link refid="wakeup__cnt_8cpp"/>
       </node>
       <node id="4">
         <label>data/metric.cpp</label>

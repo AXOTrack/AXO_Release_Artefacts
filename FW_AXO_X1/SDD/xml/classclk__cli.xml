@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classclk__cli" kind="class" language="C++" prot="public">
+    <compoundname>clk_cli</compoundname>
+    <derivedcompoundref refid="struct_adxl37x" prot="public" virt="non-virtual">Adxl37x</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>clk_cli</label>
+        <link refid="classclk__cli"/>
+      </node>
+      <node id="2">
+        <label>Adxl37x</label>
+        <link refid="struct_adxl37x"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>clk_cli</label>
+        <link refid="classclk__cli"/>
+      </node>
+    </collaborationgraph>
+    <location file="drv/spi/adxl37x.cpp" line="66" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

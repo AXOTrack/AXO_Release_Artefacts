@@ -19,5 +19,7 @@ var dir_6842baabad453d45d412cb5fd1673487 =
     [ "reset_reason.cpp", "reset__reason_8cpp.html", "reset__reason_8cpp" ],
     [ "reset_reason.h", "reset__reason_8h.html", [
       [ "ResetReason", "class_reset_reason.html", "class_reset_reason" ]
-    ] ]
+    ] ],
+    [ "wakeup_cnt.cpp", "wakeup__cnt_8cpp.html", "wakeup__cnt_8cpp" ],
+    [ "wakeup_cnt.h", "wakeup__cnt_8h.html", "wakeup__cnt_8h" ]
 ];

@@ -28,6 +28,9 @@ var hierarchy =
     [ "BootCnt", "class_boot_cnt.html", null ],
     [ "certmgr", "classcertmgr.html", null ],
     [ "CFilter", "class_c_filter.html", null ],
+    [ "clk_cli", "classclk__cli.html", [
+      [ "Adxl37x", "struct_adxl37x.html", null ]
+    ] ],
     [ "CMatrix", "class_c_matrix.html", null ],
     [ "Config", "class_config.html", null ],
     [ "ECDSASigner", "class_e_c_d_s_a_signer.html", null ],
@@ -99,5 +102,6 @@ var hierarchy =
       [ "Shtcx", "class_shtcx.html", null ]
     ] ],
     [ "Timer", "class_timer.html", null ],
-    [ "topic", "structtopic.html", null ]
+    [ "topic", "structtopic.html", null ],
+    [ "WakeupCnt", "class_wakeup_cnt.html", null ]
 ];

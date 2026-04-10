@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zephyr_5fuser_5fnode_3092',['ZEPHYR_USER_NODE',['../reset__ctrl_8cpp.html#ac80f512f8612508f1e62dd7d3e2988e5',1,'reset_ctrl.cpp']]]
+  ['wakeup_5fcnt_5ffilename_3130',['WAKEUP_CNT_FILENAME',['../wakeup__cnt_8h.html#a70b7e90b21f831378f9167a8cd6ee432',1,'wakeup_cnt.h']]]
 ];

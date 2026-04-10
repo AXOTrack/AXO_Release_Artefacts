@@ -60,7 +60,7 @@
 </simplesect>
 <anchor id="mram_8h_1mram"/> <simplesect kind="par"><title>Detailed Description </title><para>MRAM chip is connected to nRF9160 via SPI bus. MRAM is used to store the acceleration raw data. MRAM has 16 MByte storage capacity. </para>
 </simplesect>
-<xrefsect id="todo_1_todo000013"><xreftitle>Todo</xreftitle><xrefdescription><para>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
+<xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>Create memory map !!!!!!! In one measurement cycle (15 measurements in an one second cycle with sampling rate of 4400Hz) the capacity of the FRAM is nearly exhausted (). Therefore a measurement cycle has been limited to 15 seconds. <linebreak/>
  To be able to calculate displacement data the FRAM raw data storage must be reduced to 5 seconds measurement, so that there is enough space to store intermediate and final displacement data. The memory layout is therefore separated in three blocks (see section <ref refid="_m_s_c_1SectionDisplacement" kindref="member">Displacement Calculation</ref> for further details). </para>
 </xrefdescription></xrefsect><image type="html" name="FramLayout.png" inline="yes"></image>
  <linebreak/>

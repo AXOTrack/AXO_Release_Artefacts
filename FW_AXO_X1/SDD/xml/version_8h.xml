@@ -50,7 +50,7 @@ Getter function to retrieve the software version. </para>
         <location file="version.h" line="26" column="12" bodyfile="version.cpp" bodystart="37" bodyend="37" declfile="version.h" declline="26" declcolumn="12"/>
         <references refid="version_8cpp_1a95c0e196d93c877a51165c108d0de0c2" compoundref="version_8cpp" startline="27">fwVersion</references>
         <referencedby refid="version_8cpp_1a9d51f4546518b310ff52a88fc3da7ba8" compoundref="version_8cpp" startline="45" endline="47">displayFwVersion</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">MetricsBuilder::finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">MetricsBuilder::finalize</referencedby>
       </memberdef>
       <memberdef kind="function" id="version_8h_1a9d51f4546518b310ff52a88fc3da7ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void</type>
@@ -69,7 +69,7 @@ Getter function to retrieve the software version. </para>
         </inbodydescription>
         <location file="version.h" line="27" column="12" bodyfile="version.cpp" bodystart="45" bodyend="47" declfile="version.h" declline="27" declcolumn="12"/>
         <references refid="version_8cpp_1a4b00c0a09807f51f932d82cf52dd74f9" compoundref="version_8cpp" startline="37" endline="37">getFwVersion</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

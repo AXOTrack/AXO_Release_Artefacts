@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="67" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="67" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="69" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structadxl372__status_1a6e379589c894af331416b240998e78f7" prot="public" static="no" mutable="no">
         <type>uint8_t</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="68" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="68" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="70" column="13" bodyfile="drv/spi/adxl37x.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structadxl372__status_1a0e4b98ed4850ac7fb1ed7afb6df8dc0e" prot="public" static="no" mutable="no">
         <type>uint16_t</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/spi/adxl37x.h" line="69" column="14" bodyfile="drv/spi/adxl37x.h" bodystart="69" bodyend="-1"/>
+        <location file="drv/spi/adxl37x.h" line="71" column="14" bodyfile="drv/spi/adxl37x.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -71,7 +71,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="drv/spi/adxl37x.h" line="66" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="66" bodyend="71"/>
+    <location file="drv/spi/adxl37x.h" line="68" column="1" bodyfile="drv/spi/adxl37x.h" bodystart="68" bodyend="73"/>
     <listofallmembers>
       <member refid="structadxl372__status_1a0e4b98ed4850ac7fb1ed7afb6df8dc0e" prot="public" virt="non-virtual"><scope>adxl372_status</scope><name>fifo_entries</name></member>
       <member refid="structadxl372__status_1ac9164d3f909d46687ebb4d77c92a84ab" prot="public" virt="non-virtual"><scope>adxl372_status</scope><name>status1</name></member>

@@ -1,5 +1,5 @@
 <map id="debug.h" name="debug.h">
-<area shape="rect" id="node1" title="Header file of debug configuration for files in common folder." alt="" coords="3522,5,3590,32"/>
+<area shape="rect" id="node1" title="Header file of debug configuration for files in common folder." alt="" coords="3597,5,3665,32"/>
 <area shape="rect" id="node2" href="$i2cbus_8cpp.html" title="Implementation of I2C bus driver class." alt="" coords="5,80,136,107"/>
 <area shape="rect" id="node3" href="$spibus_8cpp.html" title="Implementation of SPI bus driver class." alt="" coords="160,80,291,107"/>
 <area shape="rect" id="node4" href="$config_8cpp.html" title="Implementation of Config class." alt="" coords="315,80,424,107"/>
@@ -35,20 +35,21 @@
 <area shape="rect" id="node35" href="$power__mgr__x1_8cpp.html" title="Implementation of power manager X1 class." alt="" coords="4634,80,4787,107"/>
 <area shape="rect" id="node36" href="$reset__ctrl_8cpp.html" title="Implementation of reset control task." alt="" coords="4812,80,4935,107"/>
 <area shape="rect" id="node37" href="$reset__reason_8cpp.html" title="Implementation of reset reason class." alt="" coords="4959,80,5103,107"/>
-<area shape="rect" id="node38" href="$mbox_8cpp.html" title="Implementation of RTOS wrapper class MBox for mailbox support." alt="" coords="5127,80,5233,107"/>
-<area shape="rect" id="node39" href="$mpelem_8cpp.html" title="Implementation of PoolElem class for message support." alt="" coords="5257,80,5375,107"/>
-<area shape="rect" id="node40" href="$mpool_8cpp.html" title="Implementation of of MsgPool class for message allocation support." alt="" coords="5399,80,5507,107"/>
-<area shape="rect" id="node41" href="$mutex_8cpp.html" title="Implementation of RTOS wrapper class Mutex for mutex support." alt="" coords="5532,80,5641,107"/>
-<area shape="rect" id="node42" href="$sema_8cpp.html" title="Implementation of RTOS wrapper class sema for semaphore support." alt="" coords="5666,80,5771,107"/>
-<area shape="rect" id="node43" href="$task_8cpp.html" title="Implementation of RTOS wrapper class Task for multithreading support." alt="" coords="5796,80,5895,107"/>
-<area shape="rect" id="node44" href="$timer_8cpp.html" title="Implementation of RTOS wrapper class Timer for software timer support." alt="" coords="5919,80,6022,107"/>
-<area shape="rect" id="node45" href="$leds_8cpp.html" title="Implementation of user interface class leds." alt="" coords="6047,80,6132,107"/>
-<area shape="rect" id="node46" href="$fsm_8cpp.html" title="Implementation of Finite State Machine (FSM) for firmware updates." alt="" coords="6157,80,6267,107"/>
-<area shape="rect" id="node47" href="$fwinfo_8cpp.html" title="Implementation of firmware info class." alt="" coords="6292,80,6415,107"/>
-<area shape="rect" id="node48" href="$update_8cpp.html" title="Implementation of the firmware update task." alt="" coords="6439,80,6569,107"/>
-<area shape="rect" id="node49" href="$update__ctrl_8cpp.html" title="Implementation of update controller module." alt="" coords="6593,80,6748,107"/>
-<area shape="rect" id="node50" href="$ecdsasign_8cpp.html" title="Implementation of ECDSA signing class." alt="" coords="6773,80,6899,107"/>
-<area shape="rect" id="node51" href="$hash_8cpp.html" title="Implementation of SHA1 hash checksum calculation." alt="" coords="6924,80,7020,107"/>
-<area shape="rect" id="node52" href="$keygen_8cpp.html" title="Implementation of TLS key generation class." alt="" coords="7045,80,7155,107"/>
+<area shape="rect" id="node38" href="$wakeup__cnt_8cpp.html" title="Implementation of wakeup count class." alt="" coords="5127,80,5265,107"/>
+<area shape="rect" id="node39" href="$mbox_8cpp.html" title="Implementation of RTOS wrapper class MBox for mailbox support." alt="" coords="5290,80,5395,107"/>
+<area shape="rect" id="node40" href="$mpelem_8cpp.html" title="Implementation of PoolElem class for message support." alt="" coords="5419,80,5538,107"/>
+<area shape="rect" id="node41" href="$mpool_8cpp.html" title="Implementation of of MsgPool class for message allocation support." alt="" coords="5562,80,5670,107"/>
+<area shape="rect" id="node42" href="$mutex_8cpp.html" title="Implementation of RTOS wrapper class Mutex for mutex support." alt="" coords="5695,80,5804,107"/>
+<area shape="rect" id="node43" href="$sema_8cpp.html" title="Implementation of RTOS wrapper class sema for semaphore support." alt="" coords="5829,80,5934,107"/>
+<area shape="rect" id="node44" href="$task_8cpp.html" title="Implementation of RTOS wrapper class Task for multithreading support." alt="" coords="5959,80,6057,107"/>
+<area shape="rect" id="node45" href="$timer_8cpp.html" title="Implementation of RTOS wrapper class Timer for software timer support." alt="" coords="6082,80,6185,107"/>
+<area shape="rect" id="node46" href="$leds_8cpp.html" title="Implementation of user interface class leds." alt="" coords="6209,80,6295,107"/>
+<area shape="rect" id="node47" href="$fsm_8cpp.html" title="Implementation of Finite State Machine (FSM) for firmware updates." alt="" coords="6319,80,6430,107"/>
+<area shape="rect" id="node48" href="$fwinfo_8cpp.html" title="Implementation of firmware info class." alt="" coords="6455,80,6577,107"/>
+<area shape="rect" id="node49" href="$update_8cpp.html" title="Implementation of the firmware update task." alt="" coords="6602,80,6731,107"/>
+<area shape="rect" id="node50" href="$update__ctrl_8cpp.html" title="Implementation of update controller module." alt="" coords="6756,80,6911,107"/>
+<area shape="rect" id="node51" href="$ecdsasign_8cpp.html" title="Implementation of ECDSA signing class." alt="" coords="6935,80,7062,107"/>
+<area shape="rect" id="node52" href="$hash_8cpp.html" title="Implementation of SHA1 hash checksum calculation." alt="" coords="7087,80,7183,107"/>
+<area shape="rect" id="node53" href="$keygen_8cpp.html" title="Implementation of TLS key generation class." alt="" coords="7207,80,7318,107"/>
 <area shape="rect" id="node29" href="$main_8cpp.html" title="Implementation of AXO Track main function." alt="" coords="1523,155,1597,181"/>
 </map>

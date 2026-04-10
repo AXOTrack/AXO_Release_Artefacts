@@ -37,6 +37,7 @@
     <includedby refid="power__mgr__x1_8cpp" local="yes">pm/power_mgr_x1.cpp</includedby>
     <includedby refid="reset__ctrl_8cpp" local="yes">pm/reset_ctrl.cpp</includedby>
     <includedby refid="reset__reason_8cpp" local="yes">pm/reset_reason.cpp</includedby>
+    <includedby refid="wakeup__cnt_8cpp" local="yes">pm/wakeup_cnt.cpp</includedby>
     <includedby refid="mbox_8cpp" local="yes">rtos/mbox.cpp</includedby>
     <includedby refid="mpelem_8cpp" local="yes">rtos/mpelem.cpp</includedby>
     <includedby refid="mpool_8cpp" local="yes">rtos/mpool.cpp</includedby>
@@ -57,7 +58,7 @@
         <label>drv/pm/boost.cpp</label>
         <link refid="boost_8cpp"/>
       </node>
-      <node id="49">
+      <node id="50">
         <label>update/update_ctrl.cpp</label>
         <link refid="update__ctrl_8cpp"/>
       </node>
@@ -77,7 +78,7 @@
         <label>disp/filter.cpp</label>
         <link refid="filter_8cpp"/>
       </node>
-      <node id="44">
+      <node id="45">
         <label>rtos/timer.cpp</label>
         <link refid="timer_8cpp"/>
       </node>
@@ -93,7 +94,7 @@
         <label>drv/i2c/shtcx.cpp</label>
         <link refid="shtcx_8cpp"/>
       </node>
-      <node id="41">
+      <node id="42">
         <label>rtos/mutex.cpp</label>
         <link refid="mutex_8cpp"/>
       </node>
@@ -113,7 +114,7 @@
         <label>bus/i2c/i2cbus.cpp</label>
         <link refid="i2cbus_8cpp"/>
       </node>
-      <node id="50">
+      <node id="51">
         <label>util/ecdsasign.cpp</label>
         <link refid="ecdsasign_8cpp"/>
       </node>
@@ -133,7 +134,7 @@
         <label>main.cpp</label>
         <link refid="main_8cpp"/>
       </node>
-      <node id="43">
+      <node id="44">
         <label>rtos/task.cpp</label>
         <link refid="task_8cpp"/>
       </node>
@@ -141,7 +142,7 @@
         <label>data/hw_metrics.cpp</label>
         <link refid="hw__metrics_8cpp"/>
       </node>
-      <node id="47">
+      <node id="48">
         <label>update/fwinfo.cpp</label>
         <link refid="fwinfo_8cpp"/>
       </node>
@@ -248,8 +249,10 @@
         </childnode>
         <childnode refid="52" relation="include">
         </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
       </node>
-      <node id="51">
+      <node id="52">
         <label>util/hash.cpp</label>
         <link refid="hash_8cpp"/>
       </node>
@@ -257,7 +260,7 @@
         <label>disp/disptask.cpp</label>
         <link refid="disptask_8cpp"/>
       </node>
-      <node id="46">
+      <node id="47">
         <label>update/fsm.cpp</label>
         <link refid="fsm_8cpp"/>
       </node>
@@ -271,7 +274,7 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="48">
+      <node id="49">
         <label>update/update.cpp</label>
         <link refid="update_8cpp"/>
       </node>
@@ -279,7 +282,7 @@
         <label>data/rms_store.cpp</label>
         <link refid="rms__store_8cpp"/>
       </node>
-      <node id="38">
+      <node id="39">
         <label>rtos/mbox.cpp</label>
         <link refid="mbox_8cpp"/>
       </node>
@@ -291,11 +294,11 @@
         <label>drv/spi/mram.cpp</label>
         <link refid="mram_8cpp"/>
       </node>
-      <node id="52">
+      <node id="53">
         <label>util/keygen.cpp</label>
         <link refid="keygen_8cpp"/>
       </node>
-      <node id="42">
+      <node id="43">
         <label>rtos/sema.cpp</label>
         <link refid="sema_8cpp"/>
       </node>
@@ -303,13 +306,17 @@
         <label>net/http_connector.cpp</label>
         <link refid="http__connector_8cpp"/>
       </node>
-      <node id="45">
+      <node id="46">
         <label>ui/leds.cpp</label>
         <link refid="leds_8cpp"/>
       </node>
       <node id="34">
         <label>pm/power_mgr.cpp</label>
         <link refid="power__mgr_8cpp"/>
+      </node>
+      <node id="38">
+        <label>pm/wakeup_cnt.cpp</label>
+        <link refid="wakeup__cnt_8cpp"/>
       </node>
       <node id="9">
         <label>data/metric.cpp</label>
@@ -319,7 +326,7 @@
         <label>net/mqtt_connector.cpp</label>
         <link refid="mqtt__connector_8cpp"/>
       </node>
-      <node id="40">
+      <node id="41">
         <label>rtos/mpool.cpp</label>
         <link refid="mpool_8cpp"/>
       </node>
@@ -355,7 +362,7 @@
         <label>drv/adc/adconverter.cpp</label>
         <link refid="adconverter_8cpp"/>
       </node>
-      <node id="39">
+      <node id="40">
         <label>rtos/mpelem.cpp</label>
         <link refid="mpelem_8cpp"/>
       </node>

@@ -70,4 +70,9 @@ config UNIT_TEST_DISP
     help
       Aktiviert speziellen Code, der nur für Unit-Tests im folder disp verwendet wird.
 
+config UNIT_TEST_APP_AXO_X1
+    bool "Enable Unit Test Mode for folder app-axo-x1"
+    help
+      Aktiviert speziellen Code, der nur für Unit-Tests im folder app-axo-x1 verwendet wird.
+
 endmenu

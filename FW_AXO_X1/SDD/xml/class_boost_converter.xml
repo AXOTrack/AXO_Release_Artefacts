@@ -18,8 +18,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pm/boost.h" line="80" column="10" bodyfile="drv/pm/boost.h" bodystart="80" bodyend="-1"/>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">task</referencedby>
         <referencedby refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" compoundref="boost_8cpp" startline="77" endline="83">timer1_expired</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
@@ -35,8 +35,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pm/boost.h" line="81" column="11" bodyfile="drv/pm/boost.h" bodystart="81" bodyend="-1"/>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">task</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -53,8 +53,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pm/boost.h" line="86" column="10" bodyfile="drv/pm/boost.h" bodystart="86" bodyend="-1"/>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -69,8 +69,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pm/boost.h" line="87" column="10" bodyfile="drv/pm/boost.h" bodystart="87" bodyend="-1"/>
-        <referencedby refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="158" endline="165">off</referencedby>
-        <referencedby refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="142" endline="149">on</referencedby>
+        <referencedby refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="178" endline="185">off</referencedby>
+        <referencedby refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="162" endline="169">on</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_boost_converter_1aa1ea91323dfb0e89469a545299b82ff1" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -113,9 +113,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pm/boost.h" line="89" column="9" bodyfile="drv/pm/boost.h" bodystart="90" bodyend="-1"/>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
-        <referencedby refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="158" endline="165">off</referencedby>
-        <referencedby refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="142" endline="149">on</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="178" endline="185">off</referencedby>
+        <referencedby refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="162" endline="169">on</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -130,7 +130,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="drv/pm/boost.h" line="91" column="10" bodyfile="drv/pm/boost.h" bodystart="91" bodyend="-1"/>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -164,11 +164,16 @@ Flag isEnabled will be set to false, in case file BOOST_ENABLED_FILENAME exists,
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/pm/boost.h" line="74" column="14" bodyfile="drv/pm/boost.cpp" bodystart="101" bodyend="133"/>
+        <location file="drv/pm/boost.h" line="74" column="14" bodyfile="drv/pm/boost.cpp" bodystart="101" bodyend="153"/>
         <references refid="boost_8h_1adb78930007c481618718ea80667ddae1" compoundref="boost_8h" startline="53">BOOST_ENABLED_FILENAME</references>
         <references refid="boost_8cpp_1ae646dfd2e7bdb3123c8b5ffcbb3eb9b8" compoundref="boost_8cpp" startline="47">BOOST_NODE</references>
         <references refid="class_boost_converter_1ae7065952827f83f9d9ce4a42e8dba281" compoundref="boost_8h" startline="91">device_good</references>
         <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501abe8cd9bda40f9a78f53bc3296970f7cc" compoundref="mbox_8h" startline="84">Mbox::eBoostConverter</references>
+        <references refid="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" compoundref="flashfs_8cpp" startline="322" endline="328">FlashFS::file_close</references>
+        <references refid="class_flash_f_s_1a5694e02ad571b7cbe7faf11f7a10e6a8" compoundref="flashfs_8cpp" startline="306" endline="320">FlashFS::file_open</references>
+        <references refid="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" compoundref="flashfs_8cpp" startline="352" endline="357">FlashFS::file_seek</references>
+        <references refid="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" compoundref="flashfs_8cpp" startline="345" endline="350">FlashFS::file_sync</references>
+        <references refid="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" compoundref="flashfs_8cpp" startline="338" endline="343">FlashFS::file_write</references>
         <references refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" compoundref="boost_8h" startline="90">gpio</references>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
         <references refid="class_boost_converter_1aaa521633aa149ccf8d2eab52b4a2abe0" compoundref="boost_8h" startline="86">isEnabled</references>
@@ -192,7 +197,7 @@ Flag isEnabled will be set to false, in case file BOOST_ENABLED_FILENAME exists,
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/pm/boost.h" line="75" column="13" bodyfile="drv/pm/boost.cpp" bodystart="173" bodyend="175"/>
+        <location file="drv/pm/boost.h" line="75" column="13" bodyfile="drv/pm/boost.cpp" bodystart="193" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -223,7 +228,7 @@ Flag isEnabled will be set to false, in case file BOOST_ENABLED_FILENAME exists,
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/pm/boost.h" line="76" column="18" bodyfile="drv/pm/boost.cpp" bodystart="203" bodyend="283"/>
+        <location file="drv/pm/boost.h" line="76" column="18" bodyfile="drv/pm/boost.cpp" bodystart="223" bodyend="303"/>
         <references refid="boost_8h_1adb78930007c481618718ea80667ddae1" compoundref="boost_8h" startline="53">BOOST_ENABLED_FILENAME</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" compoundref="mpelem_8h" startline="141">eBoostOffReq</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" compoundref="mpelem_8h" startline="140">eBoostOnReq</references>
@@ -241,8 +246,8 @@ Flag isEnabled will be set to false, in case file BOOST_ENABLED_FILENAME exists,
         <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
         <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
         <references refid="class_boost_converter_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="boost_8h" startline="81">myTimer</references>
-        <references refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="158" endline="165">off</references>
-        <references refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="142" endline="149">on</references>
+        <references refid="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" compoundref="boost_8cpp" startline="178" endline="185">off</references>
+        <references refid="class_boost_converter_1af5a2f93105e0a24634af5793d2c5c5b8" compoundref="boost_8cpp" startline="162" endline="169">on</references>
         <references refid="class_pool_elem_1a31550e6b3b1c0c189d567ced47d50f09" compoundref="mpelem_8h" startline="222">PoolElem::p1</references>
         <references refid="class_boost_converter_1af2570dd7bace0312470d962f29359fb3" compoundref="boost_8h" startline="80">pInMbox</references>
         <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
@@ -304,7 +309,7 @@ The function retrieve the user-specific data from the timer by calling kernel fu
         </inbodydescription>
         <location file="drv/pm/boost.h" line="77" column="17" bodyfile="drv/pm/boost.cpp" bodystart="61" bodyend="67"/>
         <references refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" compoundref="boost_8cpp" startline="77" endline="83">timer1_expired</references>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -323,10 +328,10 @@ The function retrieve the user-specific data from the timer by calling kernel fu
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/pm/boost.h" line="84" column="10" bodyfile="drv/pm/boost.cpp" bodystart="142" bodyend="149"/>
+        <location file="drv/pm/boost.h" line="84" column="10" bodyfile="drv/pm/boost.cpp" bodystart="162" bodyend="169"/>
         <references refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" compoundref="boost_8h" startline="90">gpio</references>
         <references refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" compoundref="boost_8h" startline="87">isOn</references>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_boost_converter_1a2f241b422ebdbd7a570178ceaebdd2fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -343,10 +348,10 @@ The function retrieve the user-specific data from the timer by calling kernel fu
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="drv/pm/boost.h" line="85" column="10" bodyfile="drv/pm/boost.cpp" bodystart="158" bodyend="165"/>
+        <location file="drv/pm/boost.h" line="85" column="10" bodyfile="drv/pm/boost.cpp" bodystart="178" bodyend="185"/>
         <references refid="class_boost_converter_1a59efc8a257eec260b74e8e4c7369be06" compoundref="boost_8h" startline="90">gpio</references>
         <references refid="class_boost_converter_1ae530c5af75c42fc2bd1fb588c38aa332" compoundref="boost_8h" startline="87">isOn</references>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_boost_converter_1a327de4628838031285a936d94ba1ae1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

@@ -1,5 +1,5 @@
 <map id="fs/flashfs.h" name="fs/flashfs.h">
-<area shape="rect" id="node1" title="Header file of flash file system controller module." alt="" coords="459,5,543,32"/>
+<area shape="rect" id="node1" title="Header file of flash file system controller module." alt="" coords="527,5,611,32"/>
 <area shape="rect" id="node2" href="$main_8cpp.html" title="Implementation of AXO Track main function." alt="" coords="5,80,80,107"/>
 <area shape="rect" id="node3" href="$config_8cpp.html" title="Implementation of Config class." alt="" coords="104,80,213,107"/>
 <area shape="rect" id="node4" href="$metric_8cpp.html" title="Implementation of metrics builder helper class." alt="" coords="237,80,349,107"/>
@@ -7,5 +7,6 @@
 <area shape="rect" id="node6" href="$flashfs_8cpp.html" title="Implementation of flash file system controller module." alt="" coords="520,80,619,107"/>
 <area shape="rect" id="node7" href="$mqtt__connector_8cpp.html" title="Implementation of MQTT connector class." alt="" coords="643,80,802,107"/>
 <area shape="rect" id="node8" href="$boot__cnt_8cpp.html" title="Implementation of boot count class." alt="" coords="826,80,945,107"/>
-<area shape="rect" id="node9" href="$keygen_8cpp.html" title="Implementation of TLS key generation class." alt="" coords="969,80,1079,107"/>
+<area shape="rect" id="node9" href="$wakeup__cnt_8cpp.html" title="Implementation of wakeup count class." alt="" coords="969,80,1108,107"/>
+<area shape="rect" id="node10" href="$keygen_8cpp.html" title="Implementation of TLS key generation class." alt="" coords="1133,80,1243,107"/>
 </map>

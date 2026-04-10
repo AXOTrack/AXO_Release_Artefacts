@@ -173,7 +173,7 @@ The constructor initializes a timer, prior to its first use by calling function 
         <references refid="class_timer_1a49f89df0e765bee620c337c51d397eff" compoundref="timer_8h" startline="50">duration</references>
         <references refid="class_timer_1a81b43df06332b4fef558297592bb7ff1" compoundref="timer_8h" startline="51">period</references>
         <references refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" compoundref="timer_8h" startline="49">timer_handle</references>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">MqttConnector::connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">MqttConnector::connect</referencedby>
         <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HttpConnector::HandleAdxlIdleInd</referencedby>
         <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector::HttpConnector</referencedby>
         <referencedby refid="class_power_mgr_x1_1a08ce8c479e15601bc1cd0b932a27606a" compoundref="power__mgr__x1_8cpp" startline="283" endline="372">PowerMgrX1::message_handler</referencedby>
@@ -182,9 +182,9 @@ The constructor initializes a timer, prior to its first use by calling function 
         <referencedby refid="class_fw_upd_ctrl_1a37177c6f6e9271bc6ed124518209357e" compoundref="update__ctrl_8cpp" startline="108" endline="118">FwUpdCtrl::startRetryTimer</referencedby>
         <referencedby refid="class_fw_upd_ctrl_1a6a1385149594b164e59fcfe124454c78" compoundref="update__ctrl_8cpp" startline="127" endline="131">FwUpdCtrl::startTimeout</referencedby>
         <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
-        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="679" endline="788">Adxl37x::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
         <referencedby refid="class_lte_monitor_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__monitor_8cpp" startline="137" endline="204">LteMonitor::task</referencedby>
         <referencedby refid="class_lte_connector_1a557b206172fbde7a204eb0d2376b7f71" compoundref="lte__connector_8cpp" startline="405" endline="523">LteConnector::task</referencedby>
@@ -254,9 +254,9 @@ The function starts a timer by calling function k_timer_start provided by the op
         <references refid="class_timer_1ada26f13d709bdab75b0edad1bb47d872" compoundref="timer_8h" startline="49">timer_handle</references>
         <referencedby refid="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" compoundref="timer_8cpp" startline="111" endline="115">restart</referencedby>
         <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">RmsTask::task</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
-        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="679" endline="788">Adxl37x::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_timer_1a22ee094ca3f45aa4156b97d34fe678bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

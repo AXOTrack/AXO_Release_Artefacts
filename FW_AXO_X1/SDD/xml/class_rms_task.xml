@@ -448,7 +448,7 @@ The function extracts the acceleration raw data of type struct <ref refid="struc
         <inbodydescription>
         </inbodydescription>
         <location file="data/rms.h" line="80" column="10" bodyfile="data/rms.cpp" bodystart="180" bodyend="280"/>
-        <references refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" compoundref="adxl37x_8h" startline="54">adxl37x_sensor_value::cnt</references>
+        <references refid="structadxl37x__sensor__value_1ae1d905c6ac1a0c9b96dca16153917334" compoundref="adxl37x_8h" startline="56">adxl37x_sensor_value::cnt</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba445c711aa8273b9d4069b3408d38b73d" compoundref="mpelem_8h" startline="62">eAdxl37xRmsData</references>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_hit_detector_1a97024cd8a7fd0e3745e7f01b69cae87e" compoundref="hit__detect_8h" startline="60" endline="60">HitDetector::getNumHits</references>
@@ -459,16 +459,16 @@ The function extracts the acceleration raw data of type struct <ref refid="struc
         <references refid="class_rms_task_1af2616f8a70c933b0d4808ed8dee71f8d" compoundref="rms_8h" startline="95">n_sample</references>
         <references refid="class_rms_task_1ad07bbc8841c16a2548141fbb12a7d0a2" compoundref="rms_8h" startline="94">n_seconds</references>
         <references refid="rms_8cpp_1a9a1a80dcaf876a3295a7653159a0e90a" compoundref="rms_8cpp" startline="129">pow2</references>
-        <references refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" compoundref="adxl37x_8h" startline="52">adxl37x_sensor_value::samples</references>
+        <references refid="structadxl37x__sensor__value_1ae20b54e2945611d5d22f250ecde234cf" compoundref="adxl37x_8h" startline="54">adxl37x_sensor_value::samples</references>
         <references refid="class_rms_task_1ab65df7a1efcbcbc1b38a951e1f1b3b95" compoundref="rms_8h" startline="93">samples_per_sec</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="60">adxl372_xyz_accel_data::x</references>
+        <references refid="structadxl372__xyz__accel__data_1ae1c2d516777e6b42af0d281c9ecc7375" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::x</references>
         <references refid="class_rms_task_1a406facadccb6ea06509e8d1ab28a7fdf" compoundref="rms_8h" startline="100">x_rms</references>
         <references refid="class_rms_task_1a6e3792671f5ef62d5c2b818baed632be" compoundref="rms_8h" startline="96">x_square_sum</references>
-        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="61">adxl372_xyz_accel_data::y</references>
+        <references refid="structadxl372__xyz__accel__data_1af77b1a54442f2443cf64a4766f916bcd" compoundref="adxl37x_8h" startline="63">adxl372_xyz_accel_data::y</references>
         <references refid="class_rms_task_1ad86d11bdd69cdf9d37d224cf76af962e" compoundref="rms_8h" startline="102">y_rms</references>
         <references refid="class_rms_task_1aea2710c37926604790a4c9ef3f65c5c8" compoundref="rms_8h" startline="97">y_square_sum</references>
-        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="62">adxl372_xyz_accel_data::z</references>
+        <references refid="structadxl372__xyz__accel__data_1abd938edbea27ed4f351dc19d69039222" compoundref="adxl37x_8h" startline="64">adxl372_xyz_accel_data::z</references>
         <references refid="class_rms_task_1a38b6b5532e9611be2456a98febe10864" compoundref="rms_8h" startline="104">z_rms</references>
         <references refid="class_rms_task_1a20a8e6578541c181c3c6abbbd287f136" compoundref="rms_8h" startline="98">z_square_sum</references>
         <referencedby refid="class_rms_task_1aaad4f4d77885dd2457f79c20ac27db19" compoundref="rms_8cpp" startline="315" endline="374">task</referencedby>

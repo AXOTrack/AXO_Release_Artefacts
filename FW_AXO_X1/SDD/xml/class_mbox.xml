@@ -401,10 +401,10 @@ The constructor store the name of the mailbox in private member variable myName.
         <referencedby refid="class_rms_task_1adc25c829b13636794219a3f61f31f34d" compoundref="rms_8cpp" startline="121" endline="126">RmsTask::timer1_expired</referencedby>
         <referencedby refid="class_shtcx_1adc25c829b13636794219a3f61f31f34d" compoundref="shtcx_8cpp" startline="106" endline="111">Shtcx::timer1_expired</referencedby>
         <referencedby refid="class_boost_converter_1adc25c829b13636794219a3f61f31f34d" compoundref="boost_8cpp" startline="77" endline="83">BoostConverter::timer1_expired</referencedby>
-        <referencedby refid="struct_adxl37x_1adc25c829b13636794219a3f61f31f34d" compoundref="adxl37x_8cpp" startline="506" endline="511">Adxl37x::timer1_expired</referencedby>
+        <referencedby refid="struct_adxl37x_1adc25c829b13636794219a3f61f31f34d" compoundref="adxl37x_8cpp" startline="582" endline="587">Adxl37x::timer1_expired</referencedby>
         <referencedby refid="class_lte_monitor_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__monitor_8cpp" startline="72" endline="78">LteMonitor::timer1_expired</referencedby>
         <referencedby refid="class_lte_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="lte__connector_8cpp" startline="279" endline="284">LteConnector::timer1_expired</referencedby>
-        <referencedby refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="636" endline="642">MqttConnector::timer1_expired</referencedby>
+        <referencedby refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="637" endline="643">MqttConnector::timer1_expired</referencedby>
         <referencedby refid="class_reset_ctrl_1adc25c829b13636794219a3f61f31f34d" compoundref="reset__ctrl_8cpp" startline="116" endline="121">ResetCtrl::timer1_expired</referencedby>
         <referencedby refid="class_fw_upd_ctrl_1adc25c829b13636794219a3f61f31f34d" compoundref="update__ctrl_8cpp" startline="79" endline="84">FwUpdCtrl::timer1_expired</referencedby>
         <referencedby refid="struct_a_d_converter_1a6d8339b874db1bc63ee9fee453ea933d" compoundref="adconverter_8cpp" startline="124" endline="131">ADConverter::timer1_expired</referencedby>
@@ -435,10 +435,10 @@ The function receive (read) the message of type <ref refid="class_pool_elem" kin
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
         <referencedby refid="struct_a_d_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adconverter_8cpp" startline="361" endline="407">ADConverter::task</referencedby>
         <referencedby refid="class_shtcx_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="shtcx_8cpp" startline="291" endline="335">Shtcx::task</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
-        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="679" endline="788">Adxl37x::task</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_power_mgr_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="power__mgr_8cpp" startline="237" endline="257">PowerMgr::task</referencedby>
         <referencedby refid="class_reset_ctrl_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="reset__ctrl_8cpp" startline="210" endline="243">ResetCtrl::task</referencedby>
         <referencedby refid="class_fw_upd_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="update_8cpp" startline="233" endline="290">FwUpd::task</referencedby>
@@ -538,16 +538,16 @@ The function retrieve the pointer to the receiver mailbox by calling member func
         <location file="rtos/mbox.h" line="100" column="17" bodyfile="rtos/mbox.cpp" bodystart="76" bodyend="87"/>
         <references refid="class_mbox_1aa4f60789a8ab9bb2e04b37a2e04a4d71" compoundref="mbox_8cpp" startline="133" endline="139">getMboxById</references>
         <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">write</references>
-        <referencedby refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" compoundref="adxl37x_8cpp" startline="363" endline="401">Adxl37x::fifo_handler</referencedby>
+        <referencedby refid="struct_adxl37x_1a715341f6ab01b559c6fd46d649bdb947" compoundref="adxl37x_8cpp" startline="439" endline="477">Adxl37x::fifo_handler</referencedby>
         <referencedby refid="class_fw_download_1a949503c431c3db37ae1a46e138b2ce24" compoundref="fsm_8cpp" startline="505" endline="518">FwDownload::handle_DlComplete</referencedby>
         <referencedby refid="class_fw_download_1a9bb661eb7e96c9043e0960d3a01af6a8" compoundref="fsm_8cpp" startline="536" endline="572">FwDownload::handle_DlFailed</referencedby>
         <referencedby refid="class_fw_triggered_1a7e95001afaeb737eb109dafdc1425b1d" compoundref="fsm_8cpp" startline="449" endline="473">FwTriggered::handle_FwInfo</referencedby>
         <referencedby refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">sendMsg</referencedby>
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
         <referencedby refid="class_hw_metrics_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="hw__metrics_8cpp" startline="120" endline="152">HwMetrics::task</referencedby>
-        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="603" endline="712">Adxl37x::task</referencedby>
+        <referencedby refid="struct_adxl37x_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl37x_8cpp" startline="679" endline="788">Adxl37x::task</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_data_manager_1a557b206172fbde7a204eb0d2376b7f71" compoundref="pdata_8cpp" startline="267" endline="352">DataManager::task</referencedby>
         <referencedby refid="class_rms_store_1a557b206172fbde7a204eb0d2376b7f71" compoundref="rms__store_8cpp" startline="159" endline="217">RmsStore::task</referencedby>
         <referencedby refid="class_battery_mgr_1a557b206172fbde7a204eb0d2376b7f71" compoundref="batt__mgr_8cpp" startline="114" endline="154">BatteryMgr::task</referencedby>
@@ -596,10 +596,10 @@ The function register the pointer to the mailbox by storing it in the array mBox
         <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501ae0e4b33a1c2e956fd6e3772274846bcf" compoundref="mbox_8h" startline="93">eMboxMax</references>
         <references refid="class_mbox_1a6477707ed67117dad4daef43e8a5f560" compoundref="mbox_8h" startline="127">mBoxAll</references>
         <referencedby refid="struct_a_d_converter_1adf17391456f6e7aa288440dd96357b52" compoundref="adconverter_8cpp" startline="254" endline="260">ADConverter::ADConverter</referencedby>
-        <referencedby refid="struct_adxl37x_1a97ada7139b0b7a2f9da33f33213e2a4d" compoundref="adxl37x_8cpp" startline="461" endline="472">Adxl37x::Adxl37x</referencedby>
+        <referencedby refid="struct_adxl37x_1a97ada7139b0b7a2f9da33f33213e2a4d" compoundref="adxl37x_8cpp" startline="537" endline="548">Adxl37x::Adxl37x</referencedby>
         <referencedby refid="class_adxl_data_store_1ab19b95ca9ddccefb6751a415d378d435" compoundref="adxl__store_8cpp" startline="57" endline="93">AdxlDataStore::AdxlDataStore</referencedby>
         <referencedby refid="class_battery_mgr_1ace116e681eb0d364d2896609269c0918" compoundref="batt__mgr_8cpp" startline="46" endline="70">BatteryMgr::BatteryMgr</referencedby>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter::BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_data_manager_1af88c046ebc43d084f223a0f735428663" compoundref="pdata_8cpp" startline="96" endline="106">DataManager::DataManager</referencedby>
         <referencedby refid="class_disp_task_1aee25f0863424116d053cbf1fdae5e961" compoundref="disptask_8cpp" startline="61" endline="78">DispTask::DispTask</referencedby>
         <referencedby refid="class_fw_upd_1a2733937cfc01da7cb39c6c3db38d1474" compoundref="update_8cpp" startline="55" endline="59">FwUpd::FwUpd</referencedby>
@@ -608,7 +608,7 @@ The function register the pointer to the mailbox by storing it in the array mBox
         <referencedby refid="class_hw_metrics_1a438ce09cd973637d1f79224263aecf2b" compoundref="hw__metrics_8cpp" startline="84" endline="89">HwMetrics::HwMetrics</referencedby>
         <referencedby refid="class_lte_connector_1a5e1168a86240e86f2371342437b8900a" compoundref="lte__connector_8cpp" startline="230" endline="243">LteConnector::LteConnector</referencedby>
         <referencedby refid="class_lte_monitor_1a52dfe336488f1e7407760266fe5de338" compoundref="lte__monitor_8cpp" startline="88" endline="97">LteMonitor::LteMonitor</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector::MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector::MqttConnector</referencedby>
         <referencedby refid="class_power_mgr_1a0e9dce728e1934dd3185de7b8d5cb957" compoundref="power__mgr_8cpp" startline="149" endline="168">PowerMgr::PowerMgr</referencedby>
         <referencedby refid="class_reset_ctrl_1ae8ed38498e7322a40aa6b0a2632af26d" compoundref="reset__ctrl_8cpp" startline="132" endline="144">ResetCtrl::ResetCtrl</referencedby>
         <referencedby refid="class_rms_store_1afa16a4250cde665dfc713e95e1c42f15" compoundref="rms__store_8cpp" startline="45" endline="58">RmsStore::RmsStore</referencedby>
@@ -716,13 +716,13 @@ The function request a message from message pool, set message type to parameter 
         <referencedby refid="class_fw_triggered_1a22de52c28e140efcdb90423ce29714eb" compoundref="fsm_8cpp" startline="428" endline="433">FwTriggered::handle_timer_exp</referencedby>
         <referencedby refid="class_fw_download_1a22de52c28e140efcdb90423ce29714eb" compoundref="fsm_8cpp" startline="589" endline="613">FwDownload::handle_timer_exp</referencedby>
         <referencedby refid="class_http_connector_1afe1ca149544e23e510e75d469628107a" compoundref="http__connector_8cpp" startline="797" endline="845">HttpConnector::HandleAdxlIdleInd</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="890" endline="897">MqttConnector::HandleBoostOffReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="870" endline="877">MqttConnector::HandleBoostOnReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="891" endline="898">MqttConnector::HandleBoostOffReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="871" endline="878">MqttConnector::HandleBoostOnReq</referencedby>
         <referencedby refid="class_disp_task_1a54ee52cb2309dee2eb2c1842fd1bb7a1" compoundref="disptask_8cpp" startline="177" endline="181">DispTask::HandleCalcDisplacementReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="850" endline="857">MqttConnector::HandleColdStartReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="933" endline="941">MqttConnector::HandleDisableADXL</referencedby>
+        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="851" endline="858">MqttConnector::HandleColdStartReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="934" endline="942">MqttConnector::HandleDisableADXL</referencedby>
         <referencedby refid="class_disp_task_1a94ffa2ab3108c5373e8caad61ffe2f48" compoundref="disptask_8cpp" startline="254" endline="283">DispTask::HandleDispFirstEntries</referencedby>
-        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="954" endline="962">MqttConnector::HandleEnableADXL</referencedby>
+        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="955" endline="963">MqttConnector::HandleEnableADXL</referencedby>
         <referencedby refid="class_disp_task_1a5b2ffff9e2ea4e58dc40300aab0ab775" compoundref="disptask_8cpp" startline="204" endline="229">DispTask::HandleRawDataStatus</referencedby>
         <referencedby refid="class_http_connector_1a9670125458a21e0df605ff8ec0a72cc3" compoundref="http__connector_8cpp" startline="732" endline="743">HttpConnector::HandleRcvdDispData</referencedby>
         <referencedby refid="class_http_connector_1a70b7c8bda814beee628f8625439b59cf" compoundref="http__connector_8cpp" startline="695" endline="714">HttpConnector::HandleRcvdRawData</referencedby>
@@ -733,9 +733,9 @@ The function request a message from message pool, set message type to parameter 
         <referencedby refid="class_adxl_data_store_1afcbbf8e1a94b3b0e37eee9ee3300cb15" compoundref="adxl__store_8cpp" startline="781" endline="804">AdxlDataStore::notifyRawDataStatus</referencedby>
         <referencedby refid="class_adxl_data_store_1ac058b87e11aed87cf5da0f7963edd2b5" compoundref="adxl__store_8cpp" startline="756" endline="759">AdxlDataStore::notifySender</referencedby>
         <referencedby refid="class_adxl_data_store_1a607e1620392c10d97bc7d9280f3df928" compoundref="adxl__store_8cpp" startline="767" endline="770">AdxlDataStore::notifyStorageFull</referencedby>
-        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="87" endline="101">MqttConnector::on_connack</referencedby>
-        <referencedby refid="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" compoundref="mqtt__connector_8cpp" startline="112" endline="118">MqttConnector::on_disconnect</referencedby>
-        <referencedby refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="163" endline="287">MqttConnector::on_publish</referencedby>
+        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="88" endline="102">MqttConnector::on_connack</referencedby>
+        <referencedby refid="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" compoundref="mqtt__connector_8cpp" startline="113" endline="119">MqttConnector::on_disconnect</referencedby>
+        <referencedby refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="164" endline="288">MqttConnector::on_publish</referencedby>
         <referencedby refid="class_fw_upd_ctrl_1ad91120d26573451fb5eda5a3c735a698" compoundref="update__ctrl_8cpp" startline="208" endline="218">FwUpdCtrl::otaFwConfirm</referencedby>
         <referencedby refid="class_fw_upd_ctrl_1a8aa799fd7cf777ded1db827ba946b07a" compoundref="update__ctrl_8cpp" startline="229" endline="251">FwUpdCtrl::otaFwReject</referencedby>
         <referencedby refid="class_fw_upd_ctrl_1a1f13c32a42f24d5e28b53fa9b3cd9b81" compoundref="update__ctrl_8cpp" startline="154" endline="164">FwUpdCtrl::otaStartConfirm</referencedby>
@@ -743,12 +743,12 @@ The function request a message from message pool, set message type to parameter 
         <referencedby refid="class_data_manager_1afdfa16a6f13166684940d2ce4f0bf91e" compoundref="pdata_8cpp" startline="207" endline="219">DataManager::publishMeasurements</referencedby>
         <referencedby refid="class_data_manager_1ad22a1bbf64905f73ed28447a50ae3b21" compoundref="pdata_8cpp" startline="184" endline="195">DataManager::publishMetrics</referencedby>
         <referencedby refid="class_hw_metrics_1ae4499ee0125936e10dde278b4a18c289" compoundref="hw__metrics_8cpp" startline="44" endline="52">HwMetrics::report</referencedby>
-        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="412" endline="426">Adxl37x::report</referencedby>
+        <referencedby refid="struct_adxl37x_1ae4499ee0125936e10dde278b4a18c289" compoundref="adxl37x_8cpp" startline="488" endline="502">Adxl37x::report</referencedby>
         <referencedby refid="class_lte_monitor_1a60fd65c00183271380a951ee700141da" compoundref="lte__monitor_8cpp" startline="496" endline="500">LteMonitor::reportBattVoltage</referencedby>
         <referencedby refid="class_power_mgr_1ac8f276813af104107d1fde5b6e9c2533" compoundref="power__mgr_8cpp" startline="102" endline="107">PowerMgr::reportBootCnt</referencedby>
         <referencedby refid="class_lte_monitor_1a0400f54e33cecd307fb744d9a2892a26" compoundref="lte__monitor_8cpp" startline="565" endline="569">LteMonitor::reportFwVersion</referencedby>
         <referencedby refid="class_shtcx_1a783d547e346f24d0673dd0741a3074af" compoundref="shtcx_8cpp" startline="233" endline="239">Shtcx::reportHumidity</referencedby>
-        <referencedby refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" compoundref="adxl37x_8cpp" startline="437" endline="451">Adxl37x::reportHwStatus</referencedby>
+        <referencedby refid="struct_adxl37x_1a1f115a7336973884012f7fe5f5c095e2" compoundref="adxl37x_8cpp" startline="513" endline="527">Adxl37x::reportHwStatus</referencedby>
         <referencedby refid="class_lte_monitor_1a074ff3aaea45d5c45eba6a99d1a79ce5" compoundref="lte__monitor_8cpp" startline="640" endline="644">LteMonitor::reportIMEI</referencedby>
         <referencedby refid="class_lte_monitor_1af2b8d2875b05dc8922b083300756669a" compoundref="lte__monitor_8cpp" startline="684" endline="688">LteMonitor::reportIMSI</referencedby>
         <referencedby refid="class_lte_monitor_1a6bc897e3a9430a720889ab4bd8e5364b" compoundref="lte__monitor_8cpp" startline="580" endline="584">LteMonitor::reportLinkQuality</referencedby>
@@ -792,7 +792,7 @@ The function request a message from message pool, set message type to parameter 
         <referencedby refid="class_adxl_data_store_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="adxl__store_8cpp" startline="1126" endline="1322">AdxlDataStore::task</referencedby>
         <referencedby refid="class_disp_task_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="disptask_8cpp" startline="1107" endline="1193">DispTask::task</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">HttpConnector::task</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">MqttConnector::task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">MqttConnector::task</referencedby>
         <referencedby refid="class_rms_task_1ab9179e1ad434ab3966aac5e0312caef8" compoundref="rms_8cpp" startline="180" endline="280">RmsTask::update_rms</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mbox_1af67bd3264b53e5e891c6700879482957" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">

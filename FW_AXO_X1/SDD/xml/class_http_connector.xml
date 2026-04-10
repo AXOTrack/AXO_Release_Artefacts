@@ -20,7 +20,7 @@
         <location file="net/http_connector.h" line="121" column="10" bodyfile="net/http_connector.h" bodystart="121" bodyend="-1"/>
         <referencedby refid="class_http_connector_1af8d925a524b176e256196165d672fdec" compoundref="http__connector_8cpp" startline="880" endline="886">delayTimer_expired</referencedby>
         <referencedby refid="class_http_connector_1a1ac5b7fa21b7ffe5b6cc6fb7521a4986" compoundref="http__connector_8cpp" startline="72" endline="87">HttpConnector</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
         <referencedby refid="class_http_connector_1a600ebc0f0811da01cd471a04ef4f3be5" compoundref="http__connector_8cpp" startline="912" endline="918">oneDayTimer_expired</referencedby>
         <referencedby refid="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="http__connector_8cpp" startline="982" endline="1117">task</referencedby>
       </memberdef>
@@ -510,7 +510,7 @@ The constructor allocate and register a mailbox and allocates and initialize the
         <references refid="struct__st_cfg_datalog_1a4d0c86f7bdfa9f5bd4cfffcf93eb022a" compoundref="config_8h" startline="196">_stCfgDatalog::rms_thres</references>
         <references refid="class_http_connector_1a9cb24091c218e00bfc1a7816b5e1bb1b" compoundref="http__connector_8h" startline="157">rms_z_Thres</references>
         <references refid="class_e_c_d_s_a_signer_1ac6bf3c6917d0ae57fc81c4de5378492b" compoundref="ecdsasign_8cpp" startline="144" endline="153">ECDSASigner::setPrivateKey</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_http_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>

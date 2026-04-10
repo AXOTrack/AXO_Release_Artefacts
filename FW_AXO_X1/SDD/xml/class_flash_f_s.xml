@@ -190,7 +190,7 @@
         <references refid="class_flash_f_s_1ac66040f0beb44ae01a0a044689eb94a9" compoundref="flashfs_8h" startline="375">lfs</references>
         <references refid="class_flash_f_s_1a6f7aa789fe055c0290a9b9ab17716835" compoundref="flashfs_8h" startline="379">mp</references>
         <referencedby refid="class_flash_f_s_1ab2021306727b099bd7329f3f8e97ee39" compoundref="flashfs_8cpp" startline="645" endline="657">clear_fs</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">MqttConnector::HandleFsErase</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">MqttConnector::HandleFsErase</referencedby>
         <referencedby refid="class_flash_f_s_1a43c889836af2b96a42df3dc3c114565f" compoundref="flashfs_8cpp" startline="116" endline="116">~FlashFS</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a32e4cef9beb0262cea4bdafb5b998276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -224,7 +224,7 @@
         <referencedby refid="class_config_1a6e68de84123711b6e53a49c3279606ea" compoundref="config_8cpp" startline="255" endline="263">Config::deleteConfigFile</referencedby>
         <referencedby refid="class_key_gen_1a290303ddeb22987037be90caca412f85" compoundref="keygen_8cpp" startline="350" endline="370">KeyGen::deleteKeyFiles</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a385ae3970c3575caf3a7213df1ddca27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -436,14 +436,17 @@
         <inbodydescription>
         </inbodydescription>
         <location file="fs/flashfs.h" line="178" column="15" bodyfile="fs/flashfs.cpp" bodystart="306" bodyend="320"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" compoundref="keygen_8cpp" startline="283" endline="303">KeyGen::getPrivateKey</referencedby>
         <referencedby refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" compoundref="keygen_8cpp" startline="261" endline="273">KeyGen::getPublicKey</referencedby>
+        <referencedby refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="wakeup__cnt_8cpp" startline="68" endline="90">WakeupCnt::init</referencedby>
         <referencedby refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="keygen_8cpp" startline="92" endline="173">KeyGen::init</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
         <referencedby refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" compoundref="keygen_8cpp" startline="237" endline="248">KeyGen::setKeyTransfered</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" compoundref="wakeup__cnt_8cpp" startline="110" endline="123">WakeupCnt::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1aa7b20931f6a6e3bdae605c32f7392916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -474,14 +477,17 @@
         <inbodydescription>
         </inbodydescription>
         <location file="fs/flashfs.h" line="187" column="9" bodyfile="fs/flashfs.cpp" bodystart="322" bodyend="328"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" compoundref="keygen_8cpp" startline="283" endline="303">KeyGen::getPrivateKey</referencedby>
         <referencedby refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" compoundref="keygen_8cpp" startline="261" endline="273">KeyGen::getPublicKey</referencedby>
+        <referencedby refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="wakeup__cnt_8cpp" startline="68" endline="90">WakeupCnt::init</referencedby>
         <referencedby refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="keygen_8cpp" startline="92" endline="173">KeyGen::init</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
         <referencedby refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" compoundref="keygen_8cpp" startline="237" endline="248">KeyGen::setKeyTransfered</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" compoundref="wakeup__cnt_8cpp" startline="110" endline="123">WakeupCnt::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1ab40ac03c5347c00a05c803e41d6c735c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>ssize_t</type>
@@ -539,6 +545,7 @@
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" compoundref="keygen_8cpp" startline="283" endline="303">KeyGen::getPrivateKey</referencedby>
         <referencedby refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" compoundref="keygen_8cpp" startline="261" endline="273">KeyGen::getPublicKey</referencedby>
+        <referencedby refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="wakeup__cnt_8cpp" startline="68" endline="90">WakeupCnt::init</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a7a26572740b10b6df99e368feb0f4e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -594,12 +601,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="fs/flashfs.h" line="212" column="13" bodyfile="fs/flashfs.cpp" bodystart="338" bodyend="343"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="keygen_8cpp" startline="92" endline="173">KeyGen::init</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
         <referencedby refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" compoundref="keygen_8cpp" startline="237" endline="248">KeyGen::setKeyTransfered</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" compoundref="wakeup__cnt_8cpp" startline="110" endline="123">WakeupCnt::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a1339e7982350417e8d1ea764889e5fa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -630,10 +639,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="fs/flashfs.h" line="221" column="9" bodyfile="fs/flashfs.cpp" bodystart="345" bodyend="350"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" compoundref="wakeup__cnt_8cpp" startline="110" endline="123">WakeupCnt::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1aa62db77a172f205375af7f1be890cdae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>off_t</type>
@@ -688,10 +699,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="fs/flashfs.h" line="234" column="11" bodyfile="fs/flashfs.cpp" bodystart="352" bodyend="357"/>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" compoundref="wakeup__cnt_8cpp" startline="110" endline="123">WakeupCnt::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a240785d4c32b9b0fe12dfd4b77083c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>off_t</type>
@@ -1142,7 +1155,7 @@
         <location file="fs/flashfs.h" line="360" column="10" bodyfile="fs/flashfs.cpp" bodystart="532" bodyend="542"/>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">inst</references>
         <references refid="class_flash_f_s_1a3c944d3ce468da33703772c73d3fa6a2" compoundref="flashfs_8cpp" startline="276" endline="303">statvfs</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1164,26 +1177,28 @@ In case there is no instance created, the constructor will be called to create t
         <inbodydescription>
         </inbodydescription>
         <location file="fs/flashfs.h" line="67" column="20" bodyfile="fs/flashfs.cpp" bodystart="110" bodyend="114"/>
-        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="133">BoostConverter::BoostConverter</referencedby>
+        <referencedby refid="class_boost_converter_1a88773507fbf105e4141ed56ca8ebd3b0" compoundref="boost_8cpp" startline="101" endline="153">BoostConverter::BoostConverter</referencedby>
         <referencedby refid="class_boot_cnt_1acf77f1606daf53b04879960d5e53d233" compoundref="boot__cnt_8cpp" startline="62" endline="82">BootCnt::BootCnt</referencedby>
         <referencedby refid="class_flash_f_s_1a786ec25c34eab2518e86648f4482ab22" compoundref="flashfs_8cpp" startline="532" endline="542">CheckAvailableSpace</referencedby>
         <referencedby refid="class_flash_f_s_1ab2021306727b099bd7329f3f8e97ee39" compoundref="flashfs_8cpp" startline="645" endline="657">clear_fs</referencedby>
         <referencedby refid="class_config_1a6e68de84123711b6e53a49c3279606ea" compoundref="config_8cpp" startline="255" endline="263">Config::deleteConfigFile</referencedby>
         <referencedby refid="class_key_gen_1a290303ddeb22987037be90caca412f85" compoundref="keygen_8cpp" startline="350" endline="370">KeyGen::deleteKeyFiles</referencedby>
-        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="640" endline="701">MetricsBuilder::finalize</referencedby>
+        <referencedby refid="class_metrics_builder_1a061eb4d725222504949f9eb49c619fd5" compoundref="metric_8cpp" startline="641" endline="710">MetricsBuilder::finalize</referencedby>
         <referencedby refid="class_flash_f_s_1ae3ec98d5ce0f5d2c3ae88ff4f5d75f83" compoundref="flashfs_8cpp" startline="544" endline="601">GetFsStat</referencedby>
         <referencedby refid="class_key_gen_1ac3cd9437903afea95036a7720881218d" compoundref="keygen_8cpp" startline="283" endline="303">KeyGen::getPrivateKey</referencedby>
         <referencedby refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" compoundref="keygen_8cpp" startline="261" endline="273">KeyGen::getPublicKey</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">MqttConnector::HandleFsErase</referencedby>
-        <referencedby refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="992" endline="996">MqttConnector::HandleFsStatus</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">MqttConnector::HandleFsErase</referencedby>
+        <referencedby refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="993" endline="997">MqttConnector::HandleFsStatus</referencedby>
+        <referencedby refid="class_wakeup_cnt_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="wakeup__cnt_8cpp" startline="68" endline="90">WakeupCnt::init</referencedby>
         <referencedby refid="class_key_gen_1a02fd73d861ef2e4aabb38c0c9ff82947" compoundref="keygen_8cpp" startline="92" endline="173">KeyGen::init</referencedby>
         <referencedby refid="class_config_1a0dbf501f1647b6da5f7ce06af2db6bcc" compoundref="config_8cpp" startline="121" endline="169">Config::loadFromFile</referencedby>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
         <referencedby refid="class_config_1aaa33760cac1d5a80b4686c3015d0f23d" compoundref="config_8cpp" startline="191" endline="225">Config::saveToFile</referencedby>
         <referencedby refid="class_key_gen_1a2ea5b52157e7110397fe476c61fcfd91" compoundref="keygen_8cpp" startline="237" endline="248">KeyGen::setKeyTransfered</referencedby>
         <referencedby refid="class_flash_f_s_1a911899d9dc11ee830ff2731e57067ee2" compoundref="flashfs_8cpp" startline="609" endline="616">shell_file_tree</referencedby>
         <referencedby refid="class_flash_f_s_1aa4c622a4ff7fdde9e5cf80508294fd3a" compoundref="flashfs_8cpp" startline="625" endline="636">shell_fs_stat</referencedby>
-        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="203" endline="283">BoostConverter::task</referencedby>
+        <referencedby refid="class_boost_converter_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="boost_8cpp" startline="223" endline="303">BoostConverter::task</referencedby>
+        <referencedby refid="class_wakeup_cnt_1ac5c54df7ed3b930268c8d7752c101725" compoundref="wakeup__cnt_8cpp" startline="110" endline="123">WakeupCnt::update</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a6a2c6064f720f8084d3c8202c98b9660" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1262,7 +1277,7 @@ In case there is no instance created, the constructor will be called to create t
         <location file="fs/flashfs.h" line="103" column="17" bodyfile="fs/flashfs.cpp" bodystart="144" bodyend="151"/>
         <references refid="class_flash_f_s_1af4e67fd0e66b799a025531d100e0cbc1" compoundref="flashfs_8cpp" startline="118" endline="142">erase</references>
         <referencedby refid="class_flash_f_s_1ab2021306727b099bd7329f3f8e97ee39" compoundref="flashfs_8cpp" startline="645" endline="657">clear_fs</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">MqttConnector::HandleFsErase</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">MqttConnector::HandleFsErase</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_flash_f_s_1a8e02ff54c59a0fad2ae4850d14e5d147" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>

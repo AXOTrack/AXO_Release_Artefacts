@@ -1091,7 +1091,7 @@ Function initializes transmit buffer and set the OP code command cmd and start a
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000007"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
+<xrefsect id="todo_1_todo000008"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
 </xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>len</parametername>
@@ -1101,7 +1101,7 @@ Function initializes transmit buffer and set the OP code command cmd and start a
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000008"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
+<xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
 </xrefdescription></xrefsect></para>
 <para><simplesect kind="return"><para>returns return value of method spi_transceive (0 no error, otherwise error code)</para>
 </simplesect>
@@ -1561,7 +1561,7 @@ The function send the command CMD_DPD_EXIT to exit deep power down mode to MRAM 
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000009"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
+<xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
 </xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>len</parametername>
@@ -1571,7 +1571,7 @@ The function send the command CMD_DPD_EXIT to exit deep power down mode to MRAM 
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
+<xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
 </xrefdescription></xrefsect></para>
 <para><simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
 </simplesect>
@@ -1637,7 +1637,7 @@ Function initializes transmit and receive buffer, set the read read status regis
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
+<xrefsect id="todo_1_todo000012"><xreftitle>Todo</xreftitle><xrefdescription><para>remove </para>
 </xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>len</parametername>
@@ -1647,7 +1647,7 @@ Function initializes transmit and receive buffer, set the read read status regis
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000012"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
+<xrefsect id="todo_1_todo000013"><xreftitle>Todo</xreftitle><xrefdescription><para>remove</para>
 </xrefdescription></xrefsect></para>
 <para><simplesect kind="return"><para>returns return 0 on success, otherwise error code</para>
 </simplesect>
@@ -1670,7 +1670,7 @@ Function initializes transmit and receive buffer, set the read read configuratio
 </para>
 <para><simplesect kind="par"><title>Detailed Description </title><para>The SPI MRAM class handle the storage of the acceleration raw data in MRAM. It provides methods to initialize and erase MRAM, to read and write the data, to push MRAM into power saving mode or release from it, to dump the data and to read and ship the devcie ID. </para>
 </simplesect>
-<xrefsect id="todo_1_todo000014"><xreftitle>Todo</xreftitle><xrefdescription><para>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system.</para>
+<xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para>May we need to implement also a selftest function if provided from maufacturer!! Furthermore it provides a private method to test the integrity of the FRAM at startup of the system.</para>
 </xrefdescription></xrefsect></para>
     </detaileddescription>
     <collaborationgraph>

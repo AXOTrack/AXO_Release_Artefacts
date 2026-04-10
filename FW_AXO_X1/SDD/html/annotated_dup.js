@@ -29,6 +29,7 @@ var annotated_dup =
     [ "BootCnt", "class_boot_cnt.html", "class_boot_cnt" ],
     [ "certmgr", "classcertmgr.html", "classcertmgr" ],
     [ "CFilter", "class_c_filter.html", "class_c_filter" ],
+    [ "clk_cli", "classclk__cli.html", null ],
     [ "CMatrix", "class_c_matrix.html", "class_c_matrix" ],
     [ "Config", "class_config.html", "class_config" ],
     [ "DataManager", "class_data_manager.html", "class_data_manager" ],
@@ -85,5 +86,6 @@ var annotated_dup =
     [ "spimram", "classspimram.html", "classspimram" ],
     [ "Task", "class_task.html", "class_task" ],
     [ "Timer", "class_timer.html", "class_timer" ],
-    [ "topic", "structtopic.html", "structtopic" ]
+    [ "topic", "structtopic.html", "structtopic" ],
+    [ "WakeupCnt", "class_wakeup_cnt.html", "class_wakeup_cnt" ]
 ];

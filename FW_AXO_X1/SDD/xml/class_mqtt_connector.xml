@@ -18,10 +18,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="217" column="10" bodyfile="net/mqtt_connector.h" bodystart="217" bodyend="-1"/>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
-        <referencedby refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="636" endline="642">timer1_expired</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="637" endline="643">timer1_expired</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" prot="public" static="no" mutable="no">
         <type><ref refid="class_timer" kindref="compound">Timer</ref> *</type>
@@ -36,9 +36,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="218" column="11" bodyfile="net/mqtt_connector.h" bodystart="218" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-attrib">
@@ -55,9 +55,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="236" column="17" bodyfile="net/mqtt_connector.h" bodystart="236" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</referencedby>
-        <referencedby refid="class_mqtt_connector_1a961bb32487217f663830f3f42d4ff539" compoundref="mqtt__connector_8cpp" startline="429" endline="437">getDeviceId</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1a961bb32487217f663830f3f42d4ff539" compoundref="mqtt__connector_8cpp" startline="430" endline="438">getDeviceId</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a094ac2451b2e4dcdfc30025893af003e" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -73,7 +73,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="238" column="17" bodyfile="net/mqtt_connector.h" bodystart="238" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a0186325db214ae47eb0d12e85614ddc7" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -89,8 +89,8 @@ Device publishes measurement data to platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="242" column="17" bodyfile="net/mqtt_connector.h" bodystart="242" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a78c27009cb709528c84d69c00238e370" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -106,8 +106,8 @@ Device publishes internal metric information to the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="246" column="17" bodyfile="net/mqtt_connector.h" bodystart="246" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1ab6fa18add1c44966d6f15ba03a2e078f" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -123,8 +123,8 @@ Device publishes public TLS key to the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="250" column="17" bodyfile="net/mqtt_connector.h" bodystart="250" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -140,18 +140,18 @@ Device publishes public TLS key to the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="255" column="17" bodyfile="net/mqtt_connector.h" bodystart="255" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" compoundref="mqtt__connector_8cpp" startline="393" endline="396">cmd_subscribe</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="890" endline="897">HandleBoostOffReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="870" endline="877">HandleBoostOnReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="850" endline="857">HandleColdStartReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="933" endline="941">HandleDisableADXL</referencedby>
-        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="954" endline="962">HandleEnableADXL</referencedby>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">HandleFactoryDefault</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">HandleFsErase</referencedby>
-        <referencedby refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="992" endline="996">HandleFsStatus</referencedby>
-        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="975" endline="979">HandleGetConfig</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" compoundref="mqtt__connector_8cpp" startline="394" endline="397">cmd_subscribe</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="891" endline="898">HandleBoostOffReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="871" endline="878">HandleBoostOnReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="851" endline="858">HandleColdStartReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="934" endline="942">HandleDisableADXL</referencedby>
+        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="955" endline="963">HandleEnableADXL</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">HandleFsErase</referencedby>
+        <referencedby refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="993" endline="997">HandleFsStatus</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="976" endline="980">HandleGetConfig</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a54561314c70600f9ab3257737e0ee83a" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -167,9 +167,9 @@ Device receives OTA update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="261" column="17" bodyfile="net/mqtt_connector.h" bodystart="261" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" compoundref="mqtt__connector_8cpp" startline="405" endline="408">ota_subscribe</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" compoundref="mqtt__connector_8cpp" startline="406" endline="409">ota_subscribe</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a7d7ac94e3cc35f3da08b057e91193fb4" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -185,8 +185,8 @@ Device receives OTA update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="267" column="17" bodyfile="net/mqtt_connector.h" bodystart="267" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a758eb6f193763f906c39b6a966a62d9a" prot="private" static="yes" mutable="no">
         <type>char</type>
@@ -202,9 +202,9 @@ Device receives configuration update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="271" column="17" bodyfile="net/mqtt_connector.h" bodystart="271" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" compoundref="mqtt__connector_8cpp" startline="417" endline="420">config_subscribe</referencedby>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">HandleNewConfiguration</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" compoundref="mqtt__connector_8cpp" startline="418" endline="421">config_subscribe</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -221,7 +221,7 @@ Device receives configuration update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="276" column="10" bodyfile="net/mqtt_connector.h" bodystart="276" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -236,7 +236,7 @@ Device receives configuration update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="278" column="10" bodyfile="net/mqtt_connector.h" bodystart="278" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1ad9c457d93ccf594637c0c741a779d265" prot="private" static="no" mutable="no">
         <type>int32_t</type>
@@ -251,7 +251,7 @@ Device receives configuration update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="281" column="13" bodyfile="net/mqtt_connector.h" bodystart="281" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="336" endline="357">publish</referencedby>
+        <referencedby refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="337" endline="358">publish</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1aa5413839d753bda01f2eb458950592f4" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -266,8 +266,8 @@ Device receives configuration update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="283" column="13" bodyfile="net/mqtt_connector.h" bodystart="283" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</referencedby>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_mqtt_connector_1a27a7f73334bad76cf4ec948ef8f75692" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -282,8 +282,8 @@ Device receives configuration update information from the platform. </para>
         <inbodydescription>
         </inbodydescription>
         <location file="net/mqtt_connector.h" line="284" column="14" bodyfile="net/mqtt_connector.h" bodystart="284" bodyend="-1"/>
-        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="603" endline="609">configure</referencedby>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" compoundref="mqtt__connector_8cpp" startline="604" endline="610">configure</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -316,14 +316,14 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="209" column="14" bodyfile="net/mqtt_connector.cpp" bodystart="535" bodyend="582"/>
+        <location file="net/mqtt_connector.h" line="209" column="14" bodyfile="net/mqtt_connector.cpp" bodystart="536" bodyend="583"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="class_mqtt_connector_1a758eb6f193763f906c39b6a966a62d9a" compoundref="mqtt__connector_8h" startline="271">config_topic</references>
         <references refid="mqtt__connector_8h_1af23d98e946f8ff7f197e78695d2f815a" compoundref="mqtt__connector_8h" startline="160">CONNECT_RETRY_DURATION</references>
         <references refid="class_mqtt_connector_1a55313def4e54a52e56958a4345969804" compoundref="mqtt__connector_8h" startline="236">device_id</references>
         <references refid="class_mbox_1ab25abab8f5feb6eabd22560a1dbc2501a7309ae9b160eab6673b6d4b35900e917" compoundref="mbox_8h" startline="69">Mbox::eMqttConnector</references>
         <references refid="class_mqtt_connector_1a7d7ac94e3cc35f3da08b057e91193fb4" compoundref="mqtt__connector_8h" startline="267">event_topic</references>
-        <references refid="class_mqtt_connector_1a961bb32487217f663830f3f42d4ff539" compoundref="mqtt__connector_8cpp" startline="429" endline="437">getDeviceId</references>
+        <references refid="class_mqtt_connector_1a961bb32487217f663830f3f42d4ff539" compoundref="mqtt__connector_8cpp" startline="430" endline="438">getDeviceId</references>
         <references refid="class_mqtt_connector_1a0186325db214ae47eb0d12e85614ddc7" compoundref="mqtt__connector_8h" startline="242">measurement_topic</references>
         <references refid="mqtt__connector_8h_1acbf7bd73ff3044b6d49d249ba5309eea" compoundref="mqtt__connector_8h" startline="130">MEP_COMMAND_TOPIC</references>
         <references refid="mqtt__connector_8h_1a1c2b9e4617273666758b0938e99d1ba0" compoundref="mqtt__connector_8h" startline="139">MEP_CONFIG_TOPIC</references>
@@ -339,7 +339,7 @@ The constructor allocate and register a mailbox and allocates and initialize the
         <references refid="class_mqtt_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="mqtt__connector_8h" startline="217">pInMbox</references>
         <references refid="class_mqtt_connector_1ab6fa18add1c44966d6f15ba03a2e078f" compoundref="mqtt__connector_8h" startline="250">pubkey_topic</references>
         <references refid="class_mbox_1a7cc9ae29f29d5e1a0399ade0983118d8" compoundref="mbox_8cpp" startline="115" endline="120">Mbox::registerMbox</references>
-        <references refid="class_mqtt_connector_1aaa25421e04a507bcced8f9bb02af5213" compoundref="mqtt__connector_8cpp" startline="621" endline="627">timer_cb</references>
+        <references refid="class_mqtt_connector_1aaa25421e04a507bcced8f9bb02af5213" compoundref="mqtt__connector_8cpp" startline="622" endline="628">timer_cb</references>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ab6c36ce06f69e6726531bb97d2cbebee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -369,7 +369,7 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="211" column="13" bodyfile="net/mqtt_connector.cpp" bodystart="590" bodyend="592"/>
+        <location file="net/mqtt_connector.h" line="211" column="13" bodyfile="net/mqtt_connector.cpp" bodystart="591" bodyend="593"/>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ae369b3765489ee8bd0ea791c1843630f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -387,12 +387,12 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="213" column="18" bodyfile="net/mqtt_connector.cpp" bodystart="603" bodyend="609"/>
+        <location file="net/mqtt_connector.h" line="213" column="18" bodyfile="net/mqtt_connector.cpp" bodystart="604" bodyend="610"/>
         <references refid="class_config_1af106da5a3b67f694963b29186df4b3c1" compoundref="config_8cpp" startline="728" endline="730">Config::getCfgMetrics</references>
         <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
         <references refid="struct__st_cfg_metrics_1ab8b9782271e1e1dbc979e54616b4f1e2" compoundref="config_8h" startline="179">_stCfgMetrics::interval</references>
         <references refid="class_mqtt_connector_1a27a7f73334bad76cf4ec948ef8f75692" compoundref="mqtt__connector_8h" startline="284">metricsInterval</references>
-        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="207" endline="330">main</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="214" endline="349">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -446,13 +446,13 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="215" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="1368" bodyend="1618"/>
-        <references refid="class_mqtt_connector_1ac54f53dc342019e8db34f4aa581a5792" compoundref="mqtt__connector_8cpp" startline="519" endline="523">abort</references>
+        <location file="net/mqtt_connector.h" line="215" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="1369" bodyend="1621"/>
+        <references refid="class_mqtt_connector_1ac54f53dc342019e8db34f4aa581a5792" compoundref="mqtt__connector_8cpp" startline="520" endline="524">abort</references>
         <references refid="classcertmgr_1a119aab00792ccace8235e70745c29498">certmgr::ClearBrokerSwitchRequested</references>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
-        <references refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</references>
+        <references refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</references>
         <references refid="class_mqtt_connector_1ab36823025f12a809217f7771125658c2" compoundref="mqtt__connector_8h" startline="276">connected</references>
-        <references refid="class_mqtt_connector_1a960705de531a20389fb29928d43258c3" compoundref="mqtt__connector_8cpp" startline="506" endline="510">disconnect</references>
+        <references refid="class_mqtt_connector_1a960705de531a20389fb29928d43258c3" compoundref="mqtt__connector_8cpp" startline="507" endline="511">disconnect</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" compoundref="mpelem_8h" startline="141">eBoostOffReq</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" compoundref="mpelem_8h" startline="140">eBoostOnReq</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5ee4ee822dd89d4325d82f5746e3f8cd" compoundref="mpelem_8h" startline="144">eCertJovia1</references>
@@ -493,16 +493,19 @@ The constructor allocate and register a mailbox and allocates and initialize the
         <references refid="class_pool_elem_1aafde19f7d36ca163a143579c1b125b6d" compoundref="mpelem_8cpp" startline="165" endline="168">PoolElem::free</references>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_key_gen_1a7ad5dbc329a2310e05b76fa92d003e65" compoundref="keygen_8cpp" startline="261" endline="273">KeyGen::getPublicKey</references>
-        <references refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="890" endline="897">HandleBoostOffReq</references>
-        <references refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="870" endline="877">HandleBoostOnReq</references>
-        <references refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="850" endline="857">HandleColdStartReq</references>
-        <references refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="933" endline="941">HandleDisableADXL</references>
-        <references refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="954" endline="962">HandleEnableADXL</references>
-        <references refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">HandleFactoryDefault</references>
-        <references refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">HandleFsErase</references>
-        <references refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="992" endline="996">HandleFsStatus</references>
-        <references refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="975" endline="979">HandleGetConfig</references>
-        <references refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">HandleNewConfiguration</references>
+        <references refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="891" endline="898">HandleBoostOffReq</references>
+        <references refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="871" endline="878">HandleBoostOnReq</references>
+        <references refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="851" endline="858">HandleColdStartReq</references>
+        <references refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="934" endline="942">HandleDisableADXL</references>
+        <references refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="955" endline="963">HandleEnableADXL</references>
+        <references refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">HandleFactoryDefault</references>
+        <references refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">HandleFsErase</references>
+        <references refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="993" endline="997">HandleFsStatus</references>
+        <references refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="976" endline="980">HandleGetConfig</references>
+        <references refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">HandleNewConfiguration</references>
+        <references refid="class_wakeup_cnt_1a82b7e4c71c77f5941dd5e861dbb7e952" compoundref="wakeup__cnt_8cpp" startline="131" endline="135">WakeupCnt::incPublishMeasCount</references>
+        <references refid="class_wakeup_cnt_1a383f4683ccd5950b0c6f17760c1a9879" compoundref="wakeup__cnt_8cpp" startline="125" endline="129">WakeupCnt::incSleepExitCount</references>
+        <references refid="class_wakeup_cnt_1a77a0dd2597120892760e075169cb5fd3" compoundref="wakeup__cnt_8cpp" startline="43" endline="47">WakeupCnt::inst</references>
         <references refid="classcertmgr_1acc45f4d4d5957998c083aac888aa8050">certmgr::inst</references>
         <references refid="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" compoundref="keygen_8cpp" startline="183" endline="187">KeyGen::inst</references>
         <references refid="class_mqtt_connector_1a01af3dd987478214dfe8ca1b3ec8bec8" compoundref="mqtt__connector_8h" startline="278">lte_connected</references>
@@ -511,19 +514,19 @@ The constructor allocate and register a mailbox and allocates and initialize the
         <references refid="class_pool_elem_1a2ebd5074e18be4336af45918f2aa76dd" compoundref="mpelem_8h" startline="220">PoolElem::mtype</references>
         <references refid="class_task_1a4cb3fadb6462e3c51946ca46eb196132" compoundref="task_8h" startline="86">Task::myName</references>
         <references refid="class_mqtt_connector_1a64024edd0c45f1deb9a9bf67b746a8e1" compoundref="mqtt__connector_8h" startline="218">myTimer</references>
-        <references refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="87" endline="101">on_connack</references>
-        <references refid="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" compoundref="mqtt__connector_8cpp" startline="112" endline="118">on_disconnect</references>
-        <references refid="class_mqtt_connector_1aed0e2bc67364b25cbf96f7eff79b437d" compoundref="mqtt__connector_8cpp" startline="296" endline="298">on_puback</references>
-        <references refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="163" endline="287">on_publish</references>
-        <references refid="class_mqtt_connector_1a86e2fd6577ee6e2f7e8feaa35c4f18a6" compoundref="mqtt__connector_8cpp" startline="312" endline="321">on_suback</references>
-        <references refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" compoundref="mqtt__connector_8cpp" startline="405" endline="408">ota_subscribe</references>
+        <references refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="88" endline="102">on_connack</references>
+        <references refid="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" compoundref="mqtt__connector_8cpp" startline="113" endline="119">on_disconnect</references>
+        <references refid="class_mqtt_connector_1aed0e2bc67364b25cbf96f7eff79b437d" compoundref="mqtt__connector_8cpp" startline="297" endline="299">on_puback</references>
+        <references refid="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" compoundref="mqtt__connector_8cpp" startline="164" endline="288">on_publish</references>
+        <references refid="class_mqtt_connector_1a86e2fd6577ee6e2f7e8feaa35c4f18a6" compoundref="mqtt__connector_8cpp" startline="313" endline="322">on_suback</references>
+        <references refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" compoundref="mqtt__connector_8cpp" startline="406" endline="409">ota_subscribe</references>
         <references refid="class_mqtt_connector_1a54561314c70600f9ab3257737e0ee83a" compoundref="mqtt__connector_8h" startline="261">ota_topic</references>
         <references refid="class_mqtt_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="mqtt__connector_8h" startline="217">pInMbox</references>
         <references refid="class_mqtt_connector_1ab6fa18add1c44966d6f15ba03a2e078f" compoundref="mqtt__connector_8h" startline="250">pubkey_topic</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
-        <references refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="697" endline="707">PublishData</references>
-        <references refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="810" endline="814">PublishDlResult</references>
-        <references refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" compoundref="mqtt__connector_8cpp" startline="762" endline="766">PublishRejectedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="698" endline="708">PublishData</references>
+        <references refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="811" endline="815">PublishDlResult</references>
+        <references refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" compoundref="mqtt__connector_8cpp" startline="763" endline="767">PublishRejectedResponse</references>
         <references refid="class_mbox_1a6278f3ed7f9800ede27ccc25cf140b3b" compoundref="mbox_8cpp" startline="98" endline="104">Mbox::read</references>
         <references refid="class_mbox_1a01032c119d55a350bf3c773e8c83cc74" compoundref="mbox_8cpp" startline="76" endline="87">Mbox::send</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
@@ -547,11 +550,11 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="220" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="636" bodyend="642"/>
+        <location file="net/mqtt_connector.h" line="220" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="637" bodyend="643"/>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba1f198687dc3dc5b0732e1382df0f47f6" compoundref="mpelem_8h" startline="39">eTimerExpired</references>
         <references refid="class_mqtt_connector_1af2570dd7bace0312470d962f29359fb3" compoundref="mqtt__connector_8h" startline="217">pInMbox</references>
         <references refid="class_mbox_1aec0858a23fe789ef1782caab906baf2b" compoundref="mbox_8cpp" startline="54" endline="64">Mbox::write</references>
-        <referencedby refid="class_mqtt_connector_1aaa25421e04a507bcced8f9bb02af5213" compoundref="mqtt__connector_8cpp" startline="621" endline="627">timer_cb</referencedby>
+        <referencedby refid="class_mqtt_connector_1aaa25421e04a507bcced8f9bb02af5213" compoundref="mqtt__connector_8cpp" startline="622" endline="628">timer_cb</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,8 +571,8 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="222" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="449" bodyend="498"/>
-        <references refid="class_mqtt_connector_1ac54f53dc342019e8db34f4aa581a5792" compoundref="mqtt__connector_8cpp" startline="519" endline="523">abort</references>
+        <location file="net/mqtt_connector.h" line="222" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="450" bodyend="499"/>
+        <references refid="class_mqtt_connector_1ac54f53dc342019e8db34f4aa581a5792" compoundref="mqtt__connector_8cpp" startline="520" endline="524">abort</references>
         <references refid="mqtt__connector_8h_1af23d98e946f8ff7f197e78695d2f815a" compoundref="mqtt__connector_8h" startline="160">CONNECT_RETRY_DURATION</references>
         <references refid="class_mqtt_connector_1a55313def4e54a52e56958a4345969804" compoundref="mqtt__connector_8h" startline="236">device_id</references>
         <references refid="certmgr_8h_1a9c19b5a0c4d3587a17f0ae1c82911c16aaf9352a7ac9399543195d36c4fc9f9ee" compoundref="certmgr_8h" startline="57">eBroker_JOVIA</references>
@@ -586,7 +589,7 @@ The constructor allocate and register a mailbox and allocates and initialize the
         <references refid="class_timer_1a60de64d75454385b23995437f1d72669" compoundref="timer_8cpp" startline="69" endline="74">Timer::start</references>
         <references refid="mqtt__connector_8h_1a1fafbec84cc1e03a1a136bfcec328004" compoundref="mqtt__connector_8h" startline="148">THINGSBOARD_MQTT_HOSTNAME</references>
         <references refid="classcertmgr_1af0654790e06b5ac06e0f356de34ed4e6">certmgr::writeBrokerCfg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a960705de531a20389fb29928d43258c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -603,8 +606,8 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="223" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="506" bodyend="510"/>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <location file="net/mqtt_connector.h" line="223" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="507" bodyend="511"/>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ac54f53dc342019e8db34f4aa581a5792" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -621,9 +624,9 @@ The constructor allocate and register a mailbox and allocates and initialize the
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="224" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="519" bodyend="523"/>
-        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="449" endline="498">connect</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <location file="net/mqtt_connector.h" line="224" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="520" bodyend="524"/>
+        <referencedby refid="class_mqtt_connector_1a1396bf9b5defe9fa844a63b5cd40ac0e" compoundref="mqtt__connector_8cpp" startline="450" endline="499">connect</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1afd64f589c503525f02261a850b822527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -666,13 +669,13 @@ The function copy topic, payload and status information in a MQTT message of typ
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="225" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="336" bodyend="357"/>
+        <location file="net/mqtt_connector.h" line="225" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="337" bodyend="358"/>
         <references refid="class_mqtt_connector_1ad9c457d93ccf594637c0c741a779d265" compoundref="mqtt__connector_8h" startline="281">last_msg_id</references>
         <references refid="structpayload_1ab463666a2f3e3a35c04f1e29d6a49001" compoundref="mqtt__connector_8h" startline="167">payload::string</references>
         <references refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" compoundref="mqtt__connector_8h" startline="171">topic::string</references>
-        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="662" endline="685">HandleNewConfiguration</referencedby>
-        <referencedby refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="697" endline="707">PublishData</referencedby>
-        <referencedby refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="722" endline="736">PublishResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" compoundref="mqtt__connector_8cpp" startline="663" endline="686">HandleNewConfiguration</referencedby>
+        <referencedby refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="698" endline="708">PublishData</referencedby>
+        <referencedby refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="723" endline="737">PublishResponse</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a961bb32487217f663830f3f42d4ff539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -689,10 +692,10 @@ The function copy topic, payload and status information in a MQTT message of typ
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="226" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="429" bodyend="437"/>
+        <location file="net/mqtt_connector.h" line="226" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="430" bodyend="438"/>
         <references refid="mqtt__connector_8h_1a88ba9044299b033fb9049456ef46f745" compoundref="mqtt__connector_8h" startline="119">DEV_ID_LEN</references>
         <references refid="class_mqtt_connector_1a55313def4e54a52e56958a4345969804" compoundref="mqtt__connector_8h" startline="236">device_id</references>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -724,9 +727,9 @@ The function retrieve the user-specific data from the timer by calling kernel fu
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="219" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="621" bodyend="627"/>
-        <references refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="636" endline="642">timer1_expired</references>
-        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="535" endline="582">MqttConnector</referencedby>
+        <location file="net/mqtt_connector.h" line="219" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="622" bodyend="628"/>
+        <references refid="class_mqtt_connector_1adc25c829b13636794219a3f61f31f34d" compoundref="mqtt__connector_8cpp" startline="637" endline="643">timer1_expired</references>
+        <referencedby refid="class_mqtt_connector_1ac2ad488365bf0512988f929fa1983a1e" compoundref="mqtt__connector_8cpp" startline="536" endline="583">MqttConnector</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -756,12 +759,12 @@ The function is called when MQTT connection ackknowledge packet has been receive
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="228" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="87" bodyend="101"/>
-        <references refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" compoundref="mqtt__connector_8cpp" startline="393" endline="396">cmd_subscribe</references>
-        <references refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" compoundref="mqtt__connector_8cpp" startline="417" endline="420">config_subscribe</references>
+        <location file="net/mqtt_connector.h" line="228" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="88" bodyend="102"/>
+        <references refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" compoundref="mqtt__connector_8cpp" startline="394" endline="397">cmd_subscribe</references>
+        <references refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" compoundref="mqtt__connector_8cpp" startline="418" endline="421">config_subscribe</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba7e687f39e23a633f7a561c1c2ff124b0" compoundref="mpelem_8h" startline="52">eMqttConnected</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1aef147f2b63e45447753b327e4d85079e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -782,10 +785,10 @@ The function is called when MQTT connection ackknowledge packet has been receive
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="229" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="112" bodyend="118"/>
+        <location file="net/mqtt_connector.h" line="229" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="113" bodyend="119"/>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bab482e7fc87de88820e0200a98567c9ee" compoundref="mpelem_8h" startline="53">eMqttDisconnected</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a8758bc421d3292a0f4431a017446bd24" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -831,7 +834,7 @@ In case the string fw_version is found in the payload of topic /device/{device_i
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="230" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="163" bodyend="287"/>
+        <location file="net/mqtt_connector.h" line="230" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="164" bodyend="288"/>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" compoundref="mpelem_8h" startline="141">eBoostOffReq</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" compoundref="mpelem_8h" startline="140">eBoostOnReq</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba5ee4ee822dd89d4325d82f5746e3f8cd" compoundref="mpelem_8h" startline="144">eCertJovia1</references>
@@ -855,7 +858,7 @@ In case the string fw_version is found in the payload of topic /device/{device_i
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0bad9783fee6aee682fa2420ffc814e5a85" compoundref="mpelem_8h" startline="90">eOtaStart</references>
         <references refid="class_reset_ctrl_1a6c639dcc49b79a7610d1925749cc2359" compoundref="reset__ctrl_8cpp" startline="169" endline="189">ResetCtrl::performSwReset</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a86e2fd6577ee6e2f7e8feaa35c4f18a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -897,9 +900,9 @@ The function is called when MQTT subscribe ackknowledge packet has been received
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="232" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="312" bodyend="321"/>
+        <location file="net/mqtt_connector.h" line="232" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="313" bodyend="322"/>
         <references refid="mqtt__connector_8h_1a51f7a92030e93bed1031afef488edb11" compoundref="mqtt__connector_8h" startline="164">SUBSCRIBE_TOPIC_ID</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1aed0e2bc67364b25cbf96f7eff79b437d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -924,8 +927,8 @@ The function is called when MQTT subscribe ackknowledge packet has been received
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="233" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="296" bodyend="298"/>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <location file="net/mqtt_connector.h" line="233" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="297" bodyend="299"/>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -957,11 +960,11 @@ The function copy topic and length in structure of type mqtt_topic, and put thes
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="289" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="370" bodyend="384"/>
+        <location file="net/mqtt_connector.h" line="289" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="371" bodyend="385"/>
         <references refid="mqtt__connector_8h_1a51f7a92030e93bed1031afef488edb11" compoundref="mqtt__connector_8h" startline="164">SUBSCRIBE_TOPIC_ID</references>
-        <referencedby refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" compoundref="mqtt__connector_8cpp" startline="393" endline="396">cmd_subscribe</referencedby>
-        <referencedby refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" compoundref="mqtt__connector_8cpp" startline="417" endline="420">config_subscribe</referencedby>
-        <referencedby refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" compoundref="mqtt__connector_8cpp" startline="405" endline="408">ota_subscribe</referencedby>
+        <referencedby refid="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" compoundref="mqtt__connector_8cpp" startline="394" endline="397">cmd_subscribe</referencedby>
+        <referencedby refid="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" compoundref="mqtt__connector_8cpp" startline="418" endline="421">config_subscribe</referencedby>
+        <referencedby refid="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" compoundref="mqtt__connector_8cpp" startline="406" endline="409">ota_subscribe</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a1c2bd902abdaf7c8a608d8cd9b7403b5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -978,10 +981,10 @@ The function copy topic and length in structure of type mqtt_topic, and put thes
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="290" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="393" bodyend="396"/>
+        <location file="net/mqtt_connector.h" line="290" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="394" bodyend="397"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
-        <references refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" compoundref="mqtt__connector_8cpp" startline="370" endline="384">subscribe</references>
-        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="87" endline="101">on_connack</referencedby>
+        <references refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" compoundref="mqtt__connector_8cpp" startline="371" endline="385">subscribe</references>
+        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="88" endline="102">on_connack</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ae00794e6ab250c0807e70f42b0aee29f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -998,10 +1001,10 @@ The function copy topic and length in structure of type mqtt_topic, and put thes
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="291" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="405" bodyend="408"/>
+        <location file="net/mqtt_connector.h" line="291" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="406" bodyend="409"/>
         <references refid="class_mqtt_connector_1a54561314c70600f9ab3257737e0ee83a" compoundref="mqtt__connector_8h" startline="261">ota_topic</references>
-        <references refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" compoundref="mqtt__connector_8cpp" startline="370" endline="384">subscribe</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <references refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" compoundref="mqtt__connector_8cpp" startline="371" endline="385">subscribe</references>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1aedf5e5ff9f6ca99fe08cfaa91ceb0ec2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1019,10 +1022,10 @@ The function copy topic and length in structure of type mqtt_topic, and put thes
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="292" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="417" bodyend="420"/>
+        <location file="net/mqtt_connector.h" line="292" column="17" bodyfile="net/mqtt_connector.cpp" bodystart="418" bodyend="421"/>
         <references refid="class_mqtt_connector_1a758eb6f193763f906c39b6a966a62d9a" compoundref="mqtt__connector_8h" startline="271">config_topic</references>
-        <references refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" compoundref="mqtt__connector_8cpp" startline="370" endline="384">subscribe</references>
-        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="87" endline="101">on_connack</referencedby>
+        <references refid="class_mqtt_connector_1a0fc7bb8f849d8634227e7e2d4a1ac9f0" compoundref="mqtt__connector_8cpp" startline="371" endline="385">subscribe</references>
+        <referencedby refid="class_mqtt_connector_1a86374deb5f3ee32fb220efbaf0743b0f" compoundref="mqtt__connector_8cpp" startline="88" endline="102">on_connack</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -1066,12 +1069,12 @@ The function copy the data in parameter pPayload to topic payload structure in v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="294" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="697" bodyend="707"/>
-        <references refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="336" endline="357">publish</references>
+        <location file="net/mqtt_connector.h" line="294" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="698" bodyend="708"/>
+        <references refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="337" endline="358">publish</references>
         <references refid="structpayload_1ab463666a2f3e3a35c04f1e29d6a49001" compoundref="mqtt__connector_8h" startline="167">payload::string</references>
         <references refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" compoundref="mqtt__connector_8h" startline="171">topic::string</references>
-        <referencedby refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="810" endline="814">PublishDlResult</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" compoundref="mqtt__connector_8cpp" startline="811" endline="815">PublishDlResult</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1125,12 +1128,12 @@ The function copy the data in parameter pPayload to topic payload structure in v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="295" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="722" bodyend="736"/>
-        <references refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="336" endline="357">publish</references>
+        <location file="net/mqtt_connector.h" line="295" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="723" bodyend="737"/>
+        <references refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="337" endline="358">publish</references>
         <references refid="structpayload_1ab463666a2f3e3a35c04f1e29d6a49001" compoundref="mqtt__connector_8h" startline="167">payload::string</references>
         <references refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" compoundref="mqtt__connector_8h" startline="171">topic::string</references>
-        <referencedby refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</referencedby>
-        <referencedby refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" compoundref="mqtt__connector_8cpp" startline="762" endline="766">PublishRejectedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" compoundref="mqtt__connector_8cpp" startline="763" endline="767">PublishRejectedResponse</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1172,19 +1175,19 @@ By call of private member function PublishResponse the function publishs a accep
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="298" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="747" bodyend="751"/>
-        <references refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="722" endline="736">PublishResponse</references>
-        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="890" endline="897">HandleBoostOffReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="870" endline="877">HandleBoostOnReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="850" endline="857">HandleColdStartReq</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="933" endline="941">HandleDisableADXL</referencedby>
-        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="954" endline="962">HandleEnableADXL</referencedby>
-        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="828" endline="837">HandleFactoryDefault</referencedby>
-        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="912" endline="920">HandleFsErase</referencedby>
-        <referencedby refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="992" endline="996">HandleFsStatus</referencedby>
-        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="975" endline="979">HandleGetConfig</referencedby>
-        <referencedby refid="class_mqtt_connector_1ab0b0c6d681f4d9ee936edfc17542f632" compoundref="mqtt__connector_8cpp" startline="778" endline="782">PublishAcceptedResponse</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <location file="net/mqtt_connector.h" line="298" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="748" bodyend="752"/>
+        <references refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="723" endline="737">PublishResponse</references>
+        <referencedby refid="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" compoundref="mqtt__connector_8cpp" startline="891" endline="898">HandleBoostOffReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" compoundref="mqtt__connector_8cpp" startline="871" endline="878">HandleBoostOnReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" compoundref="mqtt__connector_8cpp" startline="851" endline="858">HandleColdStartReq</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" compoundref="mqtt__connector_8cpp" startline="934" endline="942">HandleDisableADXL</referencedby>
+        <referencedby refid="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" compoundref="mqtt__connector_8cpp" startline="955" endline="963">HandleEnableADXL</referencedby>
+        <referencedby refid="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" compoundref="mqtt__connector_8cpp" startline="829" endline="838">HandleFactoryDefault</referencedby>
+        <referencedby refid="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" compoundref="mqtt__connector_8cpp" startline="913" endline="921">HandleFsErase</referencedby>
+        <referencedby refid="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" compoundref="mqtt__connector_8cpp" startline="993" endline="997">HandleFsStatus</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" compoundref="mqtt__connector_8cpp" startline="976" endline="980">HandleGetConfig</referencedby>
+        <referencedby refid="class_mqtt_connector_1ab0b0c6d681f4d9ee936edfc17542f632" compoundref="mqtt__connector_8cpp" startline="779" endline="783">PublishAcceptedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ab0b0c6d681f4d9ee936edfc17542f632" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1226,9 +1229,9 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="300" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="778" bodyend="782"/>
+        <location file="net/mqtt_connector.h" line="300" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="779" bodyend="783"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1270,10 +1273,10 @@ By call of private member function PublishResponse the function publishs a rejec
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="302" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="762" bodyend="766"/>
-        <references refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="722" endline="736">PublishResponse</references>
-        <referencedby refid="class_mqtt_connector_1a0520f0e181a94a9bf2298654692a914e" compoundref="mqtt__connector_8cpp" startline="794" endline="798">PublishRejectedResponse</referencedby>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <location file="net/mqtt_connector.h" line="302" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="763" bodyend="767"/>
+        <references refid="class_mqtt_connector_1a959e4c8768e9fd37a1411a350d04f446" compoundref="mqtt__connector_8cpp" startline="723" endline="737">PublishResponse</references>
+        <referencedby refid="class_mqtt_connector_1a0520f0e181a94a9bf2298654692a914e" compoundref="mqtt__connector_8cpp" startline="795" endline="799">PublishRejectedResponse</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a0520f0e181a94a9bf2298654692a914e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1315,9 +1318,9 @@ By call of private member function PublishRejectedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="304" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="794" bodyend="798"/>
+        <location file="net/mqtt_connector.h" line="304" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="795" bodyend="799"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
-        <references refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" compoundref="mqtt__connector_8cpp" startline="762" endline="766">PublishRejectedResponse</references>
+        <references refid="class_mqtt_connector_1aa89c1f584a412e02c6138435a71a4ecc" compoundref="mqtt__connector_8cpp" startline="763" endline="767">PublishRejectedResponse</references>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a468c248c7d18e226ea56f9c1a8e07be4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1359,10 +1362,10 @@ By call of private member function PublishData the function publishs a download 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="306" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="810" bodyend="814"/>
+        <location file="net/mqtt_connector.h" line="306" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="811" bodyend="815"/>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
-        <references refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="697" endline="707">PublishData</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <references refid="class_mqtt_connector_1a902f83037dc5ee6772caad03b74e7326" compoundref="mqtt__connector_8cpp" startline="698" endline="708">PublishData</references>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a28b80fede4e4f7e30a3414fb348a10f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1392,17 +1395,17 @@ The function copy the message payload of pElem to topic payload structure, initi
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="307" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="662" bodyend="685"/>
+        <location file="net/mqtt_connector.h" line="307" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="663" bodyend="686"/>
         <references refid="class_config_1a4530f1c50511acfe103d8788a85d3500" compoundref="config_8cpp" startline="1111" endline="1195">Config::Autocorrection</references>
         <references refid="class_mqtt_connector_1a758eb6f193763f906c39b6a966a62d9a" compoundref="mqtt__connector_8h" startline="271">config_topic</references>
         <references refid="class_pool_elem_1a837327a6d1d94f9622b97c4912bddfec" compoundref="mpelem_8cpp" startline="43" endline="43">PoolElem::getBuffer</references>
         <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
         <references refid="class_reset_ctrl_1a6c639dcc49b79a7610d1925749cc2359" compoundref="reset__ctrl_8cpp" startline="169" endline="189">ResetCtrl::performSwReset</references>
-        <references refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="336" endline="357">publish</references>
+        <references refid="class_mqtt_connector_1afd64f589c503525f02261a850b822527" compoundref="mqtt__connector_8cpp" startline="337" endline="358">publish</references>
         <references refid="class_config_1a7b0b73b517a5c380220f46d722f4481b" compoundref="config_8cpp" startline="236" endline="246">Config::saveToFile</references>
         <references refid="structpayload_1ab463666a2f3e3a35c04f1e29d6a49001" compoundref="mqtt__connector_8h" startline="167">payload::string</references>
         <references refid="structtopic_1a55c6e0310c63824c441ea7f3aa399f30" compoundref="mqtt__connector_8h" startline="171">topic::string</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1aed4c6be100e6248e7f02e59ab1893f08" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1432,15 +1435,15 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="308" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="828" bodyend="837"/>
+        <location file="net/mqtt_connector.h" line="308" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="829" bodyend="838"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="class_config_1a6e68de84123711b6e53a49c3279606ea" compoundref="config_8cpp" startline="255" endline="263">Config::deleteConfigFile</references>
         <references refid="class_key_gen_1a290303ddeb22987037be90caca412f85" compoundref="keygen_8cpp" startline="350" endline="370">KeyGen::deleteKeyFiles</references>
         <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
         <references refid="class_key_gen_1aa82987fa60c88c4380a157e4b0f178b6" compoundref="keygen_8cpp" startline="183" endline="187">KeyGen::inst</references>
         <references refid="class_reset_ctrl_1a6c639dcc49b79a7610d1925749cc2359" compoundref="reset__ctrl_8cpp" startline="169" endline="189">ResetCtrl::performSwReset</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a7b73774ea55d0112571cf49e98558e37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1470,12 +1473,12 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="309" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="850" bodyend="857"/>
+        <location file="net/mqtt_connector.h" line="309" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="851" bodyend="858"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba72163c826ae1faf0fa1b791ed5bffe27" compoundref="mpelem_8h" startline="139">eColdStartReq</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1af768b2a6ec57840d0ee687f9b25e7b4c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1505,12 +1508,12 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="310" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="870" bodyend="877"/>
+        <location file="net/mqtt_connector.h" line="310" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="871" bodyend="878"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0baa1c47a16aecfd37a36610c8eb8c36bd9" compoundref="mpelem_8h" startline="140">eBoostOnReq</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ae07a10cc3041ea092699387b0fdb3257" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1540,12 +1543,12 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="311" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="890" bodyend="897"/>
+        <location file="net/mqtt_connector.h" line="311" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="891" bodyend="898"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba4d704ecd7eec59960fd81c6ad93e6fea" compoundref="mpelem_8h" startline="141">eBoostOffReq</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a4b7e8e7205da8f1aeb2be36f84bada73" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1575,14 +1578,14 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="334" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="912" bodyend="920"/>
+        <location file="net/mqtt_connector.h" line="334" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="913" bodyend="921"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="class_flash_f_s_1ac1fe59dfffb46bf7a6b6e931356631aa" compoundref="flashfs_8cpp" startline="144" endline="151">FlashFS::eraseFs</references>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
         <references refid="class_reset_ctrl_1a6c639dcc49b79a7610d1925749cc2359" compoundref="reset__ctrl_8cpp" startline="169" endline="189">ResetCtrl::performSwReset</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
         <references refid="class_flash_f_s_1a1db7f084483fe1bc09d688e3d3a69eb4" compoundref="flashfs_8cpp" startline="179" endline="189">FlashFS::unmount</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1afc78bd59f52502209d77871b282352a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1608,11 +1611,11 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="335" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="992" bodyend="996"/>
+        <location file="net/mqtt_connector.h" line="335" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="993" bodyend="997"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="class_flash_f_s_1a29e8577a06edb82f9f42c02c43278e6e" compoundref="flashfs_8cpp" startline="110" endline="114">FlashFS::inst</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a4ba8232123283b7363cf319d3603b9ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1642,12 +1645,12 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="336" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="933" bodyend="941"/>
+        <location file="net/mqtt_connector.h" line="336" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="934" bodyend="942"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba3c78cce2e74b855cd1b47e7d50e6f583" compoundref="mpelem_8h" startline="152">eDisableADXL</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1a163abf5e1860042a8d2fe54398ee0c53" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1677,12 +1680,12 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="337" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="954" bodyend="962"/>
+        <location file="net/mqtt_connector.h" line="337" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="955" bodyend="963"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="mpelem_8h_1a2f8f709ab25bdeef171ca2d415682e0ba28584cc9837accc43a9a9e41490a6326" compoundref="mpelem_8h" startline="153">eEnableADXL</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
         <references refid="class_mbox_1a9b8ecdc068f1eb3f8ef3b9eadbd2598e" compoundref="mbox_8cpp" startline="154" endline="161">Mbox::sendMsg</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_mqtt_connector_1ab09a2b3c65e60b502efe51bfaaa6095f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1708,11 +1711,11 @@ By call of private member function PublishAcceptedResponse the function publishs
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="net/mqtt_connector.h" line="338" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="975" bodyend="979"/>
+        <location file="net/mqtt_connector.h" line="338" column="10" bodyfile="net/mqtt_connector.cpp" bodystart="976" bodyend="980"/>
         <references refid="class_mqtt_connector_1a06519d01bc8ffacc8159cd1ac2e0dce4" compoundref="mqtt__connector_8h" startline="255">command_topic</references>
         <references refid="class_config_1a9b3a6fc9e2b45eac27ab8bc00231bd87" compoundref="config_8cpp" startline="74" endline="78">Config::inst</references>
-        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="747" endline="751">PublishAcceptedResponse</references>
-        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1368" endline="1618">task</referencedby>
+        <references refid="class_mqtt_connector_1ab5d3e83997c930e0ea258cccbee98063" compoundref="mqtt__connector_8cpp" startline="748" endline="752">PublishAcceptedResponse</references>
+        <referencedby refid="class_mqtt_connector_1acbfb668d7b4cfa39aa1a5a5dac3c0e7e" compoundref="mqtt__connector_8cpp" startline="1369" endline="1621">task</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

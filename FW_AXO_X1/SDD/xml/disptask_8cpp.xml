@@ -25,7 +25,7 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="38">
         <label>rtos/timer.h</label>
         <link refid="timer_8h"/>
         <childnode refid="3" relation="include">
@@ -60,12 +60,16 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
         <childnode refid="33" relation="include">
         </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
       </node>
-      <node id="35">
+      <node id="37">
         <label>pm/power_mgr.h</label>
         <link refid="power__mgr_8h"/>
         <childnode refid="3" relation="include">
@@ -80,7 +84,7 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
       </node>
       <node id="16">
@@ -117,6 +121,9 @@
       </node>
       <node id="13">
         <label>zephyr/logging/log.h</label>
+      </node>
+      <node id="33">
+        <label>zephyr/drivers/clock_control.h</label>
       </node>
       <node id="17">
         <label>./debug.h</label>
@@ -179,6 +186,9 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
+      <node id="34">
+        <label>zephyr/drivers/clock_control/nrf_clock_control.h</label>
+      </node>
       <node id="32">
         <label>zephyr/drivers/sensor.h</label>
       </node>
@@ -215,15 +225,15 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="36">
         <label>zephyr/sys/ring_buffer.h</label>
       </node>
-      <node id="33">
+      <node id="35">
         <label>data/hw_metrics.h</label>
         <link refid="hw__metrics_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="36" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -272,7 +282,7 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
